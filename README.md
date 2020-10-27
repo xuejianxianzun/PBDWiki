@@ -1,1 +1,1 @@
-Wiki
+PixivBatchDownloader's wiki.
