@@ -2,7 +2,7 @@
 
 **Pixiv Batch Downloader's wiki**
 
-[Discord](https://discord.gg/eW9JtTK)
+[https://xuejianxianzun.github.io/PBDWiki](https://xuejianxianzun.github.io/PBDWiki)
 
 ----------
 
