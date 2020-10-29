@@ -1,12 +1,12 @@
 ![logo](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/static/icon/logo128.png?raw=true)
 
-**Pixiv Batch Downloader's wiki**
+**Pixiv Batch Downloader's Wiki**
 
 [Discord](https://discord.gg/eW9JtTK)
 
 ----------
 
-现在只有简体中文文档。其他语言的用户可以使用翻译程序查看，或者提交翻译。
+现在只有中文文档。其他语言的用户可以使用翻译程序查看，或者提交翻译。
 
 建议使用 Pull Requests 提交翻译：
 
@@ -19,7 +19,7 @@
 
 ----------
 
-Currently there are only simplified Chinese documents. Users in other languages can use the translation program to view or submit translations.
+Currently there are only Chinese documents. Users in other languages can use the translation program to view or submit translations.
 
 It is recommended to use Pull Requests to submit translation:
 
