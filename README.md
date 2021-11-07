@@ -1,4 +1,4 @@
-![logo](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/static/icon/logo128.png?raw=true)
+![logo](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/dist/icon/logo128.png?raw=true)
 
 **Pixiv Batch Downloader's Wiki**
 
