@@ -1,0 +1,470 @@
+body {
+  position: relative;
+}
+.sidebar ul li a {
+  color: #333;
+  font-size: 15px;
+}
+.anchor span {
+  color: #333;
+}
+h3 .anchor span {
+  color: #444;
+  font-size: 1.4rem;
+}
+h2 a,
+h2 a span,
+.markdown-section a {
+  color: #0ea8ef !important;
+}
+h3 a {
+  color: #0ea8ef !important;
+}
+.sidebar ul li.active > a {
+  color: #0ea8ef !important;
+}
+.sidebar-toggle span {
+  background-color: #29b3f3;
+}
+.markdown-section hr {
+  margin: 1em 0;
+}
+.markdown-section figure,
+.markdown-section p {
+  margin: 0.8em 0;
+}
+.markdown-section > * {
+  font-size: 16px;
+}
+.markdown-section code {
+  font-size: 1rem !important;
+  color: #29b3f3;
+  font-family: inherit;
+}
+.markdown-section pre > code {
+  white-space: initial;
+}
+.option {
+  font-size: 15px;
+  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 4px;
+  margin: 2px 0px;
+  line-height: 26px;
+  min-height: 26px;
+  height: auto;
+  padding: 8px 12px;
+  border: 1px dotted #aaa;
+  border-radius: 4px;
+}
+.option > * {
+  line-height: 26px;
+  flex-shrink: 0;
+}
+.option span {
+  margin: 0;
+  padding: 0;
+}
+.option .key {
+  vertical-align: baseline !important;
+  font-weight: bold;
+  color: #0ea8ef;
+}
+.option .gray1 {
+  color: #777777;
+}
+.option .settingNameStyle1 {
+  cursor: pointer;
+  margin-right: 4px;
+  max-width: 650px;
+}
+.option label {
+  cursor: pointer;
+  padding-right: 5px;
+}
+.option label.active {
+  color: #29b3f3;
+}
+.option .need_beautify {
+  display: none;
+}
+.option .beautify_switch {
+  display: inline-flex;
+  align-items: center;
+  width: 24px;
+  height: 14px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 7px;
+  background: #cccccc;
+  transition: 0.3s;
+}
+.option .beautify_switch,
+.option .beautify_checkbox {
+  margin: 6px 0px;
+}
+.option .beautify_switch::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  margin-left: 0px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: 0.3s;
+}
+.option .checkbox_switch:checked + .beautify_switch {
+  background: #29b3f3;
+}
+.option .checkbox_switch:checked + .beautify_switch::before {
+  margin-left: 11px;
+}
+.option .beautify_checkbox {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  z-index: 1;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dcdfe6;
+  border-image: initial;
+  border-radius: 2px;
+  margin: 6px 0px;
+  transition: 0.3s;
+}
+.option .checkbox_common:checked + .beautify_checkbox {
+  background: #29b3f3;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #29b3f3;
+  border-image: initial;
+}
+.option .checkbox_common:checked + .beautify_checkbox::after {
+  transform: rotate(45deg) scaleY(1);
+}
+.option .beautify_checkbox::after {
+  box-sizing: content-box;
+  content: "";
+  height: 7px;
+  left: 4px;
+  position: absolute;
+  top: 1px;
+  transform: rotate(45deg) scaleY(0);
+  width: 3px;
+  transform-origin: center center;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid solid;
+  border-color: #ffffff #ffffff;
+  border-image: initial;
+  border-left: 0px;
+  border-top: 0px;
+  transition: 0.2s;
+}
+.option .beautify_radio {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dcdfe6;
+  border-image: initial;
+  border-radius: 100%;
+  margin: 7px 0px;
+}
+.option .beautify_radio::after {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 100%;
+  transition: transform 0.15s ease-in;
+}
+.option .radio:checked + .beautify_radio {
+  background: #29b3f3;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #29b3f3;
+  border-image: initial;
+}
+.option .radio:checked + .beautify_radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+.option .textButton {
+  cursor: pointer;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: none;
+  padding: 1px 6px;
+}
+.option .textButton:hover {
+  color: #0ea8ef !important;
+  fill: #0ea8ef !important;
+}
+.option .grayButton {
+  margin-right: 8px;
+  background: #eeeeee;
+  border-radius: 3px;
+  padding: 0px 6px;
+}
+.option .grayButton:hover {
+  color: #ffffff !important;
+  background: #29b3f3;
+}
+.option .setinput_style1 {
+  width: 50px;
+  min-width: 50px;
+  height: 20px;
+  line-height: 20px;
+  text-indent: 4px;
+  box-sizing: border-box;
+  font-size: 14px !important;
+  margin: 3px 0px;
+  outline: 0px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px;
+  background: none;
+}
+.option .setinput_style1.postDate {
+  width: 190px;
+}
+.option .blue {
+  color: #0ea8ef;
+}
+.option #setMin,
+.option #setMax {
+  height: 22px;
+  line-height: 22px;
+  margin: 2px 0px;
+}
+.option .has_tip:hover,
+.option label:hover {
+  color: #0ea8ef;
+}
+.option .subOptionWrap {
+  max-width: 100%;
+  min-height: 26px;
+  line-height: 26px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-grow: 1;
+  column-gap: 4px;
+}
+.option .subOptionWrap > * {
+  line-height: 26px;
+}
+.option .verticalSplit {
+  display: inline-block;
+  width: 0px;
+  height: 16px;
+  margin: 5px 4px;
+  border-right: 1px solid #cccccc;
+}
+.option .centerPanelTextArea {
+  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: #29b3f3;
+  font-size: 14px;
+  flex-basis: 100%;
+  flex-grow: 1;
+  min-height: 26px;
+  line-height: 1.7;
+  height: auto;
+  max-height: 200px;
+  resize: none;
+  border-top-width: initial;
+  border-right-width: initial;
+  border-left-width: initial;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-left-color: initial;
+  background: transparent;
+  padding: 0px;
+  border-style: none none solid;
+  border-image: initial;
+  border-bottom: 1px solid #cccccc;
+}
+.option[data-no="12"] .subOptionWrap,
+.option[data-no="35"] .subOptionWrap,
+.option[data-no="39"] .subOptionWrap,
+.option[data-no="43"] .subOptionWrap,
+.option[data-no="80"] .subOptionWrap,
+.option .setUserNameWrap,
+.option .DoNotDownloadLastFewImagesWarp {
+  flex-basis: 100%;
+}
+.option .setinput_tag {
+  min-width: 300px;
+  flex-grow: 1;
+}
+.option input[type="datetime-local" i] {
+  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+.option .fileNameRule {
+  min-width: 310px;
+}
+.option .saveNamingRuleWrap {
+  display: inline-block;
+  position: relative;
+}
+.option select {
+  width: 80px;
+  height: 22px;
+  vertical-align: middle;
+  margin: 2px 0px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-image: initial;
+}
+.option button,
+.option input,
+.option optgroup,
+.option select,
+.option textarea {
+  font-family: inherit;
+}
+.option input[name="workDirNameRule"] {
+  min-width: 200px !important;
+}
+.option .beautify_scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.option .beautify_scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3ab8f2;
+  border-radius: 10px;
+}
+.option .blockTagsForSpecificUserWrap .textButton {
+  cursor: pointer;
+  color: #666666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: none;
+  outline: none;
+  padding: 0px 3px;
+}
+.option .blockTagsForSpecificUserWrap .settingItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 0px;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem {
+  margin-right: 10px;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem .label {
+  color: #444444;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem span {
+  padding-right: 4px;
+  line-height: 26px;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem.uid input {
+  width: auto !important;
+  min-width: 100px !important;
+}
+.option .blockTagsForSpecificUserWrap .addWrap .addUidInput {
+  max-width: 120px;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem.tags {
+  display: flex;
+  max-width: 320px;
+  flex: 1 1 0%;
+}
+.option .blockTagsForSpecificUserWrap .settingItem .inputItem.tags input {
+  width: auto !important;
+  flex: 1 1 0%;
+}
+.option .setUserNameWrap .settingItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 0px;
+}
+.option .setUserNameWrap .settingItem .inputItem {
+  margin-right: 10px;
+}
+.option .setUserNameWrap .settingItem .inputItem span {
+  padding-right: 4px;
+  line-height: 26px;
+}
+.option .setUserNameWrap .settingItem .inputItem .label {
+  color: #444444;
+}
+.option .setUserNameWrap .settingItem .inputItem.uid input {
+  width: auto !important;
+  min-width: 100px !important;
+}
+.option .setUserNameWrap .settingItem .inputItem.name {
+  display: flex;
+  min-width: 100px;
+  max-width: 220px;
+  flex: 1 1 0%;
+}
+.option .setUserNameWrap .settingItem .inputItem.name input {
+  width: auto !important;
+  flex: 1 1 0%;
+}
+.option .setUserNameWrap .textButton {
+  cursor: pointer;
+  color: #666666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: none;
+  outline: none;
+  padding: 0px 3px;
+}
+#tip {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  position: fixed;
+  z-index: 5001;
+  max-width: 500px;
+  left: 0;
+  top: 0;
+  background: #02a3ec;
+  padding: 6px 8px;
+  border-radius: 5px;
+  line-height: 20px;
+  word-break: break-word;
+  display: none;
+}
+.logContent span {
+  font-size: 15px;
+}
+.log {
+  font-size: 15px;
+}
+.log a {
+  color: #0ea8ef;
+  text-decoration: none;
+  font-weight: normal;
+}

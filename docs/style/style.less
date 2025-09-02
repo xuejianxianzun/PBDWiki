@@ -1,0 +1,572 @@
+@themeBlue: #0ea8ef;
+@beautifyBlue: #29b3f3;
+@boxShadowBlue: #2ca6df;
+@darkBoxShadow: #10506e;
+@pixivFontFamily: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono',
+  'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+// 表单里每个选项的行高都是 26 px。有些内部元素（特别是按钮）的高度不到 26px，所以我使用 margin 将其占据的高度增加到 26px，以使它们在视觉上垂直居中对齐。
+@height: 26px;
+
+// 覆写一些样式
+body {
+  position: relative;
+}
+
+.sidebar ul li a {
+  color: #333;
+  font-size: 15px;
+}
+
+.anchor span {
+  color: #333;
+}
+
+h3 .anchor span {
+  color: #444;
+  font-size: 1.4rem;
+}
+
+h2 a,
+h2 a span,
+.markdown-section a {
+  color: @themeBlue !important;
+}
+
+// 对 a 标签设置颜色只会影响 hover 时的下划线颜色
+// 文字颜色需要对里面的 span 标签设置
+h3 a {
+  color: @themeBlue !important;
+}
+
+.sidebar ul li.active>a {
+  color: @themeBlue !important;
+}
+
+.sidebar-toggle span {
+  background-color: @beautifyBlue;
+}
+
+.markdown-section hr {
+  margin: 1em 0;
+}
+
+.markdown-section figure,
+.markdown-section p {
+  margin: .8em 0;
+}
+
+.markdown-section>* {
+  font-size: 16px;
+}
+
+.markdown-section code {
+  font-size: 1rem !important;
+  color: #29b3f3;
+  font-family: inherit;
+}
+
+// docsify 的代码块默认是一行（会出现横向滚动条），改为多行显示
+.markdown-section pre>code {
+  white-space: initial;
+}
+
+// 下载器的选项的样式
+.option {
+  font-size: 15px;
+  font-family: @pixivFontFamily;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 4px;
+  margin: 2px 0px;
+  line-height: 26px;
+  min-height: 26px;
+  height: auto;
+  padding: 8px 12px;
+  border: 1px dotted #aaa;
+  border-radius: 4px;
+
+  &>* {
+    line-height: 26px;
+    flex-shrink: 0;
+  }
+
+
+  span {
+    margin: 0;
+    padding: 0;
+  }
+
+  .key {
+    vertical-align: baseline !important;
+    font-weight: bold;
+    color: rgb(14, 168, 239);
+  }
+
+  .gray1 {
+    color: rgb(119, 119, 119);
+  }
+
+  .settingNameStyle1 {
+    cursor: pointer;
+    margin-right: 4px;
+    max-width: 650px;
+  }
+
+  label {
+    cursor: pointer;
+    padding-right: 5px;
+  }
+
+  label.active {
+    color: rgb(41, 179, 243);
+  }
+
+  .need_beautify {
+    display: none;
+  }
+
+  .beautify_switch {
+    display: inline-flex;
+    align-items: center;
+    width: 24px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 7px;
+    background: rgb(204, 204, 204);
+    transition: 0.3s;
+  }
+
+  .beautify_switch,
+  .beautify_checkbox {
+    margin: 6px 0px;
+  }
+
+  .beautify_switch::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    margin-left: 0px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
+  .checkbox_switch:checked+.beautify_switch {
+    background: rgb(41, 179, 243);
+  }
+
+  .checkbox_switch:checked+.beautify_switch::before {
+    margin-left: 11px;
+  }
+
+  .beautify_checkbox {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 223, 230);
+    border-image: initial;
+    border-radius: 2px;
+    margin: 6px 0px;
+    transition: 0.3s;
+  }
+
+  .checkbox_common:checked+.beautify_checkbox {
+    background: rgb(41, 179, 243);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(41, 179, 243);
+    border-image: initial;
+  }
+
+  .checkbox_common:checked+.beautify_checkbox::after {
+    transform: rotate(45deg) scaleY(1);
+  }
+
+  .beautify_checkbox::after {
+    box-sizing: content-box;
+    content: "";
+    height: 7px;
+    left: 4px;
+    position: absolute;
+    top: 1px;
+    transform: rotate(45deg) scaleY(0);
+    width: 3px;
+    transform-origin: center center;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid solid;
+    border-color: rgb(255, 255, 255) rgb(255, 255, 255);
+    border-image: initial;
+    border-left: 0px;
+    border-top: 0px;
+    transition: 0.2s;
+  }
+
+  .beautify_radio {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(220, 223, 230);
+    border-image: initial;
+    border-radius: 100%;
+    margin: 7px 0px;
+  }
+
+  .beautify_radio::after {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(255, 255, 255);
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 100%;
+    transition: transform 0.15s ease-in;
+  }
+
+  .radio:checked+.beautify_radio {
+    background: rgb(41, 179, 243);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(41, 179, 243);
+    border-image: initial;
+  }
+
+  .radio:checked+.beautify_radio::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .textButton {
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: none;
+    padding: 1px 6px;
+  }
+
+  .textButton:hover {
+    color: rgb(14, 168, 239) !important;
+    fill: rgb(14, 168, 239) !important;
+  }
+
+  .grayButton {
+    margin-right: 8px;
+    background: rgb(238, 238, 238);
+    border-radius: 3px;
+    padding: 0px 6px;
+  }
+
+  .grayButton:hover {
+    color: rgb(255, 255, 255) !important;
+    background: rgb(41, 179, 243);
+  }
+
+  .setinput_style1 {
+    width: 50px;
+    min-width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 4px;
+    box-sizing: border-box;
+    font-size: 14px !important;
+    margin: 3px 0px;
+    outline: 0px;
+    border: none;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding: 0px;
+    background: none;
+
+    &.postDate {
+      width: 190px;
+    }
+  }
+
+  .blue {
+    color: rgb(14, 168, 239);
+  }
+
+  #setMin,
+  #setMax {
+    height: 22px;
+    line-height: 22px;
+    margin: 2px 0px;
+  }
+
+  .has_tip:hover,
+  label:hover {
+    color: @themeBlue;
+  }
+
+  .subOptionWrap {
+    max-width: 100%;
+    min-height: 26px;
+    line-height: 26px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-grow: 1;
+    column-gap: 4px;
+  }
+
+  .subOptionWrap>* {
+    line-height: 26px;
+  }
+
+  .verticalSplit {
+    display: inline-block;
+    width: 0px;
+    height: 16px;
+    margin: 5px 4px;
+    border-right: 1px solid rgb(204, 204, 204);
+  }
+
+  .centerPanelTextArea {
+    font-family: @pixivFontFamily;
+    color: rgb(41, 179, 243);
+    font-size: 14px;
+    flex-basis: 100%;
+    flex-grow: 1;
+    min-height: 26px;
+    line-height: 1.7;
+    height: auto;
+    max-height: 200px;
+    resize: none;
+    border-top-width: initial;
+    border-right-width: initial;
+    border-left-width: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    background: transparent;
+    padding: 0px;
+    border-style: none none solid;
+    border-image: initial;
+    border-bottom: 1px solid rgb(204, 204, 204);
+  }
+
+  &[data-no="12"] .subOptionWrap,
+  &[data-no="35"] .subOptionWrap,
+  &[data-no="39"] .subOptionWrap,
+  &[data-no="43"] .subOptionWrap,
+  &[data-no="80"] .subOptionWrap,
+  .setUserNameWrap,
+  .DoNotDownloadLastFewImagesWarp {
+    flex-basis: 100%;
+  }
+
+  .setinput_tag {
+    min-width: 300px;
+    flex-grow: 1;
+  }
+
+  input[type="datetime-local" i] {
+    font-family: @pixivFontFamily;
+  }
+
+  .fileNameRule {
+    min-width: 310px;
+  }
+
+  .saveNamingRuleWrap {
+    display: inline-block;
+    position: relative;
+  }
+
+  select {
+    width: 80px;
+    height: 22px;
+    vertical-align: middle;
+    margin: 2px 0px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-image: initial;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  input[name="workDirNameRule"] {
+    min-width: 200px !important;
+  }
+
+  .beautify_scrollbar {
+
+    // 滚动条整体
+    // width 是垂直滚动条的宽度，height 是水平滚动条的高度
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    // 整个滚动条的底色
+    //&::-webkit-scrollbar-track-piece {background:#fcfcfc;}
+
+    // 滚动条的滑块部分
+    &::-webkit-scrollbar-thumb {
+      background-color: #3ab8f2;
+      border-radius: 10px;
+    }
+  }
+
+  .blockTagsForSpecificUserWrap .textButton {
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: none;
+    outline: none;
+    padding: 0px 3px;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 0px;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem {
+    margin-right: 10px;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem .label {
+    color: rgb(68, 68, 68);
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem span {
+    padding-right: 4px;
+    line-height: 26px;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem.uid input {
+    width: auto !important;
+    min-width: 100px !important;
+  }
+
+  .blockTagsForSpecificUserWrap .addWrap .addUidInput {
+    max-width: 120px;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem.tags {
+    display: flex;
+    max-width: 320px;
+    flex: 1 1 0%;
+  }
+
+  .blockTagsForSpecificUserWrap .settingItem .inputItem.tags input {
+    width: auto !important;
+    flex: 1 1 0%;
+  }
+
+  .setUserNameWrap .settingItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px 0px;
+  }
+
+  .setUserNameWrap .settingItem .inputItem {
+    margin-right: 10px;
+  }
+
+  .setUserNameWrap .settingItem .inputItem span {
+    padding-right: 4px;
+    line-height: 26px;
+  }
+
+  .setUserNameWrap .settingItem .inputItem .label {
+    color: rgb(68, 68, 68);
+  }
+
+  .setUserNameWrap .settingItem .inputItem.uid input {
+    width: auto !important;
+    min-width: 100px !important;
+  }
+
+  .setUserNameWrap .settingItem .inputItem.name {
+    display: flex;
+    min-width: 100px;
+    max-width: 220px;
+    flex: 1 1 0%;
+  }
+
+  .setUserNameWrap .settingItem .inputItem.name input {
+    width: auto !important;
+    flex: 1 1 0%;
+  }
+
+  .setUserNameWrap .textButton {
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: none;
+    outline: none;
+    padding: 0px 3px;
+  }
+}
+
+#tip {
+  color: #fff;
+  font-size: 14px;
+  font-family: @pixivFontFamily;
+  position: fixed;
+  z-index: 5001;
+  max-width: 500px;
+  left: 0;
+  top: 0;
+  background: #02a3ec;
+  padding: 6px 8px;
+  border-radius: 5px;
+  line-height: 20px;
+  word-break: break-word;
+  display: none;
+}
+
+.logContent span {
+  font-size: 15px;
+}
+
+.log {
+  font-size: 15px;
+
+  a {
+    color: rgb(14, 168, 239);
+    text-decoration: none;
+    font-weight: normal;
+  }
+}
