@@ -7,21 +7,17 @@ interface MouseArg {
 class Form {
   constructor() {
     this.init()
-
-    window.addEventListener('hashchange', () => {
-      this.init()
-    })
   }
 
   private init() {
-    // 由于 docsify 的特性，需要等一会儿才能获取到所有的元素，所以延迟执行
-    window.setTimeout(() => {
+    // 由于 docsify 的特性，以及一些奇怪的问题，所以现在我通过循环执行代码以绑定事件
+    window.setInterval(() => {
       this.getInputs()
       this.bindInputEvents()
 
       this.addTipEl()
       this.bindTipEvents()
-    }, 600)
+    }, 1000)
   }
 
   /**所有的美化表单元素 */
@@ -83,6 +79,8 @@ class Form {
     // 为美化的表单控件绑定事件
     for (const item of this.allBeautifyInput) {
       const { input, span } = item
+      if (input.dataset.bound) continue
+      input.dataset.bound = 'true'
 
       // 点击美化元素时，点击真实的 input 控件
       span.addEventListener('click', () => {
@@ -136,16 +134,19 @@ class Form {
       '.has_tip'
     ) as NodeListOf<HTMLElement>
     tips.forEach(el => {
-      for (const ev of ['mouseenter', 'mouseleave']) {
-        el.addEventListener(ev, (event) => {
-          const e = (event) as MouseEvent
-          const text = el.dataset.tip
-          this.showTip(text, {
-            type: ev === 'mouseenter' ? 1 : 0,
-            x: e.clientX,
-            y: e.clientY,
+      if (el.dataset.tipBound === undefined) {
+        el.dataset.tipBound = 'true'
+        for (const ev of ['mouseenter', 'mouseleave']) {
+          el.addEventListener(ev, (event) => {
+            const e = (event) as MouseEvent
+            const text = el.dataset.tip
+            this.showTip(text, {
+              type: ev === 'mouseenter' ? 1 : 0,
+              x: e.clientX,
+              y: e.clientY,
+            })
           })
-        })
+        }
       }
     })
   }

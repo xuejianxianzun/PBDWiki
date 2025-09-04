@@ -1,24 +1,20 @@
 var Form = /** @class */ (function () {
     function Form() {
-        var _this = this;
         /**所有的美化表单元素 */
         // 每个美化的 input 控件后面必定有一个 span 元素
         // label 和 子选项区域则不一定有
         this.allBeautifyInput = [];
         this.init();
-        window.addEventListener('hashchange', function () {
-            _this.init();
-        });
     }
     Form.prototype.init = function () {
         var _this = this;
-        // 由于 docsify 的特性，需要等一会儿才能获取到所有的元素，所以延迟执行
-        window.setTimeout(function () {
+        // 由于 docsify 的特性，以及一些奇怪的问题，所以现在我通过循环执行代码以绑定事件
+        window.setInterval(function () {
             _this.getInputs();
             _this.bindInputEvents();
             _this.addTipEl();
             _this.bindTipEvents();
-        }, 600);
+        }, 1000);
     };
     // 获取所有的美化控件和它们对应的 span 元素
     Form.prototype.getInputs = function () {
@@ -62,6 +58,9 @@ var Form = /** @class */ (function () {
         var _this = this;
         var _loop_1 = function (item) {
             var input = item.input, span = item.span;
+            if (input.dataset.bound)
+                return "continue";
+            input.dataset.bound = 'true';
             // 点击美化元素时，点击真实的 input 控件
             span.addEventListener('click', function () {
                 input.click();
@@ -107,20 +106,23 @@ var Form = /** @class */ (function () {
         var _this = this;
         var tips = document.querySelectorAll('.has_tip');
         tips.forEach(function (el) {
-            var _loop_2 = function (ev) {
-                el.addEventListener(ev, function (event) {
-                    var e = (event);
-                    var text = el.dataset.tip;
-                    _this.showTip(text, {
-                        type: ev === 'mouseenter' ? 1 : 0,
-                        x: e.clientX,
-                        y: e.clientY
+            if (el.dataset.tipBound === undefined) {
+                el.dataset.tipBound = 'true';
+                var _loop_2 = function (ev) {
+                    el.addEventListener(ev, function (event) {
+                        var e = (event);
+                        var text = el.dataset.tip;
+                        _this.showTip(text, {
+                            type: ev === 'mouseenter' ? 1 : 0,
+                            x: e.clientX,
+                            y: e.clientY
+                        });
                     });
-                });
-            };
-            for (var _i = 0, _a = ['mouseenter', 'mouseleave']; _i < _a.length; _i++) {
-                var ev = _a[_i];
-                _loop_2(ev);
+                };
+                for (var _i = 0, _a = ['mouseenter', 'mouseleave']; _i < _a.length; _i++) {
+                    var ev = _a[_i];
+                    _loop_2(ev);
+                }
             }
         });
     };

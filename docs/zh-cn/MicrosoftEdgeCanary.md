@@ -1,6 +1,6 @@
 # 在 Microsoft Edge Canary 浏览器上安装
 
-视频：https://www.bilibili.com/video/BV1yweDzXEXJ
+?>你可以在 Bilibili 查看视频：[Microsoft Edge Canary 浏览器安装扩展程序-Android](https://www.bilibili.com/video/BV1yweDzXEXJ)
 
 ## 安装步骤
 
@@ -36,11 +36,11 @@
 
 **如何获得 crx 文件：**
 
-你可以从 [releases 页面](https://github.com/xuejianxianzun/PixivBatchDownloader/releases) 下载 crx 文件，并发送到安卓设备上：
+你可以从 [releases 页面](https://github.com/xuejianxianzun/PixivBatchDownloader/releases) 下载 crx 文件，并发送到 Android 设备上：
 
 ![](./images/20250828_001142.png)
 
-如果这里没有 crx 文件，你可以下载 zip 文件并解压到文件夹，然后在 PC 浏览器的扩展管理页面里选择这个文件夹，打包为 crx 文件。例如：
+如果这里没有 crx 文件，你可以自行打包。下载 zip 文件并解压到文件夹，然后在 PC 上的浏览器的扩展管理页面里选择这个文件夹，打包为 crx 文件。例如：
 
 ![](./images/20250828_014349.png)
 

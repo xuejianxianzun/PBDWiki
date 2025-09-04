@@ -12,6 +12,10 @@ h3 .anchor span {
   color: #444;
   font-size: 1.4rem;
 }
+.markdown-section p a,
+.markdown-section li a {
+  font-weight: 400;
+}
 h2 a,
 h2 a span,
 .markdown-section a {
@@ -19,6 +23,12 @@ h2 a span,
 }
 h3 a {
   color: #0ea8ef !important;
+}
+.app-sub-sidebar li::before {
+  display: none;
+}
+.app-sub-sidebar .app-sub-sidebar li::before {
+  display: block;
 }
 .sidebar ul li.active > a {
   color: #0ea8ef !important;
@@ -42,7 +52,56 @@ h3 a {
   font-family: inherit;
 }
 .markdown-section pre > code {
-  white-space: initial;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+#tip {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  position: fixed;
+  z-index: 5001;
+  max-width: 500px;
+  left: 0;
+  top: 0;
+  background: #02a3ec;
+  padding: 6px 8px;
+  border-radius: 5px;
+  line-height: 20px;
+  word-break: break-word;
+  display: none;
+}
+.xzToast {
+  margin: auto;
+  font-size: 15px;
+  pointer-events: none;
+  display: inline-block;
+  max-width: 500px;
+  color: #fff;
+  background-color: #29b3f3;
+  box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.xzToast.success {
+  background-color: #00BD17;
+}
+.xzToast.warning {
+  background-color: #e49d00;
+}
+.xzToast.error {
+  background-color: #f00;
+}
+.logContent span {
+  font-size: 15px;
+}
+.log {
+  font-size: 15px;
+}
+.log a {
+  color: #0ea8ef;
+  text-decoration: none;
+  font-weight: normal;
 }
 .option {
   font-size: 15px;
@@ -441,30 +500,95 @@ h3 a {
   outline: none;
   padding: 0px 3px;
 }
-#tip {
-  color: #fff;
-  font-size: 14px;
-  font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  position: fixed;
-  z-index: 5001;
-  max-width: 500px;
-  left: 0;
-  top: 0;
-  background: #02a3ec;
-  padding: 6px 8px;
-  border-radius: 5px;
-  line-height: 20px;
-  word-break: break-word;
-  display: none;
+.option .DoNotDownloadLastFewImagesWarp .controlBar {
+  display: inline;
+  color: #666666;
+  padding: 5px 0px;
 }
-.logContent span {
-  font-size: 15px;
+.option .DoNotDownloadLastFewImagesWarp .controlBar .textButton {
+  cursor: pointer;
+  color: #666666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: none;
+  outline: none;
+  padding: 1px 3px;
 }
-.log {
-  font-size: 15px;
+.option .DoNotDownloadLastFewImagesWarp .settingItem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 5px 0px;
 }
-.log a {
-  color: #0ea8ef;
-  text-decoration: none;
-  font-weight: normal;
+.option .DoNotDownloadLastFewImagesWarp .settingItem span {
+  padding-right: 4px;
+  line-height: 26px;
+}
+.option .DoNotDownloadLastFewImagesWarp .settingItem .inputItem {
+  margin-right: 10px;
+}
+.option .DoNotDownloadLastFewImagesWarp .settingItem .inputItem .label {
+  color: #444444;
+}
+.option .DoNotDownloadLastFewImagesWarp .settingItem .inputItem.uid input {
+  width: auto !important;
+  min-width: 100px !important;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .controlBar {
+  display: inline;
+  color: #666666;
+  padding: 5px 0px;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .textButton {
+  cursor: pointer;
+  color: #666666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  background: none;
+  outline: none;
+  padding: 1px 3px;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  align-items: center;
+  padding: 5px 0px;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem {
+  display: flex;
+  margin-right: 10px;
+  flex-basis: 40%;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem.tags input {
+  width: auto !important;
+  flex: 1 1 0%;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem.rule {
+  display: flex;
+  min-width: 100px;
+  max-width: 220px;
+  flex: 1 1 0%;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem.rule input {
+  width: auto !important;
+  flex: 1 1 0%;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem .label {
+  color: #444444;
+}
+.option .UseDifferentNameRuleIfWorkHasTagWarp .settingItem .inputItem span {
+  padding-right: 4px;
+  line-height: 26px;
 }

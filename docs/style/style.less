@@ -26,6 +26,11 @@ h3 .anchor span {
   font-size: 1.4rem;
 }
 
+.markdown-section p a,
+.markdown-section li a {
+  font-weight: 400;
+}
+
 h2 a,
 h2 a span,
 .markdown-section a {
@@ -36,6 +41,21 @@ h2 a span,
 // 文字颜色需要对里面的 span 标签设置
 h3 a {
   color: @themeBlue !important;
+}
+
+// 使左侧导航栏里的 3 级标题与 2 级标题区分开
+// 2 级标题不显示前面的横线 -
+.app-sub-sidebar {
+  li::before {
+    display: none;
+  }
+}
+
+// 3 级标题显示前面的横线 -
+.app-sub-sidebar .app-sub-sidebar {
+  li::before {
+    display: block;
+  }
 }
 
 .sidebar ul li.active>a {
@@ -67,10 +87,70 @@ h3 a {
 
 // docsify 的代码块默认是一行（会出现横向滚动条），改为多行显示
 .markdown-section pre>code {
-  white-space: initial;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-// 下载器的选项的样式
+// 下载器的提示元素的样式
+#tip {
+  color: #fff;
+  font-size: 14px;
+  font-family: @pixivFontFamily;
+  position: fixed;
+  z-index: 5001;
+  max-width: 500px;
+  left: 0;
+  top: 0;
+  background: #02a3ec;
+  padding: 6px 8px;
+  border-radius: 5px;
+  line-height: 20px;
+  word-break: break-word;
+  display: none;
+}
+
+// 下载器的轻提示的样式
+.xzToast {
+  margin: auto;
+  font-size: 15px;
+  pointer-events: none;
+  display: inline-block;
+  max-width: 500px;
+  color: #fff;
+  background-color: @beautifyBlue;
+  box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  &.success {
+    background-color: #00BD17;
+  }
+
+  &.warning {
+    background-color: #e49d00;
+  }
+
+  &.error {
+    background-color: #f00;
+  }
+}
+
+// 日志的样式
+.logContent span {
+  font-size: 15px;
+}
+
+.log {
+  font-size: 15px;
+
+  a {
+    color: rgb(14, 168, 239);
+    text-decoration: none;
+    font-weight: normal;
+  }
+}
+
+// 设置面板里的选项的样式
 .option {
   font-size: 15px;
   font-family: @pixivFontFamily;
@@ -538,35 +618,117 @@ h3 a {
     outline: none;
     padding: 0px 3px;
   }
-}
 
-#tip {
-  color: #fff;
-  font-size: 14px;
-  font-family: @pixivFontFamily;
-  position: fixed;
-  z-index: 5001;
-  max-width: 500px;
-  left: 0;
-  top: 0;
-  background: #02a3ec;
-  padding: 6px 8px;
-  border-radius: 5px;
-  line-height: 20px;
-  word-break: break-word;
-  display: none;
-}
+  .DoNotDownloadLastFewImagesWarp {
 
-.logContent span {
-  font-size: 15px;
-}
+    .controlBar {
+      display: inline;
+      color: rgb(102, 102, 102);
+      padding: 5px 0px;
 
-.log {
-  font-size: 15px;
+      .textButton {
+        cursor: pointer;
+        color: rgb(102, 102, 102);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        background: none;
+        outline: none;
+        padding: 1px 3px;
+      }
+    }
 
-  a {
-    color: rgb(14, 168, 239);
-    text-decoration: none;
-    font-weight: normal;
+    .settingItem {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      align-items: center;
+      padding: 5px 0px;
+
+      span {
+        padding-right: 4px;
+        line-height: 26px;
+      }
+
+      .inputItem {
+        margin-right: 10px;
+
+        .label {
+          color: rgb(68, 68, 68);
+        }
+
+        &.uid input {
+          width: auto !important;
+          min-width: 100px !important;
+        }
+      }
+    }
+  }
+
+  .UseDifferentNameRuleIfWorkHasTagWarp {
+    .controlBar {
+      display: inline;
+      color: rgb(102, 102, 102);
+      padding: 5px 0px;
+    }
+
+    .textButton {
+      cursor: pointer;
+      color: rgb(102, 102, 102);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      background: none;
+      outline: none;
+      padding: 1px 3px;
+    }
+
+    .settingItem {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      align-items: center;
+      padding: 5px 0px;
+
+      .inputItem {
+        display: flex;
+        margin-right: 10px;
+        flex-basis: 40%;
+
+        &.tags input {
+          width: auto !important;
+          flex: 1 1 0%;
+        }
+
+        &.rule {
+          display: flex;
+          min-width: 100px;
+          max-width: 220px;
+          flex: 1 1 0%;
+
+          input {
+            width: auto !important;
+            flex: 1 1 0%;
+          }
+        }
+
+        .label {
+          color: rgb(68, 68, 68);
+        }
+
+        span {
+          padding-right: 4px;
+          line-height: 26px;
+        }
+      }
+    }
   }
 }
