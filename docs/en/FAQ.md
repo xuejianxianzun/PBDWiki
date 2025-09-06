@@ -56,7 +56,7 @@ If you don't want to change the browser's default download location, you'll need
 
 Use a forward slash `/` in the naming rule. The text before the slash will be used as the folder name.
 
-For example, `{p_title}/{id}-{tags}-{user}` will create a folder using the page title.
+For example, `{page_title}/{id}-{tags}-{user}` will create a folder using the page title.
 
 ## How to group an artist's works in the same folder
 

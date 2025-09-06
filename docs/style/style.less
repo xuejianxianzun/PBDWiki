@@ -150,6 +150,195 @@ h3 a {
   }
 }
 
+// 按钮
+.btnsWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.xzbtns {
+  display: inline-flex;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  background-color: rgb(14, 168, 239);
+  box-sizing: border-box;
+  width: 150px;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  vertical-align: top;
+  box-shadow: rgb(238, 238, 238) 0px 1px 6px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.hasRippleAnimation {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+
+  &:hover::before,
+  &:focus::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .ripple {
+    position: absolute;
+    transform: scale(0);
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  &:hover .ripple,
+  &:focus .ripple {
+    animation: 0.6s linear 0s 1 normal none running ripple-effect;
+  }
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.blueTextBtn {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 150, 250);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  appearance: none;
+  height: 32px;
+  white-space: nowrap;
+  padding: 0px 16px;
+  margin: 0px 8px;
+  border-style: none;
+  border-radius: 99px;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+// 输入面板的样式
+.XZInputWrap {
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(44, 166, 223) 0px 0px 15px;
+  max-width: 90vw;
+  height: max-content;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 8px;
+
+  .XZInputInstruction {
+    display: flex;
+    color: rgb(51, 51, 51);
+    line-height: 24px;
+    margin: 0px 0px 10px;
+  }
+
+  .XZInputContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .XZInput {
+      color: rgb(51, 51, 51);
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 24px;
+      flex-basis: 600px;
+      flex-grow: 0;
+      font-family: sans-serif;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(0, 150, 250);
+      border-image: initial;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    textarea.XZInput {
+      height: auto;
+    }
+
+    .XZInputButton {
+      margin-left: 10px;
+      flex-shrink: 0;
+      background-color: rgb(0, 150, 250);
+      color: rgb(255, 255, 255);
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 0px 25px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      border-radius: 18px;
+
+      &.cancel {
+        background-color: rgb(228, 157, 0);
+      }
+    }
+  }
+}
+
+
+p.result {
+  margin-bottom: 10px;
+
+  .color999 {
+    color: rgb(153, 153, 153);
+  }
+
+  .colorFolder {
+    color: rgb(14, 168, 239);
+  }
+
+  .color000 {
+    color: rgb(0, 0, 0);
+  }
+}
+
 // 设置面板里的选项的样式
 .option {
   font-size: 15px;

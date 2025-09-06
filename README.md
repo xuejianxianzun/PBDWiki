@@ -8,8 +8,10 @@
 
 > 本 Wiki 使用 [docsify](https://docsify.js.org/) 构建。
 
+打开项目文件夹，并执行下面的命令：
+
 ```
-# 先安装 docsify-cli
+# 安装 docsify-cli
 npm i docsify-cli -g
 
 # 启动本地测试服务器
@@ -23,20 +25,18 @@ docsify serve docs
 建议使用 Pull Requests 提交翻译：
 
 1. Fork 本项目 [https://github.com/xuejianxianzun/PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
-2. 下载项目文件，复制 `/docs/zh-cn` 目录里的所有文件，粘贴到其他语言的目录下。
-3. 翻译文本，替换图片，并替换链接中的  `zh-cn`。
+2. 下载项目文件，复制 `/docs/zh-cn` 文件夹，并把它的名字修改为目标语言的标记，例如 `ja`。
+3. 编辑 Wiki。
 4. 提交 Pull Requests。
 
-----------
+---------
 
-Currently there are only Chinese documents. Users in other languages can use the translation program to view or submit translations.
+以下页面里有一些针对中国大陆用户显示的提示，在其他语言的翻译里应该去掉。
 
-It is recommended to use Pull Requests to submit translation:
-
-1. Fork this project [https://github.com/xuejianxianzun/PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
-2. Download the project files, copy all the files in the `/docs/zh-cn` directory, and paste them into other language directories.
-3. Translate the text, replace the images and replace `zh-cn` in the link.
-4. Submit a Pull Requests.
+- 赞助我
+- 联系我
+- 在线更新
+- 常见问题
 
 ## 术语
 
