@@ -2,11 +2,11 @@
 
 ![image](./images/logo128.png)
 
-[GitHub page](https://github.com/xuejianxianzun/PixivBatchDownloader)
+Github: [PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
+
+Github: [Pixiv Batch Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader)
 
 Wiki version: 17.8.1
-
-**目前文档尚未修改完成！我还在继续修改。**
 
 ----------
 

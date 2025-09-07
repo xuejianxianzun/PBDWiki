@@ -1,4 +1,4 @@
-![logo](./docs/images/logo128.png/icon/logo128.png?raw=true)
+![logo](./docs/images/logo128.png)
 
 **Pixiv Batch Downloader's Wiki**
 
@@ -20,19 +20,22 @@ docsify serve docs
 
 ## 语言支持
 
-现在只有中文文档。其他语言的用户可以使用翻译程序查看，或者提交翻译。
+- 简体中文
+- English
 
-建议使用 Pull Requests 提交翻译：
+由于我的能力和精力有限，所以我只维护了简体中文文档。
 
-1. Fork 本项目 [https://github.com/xuejianxianzun/PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
-2. 下载项目文件，复制 `/docs/zh-cn` 文件夹，并把它的名字修改为目标语言的标记，例如 `ja`。
-3. 编辑 Wiki。
-4. 提交 Pull Requests。
+英语是从简体中文翻译而来的，不过我也更新了里面的图片。
+
+如果你想以其他语言查看，可以使用浏览器的网页翻译功能。
+
+如果你想提交某种语言的翻译，或者优化现有的翻译，欢迎提交 Pull Requests。
 
 ---------
 
 以下页面里有一些针对中国大陆用户显示的提示，在其他语言的翻译里应该去掉。
 
+- 简介
 - 赞助我
 - 联系我
 - 在线更新
@@ -40,7 +43,7 @@ docsify serve docs
 
 ## 术语
 
-下载器有很多可设置项，具体到每一个设置项，可以使用不同的称呼，使含义更准确：
+下载器有很多设置项。在这个 Wiki 里，可以根据设置项的特征使用不同的称呼，使含义更准确：
 - 设置：可以让用户输入数字、文字的；有子选项的。
 - 选项：只有一个开关的简单的设置项。
-- 功能：涉及 UI，会让用户在网页上看到效果的。
+- 功能：涉及 UI，会让用户在网页上看到效果的。它的意义很宽泛，有些“设置”或“选项”也可以称为“功能”。
