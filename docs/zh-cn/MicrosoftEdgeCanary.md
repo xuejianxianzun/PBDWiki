@@ -8,7 +8,7 @@
 
 ![](./images/20250827_221754.png)
 
-*现在 Microsoft Edge 的正式版不能安装扩展程序，所以需要安装 Canary 版本。*
+?>现在 Microsoft Edge 的正式版不能安装扩展程序，所以需要安装 Canary 版本。
 
 安装之后打开它的菜单，进入 **设置** 里的 **关于 Microsoft Edge**，再连续点击版本号数次，以启用开发者选项：
 
