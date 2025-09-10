@@ -13,13 +13,13 @@
 
 If this option is enabled, the downloader will display a system notification after all files have finished downloading (may request notification permission)：
 
-![](./images/20250909_212226.png)
+![](images/20250909_212226.png)
 
 And there may also be a notification sound (depending on the operating system settings).
 
 If Do Not Disturb mode is enabled, the notification will be stored in the notification center and will not appear in the bottom-right corner (but there may still be a notification sound).
 
-![](./images/20250909_212635.png)
+![](images/20250909_212635.png)
 
 ## Download interval
 
@@ -83,11 +83,11 @@ There are two main use cases:
 
 1. Clicking the bookmark button in the bottom-right corner of the work:
 
-![](./images/20250902_144603.png) ![](./images/20250902_145045.png)
+![](images/20250902_144603.png) ![](images/20250902_145045.png)
 
 2. Clicking the bookmark button inside the work page:
 
-![](./images/20250902_144743.png)
+![](images/20250910_231820.png)
 
 ?> Although the screenshots above are for illustrations, this feature also works for novels.
 
@@ -97,7 +97,7 @@ There are two main use cases:
 
 The downloader provides this feature by default:
 
-![](./images/20250902_145913.png)
+![](images/20250902_145913.png)
 
 When you are on a page, hovering the mouse over an illustration thumbnail should show a button in the top-right corner.
 
@@ -117,7 +117,7 @@ When this feature is enabled, the downloader will automatically download the wor
 
 Like button:
 
-![](./images/20250902_151038.png)
+![](images/20250910_231828.png)
 
 ?> Although the screenshot above is for an illustration, this feature also works for novels.
 
@@ -262,15 +262,15 @@ The downloader will save novel cover images separately, with filenames matching 
 
 Example:
 
-![](./images/20250902_201342.png)
+![](images/20250902_201342.png)
 
-![](./images/20250902_201439.png)
+![](images/20250902_201439.png)
 
 If you do not want to save cover images, you can disable this option.
 
 If you save the novel in EPUB format, the downloader will also add an embedded cover image, for example:
 
-![](./images/20250902_204250.png)
+![](images/20250910_232344.webp)
 
 Currently, regardless of whether this option is enabled, the downloader always adds an embedded cover. In future versions, I plan to make the embedded cover follow this setting, meaning if you disable this option, the downloader will not add an embedded cover.
 
@@ -288,11 +288,11 @@ The downloader saves embedded images by default. There are differences depending
 
 When saving novels as TXT, images are saved separately with filenames matching the novel's. For example:
 
-![](./images/20250902_203236.png)
+![](images/20250902_203236.png)
 
 When saving novels as EPUB, images are not saved separately but stored inside the EPUB. For example:
 
-![](./images/20250902_203429.webp)
+![](images/20250910_232703.webp)
 
 !> For large PNG format embedded images, some novel readers may only display part of them. This is an issue with the reader, not the downloader.
 
@@ -321,9 +321,9 @@ If you select certain work types, the downloader will create a TXT file during d
 
 Example
 
-![](./images/20250902_204653.png)
+![](images/20250902_204653.png)
 
-?> The filename of the metadata includes a meta marker at the end.
+?> The filename of the metadata includes a `meta` marker at the end.
 
 For image works (illustrations, manga, Ugoira), an example of the metadata saved by the downloader is as follows:
 
@@ -413,17 +413,15 @@ The metadata for novels is roughly the same but does not include `Original` or `
 If you enable this feature, the downloader will create a TXT file for each work to save its description.
 The description refers to the text below the work's title. For example:
 
-![](./images/20250902_210941.png)
-
-![](./images/20250902_210953.png)
+![](images/20250910_233024.png)
 
 The TXT description file saved by the downloader:
 
-![](./images/20250902_211107.png)
+![](images/20250910_233123.png)
 
 The filename of the TXT description file may include two markers:
 
-1. A `description` marker, which is always included. This marker depends on the downloader's language setting, e.g., it is `description` when using English.
+1. A `description` marker, which is always included. This marker depends on the downloader's language setting, e.g., it is `简介` when using Chinese.
 2. If the description contains URL links, the downloader will add a `links` marker.
 
 ?> Some works do not have a description, in which case the downloader will not create a TXT description file for them.
@@ -456,7 +454,7 @@ The **filename** of the aggregated file includes multiple parts:
 For example:
 
 ```
-description summary-user age fx-Prinz Eugen (Azur Lane), Azur Lane, girl ／ 命运交响曲 - pixiv-9／9／2025, 9：36：24 PM.txt
+description summary-user saihate-No_Logic, virtual YouTuber ／ 【動画絵】 No Logic ／ September 2nd, 2025 - pixiv-9／10／2025, 11：31：11 PM.txt
 ```
 
 ## Image size
@@ -499,7 +497,7 @@ There are other use cases:
 
 You may want to batch bookmark some works without downloading their originals. In this case, enable the "Bookmark works after downloading" option and set the image size to "Square thumbnail". Then download these works.
 
-!> When selecting a smaller size and **with a large number of files**, the download frequency may be very fast, e.g., nearly 10 images per second. It is recommended to set a [Download interval](/en/Settings-More-Downloading?id=Download-interval) to proactively reduce the frequency, otherwise Pixiv may issue a warning.
+!> When selecting a smaller size and **with a large number of files**, the download frequency may be very fast, e.g., nearly 10 images per second. It is recommended to set a [Download interval](/en/Settings-More-Download?id=download-interval) to proactively reduce the frequency, otherwise Pixiv may issue a warning.
 
 ## File size limit
 

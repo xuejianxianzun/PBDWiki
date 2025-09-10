@@ -8,7 +8,7 @@
     <button type="button" class="gray1 textButton showDateTip" data-xztext="_Tips">Tips</button>
     </p>
 
-The downloader’s naming rules include markers that generate date and time strings:
+The downloader's naming rules include markers that generate date and time strings:
 - `{date}`
 - `{upload_date}`
 - `{task_date}`
@@ -59,9 +59,9 @@ For a time like `2021-04-30T06:40:08`, the available markers and their outputs a
 
 This feature exports the logs displayed at the top of the webpage to an HTML file.
 
-?> HTML format is used because it supports colored text, preserving the log area’s display effect.
+?> HTML format is used because it supports colored text, preserving the log area's display effect.
 
-?> This feature is a legacy addition. Previously, during a task (from crawling to download completion), if the downloader generated too many logs (e.g., over 300), it would clear earlier logs. Since users couldn’t view cleared logs, this feature was added to back up logs, retaining the complete log. However, the downloader no longer clears logs during a task, so this feature is less necessary now.
+?> This feature is a legacy addition. Previously, during a task (from crawling to download completion), if the downloader generated too many logs (e.g., over 300), it would clear earlier logs. Since users couldn't view cleared logs, this feature was added to back up logs, retaining the complete log. However, the downloader no longer clears logs during a task, so this feature is less necessary now.
 
 Sub-options:
 
@@ -102,24 +102,24 @@ The default value `404,429,500` excludes some error messages.
     <label for="theme3" class="">Dark</label>
     </p>
 
-You can choose the downloader’s color theme.
+You can choose the downloader's color theme.
 
-- `Auto`: Default. The downloader automatically detects Pixiv’s color theme and uses the same.
+- `Auto`: Default. The downloader automatically detects Pixiv's color theme and uses the same.
 - `White`: Light mode
 - `Dark`: Dark mode
 
-?> The downloader defaults to following Pixiv’s color theme.
+?> The downloader defaults to following Pixiv's color theme.
 
-Pixiv’s pages default to light mode. To use dark mode, click your Pixiv avatar and select "Dark mode" from the menu, as shown:
+Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar and select "Dark mode" from the menu, as shown:
 
-![](./images/20250909_221310.png)
+![](images/20250909_221310.png)
 
-!> Some users may use [Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), an extension that displays websites in dark mode. If you want dark mode on Pixiv, use Pixiv’s built-in dark mode. If you keep Pixiv in its default light theme and use Dark Reader to display it in dark mode, the downloader’s `Auto` option will still use light mode, which may not meet your expectations. You can manually set the downloader’s color theme to `Dark`.
+!> Some users may use [Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), an extension that displays websites in dark mode. If you want dark mode on Pixiv, use Pixiv's built-in dark mode. If you keep Pixiv in its default light theme and use Dark Reader to display it in dark mode, the downloader's `Auto` option will still use light mode, which may not meet your expectations. You can manually set the downloader's color theme to `Dark`.
 
 ## Background Image
 
 <p class="option" data-no="41" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Background image description" data-tip="You can select a local image as the downloader’s background image.">
+    <span class="has_tip settingNameStyle1" data-xztip="_Background image description" data-tip="You can select a local image as the downloader's background image.">
     <span data-xztext="_Background image"><span class="key">Background</span> image</span>
     <span class="gray1"> ? </span>
     </span>
@@ -141,15 +141,15 @@ Pixiv’s pages default to light mode. To use dark mode, click your Pixiv avatar
     </span>
     </p>
 
-You can set a favorite image as the downloader’s background image and adjust its transparency and alignment.
+You can set a favorite image as the downloader's background image and adjust its transparency and alignment.
 
 The effect is shown below:
 
-![](./images/20250909_221755.webp)
+![](images/20250909_221755.webp)
 
 ?> The downloader does not include built-in background images, so you need to select one yourself. The background image in the example above is from [92215267](https://www.pixiv.net/artworks/92215267).
 
-?> It’s recommended to use a darker image as the background, as bright backgrounds can make text harder to read.
+?> It's recommended to use a darker image as the background, as bright backgrounds can make text harder to read.
 
 This setting includes buttons and options:
 
@@ -161,18 +161,18 @@ Clicking this button opens a file selection dialog, allowing you to choose an im
 
 ### Clear
 
-Clicking this button removes the downloader’s background image, restoring it to no background.
+Clicking this button removes the downloader's background image, restoring it to no background.
 
 ### Alignment
 
-- `Center`: Aligns the center of the background image with the center of the settings panel. If the image’s height exceeds the panel’s height, the top and bottom may be cropped.
-- `Top`: Default. Aligns the top of the background image with the top of the settings panel. If the image’s height exceeds the panel’s height, the bottom may be cropped.
+- `Center`: Aligns the center of the background image with the center of the settings panel. If the image's height exceeds the panel's height, the top and bottom may be cropped.
+- `Top`: Default. Aligns the top of the background image with the top of the settings panel. If the image's height exceeds the panel's height, the bottom may be cropped.
 
 You can adjust the alignment based on the specific image for a better display effect.
 
 ### Opacity
 
-You can use this slider to adjust the background image’s opacity. The default is `60%`.
+You can use this slider to adjust the background image's opacity. The default is `60%`.
 
 ?> There is a black background layer beneath the background image, and the image is semi-transparent by default, making it appear darker. This design ensures the text on the settings panel is readable. Adjusting opacity essentially controls how much the background image obscures the black background.
 
@@ -195,15 +195,15 @@ Increasing opacity makes the image closer to its original appearance; decreasing
 
 "Tabs" refer to the three tabs at the top of the downloader: "Crawl," "Download," and "More":
 
-![](./images/20250909_221919.png)
+![](images/20250909_221919.png)
 
 - `Mouse hover`: Default. Moving the mouse pointer over a tab title immediately switches to that tab, which is convenient.
-- `Mouse click`: Moving the mouse pointer over a tab title doesn’t switch tabs; you need to click the title to switch. This is for users who find the hover method causes accidental switches.
+- `Mouse click`: Moving the mouse pointer over a tab title doesn't switch tabs; you need to click the title to switch. This is for users who find the hover method causes accidental switches.
 
 ## Highlight Keywords
 
 <p class="option" data-no="53" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Highlight keywords description" data-tip="Highlight keywords in the downloader’s settings to help you quickly find the desired setting.<br>Not available in some languages, as I’m not familiar with them and haven’t set highlighted text.">
+    <span class="has_tip settingNameStyle1" data-xztip="_Highlight keywords description" data-tip="Highlight keywords in the downloader's settings to help you quickly find the desired setting.<br>Not available in some languages, as I'm not familiar with them and haven't set highlighted text.">
     <span data-xztext="_Highlight keywords"><span class="key">Highlight</span> keywords</span>
     <span class="gray1"> ? </span>
     </span>
@@ -213,7 +213,7 @@ Increasing opacity makes the image closer to its original appearance; decreasing
 
 The downloader displays keywords in each setting item in blue and bold, for example:
 
-![](./images/20250909_221934.png)
+![](images/20250909_221934.png)
 
 This is because the downloader has many settings, and finding a specific one can take time. This feature improves efficiency.
 
@@ -248,20 +248,20 @@ You can choose the language used by the downloader.
 
 The default is `Auto`, where the downloader uses the same language as the Pixiv page. You can also manually select a language.
 
-?> You can use a different language from the Pixiv page. This setting only affects the downloader, not Pixiv’s pages.
+?> You can use a different language from the Pixiv page. This setting only affects the downloader, not Pixiv's pages.
 
 --------
 
 Tip: Pixiv offers multiple language options. Click your avatar and select Language settings to switch languages:
 
-![](./images/20250904_225526.png)
+![](images/20250904_225526.png)
 
-?> Pixiv previously offered a Russian language option, but it’s no longer available. If you’re a Russian user, you can manually select `Русский` in the downloader’s Language settings to use Russian.
+?> Pixiv previously offered a Russian language option, but it's no longer available. If you're a Russian user, you can manually select `Русский` in the downloader's Language settings to use Russian.
 
 ## Manage Settings
 
 <p class="option" data-no="37" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztext="_Manage settings description" data-tip="You can manage the downloader’s settings, such as exporting to back up settings, sharing with others, or resetting settings.">
+    <span class="has_tip settingNameStyle1" data-xztext="_Manage settings description" data-tip="You can manage the downloader's settings, such as exporting to back up settings, sharing with others, or resetting settings.">
     <span data-xztext="_Manage settings">Manage <span class="key">settings</span></span>
     <span class="gray1"> ? </span>
     </span>
@@ -273,7 +273,7 @@ Tip: Pixiv offers multiple language options. Click your avatar and select Langua
 
 This feature includes four buttons:
 
-- `Export settings`: Exports the downloader’s settings to a JSON file, saved to the browser’s download directory.
+- `Export settings`: Exports the downloader's settings to a JSON file, saved to the browser's download directory.
 - `Import settings`: Allows you to select a previously exported JSON file to restore settings.
 - `Reset settings`: Restores all downloader options to their default values.
 - `Show help again`: When using certain features (e.g., previewing images), the downloader shows one-time help messages. Click this button to view these help messages again.
@@ -284,4 +284,4 @@ Possible use cases:
 - Share exported settings with others.
 - When submitting an issue, export settings and include them as an attachment.
 
-?> The downloader’s settings are stored in `browser.storage.local`. They are only cleared when the extension is removed. Clearing browser data does not affect the downloader’s settings.
+?> The downloader's settings are stored in `browser.storage.local`. They are only cleared when the extension is removed. Clearing browser data does not affect the downloader's settings.

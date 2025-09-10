@@ -34,17 +34,17 @@ Use this button to manually select any works on the page and crawl them.
 
 Clicking this button enters selection mode. A blue circle with crosshair guidelines appears under the mouse cursor, as shown below:
 
-![](./images/20250905_224727.png)
+![](images/20250905_224727.png)
 
 You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
 
-![](./images/20250905_225429.png)
+![](images/20250905_225429.png)
 
 You can later crawl the selected works.
 
 ?> If the current page has pagination (e.g., on a user profile), you can select works across multiple pages. For example, select 2 works on page 1, then go to page 2 and select 3 works, resulting in 5 selected works that can be crawled at once.
 
-?> When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work’s page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work’s thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
+?> When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work's page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work's thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
 
 ---------
 
@@ -65,22 +65,22 @@ After selecting the works you want to crawl, click the `crawl selected works` bu
 - If needed, you can click `Pause select` and `Continue select` to make multiple selections. The downloader does not clear previously selected works, so selections accumulate.
 - Press the `Esc` key to exit manual selection mode.
 - If works are selected, the downloader displays the number of selected works on the `crawl selected works` button.
-- The downloader’s filter conditions also apply to manually selected works, so some works may be excluded during crawling.
+- The downloader's filter conditions also apply to manually selected works, so some works may be excluded during crawling.
 - The downloader does not automatically clear selected works unless you click the `Clear selected works` button.
 
 -------
 
-When navigating to other pages, the selected works list **may** be lost, depending on whether the current page’s content is discarded.
+When navigating to other pages, the selected works list **may** be lost, depending on whether the current page's content is discarded.
 
 For example, navigating from a user profile to a work page without refreshing retains the selected works.
 
 However, navigating to certain pages (e.g., rankings) or refreshing the page discards the current page content. In such cases, the downloader prompts the browser to display a confirmation dialog, as shown below:
 
-![](./images/20250909_225629.png)
+![](images/20250909_225629.png)
 
 If you choose to leave the page, the selected works are lost. If you cancel the navigation, the selected works are retained.
 
-In short, you don’t need to worry about accidentally losing selected works, as you’ll have the opportunity to choose.
+In short, you don't need to worry about accidentally losing selected works, as you'll have the opportunity to choose.
 
 ### Timed crawl
 
@@ -90,7 +90,7 @@ On some pages, new works may appear over time, such as:
 
 - User profile
 - New works by followed users
-- Everyone’s new works
+- Everyone's new works
 - Your bookmark page
 - Search page
 
@@ -104,9 +104,9 @@ To schedule crawling of new works by followed users, follow these steps:
 
 2. Set the number of pages to crawl each time:
 
-![](./images/20250909_225712.png)
+![](images/20250909_225712.png)
 
-This page count should consider the "interval time." For example, if you want to crawl every 120 minutes and the page’s new works in 120 minutes do not exceed 3 pages, set it to `3`.
+This page count should consider the "interval time." For example, if you want to crawl every 120 minutes and the page's new works in 120 minutes do not exceed 3 pages, set it to `3`.
 
 3. Click the `Timed crawl` button, and the downloader displays an input box to set the interval time:
 
@@ -127,7 +127,7 @@ Click the `Submit` button, and the downloader starts the timed crawl task, displ
 **Tips:**
 
 - The downloader does not start crawling immediately; it waits until the set interval before the first crawl.
-- It’s recommended to enable the [Don't download duplicate files](/en/Settings-More-Download?id=do-not-download-duplicate-files) function in the "More" tab to avoid unnecessary duplicate downloads.
+- It's recommended to enable the [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) function in the "More" tab to avoid unnecessary duplicate downloads.
 - The interval should not be too short, as crawling and downloading take time.
 
 -----------
@@ -143,18 +143,18 @@ To cancel timed crawl, click this button or close the page running the timed cra
 When using timed crawl, note the following:
 
 1. Do not close the current tab. You can switch to other tabs and continue using the browser.
-2. Do not change the URL of the current tab. For example, if you’re on a user profile performing timed crawl and click a work to enter its page, the task will be canceled.
-3. Enable the [Don't download duplicate files](/en/Settings-More-Download?id=do-not-download-duplicate-files) function to avoid downloading duplicates.
-4. If the extension updates automatically, the page may not download files correctly (refresh the page to restore functionality). For long-term timed crawl, consider installing the extension offline to avoid interruptions from updates. See the [Offline Installation](/en/Offline-Installation) page.
-5. Set a lower page count to avoid crawling too many duplicate works. For example, on a search page, you can crawl up to 1000 pages, but it’s unnecessary to crawl all of them. Setting 10 pages or fewer is fine if new content within the interval doesn’t exceed 10 pages.
+2. Do not change the URL of the current tab. For example, if you're on a user profile performing timed crawl and click a work to enter its page, the task will be canceled.
+3. Enable the [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) function to avoid downloading duplicates.
+4. If the extension updates automatically, the page may not download files correctly (refresh the page to restore functionality). For long-term timed crawl, consider installing the extension offline to avoid interruptions from updates. See the [Offline Installation](/en/OfflineInstallation) page.
+5. Set a lower page count to avoid crawling too many duplicate works. For example, on a search page, you can crawl up to 1000 pages, but it's unnecessary to crawl all of them. Setting 10 pages or fewer is fine if new content within the interval doesn't exceed 10 pages.
 6. On search pages, crawled works are not displayed on the page (i.e., no preview of search results).
 7. Timed crawl always starts downloading automatically.
-8. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-More-Crawl?id=scheduled-crawling-interval) setting.
-9. The downloader uses the interval set at the task’s start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
+8. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-More-Crawl?id=the-interval-time-of-timed-crawl) setting.
+9. The downloader uses the interval set at the task's start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
 
 ## Homepage
 
-Pixiv’s homepage has complex content, so I didn’t add a `Start crawl` button, meaning you cannot download all works on the homepage with one click.
+Pixiv's homepage has complex content, so I didn't add a `Start crawl` button, meaning you cannot download all works on the homepage with one click.
 
 On the homepage, I added the common `Manually select` button, along with three crawling buttons:
 
@@ -236,7 +236,7 @@ The JSON file format is as follows:
 
 `id` is the work ID, and `type` is the work type, which can be `"illusts"` or `"novel"`.
 
-?> This JSON file can be generated by the [Export ID List After Obtaining Work IDs and Stop Task](/en/Settings-More-Crawl?id=export-id-list-after-obtaining-work-ids-and-stop-task) function. These two functions are designed to work together. However, you can also create your own ID list as long as the format meets the requirements.
+?> This JSON file can be generated by the [After obtaining the work ID list, export the ID list and stop the task](/en/Settings-More-Crawl?id=after-obtaining-the-work-id-list-export-the-id-list-and-stop-the-task) function. These two functions are designed to work together. However, you can also create your own ID list as long as the format meets the requirements.
 
 ## Work Page
 
@@ -256,7 +256,7 @@ You can set how many works to crawl (including the current work) in the first cr
 
 Diagram:
 
-![](./images/20250906_011151.webp)
+![](images/20250906_011151.webp)
 
 Newer works are on the left, older works on the right.
 
@@ -286,7 +286,7 @@ You can set how many related works to crawl (including the current work) in the 
 
 After clicking the bookmark button, Pixiv displays recommended works, and the downloader shows this button, as illustrated below:
 
-![](./images/20250909_230842.webp)
+![](images/20250909_230842.webp)
 
 Click this button to crawl recommended works.
 
@@ -316,8 +316,8 @@ Crawls all novels in the series and merges them into a single file.
 
 **Tips:**
 
-- Based on the [Novel Save Format](/en/Settings-More-Download?id=novel-save-format) setting, the downloader generates a TXT or EPUB file.
-- The generated file name follows a **fixed format**: `Series Name + Username + Series ID + Tags of the First Novel`, and it is saved directly to the browser’s download directory. This is because the file contains multiple novels, so it cannot use naming rules designed for single files. I plan to add a naming rule for this file in the future.
+- Based on the [Novel Save Format](/en/Settings-More-Download?id=save-the-novel-as) setting, the downloader generates a TXT or EPUB file.
+- The generated file name follows a **fixed format**: `Series Name + Username + Series ID + Tags of the First Novel`, and it is saved directly to the browser's download directory. This is because the file contains multiple novels, so it cannot use naming rules designed for single files. I plan to add a naming rule for this file in the future.
 - When merging a novel series, the downloader panel does not display a progress bar, but you can check some progress information in the log.
 
 ## Search Page
@@ -328,7 +328,7 @@ A search page is for searching a specific tag, e.g., [バーチャルYouTuber](h
 
 - On search pages, you can use `{page_tag}` (the searched tag) as the folder name.
 - By default, the downloader sorts works by bookmark count in descending order, prioritizing works with higher bookmark counts.
-- You can set [How Many Pages to Crawl](/en/Settings-Crawl?id=how-many-pages-to-crawl). For non-Pixiv premium users, search pages are limited to 1000 pages; premium users can view up to 5000 pages. The downloader’s crawl limit matches the pages you can view.
+- You can set [How Many Pages to Crawl](/en/Settings-Crawl?id=how-many-pages-to-crawl). For non-Pixiv premium users, search pages are limited to 1000 pages; premium users can view up to 5000 pages. The downloader's crawl limit matches the pages you can view.
 
 In addition to common crawling buttons, search pages have two additional crawling buttons:
 
@@ -340,27 +340,27 @@ Clicking this button displays an input area at the top of the page. You can ente
 
 Example:
 
-![](./images/20250909_231123.png)
+![](images/20250909_231123.png)
 
 **Tips:**
 
 - Separate multiple tags with newlines (one tag per line).
-- The downloader crawls and downloads each tag’s works sequentially (always starting downloads automatically). It moves to the next tag after finishing the current one.
-- To save each tag’s works to corresponding folders, use the `{page_tag}` tag to capture the current tag for folder creation. Refer to the naming rule: `{page_tag}/{id}`.
-- Current crawl conditions apply when crawling each tag’s works.
+- The downloader crawls and downloads each tag's works sequentially (always starting downloads automatically). It moves to the next tag after finishing the current one.
+- To save each tag's works to corresponding folders, use the `{page_tag}` tag to capture the current tag for folder creation. Refer to the naming rule: `{page_tag}/{id}`.
+- Current crawl conditions apply when crawling each tag's works.
 - Do not navigate to other pages while crawling a tag list (avoid clicking links on the page).
 - During tag list crawling, the downloader does not display crawled works on the page, so you cannot preview results.
 - The downloader saves the task state. If the page or browser is closed before completion, reopening the page allows the downloader to resume crawling the remaining tags.
 
 ### Buttons for Filtering Crawl Results
 
-If you enable the [Preview Search Page Filter Results](/en/Settings-More-Enhance?id=preview-search-page-filter-results) function, the downloader sorts crawled image works by bookmark count and displays them on the page. It does not start downloading automatically, allowing you to preview and filter crawl results before downloading.
+If you enable the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) function, the downloader sorts crawled image works by bookmark count and displays them on the page. It does not start downloading automatically, allowing you to preview and filter crawl results before downloading.
 
 Four buttons are available for filtering crawl results, usable only after crawling is complete:
 
 <p class="btnsWrap"><button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Filter Results Info" style="background-color: rgb(20, 173, 39);" title="You can change settings and filter results again."><span data-xztext="_Filter Results">Screen in results</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Multi-Image Works">Remove multi-image works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Ugoira Works">Remove ugoira works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Manually Delete Works Title" style="background-color: rgb(243, 57, 57);" title="Manually delete unwanted works before downloading"><span data-xztext="_Manually Delete Works">Manually delete the work</span><span class="ripple"></span></button></p>
 
-- `Screen in results`: If needed, modify crawl conditions (filters) and click this button to recheck crawl results, removing works that don’t meet the conditions. For example, you can increase the bookmark count requirement after crawling and filter again.
+- `Screen in results`: If needed, modify crawl conditions (filters) and click this button to recheck crawl results, removing works that don't meet the conditions. For example, you can increase the bookmark count requirement after crawling and filter again.
 - `Remove multi-image works`: Removes all multi-image works from the crawl results.
 - `Remove ugoira works`: Removes all Ugoira works from the crawl results.
 - `Manually delete the work`: Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
@@ -375,13 +375,13 @@ On ranking pages, in addition to the common `Manually select` button, there are 
 
 ### Crawl this ranking's works
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl This Ranking’s Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in this ranking, including those not yet loaded."><span data-xztext="_Crawl This Ranking’s Works">Crawl this ranking's works</span><span class="ripple"></span></button>
+<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl This Ranking's Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in this ranking, including those not yet loaded."><span data-xztext="_Crawl This Ranking's Works">Crawl this ranking's works</span><span class="ripple"></span></button>
 
 Crawls works in this ranking.
 
 You can set "How Many Works to Crawl," and the downloader will crawl the specified number of works in ranking order. For example, setting `50` crawls works ranked 1 to 50.
 
-?> You can use the `{rank}` tag in the naming rule to save the work’s ranking.
+?> You can use the `{rank}` tag in the naming rule to save the work's ranking.
 
 ### Crawl the debut works
 
@@ -389,13 +389,13 @@ You can set "How Many Works to Crawl," and the downloader will crawl the specifi
 
 Downloads only the debut works in this ranking.
 
-?> Some works have a `Debut` mark. Depending on Pixiv’s display language, it may appear as `首次登场`, `首次登場`, `初登場`, `Debut`, or `첫 등장`.
+?> Some works have a `Debut` mark. Depending on Pixiv's display language, it may appear as `首次登场`, `首次登場`, `初登場`, `Debut`, or `첫 등장`.
 
 ?> If a ranking page has no `Debut` mark, this button should not appear.
 
 **Tip:**
 
-If you downloaded all works from a ranking on one day, when downloading the next day’s ranking, you only need to download `Debut` works, as these are the new works added to the ranking that day.
+If you downloaded all works from a ranking on one day, when downloading the next day's ranking, you only need to download `Debut` works, as these are the new works added to the ranking that day.
 
 ## Discovery Page
 
@@ -417,7 +417,7 @@ The following page displays users you follow, friends, and fans.
 
 Example: [雪见仙尊's Following](https://www.pixiv.net/users/9460149/following)
 
-?> You can view your own following page or others’ by replacing the user ID in the URL.
+?> You can view your own following page or others' by replacing the user ID in the URL.
 
 ### Start crawl
 
@@ -439,7 +439,7 @@ You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split 
 
 <button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List CSV">Export followed users list (CSV)</span><span class="ripple"></span></button>
 
-Clicking this button makes the downloader crawl user data from the current subpage (followed users, friends, or fans) and generate a CSV file, saved to the browser’s download directory.
+Clicking this button makes the downloader crawl user data from the current subpage (followed users, friends, or fans) and generate a CSV file, saved to the browser's download directory.
 
 ?> Although the button says "followed users," it can also export friends and fans lists.
 
@@ -481,9 +481,9 @@ The JSON file contains only a list of user IDs, e.g.:
 Clicking this button allows you to select a previously exported followed users list (JSON file) to batch follow all users in it (automatically executed by the downloader).
 
 Possible use cases:
-- Export another user’s followed users list and import it to your account to follow those users.
+- Export another user's followed users list and import it to your account to follow those users.
 - Export your followed users list as a backup.
-- Export your followed users list and import it to a secondary account to replicate the follow list. However, this is not recommended as it’s unnecessary: a secondary account can download works from the primary account’s followed users by accessing the corresponding URL.
+- Export your followed users list and import it to a secondary account to replicate the follow list. However, this is not recommended as it's unnecessary: a secondary account can download works from the primary account's followed users by accessing the corresponding URL.
 
 !>**Risk Warning:** Pixiv has strict limits on batch following users. For example, following over 1,000 users per day may trigger a warning from Pixiv. A second warning may lead to account suspension or deletion. I am not responsible for any account bans.
 
@@ -513,7 +513,7 @@ You can set "How Many Works to Crawl," and the downloader will crawl only the sp
 
 pixivision.net is a separate website. This program can download illustrations, manga, and cosplay pages from pixivision.
 
-Example page: [Clothing Hem Knot Illustration Feature](https://www.pixivision.net/en/a/4537)
+Example page: [Drawings of Hem Ties](https://www.pixivision.net/en/a/4537)
 
 **Note:** On pixivision, only `{page_title}` and `{id}` tags are effective in naming rules. Before the first download, modify the naming rule, e.g., to `pixivision/{page_title}/{id}`.
 

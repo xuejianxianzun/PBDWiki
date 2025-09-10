@@ -18,7 +18,7 @@
     </span>
     </p>
 
-Slowing down the crawling speed can prevent the downloader from being temporarily restricted by Pixiv during crawling (see [What is a 429 error?](/en/Common-Issues?id=What-is-a-429-error)), but it will increase the crawling time.
+Slowing down the crawling speed can prevent the downloader from being temporarily restricted by Pixiv during crawling (see [What Is a 429 Error?](/en/FAQ?id=what-is-a-429-error)), but it will increase the crawling time.
 
 If this setting is enabled, the downloader will limit concurrent requests to 1 during crawling. After each request is completed, it will wait for a certain period (depending on the interval time value) before sending the next request, reducing the crawling frequency to avoid triggering the 429 restriction.
 
@@ -26,7 +26,7 @@ If this setting is enabled, the downloader will limit concurrent requests to 1 d
 
 **Sub-options:**
 
-- `Number of works`: When the number of works to be crawled exceeds this number (default is `100`), the downloader will use the slow crawling mode. If the number of works to be crawled is small, the downloader will still complete the crawling quickly.
+- `Enabled when the number of works exceeds the specified number`: When the number of works to be crawled exceeds this number (default is `100`), the downloader will use the slow crawling mode. If the number of works to be crawled is small, the downloader will still complete the crawling quickly.
 - `Interval time`: You can set how long to wait after completing one request before sending the next one. The unit is milliseconds, with a default value of `1600`. If you frequently encounter 429 errors, you can increase this value, e.g., to `2000`.
 
 **Note:**
@@ -73,7 +73,7 @@ You can enter the IDs of users you want to block, and the downloader will not do
 
 ?> To block multiple users, enter multiple user IDs separated by commas `,`.
 
-This option also has a sub-option: Remove their works from the page. When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won’t see works from users you don’t like.
+This option also has a sub-option: Remove their works from the page. When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won't see works from users you don't like.
 
 When the downloader removes works from certain users, it will display details in the log at the top, for example:
 
@@ -114,7 +114,7 @@ When the downloader removes works from certain users, it will display details in
     </span>
     </div>
 
-If you don’t like certain works from a specific user and don’t want the downloader to crawl or download them, you can enable this setting.
+If you don't like certain works from a specific user and don't want the downloader to crawl or download them, you can enable this setting.
 
 You can enter a user ID and specific tags from their works. When the downloader crawls works from this user, it will skip works containing these tags.
 
@@ -133,7 +133,7 @@ For example, you can set to exclude `tag1,tag2,tag3` from user ID `123456`.
 
 Set the interval for timed crawling.
 
-Some pages have a "Timed Crawling" button. Clicking it allows the downloader to automatically perform crawling and downloading at regular intervals. You can set the interval between each crawl here.
+Some pages have a [Timed crawl](/en/Buttons-Crawl?id=timed-crawl) button. Clicking it allows the downloader to automatically perform crawling and downloading at regular intervals. You can set the interval between each crawl here.
 
 The default value is 120 minutes (2 hours).
 

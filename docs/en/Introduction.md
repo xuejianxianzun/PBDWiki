@@ -66,7 +66,7 @@ Below are the types of pages supported for downloading by this extension, with t
 
 11 [Discovery](https://www.pixiv.net/discovery)
 
-12 [Everyone’s New Works](https://www.pixiv.net/new_illust.php)
+12 [Everyone's New Works](https://www.pixiv.net/new_illust.php)
 
 13 [Novel Page](https://www.pixiv.net/novel/show.php?id=12771688)
 
@@ -78,7 +78,7 @@ Below are the types of pages supported for downloading by this extension, with t
 
 17 [New Novels by Followed Users](https://www.pixiv.net/novel/bookmark_new.php)
 
-18 [Everyone’s New Novels](https://www.pixiv.net/novel/new.php)
+18 [Everyone's New Novels](https://www.pixiv.net/novel/new.php)
 
 19 [Manga Series Page](https://www.pixiv.net/user/3698796/series/61267)
 

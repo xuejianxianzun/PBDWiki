@@ -24,7 +24,7 @@ The downloader can create a separate folder for each work.
 
 If the number of files in a work meets the condition, the downloader will insert the folder name before the filename, creating a folder:
 
-![](./images/20250909_192314.png)
+![](images/20250909_192314.png)
 
 !> Do not use the `{id}` tag here; use `{id_num}` instead. This is because each image in a multi-image work has a different `{id}`. Using `{id}` would result in a separate folder for each image.
 
@@ -32,7 +32,7 @@ If the number of files in a work meets the condition, the downloader will insert
 
 For example, take work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_blank'), which has 3 images.
 
-When this feature is enabled, the downloader will, by default, place the images in a folder named after the work’s ID, like this:
+When this feature is enabled, the downloader will, by default, place the images in a folder named after the work's ID, like this:
 
 ```
 79239641/
@@ -76,7 +76,7 @@ You can select **any number** of these options, and the downloader will automati
 
 If a folder needs to be created for a work, the downloader will add a folder before the filename:
 
-![](./images/20250909_192431.png)
+![](images/20250909_192431.png)
 
 - If `Illustration` is selected, illustration works will be stored in the `Illustration` folder.
 - If `Manga` is selected, manga works will be stored in the `Manga` folder.
@@ -88,7 +88,7 @@ If a folder needs to be created for a work, the downloader will add a folder bef
 ## Create a folder with the first matched tag
 
 <p class="option" data-no="43" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of creating folders using matching tags" data-tip="If the work’s tag list contains a user-specified tag, that tag will be used to create a folder (only the first matching tag is used)">
+    <span class="has_tip settingNameStyle1" data-xztip="_Description of creating folders using matching tags" data-tip="If the work's tag list contains a user-specified tag, that tag will be used to create a folder (only the first matching tag is used)">
     <span data-xztext="_使用第一个匹配的tag建立文件夹">Create a folder with the first matched <span class="key">tag</span></span>
     <span class="gray1"> ? </span>
     </span>
@@ -101,23 +101,25 @@ If a folder needs to be created for a work, the downloader will add a folder bef
 
 When this setting is enabled, users can input a list of tags.
 
-When downloading each file, the downloader checks if the work’s tags include **any** of the tags specified here. Once a matching tag is found (the first one), it will use that tag to create a folder.
+When downloading each file, the downloader checks if the work's tags include **any** of the tags specified here. Once a matching tag is found , it will use that tag to create a folder.
+
+If you set multiple tags, such as `tag1,tag2,tag3`, and the work also has multiple matching tags, such as `tag2,tag3`, the downloader will only create a folder with the **first** matching tag, which is `tag2`.
 
 This setting allows you to categorize files with specific tags separately.
 
 ---
 
-For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the tag "原创":
+For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the tag "Original":
 
-![](./images/20220802_185521.png)
+![](images/20250910_224628.png)
 
-If you include `原创` in this setting, the downloader will create an "原创" folder to store this work:
+If you include `Original` in this setting, the downloader will create an "Original" folder to store this work:
 
-![](./images/20220802_185636.png)
+![](images/20250910_224541.png)
 
 ---
 
-Another use case: The downloader has a naming setting: [Save the R-18(G) works in the designated folder](/en/Settings-Downloading?id=Store-R-18G-works-in-a-specified-folder), which places works with `R-18` and `R-18G` tags into **one** separate folder.
+Another use case: The downloader has a naming setting: [Save the R-18(G) works in the designated folder](/en/Settings-Download?id=save-the-r-18g-works-in-the-designated-folder), which places works with `R-18` and `R-18G` tags into **one** separate folder.
 
 Some users may want `R-18` and `R-18G` works to be saved in **two** separate folders, which the above setting cannot achieve. In this case, you can use this setting.
 
@@ -142,7 +144,7 @@ Enter `R-18,R-18G` in this setting. When a work has the `R-18` tag, an `R-18` fo
     </span>
     </p>
 
-What is a sequence number? If you use the `{id}` naming tag, each work’s ID will include a sequence number, such as:
+What is a sequence number? If you use the `{id}` naming tag, each work's ID will include a sequence number, such as:
 
 ```
 80447108_p0
@@ -198,7 +200,7 @@ Illustrations and manga works may have multiple images, so their filenames inclu
 
 By default, the downloader does not pad sequence numbers with zeros, but some software may sort filenames incorrectly. In such cases, padding with zeros is needed.
 
-**Note:** If you don’t encounter issues with "incorrect sorting by filename due to sequence numbers," you don’t need to enable this setting.
+**Note:** If you don't encounter issues with "incorrect sorting by filename due to sequence numbers," you don't need to enable this setting.
 
 This issue often occurs on Android systems, where many file managers may sort files incorrectly, like this:
 
@@ -242,9 +244,9 @@ You can set the total length of the padded sequence number in the sub-option, wi
 
 <p class="option" data-no="29" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_Description of filename length limit" data-tip="If a filename is too long, the browser may display a Save As dialog, requiring manual handling. &lt;br&gt;
-    You usually don’t need to enable this setting, as browsers on Windows typically truncate long filenames automatically. &lt;br&gt;
+    You usually don't need to enable this setting, as browsers on Windows typically truncate long filenames automatically. &lt;br&gt;
     However, on other operating systems or when saving to a network drive, the browser may not truncate filenames, resulting in a Save As dialog. &lt;br&gt;
-    If you think it’s necessary, enable this setting, and the downloader will truncate the overly long parts of filenames. &lt;br&gt;
+    If you think it's necessary, enable this setting, and the downloader will truncate the overly long parts of filenames. &lt;br&gt;
     A number less than 256 is recommended. The default is 200.">
     <span data-xztext="_文件名长度限制">File name <span class="key">length</span> limit</span>
     <span class="gray1"> ? </span>
@@ -260,7 +262,7 @@ You can set an upper limit for filename length. This length includes only the fi
 
 For example, with the default naming rule `pixiv/{user}-{user_id}/{id}-{title}`, the part after the last slash `/`, `{id}-{title}`, is the filename. The downloader also adds an extension, such as `.jpg` or `.png`.
 
-If this setting is enabled, the downloader will check each file’s name. If the filename plus extension exceeds the set value, the downloader will truncate the filename to make it shorter than the set value.
+If this setting is enabled, the downloader will check each file's name. If the filename plus extension exceeds the set value, the downloader will truncate the filename to make it shorter than the set value.
 
 This setting only truncates the filename, not the folder name. Folder names are always kept complete.
 
@@ -272,7 +274,7 @@ If some naming rule tags output a lot of text, the filename may exceed the lengt
 
 Enable this setting only when the browser cannot automatically save files due to overly long filenames.
 
-Specifically, if you use Windows with Chrome and save files to a local disk (not a network location), you don’t need this setting, as the browser will automatically truncate long filenames.
+Specifically, if you use Windows with Chrome and save files to a local disk (not a network location), you don't need this setting, as the browser will automatically truncate long filenames.
 
 In other cases, the browser may not truncate long filenames, causing a Save As dialog to appear for files with overly long names, requiring manual handling.
 
@@ -363,15 +365,15 @@ When using the {user} tag in the naming rule, the downloader will prioritize the
   </span></slot>
     </div>
 
-You can add a user’s ID and set a custom name for them here. This affects the `{user}` naming tag.
+You can add a user's ID and set a custom name for them here. This affects the `{user}` naming tag.
 
-For example, the username for https://www.pixiv.net/users/3316400 is `MだSたろう`. If you want to set a custom name, you can enter the user ID as `3316400` and the username as `ms太郎`, then save.
+For example, the username for https://www.pixiv.net/users/3316400 is `MだSたろう`. If you want to set a custom name, you can enter the user ID as `3316400` and the username as `msTarou`, then save.
 
-When downloading their works, the `{user}` tag will ignore the original name and output the custom name `ms太郎`.
+When downloading their works, the `{user}` tag will ignore the original name and output the custom name `msTarou`.
 
 After adding a rule, the downloader will display it like this:
 
-![](./images/20250902_013513.png)
+![](images/20250910_231514.png)
 
 If needed, you can modify the settings here (e.g., change the username) and click the refresh button on the right to update the rule. You can also delete the rule.
 
@@ -387,7 +389,7 @@ A common case is usernames with an @ symbol, such as:
 - 奥馬@skeb募集中
 - さしみなす@依頼募集中
 
-While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=Remove-@-and-subsequent-characters-from-username) feature can address this, some users’ names may not use @, for example:
+While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=Remove-@-and-subsequent-characters-from-username) feature can address this, some users' names may not use @, for example:
 
 - いの字/inoji
 - 焔すばる★２日目 東C17a
@@ -402,6 +404,6 @@ You can set a fixed name for them here.
 
 **Use Case 2:** Set aliases or nicknames for users.
 
-For example, if a user’s name is in Japanese but you don’t input Japanese and it’s inconvenient to search on your device, you can set a Chinese alias (or another language you can use) for easier searching.
+For example, if a user's name is in Japanese but you don't input Japanese and it's inconvenient to search on your device, you can set a English alias (or another language you can use) for easier searching.
 
-If a user’s name is hard to remember, you can also set an easy-to-remember alias.
+If a user's name is hard to remember, you can also set an easy-to-remember alias.

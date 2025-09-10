@@ -4,7 +4,7 @@ The **Crawl** tab of the downloader is used to set the crawling scope and filter
 
 Some options have a question mark next to them. Hovering the mouse over the option will display a brief tooltip, for example:
 
-![](./images/20250909_001357.png)
+![](images/20250909_001357.png)
 
 ## Show advanced settings
 
@@ -47,7 +47,7 @@ For pages where downloading is **based on works**, this setting will be displaye
 
 - On **other pages** (e.g., rankings or followed users' new works), the downloader starts crawling from the first work on the current page. Setting it to 1 will crawl only the first work. Setting it to -1 means crawling all works on the current page.
 
-## How many Pages to crawl
+## How many pages to crawl
 
 <p class="option" data-no="1" style="display: flex;">
     <span class="settingNameStyle1"><span class="setWantPageTip1 has_tip" data-xztip="_CrawlFromThisPageTip" data-xztext="_CrawlHowManyPages" data-tip="Start crawling from the current page.<br>If you want to limit the number of pages to crawl, enter a number starting from 1.<br>1 means crawl only this page, -1 means crawl all pages.">Crawl <span class="key">how many</span> pages</span><span class="gray1"> ? </span>
@@ -85,7 +85,7 @@ For example, if you need to crawl 1000 pages, you can do this:
 
 **Page Navigation Tip:**
 
-On paginated pages, you can modify the page number in the address bar to quickly jump to a specific page. Here’s an example:
+On paginated pages, you can modify the page number in the address bar to quickly jump to a specific page. Here's an example:
 
 When you enter a search page, it defaults to page 1, and the address bar does not show a page number.
 
@@ -245,7 +245,7 @@ The downloader checks this setting during crawling and excludes works that do no
 
 Single-image works have only one image; multi-image works contain multiple images, often marked in the top-right corner, for example:
 
-![](./images/20250829_232042.png)
+![](images/20250829_232042.png)
 
 ## Multi-image works only download the first few images
 
@@ -467,7 +467,7 @@ This setting is useful for incremental updates. Since work IDs are positively co
 
 For example: If you previously downloaded works from a user's page and the largest ID in the filenames was 65000000, you can set the ID range to greater than 65000000 to crawl works published after that.
 
-## Posting Time
+## Posting time
 
 <p class="option" data-no="10" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_SetPublicationTimeTip" data-tip="You can download works published within a specific time range">
@@ -479,11 +479,17 @@ For example: If you previously downloaded works from a user's page and the large
     <span class="subOptionWrap" data-show="postDate" style="display: none;">
     <input type="datetime-local" name="postDateStart" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2009-01-01T00:00">
     &nbsp;-&nbsp;
-    <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" classthe "setinput_style1 postDate blue" value="2030-01-01T00:00">
+    <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2030-01-01T00:00">
     </span>
     </p>
 
 You can download only works published within a specific time range.
+
+You can click the icon to the right of the input field to use the browser's time and date picker, or you can enter the value manually.
+
+**Note:** When entering the value manually, you must include the full time and date. As shown in the image below, the value on the left is incorrect because it doesn't include the time:
+
+![](images/20250910_012836.png)
 
 ?> The first illustration on Pixiv is https://www.pixiv.net/artworks/20, published at `2007-09-09T13:14:07+00:00`.
 
@@ -529,7 +535,7 @@ You can require works to contain certain tags. Works without these tags will not
 
 ?> Tags refer to the tag list below the work's description, for example:
 
-![](./images/20250909_001538.png)
+![](images/20250909_001538.png)
 
 ### Matching Mode
 
@@ -552,7 +558,7 @@ Works tagged with `东方 Project` may have inconsistent tags, such as:
 
 Some works may only have one of these tags, so searching for just one tag may be incomplete. You can include all three tags and set the mode to "Any" to avoid missing `东方 Project` works.
 
-## Excluded Tag
+## Excluded tag
 
 <p class="option" data-no="12" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_ExcludeTagsTip" data-tip="You can set tags to exclude before downloading, so works containing these tags will not be downloaded.<br>Case-insensitive; use commas to separate multiple tags.<br>Note that excluded tags have higher priority than required tags.">

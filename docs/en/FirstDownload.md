@@ -2,25 +2,25 @@
 
 Open the following test page:
 
-[Mafuyu’s Work List Page](https://www.pixiv.net/member_illust.php?id=5229572&type=illust ':target=_blank')
+[まふゆ's Work List Page](https://www.pixiv.net/member_illust.php?id=5229572&type=illust ':target=_blank')
 
 ## Crawling and Downloading
 
 Open the downloader panel and click the **Start Crawling** button:
 
-![](./images/20250909_000354.png)
+![](images/20250909_000354.png)
 
 The program will automatically start crawling works.
 
 Once crawling is complete, the downloader will automatically begin downloading files. You can view and manage downloads in the **Download** tab:
 
-![](./images/ui-en-1.png)
+![](images/ui-en-1.png)
 
-If you don’t want automatic downloading to start, you can disable this switch:
+If you don't want automatic downloading to start, you can disable this switch:
 
-![](./images/20250909_000810.png)
+![](images/20250909_000810.png)
 
-?> The downloader supports resuming interrupted downloads. If the page crashes or you accidentally close it during downloading, you can reopen the page, and the downloader will restore the download progress, allowing you to continue. For more details, refer to [Does it support resuming interrupted downloads?](/en/FrequentlyAskedQuestions?id=does-it-support-resuming-interrupted-downloads).
+?> The downloader supports resuming interrupted downloads. If the page crashes or you accidentally close it during downloading, you can reopen the page, and the downloader will restore the download progress, allowing you to continue. For more details, refer to [Does It Support Resumable Downloads?](/en/FAQ?id=does-it-support-resumable-downloads).
 
 ?> If you frequently download large numbers of files, refer to [Handling Large-Scale Downloads](/en/AfterInstallation?id=handling-large-scale-downloads).
 
@@ -34,7 +34,7 @@ When the downloader performs tasks, it displays logs at the top of the page, inc
 
 In the current version, logs are hidden by default. You can see a blue button at the top of the page, like this:
 
-![](./images/20250909_000837.png)
+![](images/20250909_000837.png)
 
 Click this button to show the logs. You can also use the shortcut key `L` to toggle the visibility of logs.
 
@@ -42,7 +42,7 @@ Click this button to show the logs. You can also use the shortcut key `L` to tog
 
 The downloader has four log levels, each with a different color. Examples:
 
-- <span class="log" style="color: inherit;">0 normal: Regular logs, colored black or white (depending on the downloader’s light or dark theme).</span>
+- <span class="log" style="color: inherit;">0 normal: Regular logs, colored black or white (depending on the downloader's light or dark theme).</span>
 - <span class="log" style="color: rgb(0, 189, 23);">1 success: Used for task start and completion logs, colored green.</span>
 - <span class="log" style="color: rgb(210, 126, 0);">2 warning: Used for notices or minor issues, colored brown.</span>
 - <span class="log" style="color: #f00;">3 error: Used for error messages, colored red.</span>
@@ -51,7 +51,7 @@ The downloader has four log levels, each with a different color. Examples:
 
 After crawling begins, the downloader adds symbols to the front of the page title to indicate its status. For example:
 
-![](./images/20250901_005150.png)
+![](images/20250901_005150.png)
 
 The `[↓]` at the start indicates downloading is in progress; the number 36 indicates 36 files remain to be downloaded.
 
@@ -71,16 +71,16 @@ Other less common statuses:
 
 ## Save Location
 
-Downloaded files are saved in the **browser’s download directory**. The downloader will create subfolders to store files, for example:
+Downloaded files are saved in the **browser's download directory**. The downloader will create subfolders to store files, for example:
 
-![](./images/20250901_005628.png)
+![](images/20250901_005628.png)
 
-?> The downloader cannot save files outside the browser’s download directory due to browser restrictions. To save to a different location, change the browser’s download directory.
+?> The downloader cannot save files outside the browser's download directory due to browser restrictions. To save to a different location, change the browser's download directory.
 
 ## If You Encounter Issues
 
-A common issue is abnormal file names after downloading, with no folders created by the downloader. If you encounter this, refer to [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
+A common issue is abnormal file names after downloading, with no folders created by the downloader. If you encounter this, refer to [File Names Are Garbled After Downloading](/en/FAQ?id=file-names-are-garbled-after-downloading).
 
-If it’s a different issue, check the [Frequently Asked Questions](/en/FrequentlyAskedQuestions) page.
+If it's a different issue, check the [FAQ](/en/FAQ) page.
 
-If you still can’t find the cause, refer to the [Contact Me](/en/ContactMe) page.
+If you still can't find the cause, refer to the [Contact Me](/en/Contact-Me) page.

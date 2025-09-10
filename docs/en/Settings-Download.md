@@ -68,9 +68,9 @@ The default naming rule `pixiv/{user}-{user_id}/{id}-{title}` creates two levels
 
 Example effect:
 
-![](./images/20250830_222606.png)
+![](images/20250910_200313.png)
 
-?> The `/` is not mandatory. If you don’t want to create folders, you can omit the `/`. For example, setting the naming rule to `{id}` saves files directly to the browser’s download directory without creating subfolders.
+?> The `/` is not mandatory. If you don't want to create folders, you can omit the `/`. For example, setting the naming rule to `{id}` saves files directly to the browser's download directory without creating subfolders.
 
 ### Tag List
 
@@ -92,30 +92,30 @@ Example effect:
 - `{bmk_1000}` Simplified display of bookmark count, e.g., `0+`, `1000+`, `2000+`, `3000+`, etc.
 - `{bmk_id}` Bookmark ID. Each bookmarked work has a unique Bookmark ID. Later bookmarks have larger IDs. When downloading bookmarks, you can use `{bmk_id}` for sorting.
 - `{view}` View count, the number of views for the work.
-- *`{rank}` Work’s ranking on the leaderboard, e.g., `#1`, `#2`, etc. Only usable on leaderboard pages.
+- *`{rank}` Work's ranking on the leaderboard, e.g., `#1`, `#2`, etc. Only usable on leaderboard pages.
 - `{date}` Work creation date, e.g., `2019-08-29`.
-- `{upload_date}` Date the work’s content was last modified, e.g., `2019-08-30`.
+- `{upload_date}` Date the work's content was last modified, e.g., `2019-08-30`.
 - `{task_date}` Date the crawling task was completed, e.g., `2020-10-21`.
 - `{px}` Width and height, e.g., `600x900`.
 - *`{series_title}` Series title, available when the work belongs to a series.
-- *`{series_order}` Work’s order in the series, e.g., `#1`, `#2`. Available when the work belongs to a series.
+- *`{series_order}` Work's order in the series, e.g., `#1`, `#2`. Available when the work belongs to a series.
 - *`{series_id}` Series ID, available when the work belongs to a series.
 - `{id_num}` Numeric ID, e.g., `44920385`.
 - `{p_num}` Image sequence number within the work, e.g., `0`, `1`, `2`, etc. Each work resets the count.
 
 ### Additional Notes
 
-- You can use multiple tags; it’s recommended to add separators between tags, such as `{id}-{tags}-{user}`, to avoid tag content blending together. There’s no fixed requirement for separators; use what you prefer.
+- You can use multiple tags; it's recommended to add separators between tags, such as `{id}-{tags}-{user}`, to avoid tag content blending together. There's no fixed requirement for separators; use what you prefer.
 - Besides preset tags, you can input custom text, e.g., `Title {title} Tags {tags}`. Non-preset text will be retained as is.
-- There’s no suffix tag because the downloader automatically adds the file extension.
+- There's no suffix tag because the downloader automatically adds the file extension.
 - If the generated filename contains special characters invalid for filenames, they are replaced with similar full-width symbols. For example, a tag containing a slash `/` cannot be used in filenames, so the downloader replaces it with a full-width `／`.
-- If you use `{tags_translate}`, there’s no need to use `{tags}`, as the former includes the latter. Translated content depends on your Pixiv language settings. For example, if your Pixiv interface is in Chinese, tag translations are typically in Chinese.
+- If you use `{tags_translate}`, there's no need to use `{tags}`, as the former includes the latter. Translated content depends on your Pixiv language settings. For example, if your Pixiv interface is in Chinese, tag translations are typically in Chinese.
 - `{tags_transl_only}` saves only translated tags, not original Japanese tags. If a tag has no translation, the original Japanese tag is saved.
 - Filenames must include a **unique identifier** to prevent duplicates, which could cause files to overwrite each other or trigger a save-as dialog.
-- The default naming rule’s `{id}` is the unique identifier. Some users may want to replace `{id}` with `{id_num}` and `{p_num}`. This is possible, but both must be used together, not individually. This is because multi-image works have multiple images with the same `{id_num}`, and `{p_num}` is needed to differentiate them.
-- `{bmk_1000}` doesn’t show the exact bookmark count but displays an integer in units of 1000 with a `+` (below 1000 displays as `0+`). This makes bookmark counts less cluttered.
+- The default naming rule's `{id}` is the unique identifier. Some users may want to replace `{id}` with `{id_num}` and `{p_num}`. This is possible, but both must be used together, not individually. This is because multi-image works have multiple images with the same `{id_num}`, and `{p_num}` is needed to differentiate them.
+- `{bmk_1000}` doesn't show the exact bookmark count but displays an integer in units of 1000 with a `+` (below 1000 displays as `0+`). This makes bookmark counts less cluttered.
 - When saving files, if a file with the same name exists, the downloader will overwrite it rather than appending a number. Most PC browsers do this, but Edge Canary on Android may append a number instead.
-- Filenames may exceed the operating system’s length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
+- Filenames may exceed the operating system's length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
 - When a filename is too long, some browsers may truncate the excess to save the file. This varies by case. Chrome on Windows does this, but browsers on Linux or Android may not. Saving to remote locations (e.g., network drives) may also prevent truncation, even in Chrome.
 
 ### Sorting with Naming Tags
@@ -126,9 +126,9 @@ Some tags have predictable patterns. Using them as the **first part** of the fil
 
 On most pages, works are sorted by work ID in descending order. Later-posted works have larger IDs and appear first.
 
-`{id}` (work ID) is incremental. Using `{id}` at the start of the filename and sorting files by ID in descending order aligns with the webpage’s order. For example:
+`{id}` (work ID) is incremental. Using `{id}` at the start of the filename and sorting files by ID in descending order aligns with the webpage's order. For example:
 
-![](./images/20250830_225311.png)
+![](images/20250830_225311.png)
 
 `{date}` (posting time) has a similar effect.
 
@@ -138,11 +138,11 @@ On most pages, works are sorted by work ID in descending order. Later-posted wor
 
 For example, this is the webpage order:
 
-![](./images/20250907_175541.webp)
+![](images/20250907_175541.webp)
 
 This is the effect of sorting with `{bmk_id}`:
 
-![](./images/20250907_175520.webp)
+![](images/20250907_175520.webp)
 
 #### Tags Reflecting Quantity
 
@@ -150,11 +150,11 @@ Some tags are numeric, e.g., `{like}`, `{view}`, `{bmk}`, `{bmk_1000}`, `{rank}`
 
 Example: Sorting works by `{bmk}` (bookmark count) in descending order prioritizes high-quality works:
 
-![](./images/20250830_230834.png)
+![](images/20250830_230834.png)
 
 Example: When downloading from a leaderboard page, sort by `{rank}`:
 
-![](./images/20250830_230636.png)
+![](images/20250830_230636.png)
 
 ## Use different naming rules in different page types
 
@@ -170,15 +170,15 @@ If you want to set independent naming rules for each page type, enable this sett
 
 **Example Use Cases:**
 
-- On a user’s homepage, set to `{user}/{id}` to create folders by username.
-- On a search page, set to `{page_tag}/{id}` to create folders by the page’s tag.
-- On a leaderboard page, set to `{rank}-{id}` to save the work’s ranking.
+- On a user's homepage, set to `{user}/{id}` to create folders by username.
+- On a search page, set to `{page_tag}/{id}` to create folders by the page's tag.
+- On a leaderboard page, set to `{rank}-{id}` to save the work's ranking.
 
 **Notes:**
 - After enabling this setting, the downloader uses the preset rule for the page type, overriding the current naming rule. You can modify these rules as needed.
 - If you switch page types during downloading after enabling this setting, the naming rule may change, altering filenames or folder names. This may not be desired, so avoid switching to a different page type during downloading (though switching within the same page type is fine).
 
-For example, if downloading from a user’s homepage, don’t switch to a search page. If downloading from a work page, don’t switch to a user’s homepage or search page.
+For example, if downloading from a user's homepage, don't switch to a search page. If downloading from a work page, don't switch to a user's homepage or search page.
 
 ## Do not create a folder when there is only one crawl result
 
@@ -199,7 +199,7 @@ When enabled, if there is **only one** crawl result, the downloader will not cre
 
 This option applies when there is exactly one crawl result in **total**.
 
-Some users may mistakenly think this means "if a work has only one file to download, don’t create a folder," which is incorrect. The key is whether the total number of crawl results is one.
+Some users may mistakenly think this means "if a work has only one file to download, don't create a folder," which is incorrect. The key is whether the total number of crawl results is one.
 
 For example, crawling 10 works, each with one image, results in 10 crawl results. This option will not take effect in this case.
 
@@ -219,11 +219,11 @@ If this setting is enabled, the downloader will save R-18(G) works to a **subfol
 
 The downloader inserts the folder name from this setting **before** the filename:
 
-![](./images/20250909_013552.png)
+![](images/20250909_013552.png)
 
-If the naming rule already creates folders, this option’s folder becomes the deepest folder. Example:
+If the naming rule already creates folders, this option's folder becomes the deepest folder. Example:
 
-![](./images/20250830_234013.png)
+![](images/20250910_200559.png)
 
 **Tips:**
 
@@ -247,7 +247,7 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
 - If your download speed is slow, reduce the concurrent download count, e.g., to 2, to avoid timeouts that may cause download failures.
 - If your download speed is fast, you can increase the concurrent download count.
 
-!> When downloading a large number of files, if the download speed is very fast (e.g., 5 files per second), it’s recommended to set a lower concurrent download count, such as 1. Excessive downloading frequency may increase the risk of your account being banned.
+!> When downloading a large number of files, if the download speed is very fast (e.g., 5 files per second), it's recommended to set a lower concurrent download count, such as 1. Excessive downloading frequency may increase the risk of your account being banned.
 
 ## Download starts automatically
 
@@ -273,9 +273,9 @@ Some **quick download** methods always start downloading automatically (even if 
 - Pressing the `C` or `D` shortcut key to download a work during preview.
 - Crawling manually selected works.
 
-There’s also a case where downloading won’t start automatically:
+There's also a case where downloading won't start automatically:
 
-When crawling on a **search page** with the "Preview Search Page Filter Results" option enabled (default), downloading won’t start automatically after crawling. This allows you to adjust the crawl results before starting the download.
+When crawling on a **search page** with the "Preview Search Page Filter Results" option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
 
 ## Bookmark works after downloading
 
@@ -292,7 +292,7 @@ When enabled, the downloader will bookmark the work associated with each downloa
 
 Bookmark progress is displayed in the download progress area, e.g., `Bookmarked 1/3`.
 
-![](./images/20250909_005501.png)
+![](images/20250909_005501.png)
 
 After downloading, if the bookmark progress shows matching numbers, e.g., `Bookmarked 3/3`, bookmarking is complete. If the numbers differ, wait for bookmarking to finish.
 

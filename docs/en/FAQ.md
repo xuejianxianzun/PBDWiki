@@ -5,7 +5,7 @@
 ## Viewing Help Information
 
 - There is a "FAQ" button in the bottom left corner of the downloader panel, which provides some basic help information.
-- You can check the [Settings After Installation](/en/Settings-After-Installation) page to investigate some reasons.
+- You can check the [After Installation](/en/AfterInstallation) page to investigate some reasons.
 - If you are unsure how to use a specific feature, please refer to the relevant content in this wiki.
 
 ## Checking Common Issues
@@ -78,7 +78,7 @@ Downloads
 
 First, ensure that your naming rule includes the username to create a folder, such as `{user}/{id}`. The default naming rule `pixiv/{user}-{user_id}/{id}-{title}` also uses the username to create a folder.
 
-Then enable this setting: [Create a Separate Folder for Each Work](/en/Settings-More-Naming?id=Create-a-Separate-Folder-for-Each-Work).
+Then enable this setting: [Create a separate folder for each work](/en/Settings-More-Naming?id=Create-a-Separate-Folder-for-Each-Work).
 
 ## Crawling Completed, but No Works Match the Filter Conditions
 
@@ -112,9 +112,9 @@ This is because some works may contain multiple images. In other words, one work
 
 If the downloaded file names are a string of incomprehensible characters, like this:
 
-![](./images/20211112162142.jpg)
+![](images/20211112162142.jpg)
 
-Please check: [Issue with Abnormal File Names After Downloading](/en/Settings-After-Installation?id=Issue-with-Abnormal-File-Names-After-Downloading).
+Please check: [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
 
 ## File Names Have a .jfif Extension
 
@@ -142,9 +142,9 @@ If the download is not complete, the downloader can use the saved data to resume
 
 *How to avoid downloading works that have already been downloaded?*
 
-You can enable the [Do Not Download Duplicate Files](/en/Settings-More-Download?id=Do-Not-Download-Duplicate-Files) feature.
+You can enable the [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) feature.
 
-In some cases, you can also consider using incremental updates to only crawl recently posted works. See the [Incremental Updates](/en/Tips?id=Incremental-Updates) section on the "Tips" page.
+In some cases, you can also consider using incremental updates to only crawl recently posted works. See the [Incremental Updates](/en/Usage-Tips?id=incremental-updates) section on the "Tips" page.
 
 ## Downloads Are Slow
 
@@ -166,7 +166,7 @@ If you confirm that the download speed is very slow (e.g., only a few hundred KB
 
 Some users may encounter this issue: The file's download progress bar is full, but the file is not saved, and the total progress bar shows 0 completed tasks. The download cannot continue. See the image below:
 
-![](./images/20250910_012342.png)
+![](images/20250910_012342.png)
 
 You can try these solutions:
 
@@ -271,7 +271,7 @@ If the naming rule does not include `{id}` or `{p_num}`, watch out for potential
 
 Most operating systems have a file name length limit of 255 characters. If the file name exceeds this limit, the browser may not save the file and will display a "Save As" dialog for user action.
 
-If you encounter this issue, enable the [File Name Length Restriction](/en/Settings-More-Naming?id=File-Name-Length-Restriction) feature to set a file name length limit.
+If you encounter this issue, enable the [File name length limit](/en/Settings-More-Naming?id=file-name-length-limit) feature to set a file name length limit.
 
 **Reason 4**: The download location may not exist.
 
@@ -281,7 +281,7 @@ If your browser's download location is `D:\downloads` and this folder no longer 
 
 *File name too long/File name exceeds limit*
 
-If you cannot save files due to overly long file names, enable the [File Name Length Restriction](/en/Settings-More-Naming?id=File-Name-Length-Restriction) feature to set a file name length limit.
+If you cannot save files due to overly long file names, enable the [File name length limit](/en/Settings-More-Naming?id=file-name-length-limit) feature to set a file name length limit.
 
 ## Why Do Downloaded Images Open Automatically?
 
@@ -291,7 +291,7 @@ Downloaded files do not open automatically by default, but the browser provides 
 
 For Chrome, you can right-click any file in the download list in the top-right corner and check the "Always open files of this type" setting:
 
-![](./images/20250910_012710.png)
+![](images/20250910_012710.png)
 
 If there is a checkmark ✔ in front of it, this feature is enabled. Click it again to uncheck it.
 
@@ -299,15 +299,15 @@ If there is a checkmark ✔ in front of it, this feature is enabled. Click it ag
 
 *Not automatically starting download*
 
-If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview Search Page Filter Results](/en/Settings-More-Enhancements?id=Preview-Search-Page-Filter-Results) feature.
+If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) feature.
 
 ## Date Format Error!
 
-This occurs because the time format entered in the [Posting Time](/en/Settings-Crawl?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
+This occurs because the time format entered in the [Posting time](/en/Settings-Crawl?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
 
 As shown below, the value on the left is incorrect because it does not include the time:
 
-![](./images/20250910_012836.png)
+![](images/20250910_012836.png)
 
 This usually happens when you manually enter the date and time. Make sure to include the time.
 
@@ -321,7 +321,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Crawl by Entering IDs](/en/Buttons-Crawl?id=Crawl-by-Entering-IDs) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Crawl?id=type-id-to-crawl) feature or similar functions.
 
 ## Browser Freezes on Startup
 
@@ -335,7 +335,7 @@ For Chrome users, follow these steps:
 
 Go to the browser's settings page, find the "Privacy and Security" section, and use the "Clear browsing data" function:
 
-![](./images/20250910_012946.png)
+![](images/20250910_012946.png)
 
 Set the "Time range" to "All time," select "Download history," and click "Clear data."
 
@@ -345,7 +345,7 @@ Set the "Time range" to "All time," select "Download history," and click "Clear 
 
 On pages with many results, if you expect a large number of crawling results, consider crawling and downloading in batches.
 
-See: [Tip: Splitting Tasks](/en/Settings-Crawl?id=Tip:-Splitting-Tasks).
+See: [Tip: Splitting Tasks](/en/Settings-Crawl?id=tip-split-tasks).
 
 ## File Name Sorting Is Messy on Android
 
@@ -353,7 +353,7 @@ See: [Tip: Splitting Tasks](/en/Settings-Crawl?id=Tip:-Splitting-Tasks).
 
 This issue typically occurs in the file manager on Android systems.
 
-You can enable the [Pad Sequence Numbers with Zeros](/en/Settings-More-Naming?id=Pad-Sequence-Numbers-with-Zeros) feature to resolve this issue.
+You can enable the [Add 0 in front of the serial number](/en/Settings-More-Naming?id=add-0-in-front-of-the-serial-number) feature to resolve this issue.
 
 ## How to Sort Downloaded Files in the Same Order as on the Webpage
 
@@ -396,7 +396,7 @@ Pixiv Premium members can view 5000 pages, so they are less likely to encounter 
 
 Search pages have two sorting options:
 
-![](./images/20250910_013103.webp)
+![](images/20250910_013103.webp)
 
 The default sorting is from newest to oldest. You can crawl and download 1000 or 5000 pages of works, then return to the first page, click "Sort by oldest," and view or download earlier works.
 
@@ -406,7 +406,7 @@ Using this method, you can download up to 2000 or 10000 pages of works. If this 
 
 On the search page, click "Search conditions" and set the "Posting period." For example, you can view works posted in a specific year:
 
-![](./images/20250910_013834.png)
+![](images/20250910_013834.png)
 
 Download the works from that year, then set the posting period to the previous year and download those works.
 
@@ -418,11 +418,11 @@ By repeating this process, you can theoretically crawl all works, but it is quit
 
 Set a random time range first, and the URL in the address bar will include the date:
 
-![](./images/20250908_031731.png)
+![](images/20250908_031731.png)
 
 Modify the date to your desired time range, for example:
 
-![](./images/20250908_031753.png)
+![](images/20250908_031753.png)
 
 Then press Enter. Pixiv will display the works from that year.
 
@@ -466,7 +466,7 @@ This restriction lasts a few minutes. During this time, the downloader cannot cr
 
 When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
 
-Additionally, the downloader now enables the [Slow Down Crawling Speed](/en/Settings-More-Crawl?id=Slow-Down-Crawling-Speed) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+Additionally, the downloader now enables the [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawling-speed) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
 ## Will Downloading Too Much Get My Account Banned?
 
@@ -476,7 +476,7 @@ Yes.
 
 If you frequently crawl and download large amounts of files, Pixiv may issue a warning. A second warning may result in Pixiv deleting your account.
 
-See detailed instructions: [Handling Large Downloads](/en/Settings-After-Installation?id=Handling-Large-Downloads).
+See detailed instructions: [Handling Large-Scale Downloads](/en/AfterInstallation?id=handling-large-scale-downloads).
 
 ## Cannot Open EPUB Files
 

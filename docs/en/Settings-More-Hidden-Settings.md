@@ -1,6 +1,6 @@
 # Hidden Settings
 
-Some hidden settings are not displayed on the downloader’s panel.
+Some hidden settings are not displayed on the downloader's panel.
 
 ## Don't download the last few images for specific user's multi-image works
 
@@ -34,7 +34,7 @@ This setting is always active, whether displayed or not.
 
 By default, it has no rules, so it has no effect. It only takes effect after you add rules.
 
-Click the "Add" button to enter a user ID and specify how many of their work’s last images to exclude from downloading.
+Click the "Add" button to enter a user ID and specify how many of their work's last images to exclude from downloading.
 
 ?> The downloader has a similar setting: [Do not crawl the last image of multi-image works](/en/Settings-More-Crawl?id=Do-not-crawl-the-last-image-of-multi-image-works). That setting cannot target specific users and always excludes the last image. This setting allows for more detailed rules.
 
@@ -42,7 +42,7 @@ Click the "Add" button to enter a user ID and specify how many of their work’s
 
 To view this setting, follow these steps:
 
-1. Enable the downloader’s "Show advanced settings" option and switch to the "More" tab.
+1. Enable the downloader's "Show advanced settings" option and switch to the "More" tab.
 2. Press F12 to inspect elements, go to the "Elements" panel, press `Ctrl` + `F`, and search for `p[data-no="79"]` to locate this element.
 3. It has a default `display: none;` style. Remove this style to make it visible and usable.
 
@@ -77,7 +77,7 @@ To view this setting, follow these steps:
 
 You can add custom rules, for example:
 
-![](./images/20250904_234610.png)
+![](images/20250904_234610.png)
 
 If a work contains the specified tags, the downloader uses the folder part from the default naming rule combined with the filename part specified here to create a new naming rule.
 
@@ -92,13 +92,13 @@ To view this setting, follow the steps for the previous setting, but use the sel
 
 ## Create Folders Based on sl
 
-Create folders based on the `sl` attribute in a work’s metadata.
+Create folders based on the `sl` attribute in a work's metadata.
 
 This feature is disabled by default and not available in the settings panel.
 
 **What is `sl`?**
 
-`sl` is a field in a work’s data, possibly indicating the "erotic level" rating of the work.
+`sl` is a field in a work's data, possibly indicating the "erotic level" rating of the work.
 
 `sl` values and their roles (speculated):
 
@@ -107,7 +107,7 @@ This feature is disabled by default and not available in the settings panel.
 - `4`: These works often have some erotic elements, such as large breasts, exposed thighs, or revealing clothing, but usually not at an R-18 level.
 - `6`: These works typically have very obvious erotic elements, possibly R-18. Even if not R-18, they may include suggestive content.
 
-This feature creates folders based on the work’s `sl` attribute, resulting in folder names like:
+This feature creates folders based on the work's `sl` attribute, resulting in folder names like:
 
 - sl0
 - sl2
@@ -126,7 +126,7 @@ Enter one of the following commands on a Pixiv page (type the letters sequential
 - `switchsl`
 - `kaiguansl`
 
-If the command is correct, the downloader displays a prompt at the mouse cursor’s position. The prompts for enabling/disabling are:
+If the command is correct, the downloader displays a prompt at the mouse cursor's position. The prompts for enabling/disabling are:
 
 <span class="xzToast success">createFolderBySl On</span>
 
@@ -148,7 +148,7 @@ Enter one of the following commands on a Pixiv page (type the letters sequential
 - `dlugoirafirst`
 - `qw111`
 
-If the command is correct, the downloader displays a prompt at the mouse cursor’s position. The prompts for enabling/disabling are:
+If the command is correct, the downloader displays a prompt at the mouse cursor's position. The prompts for enabling/disabling are:
 
 <span class="xzToast success">downloadUgoiraFirst On</span>
 
