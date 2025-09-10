@@ -568,7 +568,7 @@ This setting has 2 sub-options:
 - To sort by `Bookmark count`, use `{bmk}` at the beginning of the filename.
 - To sort by `Bookmark time`, use `{bmk_id}` at the beginning of the filename.
 
-Please refer to: [Sorting Using Naming Tags](/en/Settings-Downloading?id=Sorting-using-naming-tags).
+Please refer to: [Sorting with Naming Tags](/en/Settings-Download?id=sorting-with-naming-tags).
 
 -----------------
 

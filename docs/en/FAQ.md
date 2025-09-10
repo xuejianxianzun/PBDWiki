@@ -406,7 +406,7 @@ Using this method, you can download up to 2000 or 10000 pages of works. If this 
 
 On the search page, click "Search conditions" and set the "Posting period." For example, you can view works posted in a specific year:
 
-![](images/20250910_013834.png)
+![](images/20250911_021855.png)
 
 Download the works from that year, then set the posting period to the previous year and download those works.
 
@@ -466,7 +466,7 @@ This restriction lasts a few minutes. During this time, the downloader cannot cr
 
 When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
 
-Additionally, the downloader now enables the [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawling-speed) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+Additionally, the downloader now enables the [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
 ## Will Downloading Too Much Get My Account Banned?
 

@@ -35,6 +35,30 @@
       })
     </script>
     <script>
+      // 跳转到子标题时，经常不能定位到目标位置，特别是选项很多的情况下，如果跳转到靠近底部的标题，默认的滚动位置往往是偏上的。
+      // 这里手动滚动一次来修正位置
+      function scrollToTarget() {
+        if (location.href.includes('?id=')) {
+          let id = location.href.split('?id=').pop()
+          if (id) {
+            id = decodeURIComponent(id)
+            const target = document.getElementById(id)
+            // console.log(target)
+            const rect = target.getBoundingClientRect()
+            // 如果元素在视口上方，或者距离顶部超过一定像素，则滚动到该元素
+            if (rect.top < 0 || rect.top > 400) {
+              // 如果元素在视口下方，则不使用平滑滚动。因为需要距离的距离比较长的时候，滚动时间长，再加上画面快速变化，看的人头晕
+              if (rect.top > window.innerHeight) {
+                target?.scrollIntoView()
+              } else {
+                // 如果元素在视口内，则使用平滑滚动
+                target?.scrollIntoView({ behavior: 'smooth' })
+              }
+            }
+          }
+        }
+      }
+
       // 添加钩子
       window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
         function (hook, vm) {
@@ -58,6 +82,9 @@
                 }
               })
             }
+
+            // 延时 1 秒，确保页面渲染完成后再滚动到目标位置。如果时间太短（例如 500 ms）经常无法生效
+            window.setTimeout(scrollToTarget, 1000)
           })
         },
       ])

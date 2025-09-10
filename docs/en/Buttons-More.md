@@ -20,7 +20,7 @@ A user page refers to a user's homepage and their illustration, manga, or novel 
 
 For example: [AkiZero1510](https://www.pixiv.net/users/12227191)
 
-![](images/20250907_015422.webp)
+![](images/20250911_021441.webp)
 
 On these pages, the "More" tab contains four buttons:
 

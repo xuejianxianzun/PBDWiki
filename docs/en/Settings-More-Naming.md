@@ -389,7 +389,7 @@ A common case is usernames with an @ symbol, such as:
 - 奥馬@skeb募集中
 - さしみなす@依頼募集中
 
-While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=Remove-@-and-subsequent-characters-from-username) feature can address this, some users' names may not use @, for example:
+While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=remove-and-subsequent-characters-in-username) feature can address this, some users' names may not use @, for example:
 
 - いの字/inoji
 - 焔すばる★２日目 東C17a
