@@ -23,13 +23,9 @@ docsify serve docs
 - 简体中文
 - English
 
-由于我的能力和精力有限，所以我只维护了简体中文文档。
+由于我的能力和精力有限，所以现在只有两种语言。如果你使用其他语言，可以使用浏览器的网页翻译功能。
 
-英语是从简体中文翻译而来的，不过我也更新了里面的图片。
-
-如果你想以其他语言查看，可以使用浏览器的网页翻译功能。
-
-如果你想提交某种语言的翻译，或者优化现有的翻译，欢迎提交 Pull Requests。
+Due to my limited ability and energy, there are only two languages ​​​​for now. If you use other languages ​​​​you can use the web translation function of your browser.
 
 ---------
 
