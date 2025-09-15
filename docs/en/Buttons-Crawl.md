@@ -110,7 +110,7 @@ This page count should consider the "interval time." For example, if you want to
 
 3. Click the `Timed crawl` button, and the downloader displays an input box to set the interval time:
 
-<div class="XZInputWrap" id="input1757240375255" style="width: 684px; opacity: 1;"><p class="XZInputInstruction">Interval time for timed crawl (minutes)</p><div class="XZInputContainer"><input class="XZInput" placeholder="" type="text" value="120" style="flex-basis: 500px;"><button class="XZInputButton hasRippleAnimation">
+<div class="XZInputWrap" id="input1757240375255"><p class="XZInputInstruction">Interval time for timed crawl (minutes)</p><div class="XZInputContainer"><input class="XZInput" placeholder="" type="text" value="120" style="flex-basis: 500px;"><button class="XZInputButton hasRippleAnimation">
       <span>Submit</span>
       <span class="ripple"></span>
     </button><button class="XZInputButton cancel hasRippleAnimation">

@@ -545,3 +545,5 @@ When using features affected by this setting, you can configure:
 - Whether to bookmark as public or private
 
 The default is to add tags and bookmark publicly.
+
+?> If a work has already been bookmarked, you can still bookmark it again. This will not change its bookmark time (and thus will not affect its order on the bookmark page), but it can update its public status and tag list. For example: if a work was previously set to public and had tags added, you can, if needed, change the settings to private with no tags and have the downloader bookmark it again.

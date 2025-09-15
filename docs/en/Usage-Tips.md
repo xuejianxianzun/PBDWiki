@@ -69,6 +69,16 @@ To download daily rankings, do the following:
 1. Download all works from today's ranking.
 2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Crawl?id=crawl-the-debut-works) button to crawl only the works newly added that day.
 
+## Batch Bookmarking Works
+
+If you need to batch bookmark multiple works, you can do the following:
+
+1. Enable the downloader's [Bookmark works after downloading](/en/Settings-Download?id=bookmark-works-after-downloading) function.
+2. Optional: If you do not need to download the original images of these works, you can set the [Image size](/en/Settings-More-Download?id=image-size) during download to `Small` to speed up the download process.
+3. Crawl and download these works. The downloader will bookmark them.
+
+On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Crawl?id=timed-crawl) function in combination with the method above.
+
 ## Batch Crawling and Downloading
 
 If you need to crawl many pages, consider batch crawling, i.e., crawling only a portion of pages at a time.
