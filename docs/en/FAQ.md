@@ -213,9 +213,9 @@ The downloader's retry mechanism works as follows:
 
 1. Regardless of the reason for a file's download failure, the downloader will retry 10 times.
 2. If the file still cannot be downloaded successfully after 10 retries (status code is not `200`), the downloader will display an error message in the log and handle it differently based on the situation:
-   1. If the status code is `0`, the downloader will pause downloading all files and wait for user intervention.
-   2. If the status code is `404` or `500`, the downloader will not retry downloading the file.
-   3. For other cases (including files with a `429` error), the downloader will temporarily skip the file and retry it after downloading other files. Each retry round will attempt 10 times, with no limit on the number of retry rounds, so the downloader will keep retrying indefinitely until the file is downloaded successfully.
+    1. If the status code is `0`, the downloader will pause downloading all files and wait for user intervention.
+    2. If the status code is `404` or `500`, the downloader will not retry downloading the file.
+    3. For other cases (including files with a `429` error), the downloader will temporarily skip the file and retry it after downloading other files. Each retry round will attempt 10 times, with no limit on the number of retry rounds, so the downloader will keep retrying indefinitely until the file is downloaded successfully.
 
 **Cases Where Retries Do Not Occur:**
 
