@@ -196,11 +196,46 @@ First, check for network issues. If the network is fine (you can access Pixiv no
 
 If the system drive has low free space, Chrome may block XHR requests for downloading larger files, causing downloads to fail repeatedly. Clear some space and try downloading again. This issue was identified by Reinford.
 
-## Will It Automatically Retry If a Download Gets Stuck?
+## Will It Automatically Retry on Download Failure?
 
 Yes.
 
-When the network condition is poor, downloads may get stuck due to request timeouts or network interruptions. The downloader will automatically retry.
+There are various reasons why a download might fail, such as:
+- Poor network conditions may interrupt the file download request.
+- File does not exist (`404`) or other abnormal status codes (`500`).
+- The request was interrupted before reaching the server (in such cases, the status code is often `0`).
+
+**Cases Where Retries Occur:**
+
+For files in the crawl results (i.e., files that appear in the download progress bar), the downloader will retry. Some files will retry up to 10 times, while others will retry indefinitely.
+
+The downloader's retry mechanism works as follows:
+
+1. Regardless of the reason for a file's download failure, the downloader will retry 10 times.
+2. If the file still cannot be downloaded successfully after 10 retries (status code is not `200`), the downloader will display an error message in the log and handle it differently based on the situation:
+   1. If the status code is `0`, the downloader will pause downloading all files and wait for user intervention.
+   2. If the status code is `404` or `500`, the downloader will not retry downloading the file.
+   3. For other cases (including files with a `429` error), the downloader will temporarily skip the file and retry it after downloading other files. Each retry round will attempt 10 times, with no limit on the number of retry rounds, so the downloader will keep retrying indefinitely until the file is downloaded successfully.
+
+**Cases Where Retries Do Not Occur:**
+
+Some files are not independent crawl results, so the downloader will not retry them.
+
+For example:
+- A novel crawl result may include one cover image and multiple embedded images (illustrations).
+- Saving a user's avatar or cover image.
+
+When downloading the above files, even if the download fails, the downloader will not retry.
+
+## Error During Download, Status Code 0
+
+Some users may encounter this error during downloading, with the downloader displaying `Error during download, status code 0` in the log.
+
+This is because the downloader's request failed. Check the help information displayed in the log.
+
+Possible reasons:
+- Insufficient free space on the **system drive**, not other drives. If the system drive has less than 4 GB of free space, clear some space, restart the browser, and retry downloading.
+- Network error. If you are using proxy software, try changing the route or proxy server.
 
 ## Downloaded Images Are Corrupted
 
@@ -427,16 +462,6 @@ Modify the date to your desired time range, for example:
 Then press Enter. Pixiv will display the works from that year.
 
 ?> Although you can set a time range longer than 1 year in the URL, it is invalid, and Pixiv will still only show works from within 1 year.
-
-## Error During Download, Status Code 0
-
-Some users may encounter this error during downloading, with the downloader displaying `Error during download, status code 0` in the log.
-
-This is because the downloader's request failed. Check the help information displayed in the log.
-
-Possible reasons:
-- Insufficient free space on the **system drive**, not other drives. If the system drive has less than 4 GB of free space, clear some space, restart the browser, and retry downloading.
-- Network error. If you are using proxy software, try changing the route or proxy server.
 
 ## Pixiv Returned Empty Data
 

@@ -20,6 +20,8 @@ If you don't want automatic downloading to start, you can disable this switch:
 
 ![](images/20250909_000810.png)
 
+?> If a file download fails, the downloader will automatically retry downloading it. For more details, you can refer to the explanation in [Will It Automatically Retry on Download Failure?](/en/FAQ?id=will-it-automatically-retry-on-download-failure).
+
 ?> The downloader supports resuming interrupted downloads. If the page crashes or you accidentally close it during downloading, you can reopen the page, and the downloader will restore the download progress, allowing you to continue. For more details, refer to [Does It Support Resumable Downloads?](/en/FAQ?id=does-it-support-resumable-downloads).
 
 ?> If you frequently download large numbers of files, refer to [Handling Large-Scale Downloads](/en/AfterInstallation?id=handling-large-scale-downloads).
