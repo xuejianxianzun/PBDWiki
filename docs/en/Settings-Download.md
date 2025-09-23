@@ -176,7 +176,7 @@ If you want to set independent naming rules for each page type, enable this sett
 
 **Notes:**
 - After enabling this setting, the downloader uses the preset rule for the page type, overriding the current naming rule. You can modify these rules as needed.
-- If you switch page types during downloading after enabling this setting, the naming rule may change, altering filenames or folder names. This may not be desired, so avoid switching to a different page type during downloading (though switching within the same page type is fine).
+- If you switch page types during downloading after enabling this setting, the naming rule may change, which may cause the file name or folder name to change. This may not be desired, so avoid switching to a different page type during downloading (though switching within the same page type is fine).
 
 For example, if downloading from a user's homepage, don't switch to a search page. If downloading from a work page, don't switch to a user's homepage or search page.
 

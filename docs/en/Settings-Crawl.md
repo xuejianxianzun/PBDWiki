@@ -2,7 +2,7 @@
 
 The **Crawl** tab of the downloader is used to set the crawling scope and filtering conditions.
 
-Some options have a question mark next to them. Hovering the mouse over the option will display a brief tooltip, for example:
+Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
 
 ![](images/20250909_001357.png)
 
