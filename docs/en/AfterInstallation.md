@@ -111,6 +111,10 @@ Below are some known extensions that cause conflicts:
 
 ![](images/2021-11-12_174410.png)
 
+- Video DownloadHelper
+
+![](images/20250928_234105.png)
+
 - BitComet Extension
 
 ![](images/2021-11-12_174403.png)
