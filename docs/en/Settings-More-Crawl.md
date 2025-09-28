@@ -1,5 +1,24 @@
 # Settings - More - Crawl
 
+## Show advanced settings
+
+<p class="option" data-no="57" style="display: flex;">
+    <span class="has_tip settingNameStyle1" data-xztip="_ShowAdvancedSettingsDescription" data-tip="The downloader hides some settings by default. Click to show all settings.<br>Hidden settings still take effect.">
+    <span data-xztext="_ShowAdvancedSettings">Show <span class="key">advanced</span> settings</span>
+    <span class="gray1"> ? </span>
+    </span>
+    <input type="checkbox" name="showAdvancedSettings" class="need_beautify checkbox_switch">
+    <span class="beautify_switch" tabindex="0"></span>
+    </p>
+
+Controls whether advanced settings are displayed.
+
+By default, this is not enabled, meaning advanced settings are not shown.
+
+Since the downloader has many options, some less commonly used ones are hidden by default to make the interface cleaner and prevent new users from feeling overwhelmed by too many options.
+
+?> Hidden settings still function normally.
+
 ## Slow down crawl
 
 <p class="option" data-no="75" style="display: flex;">
