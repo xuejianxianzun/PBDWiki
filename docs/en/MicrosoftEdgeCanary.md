@@ -78,6 +78,27 @@ Landscape effect on a phone:
 
 ![](images/20250827_233618.jpg)
 
+## Differences in Pagination
+
+In some work list pages, the PC version of the webpage displays more works per page compared to the mobile version.
+
+For example, on the bookmark page, the PC version shows 48 works per page, while the mobile version shows 18 works per page.
+
+If you start crawling all works from the first page, this difference has no impact. However, if you need to set the page range for crawling or start crawling from a specific page in the middle, you should be aware of this difference because the downloader currently crawls based on the PC version's rules, assuming 48 works per page on the bookmark page.
+
+Here is an example: A user has 31,544 bookmarks, which amounts to 658 pages on the PC version but 1,753 pages on the mobile version:
+
+![](images/20250929_231536.webp)
+
+![](images/20250929_231038.webp)
+
+**Potential Impacts:**
+
+- If you set the crawl page range to page 1 on the mobile version, the downloader will crawl 48 works, not the 18 works you see.
+- If you start crawling from page 1,000 on the mobile version, the downloader will not crawl any works because there is no page 1,000 in the PC version.
+
+Please understand these differences. Of course, you can also use the PC version of the page (desktop mode) to avoid these discrepancies.
+
 ## Keeping the Browser Visible When Converting Ugoira
 
 Due to Android system characteristics, when the browser is switched to the background or the device screen is off, its power consumption is restricted.
