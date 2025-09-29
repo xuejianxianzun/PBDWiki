@@ -79,6 +79,14 @@ If you need to batch bookmark multiple works, you can do the following:
 
 On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Crawl?id=timed-crawl) function in combination with the method above.
 
+## Getting IDs of Expired Bookmarked Works
+
+Your bookmarks may contain some works that have already expired, and you cannot view or download them. For example:
+
+![](images/20250909_235316.png)
+
+If you want to get their IDs, please refer to the description of this feature: [Unbookmark all deleted works](/en/Buttons-More?id=unbookmark-all-deleted-works).
+
 ## Batch Crawling and Downloading
 
 If you need to crawl many pages, consider batch crawling, i.e., crawling only a portion of pages at a time.
