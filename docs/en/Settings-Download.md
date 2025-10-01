@@ -264,18 +264,17 @@ When crawling is complete and downloading can begin, the downloader will automat
 
 If this option is disabled, the downloader will not start downloading automatically after crawling but will display the settings panel. You need to manually click the "Start Download" button to begin downloading.
 
-**Notes:**
+?>There is one situation where the download **will not** start automatically:
 
-Some **quick download** methods always start downloading automatically (even if this option is disabled), such as:
+When crawling on a **search page** with the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
+
+?>Some **quick download** methods always start downloading automatically (even if this option is disabled), such as:
+
 - Clicking the quick download button on the right side of a work page.
 - Clicking the download button on a work thumbnail.
 - Clicking the download button in the image viewer.
 - Pressing the `C` or `D` shortcut key to download a work during preview.
 - Crawling manually selected works.
-
-There's also a case where downloading won't start automatically:
-
-When crawling on a **search page** with the "Preview Search Page Filter Results" option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
 
 ## Bookmark works after downloading
 

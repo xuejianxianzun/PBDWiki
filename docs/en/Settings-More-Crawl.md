@@ -92,7 +92,11 @@ You can enter the IDs of users you want to block, and the downloader will not do
 
 ?> To block multiple users, enter multiple user IDs separated by commas `,`.
 
-This option also has a sub-option: Remove their works from the page. When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won't see works from users you don't like.
+**Sub-option:** 
+
+- Remove their works from the page.
+
+When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won't see works from users you don't like.
 
 When the downloader removes works from certain users, it will display details in the log at the top, for example:
 
