@@ -1,3 +1,5 @@
+/// <reference path="./global.d.ts" />
+
 interface MouseArg {
   type: number
   x: number
@@ -10,14 +12,17 @@ class Form {
   }
 
   private init() {
-    // 由于 docsify 的特性，以及一些奇怪的问题，所以现在我通过循环执行代码以绑定事件
-    window.setInterval(() => {
-      this.getInputs()
-      this.bindInputEvents()
-
-      this.addTipEl()
-      this.bindTipEvents()
-    }, 1000)
+    window.$docsify.plugins = ([] as any[]).concat(window.$docsify.plugins || [], [
+      (hook: any, vm: any): void => {
+        // 在每次 Markdown 渲染完成后执行
+        hook.doneEach(() => {
+          this.getInputs()
+          this.bindInputEvents()
+          this.addTipEl()
+          this.bindTipEvents()
+        })
+      },
+    ])
   }
 
   /**所有的美化表单元素 */

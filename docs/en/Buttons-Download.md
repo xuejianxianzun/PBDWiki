@@ -6,7 +6,7 @@ The "Download" tab of the downloader contains several buttons for processing cra
 
 ## Import results
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Import Crawl Results">Import results</span><span class="ripple"></span></button>
+<button type="button" id="importCrawlResults" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Import Crawl Results">Import results</span><span class="ripple"></span></button>
 
 You can use this button to import crawl results, designed to work with the "Export results" button.
 
@@ -23,7 +23,7 @@ When importing crawl results, the downloader applies most filter conditions, rem
 
 ## Export results
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Export Crawl Results">Export results</span><span class="ripple"></span></button>
+<button type="button" id="exportCrawlResultsJSON" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Export Crawl Results">Export results</span><span class="ripple"></span></button>
 
 Clicking this button exports the current crawl results as a JSON file, saved to the browser's download directory.
 
@@ -45,7 +45,7 @@ Clicking this button exports the current crawl results as a JSON file, saved to 
 
 ## Export CSV File
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Export CSV">Export CSV file</span><span class="ripple"></span></button>
+<button type="button" id="exportCrawlResultsCSV" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Export CSV">Export CSV file</span><span class="ripple"></span></button>
 
 Clicking this button exports the current crawl results as a CSV file, saved to the browser's download directory.
 
@@ -62,7 +62,7 @@ The file content may look like this:
 
 ## Preview file name
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Preview File Names">Preview file name</span><span class="ripple"></span></button>
+<button type="button" id="previewFileName" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39); display: flex;"><span data-xztext="_Preview File Names">Preview file name</span><span class="ripple"></span></button>
 
 Previews the file names for each crawl result. It looks like this:
 
@@ -98,7 +98,7 @@ Execute this command in the file's directory to rename the file.
 
 ## Start download
 
-<button class="xzbtns startDownload hasRippleAnimation" type="button" style="background:#0ea8ef;"><span data-xztext="_Start Download">Start download</span><span class="ripple"></span></button>
+<button id="startDownload" class="xzbtns startDownload hasRippleAnimation" type="button" style="background:#0ea8ef;"><span data-xztext="_Start Download">Start download</span><span class="ripple"></span></button>
 
 After crawling is complete, click this button to start downloading.
 
@@ -106,7 +106,7 @@ After crawling is complete, click this button to start downloading.
 
 ## Pause download
 
-<button class="xzbtns pauseDownload hasRippleAnimation" type="button" style="background:#e49d00;"><span data-xztext="_Pause Download">Pause download</span><span class="ripple"></span></button>
+<button id="pauseDownload" class="xzbtns pauseDownload hasRippleAnimation" type="button" style="background:#e49d00;"><span data-xztext="_Pause Download">Pause download</span><span class="ripple"></span></button>
 
 During downloading, click this button to pause the download.
 
@@ -116,7 +116,7 @@ Pausing saves the download progress, meaning:
 
 ## Stop download
 
-<button class="xzbtns stopDownload hasRippleAnimation" type="button" style="background:#f33939;"><span data-xztext="_Stop Download">Stop download</span><span class="ripple"></span></button>
+<button id="stopDownload" class="xzbtns stopDownload hasRippleAnimation" type="button" style="background:#f33939;"><span data-xztext="_Stop Download">Stop download</span><span class="ripple"></span></button>
 
 Clicking this button stops the download.
 
@@ -132,7 +132,7 @@ Use the "Stop download" button only when files are not fully downloaded, and you
 
 ## Copy URLs
 
-<button class="xzbtns copyUrl hasRippleAnimation" type="button" style="background:#14ad27;"><span data-xztext="_Copy URL">Copy URLs</span><span class="ripple"></span></button>
+<button id="copyURLs" class="xzbtns copyUrl hasRippleAnimation" type="button" style="background:#14ad27;"><span data-xztext="_Copy URL">Copy URLs</span><span class="ripple"></span></button>
 
 Clicking this button outputs the URLs from the crawl results. It looks like this:
 

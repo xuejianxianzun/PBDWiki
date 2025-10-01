@@ -27,7 +27,7 @@ Since the downloader has many options, some less commonly used ones are hidden b
 
 ## How many works to crawl
 
-<p class="option" data-no="1" style="display: flex;">
+<p class="option" data-no="0" style="display: flex;">
     <span class="settingNameStyle1"><span class="setWantPageTip1 has_tip" data-xztip="_CrawlFromThisPageTip" data-xztext="_CrawlHowManyWorks" data-tip="Start crawling from the current page.<br>If you want to limit the number of pages to crawl, enter a number starting from 1.<br>1 means crawl only this page, -1 means crawl all pages.">Crawl <span class="key">how many</span> works</span><span class="gray1"> ? </span>
     </span>
     <input type="text" name="setWantPage" class="setinput_style1 blue setWantPage" value="-1">

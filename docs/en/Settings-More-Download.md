@@ -556,12 +556,6 @@ Some users want the downloader to download files in a specific order so that whe
 
 If you need this, you can enable the setting, but it is usually unnecessary. I do not recommend sorting works by modification time, as this method is unreliable, especially when some files are re-downloaded, refreshing their modification time and disrupting the order.
 
-This setting has 2 sub-options:
-1. **Sort by**: Indicates how the downloader sorts the files.
-2. **Sort order**: Indicates how the downloader downloads files. If set to `Descending`, the downloader downloads files with higher values first, then lower ones. `Ascending` is the opposite.
-
----------
-
 **Using specific naming tags** and sorting by filename achieves the same effect and is more reliable, as filenames are independent of modification time and unaffected by re-downloads.
 
 - To sort by `Work ID`, use `{id}` at the beginning of the filename.
@@ -571,6 +565,12 @@ This setting has 2 sub-options:
 Please refer to: [Sorting with Naming Tags](/en/Settings-Download?id=sorting-with-naming-tags).
 
 -----------------
+
+This setting has 2 sub-options:
+1. **Sort by**: Indicates how the downloader sorts the files.
+2. **Sort order**: Indicates how the downloader downloads files. If set to `Descending`, the downloader downloads files with higher values first, then lower ones. `Ascending` is the opposite.
+
+---------
 
 **Note:** Enabling this setting may increase the time required to complete downloads.
 

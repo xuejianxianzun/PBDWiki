@@ -1,3 +1,4 @@
+/// <reference path="./global.d.ts" />
 var Form = /** @class */ (function () {
     function Form() {
         /**所有的美化表单元素 */
@@ -8,13 +9,17 @@ var Form = /** @class */ (function () {
     }
     Form.prototype.init = function () {
         var _this = this;
-        // 由于 docsify 的特性，以及一些奇怪的问题，所以现在我通过循环执行代码以绑定事件
-        window.setInterval(function () {
-            _this.getInputs();
-            _this.bindInputEvents();
-            _this.addTipEl();
-            _this.bindTipEvents();
-        }, 1000);
+        window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
+            function (hook, vm) {
+                // 在每次 Markdown 渲染完成后执行
+                hook.doneEach(function () {
+                    _this.getInputs();
+                    _this.bindInputEvents();
+                    _this.addTipEl();
+                    _this.bindTipEvents();
+                });
+            },
+        ]);
     };
     // 获取所有的美化控件和它们对应的 span 元素
     Form.prototype.getInputs = function () {

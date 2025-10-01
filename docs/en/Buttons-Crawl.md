@@ -10,7 +10,7 @@ Some buttons appear across multiple page types.
 
 ### Start crawl
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Default Download Multiple Pages" style="background-color: rgb(14, 168, 239);" title="Start crawling; if there are multiple pages, it will download all by default."><span data-xztext="_Start Crawling">Start crawl</span><span class="ripple"></span></button>
+<button type="button" id="startCrawling" class="xzbtns hasRippleAnimation" data-xztitle="_Default Download Multiple Pages" style="background-color: rgb(14, 168, 239);" title="Start crawling; if there are multiple pages, it will download all by default."><span data-xztext="_Start Crawling">Start crawl</span><span class="ripple"></span></button>
 
 Starts crawling works based on the user-defined crawl conditions (filters).
 
@@ -18,73 +18,15 @@ Depending on the page type, the downloader may display settings for [How Many Wo
 
 ### Stop Crawling
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57); display: flex;"><span data-xztext="_Stop Crawling">Stop Crawling</span><span class="ripple"></span></button>
+<button type="button" id="stopCrawling" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57); display: flex;"><span data-xztext="_Stop Crawling">Stop Crawling</span><span class="ripple"></span></button>
 
 After clicking the `Start crawl` button, the downloader displays the `Stop Crawling` button, which you can click to stop the crawling process.
 
 When stopping, if the downloader has already crawled some works, it will retain them and prepare to start downloading.
 
-### Manually select
-
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" title="Alt + S"><span data-xztext="_Manually Select Works">Manually select</span><span class="ripple"></span></button>
-
-Use this button to manually select any works on the page and crawl them.
-
-?> The shortcut for this function is `Alt` + `S`. Press it to enter/exit manual selection mode.
-
-Clicking this button enters selection mode. A blue circle with crosshair guidelines appears under the mouse cursor, as shown below:
-
-![](images/20250905_224727.png)
-
-You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
-
-![](images/20250905_225429.png)
-
-You can later crawl the selected works.
-
-?> If the current page has pagination (e.g., on a user profile), you can select works across multiple pages. For example, select 2 works on page 1, then go to page 2 and select 3 works, resulting in 5 selected works that can be crawled at once.
-
-?> When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work's page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work's thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
-
----------
-
-After clicking the `Manually select` button, the downloader displays these three buttons:
-
-<p class="btnsWrap"><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" title="Alt + S"><span data-xztext="_Pause Selection">Pause select</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Selected Works">Clear selected works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl Selected Works">crawl selected works</span><span class="ripple"></span></button></p>
-
-- `Pause select`: Exits manual selection mode while retaining selected works. After clicking, it changes to a `Continue select` button, allowing you to resume selecting works. You can also use the shortcut `Alt` + `S`, which has the same effect.
-- `Clear selected works`: Exits manual selection mode and clears all selected works. Click this if you no longer need the previously selected works.
-- `crawl selected works`: Crawls the selected works. The downloader retains the selected works.
-
-After selecting the works you want to crawl, click the `crawl selected works` button to crawl and download them.
-
------------
-
-**Tips:**
-
-- If needed, you can click `Pause select` and `Continue select` to make multiple selections. The downloader does not clear previously selected works, so selections accumulate.
-- Press the `Esc` key to exit manual selection mode.
-- If works are selected, the downloader displays the number of selected works on the `crawl selected works` button.
-- The downloader's filter conditions also apply to manually selected works, so some works may be excluded during crawling.
-- The downloader does not automatically clear selected works unless you click the `Clear selected works` button.
-
--------
-
-When navigating to other pages, the selected works list **may** be lost, depending on whether the current page's content is discarded.
-
-For example, navigating from a user profile to a work page without refreshing retains the selected works.
-
-However, navigating to certain pages (e.g., rankings) or refreshing the page discards the current page content. In such cases, the downloader prompts the browser to display a confirmation dialog, as shown below:
-
-![](images/20250909_225629.png)
-
-If you choose to leave the page, the selected works are lost. If you cancel the navigation, the selected works are retained.
-
-In short, you don't need to worry about accidentally losing selected works, as you'll have the opportunity to choose.
-
 ### Timed crawl
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Scheduled Crawling Info" style="background-color: rgb(14, 168, 239);" title="Automatically start crawling and downloading at regular intervals."><span data-xztext="_Scheduled Crawling">Timed crawl</span><span class="ripple"></span></button>
+<button type="button" id="scheduleCrawling" class="xzbtns hasRippleAnimation" data-xztitle="_Scheduled Crawling Info" style="background-color: rgb(14, 168, 239);" title="Automatically start crawling and downloading at regular intervals."><span data-xztext="_Scheduled Crawling">Timed crawl</span><span class="ripple"></span></button>
 
 On some pages, new works may appear over time, such as:
 
@@ -132,14 +74,6 @@ Click the `Submit` button, and the downloader starts the timed crawl task, displ
 
 -----------
 
-After starting timed crawl, the downloader displays a `Cancel timed crawl` button:
-
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(228, 157, 0); display: flex;"><span data-xztext="_Cancel Timed crawl">Cancel timed crawl</span><span class="ripple"></span></button>
-
-To cancel timed crawl, click this button or close the page running the timed crawl task.
-
------------
-
 When using timed crawl, note the following:
 
 1. Do not close the current tab. You can switch to other tabs and continue using the browser.
@@ -152,6 +86,84 @@ When using timed crawl, note the following:
 8. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-More-Crawl?id=the-interval-time-of-timed-crawl) setting.
 9. The downloader uses the interval set at the task's start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
 
+### Cancel timed crawl
+
+<button type="button" id="cancelScheduledCrawling" class="xzbtns hasRippleAnimation" style="background-color: rgb(228, 157, 0); display: flex;"><span data-xztext="_Cancel Timed crawl">Cancel timed crawl</span><span class="ripple"></span></button>
+
+After starting timed crawl, the downloader displays a `Cancel timed crawl` button. To cancel timed crawl, click this button or close the page running the timed crawl task.
+
+### Manually select
+
+<button type="button" id="manuallySelectWork" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" title="Alt + S"><span data-xztext="_Manually Select Works">Manually select</span><span class="ripple"></span></button>
+
+Use this button to manually select any works on the page and crawl them.
+
+?> The shortcut for this function is `Alt` + `S`. Press it to enter/exit manual selection mode.
+
+Clicking this button enters selection mode. A blue circle with crosshair guidelines appears under the mouse cursor, as shown below:
+
+![](images/20250905_224727.png)
+
+You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
+
+![](images/20250905_225429.png)
+
+You can later crawl the selected works.
+
+?> If the current page has pagination (e.g., on a user profile), you can select works across multiple pages. For example, select 2 works on page 1, then go to page 2 and select 3 works, resulting in 5 selected works that can be crawled at once.
+
+?> When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work's page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work's thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
+
+---------
+
+After clicking the `Manually select` button, the downloader displays these three buttons:
+
+<p class="btnsWrap"><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" title="Alt + S"><span data-xztext="_Pause Selection">Pause select</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Selected Works">Clear selected works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl Selected Works">Crawl selected works</span><span class="ripple"></span></button></p>
+
+### Pause select
+
+<p class="btnsWrap"><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" title="Alt + S"><span data-xztext="_暂停选择">Pause select</span><span class="ripple"></span></button></p>
+
+Exits manual selection mode while retaining selected works. After clicking, it changes to a `Continue select` button, allowing you to resume selecting works. You can also use the shortcut `Alt` + `S`, which has the same effect.
+
+### Clear selected works
+
+<p class="btnsWrap"><button type="button" id="clearSelectedWork" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_清空选择的作品">Clear selected works</span><span class="ripple"></span></button></p>
+
+Exits manual selection mode and clears all selected works. Click this if you no longer need the previously selected works.
+
+### Crawl selected works
+
+<p class="btnsWrap"><button type="button" id="crawlSelectedWork" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_抓取选择的作品">Crawl selected works</span><span class="ripple"></span></button></p>
+
+Crawls the selected works. The downloader retains the selected works.
+
+After selecting the works you want to crawl, click the `crawl selected works` button to crawl and download them.
+
+-----------
+
+**Tips:**
+
+- If needed, you can click `Pause select` and `Continue select` to make multiple selections. The downloader does not clear previously selected works, so selections accumulate.
+- Press the `Esc` key to exit manual selection mode.
+- If works are selected, the downloader displays the number of selected works on the `crawl selected works` button.
+- The downloader's filter conditions also apply to manually selected works, so some works may be excluded during crawling.
+- The downloader does not automatically clear selected works unless you click the `Clear selected works` button.
+
+-------
+
+When navigating to other pages, the selected works list **may** be lost, depending on whether the current page's content is discarded.
+
+For example, navigating from a user profile to a work page without refreshing retains the selected works.
+
+However, navigating to certain pages (e.g., rankings) or refreshing the page discards the current page content. In such cases, the downloader prompts the browser to display a confirmation dialog, as shown below:
+
+![](images/20250909_225629.png)
+
+If you choose to leave the page, the selected works are lost. If you cancel the navigation, the selected works are retained.
+
+In short, you don't need to worry about accidentally losing selected works, as you'll have the opportunity to choose.
+
 ## Homepage
 
 Pixiv's homepage has complex content, so I didn't add a `Start crawl` button, meaning you cannot download all works on the homepage with one click.
@@ -160,7 +172,7 @@ On the homepage, I added the common `Manually select` button, along with three c
 
 ### Type ID to crawl
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl by Entering IDs">Type ID to crawl</span><span class="ripple"></span></button>
+<button type="button" id="crawlById" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl by Entering IDs">Type ID to crawl</span><span class="ripple"></span></button>
 
 Clicking this button displays an input box where you can enter or paste a list of work IDs:
 
@@ -183,7 +195,7 @@ Click the "Submit" button, and the downloader will crawl these works.
 
 ### Crawl ID range
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl ID Range">Crawl ID range</span><span class="ripple"></span></button>
+<button type="button" id="crawlIdRange" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl ID Range">Crawl ID range</span><span class="ripple"></span></button>
 
 Clicking this button displays two input boxes sequentially. You can set an ID range for the downloader to crawl, e.g., `10000` to `20000`.
 
@@ -219,7 +231,7 @@ If you need to crawl many works, split them into multiple tasks and crawl sequen
 
 ### Import ID list
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Import ID List">Import ID list</span><span class="ripple"></span></button>
+<button type="button" id="importIDList" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Import ID List">Import ID list</span><span class="ripple"></span></button>
 
 Clicking this button allows you to select a JSON file containing a list of work IDs for the downloader to crawl.
 
@@ -244,7 +256,7 @@ When on a work page (e.g., [99904686](https://www.pixiv.net/artworks/99904686 ':
 
 ### Crawl the new works from this page
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the new works from this page">Crawl the new works from this page</span><span class="ripple"></span></button>
+<button type="button" id="startCrawlingFromCurrentPageNew" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the new works from this page">Crawl the new works from this page</span><span class="ripple"></span></button>
 
 Clicking this button makes the downloader crawl the current work and works newer than it.
 
@@ -262,7 +274,7 @@ Newer works are on the left, older works on the right.
 
 ### Crawl the old works from this page
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the old works from this page">Crawl the old works from this page</span><span class="ripple"></span></button>
+<button type="button" id="startCrawlingFromCurrentPageOld" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the old works from this page">Crawl the old works from this page</span><span class="ripple"></span></button>
 
 Clicking this button makes the downloader crawl the current work and works older than it.
 
@@ -272,7 +284,7 @@ You can set how many works to crawl (including the current work) in the first cr
 
 ### Crawl the related works
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the related works">Crawl the related works</span><span class="ripple"></span></button>
+<button type="button" id="crawlRelatedWork" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl the related works">Crawl the related works</span><span class="ripple"></span></button>
 
 Related works refer to the "Related Works" section at the bottom of the work page.
 
@@ -282,7 +294,7 @@ You can set how many related works to crawl (including the current work) in the 
 
 ### download recommended works
 
-<button class="blueTextBtn">download recommended works</button>
+<button id="downloadRecommendedWorks" class="blueTextBtn">download recommended works</button>
 
 After clicking the bookmark button, Pixiv displays recommended works, and the downloader shows this button, as illustrated below:
 
@@ -302,7 +314,7 @@ A novel series page is a table of contents for a novel series, e.g., [https://ww
 
 ### Crawl series of novels
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl series of novels">Crawl series of novels</span><span class="ripple"></span></button>
+<button type="button" id="crawlSeriesNovel" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl series of novels">Crawl series of novels</span><span class="ripple"></span></button>
 
 Crawls all novels in the series.
 
@@ -310,7 +322,7 @@ Crawls all novels in the series.
 
 ### Merge series of novels
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Merge series of novels">Merge series of novels</span><span class="ripple"></span></button>
+<button type="button" id="mergeSeriesNovel" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Merge series of novels">Merge series of novels</span><span class="ripple"></span></button>
 
 Crawls all novels in the series and merges them into a single file.
 
@@ -334,7 +346,7 @@ In addition to common crawling buttons, search pages have two additional crawlin
 
 ### Crawl tag list
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl tag list">Crawl tag list</span><span class="ripple"></span></button>
+<button type="button" id="crawlTagList" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl tag list">Crawl tag list</span><span class="ripple"></span></button>
 
 Clicking this button displays an input area at the top of the page. You can enter multiple tags, and the downloader will crawl works for each tag sequentially and download them automatically.
 
@@ -360,10 +372,29 @@ Four buttons are available for filtering crawl results, usable only after crawli
 
 <p class="btnsWrap"><button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Filter Results Info" style="background-color: rgb(20, 173, 39);" title="You can change settings and filter results again."><span data-xztext="_Filter Results">Screen in results</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Multi-Image Works">Remove multi-image works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_Clear Ugoira Works">Remove ugoira works</span><span class="ripple"></span></button><button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Manually Delete Works Title" style="background-color: rgb(243, 57, 57);" title="Manually delete unwanted works before downloading"><span data-xztext="_Manually Delete Works">Manually delete the work</span><span class="ripple"></span></button></p>
 
-- `Screen in results`: If needed, modify crawl conditions (filters) and click this button to recheck crawl results, removing works that don't meet the conditions. For example, you can increase the bookmark count requirement after crawling and filter again.
-- `Remove multi-image works`: Removes all multi-image works from the crawl results.
-- `Remove ugoira works`: Removes all Ugoira works from the crawl results.
-- `Manually delete the work`: Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
+### Screen in results
+
+<p class="btnsWrap"><button id="filterResults" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" ><span>Screen in results</span><span class="ripple"></span></button></p>
+
+If needed, modify crawl conditions (filters) and click this button to recheck crawl results, removing works that don't meet the conditions. For example, you can increase the bookmark count requirement after crawling and filter again.
+
+### Remove multi-image works
+
+<p class="btnsWrap"><button id="clearMultiImageWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);" ><span>Remove multi-image works</span><span class="ripple"></span></button></p>
+
+Removes all multi-image works from the crawl results.
+
+### Remove ugoira works
+
+<p class="btnsWrap"><button id="clearUgoiraWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);" ><span>Remove ugoira works</span><span class="ripple"></span></button></p>
+
+Removes all Ugoira works from the crawl results.
+
+### Manually delete the work
+
+<p class="btnsWrap"><button id="manuallyDeleteWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);" ><span>Manually delete the work</span><span class="ripple"></span></button></p>
+
+Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
 
 ?> These filter buttons only appear on illustration and manga search pages, not on novel search pages, as the downloader cannot preview novel crawl results.
 
@@ -375,7 +406,7 @@ On ranking pages, in addition to the common `Manually select` button, there are 
 
 ### Crawl this ranking's works
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl This Ranking's Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in this ranking, including those not yet loaded."><span data-xztext="_Crawl This Ranking's Works">Crawl this ranking's works</span><span class="ripple"></span></button>
+<button type="button" id="crawlRankingWork" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl This Ranking's Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in this ranking, including those not yet loaded."><span data-xztext="_Crawl This Ranking's Works">Crawl this ranking's works</span><span class="ripple"></span></button>
 
 Crawls works in this ranking.
 
@@ -385,7 +416,7 @@ You can set "How Many Works to Crawl," and the downloader will crawl the specifi
 
 ### Crawl the debut works
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl the debut works Title" style="background-color: rgb(14, 168, 239);" title="Only download debut works"><span data-xztext="_Crawl the debut works">Crawl the debut works</span><span class="ripple"></span></button>
+<button type="button" id="crawlDebutWork" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl the debut works Title" style="background-color: rgb(14, 168, 239);" title="Only download debut works"><span data-xztext="_Crawl the debut works">Crawl the debut works</span><span class="ripple"></span></button>
 
 Downloads only the debut works in this ranking.
 
@@ -405,7 +436,7 @@ On the discovery page, Pixiv recommends works you might like.
 
 ### Crawl current works
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl Current Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in the current list"><span data-xztext="_Crawl Current Works">Crawl current works</span><span class="ripple"></span></button>
+<button type="button" id="crawlCurrentWork" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl Current Works Title" style="background-color: rgb(14, 168, 239);" title="Crawl all works in the current list"><span data-xztext="_Crawl Current Works">Crawl current works</span><span class="ripple"></span></button>
 
 Downloads all works currently on the page.
 
@@ -421,7 +452,7 @@ Example: [雪见仙尊's Following](https://www.pixiv.net/users/9460149/followin
 
 ### Start crawl
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Default Download Multiple Pages" style="background-color: rgb(14, 168, 239);" title="Start crawling; if there are multiple pages, it will download all by default."><span data-xztext="_Start Crawling">Start crawl</span><span class="ripple"></span></button>
+<button type="button" id="startCrawlingInFollowingPage" class="xzbtns hasRippleAnimation" data-xztitle="_Default Download Multiple Pages" style="background-color: rgb(14, 168, 239);" title="Start crawling; if there are multiple pages, it will download all by default."><span data-xztext="_Start Crawling">Start crawl</span><span class="ripple"></span></button>
 
 Clicking this button makes the downloader crawl all works of users in the current subpage (followed users, friends, or fans).
 
@@ -437,7 +468,7 @@ You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split 
 
 ### Export followed users list (CSV)
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List CSV">Export followed users list (CSV)</span><span class="ripple"></span></button>
+<button type="button" id="exportFollowingListCSV" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List CSV">Export followed users list (CSV)</span><span class="ripple"></span></button>
 
 Clicking this button makes the downloader crawl user data from the current subpage (followed users, friends, or fans) and generate a CSV file, saved to the browser's download directory.
 
@@ -457,7 +488,7 @@ The CSV file contains the following data for each user:
 
 ### Export followed users list (JSON)
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List">Export followed users list (JSON)</span><span class="ripple"></span></button>
+<button type="button" id="exportFollowingListJSON" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List">Export followed users list (JSON)</span><span class="ripple"></span></button>
 
 This button functions similarly to the previous one but exports a JSON file.
 
@@ -476,7 +507,7 @@ The JSON file contains only a list of user IDs, e.g.:
 
 ### Follow users in batches (JSON)
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Batch Follow Users">Follow users in batches (JSON)</span><span class="ripple"></span></button>
+<button type="button" id="batchFollowUser" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Batch Follow Users">Follow users in batches (JSON)</span><span class="ripple"></span></button>
 
 Clicking this button allows you to select a previously exported followed users list (JSON file) to batch follow all users in it (automatically executed by the downloader).
 
@@ -499,7 +530,7 @@ Example URL: [✿❀✿❀](https://www.pixiv.net/bookmark_detail.php?illust_id=
 
 ### Crawl similar works
 
-<button type="button" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl Similar Images" style="background-color: rgb(14, 168, 239);" title="Crawl similar images"><span data-xztext="_Crawl Similar Images">Crawl similar works</span><span class="ripple"></span></button>
+<button type="button" id="crawlSimilarImage" class="xzbtns hasRippleAnimation" data-xztitle="_Crawl Similar Images" style="background-color: rgb(14, 168, 239);" title="Crawl similar images"><span data-xztext="_Crawl Similar Images">Crawl similar works</span><span class="ripple"></span></button>
 
 Click this button to crawl similar works.
 
@@ -521,6 +552,6 @@ Example page: [Drawings of Hem Ties](https://www.pixivision.net/en/a/4537)
 
 ### Crawl images on this page
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl Images on This Page">Crawl images on this page</span><span class="ripple"></span></button>
+<button type="button" id="crawlImagesOnThisPage" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_Crawl Images on This Page">Crawl images on this page</span><span class="ripple"></span></button>
 
 Downloads the main images on this page.

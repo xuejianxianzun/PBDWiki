@@ -6,7 +6,7 @@ The "More" tab of the downloader usually contains no buttons, but in a few page 
 
 ### Clear saved crawl results
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Clear Saved Crawl Results">Clear saved crawl results</span><span class="ripple"></span></button>
+<button type="button" id="clearSavedCrawlResult" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Clear Saved Crawl Results">Clear saved crawl results</span><span class="ripple"></span></button>
 
 Click this button to clear the data saved by the downloader for resuming interrupted downloads.
 
@@ -28,11 +28,15 @@ On these pages, the "More" tab contains four buttons:
 
 ### Save user avatar
 
+<p class="btnsWrap"><button id="saveUserAvatar" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Save User Avatar">Save user avatar</span><span class="ripple"></span></button></p>
+
 The downloader saves the user's avatar (full-size image) to the download directory.
 
 ![](images/20250907_015845.png)
 
 ### Save user avatar as icon
+
+<p class="btnsWrap"><button id="saveUserAvatarAsIcon" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Save User Avatar">Save user avatar as icon</span><span class="ripple"></span></button></p>
 
 The downloader generates a 256x256 pixel ico file from the user's avatar and saves it to the download directory.
 
@@ -42,6 +46,8 @@ The downloader generates a 256x256 pixel ico file from the user's avatar and sav
 
 ### Save user cover
 
+<p class="btnsWrap"><button id="saveUserCoverImage" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Save User Avatar">Save user cover</span><span class="ripple"></span></button></p>
+
 The downloader saves the cover image from the user's homepage to the download directory.
 
 ![](images/20250907_020727.png)
@@ -49,6 +55,8 @@ The downloader saves the cover image from the user's homepage to the download di
 ?> Some users may not have set a cover image, in which case this button has no effect.
 
 ### Bookmark all works on this page
+
+<p class="btnsWrap"><button id="bookmarkAllWorksOnPage" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Save User Avatar">Bookmark all works on this page</span><span class="ripple"></span></button></p>
 
 The downloader crawls all works on the current page and automatically adds them to your bookmarks.
 
@@ -86,6 +94,8 @@ Bookmark pages have two scenarios:
 
 ### Add tag to uncategorized work
 
+<p class="btnsWrap"><button id="addTagToUnmarkedWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_给未分类作品添加添加tag">Add tag to uncategorized work</span><span class="ripple"></span></button></p>
+
 Click this button, and the downloader will crawl all uncategorized works in your bookmarks and add tags to them.
 
 When using this feature, the button displays progress information, for example:
@@ -119,6 +129,8 @@ A special tag, `未分類`, includes all uncategorized works (this tag name is f
 
 ### Remove tags from all works on this page
 
+<p class="btnsWrap"><button id="removeTagsFromAllWorksOnPage" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(228, 157, 0);"><span data-xztext="_移除本页面中所有作品的标签">Remove tags from all works on this page</span><span class="ripple"></span></button></p>
+
 This button does the opposite of the previous one. Clicking it crawls all works on the **current page** (one page only) and removes their tags, making them uncategorized.
 
 ?> This does not unbookmark the works; it only removes their associated tags.
@@ -127,6 +139,8 @@ This button does the opposite of the previous one. Clicking it crawls all works 
 
 ### Unbookmark all works on this page
 
+<p class="btnsWrap"><button id="unBookmarkAllWorksOnPage" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_取消收藏本页面的所有作品">Unbookmark all works on this page</span><span class="ripple"></span></button></p>
+
 Click this button, and the downloader crawls all works on the **current page** (one page only) and removes them from your bookmarks.
 
 ?> To prevent accidental operations, this button processes only one page at a time.
@@ -134,6 +148,8 @@ Click this button, and the downloader crawls all works on the **current page** (
 ?> When using this feature, the downloader displays progress information in the log at the top of the page.
 
 ### Unbookmark all deleted works
+
+<p class="btnsWrap"><button id="unBookmarkAll404Works" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(243, 57, 57);"><span data-xztext="_取消收藏所有已被删除的作品">Unbookmark all deleted works</span><span class="ripple"></span></button></p>
 
 Your bookmarks may include works that are no longer available, which you cannot view or download. For example:
 
@@ -154,6 +170,8 @@ This feature is useful for some users, as work IDs can help locate archived vers
 ?> The downloader exports only work IDs, as other data (e.g., user IDs) for deleted works is invalid and set to meaningless values by Pixiv.
 
 ### Export bookmark list（JSON）
+
+<p class="btnsWrap"><button id="exportBookmarkList" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_导出收藏列表">Export bookmark list（JSON）</span><span class="ripple"></span></button></p>
 
 You can export your own or another user's bookmark list (depending on whose bookmark page you're on). The downloader generates a JSON file saved to the browser's download directory.
 
@@ -178,6 +196,8 @@ The following filter conditions apply to this feature:
 - [User block list](/en/Settings-More-Crawl?id=user-block-list)
 
 ### Import bookmark list (add bookmarks in batches)
+
+<p class="btnsWrap"><button id="importBookmarkList" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_导入收藏列表">Import bookmark list (add bookmarks in batches)</span><span class="ripple"></span></button></p>
 
 Click this button to select a previously exported bookmark list (JSON file) and add its works to your bookmarks.
 
