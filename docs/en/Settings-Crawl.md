@@ -2,10 +2,6 @@
 
 The **Crawl** tab of the downloader is used to set the crawling scope and filtering conditions.
 
-Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
-
-![](images/20250909_001357.png)
-
 ## Show advanced settings
 
 <p class="option" data-no="51" style="display: flex;">
@@ -251,7 +247,7 @@ Single-image works have only one image; multi-image works contain multiple image
 
 <p class="option" data-no="3" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_MustBeGreaterThan0" data-tip="Must be greater than 0">
-    <span data-xztext="_多图作品只下载前几张图片">Multi-image works only download the <span class="key">first few</span> images</span>
+    <span data-xztext="_多图作品只下载前几张图片">Multi-image works only crawl the <span class="key">first few</span> images</span>
     <span class="gray1"> ? </span>
     </span>
     <input type="checkbox" name="firstFewImagesSwitch" class="need_beautify checkbox_switch">
@@ -274,7 +270,7 @@ You can also use this setting to avoid downloading too many images.
 ## Maximum number of images for multi-image works
 
 <p class="option" data-no="47" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_MultiImageWorkLimitTip" data-tip="Multi-image works exceeding this limit will not be downloaded">
+    <span class="has_tip settingNameStyle1" data-xztip="_MultiImageWorkLimitTip" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work.">
     <span data-xztext="_多图作品的图片数量上限"><span class="key">Maximum number</span> of images for multi-image works</span>
     <span class="gray1"> ? </span>
     </span>
@@ -369,6 +365,7 @@ Alternatively, if you want to use only "Daily Bookmark Count" without the total 
     <input type="radio" name="widthHeightLimit" id="widthHeightLimit3" class="need_beautify radio" value="&lt;=">
     <span class="beautify_radio" tabindex="0"></span>
     <label for="widthHeightLimit3">&lt;=</label>
+    <span class="verticalSplit"></span>
     <span data-xztext="_Width">Width</span>
     <input type="text" name="setWidth" class="setinput_style1 blue" value="0">
     <input type="radio" name="setWidthAndOr" id="setWidth_AndOr1" class="need_beautify radio" value="&amp;" checked="">
@@ -415,7 +412,10 @@ You can set the width and height conditions for the images you want to download.
     <label for="ratio0" data-xztext="_Square">Square</label>
     <input type="radio" name="ratio" id="ratio3" class="need_beautify radio" value="userSet">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="ratio3" data-xztext="_AspectRatio">Aspect Ratio</label>
+    <span class="has_tip settingNameStyle" data-xztip="_宽高比的提示" data-tip="Aspect ratio is the number obtained by dividing the width by the height.&lt;br&gt;When the aspect ratio is less than 1, the image is portrait.&lt;br&gt;When the aspect ratio is greater than 1, the image is landscape.&lt;br&gt;The larger the aspect ratio, the more elongated the image.">
+      <label for="ratio3" style="padding: 0;" data-xztext="_宽高比" class="active">Ratio</label>
+      <span class="gray1"> ? </span>
+    </span>
     <input type="radio" name="userRatioLimit" id="userRatioLimit1" class="need_beautify radio" value="&gt;=" checked="">
     <span class="beautify_radio" tabindex="0"></span>
     <label for="userRatioLimit1" class="active">&gt;=</label>

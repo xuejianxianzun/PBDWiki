@@ -44,6 +44,14 @@ To view the descriptions of settings and buttons in this tab, click the links be
 - [Settings - More](/en/Settings-More)
 - [Buttons - More](/en/Buttons-More)
 
+## Get Help
+
+Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
+
+![](images/20251003_031909.png)
+
+If you want to view more detailed instructions, you can click on the name of the setting item, or long press on the solid color button, and the downloader will open the corresponding Wiki page.
+
 ## Opening and Closing the Settings Panel
 
 There are multiple ways to open and close the settings panel.
