@@ -294,7 +294,9 @@ You can set how many related works to crawl (including the current work) in the 
 
 ### download recommended works
 
-<button id="downloadRecommendedWorks" class="blueTextBtn">download recommended works</button>
+<button class="blueTextBtn hasRippleAnimation" id="downloadRecommendedWorks" type="button">
+  <span data-xztext="_下载推荐作品">download recommended works</span><span class="ripple"></span>
+</button>
 
 After clicking the bookmark button, Pixiv displays recommended works, and the downloader shows this button, as illustrated below:
 
