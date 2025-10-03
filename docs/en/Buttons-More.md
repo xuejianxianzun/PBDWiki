@@ -159,11 +159,11 @@ Click this button, and the downloader crawls your bookmark list (without fetchin
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page. The work count in the log, e.g., "Currently 1585 works," refers to the number of deleted works detected.
 
-**Export IDs of Deleted Works:**
+#### Export IDs of Deleted Works
 
 After identifying all deleted works, the downloader exports their ID list to the download directory, for example:
 
-![](images/20250907_032902.png)
+![](images/20251003_182304.png)
 
 This feature is useful for some users, as work IDs can help locate archived versions of these works on other illustration websites.
 
