@@ -75,6 +75,10 @@ Identify the extension causing the issue and **temporarily disable it** when usi
 
 These extensions typically have file download or download management functions, such as IDM Integration Module, Chrono Download Manager, or Image Downloader. If unsure which extension is causing the issue, disable all extensions, then enable them one by one and test the downloader to identify the problematic extension.
 
+I have listed some known extensions that can cause this issue in the [Known Conflicting Extensions](/en/AfterInstallation?id=known-conflicting-extensions) below.
+
+------------
+
 To disable an extension, do so in the browser's extension management page. For example, to disable IDM Integration Module, click the button in its bottom-right corner to stop it from running:
 
 ![](images/20250908_235031.png)
@@ -114,6 +118,10 @@ Below are some known extensions that cause conflicts:
 - Video DownloadHelper
 
 ![](images/20250928_234105.png)
+
+- Image downloader - Imageye
+
+![](images/20251025_025601.png)
 
 - BitComet Extension
 

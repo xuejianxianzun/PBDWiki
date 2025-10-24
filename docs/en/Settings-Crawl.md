@@ -470,17 +470,21 @@ For example: If you previously downloaded works from a user's page and the large
 ## Posting time
 
 <p class="option" data-no="10" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_SetPublicationTimeTip" data-tip="You can download works published within a specific time range">
-    <span data-xztext="_PublicationTime">Posting <span class="key">Time</span></span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="postDate" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="postDate" style="display: none;">
-    <input type="datetime-local" name="postDateStart" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2009-01-01T00:00">
-    &nbsp;-&nbsp;
-    <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2030-01-01T00:00">
-    </span>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=10" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置投稿时间提示" data-tip="You can download works posted in a specified period of time">
+        <span data-xztext="_投稿时间">Posting <span class="key">time</span></span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="postDate" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="postDate" style="display: none;">
+        <input type="datetime-local" name="postDateStart" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2009-01-01T00:00">
+        <button class="textButton grayButton mr0" type="button" role="setDate" data-for="postDateStart" data-value="2009-01-01T00:00" data-xztext="_过去">Past</button>
+        <button class="textButton grayButton" type="button" role="setDate" data-for="postDateStart" data-value="now" data-xztext="_现在">Now</button>
+        -&nbsp;
+        <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2100-01-01T00:00">
+        <button class="textButton grayButton mr0" type="button" role="setDate" data-for="postDateEnd" data-value="now" data-xztext="_现在">Now</button>
+        <button class="textButton grayButton" type="button" role="setDate" data-for="postDateEnd" data-value="2100-01-01T00:00" data-xztext="_未来">Future</button>
+      </span>
     </p>
 
 You can download only works published within a specific time range.

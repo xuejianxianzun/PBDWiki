@@ -118,6 +118,38 @@ Example effect:
 - Filenames may exceed the operating system's length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
 - When a filename is too long, some browsers may truncate the excess to save the file. This varies by case. Chrome on Windows does this, but browsers on Linux or Android may not. Saving to remote locations (e.g., network drives) may also prevent truncation, even in Chrome.
 
+### Some Examples
+
+#### Remove the p tag in {id}
+
+`{id}` includes the page number, for example `44920385_p0`. If you want to remove `_p`, you can replace `{id}` with `{id_num} {p_num}`, which will generate `44920385 0`.
+
+?>Note: If you want to replace `{id}`, the naming rule must include both `{id_num}` and `{p_num}` to prevent duplicate filenames.
+
+#### Remove the sequence number from the first image of each work
+
+If you think the first image doesn't need a sequence number and want to change `44920385_p0` to `44920385`, you can enable the [The first image without a serial number](/en/Settings-More-Naming?id=the-first-image-without-a-serial-number) option.
+
+#### Naming rules used by others
+
+Here are some naming rules used by users, you can refer to:
+
+```
+{user}/{title}{id}
+{user}/{title}{date}/{id}
+{user_id}_{user}/{type}/{date} {title}/{id}
+{user_id}-{user}/{title}-{id}
+{user} (id={user_id})/{id}
+{user} {user_id}/{id} {title} {upload_date}
+{user}_{date}_{title}_{id}
+{id}_{title}_{user_id}_{user}
+{id}{user}-{user_id}-{title}{tags}{tags_translate}{page_tag}-{like}-{bmk}-{upload_date}
+```
+
+**Note:** The last naming rule is not a good idea because it easily generates filenames that are too long (more than 256 characters), leading to truncation, so the actual filename may only have the first half.
+
+Some works have a large number of tags, so using `{tags}`, `{tags_translate}`, `{tags_transl_only}` in the filename may lead to the filename being too long. If you want to use these naming tags, it is recommended to place them at the end of the filename to avoid truncation of content from other naming tags.
+
 ### Sorting with Naming Tags
 
 Some tags have predictable patterns. Using them as the **first part** of the filename allows sorting in the file explorer.

@@ -162,19 +162,24 @@ Additionally, since Pixiv's Ugoira source files are in zip format, converting th
 
 If you confirm that the download speed is very slow (e.g., only a few hundred KB per second), please check if there is an issue with your network connection.
 
-## Download Progress Stays at 0
+## Download Stuck, or File Saving Very Slow
 
-Some users may encounter this issue: The file's download progress bar is full, but the file is not saved, and the total progress bar shows 0 completed tasks. The download cannot continue. See the image below:
+*Download progress is always 0*
 
-![](images/20250910_012342.png)
+Some users may encounter the issue of download getting stuck: after the file's download progress bar reaches 100%, it may take a while to save to the hard drive, or it may never save. This issue may be related to the browser or the hard drive, and there are multiple reasons that can cause this problem.
 
-You can try these solutions:
+I haven't encountered this issue myself (in fact, most users probably won't encounter this issue frequently). If you encounter this problem, you can try the following operations, some of which have been verified to be effective.
 
-- Refresh the page; the downloader should resume downloading.
-- Try restarting the browser or updating the browser and then retry downloading.
-- Some browsers may encounter this issue due to compatibility problems. Please install this extension on Chrome, Edge, or Firefox.
-- If the issue persists, try downloading a few works individually. If some can be downloaded but the problematic one cannot, it may be due to invalid characters in the file name. Try modifying the naming rule (remove certain naming rules) and redownload.
-- If the issue still cannot be resolved, please refer to the [Contact Me](/en/Contact-Me) page to report the issue.
+1. Refresh this webpage to let the downloader retry the download.
+2. Click the pause download button, then click the start download button.
+3. Open the browser's extension management page, click the refresh button for this extension to reload it, then refresh this webpage and retry the download.
+4. If the browser's download save location is a mechanical hard drive, you can try changing the download location to a solid-state drive (SSD). This is effective for some users.
+5. If you have many tabs open, you can close some tabs to reduce the browser's load. Some users experience download getting stuck when many tabs are open (after the file downloads, it takes 10 seconds to save), but no issue when fewer tabs are open.
+6. You can click the user avatar button in the browser menu bar to add a new user profile (i.e., create a new browser local user), then open the new user's browser window, and install and use this downloader in it.
+7. Uninstall this browser and reinstall it, or install a new browser.
+8. Clear the browser's download history, then restart the browser. This method may not work, but clearing unnecessary download history is beneficial. Tip: If the browser's download history is too much, it can cause the browser to freeze for a while when starting up or opening the download management page, and may lead to other potential issues. If you need help, you can check [How to Clear the Browser's Download History](/en/FAQ?id=how-to-clear-the-browser39s-download-history).
+
+If the problem still cannot be resolved, please check the [Contact Me](/en/Contact Me) page to report the issue to me.
 
 ## What to Do If a Task Gets Stuck
 
@@ -266,7 +271,7 @@ If you see this error message, possible reasons include:
 - A "Save As" dialog pops up during downloading.
 - The file name is too long.
 - The download is intercepted by other software. The downloader instructs the browser to save the file, but occasionally other download software (e.g., IDM) may take over the download, causing the browser to cancel it. If this happens, disable the interception of Pixiv files in the other download software's settings.
-- Other reasons.
+- Affected by other extensions. You can try disabling the extension that causes this issue, or create a new local browser user to use the downloader. The latter method: Click the avatar icon in the upper right corner of the browser, then create a new profile or configuration (no need to log in to the browser vendor's account). Each browser user's configuration is independent; you can install only this extension in the new user's window. When you need to download Pixiv files, use this user to download, so it won't be affected by other extensions.
 
 Solutions for the first two cases are provided below.
 
@@ -358,21 +363,41 @@ You can open the work's page; if it opens normally, you can download it individu
 
 If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Crawl?id=type-id-to-crawl) feature or similar functions.
 
-## Browser Freezes on Startup
+## Browser Freezes While Running
 
-*Browser is slow/Browser unresponsive on startup/Browser freezes/Browser crashes*
+*Browser is very laggy/Browser unresponsive on startup/Browser Not Responding/Browser freezes/Browser crashes*
 
-This may be due to too many browser download records. Excessive download records can cause the browser to lag, especially when starting the browser or opening the download history page.
+This may be caused by too many download history entries in your browser. Too many download history entries can cause the browser to lag, especially when the browser just starts up and when opening the download history page.
 
-Clearing the browser's download history should resolve this issue.
+Clearing the browser's download history will solve this problem.
 
-For Chrome users, follow these steps:
+## How to Clear the Browser's Download History
 
-Go to the browser's settings page, find the "Privacy and Security" section, and use the "Clear browsing data" function:
+*Clear download history/Clear download history*
+
+Taking the Chrome browser as an example:
+
+**Method 1:**
+
+You can press `Ctrl` + `J` to open the browser's download history interface, then find the "Clear all" or similar button and click it.
+
+**Method 2:**
+
+Enter the browser's settings page, and in the "Privacy and security" category, use the "Delete browsing data" function:
 
 ![](images/20250910_012946.png)
 
-Set the "Time range" to "All time," select "Download history," and click "Clear data."
+Set the "Time range" to "All time", select "Download history", and click "Delete data".
+
+**Method 3:**
+
+If the browser's download history is very large, the browser may freeze (unresponsive) in the above two scenarios. At this time, you can force close the browser, then use Everything to search for files named history, and sort by file size. As shown in the figure:
+
+![](images/20251025_024359.png)
+
+Find the history file that is relatively large in size, and the path contains the browser name (Chrome or Edge), located in the User Data directory, and delete it directly. This clears the browser's download history.
+
+?>If the resource manager prompts that the file is in use, you can use Task Manager to end the corresponding browser process, or restart the system and then delete.
 
 ## How to Download in Batches
 
