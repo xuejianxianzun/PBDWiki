@@ -507,13 +507,13 @@ If the last download's cutoff date was January 1, 2020, when downloading again o
 
 If you want to set only a start or end time, how should you set the other time?
 
-For example, to download all works before 2010, you can set the start time to a date before Pixiv's creation, such as:
+For example, if I want to download all works before 2010, I can set the start time to a time earlier than the Pixiv creation date (you can also click the `Past` button), and set the end time to 2010, for example:
 
-`January 1, 2000 - January 1, 2010`
+`2009-01-01 00:00 - 2010-01-01 00:00`
 
-To download all works after 2020, you can set the end time to a future date, such as:
+If I want to download all works after 2020, I can set the end time to a future time (you can also click the `Future` button), for example:
 
-`January 1, 2020 - January 1, 2100`
+`2020-01-01 00:00 - 2100-01 00:00`
 
 ## Include tag
 
