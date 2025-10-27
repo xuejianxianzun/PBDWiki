@@ -391,7 +391,7 @@ Set the "Time range" to "All time", select "Download history", and click "Delete
 
 **Method 3:**
 
-If the browser's download history is very large, the browser may freeze (unresponsive) in the above two scenarios. At this time, you can force close the browser, then use Everything to search for files named history, and sort by file size. As shown in the figure:
+If the browser's download history is too much, the browser may freeze (unresponsive) in the above two scenarios. You can close the browser (if the browser is unresponsive, you can force close it), then use Everything to search for files named history, and sort by file size. As shown in the figure:
 
 ![](images/20251025_024359.png)
 
