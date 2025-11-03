@@ -2,6 +2,34 @@
 
 Some hidden settings are not displayed on the downloader's panel.
 
+## Crawl the latest few works of each user
+
+<p class="option new" data-no="15">
+  <a class="has_tip settingNameStyle" data-xztip="_必须大于0" data-tip="must be greater than 0">
+    <span data-xztext="_抓取每个用户最新的几个作品">Crawl the <span class="key">latest</span> few works of each user</span>
+    <span class="gray1"> ? </span>
+  </a>
+  <input type="checkbox" name="crawlLatestFewWorks" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <span class="subOptionWrap" data-show="crawlLatestFewWorks" style="display: none;">
+    <input type="text" name="crawlLatestFewWorksNumber" class="setinput_style1 blue" value="10">
+  </span>
+</p>
+
+This filter only takes effect on the following page. In other page types, this setting will not be displayed and will not take effect.
+
+When crawling on the following page, if this setting is enabled and the number of works is set to greater than 0, the downloader will only crawl the latest few works for each user.
+
+If set to 1, the downloader will only crawl the latest 1 work for each user.
+
+----------
+
+To view this setting, follow these steps:
+
+1. Enable the downloader's "Show advanced settings" option and switch to the "More" tab.
+2. Press F12 to inspect elements, go to the "Elements" panel, press `Ctrl` + `F`, and search for `p[data-no="15"]` to locate this element.
+3. It has a default `display: none;` style. Remove this style to make it visible and usable.
+
 ## Don't download the last few images for specific user's multi-image works
 
 <div class="option" data-no="79">

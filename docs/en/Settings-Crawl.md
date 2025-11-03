@@ -2,6 +2,16 @@
 
 The **Crawl** tab of the downloader is used to set the crawling scope and filtering conditions.
 
+During crawling, if some works are excluded because they do not meet the filter conditions, the downloader will display in the log which settings caused it. For example:
+
+<div class="logContent beautify_scrollbar">
+<span class="log" style="color: rgb(210, 126, 0);">The downloader excluded some works, reason: work type</span>
+<br>
+<span class="log" style="color: rgb(210, 126, 0);">The downloader excluded some works, reason: image dimensions</span>
+<br>
+<span class="log" style="color: rgb(210, 126, 0);">The downloader excluded some works, reason: number of bookmarks</span>
+</div>
+
 ## Show advanced settings
 
 <p class="option" data-no="51" style="display: flex;">
@@ -39,9 +49,17 @@ For pages where downloading is **based on works**, this setting will be displaye
 
 ?> The right side of this setting shows gray text to indicate the range of acceptable numbers. This range may vary depending on the page.
 
+**Instructions for Different Usage Scenarios:**
+
 - On **illustration or novel work pages**, crawling starts from the current work (including the current work). Setting it to 1 will crawl only the current work. Setting it to -1 means no limit on the number of works, and the downloader will crawl from the current work to the last one.
 
 - On **other pages** (e.g., rankings or followed users' new works), the downloader starts crawling from the first work on the current page. Setting it to 1 will crawl only the first work. Setting it to -1 means crawling all works on the current page.
+
+**Note:**
+
+If you modify the default crawl filter conditions, some works may be excluded.
+
+For example: If you set to crawl 10 works, and 6 of them are excluded, the downloader will only keep the 4 that meet the conditions.
 
 ## How many pages to crawl
 

@@ -31,11 +31,11 @@ If you are concerned about account bans due to frequent downloads, set a number 
     <span data-xztext="_下载间隔">Download <span class="key">interval</span></span>
     <span class="gray1"> ? </span>
     </span>
-    <span data-xztext="_When the number of works is greater than">Enabled when the number of works exceeds the specified number:</span>
-    <input type="text" name="downloadIntervalOnWorksNumber" class="setinput_style1 blue" value="120">
+    <span data-xztext="_When the number of works is greater than">Enable when the number of files exceeds the specified number:</span>
+    <input type="text" name="downloadIntervalOnWorksNumber" class="setinput_style1 blue" value="150">
     <span class="verticalSplit"></span>
     <span data-xztext="_Interval time">Interval time:</span>
-    <input type="text" name="downloadInterval" class="setinput_style1 blue" value="0">
+    <input type="text" name="downloadInterval" class="setinput_style1 blue" value="1">
     <span data-xztext="_Seconds">seconds</span>
     </p>
 
@@ -47,19 +47,18 @@ You can set how many seconds to wait before allowing the downloader to start a d
 
 ### Enabled when the number of works exceeds the specified number
 
-This setting will only be enabled if the number of works in the **crawling results** exceeds the set value. The default is `120`.
+This setting will only be enabled if the number of works in the **crawling results** exceeds the set value. The default is `150`.
 
-Note that the judgment is based on the number of crawling results, i.e., how many files need to be downloaded in total, not how many remain. If 120 files are crawled (meeting the conditions) and this setting is activated, it will remain active even if only 1 file is left at the end.
+Note that the judgment is based on the number of crawling results, i.e., how many files need to be downloaded in total, not how many remain. If 150 files are crawled (meeting the conditions) and this setting is activated, it will remain active even if only 1 file is left at the end.
 
 ### Interval Time
 
 Whenever the downloader **starts** downloading a file, it sets a timer, and the next download is only allowed after the interval time has passed.
 
-?> This setting has no effect by default because the default interval time is `0`, meaning no interval.
-
 **Detailed Explanation of How It Works:**
 
-If set to `1` second, a maximum of 3600 files can be downloaded from Pixiv per hour.
+- If set to `0`, the downloader will not add delay time, and this setting will not take effect.
+- If set to `1` second, a maximum of 3600 files can be downloaded from Pixiv per hour.
 
 The interval time is not affected by the time required for downloads:
 

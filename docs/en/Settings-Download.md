@@ -308,6 +308,53 @@ When crawling on a **search page** with the [Preview filter results on search pa
 - Pressing the `C` or `D` shortcut key to download a work during preview.
 - Crawling manually selected works.
 
+## Save file to the user's last selected location
+
+<p class="option new" data-no="20" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use">
+        <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch" checked="">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton" id="showRememberTheLastSaveLocationTip" data-xztext="_提示">Tip</button>
+    </p>
+
+This setting is designed for users who prefer **manual file saving**, who like to use the "Save As" dialog to save files and hope that the downloader can remember the last save location.
+
+If you want to use this feature, please note:
+
+- To make this setting work correctly, you must enable "Ask where to save each file before downloading" in the browser's download settings; otherwise, the browser will not display the Save As dialog, and the file will be saved to the save location set in the browser settings (not the last selected location).
+- If you have disabled "Ask where to save each file before downloading" in the browser's download settings, you should also disable this setting.
+- If you enable this setting, the downloader will not create folders, only set the filename. This is because achieving the "remember last save location" effect requires using the download attribute of the a tag to download the file, at which time folders cannot be created.
+- If you enable this setting, the downloader always assumes that this file is downloaded successfully (even if you cancel saving this file). This is to simplify processing.
+
+**Technical Details:**
+
+When this setting is off (default), the downloader uses the browser's API to download files, for example:
+
+```js
+browser.downloads.download({
+  url,
+  filename,
+  conflictAction: 'overwrite',
+  saveAs: false,
+})
+```
+
+The downloader sets `saveAs: false` to attempt to save the file directly.
+
+If you enable "Ask where to save each file before downloading" in the browser's download settings, the browser will still display the Save As dialog. But at this time, the folder opened by the dialog is always the default download location, not the location you manually saved last time.
+
+If you enable this setting, the downloader will use the download attribute of the a tag to download the file, at which time the Save As dialog opens to the location you manually saved last time. The code is as follows:
+
+```js
+const a = document.createElement('a')
+a.href = url
+a.download = fileName
+a.click()
+```
+
 ## Bookmark works after downloading
 
 <p class="option" data-no="33" style="display: flex;">
