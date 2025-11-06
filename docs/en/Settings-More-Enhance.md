@@ -544,18 +544,6 @@ If you want to paste both image and text in QQ, select `text/html` and deselect 
 
 ![](images/20251012_033111.webp)
 
-However, QQ's current version 9.9.21 has a bug where pasting mixed image-text content causes image loading failure and message sending failure:
-
-![](images/20251012_040156.png)
-
-Older versions of QQ do not have this bug.
-
-If you encounter this bug, download the 9.9.20 version installer from the QQ official website:
-
-https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.20_250616_x64_01.exe
-
-Then exit QQ, install the old version exe file, and you can send mixed image-text messages.
-
 #### WeChat
 
 WeChat has the same priority as QQ. You can paste both image and text simultaneously, but WeChat splits them during sending. For example:
