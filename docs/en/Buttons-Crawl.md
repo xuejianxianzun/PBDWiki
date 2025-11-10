@@ -480,6 +480,8 @@ You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split 
 
 Clicking this button makes the downloader crawl user data from the current subpage (followed users, friends, or fans) and generate a CSV file, saved to the browser's download directory.
 
+You can export your own following list as a backup for future needs.
+
 ?> Although the button says "followed users," it can also export friends and fans lists.
 
 ?> The number of users crawled depends on the "How Many Pages to Crawl" setting. Each page has up to 24 users.
@@ -512,7 +514,7 @@ This button functions similarly to the previous one but exports a JSON file.
 
 An important difference is that the exported JSON file can be used for importing (batch following users), while the CSV file cannot.
 
-The JSON file contains only a list of user IDs, e.g.:
+The exported JSON file only saves the list of user IDs, for example:
 
 ```json
 [
@@ -523,18 +525,34 @@ The JSON file contains only a list of user IDs, e.g.:
 ]
 ```
 
+**Difference between exporting CSV and JSON formats:**
+
+The exported JSON file can be used for importing (batch following users), while the CSV file cannot. But if you only have a CSV file, you can also copy the user ID list from the CSV file and create a JSON file that conforms to the format.
+
 **Note:** The number of users exported by the downloader may be less than the number displayed on the webpage. The reason has already been explained in the previous entry.
 
 ### Follow users in batches (JSON)
 
 <button type="button" id="batchFollowUser" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Batch Follow Users">Follow users in batches (JSON)</span><span class="ripple"></span></button>
 
-Clicking this button allows you to select a previously exported followed users list (JSON file) to batch follow all users in it (automatically executed by the downloader).
+**Some Details:**
+- The downloader will first crawl the users you are currently following. If a user is already followed, the downloader will skip it when adding follows, to avoid duplicate follows. However, this step is adjustable: since the downloader starts crawling from the current page, if you want to skip this step to save time, you can navigate to the last page of the following list and then execute this function. At that point, the downloader will only crawl the users on the last page, which is approximately equivalent to skipping this step.
+- When following users, you can decide to add them as **public** follows or **private** follows. This depends on the page you are on: if you are on the public follows page, the downloader will add users as public follows. If you are on the private follows page, the downloader will add users as private follows.
 
-Possible use cases:
-- Export another user's followed users list and import it to your account to follow those users.
-- Export your followed users list as a backup.
-- Export your followed users list and import it to a secondary account to replicate the follow list. However, this is not recommended as it's unnecessary: a secondary account can download works from the primary account's followed users by accessing the corresponding URL.
+**Possible Use Cases:**
+- You can export another user's public following list and then import it to your own account to follow those users as well.
+- You can export your own following list and then batch import it to a secondary account, so the secondary account has the same following list as the main account. However, I don't recommend doing this because it's not necessary: the secondary account can directly download works from the users that the main account publicly follows, just by opening the corresponding URL. But if your main account is banned, you might not be able to view the following list. So you can periodically export your following list for backup purposes.
+- You can batch convert public followed users to private follows, or vice versa. It's simple: you can first export the public followed users, then go to the private follows page and perform batch following, so these users will be re-added as private follows. Of course, you can do the opposite as well.
+
+**Tip:** How to view another user's public following list
+
+You can first open a user's homepage, URL for example:
+
+https://www.pixiv.net/users/1113943
+
+Then append `/following` to the end and press Enter to view their public following list:
+
+https://www.pixiv.net/users/1113943/following
 
 !>**Risk Warning:** Pixiv has strict limits on batch following users. For example, following over 1,000 users per day may trigger a warning from Pixiv. A second warning may lead to account suspension or deletion. I am not responsible for any account bans.
 
