@@ -544,7 +544,9 @@ The exported JSON file can be used for importing (batch following users), while 
 - You can export your own following list and then batch import it to a secondary account, so the secondary account has the same following list as the main account. However, I don't recommend doing this because it's not necessary: the secondary account can directly download works from the users that the main account publicly follows, just by opening the corresponding URL. But if your main account is banned, you might not be able to view the following list. So you can periodically export your following list for backup purposes.
 - You can batch convert public followed users to private follows, or vice versa. It's simple: you can first export the public followed users, then go to the private follows page and perform batch following, so these users will be re-added as private follows. Of course, you can do the opposite as well.
 
-**Tip:** How to view another user's public following list
+**Tip:**
+
+You can access another user's public following list page and use the downloader to crawl and export the users they follow.
 
 You can first open a user's homepage, URL for example:
 
