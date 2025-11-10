@@ -494,6 +494,16 @@ The CSV file contains the following data for each user:
 - User description
 - User avatar image URL
 
+**Note:** The number of users exported by the downloader may be less than the number displayed on the webpage. This is not a bug, but because some users have already deactivated their accounts, so the downloader cannot retrieve their data.
+
+For example, my following page shows 4,743 users:
+
+![](./images/20251111_004046.png)
+
+Some users have already deactivated, but Pixiv does not subtract them from the total count, which can be somewhat misleading. However, you might notice clues: usually, 24 users are displayed per page, but some pages may have only 23 or fewer users, which is because some users no longer exist.
+
+The downloader is more likely to observe this situation when crawling data: the downloader requests 100 users' data each time, but Pixiv often returns more than 90 users. After crawling is complete, the downloader only obtained data for 4,668 users, which is 75 less than the number displayed by Pixiv. As for the deactivated users, I cannot retrieve their data.
+
 ### Export followed users list (JSON)
 
 <button type="button" id="exportFollowingListJSON" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Export Followed Users List">Export followed users list (JSON)</span><span class="ripple"></span></button>
@@ -512,6 +522,8 @@ The JSON file contains only a list of user IDs, e.g.:
   "9013106"
 ]
 ```
+
+**Note:** The number of users exported by the downloader may be less than the number displayed on the webpage. The reason has already been explained in the previous entry.
 
 ### Follow users in batches (JSON)
 
