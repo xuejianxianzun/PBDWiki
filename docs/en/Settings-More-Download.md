@@ -60,7 +60,7 @@ Whenever the downloader **starts** downloading a file, it sets a timer, and the 
 - If set to `0`, the downloader will not add delay time, and this setting will not take effect.
 - If set to `1` second, a maximum of 3600 files can be downloaded from Pixiv per hour.
 
-If you only download a few hundred files per day, the default interval time is usually safe. If you frequently download more files, you can increase the interval time, for example `2`, `3`, etc.
+If you only download a few hundred files per day, the default interval time is usually safe. If you frequently download more files, you can increase the interval time, for example `2`, `3`, etc. Setting it to `4` is almost absolutely safe, but usually no need to use such a large interval time.
 
 ----------
 

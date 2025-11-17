@@ -55,7 +55,7 @@ If the number of works to crawl is less than this number, the downloader will cr
 
 After one request is completed, how long to wait before sending the next request. Unit is milliseconds, default value is `1600`.
 
-If you only crawl a few hundred works per day, the default interval time is usually safe. If you frequently trigger 429 errors, or often crawl more works, you can increase the interval time, for example `2000`, `3000`, `4000`, etc.
+If you only crawl a few hundred works per day, the default interval time is usually safe. If you frequently trigger 429 errors, or often crawl more works, you can increase the interval time, for example `2000`, `3000`. `4000` ms is almost absolutely safe, even for crawling more than ten thousand works, no problem, but usually no need to use such a large interval time.
 
 ------------
 
