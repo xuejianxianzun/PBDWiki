@@ -45,7 +45,7 @@ You can set how many seconds to wait before allowing the downloader to start a d
 
 ?> You can modify this setting during the download (e.g., change the interval time, enable or disable the restriction), and the changes will take effect immediately.
 
-### Enabled when the number of works exceeds the specified number
+### Enable when the number of files exceeds the specified number
 
 This setting will only be enabled if the number of works in the **crawling results** exceeds the set value. The default is `150`.
 
@@ -59,6 +59,10 @@ Whenever the downloader **starts** downloading a file, it sets a timer, and the 
 
 - If set to `0`, the downloader will not add delay time, and this setting will not take effect.
 - If set to `1` second, a maximum of 3600 files can be downloaded from Pixiv per hour.
+
+If you only download a few hundred files per day, the default interval time is usually safe. If you frequently download more files, you can increase the interval time, for example `2`, `3`, etc.
+
+----------
 
 The interval time is not affected by the time required for downloads:
 

@@ -27,29 +27,58 @@ Click the button to open the settings panel and start crawling and downloading.
 
 You need to log in to your pixiv.net account, as many pages and works are not accessible without logging in, preventing the downloader from functioning.
 
-## Handling Large-Scale Downloads
+## Large Downloads May Lead to Your Account Being Banned
 
-The downloader typically crawls work data first, then downloads files. Both steps involve requesting data from Pixiv's servers. Too many requests or overly frequent requests may trigger a warning.
+The downloader usually first crawls work data, then downloads files; both steps request data from Pixiv's servers. If the number of requests is too many, or the frequency is too dense, it may cause Pixiv to issue a warning to your account. If your account is warned multiple times, it may be banned.
 
-### Pixiv's approach
+?> Based on current experience, downloading a few hundred works per day usually won't trigger a warning.
 
-If you frequently download large numbers of files, such as thousands or tens of thousands of works daily, you may receive a warning from Pixiv. The first time you trigger a warning, you will receive an in-site message, which may look like this:
+### Pixiv's Handling Method
+
+If you frequently download large amounts of files, such as thousands or tens of thousands of works per day, you may be warned by Pixiv. When the first warning is triggered, you will receive an in-site message, which may look like this:
 
 ![Pixiv warning in-site message](images/20250909_183204.webp)
 
-The downloader checks every 100 files downloaded to see if you have received such a message. If detected, it will pause downloading to prevent the situation from worsening.
+Now, the downloader checks every 100 files downloaded whether you have received such an in-site message. If detected, it will pause the download to avoid making the situation worse.
 
-?> If you receive such an in-site message, you can send me a screenshot and its content. This helps improve the downloader's ability to detect such messages accurately. Refer to the [Contact Me](/en/Contact-Me) page to send me a message via Discord or GitHub.
+If your account receives a second warning, there may be different situations:
+1. If the first warning was several years ago, the second warning may just be a reminder with no actual effect. For example, if you were warned once in 2022 and warned a second time in 2025, the account functions may not be restricted at all. But if the time between the two warnings is relatively short (I don't know the specific threshold), your account may face the following two situations:
+2. Milder disposition: Your account is frozen, you cannot follow users or bookmark works, but other functions are normal (you can browse, crawl, and download normally). If you encounter this, you can try emailing customer service to request unban, and it may be restored.
+3. Severe disposition: Your account will be deleted, you cannot log in, and cannot request unban. Since your account no longer exists, other users also cannot view your profile, bookmarks, etc.
 
-If you trigger a warning a second time, your account may be banned. Your Pixiv account will be deleted, preventing login, and other users will be unable to view your profile, bookmarks, or other data.
+In the past few years, it was often the milder disposition, but recently accounts are often deleted, indicating that Pixiv has strengthened its handling of violations. This will lead to account ban.
 
-?> Based on current experience, downloading a few hundred works daily typically does not trigger a warning.
+!> If your account is banned, I am not responsible for it. However, the downloader also has some settings to slow down the crawling and download speed, which can reduce the possibility of being banned.
 
-!> I am not responsible if your account is banned.
+### How to Reduce Risk
 
-### Best Practices
+Many people often ask me: How many works can I download per day without getting a warning? In fact, there is no fixed value, because the conditions for triggering a warning depend not only on the number of works, but also on an important factor: the request frequency.
 
-Specific instructions: [Best Practices](/en/Using-Secondary-Account-for-Downloading?id=best-practices).
+If the request frequency is very high, downloading a few hundred works may trigger a warning. Conversely, if the request frequency is lowered, downloading a few thousand works may not trigger a warning.
+
+When you need to crawl and download more than a few thousand works, there are some methods to reduce risk:
+
+**Slow Down:**
+
+The downloader has settings to reduce the likelihood of warnings:
+- By default, the downloader [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl). When crawling many works, it sends requests at intervals. This feature is enabled by default.
+- When downloading many files, you can set the [Download interval](/en/Settings-More-Download?id=download-interval) to reduce download frequency.
+
+The above two settings both allow custom interval times. If you only crawl and download a few hundred works per day, the default interval time is usually safe.
+
+The more files you need to crawl and download, the larger the interval time you should set. In extreme cases, you can consider setting an interval of about 4 seconds (of course, this will increase the time to complete the task).
+
+**Batch Downloading:**
+
+If you want to download all your bookmarks, which may span hundreds of pages or more, you can split the task into multiple sessions, crawling 50 or 100 pages at a time.
+
+See details: [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+
+**Using a Secondary Account:**
+
+If you frequently download large amounts of files, the above settings cannot completely guarantee safety. You can use an alt account to download. The main account is only used for downloading small amounts of files during daily browsing, while the alt account is specifically used for large downloads, and needs to be used in conjunction with the methods above.
+
+Detailed instructions: [Using Secondary Account for Downloading](/en/Using-Secondary-Account-for-Downloading).
 
 ## Issues with Abnormal File Names After Download
 
@@ -57,7 +86,9 @@ This extension allows custom file naming for downloaded files, but some extensio
 
 Many such extensions exist (even if they don't run on Pixiv or Fanbox, they may still cause issues). Recent feedback indicates that extensions like Patreon Downloader and IDM Integration Module often cause this problem.
 
-If the downloaded file names are random strings of letters and numbers or do not follow the naming rules set in the downloader, this issue has occurred.
+If the downloaded filename is a string of random letters and numbers, or does not use the naming rule set in the downloader, it indicates that this issue has occurred. For example:
+
+![](images/20251117_171653.png)
 
 ### Solutions
 

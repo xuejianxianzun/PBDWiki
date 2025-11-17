@@ -518,6 +518,12 @@ When the downloader encounters a 429 error, it pauses crawling and retries after
 
 Additionally, the downloader now enables the [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
+--------
+
+429 error usually only occurs during crawling, not during downloading.
+
+Frequently triggering 429 errors may lead to your account being warned by Pixiv. But this is not the only factor, as large downloads may also lead to you being warned.
+
 ## Will Downloading Too Much Get My Account Banned?
 
 *Will I get banned for downloading too much?/Will my account be banned?*
@@ -526,7 +532,7 @@ Yes.
 
 If you frequently crawl and download large amounts of files, Pixiv may issue a warning. A second warning may result in Pixiv deleting your account.
 
-See detailed instructions: [Handling Large-Scale Downloads](/en/AfterInstallation?id=handling-large-scale-downloads).
+See detailed instructions: [Large Downloads May Lead to Your Account Being Banned](/en/AfterInstallation?id=large-downloads-may-lead-to-your-account-being-banned).
 
 ## Cannot Open EPUB Files
 

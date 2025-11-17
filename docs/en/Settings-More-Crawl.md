@@ -43,17 +43,28 @@ If this setting is enabled, the downloader will limit concurrent requests to 1 d
 
 ?> This setting only takes effect during the crawling phase and does not affect the downloading phase.
 
-**Sub-options:**
+This setting has 2 sub-options:
 
-- `Enabled when the number of works exceeds the specified number`: When the number of works to be crawled exceeds this number (default is `100`), the downloader will use the slow crawling mode. If the number of works to be crawled is small, the downloader will still complete the crawling quickly.
-- `Interval time`: You can set how long to wait after completing one request before sending the next one. The unit is milliseconds, with a default value of `1600`. If you frequently encounter 429 errors, you can increase this value, e.g., to `2000`.
+### Enabled when the number of works exceeds the specified number
+
+When the number of works to crawl exceeds this number (default is `100`), the downloader will use slow crawl mode.
+
+If the number of works to crawl is less than this number, the downloader will crawl quickly (no interval time).
+
+### Interval time
+
+After one request is completed, how long to wait before sending the next request. Unit is milliseconds, default value is `1600`.
+
+If you only crawl a few hundred works per day, the default interval time is usually safe. If you frequently trigger 429 errors, or often crawl more works, you can increase the interval time, for example `2000`, `3000`, `4000`, etc.
+
+------------
 
 **Note:**
 
-This option does not completely prevent 429 errors. Reasons include:
+This setting cannot completely avoid 429 errors. Reasons:
 
-1. It assumes the user is crawling from only one page, which should not trigger a 429 error. However, if the user is crawling from 2 or 3 pages simultaneously, frequent requests may still trigger a 429 error.
-2. Some normal user operations also consume quotas, such as opening work pages, previewing works, or bookmarking works. When the quota is exhausted, a 429 error may be triggered. Therefore, during crawling, if the user performs many such operations, it may also lead to a 429 error.
+1. It assumes the user is only crawling on one page, which should not trigger 429 errors. But if the user is crawling on 2 or 3 pages simultaneously, because requests are sent frequently, it may still trigger 429 errors.
+2. Some normal user operations also consume quota, such as opening work pages, previewing works, bookmarking works, etc. When the quota is exhausted, it will trigger 429 errors. So during crawling, if the user performs many such operations, it may also lead to triggering 429 errors.
 
 ## Do not crawl the last image of multi-image works
 

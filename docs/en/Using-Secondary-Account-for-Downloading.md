@@ -1,6 +1,10 @@
 # Using Secondary Account for Downloading
 
-If you frequently crawl and download a large number of works (e.g., thousands per day on average), your Pixiv account may risk being banned. If you have such needs, it's recommended to use a secondary account for crawling.
+If you frequently crawl and download a large number of works (e.g., thousands per day on average), your Pixiv account may risk being banned. 
+
+Related instructions: [Large Downloads May Lead to Your Account Being Banned](/en/AfterInstallation?id=large-downloads-may-lead-to-your-account-being-banned)
+
+This article explains in detail how to use alt accounts for crawling.
 
 ?> A secondary account can also crawl your primary account's public bookmarks and followed users by accessing the corresponding URLs. Thus, you can use your primary account for following users and bookmarking works as usual, and use the secondary account for downloading when needed.
 
@@ -19,26 +23,6 @@ Click the profile icon in the top-right corner of the browser to create a new pr
 ![](images/20250910_010241.png)
 
 When using the newly added browser profile, Chrome opens a separate browser window where you can log in to the secondary account and install this extension for use.
-
-## Best Practices
-
-When you need to crawl and download thousands of works, here are some helpful tips:
-
-**Slow Down:**
-
-The downloader has settings to reduce the likelihood of warnings:
-- By default, the downloader [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl). When crawling many works, it sends requests at intervals. This feature is enabled by default.
-- When downloading many files, you can set the [Download interval](/en/Settings-More-Download?id=download-interval) to reduce download frequency.
-
-**Batch Downloading:**
-
-If you want to download all your bookmarks, which may span hundreds of pages or more, you can split the task into multiple sessions, crawling 50 or 100 pages at a time.
-
-See details: [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
-
-**Using a Secondary Account:**
-
-If you frequently download large numbers of files, the above settings may not fully ensure safety. Use a secondary account for large-scale downloads, keeping the primary account for casual browsing and minimal downloads, while combining the above methods with the secondary account.
 
 ## How to Download Primary Account Data
 

@@ -24,7 +24,7 @@ If you don't want automatic downloading to start, you can disable this switch:
 
 ?> The downloader supports resuming interrupted downloads. If the page crashes or you accidentally close it during downloading, you can reopen the page, and the downloader will restore the download progress, allowing you to continue. For more details, refer to [Does It Support Resumable Downloads?](/en/FAQ?id=does-it-support-resumable-downloads).
 
-?> If you frequently download large numbers of files, refer to [Handling Large-Scale Downloads](/en/AfterInstallation?id=handling-large-scale-downloads).
+?> If you frequently download large amounts of files, please check the instructions in [Large Downloads May Lead to Your Account Being Banned](/en/AfterInstallation?id=large-downloads-may-lead-to-your-account-being-banned).
 
 During your first batch download, the browser may ask: "Allow this site to download multiple files?" Select "Allow."
 
