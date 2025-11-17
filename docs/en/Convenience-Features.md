@@ -18,23 +18,33 @@ The downloader adds a star-shaped bookmark button below the work:
 
 ![](images/20250910_013424.png)
 
-Its shortcut key is `Alt` + `B`.
+?>Its shortcut key is `Alt` + `B`.
 
-It differs from Pixiv's heart-shaped bookmark button in two ways:
+It has some differences from Pixiv's heart-shaped bookmark button:
 
-1. Quick bookmark automatically likes the work.
+**Auto Like:**
+
+Quick bookmark will automatically like this work.
 
 ![](images/20250910_013429.png)
 
-2. Quick bookmark adds the work's tag list by default.
+**Default Add Tags:**
 
-Tags refer to those displayed below the work:
+Tags refer to these tags below the work:
 
 ![](images/20250910_013536.png)
 
-When using Pixiv's heart-shaped button to add a bookmark, it does not include the work's tags. However, the quick bookmark button adds all tags by default.
+When you use Pixiv's heart-shaped button to add a bookmark, it does not add the work's tags. However, the quick bookmark button adds all tags by default.
 
-You can use tags to filter works on the bookmark page, making this feature very useful.
+You can use tags to filter works in the bookmark page, so this feature is very useful.
+
+**Can Unbookmark:**
+
+If this work is already bookmarked, clicking this button will unbookmark it.
+
+In other words, this button has both add bookmark and unbookmark functions, switching based on the actual situation.
+
+------------
 
 You can modify this button's behavior in the [Downloader' bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩) settings: whether to add tags and whether the bookmark is public.
 
