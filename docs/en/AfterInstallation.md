@@ -39,7 +39,7 @@ If you frequently download large amounts of files, such as thousands or tens of 
 
 ![Pixiv warning in-site message](images/20250909_183204.webp)
 
-Now, the downloader checks every 100 files downloaded whether you have received such an in-site message. If detected, it will pause the download to avoid making the situation worse.
+During large downloads, the downloader checks every 100 files saved whether you have received such an in-site message. If you have received such an in-site message within the last 1 hour, the downloader will pause the download to avoid making the situation worse.
 
 If your account receives a second warning, there may be different situations:
 1. If the first warning was several years ago, the second warning may just be a reminder with no actual effect. For example, if you were warned once in 2022 and warned a second time in 2025, the account functions may not be restricted at all. But if the time between the two warnings is relatively short (I don't know the specific threshold), your account may face the following two situations:
