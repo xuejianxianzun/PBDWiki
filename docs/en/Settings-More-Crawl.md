@@ -41,8 +41,6 @@ Slowing down the crawling speed can prevent the downloader from being temporaril
 
 If this setting is enabled, the downloader will limit concurrent requests to 1 during crawling. After each request is completed, it will wait for a certain period (depending on the interval time value) before sending the next request, reducing the crawling frequency to avoid triggering the 429 restriction.
 
-?> This setting only takes effect during the crawling phase and does not affect the downloading phase.
-
 This setting has 2 sub-options:
 
 ### Enabled when the number of works exceeds the specified number
@@ -56,6 +54,8 @@ If the number of works to crawl is less than this number, the downloader will cr
 After one request is completed, how long to wait before sending the next request. Unit is milliseconds, default value is `1600`.
 
 If you only crawl a few hundred works per day, the default interval time is usually safe. If you frequently trigger 429 errors, or often crawl more works, you can increase the interval time, for example `2000`, `3000`. `4000` ms is almost absolutely safe, even for crawling more than ten thousand works, no problem, but usually no need to use such a large interval time.
+
+?> The interval time not only takes effect during the crawling stage, but also in some scenarios that require sending a large number of requests. For example: batch adding bookmarks, retrieving the list of followed users.
 
 ------------
 

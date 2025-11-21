@@ -378,6 +378,6 @@ After downloading, if the bookmark progress shows matching numbers, e.g., `Bookm
 
 1. If a work is skipped due to the "Don't download duplicate files" setting, it is still considered successfully downloaded and will be bookmarked.
 2. A work may have multiple files but is bookmarked only once. If the bookmark count is less than the file count, this is normal, as the bookmark count reflects the number of works, not files.
-3. When downloading many files, bookmark progress may increase slowly. This is because the downloader bookmarks works at intervals of a few seconds rather than rapidly and continuously. Without intervals, you risk triggering a 429 restriction (Pixiv may temporarily block services, affecting browsing, crawling, or bookmarking).
+3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
 
 If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader' bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩).
