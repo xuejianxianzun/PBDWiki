@@ -72,37 +72,6 @@ Example effect:
 
 ?> The `/` is not mandatory. If you don't want to create folders, you can omit the `/`. For example, setting the naming rule to `{id}` saves files directly to the browser's download directory without creating subfolders.
 
-### Tag List
-
-?>* Some tags are not always available and may output nothing in certain cases.
-
-- `{id}` File ID, the default filename, including a suffix, e.g., `44920385_p0`.
-- `{user}` User (artist) name.
-- `{user_id}` User (artist) ID, a pure number.
-- `{title}` Work title.
-- `{tags}` List of work tags.
-- `{tags_translate}` List of work tags with translated tags (if available).
-- `{tags_transl_only}` List of translated tags only.
-- `{page_title}` Page title when crawling starts.
-- *`{page_tag}` Outputs the tag if all works on the page share the same tag; otherwise, outputs nothing.
-- `{type}` Work type, including `Illustration`, `Manga`, `Ugoira`, `Novel`.
-- *`{AI}` Outputs `AI` if the work is AI-generated; otherwise, outputs nothing.
-- `{like}` Like count, the number of likes for the work.
-- `{bmk}` Bookmark count, the number of bookmarks for the work. Placing it at the start allows sorting files by bookmark count.
-- `{bmk_1000}` Simplified display of bookmark count, e.g., `0+`, `1000+`, `2000+`, `3000+`, etc.
-- `{bmk_id}` Bookmark ID. Each bookmarked work has a unique Bookmark ID. Later bookmarks have larger IDs. When downloading bookmarks, you can use `{bmk_id}` for sorting.
-- `{view}` View count, the number of views for the work.
-- *`{rank}` Work's ranking on the leaderboard, e.g., `#1`, `#2`, etc. Only usable on leaderboard pages.
-- `{date}` Work creation date, e.g., `2019-08-29`.
-- `{upload_date}` Date the work's content was last modified, e.g., `2019-08-30`.
-- `{task_date}` Date the crawling task was completed, e.g., `2020-10-21`.
-- `{px}` Width and height, e.g., `600x900`.
-- *`{series_title}` Series title, available when the work belongs to a series.
-- *`{series_order}` Work's order in the series, e.g., `#1`, `#2`. Available when the work belongs to a series.
-- *`{series_id}` Series ID, available when the work belongs to a series.
-- `{id_num}` Numeric ID, e.g., `44920385`.
-- `{p_num}` Image sequence number within the work, e.g., `0`, `1`, `2`, etc. Each work resets the count.
-
 ### Additional Notes
 
 - You can use multiple tags; it's recommended to add separators between tags, such as `{id}-{tags}-{user}`, to avoid tag content blending together. There's no fixed requirement for separators; use what you prefer.

@@ -432,6 +432,9 @@ p.result .color000 {
 .option .radio:checked + .beautify_radio::after {
   transform: translate(-50%, -50%) scale(1);
 }
+.option .rowWrap {
+  display: inline-flex;
+}
 .option .textButton {
   cursor: pointer;
   border-width: initial;
@@ -440,6 +443,7 @@ p.result .color000 {
   border-image: initial;
   background: none;
   padding: 1px 6px;
+  flex-shrink: 0;
 }
 .option .textButton:hover {
   color: #0ea8ef !important;

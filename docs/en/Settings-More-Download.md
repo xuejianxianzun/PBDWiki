@@ -198,15 +198,145 @@ The default value is 1.
     <label for="novelSaveAs2"> EPUB </label>
     </p>
 
-You can choose to save novels in TXT or EPUB format. The default is TXT.
+You can choose to save the novel as TXT or EPUB format.
 
-TXT format is plain text with good universality but cannot display rich text styles (e.g., text styles, hyperlinks). Additionally, it cannot embed images, so the downloader will save the novel's cover image and illustrations separately.
+The downloader's default save format is TXT because it is more universal, while EPUB requires a novel reader to open, which is a bit more troublesome than TXT. Some users don't even know what an EPUB file is. But I recommend choosing the EPUB format.
 
-EPUB is an e-book format that can display rich text styles, support chapter directories, and save cover images and illustrations internally.
+**Recommend Using EPUB Format:**
 
-While EPUB provides a better reading experience, it requires a novel reader to view, so the downloader's default is TXT format.
+The downloader can save novels as TXT or EPUB format. TXT format has some disadvantages:
+- The content of TXT files is plain text and cannot display rich text styles (such as text styles, hyperlinks, etc.).
+- The content of TXT files is plain text; when containing multiple novels (multiple chapters), many readers cannot correctly recognize the chapter format.
+- TXT files cannot save illustrations in the novel, so images can only be saved as separate files. Sometimes one TXT file may have more than a dozen related images, which is very messy.
+
+EPUB is an e-book format that can display rich text styles, supports chapter directories, and can save cover images and illustrations internally.
 
 ?> Please use a novel reader to view EPUB novels. Some software can open EPUB files but may have compatibility issues, such as WPS.
+
+## Automatically merge novel series
+
+<p class="option new" data-no="73" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/" target="_blank" class="has_tip settingNameStyle" data-xztip="_自动合并系列小说的说明" data-tip="When crawling works, if a novel belongs to a series, automatically crawl all novels in that series and merge them.">
+        <span data-xztext="_自动合并系列小说">Automatically <span class="key">merge</span> novel series</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="autoMergeNovel" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="autoMergeNovel" style="display: none;">
+        <label for="skipNovelsInSeriesWhenAutoMerge" data-xztext="_不再单独下载系列里的小说" class="has_tip active" data-xztip="_不再单独下载系列里的小说的说明" data-tip="When you enable &quot;Automatically merge series novels&quot;, there is usually no need to download novels in the series individually, as they are already included in the merged novel file.&lt;br&gt;If you still want to download them, you can uncheck this sub-setting.">No longer download novels in the series individually</label>
+        <span class="gray1"> ? &nbsp;</span>
+        <input type="checkbox" name="skipNovelsInSeriesWhenAutoMerge" id="skipNovelsInSeriesWhenAutoMerge" class="need_beautify checkbox_switch" checked="">
+        <span class="beautify_switch" tabindex="0"></span>
+      </span>
+    </p>
+
+When crawling works, if a novel belongs to a certain series, the downloader can automatically crawl all novels in this series and merge them.
+
+This feature is disabled by default, and you can enable it yourself when needed.
+
+-----------
+
+Sub-options:
+
+### No Longer Download Novels in the Series Individually
+
+This option is enabled by default.
+
+The premise for this option to take effect is that you have enabled the "Automatically Merge Series Novels" feature.
+
+During one crawl, if a novel belongs to a series, the downloader will merge the series it belongs to and no longer download this novel individually, because they are already included in the merged novel file.
+
+This feature may lead to fewer crawl results. For example: In 30 novels, 20 novels belong to series, and the remaining 10 novels are standalone, then there will only be 10 crawl results in the end.
+
+If you still want to download these novels individually, you can disable this sub-option.
+
+-----------
+
+Below are some detailed explanations of the "Automatically Merge Series Novels" feature, assuming you have enabled it.
+
+### Detailed Instructions
+
+**Recommend Using EPUB Format:**
+
+When merging series novels, one file will contain multiple novels (multiple chapters), but many readers cannot recognize chapter markers in TXT, so I strongly recommend using the EPUB format.
+
+**Timing of Operation:**
+
+Although this setting belongs to the "Download" category, it actually works during the crawl stage.
+
+When crawling works, if a novel belongs to a series, the downloader will automatically start merging this series of novels. The original crawl progress will pause until this series of novels is merged. In other words, crawling works and merging novels will alternate, rather than happening simultaneously. This is to avoid sending too many requests at the same time.
+
+**Increased Number of Requests:**
+
+When using this feature, the downloader may crawl additional novels, leading to an increase in the number of requests.
+
+For example: Initially there are 30 novels, which belong to 10 series, and these 10 series contain a total of 100 novels, then the downloader needs to crawl the 100 novels in the series.
+
+**Relevance:**
+
+When you search for a certain tag and merge series novels, one thing to know is that some novels in the series may not belong to the current tag, meaning the relevance is not strong.
+
+For example: When I search for "ブルーアーカイブ", there is a series containing 411 novels, but only 89 of them contain "ブルーアーカイブ":
+https://www.pixiv.net/novel/series/1368392
+
+**May Download Duplicates:**
+
+When merging series novels, the downloader does not check if it has been downloaded before. That is, it is not affected by the "Do not download duplicate files" function. In two crawls, if they contain the same series novel, it will be merged and downloaded twice.
+
+**No Duplicate Merging in a Single Crawl:**
+
+In the same crawl task, each series will only be merged once. For example: If 10 novels belong to the same series, the downloader will only merge once, not 10 times.
+
+**Split Large Files:**
+
+Some series novels may contain a large number of illustrations, leading to a very large size. When the novel's save format is EPUB, the downloader will split the very large novel into multiple parts, generating multiple EPUB files, with each file's size usually a bit larger than 100 MB.
+
+In one test, a series novel had nearly 4 GB of illustrations, and the downloader split it into 28 EPUB files.
+
+### Interval Time
+
+Since each series may contain multiple novels, and each novel has a cover image and/or illustrations, the downloader may send many requests.
+
+To avoid triggering Pixiv's warning, the downloader **always** adds interval time when merging novels to reduce the frequency of sending requests. Even if you have not enabled "Slow Down Crawl Speed" or "Download Interval" settings, the downloader will still add interval time when executing this feature.
+
+**Detailed Instructions:**
+- When crawling novel data, the downloader defaults to using a `2400` ms interval time. This is the minimum value. If the "Interval Time" you set in "Slow Down Crawl Speed" is greater than this value, the downloader will use your set interval time.
+- When downloading novel images, the downloader defaults to using a `2000` ms interval time. This is the minimum value. If the "Interval Time" you set in "Download Interval" is greater than this value, the downloader will use your set interval time.
+
+The current interval times were determined after several large-scale crawl tests. If you don't frequently crawl large numbers of novels, there is usually no need to use larger interval times. If you are concerned about being warned by Pixiv when using this feature, you can increase the interval time in the two settings mentioned above, for example, set to `3000` ms or 3 seconds, and change it back after the task is completed.
+
+### Some Test Data
+
+During the development of this feature, I conducted several large-scale crawl tests, each crawling 900 or more novels (the maximum was 3000). Based on average data, if crawling 1000 novels each time, when the crawl is finished, some data is as follows:
+- 50% - 60% of novels belong to series novels
+- 150 - 200 series novels
+- Approximately 7000 - 10000 requests will be sent. These requests mainly include: retrieving series information, setting information, novel data; downloading novel cover images, downloading illustrations in novels.
+
+The above data volume is relatively small, just for reference, to have a rough idea.
+
+Due to too many requests, I was warned by Pixiv several times, and one account was even banned. So I gradually increased the interval time to reduce the possibility of being warned.
+
+## Naming rule when merging novel series
+
+<p class="option new" data-no="91" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=91" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则"><span class="key">Naming</span> rule when merging novel series</a>
+      <span class="rowWrap">
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1"></textarea>
+        <button class="showFileNameTip textButton" id="showSeriesNovelNameTip" type="button" data-xztext="_提示">Tip</button>
+      </span>
+    </p>
+
+You can set the name of the merged file generated when the downloader merges series novels.
+
+You can click the "Tip" button in the downloader's settings to view detailed instructions; they will not be repeated here.
+
+The default rule is `novel series/{page_tag}/{series_title}-{series_id}-{user}-{part}-{tags}.{ext}`.
+
+**Note:**
+- This setting only affects the name of the merged file and does not affect the filenames of individual novels.
+- If this merged file has images, the image names will also use this setting to keep the image names consistent with the merged file's name.
+
+For example: If the merged file's name is `abcd.epub`, and the cover image is saved separately, the image's name might be `abcd.png`.
 
 ## Save metadata in the novel
 
