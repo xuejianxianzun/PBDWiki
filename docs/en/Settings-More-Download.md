@@ -450,10 +450,10 @@ When saving novels as EPUB, images are not saved separately but stored inside th
   <label for="setSaveMetaType3" data-xztext="_小说" class="active">Novels</label>
   <span class="verticalSplit"></span>
   <span class="settingNameStyle" data-xztext="_文件格式">File format</span>
-  <input type="checkbox" name="saveMetaFormatTXT" id="saveMetaFormatTXT" class="need_beautify checkbox_common" checked="">
+  <input type="checkbox" name="saveMetaFormatTXT" id="saveMetaFormatTXT" class="need_beautify checkbox_common">
   <span class="beautify_checkbox" tabindex="0"></span>
   <label for="saveMetaFormatTXT"> TXT </label>
-  <input type="checkbox" name="saveMetaFormatJSON" id="saveMetaFormatJSON" class="need_beautify checkbox_common" checked="">
+  <input type="checkbox" name="saveMetaFormatJSON" id="saveMetaFormatJSON" class="need_beautify checkbox_common">
   <span class="beautify_checkbox" tabindex="0"></span>
   <label for="saveMetaFormatJSON"> JSON </label>
 </p>

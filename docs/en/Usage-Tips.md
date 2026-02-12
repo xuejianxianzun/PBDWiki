@@ -111,7 +111,7 @@ When importing crawl results, the downloader applies filter conditions, removing
 
 See detailed explanation: [Import results](/en/Buttons-Download?id=import-results).
 
-### What to Do If Tag Search Can Only Crawl 1000 Pages?
+## What to Do If Tag Search Can Only Crawl 1000 Pages?
 
 When crawling on a search page, you may not be able to crawl all works because the downloader can only crawl 1000 pages or 5000 pages.
 

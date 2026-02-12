@@ -358,7 +358,7 @@ Starting from version 18.3.0, a download button will also appear in the upper ri
 
 ![](images/20260213_010841.png)
 
-Clicking it will download this novel. In addition, if this area only contains a link to a novel series (without links to individual novels), the downloader will download the entire series.
+Clicking it will download this novel. In addition, if this area only contains a link to a novel series (without links to individual novels), the downloader will download the series novel.
 
 ---------
 
