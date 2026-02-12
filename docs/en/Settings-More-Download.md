@@ -432,33 +432,57 @@ When saving novels as EPUB, images are not saved separately but stored inside th
 ## Save the metadata of the work
 
 <p class="option" data-no="49" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of saving work metadata" data-tip="Generate a TXT file for each work to save its metadata.">
+  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=49" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品的元数据说明"">
     <span data-xztext="_保存作品的元数据">Save the <span class="key">metadata</span> of the work</span>
     <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="saveMetaType0" id="setSaveMetaType0" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="setSaveMetaType0" data-xztext="_Illustration">Illustration</label>
-    <input type="checkbox" name="saveMetaType1" id="setSaveMetaType1" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="setSaveMetaType1" data-xztext="_Manga">Manga</label>
-    <input type="checkbox" name="saveMetaType2" id="setSaveMetaType2" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="setSaveMetaType2" data-xztext="_Ugoira">Ugoira</label>
-    <input type="checkbox" name="saveMetaType3" id="setSaveMetaType3" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="setSaveMetaType3" data-xztext="_Novel">Novel</label>
-    </p>
+  </a>
+  <input type="checkbox" name="saveMetaType0" id="setSaveMetaType0" class="need_beautify checkbox_common">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setSaveMetaType0" data-xztext="_插画" class="active">Illustrations</label>
+  <input type="checkbox" name="saveMetaType1" id="setSaveMetaType1" class="need_beautify checkbox_common">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setSaveMetaType1" data-xztext="_漫画" class="active">Manga</label>
+  <input type="checkbox" name="saveMetaType2" id="setSaveMetaType2" class="need_beautify checkbox_common">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setSaveMetaType2" data-xztext="_动图" class="active">Ugoira</label>
+  <input type="checkbox" name="saveMetaType3" id="setSaveMetaType3" class="need_beautify checkbox_common">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setSaveMetaType3" data-xztext="_小说" class="active">Novels</label>
+  <span class="verticalSplit"></span>
+  <span class="settingNameStyle" data-xztext="_文件格式">File format</span>
+  <input type="checkbox" name="saveMetaFormatTXT" id="saveMetaFormatTXT" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="saveMetaFormatTXT"> TXT </label>
+  <input type="checkbox" name="saveMetaFormatJSON" id="saveMetaFormatJSON" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="saveMetaFormatJSON"> JSON </label>
+</p>
 
-If you select certain work types, the downloader will create a TXT file during downloading to save some metadata for these works.
+The downloader can generate a file for each work during download to save some of its data.
 
-Example
+Example:
 
 ![](images/20250902_204653.png)
 
 ?> The filename of the metadata includes a `meta` marker at the end.
 
-For image works (illustrations, manga, Ugoira), an example of the metadata saved by the downloader is as follows:
+### Work Type
+
+Divided into `illustration`, `manga`, `Ugoira`, `novel`.
+
+The downloader will create a metadata file for the work only if the downloaded file type matches the types you have checked.
+
+?> Novels have a separate setting for saving metadata: [Save metadata in the novel](/en/Settings-More-Download?id=save-metadata-in-the-novel), which saves some metadata at the beginning of the novel without creating a separate TXT file, making it more convenient. However, it saves less metadata. If you have enabled "Save metadata in the novel," you usually do not need to select the "Novel" type in this option.
+
+### File Format
+
+There are two formats to choose from, and you can select both:
+- `TXT` format is easy to read but only contains relatively commonly used data.
+- `JSON` format is the downloader's internal data, retaining more information.
+
+#### TXT Format
+
+For image works (illustration, manga, Ugoira), an example of the metadata saved by the downloader is as follows:
 
 ```
 ID
@@ -512,7 +536,76 @@ Date
 
 The metadata for novels is roughly the same but does not include `Original` or `Size`. Additionally, the `Thumbnail` for novels is the URL of its cover image.
 
-?> Novels have a separate setting for saving metadata: [Save metadata in the novel](/en/Settings-More-Download?id=save-metadata-in-the-novel), which saves some metadata at the beginning of the novel without creating a separate TXT file, making it more convenient. However, it saves less metadata. If you have enabled "Save metadata in the novel," you usually do not need to select the "Novel" type in this option.
+#### JSON Format
+
+The content of the JSON file is the downloader's internal data (i.e., the crawl result of the work). If you want to know the meaning of each property, you can check the comments in the source code (only in Chinese): [StoreType.d.ts](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/src/ts/store/StoreType.d.ts).
+
+An example of the metadata content saved in the JSON file is as follows:
+
+```json
+{
+  "aiType": 1,
+  "idNum": 120589699,
+  "id": "120589699_p0",
+  "original": "https://i.pximg.net/img-original/img/2024/07/16/19/51/00/120589699_p0.jpg",
+  "thumb": "https://i.pximg.net/c/250x250_80_a2/custom-thumb/img/2024/07/16/19/51/00/120589699_p0_custom1200.jpg",
+  "regular": "https://i.pximg.net/img-master/img/2024/07/16/19/51/00/120589699_p0_master1200.jpg",
+  "small": "https://i.pximg.net/c/540x540_70/img-master/img/2024/07/16/19/51/00/120589699_p0_master1200.jpg",
+  "title": "マジシャンフリーナ",
+  "description": "(Twitter) <strong><a href=\"https://twitter.com/aida_noa_\" target=\"_blank\">twitter/aida_noa_</a></strong><br />無断転載・使用禁止/All rights reserved.",
+  "pageCount": 1,
+  "index": 0,
+  "tags": [
+    "原神",
+    "GenshinImpact",
+    "フリーナ",
+    "Furina",
+    "女の子",
+    "イラスト"
+  ],
+  "tagsWithTransl": [
+    "原神",
+    "GenshinImpact",
+    "フリーナ",
+    "Furina",
+    "女の子",
+    "イラスト",
+    "芙宁娜",
+    "女孩子",
+    "插画"
+  ],
+  "tagsTranslOnly": [
+    "原神",
+    "GenshinImpact",
+    "芙宁娜",
+    "Furina",
+    "女孩子",
+    "插画"
+  ],
+  "user": "愛田乃彩",
+  "userId": "91879154",
+  "fullWidth": 4096,
+  "fullHeight": 2537,
+  "ext": "jpg",
+  "bmk": 868,
+  "bookmarked": false,
+  "bmkId": "",
+  "date": "2024-07-16T10:51:00+00:00",
+  "uploadDate": "2024-07-16T10:51:00+00:00",
+  "type": 0,
+  "rank": null,
+  "ugoiraInfo": null,
+  "seriesTitle": "",
+  "seriesOrder": null,
+  "seriesId": null,
+  "novelMeta": null,
+  "likeCount": 452,
+  "viewCount": 4703,
+  "commentCount": 3,
+  "xRestrict": 0,
+  "sl": 2
+}
+```
 
 ## Save work description
 

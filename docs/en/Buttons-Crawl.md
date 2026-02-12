@@ -562,6 +562,50 @@ To reduce risk, the downloader adds intervals during batch following and pauses 
 
 For safer importing of many users, split the task into batches, e.g., crawl 20 pages at a time (exporting 480 user IDs). If there are many users, this results in multiple JSON files. Import one file per day.
 
+## Contest Page
+
+Example URL: [https://www.pixiv.net/contest/gf2](https://www.pixiv.net/contest/gf2)
+
+The contest page is separated for illustrations and novels: all works on one page are either all illustrations (and manga) or all novels.
+
+The submitted works in the contest are the entries. Some ended contests also have winning works. The downloader can crawl them separately.
+
+### Crawl application works
+
+<button id="crawlApplicationWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_抓取应募作品">Crawl application works</span><span class="ripple"></span></button>
+
+Click this button to crawl the entry works.
+
+By default, all will be crawled. If you only want to crawl a portion, you can modify the "How many pages to crawl" setting; 1 page contains 50 works.
+
+### Crawl winning works
+
+<button id="crawlWinningWork" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(14, 168, 239);"><span data-xztext="_抓取获奖作品">Crawl winning works</span><span class="ripple"></span></button>
+
+Click this button to crawl the winning works.
+
+**Tip:**
+- The number of winning works is usually small, so the downloader does not impose any range restrictions and will always crawl all of them.
+- Only ended contests have winning works. If you crawl winning works in a contest that has not yet ended, the crawl results will be empty.
+
+## My Works (Dashboard)
+
+Example URL: [https://www.pixiv.net/dashboard/works](https://www.pixiv.net/dashboard/works)
+
+This page displays your posted works and data analytics, for example:
+
+![](./images/20260213_003146.png)
+
+At the top, you can switch between four categories: All, Illustrations, Manga, and Novels.
+
+### Export work data (CSV)
+
+<button id="exportDashboardData" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_导出作品数据CSV">Export work data (CSV)</span><span class="ripple"></span></button>
+
+Click this button, and the downloader will retrieve the analytics data from the current category and export it as a CSV file, saving it to the browser's download directory. An example of the file content is as follows:
+
+![](./images/20260213_003237.png)
+
 ## Post-Bookmark Page
 
 Example URL: [✿❀✿❀](https://www.pixiv.net/bookmark_detail.php?illust_id=63148723)

@@ -6,7 +6,7 @@ Github: [PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
 
 Github: [Pixiv Batch Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader)
 
-Wiki version: 18.2.0
+Wiki version: 18.3.0
 
 ----------
 

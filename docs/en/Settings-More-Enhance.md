@@ -340,15 +340,45 @@ The default is original.
     <span class="beautify_switch" tabindex="0"></span>
     </p>
 
-When the mouse hovers over a work's thumbnail, the downloader displays a download button, as shown below:
+When the mouse hovers over a work thumbnail, the downloader will display a download button on the thumbnail. Clicking the download button allows you to download this work. This feature makes downloading works much more convenient.
+
+### For Artworks
+
+As shown in the image below:
 
 ![](images/20250907_171359.webp)
-
-Clicking the download button downloads the work, making downloading more convenient.
 
 ?> The downloaded image size follows the [Image size](/en/Settings-More-Download?id=image-size) setting in "Settings - More - Download". The default is "Original".
 
 ?> The download button's position aligns with the "Show magnifier button on work thumbnails" feature. Both buttons can be displayed simultaneously.
+
+### For Novel Works
+
+Starting from version 18.3.0, a download button will also appear in the upper right corner of novel works, for example:
+
+![](images/20260213_010841.png)
+
+Clicking it will download this novel. In addition, if this area only contains a link to a novel series (without links to individual novels), the downloader will download the entire series.
+
+---------
+
+Below are screenshot examples of three types of novel thumbnails:
+
+1. Single completed novel:
+
+![](images/20260210_164528.png)
+
+2. Containing both an individual novel and its series:
+
+![](images/20260210_164555.png)
+
+3. Only containing the series link:
+
+![](images/20260210_164609.png)
+
+The downloader prioritizes downloading individual novels, so the first two cases will download the individual novel, and only in the third case will it download the series (at which point the downloader will automatically merge the series novels).
+
+If you want to download the series novel in the second case (when both an individual novel and its series are present), you can enable the [Automatically merge novel series](/en/Settings-More-Download?id=automatically-merge-novel-series) feature in More - Download.
 
 ## Copy button
 

@@ -146,31 +146,35 @@ Below are some known extensions that cause conflicts:
 
 ![](images/2021-11-12_174410.png)
 
-- Video DownloadHelper
+- [Save image as Type](https://chromewebstore.google.com/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd)
+
+![](images/20260213_013548.png)
+
+- [Video DownloadHelper](https://chromewebstore.google.com/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 
 ![](images/20250928_234105.png)
 
-- Image downloader - Imageye
+- [Image downloader - Imageye](https://chromewebstore.google.com/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm)
 
 ![](images/20251025_025601.png)
 
-- BitComet Extension
+- [BitComet Extension](https://chromewebstore.google.com/detail/bitcomet-download-extensi/dhigneefebkcagnpnpbibganpmfgebnk)
 
 ![](images/2021-11-12_174403.png)
 
-- Free Download Manager
+- [Free Download Manager](https://chromewebstore.google.com/detail/free-download-manager/ahmpjcflkgiildlgicmcieglgoilbfdp)
 
 ![](images/2021-11-12_174418.png)
 
-- Media Harvest: Twitter Multimedia Downloader
+- [Media Harvest: Twitter Multimedia Downloader](https://chromewebstore.google.com/detail/media-harvest-x%EF%BC%88twitter%EF%BC%89%E5%A4%9A/hpcgabhdlnapolkkjpejieegfpehfdok)
 
 ![](images/2022-01-06_212820.png)
 
-- Image Downloader
+- [Image Downloader](https://chromewebstore.google.com/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
 
 ![](images/20220310221554.png)
 
-- DownThemAll!
+- [DownThemAll!](https://chromewebstore.google.com/detail/downthemall/nljkibfhlpcnanjgbnlnbjecgicbjkge)
 
 ![](images/20220322084123.png)
 

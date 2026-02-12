@@ -110,3 +110,60 @@ In this case, do the following:
 When importing crawl results, the downloader applies filter conditions, removing results that don't meet the criteria.
 
 See detailed explanation: [Import results](/en/Buttons-Download?id=import-results).
+
+### What to Do If Tag Search Can Only Crawl 1000 Pages?
+
+When crawling on a search page, you may not be able to crawl all works because the downloader can only crawl 1000 pages or 5000 pages.
+
+**Reason for the issue:**
+- On search pages, regular Pixiv users can view up to 1000 pages of works. Premium members can view up to 5000 pages.
+- The downloader can only crawl as many pages as you can view.
+- This is a Pixiv limitation, and the downloader cannot bypass it.
+
+If a tag has 3000 pages of works but you can only view 1000 pages, you will not be able to crawl all of them.
+
+**How to solve this?**
+
+Here are some feasible methods:
+
+**Purchase a Pixiv Premium Membership**
+
+Pixiv Premium members can view 5000 pages, so they are less likely to encounter this issue. Regular users, limited to 1000 pages, are more likely to face this problem.
+
+?> On other pages, Pixiv Premium members also have access to more content. For example, on the [Latest Works from Followed Users](https://www.pixiv.net/bookmark_new_illust.php) page, regular users can view up to 34 pages, but Premium members can view up to 100 pages.
+
+**Change Sorting to Crawl Double the Works**
+
+Search pages have two sorting options:
+
+![](images/20250910_013103.webp)
+
+The default sorting is from newest to oldest. You can crawl and download 1000 or 5000 pages of works, then return to the first page, click "Sort by oldest," and view or download earlier works.
+
+Using this method, you can download up to 2000 or 10000 pages of works. If this still does not cover all works, consider other methods.
+
+**Filter All Works by Posting Date**
+
+On the search page, click "Search conditions" and set the "Posting period." For example, you can view works posted in a specific year:
+
+![](images/20250911_021855.png)
+
+Download the works from that year, then set the posting period to the previous year and download those works.
+
+By repeating this process, you can theoretically crawl all works, but it is quite cumbersome.
+
+**Tip:**
+- The maximum time range here is 1 year. If the works in a year exceed 1000 pages, you can shorten the time range, e.g., to 6 months, to reduce the number of pages.
+- Since Pixiv's built-in date picker is inefficient, you can modify the URL's date to improve efficiency (especially for very old works).
+
+Set a random time range first, and the URL in the address bar will include the date:
+
+![](images/20250908_031731.png)
+
+Modify the date to your desired time range, for example:
+
+![](images/20250908_031753.png)
+
+Then press Enter. Pixiv will display the works from that year.
+
+?> Although you can set a time range longer than 1 year in the URL, it is invalid, and Pixiv will still only show works from within 1 year.
