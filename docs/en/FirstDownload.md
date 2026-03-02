@@ -34,7 +34,7 @@ When the downloader performs tasks, it displays logs at the top of the page, inc
 
 <div class="logContent beautify_scrollbar"><span style="color: rgb(0, 189, 23);">Start crawling<br></span><span style="color: rgb(210, 126, 0);">Exclude work types: manga, Ugoira<br></span><span style="color: rgb(210, 126, 0);">Exclude tag: BL<br></span><span style="color: rgb(210, 126, 0);">Download 1 page starting from this page<br></span><span style="color: inherit;">Crawling, please wait…<br></span><span style="color: inherit;">Currently 48 works<br></span><span style="color: inherit;">Fetching work information<br></span><span style="color: inherit;">Crawled 48 works<br></span><span style="color: inherit;">Crawled 141 files<br></span><span style="color: rgb(0, 189, 23);">Crawling complete!<br><br></span><span style="color: rgb(0, 189, 23);">Downloading in progress<br></span><span style="color: rgb(210, 126, 0);">Saving crawl results<br></span><span style="color: rgb(0, 189, 23);">Crawl results saved<br><br></span><span style="color: inherit;">141 / 141<br><br></span><span style="color: rgb(0, 189, 23);">✓ Download complete<br><br></span></div>
 
-In the current version, logs are hidden by default. You can see a blue button at the top of the page, like this:
+You can see a blue button at the top of the page, like this:
 
 ![](images/20250909_000837.png)
 

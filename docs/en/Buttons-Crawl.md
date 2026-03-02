@@ -562,6 +562,23 @@ To reduce risk, the downloader adds intervals during batch following and pauses 
 
 For safer importing of many users, split the task into batches, e.g., crawl 20 pages at a time (exporting 480 user IDs). If there are many users, this results in multiple JSON files. Import one file per day.
 
+### Find deactivated users
+
+<button id="findDeactivatedUsers" type="button" class="hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_查找已注销的用户">Find deactivated users</span><span class="ripple"></span></button>
+
+You can find deactivated users in your following list.
+
+**How it works:**
+- Since the launch of this feature (March 2026), when you use the downloader, it will retrieve your following list once and save data for all users, including ID, username, and avatar. This data is saved locally and will be automatically cleared by the browser when you uninstall the downloader.
+- Later, when you click this button, the downloader will retrieve your following list again and compare it with the previously saved historical data to find which users are now missing compared to before.
+- The downloader retrieves data for these users one by one and checks if they have been deactivated. The downloader will display progress information in the top log.
+- After the check is complete, it displays the results. If there are deactivated users, the downloader will output their list, which might look like this:
+
+![](./images/20260303_004345.png)
+
+**Note:**
+This feature cannot find users who deactivated before; it can only find users who deactivated after the downloader saved the historical following data.
+
 ## Contest Page
 
 Example URL: [https://www.pixiv.net/contest/gf2](https://www.pixiv.net/contest/gf2)

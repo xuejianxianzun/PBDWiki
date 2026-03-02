@@ -29,6 +29,35 @@ For a time like `2021-04-30T06:40:08`, the available markers and their outputs a
 - `mm` 40
 - `ss` 08
 
+### Default visibility of the log area
+
+<p class="option new" data-no="93" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Other?flag=93" target="_blank" class="has_tip settingNameStyle" data-xztip="_日志区域的默认可见性的说明" data-tip="When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default.">
+        <span data-xztext="_日志区域的默认可见性">Default <span class="key">visibility</span> of the log area</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="radio" name="logVisibleDefault" id="logVisibleDefault1" class="need_beautify radio" value="show" checked="">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="logVisibleDefault1" data-xztext="_显示" class="active">Show</label>
+      <input type="radio" name="logVisibleDefault" id="logVisibleDefault2" class="need_beautify radio" value="hide">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="logVisibleDefault2" data-xztext="_隐藏">Hide</label>
+    </p>
+
+When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default. The default value is `Show`.
+
+What is the difference between the two options?
+
+If you frequently need to view logs, choosing `Show` will be more convenient. However, this option may affect the browsing experience in certain cases: if the page has not been scrolled yet, displaying the log area will cause the page content to move downward. Illustration:
+
+![](./images/20260303_005450.png)
+
+If the page has already been scrolled down some distance, there will be no such effect (the page content will not move downward).
+
+If you do not want the log area to disturb you, you can choose `Hide`, which will not cause the above issue.
+
+PS: No matter which option you choose, when you want to view the logs, you can always press the shortcut key `L` to display the log area.
+
 ## Export Logs
 
 <p class="option" data-no="78" style="display: flex;">
