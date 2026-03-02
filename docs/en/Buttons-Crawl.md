@@ -569,7 +569,7 @@ For safer importing of many users, split the task into batches, e.g., crawl 20 p
 You can find deactivated users in your following list.
 
 **How it works:**
-- Since the launch of this feature (March 2026), when you use the downloader, it will retrieve your following list once and save data for all users, including ID, username, and avatar. This data is saved locally and will be automatically cleared by the browser when you uninstall the downloader.
+- Since the launch of this feature (March 2026), when you use the downloader, it will retrieve your following list once and save data for all users, including ID, username, and avatar. This data is saved locally and will be automatically cleared by the browser when you remove the downloader.
 - Later, when you click this button, the downloader will retrieve your following list again and compare it with the previously saved historical data to find which users are now missing compared to before.
 - The downloader retrieves data for these users one by one and checks if they have been deactivated. The downloader will display progress information in the top log.
 - After the check is complete, it displays the results. If there are deactivated users, the downloader will output their list, which might look like this:
