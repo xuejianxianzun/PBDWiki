@@ -564,7 +564,7 @@ For safer importing of many users, split the task into batches, e.g., crawl 20 p
 
 ### Find deactivated users
 
-<button id="findDeactivatedUsers" type="button" class="hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_查找已注销的用户">Find deactivated users</span><span class="ripple"></span></button>
+<button id="findDeactivatedUsers" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_查找已注销的用户">Find deactivated users</span><span class="ripple"></span></button>
 
 You can find deactivated users in your following list.
 
