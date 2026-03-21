@@ -228,8 +228,9 @@ If the naming rule already creates folders, this option's folder becomes the dee
 
 **Tips:**
 
-1. R-18 and R-18G works are saved in the same folder; they cannot be separated into different folders.
-2. You can modify the folder name and use tags from the naming rule.
+- You can modify the folder name here; you can use tags from the naming rules.
+- Both R-18 and R-18G works will be stored in the folder specified here and cannot be separated into different folders.
+- You can use the naming tag `{age_r}` to replace this setting. `{age_r}` can output `R-18` or `R-18G` individually, and it can also be placed anywhere in the naming rule, making it more flexible.
 
 ## Download thread
 
