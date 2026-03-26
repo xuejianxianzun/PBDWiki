@@ -184,17 +184,6 @@ When using this feature, the downloader performs these steps:
 2. Applies **some** filter conditions (since list page data is limited, not all filters can be used).
 3. Exports data for works that meet the conditions (including only essential information).
 
-The following filter conditions apply to this feature:
-- [How many pages to crawl](/en/Settings-Crawl?id=how-many-pages-to-crawl)
-- [Age restriction](/en/Settings-Crawl?id=age-restriction)
-- [AI works](/en/Settings-Crawl?id=ai-works)
-- [Bookmark status](/en/Settings-Crawl?id=bookmark-status)
-- [ID range](/en/Settings-Crawl?id=id-range)
-- [Posting time](/en/Settings-Crawl?id=posting-time)
-- [Include tag](/en/Settings-Crawl?id=include-tag)
-- [Excluded Tag](/en/Settings-Crawl?id=excluded-tag)
-- [User block list](/en/Settings-More-Crawl?id=user-block-list)
-
 ### Import bookmark list (add bookmarks in batches)
 
 <p class="btnsWrap"><button id="importBookmarkList" type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_导入收藏列表">Import bookmark list (add bookmarks in batches)</span><span class="ripple"></span></button></p>
@@ -204,6 +193,7 @@ Click this button to select a previously exported bookmark list (JSON file) and 
 **Tips:**
 - You can export another user's bookmark list and import it into your own.
 - When on another user's bookmark page, you can still use this feature. The downloader always adds imported works to your bookmarks.
+- When importing bookmarks, the downloader will decide whether to add tags and whether to make the bookmarks public according to the settings of [Downloader's bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩). The default values of these settings are to add tags and make bookmarks public. If you want to use different settings, you can modify them before importing.
 - If the imported list includes works you've already bookmarked, the final bookmark count may be lower than expected, which is normal. For example, if you import 48 works and 20 are already bookmarked, your bookmark count will increase by only 28.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page, e.g., "Bookmarking works 5/48".

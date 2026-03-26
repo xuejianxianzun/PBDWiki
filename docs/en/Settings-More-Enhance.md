@@ -739,13 +739,13 @@ When the downloader crawls many works (e.g., thousands), displaying them all on 
 
 You can set a "Limit" to control the maximum number of displayed works. The default is `3000`.
 
-## Downloader' bookmark function (✩)
+## Downloader's bookmark function (✩)
 
 <p class="option" data-no="34" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_Bookmark settings description" data-tip="Sometimes you'll see the downloader's bookmark button (✩). Clicking it bookmarks the work.<br>
     You can choose whether to include the work's tags and whether it's public.<br>
     This setting also applies when batch-bookmarking works with the downloader.">
-    <span data-xztext="_收藏设置">Downloader' <span class="key">bookmark</span> function (✩)</span>
+    <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> function (✩)</span>
     <span class="gray1"> ? </span>
     </span>
     <input type="radio" name="widthTag" id="widthTag1" class="need_beautify radio" value="yes" checked="">
