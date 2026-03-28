@@ -114,7 +114,7 @@ In the latest settings, the modification to Option A is not saved — only the m
 
 **When New Settings Take Effect:**
 
-After you modify settings in one tab, other tabs will not be affected. New or refreshed tabs opened afterward will use the new settings:
+After you modify settings in one tab, other tabs will not be affected. The new settings will only take effect when you open a new tab or refresh an existing tab:
 - When opening a new tab, the downloader will use the latest settings.
 - When refreshing an already open tab, it will also use the latest settings.
 
