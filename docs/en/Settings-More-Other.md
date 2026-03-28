@@ -314,3 +314,5 @@ Possible use cases:
 - When submitting an issue, export settings and include them as an attachment.
 
 ?> The downloader's settings are stored in `browser.storage.local`. They are only cleared when the extension is removed. Clearing browser data does not affect the downloader's settings.
+
+?> If you want to understand how settings work, you can check: [How Settings Work](/en/SettingsPanel?id=how-settings-work).
