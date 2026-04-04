@@ -98,14 +98,15 @@ See detailed explanation: [Show download button on thumbnail](/en/Settings-More-
 
 The downloader includes a built-in image viewer, as shown below:
 
-![](images/20251025_020046.webp)
+![](images/20260404_232758.webp)
 
 ?> If the work contains multiple images, the downloader displays thumbnails of all images at the bottom. Click a thumbnail to view its full-size image.
 
 **Function Buttons:**
 
-There are 5 buttons below the image viewer:
+There are several function buttons below the image viewer:
 - `1:1`: Click this button, and the image will be displayed at a 1:1 ratio. If the image size exceeds the screen, you can use the left mouse button to drag the image. Clicking this button again will restore the image to adaptive display. Its shortcut key is `F`.
+- `🔗`: Click this button, and the downloader will copy the URL of the work page to the clipboard. Its shortcut key is `L`.
 - `✩`: Bookmark this work (using the downloader's quick bookmark function). Its shortcut key is `Alt` + `B`.
 - Copy button: Click it to copy the images and text summary of the work. Its shortcut key is `Alt` + `C`.
 - `↓` Download the currently displayed image (not all images in this work). Its shortcut key is `C`.
@@ -125,11 +126,16 @@ There are multiple ways to exit the image viewer:
 - `Alt` + `C` Click the copy button
 - `C` Download the currently displayed image
 - `D` Download the currently viewed work
+- `L` Copy the URL of the work page
 - `←` Switch to the previous image
 - `→` Switch to the next image
-- `↑` Zoom in the image. Scrolling the mouse wheel upward can also zoom out the image
-- `↓` Zoom out the image. Scrolling the mouse wheel downward can also zoom in the image
+- `↑` Zoom in the image.
+- `↓` Zoom out the image.
 - `ESC` Exit fullscreen mode; Exit viewer
+
+You can also use the mouse wheel to switch or zoom images. This depends on whether the mouse pointer is over the image:
+- When the mouse wheel is scrolled over the image, the image will zoom in or out;
+- When the mouse wheel is scrolled outside the image, the image will switch to the next or previous one.
 
 ## In the multi-image work page, display the thumbnail list
 

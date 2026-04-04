@@ -312,7 +312,7 @@ When the mouse hovers over a work's thumbnail, the downloader displays a magnifi
 
 Clicking the magnifier icon opens the image viewer to view each image in the work. The effect is shown below:
 
-![](images/20251025_020046.webp)
+![](images/20260404_232758.webp)
 
 You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
 

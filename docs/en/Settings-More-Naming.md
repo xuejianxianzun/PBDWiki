@@ -119,30 +119,59 @@ If you include `Original` in this setting, the downloader will create an "Origin
 
 ---
 
-Another use case: The downloader has a naming setting: [Save the R-18(G) works in the designated folder](/en/Settings-Download?id=save-the-r-18g-works-in-the-designated-folder), which places works with `R-18` and `R-18G` tags into **one** separate folder.
+Another use case: 
 
-Some users may want `R-18` and `R-18G` works to be saved in **two** separate folders, which the above setting cannot achieve. In this case, you can use this setting.
+Some users want to save `R-18` and `R-18G` works into **two** separate folders. In this case, you can enter `R-18,R-18G` in this setting. When a work contains the `R-18` tag, an `R-18` folder will be created; if it contains the `R-18G` tag, an `R-18G` folder will be created.
 
-Enter `R-18,R-18G` in this setting. When a work has the `R-18` tag, an `R-18` folder will be created; if it has the `R-18G` tag, an `R-18G` folder will be created.
+## Save the R-18(G) works in the designated folder
+
+<p class="option" data-no="38" style="display: flex;">
+    <span class="settingNameStyle1" data-xztext="_把r18作品存入指定的文件夹里">Save the <span class="key">R-18(G)</span> works in the designated folder</span>
+    <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
+    <span class="beautify_switch" tabindex="0"></span>
+    <span class="subOptionWrap" data-show="r18Folder" style="display: none;">
+    <span data-xztext="_Folder Name">Folder Name</span>
+    <input type="text" name="r18FolderName" class="setinput_style1 blue" style="width:150px;min-width: 150px;" value="[R-18&amp;R-18G]">
+    </span>
+    </p>
+
+If this setting is enabled, the downloader will save R-18(G) works to a **subfolder**.
+
+The downloader inserts the folder name from this setting **before** the filename:
+
+![](images/20250909_013552.png)
+
+If the naming rule already creates folders, this option's folder becomes the deepest folder. Example:
+
+![](images/20250910_200559.png)
+
+**Tips:**
+
+- You can modify the folder name here; you can use tags from the naming rules.
+- Both R-18 and R-18G works will be stored in the folder specified here and cannot be separated into different folders.
+- You can use the naming tag `{age_r}` to replace this setting. `{age_r}` can output `R-18` or `R-18G` individually, and it can also be placed anywhere in the naming rule, making it more flexible.
 
 ## The first image without a serial number
 
 <p class="option" data-no="22" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of removing sequence number from the first image" data-tip="Remove the sequence number from the first image of each work. For example, 80036479_p0 becomes 80036479">
+  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=22" target="_blank" class="has_tip settingNameStyle" data-xztip="_第一张图不带序号说明" data-tip="Remove the serial number of the first image of each work. For example 80036479_p0 becomes 80036479.">
     <span data-xztext="_第一张图不带序号">The first image without a <span class="key">serial number</span></span>
     <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="noSerialNo" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="noSerialNo" style="display: none;">
-      <input type="checkbox" name="noSerialNoForSingleImg" id="setNoSerialNoForSingleImg" class="need_beautify checkbox_common" checked="">
-      <span class="beautify_checkbox" tabindex="0"></span>
-      <label for="setNoSerialNoForSingleImg" data-xztext="_Single-image works" class="active">Single-image works</label>
-      <input type="checkbox" name="noSerialNoForMultiImg" id="setNoSerialNoForMultiImg" class="need_beautify checkbox_common" checked="">
-      <span class="beautify_checkbox" tabindex="0"></span>
-      <label for="setNoSerialNoForMultiImg" data-xztext="_Multi-image works" class="active">Multi-image works</label>
-    </span>
-    </p>
+  </a>
+  <input type="checkbox" name="noSerialNo" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <span class="subOptionWrap" data-show="noSerialNo" style="display: inline-flex;">
+    <input type="checkbox" name="noSerialNoForSingleImg" id="setNoSerialNoForSingleImg" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="setNoSerialNoForSingleImg" data-xztext="_单图作品">Single image works</label>
+    <input type="checkbox" name="noSerialNoForMultiImg" id="setNoSerialNoForMultiImg" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="setNoSerialNoForMultiImg" data-xztext="_多图作品">Multi-image works</label>
+    <input type="checkbox" name="noSerialNoForUgoira" id="setNoSerialNoForUgoira" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="setNoSerialNoForUgoira" data-xztext="_动图" class="active">Ugoira</label>
+  </span>
+</p>
 
 What is a sequence number? If you use the `{id}` naming tag, each work's ID will include a sequence number, such as:
 
@@ -166,6 +195,7 @@ If you enable this option, the downloader will remove the sequence number from t
 **Sub-options:**
 - `Single-image works`: Remove the sequence number for single-image works.
 - `Multi-image works`: Remove the sequence number for the first image of multi-image works.
+- `Ugoira`: Remove the sequence number for Ugoira works.
 
 ?> The naming tag `{p_num}` also outputs sequence numbers, but as plain numbers `0`, `1`, `2`. This setting also applies to `{p_num}`, meaning it can remove the `0` output by `{p_num}`.
 

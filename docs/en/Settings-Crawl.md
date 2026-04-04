@@ -185,9 +185,72 @@ The downloader checks the AI tag of each work during crawling and excludes those
 
 --------
 
-When submitting new works, illustrations, manga, and Ugoira must specify whether they are AI-generated. For novels, this is optional. Therefore, the downloader can determine whether these works are AI-generated.
+When users submit works, illustrations, manga, and Ugoira must select whether they are AI-generated, while novels have the option to select whether they are AI-generated. Therefore, the downloader can determine whether these works are AI-generated.
 
-However, some works do not have this tag, so they are classified as `Unknown`. These are usually early works, as AI-generated image technology was not widespread at the time, and Pixiv did not require works to be tagged, so the downloader cannot determine if they are AI-generated. Generally, "Unknown" works can be treated as non-AI-generated.
+If the user selects that the work is AI-generated, Pixiv will display the bolded text "AI-generated" at the beginning of the tag list, for example:
+
+![](images/20260405_010411.png)
+
+If there is no bold "AI-generated", it means the user has set the work as "non-AI-generated".
+
+The `Unknown` type applies to early works. Because AI image generation technology was not widely available in the early days, Pixiv did not require works to add this mark at that time, so the downloader cannot determine whether they are AI-generated. Generally, you can treat `Unknown` works as non-AI-generated.
+
+**Additional Processing:**
+
+Since many users deliberately set AI-generated images as "non-AI-generated" to evade moderation, the downloader will check the work's tags. If it contains specific tags, it will treat the work as AI-generated. For example:
+
+![](images/20260405_010326.png)
+
+These tags are:
+
+```
+AI生成,AI-generated,AIイラスト,AI生成作品,AI 画作,AI生成イラスト,AI 생성,сгенерированный ИИ,สร้างโดย AI,Janaan AI
+```
+
+However, some users deliberately do not add any AI-related tags. In this case, the downloader cannot determine whether it is an AI-generated work based on the tags.
+
+## Original works
+
+<p class="option" data-no="96" style="display: flex;">
+   <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=96" target="_blank" class="settingNameStyle">
+     <span data-xztext="_原创作品"><span class="key">Original</span> works</span>
+   </a>
+   <input type="checkbox" name="crawlOriginalWork" id="setCrawlOriginalWork" class="need_beautify checkbox_common" checked="">
+   <span class="beautify_checkbox" tabindex="0"></span>
+   <label for="setCrawlOriginalWork" data-xztext="_原创" class="active">Original</label>
+   <input type="checkbox" name="crawlNonOriginalWork" id="setCrawlNonOriginalWork" class="need_beautify checkbox_common" checked="">
+   <span class="beautify_checkbox" tabindex="0"></span>
+   <label for="setCrawlNonOriginalWork" data-xztext="_非原创" class="active">Non-original</label>
+   <span class="verticalSplit"></span>
+   <input type="checkbox" name="looseMatchOriginal" id="looseMatchOriginal" class="need_beautify checkbox_common" checked="">
+   <span class="beautify_checkbox" tabindex="0"></span>
+   <label for="looseMatchOriginal" data-xztext="_宽松匹配" class="active">Loose matching</label>
+   <button class="gray1 textButton" id="showLooseMatchOriginalTip" type="button" data-xztext="_帮助">Help</button>
+ </p>
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
 
 ## Bookmark status
 
@@ -640,3 +703,56 @@ BL,腐
 ```
 
 !> Note: "Partial Match" is not entirely accurate and may cause incorrect exclusions in some cases. For example, setting `BL` might exclude works with the `blue` tag. If accuracy is important, use "Exact Match".
+
+## Title must contain
+
+<p class="option" data-no="94" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=94" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题必须含有的说明" data-tip="You can require that the work's title must contain specific characters. Case-insensitive.&lt;br&gt;
+You can set multiple strings, separated by commas (,).&lt;br&gt;
+The matching mode is &quot;any one&quot;, meaning as long as the title contains any one of the specified strings, it will pass the check.">
+        <span data-xztext="_标题必须含有"><span class="key">Title</span> must contain</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="titleIncludeSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="titleIncludeSwitch" style="display: none;">
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="titleIncludeList" rows="1" placeholder="word1,word2,word3"></textarea>
+      </span>
+    </p>
+
+You can require that the work's title must contain specific characters. After enabling this setting, if the work's title does not contain the required characters, the downloader will not crawl it.
+
+- Case insensitive.
+- You can set multiple character strings, separated by commas (,).
+- The matching mode is "Any", meaning as long as the title contains any one of the specified character strings, the downloader will crawl it.
+
+## Title must not contain
+
+<p class="option" data-no="95" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=95" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题不能含有的说明" data-tip="You can require that the work's title must not contain specific characters. Case-insensitive.&lt;br&gt;
+You can set multiple strings, separated by commas (,).&lt;br&gt;
+The matching mode is &quot;any one&quot;, meaning if the title contains any one of the specified strings, the downloader will not crawl it.&lt;br&gt;
+Exclusion takes priority over inclusion.">
+        <span data-xztext="_标题不能含有"><span class="key">Title</span> must not contain</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="titleExcludeSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="titleExcludeSwitch" style="display: none;">
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="titleExcludeList" rows="1" placeholder="word1,word2,word3"></textarea>
+        <label for="alsoCheckSeriesTitle" class="has_tip active" data-xztext="_也检查系列标题" data-xztip="_也检查系列标题的说明" data-tip="If the work belongs to a series, enabling this setting will also check if the series title meets the conditions.">Also check series title</label>
+        <span class="gray1 mr4"> ? </span>
+        <input type="checkbox" name="alsoCheckSeriesTitle" id="alsoCheckSeriesTitle" class="need_beautify checkbox_switch" checked="">
+        <span class="beautify_switch" tabindex="0"></span>
+      </span>
+    </p>
+
+You can require that the work's title must not contain specific characters. After enabling this setting, if the work's title contains any of the characters specified here, the downloader will not crawl it.
+
+- Case insensitive.
+- You can set multiple character strings, separated by commas (,).
+- The matching mode is "Any", meaning as long as the title contains any one of the specified character strings, the downloader will not crawl it.
+- Exclusion has higher priority than inclusion. Once a work is excluded by this filter, the downloader will not crawl it, even if it meets other conditions.
+
+**Sub-option:**
+- `Also check series title`: When this option is enabled, the downloader will also check the series title. If the series title contains any excluded characters, the downloader will not crawl this series, nor will it crawl any individual works inside it.

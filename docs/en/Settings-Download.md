@@ -204,34 +204,6 @@ Some users may mistakenly think this means "if a work has only one file to downl
 
 For example, crawling 10 works, each with one image, results in 10 crawl results. This option will not take effect in this case.
 
-## Save the R-18(G) works in the designated folder
-
-<p class="option" data-no="38" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_把r18作品存入指定的文件夹里">Save the <span class="key">R-18(G)</span> works in the designated folder</span>
-    <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="r18Folder" style="display: none;">
-    <span data-xztext="_Folder Name">Folder Name</span>
-    <input type="text" name="r18FolderName" class="setinput_style1 blue" style="width:150px;min-width: 150px;" value="[R-18&amp;R-18G]">
-    </span>
-    </p>
-
-If this setting is enabled, the downloader will save R-18(G) works to a **subfolder**.
-
-The downloader inserts the folder name from this setting **before** the filename:
-
-![](images/20250909_013552.png)
-
-If the naming rule already creates folders, this option's folder becomes the deepest folder. Example:
-
-![](images/20250910_200559.png)
-
-**Tips:**
-
-- You can modify the folder name here; you can use tags from the naming rules.
-- Both R-18 and R-18G works will be stored in the folder specified here and cannot be separated into different folders.
-- You can use the naming tag `{age_r}` to replace this setting. `{age_r}` can output `R-18` or `R-18G` individually, and it can also be placed anywhere in the naming rule, making it more flexible.
-
 ## Download thread
 
 <p class="option" data-no="16" style="display: flex;">
