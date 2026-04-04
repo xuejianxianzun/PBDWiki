@@ -407,10 +407,10 @@ On the work page, and when previewing a work, you can use the shortcut key &lt;s
   <label for="setCopyFormatHtml" class="active">text/html</label>
   <span class="verticalSplit"></span>
   <span class="settingNameStyle" data-xztext="_图片尺寸2">Image size</span>
-  <input type="radio" name="copyImageSize" id="copyImageSize1" class="need_beautify radio" value="original">
+  <input type="radio" name="copyImageSize" id="copyImageSize1" class="need_beautify radio" value="original" checked="">
   <span class="beautify_radio" tabindex="0"></span>
-  <label for="copyImageSize1" data-xztext="_原图" class="">Original</label>
-  <input type="radio" name="copyImageSize" id="copyImageSize2" class="need_beautify radio" value="regular" checked="">
+  <label for="copyImageSize1" data-xztext="_原图" class="active">Original</label>
+  <input type="radio" name="copyImageSize" id="copyImageSize2" class="need_beautify radio" value="regular">
   <span class="beautify_radio" tabindex="0"></span>
   <label for="copyImageSize2" data-xztext="_普通" class="active">Regular</label>
   <span class="verticalSplit"></span>
@@ -501,12 +501,12 @@ You can choose to copy the original image or the thumbnail.
 ### Image Size
 
 You can choose the size of the image to copy:
-- `Original`: The downloader will copy the original image.
-- `Regular`: Default value, the downloader will copy the thumbnail (maximum size 1200px).
+- `Original`: Default value, the downloader will copy the original image.
+- `Regular`: The downloader will copy the thumbnail (maximum size 1200px).
 
 **Behavior When Copying Images:**
 
-- By default, the downloader copies the thumbnail, not the original. If you want to copy the original, change the "Image Size" option to `Original`. However, note extreme cases: some original images may be very large (e.g., over 30 MiB) and may not paste in certain applications.
+- The downloader copies the original image by default. However, some original images are quite large (for example, over 30 MiB), and may not paste properly in certain applications. If you encounter this issue, you can change the "Image Size" setting to `Regular`.
 - For illustration and manga works, the downloader copies the first image or the one you're viewing, depending on the scenario.
 - For Ugoira works, the downloader always copies its static thumbnail.
 - For novel works, the downloader always copies its cover image.
