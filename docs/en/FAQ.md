@@ -116,13 +116,15 @@ If the downloaded file names are a string of incomprehensible characters, like t
 
 Please check: [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
 
-## File Names Have a .jfif Extension
+## The file extension is .jfif
 
-*File extension is jfif*
+*The file suffix is .jfif / The file format is .jfif*
 
-Possible reasons:
-1. Influence from other extensions.
-2. If you selected "thumbnail" in the [Image Size](/en/Settings-More-Download?id=Image-Size) setting of the downloader, it is normal to download files in jfif format.
+`.jfif` files are actually `.jpg` files.
+
+This issue only occurs on Windows systems. Some versions of Windows set the extension for jpeg files to `.jfif` in the registry, so when the browser saves `.jpg` files, it will also use `.jfif` as the extension.
+
+If you want to solve this problem, press `Win` + `R` to open the Run window, enter `regedit` and press Enter to open the Registry Editor, navigate to `HKEY_CLASSES_ROOT\MIME\Database\Content Type\image/jpeg`, change the value of `Extension` on the right from `.jfif` to `.jpg`, then restart the browser.
 
 ## Does It Support Resumable Downloads?
 
