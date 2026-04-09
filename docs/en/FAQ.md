@@ -126,6 +126,8 @@ This issue only occurs on Windows systems. Some versions of Windows set the exte
 
 If you want to solve this problem, press `Win` + `R` to open the Run window, enter `regedit` and press Enter to open the Registry Editor, navigate to `HKEY_CLASSES_ROOT\MIME\Database\Content Type\image/jpeg`, change the value of `Extension` on the right from `.jfif` to `.jpg`, then restart the browser.
 
+![](images/20260409_161332.png)
+
 ## Does It Support Resumable Downloads?
 
 Yes, the downloader supports resumable downloads.
