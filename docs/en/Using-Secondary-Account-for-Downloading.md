@@ -20,7 +20,7 @@ However, I recommend using a single browser for convenience.
 
 Click the profile icon in the top-right corner of the browser to create a new profile (local browser user). For example, in Chrome, you can add a new profile from here:
 
-![](images/20250910_010241.png)
+![](images/20260427_023507.png)
 
 When using the newly added browser profile, Chrome opens a separate browser window where you can log in to the secondary account and install this extension for use.
 
