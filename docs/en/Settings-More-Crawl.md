@@ -66,17 +66,106 @@ This setting cannot completely avoid 429 errors. Reasons:
 1. It assumes the user is only crawling on one page, which should not trigger 429 errors. But if the user is crawling on 2 or 3 pages simultaneously, because requests are sent frequently, it may still trigger 429 errors.
 2. Some normal user operations also consume quota, such as opening work pages, previewing works, bookmarking works, etc. When the quota is exhausted, it will trigger 429 errors. So during crawling, if the user performs many such operations, it may also lead to triggering 429 errors.
 
-## Do not crawl the last image of multi-image works
+## Maximum number of images for multi-image works
 
-<p class="option" data-no="69" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_不抓取多图作品的最后一张图片">Do not crawl the <span class="key">last image</span> of multi-image works</span>
-    <input type="checkbox" name="doNotDownloadLastImageOfMultiImageWork" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    </p>
+<div class="option" data-no="47" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Crawl?flag=47" target="_blank" class="has_tip settingNameStyle" data-xztip="_多图作品的图片数量上限提示" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work.">
+        <span data-xztext="_多图作品的图片数量上限"><span class="key">Maximum number</span> of images for multi-image works</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="multiImageWorkImageLimitSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="multiImageWorkImageLimitSwitch" style="display: none;">
+        &lt;=&nbsp;
+        <input type="text" name="multiImageWorkImageLimit" class="setinput_style1 blue" value="1">
+      </span>
+    </div>
 
-If you enable this option, the downloader will skip the last image of multi-image works during crawling.
+If a multi-image work contains more images than the number you set, the downloader will not crawl that work.
 
-For example, some users' multi-image works may have a promotional image for Fanbox as the last image, which you may not want to download. In such cases, you can enable this option.
+## Only crawl the first few images of multi-image works
+
+<div class="option" data-no="3" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Crawl?flag=3" target="_blank" class="settingNameStyle">
+        <span data-xztext="_多图作品只抓取前几张图片">Only crawl the <span class="key">first few</span> images of multi-image works</span>
+      </a>
+      <input type="checkbox" name="onlyCrawlFirstFewImagesSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="onlyCrawlFirstFewImagesSwitch" style="display: none;">
+        <input type="text" name="onlyCrawlFirstFewImagesCount" class="setinput_style1 blue" value="1">
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
+    </div>
+
+If you do not want to download too many images from a multi-image work, or if you think the first image is the most valuable one, you can enable this setting.
+
+## Only crawl the last few images of multi-image works
+
+<div class="option new" data-no="104" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Crawl?flag=104" target="_blank" class="settingNameStyle">
+        <span data-xztext="_多图作品只抓取后几张图片">Only crawl the <span class="key">last few</span> images of multi-image works</span>
+      </a>
+      <input type="checkbox" name="onlyCrawlLastFewImagesSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="onlyCrawlLastFewImagesSwitch" style="display: none;">
+        <input type="text" name="onlyCrawlLastFewImagesCount" class="setinput_style1 blue" value="1">
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取后几张图片" data-msg="_多图作品只抓取后几张图片的说明" data-xztext="_帮助">Help</button>
+    </div>
+
+A common use case is when users post character cards or scene cards from games such as Koikatsu. The earlier images are screenshots, while the last image contains the actual card data. You can enable this setting to crawl only the last one or several images.
+
+For example, in multi-image works by [日月](https://www.pixiv.net/users/42064021/artworks), the last image is the character card.
+
+**Tip:**
+- The two `crawl only` conditions can be used at the same time. In that case, an image is kept if it matches either condition. This lets you skip the middle images and download only the images at the beginning and the end.
+
+## Do not crawl the first few images of multi-image works
+
+<div class="option new" data-no="103" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Crawl?flag=103" target="_blank" class="settingNameStyle">
+        <span data-xztext="_多图作品不抓取前几张图片">Do not crawl the <span class="key">first few</span> images of multi-image works</span>
+      </a>
+      <input type="checkbox" name="doNotCrawlFirstImagesSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="doNotCrawlFirstImagesSwitch" style="display: none;">
+        <input type="text" name="doNotCrawlFirstImagesCount" class="setinput_style1 blue" value="1">
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品不抓取前几张图片" data-msg="_多图作品不抓取前几张图片的说明" data-xztext="_帮助">Help</button>
+    </div>
+
+A common use case is when an artist's first image contains text while the second image does not, or the first image is all-ages while the second image is R-18. If you want to skip the first image and start crawling from the second image, you can use this setting.
+
+For example, in multi-image works by [こけもも](https://www.pixiv.net/users/1472682), the first image contains text while the second one is clean. If you want to exclude the first image, you can use this setting.
+
+Also, their last images are promotional images, so this setting can be used together with `Multi-image works: do not crawl the last few images`.
+
+**Notes:**
+
+- If the number you set is larger than the number of images in the work, the downloader will keep the last image instead of excluding the whole work.
+- `Crawl only` and `do not crawl` conditions for the first/last few images can be used together. `Do not crawl` has higher priority. If an image matches both kinds of conditions, the downloader will not crawl it.
+
+## Do not crawl the last few images of multi-image works
+
+<div class="option new" data-no="69" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>      
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Crawl?flag=69" target="_blank" class="settingNameStyle">
+        <span data-xztext="_多图作品不抓取后几张图片">Do not crawl the <span class="key">last few</span> images of multi-image works</span>
+      </a>
+      <input type="checkbox" name="doNotCrawlLastImagesSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="doNotCrawlLastImagesSwitch" style="display: none;">
+        <input type="text" name="doNotCrawlLastImagesCount" class="setinput_style1 blue" value="1">
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品不抓取后几张图片" data-msg="_多图作品不抓取后几张图片的说明" data-xztext="_帮助">Help</button>
+    </div>
+
+A common use case is when an artist's last one or several images are promotional images, or images with mosaics, and you do not want to crawl them. In that case, you can use this setting to exclude the last one or several images.
+
+For example, in multi-image works by [儒宅 Ruzhai](https://www.pixiv.net/users/12539859), the last image is always a promotional image, so this setting is useful.
+
+**Notes:**
+- If the number you set is larger than the number of images in the work, the downloader will keep the first image instead of excluding the whole work.
+- `Crawl only` and `do not crawl` conditions for the first/last few images can be used together. `Do not crawl` has higher priority. If an image matches both kinds of conditions, the downloader will not crawl it.
 
 ## User block list
 

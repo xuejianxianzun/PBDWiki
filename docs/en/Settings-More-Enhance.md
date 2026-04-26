@@ -75,47 +75,60 @@ Enabling this feature replaces square thumbnails with 540 px thumbnails, showing
 
 ## Preview works
 
-<p class="option" data-no="55" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Preview work description" data-tip="When hovering over an image's thumbnail, the downloader can display a larger image.">
-    <span data-xztext="_Preview work"><span class="key">Preview</span> works</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="PreviewWork" class="need_beautify checkbox_switch" checked="">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="PreviewWork" style="display: inline-flex;">
-    <label for="wheelScrollSwitchImageOnPreviewWork" class="has_tip active" data-xztext="_Use mouse wheel to switch images in work" data-xztip="_This may prevent page scrolling" data-tip="This may prevent page scrolling">Use the mouse wheel to switch images in multi-image works</label>
-    <input type="checkbox" name="wheelScrollSwitchImageOnPreviewWork" id="wheelScrollSwitchImageOnPreviewWork" class="need_beautify checkbox_switch" checked="">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="verticalSplit"></span>
-    <label for="swicthImageByKeyboard" class="has_tip active" data-xztext="_Use arrow keys and spacebar to switch images" data-xztip="_Use arrow keys and spacebar to switch images description" data-tip="← ↑ Previous image<br>→ ↓ Next image<br>Spacebar Next image">Use the arrow keys and space bar to switch images</label>
-    <input type="checkbox" name="swicthImageByKeyboard" id="swicthImageByKeyboard" class="need_beautify checkbox_switch" checked="">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="verticalSplit"></span>
-    <span data-xztext="_Wait time">Wait time</span>&nbsp;
-    <input type="text" name="previewWorkWait" class="setinput_style1 blue" value="400" style="width:40px;min-width: 40px;">
-    <span>&nbsp;ms</span>
-    <span class="verticalSplit"></span>
-    <label for="showPreviewWorkTip" data-xztext="_Show summary information" class="active">Show summary</label>
-    <input type="checkbox" name="showPreviewWorkTip" id="showPreviewWorkTip" class="need_beautify checkbox_switch" checked="">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="verticalSplit"></span>
-    <span class="settingNameStyle1" data-xztext="_Image size">Image size</span>
-    <input type="radio" name="prevWorkSize" id="prevWorkSize1" class="need_beautify radio" value="original">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="prevWorkSize1" data-xztext="_Original">Original</label>
-    <input type="radio" name="prevWorkSize" id="prevWorkSize2" class="need_beautify radio" value="regular" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="prevWorkSize2" data-xztext="_Regular" class="active">Regular</label>
-    <span class="verticalSplit"></span>
-    <button type="button" class="gray1 textButton showPreviewWorkTip" data-xztext="_Shortcut key list">Shortcut list</button>
-    </span>
-    </p>
+<div class="option" data-no="55" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Enhance?flag=55" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的说明" data-tip="When you hover the mouse over the image thumbnail, the downloader can display a larger image.">
+        <span data-xztext="_预览作品"><span class="key">Preview</span> works</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="PreviewWork" class="need_beautify checkbox_switch" checked="">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="PreviewWork" style="display: inline-flex;">
+        <input type="checkbox" name="previewSingleImageWork" id="previewSingleImageWork" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="previewSingleImageWork" data-xztext="_单图作品" class="active">Single image works</label>
+        <input type="checkbox" name="previewMultiImageWork" id="previewMultiImageWork" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="previewMultiImageWork" data-xztext="_多图作品" class="active">Multi-image works</label>
+        <input type="checkbox" name="previewUgoira" id="previewUgoira" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="previewUgoira" data-xztext="_动图" class="active">Ugoira</label>
+        <span class="verticalSplit"></span>
+        <label for="checkBlockTagsForPreviewWork" data-xztext="_检查屏蔽的标签">Check blocked tags</label>
+        <input type="checkbox" name="checkBlockTagsForPreviewWork" id="checkBlockTagsForPreviewWork" class="need_beautify checkbox_switch">
+        <span class="beautify_switch" tabindex="0"></span>
+        <button type="button" class="gray1 textButton showMsgBtn" data-title="_检查屏蔽的标签" data-msg="_检查屏蔽的标签的帮助" data-xztext="_帮助">Help</button>
+        <span class="verticalSplit"></span>
+        <label for="wheelScrollSwitchImageOnPreviewWork" class="has_tip active" data-xztext="_使用鼠标滚轮切换作品里的图片" data-xztip="_这可能会阻止页面滚动" data-tip="This might stop the page from scrolling">Use the mouse wheel to switch images in multi-image works</label>
+        <input type="checkbox" name="wheelScrollSwitchImageOnPreviewWork" id="wheelScrollSwitchImageOnPreviewWork" class="need_beautify checkbox_switch" checked="">
+        <span class="beautify_switch" tabindex="0"></span>
+        <span class="verticalSplit"></span>
+        <label for="swicthImageByKeyboard" class="has_tip active" data-xztext="_使用方向键和空格键切换图片" data-xztip="_使用方向键和空格键切换图片的提示" data-tip="← ↑ Previous image&lt;br&gt;→ ↓ Next image&lt;br&gt;Spacebar Next image">Use the arrow keys and space bar to switch images</label>
+        <input type="checkbox" name="swicthImageByKeyboard" id="swicthImageByKeyboard" class="need_beautify checkbox_switch" checked="">
+        <span class="beautify_switch" tabindex="0"></span>
+        <span class="verticalSplit"></span>
+        <span data-xztext="_等待时间">Waiting time</span>&nbsp;
+        <input type="text" name="previewWorkWait" class="setinput_style1 blue" value="400" style="width:40px;min-width: 40px;">
+        <span>&nbsp;ms</span>
+        <span class="verticalSplit"></span>
+        <label for="showPreviewWorkTip" data-xztext="_显示摘要信息" class="active">Show summary</label>
+        <input type="checkbox" name="showPreviewWorkTip" id="showPreviewWorkTip" class="need_beautify checkbox_switch" checked="">
+        <span class="beautify_switch" tabindex="0"></span>
+        <span class="verticalSplit"></span>
+        <span class="settingNameStyle" data-xztext="_图片尺寸2">Image size</span>
+        <input type="radio" name="prevWorkSize" id="prevWorkSize1" class="need_beautify radio" value="original">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="prevWorkSize1" data-xztext="_原图">Original</label>
+        <input type="radio" name="prevWorkSize" id="prevWorkSize2" class="need_beautify radio" value="regular" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="prevWorkSize2" data-xztext="_普通" class="active">Regular</label>
+        <span class="verticalSplit"></span>
+        <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#previewWorkShortcutTip" data-for-no="55" data-xztext="_快捷键列表">Shortcut list</button>
+      </span>
+    </div>
 
-When the mouse cursor hovers over a work's thumbnail, the downloader displays a larger preview image.
+This feature is enabled by default. When the mouse cursor hovers over a work thumbnail, the downloader displays a larger preview image, as shown below:
 
-The effect is shown below:
-
-![](images/20251025_020514.webp)
+![](images/20251025_015955.webp)
 <!-- https://www.pixiv.net/artworks/134677173 -->
 
 ?> The preview image adapts to the available area and won't exceed the screen.
@@ -138,6 +151,16 @@ When viewing a preview image, you can use the following shortcuts:
 - `←` `↑`: Previous image
 - `→` `↓`: Next image
 - `Space`: Next image
+
+### Check blocked tags
+
+This feature is disabled by default.
+
+If you enable it, the downloader checks whether the work contains either of these two kinds of blocked tags:
+1. The `must not contain tags` you configured in the downloader
+2. The tags you muted in your Pixiv account settings
+
+If the work matches either blocked condition, the downloader will not preview it.
 
 ### Use the mouse wheel to switch images in multi-image works
 
@@ -281,30 +304,43 @@ You can choose whether the downloader loads the original or regular image when d
 
 Regular images have a maximum size of 1200 px, while original images may be larger, so they may appear bigger at 1:1 display.
 
+## Button position on thumbnails
+
+<div class="option new" data-no="102" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Enhance?flag=102" target="_blank" class="settingNameStyle has_tip" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail.">
+        <span data-xztext="_缩略图上按钮的位置">Button <span class="key">position</span> on thumbnails</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="radio" name="magnifierPosition" id="magnifierPosition1" class="need_beautify radio" value="left">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="magnifierPosition1" data-xztext="_左侧">Left</label>
+      <input type="radio" name="magnifierPosition" id="magnifierPosition2" class="need_beautify radio" value="right" checked="">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="magnifierPosition2" data-xztext="_右侧" class="active">Right</label>
+    </div>
+
+When you hover over a thumbnail, the downloader displays some buttons on it, as shown below:
+
+![](./images/20260426_233917.png)
+
+By default they are shown on the right side, but you can switch them to the left side if you want.
+
 ## Show zoom button on thumbnail
 
-<p class="option" data-no="40" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_在作品缩略图上显示放大按钮">Show <span class="key">zoom</span> button on thumbnail</span>
-    <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked>
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="magnifier" style="display: inline-flex;">
-    <span class="settingNameStyle1" data-xztext="_Position">Position</span>
-    <input type="radio" name="magnifierPosition" id="magnifierPosition1" class="need_beautify radio" value="left">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="magnifierPosition1" data-xztext="_Left">Left</label>
-    <input type="radio" name="magnifierPosition" id="magnifierPosition2" class="need_beautify radio" value="right" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="magnifierPosition2" data-xztext="_Right" class="active">Right</label>
-    <span class="verticalSplit"></span>
-    <span class="settingNameStyle1" data-xztext="_Image size">Image size</span>
-    <input type="radio" name="magnifierSize" id="magnifierSize1" class="need_beautify radio" value="original">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="magnifierSize1" data-xztext="_Original" class="active">Original</label>
-    <input type="radio" name="magnifierSize" id="magnifierSize2" class="need_beautify radio" value="regular" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="magnifierSize2" data-xztext="_Regular">Regular</label>
-    </span>
-    </p>
+<div class="option" data-no="40" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Enhance?flag=40" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示放大按钮">Show <span class="key">zoom</span> button on thumbnail</a>
+      <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked>
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="magnifier" style="display: inline-flex;">
+        <span class="settingNameStyle" data-xztext="_查看的图片尺寸">View image dimensions</span>
+        <input type="radio" name="magnifierSize" id="magnifierSize1" class="need_beautify radio" value="original" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="magnifierSize1" data-xztext="_原图" class="active">Original</label>
+        <input type="radio" name="magnifierSize" id="magnifierSize2" class="need_beautify radio" value="regular">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="magnifierSize2" data-xztext="_普通">Regular</label>
+      </span>
+    </div>
 
 When the mouse hovers over a work's thumbnail, the downloader displays a magnifier icon, as shown below:
 
@@ -315,13 +351,6 @@ Clicking the magnifier icon opens the image viewer to view each image in the wor
 ![](images/20260404_232758.webp)
 
 You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
-
-This feature has two sub-options:
-
-### Position
-
-- `Left`: Displays the magnifier icon in the top-left corner of the thumbnail.
-- `Right`: Displays the magnifier icon in the top-right corner of the thumbnail.
 
 ### Image Size
 
@@ -526,7 +555,7 @@ Additionally, you can use these tags:
 
 The default text format rule is `id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}`, and the generated text content example is as follows:
 
-id: [https://www.pixiv.net/i/134304155](134304155)
+id: [134304155](https://www.pixiv.net/i/134304155)
 
 title: 黑塔
 
@@ -649,7 +678,7 @@ To close the details panel, click it or move the mouse outside its boundaries.
 
 There are some buttons at the bottom of the panel:
 
-- `Copy TXT` Click it, and the downloader will copy some metadata to the clipboard, the content is the same as the TXT file generated by the [Save Work's Metadata](/en/Settings-More-Download?id=Save%20Work's%20Metadata) function.
+- `Copy TXT` Click it, and the downloader will copy some metadata to the clipboard, the content is the same as the TXT file generated by the [Save the metadata of the work](/en/Settings-More-Download?id=save-the-metadata-of-the-work) function.
 - `Copy JSON` Click it, and the downloader will copy the work's JSON data (unprocessed raw data).
 - `Copy URL` Click it, and the downloader will copy the work's URL.
 - `Copy Button` Click it, and the downloader will copy the first image of the work and the text summary.
@@ -739,13 +768,13 @@ When the downloader crawls many works (e.g., thousands), displaying them all on 
 
 You can set a "Limit" to control the maximum number of displayed works. The default is `3000`.
 
-## Downloader's bookmark function (✩)
+## Downloader's bookmark feature (✩)
 
 <p class="option" data-no="34" style="display: flex;">
     <span class="has_tip settingNameStyle1" data-xztip="_Bookmark settings description" data-tip="Sometimes you'll see the downloader's bookmark button (✩). Clicking it bookmarks the work.<br>
     You can choose whether to include the work's tags and whether it's public.<br>
     This setting also applies when batch-bookmarking works with the downloader.">
-    <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> function (✩)</span>
+    <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> feature (✩)</span>
     <span class="gray1"> ? </span>
     </span>
     <input type="radio" name="widthTag" id="widthTag1" class="need_beautify radio" value="yes" checked="">

@@ -2,26 +2,179 @@
 
 ## Manage download records
 
-## Show notification after download is complete
+<div class="option new" data-no="101" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=101" target="_blank" class="settingNameStyle" data-xztext="_管理下载记录">Manage download <span class="key">records</span></a>
+      <button type="button" class="textButton gray1" id="exportDownloadRecord" data-xztext="_导出">Export</button>
+      <button type="button" class="textButton gray1" id="importDownloadRecord" data-xztext="_导入">Import</button>
+      <button type="button" class="textButton gray1" id="clearDownloadRecord" data-xztext="_清除">Clear</button>
+      <button type="button" class="textButton gray1 showMsgBtn" data-title="_管理下载记录" data-msg="_管理下载记录的提示" data-xztext="_帮助">Help</button>
+    </div>
 
-<p class="option" data-no="52" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of showing notification after download completes" data-tip="Display a system notification when all files have finished downloading. May request notification permission.">
-    <span data-xztext="_下载完成后显示通知">Show <span class="key">notification</span> after download is complete</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    </p>
+The download records here refer to the downloader's own download records, not the browser's download history.
 
-If this option is enabled, the downloader will display a system notification after all files have finished downloading (may request notification permission)：
+### How it works
 
-![](images/20250909_212226.png)
+Whenever the downloader successfully downloads a file, it saves a download record in the browser's IndexedDB database. This record includes the work ID, the work's modification date, and the filename used at download time. For example:
 
-And there may also be a notification sound (depending on the operating system settings).
+```json
+{
+  "id": "85290993_p0",
+  "d": "2021/05/22/13/07/51",
+  "n": "85290993_p0-小日向ほしみ-原创,女孩子,原创,waitress,过膝袜.jpg"
+}
+```
 
-If Do Not Disturb mode is enabled, the notification will be stored in the notification center and will not appear in the bottom-right corner (but there may still be a notification sound).
+Some downloader features depend on download records, for example:
+- Do not crawl already downloaded works
+- Don't download duplicate files
+- Show a border on downloaded works
 
-![](images/20250909_212635.png)
+**Additional notes:**
+- The downloader's download records are stored in the browser's IndexedDB. Clearing the browser's download history does not affect the downloader's download records, so you can clear the browser's download history safely.
+- Note: if you clear browser data, choosing "Cookies and other site data" will also clear the downloader's download records. If necessary, you can export the downloader's download records before clearing data, then import them afterward.
+
+Also, this method is **not completely reliable**, because the downloader can query only its own download records and cannot check files on your disk.
+
+- If a file already exists on your disk but the downloader has no record for it, the downloader will still download it.
+- Conversely, if you previously downloaded a file and later deleted it from your disk, but the downloader still has a record for it, the downloader will not download it again unless you disable the relevant feature or change its strategy.
+
+When these situations occur, features that rely on download records may make incorrect judgments, so you can disable those features if needed.
+
+### Export
+
+Click the export button to export the downloader's download records. This creates a JSON file and saves it directly to the browser's download directory.
+
+This can be used for backup, for example before clearing browser data. You can also export records from one browser and import them into another.
+
+?> The downloader displays export progress in the log at the top of the page. If there are many records, exporting takes some time, so wait until the downloader indicates that the export is complete.
+
+### Import
+
+Click the import button to select a previously exported download record file (JSON) and import it.
+
+Importing does not clear existing download records, so you can import multiple files and the records will be merged together.
+
+?> The downloader displays import progress in the log at the top of the page. If there are many records, importing takes some time, so wait until the downloader indicates that the import is complete.
+
+### Import an ID list
+
+This is a hidden feature. You can use it by entering the command `recordtxt` on a Pixiv page (just press these keys in sequence).
+
+The downloader's `Import` button can import only JSON files, but some users want to import their own TXT-format ID lists, so I added this hidden feature.
+
+**Use cases:**
+1. You downloaded many files before using this downloader, so they have no corresponding download records and you want to create records manually.
+2. You accidentally cleared the downloader's download records and want to rebuild them to some extent.
+
+You need to prepare a list of previously downloaded work IDs yourself (for example by generating a file list with shell commands) and save it as a TXT file, one ID per line, like this:
+
+```
+84334853_p0
+84334853_p1
+84334853_p2
+140035432
+27640268
+```
+
+**Notes:**
+- Illustration and manga IDs must include the page number, because they may have multiple pages. Ugoira and novel IDs must not include the page number.
+- After importing an ID list, the "Don't download duplicate files" feature is suitable only for the `Loose` strategy. Because this import contains only IDs and no other data, the `Strict` strategy cannot be used.
+
+### Clear
+
+Clear all download records saved by the downloader.
+
+Even if you delete files from your disk, the downloader may still have their download records. When you try to download them again, the downloader will think they were already downloaded and will not download them again.
+
+If this happens, you can clear the download records or disable the "Don't download duplicate files" setting.
+
+?> The downloader displays clear progress in the log at the top of the page. If there are many records, clearing takes some time, so wait until the downloader indicates that it is complete.
+
+## Don't download duplicate files
+
+<div class="option" data-no="28" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=28" target="_blank" class="settingNameStyle" data-xztext="_不下载重复文件">Don't download <span class="key">duplicate</span> files</a>
+      <input type="checkbox" name="deduplication" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="deduplication" style="display: none;">
+        <span data-xztext="_策略">Strategy:</span>
+        <input type="radio" name="dupliStrategy" id="dupliStrategy2" class="need_beautify radio" value="loose">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label class="has_tip active" for="dupliStrategy2" data-xztip="_宽松模式说明" data-xztext="_宽松" data-tip="Judgment conditions: id, upload date of the work">Loose</label>
+        <input type="radio" name="dupliStrategy" id="dupliStrategy1" class="need_beautify radio" value="strict" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label class="has_tip" for="dupliStrategy1" data-xztip="_严格模式说明" data-xztext="_严格" data-tip="Judgment conditions: id, upload date, file name of the work">Strict</label>
+      </span>
+      <button type="button" class="textButton gray1 showMsgBtn" data-title="_不下载重复文件" data-msg="_不下载重复文件的提示" data-xztext="_帮助">Help</button>
+    </div>
+
+This feature depends on the download records saved by the downloader itself.
+
+If you enable this feature, the downloader will check the download records before downloading each file. If the file is a duplicate, the downloader will skip it.
+
+When the downloader skips duplicate files, it displays a list of file IDs in the top log, for example:
+
+<span class="log" style="color: inherit;"><span style="color:#d27e00">因为不下载重复文件，跳过了 1 个文件 : </span><br><a href="https://www.pixiv.net/n/25755517" target="_blank">25755517</a><br></span>
+
+?> This feature takes effect during the download stage. If you want to skip already downloaded works during crawling, enable the crawl setting [Do not crawl already downloaded works](/en/Settings-Crawl?id=do-not-crawl-already-downloaded-works).
+
+### Loose strategy
+
+Checks only 2 conditions: the work ID and the modification date.
+
+It does not check whether the filename is the same.
+
+### Strict strategy
+
+Checks all 3 conditions: the work ID, the modification date, and the filename used at download time.
+
+If the current file has a download record and all three conditions match exactly, it is considered a duplicate file.
+
+### Notes
+
+If a file is skipped, some related tasks will also be skipped, for example:
+- Saving work metadata
+- Saving work descriptions
+- Downloading novel cover images
+- Downloading embedded images in novels
+
+However, the "Bookmark works after downloading" feature is not affected.
+
+## Show border on downloaded works
+
+<div class="option new" data-no="100" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=100" target="_blank" class="settingNameStyle" data-xztext="_在已下载的作品上显示边框">Show <span class="key">border</span> on downloaded works</a>
+      <input type="checkbox" name="showBorderOnDownloadedWorks" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="showBorderOnDownloadedWorks" style="display: none;">
+        <span data-xztext="_宽度">Width</span>
+        <input type="text" name="borderWidth" class="setinput_style1 blue w20" value="3">
+        px
+        <span class="verticalSplit"></span>
+        <span data-xztext="_颜色">Color</span> (Hex)
+        <input type="text" name="borderColor" class="setinput_style1 blue w80" id="borderColor" value="#ff4060">
+      </span>
+    </div>
+
+This feature depends on the download records saved by the downloader itself.
+
+If you want to see at a glance whether a work has already been downloaded, you can enable this setting.
+
+The downloader will display a border on downloaded works. The default border is red, as shown below:
+
+![](./images/20260426_231619.png)
+
+The left one has not been downloaded, and the right one has.
+
+This setting has 2 sub-options: you can set the border width and color. Below is the effect with a border width of `4` px and a color of `#91e2df`:
+
+![](./images/20260426_231819.png)
+
+Known issue:
+
+To prevent the border from being covered or clipped by other elements, the downloader displays it inside the thumbnail area. Because of that, it covers the edge area. This usually does not matter for image works, but on some pages for novel works it may cover the text at the top:
+
+![](./images/20260426_232332.png)
 
 ## Download interval
 
@@ -187,29 +340,29 @@ The default value is 1.
 
 ## Save the novel as
 
-<p class="option" data-no="26" style="display: flex;">
-  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_小说保存格式的说明" data-tip="TXT is a plain text file. When you select TXT format, the pictures in the novel will be saved separately. &lt;br&gt;EPUB is an e-book format, and the pictures in the novel will be embedded in the EPUB file.">
-    <span data-xztext="_小说保存格式">Save the <span class="key">novel</span> as</span>
-    <span class="gray1"> ? </span>
-  </a>
-  <input type="radio" name="novelSaveAs" id="novelSaveAs1" class="need_beautify radio" value="txt">
-  <span class="beautify_radio" tabindex="0"></span>
-  <label for="novelSaveAs1"> TXT </label>
-  <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked>
-  <span class="beautify_radio" tabindex="0"></span>
-  <label for="novelSaveAs2" class="active"> EPUB </label>
-</p>
+<div class="option" data-no="26" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_小说保存格式的说明" data-tip="TXT is a plain text file. When you select TXT format, the pictures in the novel will be saved separately. &lt;br&gt;EPUB is an e-book format, and the pictures in the novel will be embedded in the EPUB file.">
+        <span data-xztext="_小说保存格式">Save the <span class="key">novel</span> as</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked="">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="novelSaveAs2" class="active"> EPUB </label>
+      <input type="radio" name="novelSaveAs" id="novelSaveAs1" class="need_beautify radio" value="txt">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="novelSaveAs1"> TXT </label>
+    </div>
 
 You can choose to save novels in TXT or EPUB format. The default format is EPUB.
 
-I recommend choosing the EPUB format, because the TXT format has some disadvantages:
-- The content of TXT files is plain text and cannot display rich text styles (such as text styles, hyperlinks, etc.).
-- TXT files do not have uniform title level markers. When containing multiple novels (i.e., multiple chapters), many readers cannot correctly recognize the chapter format.
-- TXT files cannot save illustrations inside the novel, so images can only be saved as separate files. Sometimes one TXT file may have more than a dozen related images, which is very messy.
-
-EPUB is an e-book format that can display rich text styles, supports chapter directories, and can save cover images and illustrations internally.
+EPUB is an e-book format that can display rich text styles, supports a table of contents, and can save cover images and illustrations internally.
 
 ?> The EPUB files generated by the downloader follow the EPUB `2.0` standard. Some software cannot open it correctly, such as WPS. Please use a novel reader to open them.
+
+PS: Compared with EPUB, TXT has some disadvantages:
+- TXT files contain only plain text and cannot display rich text styles such as text formatting or hyperlinks.
+- TXT files do not have a unified heading-level structure. When they contain multiple novels or chapters, many readers cannot recognize the chapter structure correctly.
+- TXT files cannot store illustrations inside the novel, so images can only be saved as separate files. Sometimes one TXT file may end up with more than a dozen related images, which becomes messy.
 
 ### Some Readers
 
@@ -334,27 +487,24 @@ The above data volume is relatively small, just for reference, to have a rough i
 
 Due to too many requests, I was warned by Pixiv several times, and one account was even banned. So I gradually increased the interval time to reduce the possibility of being warned.
 
-## Naming rule when merging novel series
+## Split threshold when merging novel series
 
-<p class="option new" data-no="91" style="display: flex;">
-      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=91" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则"><span class="key">Naming</span> rule when merging novel series</a>
-      <span class="rowWrap">
-        <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1"></textarea>
-        <button class="showFileNameTip textButton" id="showSeriesNovelNameTip" type="button" data-xztext="_提示">Tip</button>
-      </span>
-    </p>
+<div class="option new" data-no="105" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=105" target="_blank" class="settingNameStyle">
+        <span data-xztext="_合并系列小说时的分割阈值">Split <span class="key">threshold</span> when merging series novels</span>
+      </a>
+      <input type="text" name="singleEPUBFileSizeLimit" class="setinput_style1 blue" value="200"> MiB
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_合并系列小说时的分割阈值" data-msg="_合并系列小说时的分割阈值的帮助" data-xztext="_帮助">Help</button>
+    </div>
 
-You can set the name of the merged file generated when the downloader merges series novels.
+Some novel series contain a very large number of illustrations and may even exceed 4 GB. If a single EPUB file is too large, it may fail to download, and some readers may not be able to open it. So when merging a novel series, the downloader uses this setting to split the file.
 
-You can click the "Tip" button in the downloader's settings to view detailed instructions; they will not be repeated here.
+If the split threshold is set to 200 MB, then when the downloader merges a novel series with a total size of 1 GB, it will split it into about 5 or 6 files.
 
-The default rule is `novel series/{page_tag}/{series_title}-{series_id}-{user}-{part}-{tags}.{ext}`.
-
-**Note:**
-- This setting only affects the name of the merged file and does not affect the filenames of individual novels.
-- If this merged file has images, the image names will also use this setting to keep the image names consistent with the merged file's name.
-
-For example: If the merged file's name is `abcd.epub`, and the cover image is saved separately, the image's name might be `abcd.png`.
+**Tips:**
+- This setting takes effect only when merging novel series. Individually downloaded novels will not be split.
+- The minimum value is 100 MiB, and the maximum value is 1000 MiB (not recommended).
+- When splitting EPUB files, the downloader does not cut off chapter content. In practice, the downloader checks the size only after adding a chapter, so the chapter at the split point is always complete.
 
 ## Save metadata in the novel
 
@@ -836,125 +986,70 @@ By default, this setting is disabled, and the downloader only sorts crawling res
 
 If this setting is not enabled, the downloader does not guarantee files are saved to disk in strict order, as download times vary, changing the order.
 
-## Don't download duplicate files
+## Save file to the user's last selected location
 
-<p class="option" data-no="28" style="display: flex;">
-    <span data-xztext="_不下载重复文件">Don't download <span class="key">duplicate</span> files</span>
-    <input type="checkbox" name="deduplication" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="deduplication" style="display: none;">
-    &nbsp; <span data-xztext="_Strategy">Strategy:</span>
-    <input type="radio" name="dupliStrategy" id="dupliStrategy1" class="need_beautify radio" value="strict" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label class="has_tip" for="dupliStrategy1" data-xztip="_Description of strict mode" data-xztext="_Strict" data-tip="Conditions: Work ID, upload date, filename">Strict</label>
-    <input type="radio" name="dupliStrategy" id="dupliStrategy2" class="need_beautify radio" value="loose">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label class="has_tip active" for="dupliStrategy2" data-xztip="_Description of loose mode" data-xztext="_Loose" data-tip="Conditions: Work ID, upload date">Loose</label>
-    <button class="textButton gray1" type="button" id="exportDownloadRecord" data-xztext="_Export">Export</button>
-    <button class="textButton gray1" type="button" id="importDownloadRecord" data-xztext="_Import">Import</button>
-    <button class="textButton gray1" type="button" id="clearDownloadRecord" data-xztext="_Clear">Clear</button>
-    </span>
-    </p>
+<div class="option" data-no="20" style="display: flex;">
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=20" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use">
+        <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch" checked="">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_把文件保存到用户上次选择的位置" data-msg="_把文件保存到用户上次选择的位置的说明" data-xztext="_帮助">Help</button>
+    </div>
 
-If you enable this feature, the downloader will skip downloading duplicate files.
+This setting is designed for users who prefer to **save files manually** with the `Save As` dialog and want the downloader to remember the last location they chose.
 
-### How It Works
+If you want to use this feature, note the following:
 
-After successfully downloading a file, the downloader saves a download record in the browser's IndexedDB database, including the work ID, work modification date, and filename at download time. For example:
+- To make this setting work correctly, you must enable `Ask where to save each file before downloading` in the browser's download settings. Otherwise, the browser will not show the Save As dialog, and files will be saved to the browser's configured download location instead of the last location you chose.
+- If you disable `Ask where to save each file before downloading` in the browser's download settings, you should also disable this setting.
+- If you enable this setting, the downloader will not create folders; it will only set the filename. That is because remembering the last save location requires downloading via the `download` attribute of an `a` tag, and folders cannot be created in that case.
+- If you enable this setting, the downloader always assumes the file was downloaded successfully, even if you cancel saving it. This is to simplify processing.
 
-```
-{
-  "id": "85290993_p0",
-  "d": "2021/05/22/13/07/51",
-  "n": "85290993_p0-小日向ほしみ-オリジナル,女の子,オリジナル,waitress,過膝襪.jpg"
-}
-```
+**Technical details:**
 
-?> Even if this feature is not enabled, the downloader saves download records for future use.
+When this setting is disabled (the default), the downloader uses the browser API to download files, for example:
 
-If enabled, the downloader queries records before downloading each file to check if it is a duplicate.
-
-When skipping duplicates, the downloader displays a list of file IDs in the top log, for example:
-
-<span class="log" style="color: inherit;"><span style="color:#d27e00">Skipped 1 file due to skip duplicate files: </span><br><a href="https://www.pixiv.net/n/25755517" target="_blank">25755517</a><br></span>
-
-### Notes
-
-If a file is skipped, some associated tasks are also skipped, such as:
-- Saving work metadata
-- Saving work descriptions
-- Downloading novel cover images
-- Downloading embedded images in novels
-
-However, the "Bookmark works after downloading" feature is unaffected.
-
-!> If you clear "Cookies and other site data" in browser data, the downloader's saved data will also be cleared. If you need the skip duplicate files feature, export download records using the "Export" button before clearing data.
-
-Additionally, this method **is not completely reliable**, as the downloader can only query its own records, not check files on the disk (due to lack of permission).
-
-- If a file you want to download exists on the disk but is not recorded, it will still be downloaded.
-- Conversely, if a file was downloaded before and deleted from the disk but recorded, the downloader will not download it again (unless you disable this feature or change the strategy).
-
-### Strict Strategy
-
-Checks all 3 conditions: Work ID, modification date, filename at download time.
-
-If the current file has a record and all three match exactly, it is considered a duplicate.
-
-### Loose Strategy
-
-Checks only 2 conditions: Work ID, modification date.
-
-Does not check if the filename matches.
-
-### Export
-
-Click the export button to export the downloader's download records. This is a JSON file saved directly to the browser's download directory.
-
-This can be used for backups, such as exporting before clearing browser data. You can also export from one browser and import into another.
-
-?> The downloader displays export progress in the top log. If there are many records, exporting takes time; wait for the downloader to indicate completion.
-
-### Import
-
-Click the import button to select a previously exported download records (JSON file) for import.
-
-Importing does not clear previous records, so you can import multiple files (if any), and the records will be merged.
-
-?> The downloader displays import progress in the top log. If there are many records, importing takes time; wait for the downloader to indicate completion.
-
-### Import ID List
-
-This is a hidden feature; enter the command `recordtxt` on the page to use it (press these keys in sequence on a Pixiv page).
-
-The downloader's "Import" button only imports JSON files, but some users want to import self-made TXT format ID lists, so I added this hidden feature.
-
-**Applicable Scenarios:**
-1. You downloaded many files before using this downloader, without corresponding records, so you want to manually create records.
-2. You accidentally cleared the downloader's records and want to partially rebuild them.
-
-You need to obtain a list of previously downloaded work IDs (e.g., using shell commands to generate a file list) and save it to a TXT file, separated by newlines. The format is as follows:
-
-```
-84334853_p0
-84334853_p1
-84334853_p2
-140035432
-27640268
+```js
+browser.downloads.download({
+  url,
+  filename,
+  conflictAction: 'overwrite',
+  saveAs: false,
+})
 ```
 
-One file ID per line. 
+The downloader sets `saveAs: false` to try to save the file directly.
 
-**Note:**
-- Illustration and manga IDs must include the page number because they may have multiple pages; Ugoira and novels must not include the page number.
-- After importing the ID list, it is suitable only for the "Loose" strategy. Since only IDs are imported without other data, the "Strict" strategy cannot be used.
+If you enable `Ask where to save each file before downloading` in the browser's download settings, the browser will still show the Save As dialog. However, the dialog will always open in the default download folder, not the folder you used last time.
 
-### Clear
+If you enable this setting, the downloader uses the `download` attribute of an `a` tag to download the file. In that case, the Save As dialog opens in the location you saved to last time. The code looks like this:
 
-Clear all download records saved by the downloader.
+```js
+const a = document.createElement('a')
+a.href = url
+a.download = fileName
+a.click()
+```
 
-Even if you delete downloaded files from the disk, records remain. When downloading again, the downloader considers them already downloaded and will not download them.
+## Show notification after download is complete
 
-If you encounter this, clear the records or disable the "Skip duplicate files" option.
+<div class="option" data-no="52" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=52" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载完成后显示通知的说明" data-tip="Show a system notification when all files have been downloaded. May require notification permission.">
+        <span data-xztext="_下载完成后显示通知">Show <span class="key">notification</span> after download is complete</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+    </div>
 
-?> The downloader displays clear progress in the top log. If there are many records, clearing takes time; wait for the downloader to indicate completion.
+If you enable this option, the downloader will display a system notification after all files have finished downloading. It may also request notification permission, and there may be a notification sound depending on your operating system settings.
+
+The style of the notification varies by operating system. On Windows 10, it may look like this in the bottom-right corner of the screen:
+
+![](images/2021-11-07_174613.png)
+
+If you have Do Not Disturb enabled, the notification will be collected into the notification center and will not appear in the bottom-right corner, though there may still be a notification sound.
+
+![](images/20250831_000706.png)

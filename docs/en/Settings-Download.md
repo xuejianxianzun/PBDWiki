@@ -1,47 +1,62 @@
 # Settings-Download
 
-## Naming rule
+## Naming rule for image works
 
-<p class="option" data-no="13" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_Naming Rule"><span class="key">Naming</span> Rule</span>
-    <input type="text" name="userSetName" class="setinput_style1 blue fileNameRule" value="pixiv/{user}-{user_id}/{id}-{title}">
-    &nbsp;
-    <select name="fileNameSelect" class="beautify_scrollbar">
-      <option value="default">…</option>
-      <option value="{id}">{id}</option>
-      <option value="{user}">{user}</option>
-      <option value="{user_id}">{user_id}</option>
-      <option value="{title}">{title}</option>
-      <option value="{page_title}">{page_title}</option>
-      <option value="{tags}">{tags}</option>
-      <option value="{tags_translate}">{tags_translate}</option>
-      <option value="{tags_transl_only}">{tags_transl_only}</option>
-      <option value="{page_tag}">{page_tag}</option>
-      <option value="{type}">{type}</option>
-      <option value="{AI}">{AI}</option>
-      <option value="{like}">{like}</option>
-      <option value="{bmk}">{bmk}</option>
-      <option value="{bmk_1000}">{bmk_1000}</option>
-      <option value="{bmk_id}">{bmk_id}</option>
-      <option value="{view}">{view}</option>
-      <option value="{rank}">{rank}</option>
-      <option value="{date}">{date}</option>
-      <option value="{upload_date}">{upload_date}</option>
-      <option value="{task_date}">{task_date}</option>
-      <option value="{px}">{px}</option>
-      <option value="{series_title}">{series_title}</option>
-      <option value="{series_order}">{series_order}</option>
-      <option value="{series_id}">{series_id}</option>
-      <option value="{id_num}">{id_num}</option>
-      <option value="{p_num}">{p_num}</option>
-      </select>
-    &nbsp;
-    <slot data-name="saveNamingRule"><span class="saveNamingRuleWrap">
-  <button class="nameSave textButton has_tip" type="button" data-xztip="_Save Naming Rule Tip" data-xztext="_Save" data-tip="Save naming rule, up to 20">Save</button>
-  <button class="nameLoad textButton" type="button" data-xztext="_Load">Load</button>
-  <button class="nameLoad textButton" type="button" data-xztext="_Tip">Tip</button>
-  </span></slot>
-    </p>
+<div class="option" data-no="13" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <span class="fileNameRuleLine1">
+        <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download?flag=13" target="_blank" class="settingNameStyle" data-xztext="_图像作品的命名规则"><span class="key">Naming</span> rule for image works</a>
+        <span class="fileNameRuleBtnsArea">
+          <slot data-name="saveNamingRuleForArtwork"><div class="saveNamingRuleWrap theme-white">
+    <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
+    <button class="nameLoad textButton" type="button" data-xztext="_加载">Load</button>
+  </div></slot>
+          <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#fileNameTip" data-for-no="13" data-xztext="_提示">Tip</button>
+          &nbsp;
+          <select name="fileNameSelect" class="beautify_scrollbar">
+            <option value="default">…</option>
+            <option value="{id}">{id}</option>
+<option value="{id_num}">{id_num}</option>
+<option value="{p_num}">{p_num}</option>
+<option value="{user}">{user}</option>
+<option value="{user_id}">{user_id}</option>
+<option value="{title}">{title}</option>
+<option value="{page_title}">{page_title}</option>
+<option value="{tags}">{tags}</option>
+<option value="{tags_translate}">{tags_translate}</option>
+<option value="{tags_transl_only}">{tags_transl_only}</option>
+<option value="{page_tag}">{page_tag}</option>
+<option value="{type}">{type}</option>
+<option value="{type_illust}">{type_illust}</option>
+<option value="{type_manga}">{type_manga}</option>
+<option value="{type_ugoira}">{type_ugoira}</option>
+<option value="{type_novel}">{type_novel}</option>
+<option value="{AI}">{AI}</option>
+<option value="{age}">{age}</option>
+<option value="{age_r}">{age_r}</option>
+<option value="{like}">{like}</option>
+<option value="{bmk}">{bmk}</option>
+<option value="{bmk_1000}">{bmk_1000}</option>
+<option value="{bmk_id}">{bmk_id}</option>
+<option value="{view}">{view}</option>
+<option value="{rank}">{rank}</option>
+<option value="{date}">{date}</option>
+<option value="{upload_date}">{upload_date}</option>
+<option value="{task_date}">{task_date}</option>
+<option value="{px}">{px}</option>
+<option value="{char_count}">{char_count}</option>
+<option value="{series_title}">{series_title}</option>
+<option value="{series_order}">{series_order}</option>
+<option value="{series_id}">{series_id}</option>
+<option value="{sl}">{sl}</option>
+<option value="{multi_image_folder}">{multi_image_folder}</option>
+<option value="{r18_g_folder}">{r18_g_folder}</option>
+<option value="{match_tag_folder1}">{match_tag_folder1}</option>
+<option value="{match_tag_folder2}">{match_tag_folder2}</option>
+          </select>
+        </span>
+      </span>
+      <textarea class="centerPanelTextArea beautify_scrollbar grow fileNameRule" name="userSetName" rows="1" placeholder="pixiv/{user}-{user_id}/{id}-{title}">pixiv/{user}-{user_id}/{id}-{title}</textarea>
+    </div>
 
 This is a very important feature, allowing you to set the **filename** saved by the downloader and **create folders** for organization.
 
@@ -51,11 +66,11 @@ When saving files, the downloader replaces tags in the naming rule to generate f
 
 **Some function buttons:**
 
-You can quickly insert tags from the dropdown menu on the right side of the input box: click a tag to add it to the naming rule. However, this is a Wiki, so it has no effect here.
+The `Save` button saves the current naming rule, and the `Load` button displays previously saved naming rules. With these two buttons, you can save multiple commonly used naming rules and switch between them conveniently.
 
-The `Save` button on the right side of the dropdown saves the current naming rule; the `Load` button displays previously saved naming rules. Using these buttons, you can save multiple commonly used naming tags and switch between them easily.
+The `Tip` button lets you view all tags and their descriptions. However, this is a Wiki, so it has no effect here.
 
-On the right side of this setting, there is a `Tip` button. Clicking it displays all tags and their functions. However, this is a Wiki, so it has no effect here.
+The dropdown list displays all tags. Clicking one inserts it at the cursor position. However, this is a Wiki, so it has no effect here.
 
 ### Creating Folders
 
@@ -157,6 +172,71 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 
 ![](images/20250830_230636.png)
 
+## Naming rule for novels
+
+<div class="option new" data-no="106" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <span class="fileNameRuleLine1">
+        <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download?flag=106" target="_blank" class="settingNameStyle" data-xztext="_小说的命名规则"><span class="key">Naming</span> rule for novels</a>
+        <span class="fileNameRuleBtnsArea">
+          <slot data-name="saveNamingRuleForNovel"><div class="saveNamingRuleWrap theme-white">
+    <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
+    <button class="nameLoad textButton" type="button" data-xztext="_加载">Load</button>
+  </div></slot>
+          <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#fileNameTipForNovel" data-for-no="106" data-xztext="_提示">Tip</button>
+          &nbsp;
+          <select name="fileNameSelectForNovel" class="beautify_scrollbar">
+            <option value="default">…</option>
+            <option value="{id}">{id}</option>
+<option value="{id_num}">{id_num}</option>
+<option value="{p_num}">{p_num}</option>
+<option value="{user}">{user}</option>
+<option value="{user_id}">{user_id}</option>
+<option value="{title}">{title}</option>
+<option value="{page_title}">{page_title}</option>
+<option value="{tags}">{tags}</option>
+<option value="{tags_translate}">{tags_translate}</option>
+<option value="{tags_transl_only}">{tags_transl_only}</option>
+<option value="{page_tag}">{page_tag}</option>
+<option value="{type}">{type}</option>
+<option value="{type_illust}">{type_illust}</option>
+<option value="{type_manga}">{type_manga}</option>
+<option value="{type_ugoira}">{type_ugoira}</option>
+<option value="{type_novel}">{type_novel}</option>
+<option value="{AI}">{AI}</option>
+<option value="{age}">{age}</option>
+<option value="{age_r}">{age_r}</option>
+<option value="{like}">{like}</option>
+<option value="{bmk}">{bmk}</option>
+<option value="{bmk_1000}">{bmk_1000}</option>
+<option value="{bmk_id}">{bmk_id}</option>
+<option value="{view}">{view}</option>
+<option value="{rank}">{rank}</option>
+<option value="{date}">{date}</option>
+<option value="{upload_date}">{upload_date}</option>
+<option value="{task_date}">{task_date}</option>
+<option value="{px}">{px}</option>
+<option value="{char_count}">{char_count}</option>
+<option value="{series_title}">{series_title}</option>
+<option value="{series_order}">{series_order}</option>
+<option value="{series_id}">{series_id}</option>
+<option value="{sl}">{sl}</option>
+<option value="{multi_image_folder}">{multi_image_folder}</option>
+<option value="{r18_g_folder}">{r18_g_folder}</option>
+<option value="{match_tag_folder1}">{match_tag_folder1}</option>
+<option value="{match_tag_folder2}">{match_tag_folder2}</option>
+            <option value="{follow_artwork}">{follow_artwork}</option>
+          </select>
+        </span>
+      </span>
+      <textarea class="centerPanelTextArea beautify_scrollbar grow fileNameRule" name="userSetNameForNovel" rows="1" placeholder="{follow_artwork}">{follow_artwork}</textarea>
+    </div>
+
+Novels can use the same naming tags as image works, and they also have one special tag:
+
+`{follow_artwork}` follows the naming rule for image works. It is also the default value, meaning novels use the same naming rule as image works. If you want to set an independent naming rule for novels, remove this tag and configure the naming rule as needed.
+
+PS: This setting affects only the filenames of individual novels. It does not affect the filename of the merged collection file generated for a novel series. That has a separate naming setting.
+
 ## Use different naming rules in different page types
 
 <p class="option" data-no="50" style="display: flex;">
@@ -181,28 +261,34 @@ If you want to set independent naming rules for each page type, enable this sett
 
 For example, if downloading from a user's homepage, don't switch to a search page. If downloading from a work page, don't switch to a user's homepage or search page.
 
-## Do not create a folder when there is only one crawl result
+## Do not create folder
 
-<p class="option" data-no="64" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Tip for Not Creating Folders with One Crawl Result" data-tip="Takes effect when there is only one crawl result.">
-    <span data-xztext="_只有一个抓取结果时不建立文件夹"><span class="key">Do not create</span> a folder when there is only one crawl result</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="notFolderWhenOneFile" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    </p>
+<div class="option new" data-no="64" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download?flag=64" target="_blank" class="settingNameStyle">
+        <span data-xztext="_不创建文件夹">Do <span class="key">not create</span> folder</span>
+      </a>
+      <input type="checkbox" name="noFolderSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap noGrow" data-show="noFolderSwitch" style="display: none;">
+        <input type="checkbox" name="noFolderWhenSingleImageWork" id="noFolderWhenSingleImageWork" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="noFolderWhenSingleImageWork" data-xztext="_单图作品" class="active">Single image works</label>
+        <input type="checkbox" name="noFolderWhenMultiImageWork" id="noFolderWhenMultiImageWork" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="noFolderWhenMultiImageWork" data-xztext="_多图作品">Multi-image works</label>
+        <input type="checkbox" name="noFolderWhenNovel" id="noFolderWhenNovel" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="noFolderWhenNovel" data-xztext="_小说">Novels</label>
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_以下情况不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
+    </div>
 
-Sometimes users prefer not to create folders when downloading a single file, saving directly to the download directory, so this option was added.
+If your naming rule creates folders, but you want some works to be saved directly in the download directory instead, you can enable this setting.
 
-When enabled, if there is **only one** crawl result, the downloader will not create folders (even if folders are specified in the naming rule).
-
-**Notes:**
-
-This option applies when there is exactly one crawl result in **total**.
-
-Some users may mistakenly think this means "if a work has only one file to download, don't create a folder," which is incorrect. The key is whether the total number of crawl results is one.
-
-For example, crawling 10 works, each with one image, results in 10 crawl results. This option will not take effect in this case.
+You can choose which types of works should not create folders:
+- Single-image works
+- Multi-image works
+- Novels
 
 ## Download thread
 
@@ -225,14 +311,14 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
 
 ## Download starts automatically
 
-<p class="option" data-no="17" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Auto-Start Download Tip" data-tip="When the 'Start Download' status is available, automatically start downloading without clicking the download button.">
-    <span data-xztext="_自动开始下载">Download starts <span class="key">automatically</span></span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="autoStartDownload" id="setQuietDownload" class="need_beautify checkbox_switch" checked="">
-    <span class="beautify_switch" tabindex="0"></span>
-    </p>
+<div class="option" data-no="17" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download?flag=17" target="_blank" class="settingNameStyle">
+        <span data-xztext="_自动开始下载">Download starts <span class="key">automatically</span></span>
+      </a>
+      <input type="checkbox" name="autoStartDownload" class="need_beautify checkbox_switch" checked="">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
+    </div>
 
 When crawling is complete and downloading can begin, the downloader will automatically start downloading.
 
@@ -249,53 +335,6 @@ When crawling on a **search page** with the [Preview filter results on search pa
 - Clicking the download button in the image viewer.
 - Pressing the `C` or `D` shortcut key to download a work during preview.
 - Crawling manually selected works.
-
-## Save file to the user's last selected location
-
-<p class="option new" data-no="20" style="display: flex;">
-      <a href="https://xuejianxianzun.github.io/PBDWiki/" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use">
-        <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
-        <span class="gray1"> ? </span>
-      </a>
-      <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch" checked="">
-      <span class="beautify_switch" tabindex="0"></span>
-      <button type="button" class="gray1 textButton" id="showRememberTheLastSaveLocationTip" data-xztext="_提示">Tip</button>
-    </p>
-
-This setting is designed for users who prefer **manual file saving**, who like to use the "Save As" dialog to save files and hope that the downloader can remember the last save location.
-
-If you want to use this feature, please note:
-
-- To make this setting work correctly, you must enable "Ask where to save each file before downloading" in the browser's download settings; otherwise, the browser will not display the Save As dialog, and the file will be saved to the save location set in the browser settings (not the last selected location).
-- If you have disabled "Ask where to save each file before downloading" in the browser's download settings, you should also disable this setting.
-- If you enable this setting, the downloader will not create folders, only set the filename. This is because achieving the "remember last save location" effect requires using the download attribute of the a tag to download the file, at which time folders cannot be created.
-- If you enable this setting, the downloader always assumes that this file is downloaded successfully (even if you cancel saving this file). This is to simplify processing.
-
-**Technical Details:**
-
-When this setting is off (default), the downloader uses the browser's API to download files, for example:
-
-```js
-browser.downloads.download({
-  url,
-  filename,
-  conflictAction: 'overwrite',
-  saveAs: false,
-})
-```
-
-The downloader sets `saveAs: false` to attempt to save the file directly.
-
-If you enable "Ask where to save each file before downloading" in the browser's download settings, the browser will still display the Save As dialog. But at this time, the folder opened by the dialog is always the default download location, not the location you manually saved last time.
-
-If you enable this setting, the downloader will use the download attribute of the a tag to download the file, at which time the Save As dialog opens to the location you manually saved last time. The code is as follows:
-
-```js
-const a = document.createElement('a')
-a.href = url
-a.download = fileName
-a.click()
-```
 
 ## Bookmark works after downloading
 
@@ -322,4 +361,4 @@ After downloading, if the bookmark progress shows matching numbers, e.g., `Bookm
 2. A work may have multiple files but is bookmarked only once. If the bookmark count is less than the file count, this is normal, as the bookmark count reflects the number of works, not files.
 3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
 
-If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader' bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩).
+If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).

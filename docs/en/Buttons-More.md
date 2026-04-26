@@ -63,7 +63,7 @@ The downloader crawls all works on the current page and automatically adds them 
 **Notes:**
 - This feature works on both image and novel category pages.
 - The downloader only crawls the current page (one page only), not subsequent pages.
-- When using this feature to add bookmarks, whether they are public or tagged follows the settings in [Downloader' bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩).
+- When using this feature to add bookmarks, whether they are public or tagged follows the settings in [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).
 - This feature does not apply filter conditions. Even if you set a bookmark count filter, works below the threshold will still be bookmarked. If you want to apply filters, use the regular crawl and download process with the [Bookmark works after downloading](/en/Settings-Download?id=Bookmark-Works-After-Downloading) feature instead.
 
 When using this feature, the button displays progress information. The downloader first shows the progress of crawling works, then the progress of adding bookmarks. For example:
@@ -193,7 +193,7 @@ Click this button to select a previously exported bookmark list (JSON file) and 
 **Tips:**
 - You can export another user's bookmark list and import it into your own.
 - When on another user's bookmark page, you can still use this feature. The downloader always adds imported works to your bookmarks.
-- When importing bookmarks, the downloader will decide whether to add tags and whether to make the bookmarks public according to the settings of [Downloader's bookmark function (✩)](/en/Settings-More-Enhance?flag=34). The default values of these settings are to add tags and make bookmarks public. If you want to use different settings, you can modify them before importing.
+- When importing bookmarks, the downloader will decide whether to add tags and whether to make the bookmarks public according to the settings of [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34). The default values of these settings are to add tags and make bookmarks public. If you want to use different settings, you can modify them before importing.
 - If the imported list includes works you've already bookmarked, the final bookmark count may be lower than expected, which is normal. For example, if you import 48 works and 20 are already bookmarked, your bookmark count will increase by only 28.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page, e.g., "Bookmarking works 5/48".

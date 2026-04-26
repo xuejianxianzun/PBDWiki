@@ -118,48 +118,6 @@ Since this setting was designed for a specific user, it has special rules:
 
 To view this setting, follow the steps for the previous setting, but use the selector `p[data-no="80"]`.
 
-## Create Folders Based on sl
-
-Create folders based on the `sl` attribute in a work's metadata.
-
-This feature is disabled by default and not available in the settings panel.
-
-**What is `sl`?**
-
-`sl` is a field in a work's data, possibly indicating the "erotic level" rating of the work.
-
-`sl` values and their roles (speculated):
-
-- `0`: Newly posted works typically have this value, possibly indicating no rating yet. After some time, it changes to another value.
-- `2`: These works generally have no erotic elements.
-- `4`: These works often have some erotic elements, such as large breasts, exposed thighs, or revealing clothing, but usually not at an R-18 level.
-- `6`: These works typically have very obvious erotic elements, possibly R-18. Even if not R-18, they may include suggestive content.
-
-This feature creates folders based on the work's `sl` attribute, resulting in folder names like:
-
-- sl0
-- sl2
-- sl4
-- sl6
-
-?> Novels do not have `sl` data, so this feature does not apply to novels. It only works for illustrations, manga, and Ugoira.
-
-------------
-
-To enable/disable this feature:
-
-Enter one of the following commands on a Pixiv page (type the letters sequentially using the keyboard):
-
-- `ppdss1`
-- `switchsl`
-- `kaiguansl`
-
-If the command is correct, the downloader displays a prompt at the mouse cursor's position. The prompts for enabling/disabling are:
-
-<span class="xzToast success">createFolderBySl On</span>
-
-<span class="xzToast warning">createFolderBySl Off</span>
-
 ## Prioritize Downloading Ugoira
 
 This feature is disabled by default and not available in the settings panel.

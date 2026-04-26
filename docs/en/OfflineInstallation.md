@@ -62,4 +62,6 @@ The extension should now appear in the extension management page:
 
 It will have an orange disk icon next to it, indicating it is a local extension. Its user experience is identical to the online-installed version, but it **cannot update automatically**.
 
-?> After offline installation, if you have any open Pixiv pages in the browser, refresh them to use the newly installed extension.
+**Notes:**
+- After the offline installation, if you already have Pixiv pages open in the browser, refresh them so the newly installed extension can take effect.
+- Do not delete the extracted `powerfulpixivdownloader` folder from your disk. Otherwise, the extension will not be able to run.

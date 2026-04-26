@@ -1,38 +1,24 @@
 # Settings - More - Naming
 
-## Create a separate folder for each work
+## Add a folder layer for multi-image works
 
-<p class="option" data-no="19" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_为作品建立单独的文件夹">Create a separate folder for <span class="key">each</span> work</span>
-    <input type="checkbox" name="workDir" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="workDir" style="display: none;">
-    <label for="workDirFileNumber" data-xztext="_Number of files greater than">Number of files &gt;</label>
-    <input type="text" name="workDirFileNumber" id="workDirFileNumber" class="setinput_style1 blue" value="1" style="width:30px;min-width: 30px;">
-    <span>&nbsp;</span>
-    <label for="workDirNameRule" data-xztext="_Folder name">Name</label>
-    <input class="has_tip setinput_style1 blue" type="text" data-xztip="_Use id_num instead of id" name="workDirNameRule" id="workDirNameRule" value="{id_num}" data-tip="Use {id_num} instead of {id} here">
-    </span>
-    </p>
+<div class="option new" data-no="19" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=19" target="_blank" class="settingNameStyle" data-xztext="_为多图作品添加一层文件夹">Add a folder layer for <span class="key">multi-image</span> works</a>
+      <input type="checkbox" name="folderForMultiImageWorksSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_为多图作品添加一层文件夹" data-msg="为多图作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
+      <span class="subOptionWrap" data-show="folderForMultiImageWorksSwitch" style="display: none;">
+        <label for="folderForMultiImageWorksImageNumber" data-xztext="_图片数量2">Number of images</label>
+        &gt;
+        <input class="setinput_style1 blue w150 noGrow" type="text" name="folderForMultiImageWorksImageNumber" id="folderForMultiImageWorksImageNumber" value="1">
+        <label for="folderForMultiImageWorksRule" data-xztext="_文件夹规则">Folder rule</label>
+        <input class="setinput_style1 blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{id_num}">
+      </span>
+    </div>
 
-The downloader can create a separate folder for each work.
+The downloader can add a separate folder layer for multi-image works. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
 
-**Sub-options:**
-
-- `Number of files`: The downloader will create a folder for a work only if the number of files in that work exceeds the set value. The default is 1, which means folders are created only for multi-image works. You can set other values. If set to 0, a folder will be created for every work (though this is unnecessary since the same effect can be achieved using the "naming rule").
-- `Folder name`: The name of the folder created for the work. You can use tags from the naming rule or use `/` to create subfolders. The default value is `{id_num}`, which uses the work ID (without sequence numbers) to create a folder and store files inside it.
-
-If the number of files in a work meets the condition, the downloader will insert the folder name before the filename, creating a folder:
-
-![](images/20250909_192314.png)
-
-!> Do not use the `{id}` tag here; use `{id_num}` instead. This is because each image in a multi-image work has a different `{id}`. Using `{id}` would result in a separate folder for each image.
-
----
-
-For example, take work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_blank'), which has 3 images.
-
-When this feature is enabled, the downloader will, by default, place the images in a folder named after the work's ID, like this:
+For example, work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_blank') has 3 images. After enabling this feature, you can put those images into a folder named with the work ID, like this:
 
 ```
 79239641/
@@ -41,115 +27,115 @@ When this feature is enabled, the downloader will, by default, place the images 
   |---- 79239641_p2.jpg
 ```
 
-## Create folders based on the type of work
+**Sub-options:**
 
-<p class="option" data-no="42" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of automatically creating folders by work type" data-tip="Folder name for illustrations: Illustration&lt;br&gt;
-Folder name for manga: Manga&lt;br&gt;
-Folder name for Ugoira: Ugoira&lt;br&gt;
-Folder name for novels: Novel">
-    <span data-xztext="_根据作品类型自动建立文件夹">Create folders based on the <span class="key">type</span> of work</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="createFolderByType" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="createFolderByType" style="display: none;">
-    <input type="checkbox" name="createFolderByTypeIllust" id="createFolderByTypeIllust" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="createFolderByTypeIllust" class="has_tip" data-tip="Illustration">
-    <span data-xztext="_Illustration">Illustration</span></label>
-    <input type="checkbox" name="createFolderByTypeManga" id="createFolderByTypeManga" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="createFolderByTypeManga" class="has_tip" data-tip="Manga">
-    <span data-xztext="_Manga">Manga</span></label>
-    <input type="checkbox" name="createFolderByTypeUgoira" id="createFolderByTypeUgoira" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="createFolderByTypeUgoira" class="has_tip" data-tip="Ugoira">
-    <span data-xztext="_Ugoira">Ugoira</span></label>
-    <input type="checkbox" name="createFolderByTypeNovel" id="createFolderByTypeNovel" class="need_beautify checkbox_common">
-    <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="createFolderByTypeNovel" class="has_tip" data-tip="Novel">
-    <span data-xztext="_Novel">Novel</span></label>
-    </span></p>
+- `Image count`: The downloader adds the configured folder only when the number of images in the work is greater than this value. The default is 1, so it applies to all multi-image works. You can set other values if needed.
+- `Folder rule`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{id_num}`, which uses the work ID without the page number.
 
-You can select **any number** of these options, and the downloader will automatically create folders based on the work type.
+After that, you also need to modify the `Naming rule for image works` setting and insert `/{multi_image_folder}/` where needed to add the folder layer. Example: `pixiv/{user}-{user_id}/{multi_image_folder}/{id}-{title}`
 
-If a folder needs to be created for a work, the downloader will add a folder before the filename:
-
-![](images/20250909_192431.png)
-
-- If `Illustration` is selected, illustration works will be stored in the `Illustration` folder.
-- If `Manga` is selected, manga works will be stored in the `Manga` folder.
-- If `Ugoira` is selected, Ugoira works will be stored in the `Ugoira` folder.
-- If `Novel` is selected, novel works will be stored in the `Novel` folder.
-
-?> There is a similar naming tag: `{type}`. It outputs the work type, and using it to create folders is equivalent to selecting all four options in this setting. However, `{type}` creates folders for all work types and cannot limit to specific types. If you only want folders for certain types (e.g., only for "Ugoira"), use this setting.
-
-## Create a folder with the first matched tag
-
-<p class="option" data-no="43" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of creating folders using matching tags" data-tip="If the work's tag list contains a user-specified tag, that tag will be used to create a folder (only the first matching tag is used)">
-    <span data-xztext="_使用第一个匹配的tag建立文件夹">Create a folder with the first matched <span class="key">tag</span></span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="createFolderByTag" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="createFolderByTag" style="display: none;">
-    <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList" rows="1" placeholder="tag1,tag2,tag3"></textarea>
-    </span>
-    </p>
-
-When this setting is enabled, users can input a list of tags.
-
-When downloading each file, the downloader checks if the work's tags include **any** of the tags specified here. Once a matching tag is found , it will use that tag to create a folder.
-
-If you set multiple tags, such as `tag1,tag2,tag3`, and the work also has multiple matching tags, such as `tag2,tag3`, the downloader will only create a folder with the **first** matching tag, which is `tag2`.
-
-This setting allows you to categorize files with specific tags separately.
-
----
-
-For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the tag "Original":
-
-![](images/20250910_224628.png)
-
-If you include `Original` in this setting, the downloader will create an "Original" folder to store this work:
-
-![](images/20250910_224541.png)
-
----
-
-Another use case: 
-
-Some users want to save `R-18` and `R-18G` works into **two** separate folders. In this case, you can enter `R-18,R-18G` in this setting. When a work contains the `R-18` tag, an `R-18` folder will be created; if it contains the `R-18G` tag, an `R-18G` folder will be created.
-
-## Save the R-18(G) works in the designated folder
-
-<p class="option" data-no="38" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_把r18作品存入指定的文件夹里">Save the <span class="key">R-18(G)</span> works in the designated folder</span>
-    <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="r18Folder" style="display: none;">
-    <span data-xztext="_Folder Name">Folder Name</span>
-    <input type="text" name="r18FolderName" class="setinput_style1 blue" style="width:150px;min-width: 150px;" value="[R-18&amp;R-18G]">
-    </span>
-    </p>
-
-If this setting is enabled, the downloader will save R-18(G) works to a **subfolder**.
-
-The downloader inserts the folder name from this setting **before** the filename:
-
-![](images/20250909_013552.png)
-
-If the naming rule already creates folders, this option's folder becomes the deepest folder. Example:
-
-![](images/20250910_200559.png)
+You need to insert this tag manually so you can decide where this folder layer should appear. Usually it is placed before the filename, but some users may want it in a higher-level folder or even inside the filename.
 
 **Tips:**
 
-- You can modify the folder name here; you can use tags from the naming rules.
-- Both R-18 and R-18G works will be stored in the folder specified here and cannot be separated into different folders.
-- You can use the naming tag `{age_r}` to replace this setting. `{age_r}` can output `R-18` or `R-18G` individually, and it can also be placed anywhere in the naming rule, making it more flexible.
+- If you want to use the work ID in the folder name, do not use `{id}`. Use `{id_num}` instead. In a multi-image work, each image has a different `{id}`, so using `{id}` would create a separate folder for each image.
+- Although the setting name says `add one folder layer`, you can actually configure multiple nested folders here.
+- `{multi_image_folder}` itself does not create a folder unless your folder rule already ends with a slash `/`. So in most cases you need to add `/` after it. But this can also be useful: if you do not want to create a folder and only want to mark multi-image works in the filename, you can use it in the filename directly. For example, if the folder rule is `multi-image` and you add it to the filename like `pixiv/{user}-{user_id}/{id}-{multi_image_folder}`, the filename will include the `multi-image` marker.
+
+## Add a folder layer for R-18(G) works
+
+<div class="option" data-no="38" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=38" target="_blank" class="settingNameStyle" data-xztext="_为r18作品添加一层文件夹">Add a folder layer for <span class="key">R-18(G)</span> works</a>
+      <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="r18Folder" style="display: none;">
+        <span data-xztext="_文件夹规则">Folder rule</span>
+        <input type="text" name="r18FolderName" class="setinput_style1 blue grow" value="[R-18&amp;R-18G]">
+      </span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_为r18作品添加一层文件夹" data-msg="_为r18作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
+    </div>
+
+If you want to put R-18(G) works into a separate folder layer, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+
+To make this setting take effect, you also need to modify the naming rule and use `{r18_g_folder}` to represent the folder rule configured here. When downloading an R-18(G) work, the downloader replaces `{r18_g_folder}` with the folder rule set here.
+
+## Create a folder with the first matched tag
+
+<div class="option" data-no="43" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=43" target="_blank" class="settingNameStyle">
+        <span data-xztext="_使用第一个匹配的标签建立文件夹">Create a folder with the first matched <span class="key">tag</span></span>
+      </a>
+      <input type="checkbox" name="createFolderByTag" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_使用第一个匹配的标签建立文件夹" data-msg="_使用第一个匹配的标签建立文件夹的说明" data-xztext="_帮助">Help</button>
+      <span class="subOptionWrap namingTipArea flexBasis100" data-show="createFolderByTag" style="display: none;">
+        <span class="name" data-bind-copy="true">{match_tag_folder1}</span>
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList" rows="1" placeholder="tag1,tag2,tag3"></textarea>
+        <span class="name" data-bind-copy="true">{match_tag_folder2}</span>
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList2" rows="1" placeholder="tag1,tag2,tag3"></textarea>
+      </span>
+    </div>
+
+If you want to create a special folder layer when a work contains certain tags, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+
+For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the `Original` tag:
+
+![](images/20250910_224628.png)
+
+If you include `Original` in this setting, the downloader will create an `Original` folder for this work:
+
+![](images/20250910_224541.png)
+
+----------
+
+After enabling this setting, you can configure two tag lists.
+
+When downloading each file, the downloader checks whether the work's tags contain **any** of the tags you configured here. Once it finds a matching tag, it uses that tag to create a folder.
+
+This setting lets you categorize files with specific tags separately.
+
+## Tag alias
+
+<div class="option new" data-no="107" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=107" target="_blank" class="settingNameStyle">
+        <span data-xztext="_标签别名">Tag <span class="key">alias</span></span>
+      </a>
+      <label for="useTagAliasForTagsNamingRule" data-xztext="_应用到文件名里的tags系列标记" class="">{tags} series tokens applied to the file name</label>
+      <input type="checkbox" name="useTagAliasForTagsNamingRule" id="useTagAliasForTagsNamingRule" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_标签别名" data-msg="_标签别名的帮助" data-xztext="_帮助">Help</button>
+    </div>
+
+If a tag has multiple variants, you can set a custom alias for them. Example:
+
+![](images/20260426_191855.png)
+
+This alias can be used both for `Create a folder with the first matched tag` and for the `{tags}`-related naming tags.
+
+There is a `Help` button on the right side of this setting. Click it to view the detailed instructions. In the Wiki it has no effect.
+
+## Starting value of serial numbers
+
+<div class="option new" data-no="98" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=98" target="_blank" class="has_tip settingNameStyle" data-xztip="_序号起始值的说明" data-tip="Set whether the image serial number starts from 0 or from 1">
+        <span data-xztext="_序号起始值"><span class="key">Serial number</span> starting value</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="radio" name="serialNoStart" id="serialNoStart0" class="need_beautify radio" value="0" checked="">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="serialNoStart0" class="active"> 0 </label>
+      <input type="radio" name="serialNoStart" id="serialNoStart1" class="need_beautify radio" value="1">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="serialNoStart1"> 1 </label>
+    </div>
+
+You can choose whether image serial numbers start from `0` or from `1`.
+
+By default, the downloader starts from `0`, because Pixiv image filenames also start from `p0`. If you want them to start from `1`, you can change this setting.
+
+This setting affects naming tags that include serial numbers: `{id}` and `{p_num}`.
+
+**Note:** If you change the serial number to start from `1` and also enable `Don't download duplicate files`, keep this in mind: the old download record for the same file may use `0`, while the new filename uses `1`, so the filenames will differ. In that case, the `Strict` strategy will download the file again, while the `Loose` strategy will not.
 
 ## The first image without a serial number
 
@@ -447,3 +433,64 @@ You can set a fixed name for them here.
 For example, if a user's name is in Japanese but you don't input Japanese and it's inconvenient to search on your device, you can set a English alias (or another language you can use) for easier searching.
 
 If a user's name is hard to remember, you can also set an easy-to-remember alias.
+
+## Remove Emoji from filename
+
+<div class="option new" data-no="97" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=97" target="_blank" class="settingNameStyle">
+        <span data-xztext="_移除文件名里的emoji">Remove <span class="key">Emoji</span> from filename</span>
+      </a>
+      <input type="checkbox" name="removeEmoji" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+    </div>
+
+Usernames and work titles often contain emoji. If you do not want emoji to appear in filenames, you can enable this setting.
+
+## Date and time format
+
+<div class="option" data-no="31" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Other?flag=31" target="_blank" class="settingNameStyle" data-xztext="_日期格式">Date and time <span class="key">format</span></a>
+      <input type="text" name="dateFormat" class="setinput_style1 blue" style="width:250px;" value="YYYY-MM-DD">
+      <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="31" data-xztext="_提示">Tip</button>
+    </div>
+
+Some naming tags in the downloader generate date and time strings:
+- `{date}`
+- `{upload_date}`
+- `{task_date}`
+
+Their default format is `YYYY-MM-DD` (for example `2021-04-30`), which includes only the date and not the time.
+
+If you want to change the format, modify this setting.
+
+For a time such as `2021-04-30T06:40:08`, the available tags and their outputs are as follows (**case-sensitive**):
+
+- `YYYY` 2021
+- `YY` 21
+- `MM` 04
+- `MMM` Apr
+- `MMMM` April
+- `DD` 30
+- `hh` 06
+- `mm` 40
+- `ss` 08
+
+## Naming rule when merging novel series
+
+<div class="option" data-no="91" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Naming?flag=91" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则"><span class="key">Naming</span> rule when merging novel series</a>
+      <span class="rowWrap">
+        <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1">novel series/{page_tag}/{series_title}-{series_id}-{user}-{part}-{tags}.{ext}</textarea>
+        <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#seriesNovelNameTip" data-for-no="91" data-xztext="_提示">Tip</button>
+      </span>
+    </div>
+
+You can set the filename of the merged collection file generated when the downloader merges a novel series.
+
+You can click the `Tip` button for this setting in the downloader panel to view the detailed explanation, so it will not be repeated here.
+
+**Notes:**
+- This setting affects only the name of the merged collection file. It does not affect the filenames of individual novels.
+- If the merged collection includes images, the image filenames will also use this setting so that they stay consistent with the merged collection filename.
+
+For example, if the merged collection file is named `abcd.epub` and the cover image is also saved separately, the image file may be named `abcd.png`.

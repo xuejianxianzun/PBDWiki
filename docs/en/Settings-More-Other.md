@@ -1,34 +1,5 @@
 # Settings - More - Other
 
-## Date and Time Format
-
-<p class="option" data-no="31" style="display: flex;">
-    <span class="settingNameStyle1" data-xztext="_Date format">Date and time <span class="key">format</span></span>
-    <input type="text" name="dateFormat" class="setinput_style1 blue" style="width:250px;" value="YYYY-MM-DD">
-    <button type="button" class="gray1 textButton showDateTip" data-xztext="_Tips">Tips</button>
-    </p>
-
-The downloader's naming rules include markers that generate date and time strings:
-- `{date}`
-- `{upload_date}`
-- `{task_date}`
-
-Their default format is `YYYY-MM-DD` (e.g., `2021-04-30`), which includes only the date, not the time.
-
-You can modify this setting to change their format.
-
-For a time like `2021-04-30T06:40:08`, the available markers and their outputs are as follows (**case-sensitive**):
-
-- `YYYY` 2021
-- `YY` 21
-- `MM` 04
-- `MMM` Apr
-- `MMMM` April
-- `DD` 30
-- `hh` 06
-- `mm` 40
-- `ss` 08
-
 ### Default visibility of the log area
 
 <p class="option new" data-no="93" style="display: flex;">

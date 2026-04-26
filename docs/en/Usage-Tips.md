@@ -12,7 +12,7 @@ Using naming tags effectively can help you organize and sort files. Below are so
 - Place the `{bmk}` tag at the start of the file name to sort downloaded files by bookmark count.
 - When downloading your bookmarks, use `{bmk_id}` at the start of the file name to sort files in the order you bookmarked them.
 
-See detailed explanation: [Naming rule](/en/Settings-Download?id=naming-rule).
+See detailed explanation: [Naming rule for image works](/en/Settings-Download?id=naming-rules-for-image-works).
 
 ## Timed Crawl
 
@@ -24,9 +24,13 @@ See detailed explanation: [Timed crawl](/en/Buttons-Crawl?id=timed-crawl).
 
 If you previously downloaded works from a user or page and want to download new works added later, follow the guidelines below.
 
-First, I recommend enabling the [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) function in the "More" tab to avoid unnecessary duplicate downloads.
+### Recommended Settings
 
-Below are methods to help crawl new works, which you can use as needed.
+First, I recommend enabling these two settings:
+- [Do not crawl already downloaded works](/en/Settings-Crawl?id=do-not-crawl-already-downloaded-works) in the "Crawl" tab. If a work has a download record, it can be skipped directly.
+- [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) in the "More" tab. If a file has a download record, it will not be downloaded again.
+
+Usually these are enough. If you want to narrow the crawl range further, you can also use the methods below.
 
 ### Set ID Range
 

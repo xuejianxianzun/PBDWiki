@@ -76,9 +76,7 @@ Downloads
 │          99276627_p1.png
 ```
 
-First, ensure that your naming rule includes the username to create a folder, such as `{user}/{id}`. The default naming rule `pixiv/{user}-{user_id}/{id}-{title}` also uses the username to create a folder.
-
-Then enable this setting: [Create a separate folder for each work](/en/Settings-More-Naming?id=Create-a-Separate-Folder-for-Each-Work).
+Please check this setting: [Add a folder layer for multi-image works](/en/Settings-More-Naming?id=add-a-folder-layer-for-multi-image-works).
 
 ## Crawling Completed, but No Works Match the Filter Conditions
 

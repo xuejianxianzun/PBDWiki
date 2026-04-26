@@ -46,7 +46,7 @@ In other words, this button has both add bookmark and unbookmark functions, swit
 
 ------------
 
-You can modify this button's behavior in the [Downloader' bookmark function (✩)](/en/Settings-More-Enhance?id=downloader39-bookmark-function-✩) settings: whether to add tags and whether the bookmark is public.
+You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34) settings: whether to add tags and whether the bookmark is public.
 
 ## Preview Works
 
@@ -107,7 +107,7 @@ The downloader includes a built-in image viewer, as shown below:
 There are several function buttons below the image viewer:
 - `1:1`: Click this button, and the image will be displayed at a 1:1 ratio. If the image size exceeds the screen, you can use the left mouse button to drag the image. Clicking this button again will restore the image to adaptive display. Its shortcut key is `F`.
 - `🔗`: Click this button, and the downloader will copy the URL of the work page to the clipboard. Its shortcut key is `L`.
-- `✩`: Bookmark this work (using the downloader's quick bookmark function). Its shortcut key is `Alt` + `B`.
+- `✩`: Bookmark this work (using the downloader's quick bookmark function). Its shortcut key is `B`.
 - Copy button: Click it to copy the images and text summary of the work. Its shortcut key is `Alt` + `C`.
 - `↓` Download the currently displayed image (not all images in this work). Its shortcut key is `C`.
 - `↓↓↓` Download this work. Its shortcut key is `D`.
@@ -122,7 +122,7 @@ There are multiple ways to exit the image viewer:
 **Shortcut Key List:**
 
 - `F` Display at original size; Return to initial ratio
-- `Alt` + `B` Bookmark this work
+- `B` Bookmark this work
 - `Alt` + `C` Click the copy button
 - `C` Download the currently displayed image
 - `D` Download the currently viewed work

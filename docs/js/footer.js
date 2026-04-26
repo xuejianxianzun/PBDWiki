@@ -5,8 +5,7 @@ window.$docsify.plugins = [].concat(window.$docsify.plugins || [], [
     hook.doneEach(function () {
       resetImageSize()
       findID()
-      // 延时 1 秒，确保页面渲染完成后再滚动到目标位置。如果时间太短（例如 500 ms）经常无法生效
-      window.setTimeout(scrollToTarget, 1000)
+      scrollToTarget()
     })
   },
 ])
@@ -132,8 +131,12 @@ function changeHash (a) {
 
 // 跳转到子标题时，经常不能定位到目标位置，特别是这个页面里的条目很多时，如果跳转到靠近底部的条目，默认的滚动位置往往是偏上的。
 // 这里手动滚动一次来修正位置
-function scrollToTarget () {
+async function scrollToTarget () {
   if (location.href.includes('?id=')) {
+    // 等待页面可见后再滚动到目标位置。因为如果页面不可见（主要是在后台打开标签页时），滚动操作可能会被浏览器忽略，导致无法正确定位到目标位置
+    await waitPageVisible()
+    // 延时 1 秒，确保页面渲染完成后再滚动到目标位置。如果时间太短经常无法生效
+    await sleep(1000)
     let id = location.href.split('?id=').pop()
     if (id) {
       id = decodeURIComponent(id)
@@ -151,5 +154,60 @@ function scrollToTarget () {
         }
       }
     }
+  }
+}
+
+async function waitPageVisible () {
+  return new Promise((resolve) => {
+    if (document.visibilityState === 'visible') {
+      resolve()
+    } else {
+      document.addEventListener('visibilitychange', function onVisibilityChange () {
+        if (document.visibilityState === 'visible') {
+          document.removeEventListener('visibilitychange', onVisibilityChange)
+          resolve()
+        }
+      })
+    }
+  })
+}
+
+async function sleep (ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+// 监听按键事件，如果连续按下 ppdtask 则显示 prompt 输入框。提示：
+// 输入 1 打开所有跳转链接
+let keySequence = ''
+document.addEventListener('keydown', function (event) {
+  keySequence += event.key
+  if (keySequence.endsWith('ppdtask')) {
+    keySequence = ''
+    const input = prompt('输入 1 打开所有跳转链接')
+    if (input === '1') {
+      jumpLinks()
+    }
+  }
+})
+
+// 打开右侧文章区域里的所有站内跳转链接，以便检查链接是否正确
+async function jumpLinks () {
+  const links = document.querySelectorAll('.markdown-section a')
+  for (const link of links) {
+    // 排除标题等级里的 A 标签
+    if (link.classList.contains('anchor')) {
+      continue
+    }
+    // 排除站外链接。因为站内链接不以协议开头
+    const href = link.getAttribute('href')
+    if (!href || href.startsWith('http') || href.startsWith('https')) {
+      continue
+    }
+
+    if (href.startsWith('#/zh-cn/') || href.startsWith('#/en/')) {
+      console.log(`${href}`)
+    }
+    await sleep(500)
+    window.open(link.href, '_blank')
   }
 }

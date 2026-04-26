@@ -767,3 +767,47 @@ p.result .color000 {
   padding-right: 4px;
   line-height: 26px;
 }
+.option .fileNameRuleLine1 {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4px;
+}
+.option .fileNameRuleBtnsArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+}
+.option .grow {
+  flex-grow: 1;
+}
+.option .noGrow {
+  flex-grow: 0;
+}
+.option .flexBasis100 {
+  flex-basis: 100%;
+}
+.option a.settingNameStyle {
+  color: unset !important;
+  font-weight: 400;
+  text-decoration: none;
+}
+.option .rowWrap {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pinButton {
+  display: none;
+}
+li > ul.app-sub-sidebar > li::before {
+  content: "🌼";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.1em;
+  color: #aaa;
+}

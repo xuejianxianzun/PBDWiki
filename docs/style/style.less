@@ -930,4 +930,60 @@ p.result {
       }
     }
   }
+
+  .fileNameRuleLine1 {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  .fileNameRuleBtnsArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  .noGrow {
+    flex-grow: 0;
+  }
+
+  .flexBasis100 {
+    flex-basis: 100%;
+  }
+
+  a.settingNameStyle {
+    color: unset !important;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .rowWrap {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
+
+.pinButton {
+  display: none;
+}
+
+// 在左侧的设置项目录前面显示一个图标，以区分它和它的子项目
+li>ul.app-sub-sidebar>li::before {
+  content: "🌼";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.1em;
+  color: #aaa;
+}
+
+// lessc docs/style/style.less docs/style/style.css

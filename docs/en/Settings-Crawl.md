@@ -324,47 +324,6 @@ Single-image works have only one image; multi-image works contain multiple image
 
 ![](images/20250829_232042.png)
 
-## Multi-image works only download the first few images
-
-<p class="option" data-no="3" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_MustBeGreaterThan0" data-tip="Must be greater than 0">
-    <span data-xztext="_多图作品只下载前几张图片">Multi-image works only crawl the <span class="key">first few</span> images</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="firstFewImagesSwitch" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="firstFewImagesSwitch" style="display: none;">
-    <input type="text" name="firstFewImages" class="setinput_style1 blue" value="1">
-    </span>
-    </p>
-
-You can choose to download only the first few images of multi-image works.
-
--------
-
-In some multi-image works, the first image is the most valuable. For example, the first image may be in color, while the following images are black-and-white or promotional. In such cases, you can set the number to 1 to download only the first image.
-
-You can also use this setting to avoid downloading too many images.
-
-?> If the set number is greater than or equal to the number of images in the work, the downloader will save all images, equivalent to no limit.
-
-## Maximum number of images for multi-image works
-
-<p class="option" data-no="47" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_MultiImageWorkLimitTip" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work.">
-    <span data-xztext="_多图作品的图片数量上限"><span class="key">Maximum number</span> of images for multi-image works</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="multiImageWorkImageLimitSwitch" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="multiImageWorkImageLimitSwitch" style="display: none;">
-    &lt;=&nbsp;
-    <input type="text" name="multiImageWorkImageLimit" class="setinput_style1 blue" value="1">
-    </span>
-    </p>
-
-If a multi-image work has more images than the set number, the downloader will not crawl that work.
-
 ## Do not crawl already downloaded works
 
 <p class="option" data-no="99" style="display: flex;">
@@ -380,7 +339,10 @@ If you enable this feature, the downloader will check whether each work has a do
 
 In addition, when merging a novel series, enabling this setting can skip novels that already have download records and merge only newly added novels in the series.
 
-**Note:** This feature depends on the download records saved by the downloader, so it is not completely accurate. If you clear the downloader's download records, it will forget which files it has downloaded. If you want to learn more about the downloader's download records, see [Manage download records](/en/Settings-More-Download?id=manage-download-records).
+**Notes:**
+- This feature depends on the download records saved by the downloader, so it is not completely accurate. If you clear the downloader's download records, it will forget which files it has downloaded. If you want to learn more about the downloader's download records, see [Manage download records](/en/Settings-More-Download?id=manage-download-records).
+- This feature does not work for novel series, because the downloader does not save download records for novel series.
+- For multi-image works, the downloader checks only whether the first image has a download record. So as long as you downloaded the first image, the downloader can show a border for that work. But if you did not download the first image and downloaded only later images, the downloader will not show a border for it.
 
 ## Number of bookmarks
 
