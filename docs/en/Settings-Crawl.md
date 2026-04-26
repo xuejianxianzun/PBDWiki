@@ -365,6 +365,23 @@ You can also use this setting to avoid downloading too many images.
 
 If a multi-image work has more images than the set number, the downloader will not crawl that work.
 
+## Do not crawl already downloaded works
+
+<p class="option" data-no="99" style="display: flex;">
+   <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=99" target="_blank" class="has_tip settingNameStyle" data-xztip="_不抓取下载过的作品的说明" data-tip="If the downloader has a download record for this work, it will not be crawled.">
+     <span data-xztext="_不抓取下载过的作品">Do not crawl <span class="key">already downloaded</span> works</span>
+     <span class="gray1"> ? </span>
+   </a>
+   <input type="checkbox" name="DonotCrawlAlreadyDownloadedWorks" class="need_beautify checkbox_switch">
+   <span class="beautify_switch" tabindex="0"></span>
+</p>
+
+If you enable this feature, the downloader will check whether each work has a download record before crawling it. If it does, the downloader will skip it. This reduces unnecessary crawling and saves time. This feature is also useful for incremental updates, because you can crawl only works that have not been downloaded.
+
+In addition, when merging a novel series, enabling this setting can skip novels that already have download records and merge only newly added novels in the series.
+
+**Note:** This feature depends on the download records saved by the downloader, so it is not completely accurate. If you clear the downloader's download records, it will forget which files it has downloaded. If you want to learn more about the downloader's download records, see [Manage download records](/en/Settings-More-Download?id=manage-download-records).
+
 ## Number of bookmarks
 
 <p class="option" data-no="5" style="display: flex;">
@@ -523,24 +540,48 @@ You can also manually set the range of the image aspect ratio.
 ## ID range
 
 <p class="option" data-no="9" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_SetIDRangeTip" data-tip="You can enter a work ID to crawl works newer or older than it">
-    <span data-xztext="_id范围"><span class="key">ID</span> range</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="checkbox" name="idRangeSwitch" class="need_beautify checkbox_switch">
-    <span class="beautify_switch" tabindex="0"></span>
-    <span class="subOptionWrap" data-show="idRangeSwitch" style="display: none;">
-    <input type="radio" name="idRange" id="idRange1" class="need_beautify radio" value="&gt;" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="idRange1" class="active">&gt;</label>
-    <input type="radio" name="idRange" id="idRange2" class="need_beautify radio" value="&lt;">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="idRange2">&lt;</label>
-    <input type="text" name="idRangeInput" class="setinput_style1 w100 blue" value="0" placeholder="0">
-    </span>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Crawl?flag=9" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置id范围提示" data-tip="You can enter a work ID to crawl works with IDs larger than it (new works) or smaller than it (old works)">
+        <span data-xztext="_id范围"><span class="key">ID</span> range</span>
+        <span class="gray1"> ? </span>
+      </a>
+      <input type="checkbox" name="idRangeSwitch" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <span class="subOptionWrap" data-show="idRangeSwitch" style="display: none;">
+        <span data-xztext="_图像作品">Image works</span>
+        <input type="radio" name="idRangeComparisonForImageWorks" id="idRangeComparisonForImageWorks1" class="need_beautify radio" value="&gt;" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForImageWorks1" class="active">&gt;</label>
+        <input type="radio" name="idRangeComparisonForImageWorks" id="idRangeComparisonForImageWorks2" class="need_beautify radio" value="&lt;">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForImageWorks2">&lt;</label>
+        <input type="text" name="idRangeValueForImageWorks" class="setinput_style1 w80 blue" value="0" placeholder="0">
+        <span data-xztext="_小说">Novels</span>
+        <input type="radio" name="idRangeComparisonForNovelWorks" id="idRangeComparisonForNovelWorks1" class="need_beautify radio" value="&gt;" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForNovelWorks1" class="active">&gt;</label>
+        <input type="radio" name="idRangeComparisonForNovelWorks" id="idRangeComparisonForNovelWorks2" class="need_beautify radio" value="&lt;">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForNovelWorks2">&lt;</label>
+        <input type="text" name="idRangeValueForNovelWorks" class="setinput_style1 w80 blue" value="0" placeholder="0">
+        <span data-xztext="_系列小说">Novel series</span>
+        <input type="radio" name="idRangeComparisonForNovelSeries" id="idRangeComparisonForNovelSeries1" class="need_beautify radio" value="&gt;" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForNovelSeries1" class="active">&gt;</label>
+        <input type="radio" name="idRangeComparisonForNovelSeries" id="idRangeComparisonForNovelSeries2" class="need_beautify radio" value="&lt;">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="idRangeComparisonForNovelSeries2">&lt;</label>
+        <input type="text" name="idRangeValueForNovelSeries" class="setinput_style1 w80 blue" value="0" placeholder="0">
+      </span>
     </p>
 
-You can download only works with IDs greater than or less than a specific ID.
+You can enter a work ID and crawl works with IDs greater than it (newer works) or less than it (older works).
+
+It is divided into 3 work types:
+- `Image works`: including illustration, manga, and Ugoira
+- `Novel`
+- `Novel series`
+
+You can set the ID for each type according to your needs.
 
 ### Tip: Incremental Update
 

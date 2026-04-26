@@ -23,23 +23,6 @@ docsify serve docs
 - 简体中文
 - English
 
-由于我的能力和精力有限，所以现在只有两种语言。如果你使用其他语言，可以使用浏览器或扩展程序的网页翻译功能。也欢迎你把文档翻译成其他语言。
+现在只有两种语言。如果你使用其他语言，可以使用浏览器或扩展程序的网页翻译功能。也欢迎你把文档翻译成其他语言。
 
-Due to my limited ability and energy, there are currently only two languages ​​available. If you use another language, you can use the web translation function of your browser or extension. You are also welcome to translate the document into other languages.
-
----------
-
-以下页面里有一些针对中国大陆用户显示的提示，在其他语言的翻译里应该去掉。
-
-- 简介
-- 赞助我
-- 联系我
-- 在线更新
-- 常见问题
-
-## 术语
-
-下载器有很多设置项。在这个 Wiki 里，可以根据设置项的特征使用不同的称呼，使含义更准确：
-- 设置：可以让用户输入数字、文字的；有子选项的。
-- 选项：只有一个开关的简单的设置项。
-- 功能：涉及 UI，会让用户在网页上看到效果的。它的意义很宽泛，有些“设置”或“选项”也可以称为“功能”。
+Currently, only two languages are available. If you use another language, you can use the webpage translation feature in your browser or extension. You are also welcome to translate the documentation into other languages.

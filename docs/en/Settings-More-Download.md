@@ -1,5 +1,7 @@
 # Settings - More - Download
 
+## Manage download records
+
 ## Show notification after download is complete
 
 <p class="option" data-no="52" style="display: flex;">

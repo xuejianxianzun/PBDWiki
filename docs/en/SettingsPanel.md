@@ -74,6 +74,22 @@ Some settings have a question mark after their names. Hovering the mouse over th
 
 If you want to view more detailed instructions, you can click on the name of the setting item, or long press on the solid color button, and the downloader will open the corresponding Wiki page.
 
+## Pin Settings
+
+The downloader has nearly 100 settings, so it often takes some time to find a specific one. To improve efficiency, I added a feature that lets you pin settings to the top.
+
+You can pin the settings you use most often, and they will always stay at the top (they will still be shown even if you have not enabled "Show Advanced Settings"). This not only helps you quickly find the settings you need, but also lets you keep advanced settings hidden most of the time, making the interface cleaner.
+
+There are 2 ways to pin a setting:
+1. Move the mouse pointer over a setting, then click the pin icon on the left.
+2. Press and hold the setting name for 0.5 seconds.
+
+Repeat the same action to unpin it.
+
+The effect of pinned settings is shown below:
+
+![](images/20260423_005305.png)
+
 ## How Settings Work
 
 **Load Settings When Opening a Tab:**
