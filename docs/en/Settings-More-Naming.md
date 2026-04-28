@@ -12,7 +12,7 @@
         &gt;
         <input class="setinput_style1 blue w150 noGrow" type="text" name="folderForMultiImageWorksImageNumber" id="folderForMultiImageWorksImageNumber" value="1">
         <label for="folderForMultiImageWorksRule" data-xztext="_文件夹规则">Folder rule</label>
-        <input class="setinput_style1 blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{id_num}">
+        <input class="setinput_style1 blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{pid}">
       </span>
     </div>
 
@@ -30,7 +30,7 @@ For example, work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_b
 **Sub-options:**
 
 - `Image count`: The downloader adds the configured folder only when the number of images in the work is greater than this value. The default is 1, so it applies to all multi-image works. You can set other values if needed.
-- `Folder rule`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{id_num}`, which uses the work ID without the page number.
+- `Folder rule`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{pid}`, which uses the work ID without the page number.
 
 After that, you also need to modify the `Naming rule for image works` setting and insert `/{multi_image_folder}/` where needed to add the folder layer. Example: `pixiv/{user}-{user_id}/{multi_image_folder}/{id}-{title}`
 
@@ -38,7 +38,7 @@ You need to insert this tag manually so you can decide where this folder layer s
 
 **Tips:**
 
-- If you want to use the work ID in the folder name, do not use `{id}`. Use `{id_num}` instead. In a multi-image work, each image has a different `{id}`, so using `{id}` would create a separate folder for each image.
+- If you want to use the work ID in the folder name, do not use `{id}`. Use `{pid}` instead. In a multi-image work, each image has a different `{id}`, so using `{id}` would create a separate folder for each image.
 - Although the setting name says `add one folder layer`, you can actually configure multiple nested folders here.
 - `{multi_image_folder}` itself does not create a folder unless your folder rule already ends with a slash `/`. So in most cases you need to add `/` after it. But this can also be useful: if you do not want to create a folder and only want to mark multi-image works in the filename, you can use it in the filename directly. For example, if the folder rule is `multi-image` and you add it to the filename like `pixiv/{user}-{user_id}/{id}-{multi_image_folder}`, the filename will include the `multi-image` marker.
 
@@ -133,7 +133,7 @@ You can choose whether image serial numbers start from `0` or from `1`.
 
 By default, the downloader starts from `0`, because Pixiv image filenames also start from `p0`. If you want them to start from `1`, you can change this setting.
 
-This setting affects naming tags that include serial numbers: `{id}` and `{p_num}`.
+This setting affects naming tags that include serial numbers: `{id}` and `{p}`.
 
 **Note:** If you change the serial number to start from `1` and also enable `Don't download duplicate files`, keep this in mind: the old download record for the same file may use `0`, while the new filename uses `1`, so the filenames will differ. In that case, the `Strict` strategy will download the file again, while the `Loose` strategy will not.
 
@@ -183,7 +183,7 @@ If you enable this option, the downloader will remove the sequence number from t
 - `Multi-image works`: Remove the sequence number for the first image of multi-image works.
 - `Ugoira`: Remove the sequence number for Ugoira works.
 
-?> The naming tag `{p_num}` also outputs sequence numbers, but as plain numbers `0`, `1`, `2`. This setting also applies to `{p_num}`, meaning it can remove the `0` output by `{p_num}`.
+?> The naming tag `{p}` also outputs sequence numbers, but as plain numbers `0`, `1`, `2`. This setting also applies to `{p}`, meaning it can remove the `0` output by `{p}`.
 
 ## Add 0 in front of the serial number
 

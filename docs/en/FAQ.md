@@ -289,9 +289,9 @@ If this setting is enabled, every file will trigger a "Save As" dialog, so you s
 
 **Reason 2**: There may be duplicate file names. Check your naming rule.
 
-If your naming rule includes `{id}` or `{id_num}` + `{p_num}`, there should be no duplicate file names; otherwise, duplicates may occur.
+If your naming rule includes `{id}` or `{pid}` + `{p}`, there should be no duplicate file names; otherwise, duplicates may occur.
 
-For example, for work ID 78279423 with three images, `{id}` or `{p_num}` adds a sequence number to avoid duplicates:
+For example, for work ID 78279423 with three images, `{id}` or `{p}` adds a sequence number to avoid duplicates:
 
 ```
 78279423_p0.jpg
@@ -307,7 +307,7 @@ Without a sequence number, duplicates occur:
 78279423.jpg
 ```
 
-If the naming rule does not include `{id}` or `{p_num}`, watch out for potential duplicate file names.
+If the naming rule does not include `{id}` or `{p}`, watch out for potential duplicate file names.
 
 **Reason 3**: The file name may be too long.
 

@@ -15,8 +15,8 @@
           <select name="fileNameSelect" class="beautify_scrollbar">
             <option value="default">…</option>
             <option value="{id}">{id}</option>
-<option value="{id_num}">{id_num}</option>
-<option value="{p_num}">{p_num}</option>
+<option value="{pid}">{pid}</option>
+<option value="{p}">{p}</option>
 <option value="{user}">{user}</option>
 <option value="{user_id}">{user_id}</option>
 <option value="{title}">{title}</option>
@@ -96,7 +96,7 @@ Example effect:
 - If you use `{tags_translate}`, there's no need to use `{tags}`, as the former includes the latter. Translated content depends on your Pixiv language settings. For example, if your Pixiv interface is in Chinese, tag translations are typically in Chinese.
 - `{tags_transl_only}` saves only translated tags, not original Japanese tags. If a tag has no translation, the original Japanese tag is saved.
 - Filenames must include a **unique identifier** to prevent duplicates, which could cause files to overwrite each other or trigger a save-as dialog.
-- The default naming rule's `{id}` is the unique identifier. Some users may want to replace `{id}` with `{id_num}` and `{p_num}`. This is possible, but both must be used together, not individually. This is because multi-image works have multiple images with the same `{id_num}`, and `{p_num}` is needed to differentiate them.
+- The default naming rule's `{id}` is the unique identifier. Some users may want to replace `{id}` with `{pid}` and `{p}`. This is possible, but both must be used together, not individually. This is because multi-image works have multiple images with the same `{pid}`, and `{p}` is needed to differentiate them.
 - `{bmk_1000}` doesn't show the exact bookmark count but displays an integer in units of 1000 with a `+` (below 1000 displays as `0+`). This makes bookmark counts less cluttered.
 - When saving files, if a file with the same name exists, the downloader will overwrite it rather than appending a number. Most PC browsers do this, but Edge Canary on Android may append a number instead.
 - Filenames may exceed the operating system's length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
@@ -106,9 +106,9 @@ Example effect:
 
 #### Remove the p tag in {id}
 
-`{id}` includes the page number, for example `44920385_p0`. If you want to remove `_p`, you can replace `{id}` with `{id_num} {p_num}`, which will generate `44920385 0`.
+`{id}` includes the page number, for example `44920385_p0`. If you want to remove `_p`, you can replace `{id}` with `{pid} {p}`, which will generate `44920385 0`.
 
-?>Note: If you want to replace `{id}`, the naming rule must include both `{id_num}` and `{p_num}` to prevent duplicate filenames.
+?>Note: If you want to replace `{id}`, the naming rule must include both `{pid}` and `{p}` to prevent duplicate filenames.
 
 #### Remove the sequence number from the first image of each work
 
@@ -187,8 +187,8 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
           <select name="fileNameSelectForNovel" class="beautify_scrollbar">
             <option value="default">…</option>
             <option value="{id}">{id}</option>
-<option value="{id_num}">{id_num}</option>
-<option value="{p_num}">{p_num}</option>
+<option value="{pid}">{pid}</option>
+<option value="{p}">{p}</option>
 <option value="{user}">{user}</option>
 <option value="{user_id}">{user_id}</option>
 <option value="{title}">{title}</option>
