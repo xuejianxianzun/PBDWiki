@@ -281,43 +281,56 @@ Like button:
 
 ## Save the ugoira work as
 
-<p class="option" data-no="4" style="display: flex;">
-    <span class="has_tip settingNameStyle1" data-xztip="_Description of Ugoira save format" data-tip="Pixiv's Ugoira source file is a Zip compressed file containing multiple static images. The downloader can convert it to other formats. &lt;br&gt;
-WebM video has the smallest size with minimal quality loss. It is the default choice. &lt;br&gt;
-GIF images have the best compatibility but are larger in size and have poorer quality, not recommended. &lt;br&gt;
-APNG images are lossless compressed with the best quality, but usually the largest in size. &lt;br&gt;
-Zip file is the source file.">
-    <span data-xztext="_动图保存格式">Save the <span class="key">ugoira</span> work as</span>
-    <span class="gray1"> ? </span>
-    </span>
-    <input type="radio" name="ugoiraSaveAs" id="ugoiraSaveAs1" class="need_beautify radio" value="webm" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="ugoiraSaveAs1" data-xztext="_WebM video" class="active">WebM video</label>
-    <input type="radio" name="ugoiraSaveAs" id="ugoiraSaveAs3" class="need_beautify radio" value="gif"> 
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="ugoiraSaveAs3" data-xztext="_GIF">GIF image</label>
-    <input type="radio" name="ugoiraSaveAs" id="ugoiraSaveAs4" class="need_beautify radio" value="png"> 
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="ugoiraSaveAs4" class="has_tip" data-xztip="_Lossless" data-xztext="_APNG" data-tip="Lossless">APNG image</label>
-    <input type="radio" name="ugoiraSaveAs" id="ugoiraSaveAs2" class="need_beautify radio" value="zip"> 
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="ugoiraSaveAs2" data-xztext="_Zip file">Zip file</label>
-    </p>
+<div class="option" data-no="4" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+      <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=4" target="_blank" class="settingNameStyle">
+        <span data-xztext="_动图保存格式">Save the <span class="key">ugoira</span> work as</span>
+      </a>
+      <button type="button" class="textButton gray1 showMsgBtn" data-title="_动图保存格式" data-msg="_动图保存格式的说明" data-xztext="_帮助">Help</button>
+      <span class="subOptionWrap flexBasis100" style="display: inline-flex;">
+        <input type="checkbox" name="ugoiraSaveAsWebP" id="ugoiraSaveAsWebP" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsWebP" data-xztext="_webp图片" class="active">WebP image</label>
+        <input type="checkbox" name="ugoiraSaveAsWebM" id="ugoiraSaveAsWebM" class="need_beautify checkbox_common">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsWebM" data-xztext="_webmVideo">WebM video</label>
+        <input type="checkbox" name="ugoiraSaveAsGIF" id="ugoiraSaveAsGIF" class="need_beautify checkbox_common">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsGIF" data-xztext="_gif图片">GIF image</label>
+        <input type="checkbox" name="ugoiraSaveAsAPNG" id="ugoiraSaveAsAPNG" class="need_beautify checkbox_common">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsAPNG" data-xztext="_apng图片">APNG image</label>
+        <input type="checkbox" name="ugoiraSaveAsZIP" id="ugoiraSaveAsZIP" class="need_beautify checkbox_common">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsZIP" data-xztext="_zip文件">ZIP file</label>
+        <input type="checkbox" name="ugoiraSaveAsUgoira" id="ugoiraSaveAsUgoira" class="need_beautify checkbox_common">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="ugoiraSaveAsUgoira" data-xztext="_Ugoira文件" class="">Ugoira file</label>
+        <span class="verticalSplit"></span>
+        <span data-xztext="_WebP图像质量">WebP image quality</span>
+        <input type="radio" name="animatedWebPQuality" id="webpUgoiraQuality0" class="need_beautify radio" value="lossy" checked="">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="webpUgoiraQuality0" data-xztext="_有损" class="active">Lossy</label>
+        <input type="radio" name="animatedWebPQuality" id="webpUgoiraQuality1" class="need_beautify radio" value="lossless">
+        <span class="beautify_radio" tabindex="0"></span>
+        <label for="webpUgoiraQuality1" data-xztext="_无损">Lossless</label>
+        <span class="verticalSplit"></span>
+        <label for="saveThumbnailForUgoira" data-xztext="_为动图保存一张缩略图" class="">Save a thumbnail for Ugoira</label>
+        <input type="checkbox" name="saveThumbnailForUgoira" id="saveThumbnailForUgoira" class="need_beautify checkbox_switch">
+        <span class="beautify_switch" tabindex="0"></span>
+      </span>
+    </div>
 
-When downloading Ugoira works, the downloader can save them in various formats. You can choose one based on your needs.
+The downloader can save Ugoira in multiple formats. You can choose one or more formats depending on your needs.
 
-**Characteristics of Each Format:**
+Click the `Help` button on the right side of this setting to view the detailed explanation.
 
-- WebM video has high quality and small size, making it the default option. However, it may be inconvenient on mobile devices as it requires a video player to open.
-- GIF image is a common animated image format with good compatibility, but poor quality and larger size.
-- APNG image is a **lossless** quality animated image format. It has the best quality but the largest size. Additionally, its compatibility is not great, as some image viewers or applications do not support playing APNG images.
-- Zip file is the original Ugoira file, unconverted. It contains multiple static images without animation effects.
+**Tips:**
 
-**Reminder:**
-
-- Converting Ugoira to other formats takes some time, possibly from a few seconds to a few minutes, depending on the original size, volume, and target format of the Ugoira.
+- The default format is a WebP image (lossy).
+- Saving Ugoira as ZIP or as a Ugoira file does not require conversion, so it is very fast. All other formats require conversion.
+- Converting Ugoira to another format takes some time, possibly from a few seconds to a few minutes, depending on the original resolution, file size, and target format.
 - During Ugoira conversion, the downloader's progress bar may not change, which is normal as the downloader is waiting for the conversion to complete.
-- Converting Ugoira affects the usability of the page it is on. The page can be scrolled, but interaction with elements on the page is blocked. This is because some synchronous code executes for a long time, blocking the user thread.
+- The WebM files generated by Firefox are smaller than those generated by Chrome. On average they are about 40% of Chrome's size, with a lower bitrate as well. This is because the two browsers use different built-in `VideoEncoder` implementations.
 
 ## How many animations are converted at the same time 
 
@@ -332,15 +345,15 @@ Recommended not to exceed 3.">
 
 The default value is 1.
 
-**Explanation:**
+**Tips:**
 
-- Compared to downloading static images, converting Ugoira uses more CPU and memory resources.
-- Converting multiple Ugoira simultaneously increases resource usage. If a page uses too much memory, it may crash, so this value should not be set too high. Recommended not to exceed 3.
+- Converting Ugoira uses quite a lot of CPU and memory.
+- Converting multiple Ugoira simultaneously increases resource usage. If a page uses too much memory, it may crash, so this value should not be set too high. It is recommended not to exceed 3.
 - The number of simultaneous Ugoira conversions will not exceed the number of simultaneous downloads. If the downloader downloads 3 files simultaneously, at most 3 Ugoira will be converted simultaneously.
 
 ## Save the novel as
 
-<div class="option" data-no="26" style="display: flex;"><button type="button" class="pinButton" data-title="_置顶">📌</button>
+<div class="option" data-no="26" style="display: flex;">
       <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-More-Download?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_小说保存格式的说明" data-tip="TXT is a plain text file. When you select TXT format, the pictures in the novel will be saved separately. &lt;br&gt;EPUB is an e-book format, and the pictures in the novel will be embedded in the EPUB file.">
         <span data-xztext="_小说保存格式">Save the <span class="key">novel</span> as</span>
         <span class="gray1"> ? </span>

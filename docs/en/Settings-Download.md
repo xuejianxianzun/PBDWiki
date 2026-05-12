@@ -269,26 +269,26 @@ For example, if downloading from a user's homepage, don't switch to a search pag
       </a>
       <input type="checkbox" name="noFolderSwitch" class="need_beautify checkbox_switch">
       <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray1 textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
       <span class="subOptionWrap noGrow" data-show="noFolderSwitch" style="display: none;">
-        <input type="checkbox" name="noFolderWhenSingleImageWork" id="noFolderWhenSingleImageWork" class="need_beautify checkbox_common" checked="">
+        <input type="checkbox" name="noFolderWhenDownload1Image" id="noFolderWhenDownload1Image" class="need_beautify checkbox_common" checked="">
         <span class="beautify_checkbox" tabindex="0"></span>
-        <label for="noFolderWhenSingleImageWork" data-xztext="_单图作品" class="active">Single image works</label>
-        <input type="checkbox" name="noFolderWhenMultiImageWork" id="noFolderWhenMultiImageWork" class="need_beautify checkbox_common" checked="">
+        <label for="noFolderWhenDownload1Image" data-xztext="_从插画漫画里下载1张图片时" class="active">When downloading 1 image from an illustration or manga</label>
+        <input type="checkbox" name="noFolderWhenDownloadMultipleImages" id="noFolderWhenDownloadMultipleImages" class="need_beautify checkbox_common">
         <span class="beautify_checkbox" tabindex="0"></span>
-        <label for="noFolderWhenMultiImageWork" data-xztext="_多图作品">Multi-image works</label>
-        <input type="checkbox" name="noFolderWhenNovel" id="noFolderWhenNovel" class="need_beautify checkbox_common" checked="">
+        <label for="noFolderWhenDownloadMultipleImages" data-xztext="_从插画漫画里下载多张图片时">When downloading multiple images from an illustration or manga</label>
+        <input type="checkbox" name="noFolderWhenUgoira" id="noFolderWhenUgoira" class="need_beautify checkbox_common" checked="">
+        <span class="beautify_checkbox" tabindex="0"></span>
+        <label for="noFolderWhenUgoira" data-xztext="_动图" class="active">Ugoira</label>
+        <input type="checkbox" name="noFolderWhenNovel" id="noFolderWhenNovel" class="need_beautify checkbox_common">
         <span class="beautify_checkbox" tabindex="0"></span>
         <label for="noFolderWhenNovel" data-xztext="_小说">Novels</label>
       </span>
-      <button type="button" class="gray1 textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_以下情况不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
     </div>
 
-If your naming rule creates folders, but you want some works to be saved directly in the download directory instead, you can enable this setting.
+If your naming rule creates folders, but you want some downloaded files to be saved directly in the download directory instead, you can enable this setting.
 
-You can choose which types of works should not create folders:
-- Single-image works
-- Multi-image works
-- Novels
+This setting has multiple sub-options. Whether folders are skipped can depend on the work type and on how many images are downloaded from the work. Click the `Help` button on the right side of this setting to view the detailed explanation.
 
 ## Download thread
 
