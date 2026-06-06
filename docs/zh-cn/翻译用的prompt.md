@@ -40,34 +40,9 @@
 
 ## 中文文件与英语文件的对照表
 
-| 中文文件                          | 英语文件                                           |
-| --------------------------------- | -------------------------------------------------- |
-| docs\zh-cn\安装之后.md            | docs\en\AfterInstallation.md                       |
-| docs\zh-cn\按钮-更多.md           | docs\en\Buttons-More.md                            |
-| docs\zh-cn\按钮-下载.md           | docs\en\Buttons-Download.md                        |
-| docs\zh-cn\按钮-抓取.md           | docs\en\Buttons-Crawl.md                           |
-| docs\zh-cn\便捷功能.md            | docs\en\Convenience-Features.md                    |
-| docs\zh-cn\常见问题.md            | docs\en\FAQ.md                                     |
-| docs\zh-cn\初次下载.md            | docs\en\FirstDownload.md                           |
-| docs/zh-cn/简介.md                | docs/en/Introduction.md                            |
-| docs/zh-cn/离线安装.md            | docs/en/OfflineInstallation.md                     |
-| docs/zh-cn/联系我.md              | docs/en/Contact-Me.md                              |
-| docs/zh-cn/如何更新.md            | docs/en/HowToUpdate.md                             |
-| docs/zh-cn/设置-更多.md           | docs/en/Settings-More.md                           |
-| docs/zh-cn/设置-更多-命名.md      | docs/en/Settings-More-Naming.md                    |
-| docs/zh-cn/设置-更多-其他.md      | docs/en/Settings-More-Other.md                     |
-| docs/zh-cn/设置-更多-下载.md      | docs/en/Settings-More-Download.md                  |
-| docs/zh-cn/设置-更多-隐藏设置.md  | docs/en/Settings-More-Hidden-Settings.md           |
-| docs/zh-cn/设置-更多-增强.md      | docs/en/Settings-More-Enhance.md                   |
-| docs/zh-cn/设置-更多-抓取.md      | docs/en/Settings-More-Crawl.md                     |
-| docs/zh-cn/设置面板.md            | docs/en/SettingsPanel.md                           |
-| docs/zh-cn/设置-下载.md           | docs/en/Settings-Download.md                       |
-| docs/zh-cn/设置-抓取.md           | docs/en/Settings-Crawl.md                          |
-| docs/zh-cn/使用技巧.md            | docs/en/Usage-Tips.md                              |
-| docs/zh-cn/使用小号下载.md        | docs/en/Using-Secondary-Account-for-Downloading.md |
-| docs/zh-cn/在线安装.md            | docs/en/OnlineInstallation.md                      |
-| docs/zh-cn/赞助我.md              | docs/en/Support-Me.md                              |
-| docs/zh-cn/MicrosoftEdgeCanary.md | docs/en/MicrosoftEdgeCanary.md                     |
+你可以读取简体中文的导航目录 `docs\zh-cn\_sidebar.md` 和英语的导航目录 `docs\en\_sidebar.md` 并建立对照列表，里面的每个超链接都指向一个文件，这些文件是一一对应的。
+
+不在 `_sidebar.md` 里的文件不需要翻译成英语，例如：`README.md`、`翻译用的prompt.md`（本文件）。
 
 ## 我可能使用不同的方式让你进行翻译
 
