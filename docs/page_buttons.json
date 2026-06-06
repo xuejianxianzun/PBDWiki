@@ -1,0 +1,172 @@
+[
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-通用",
+      "en": "Buttons-Start crawl-General"
+    },
+    "ids": [
+      "startCrawling",
+      "stopCrawling",
+      "scheduleCrawling",
+      "cancelScheduledCrawling",
+      "manuallySelectWork",
+      "clearSelectedWork",
+      "crawlSelectedWork"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-首页",
+      "en": "Buttons-Start crawl-HomePage"
+    },
+    "ids": ["crawlById", "crawlIdRange", "importIDList"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-作品页面",
+      "en": "Buttons-Start crawl-WorkPage"
+    },
+    "ids": [
+      "startCrawlingFromCurrentPageNew",
+      "startCrawlingFromCurrentPageOld",
+      "crawlRelatedWork",
+      "downloadRecommendedWorks"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-系列小说页面",
+      "en": "Buttons-Start crawl-Novel series page"
+    },
+    "ids": ["crawlSeriesNovel", "mergeSeriesNovel"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-搜索页面",
+      "en": "Buttons-Start crawl-SearchPage"
+    },
+    "ids": [
+      "crawlTagList",
+      "filterResults",
+      "clearMultiImageWork",
+      "clearUgoiraWork",
+      "manuallyDeleteWork"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-排行榜",
+      "en": "Buttons-Start crawl-Ranking"
+    },
+    "ids": ["crawlRankingWork", "crawlDebutWork"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-发现",
+      "en": "Buttons-Start crawl-Discover"
+    },
+    "ids": ["crawlCurrentWork"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-关注页面",
+      "en": "Buttons-Start crawl-Following page"
+    },
+    "ids": [
+      "startCrawlingInFollowingPage",
+      "exportFollowingListCSV",
+      "exportFollowingListJSON",
+      "batchFollowUser",
+      "findDeactivatedUsers"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-比赛页面",
+      "en": "Buttons-Start crawl-Contest page"
+    },
+    "ids": ["crawlApplicationWork", "crawlWinningWork"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-仪表盘",
+      "en": "Buttons-Start crawl-Dashboard"
+    },
+    "ids": ["exportDashboardData"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-书签详情",
+      "en": "Buttons-Start crawl-Bookmark details"
+    },
+    "ids": ["crawlSimilarImage"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取-pixivision",
+      "en": "Buttons-Start crawl-pixivision"
+    },
+    "ids": ["crawlImagesOnThisPage"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-下载区域-抓取结果",
+      "en": "Buttons-Download area-Crawl results"
+    },
+    "ids": [
+      "importCrawlResults",
+      "exportCrawlResultsJSON",
+      "exportCrawlResultsCSV",
+      "previewFileName",
+      "copyURLs"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-下载区域-下载控制",
+      "en": "Buttons-Download area-Download control"
+    },
+    "ids": ["startDownload", "pauseDownload", "stopDownload"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-附加功能-首页",
+      "en": "Buttons-Extra features-HomePage"
+    },
+    "ids": ["clearSavedCrawlResult"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-附加功能-用户页面",
+      "en": "Buttons-Extra features-User page"
+    },
+    "ids": [
+      "saveUserAvatar",
+      "saveUserAvatarAsIcon",
+      "saveUserCoverImage",
+      "bookmarkAllWorksOnPage"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-附加功能-搜索页面",
+      "en": "Buttons-Extra features-SearchPage"
+    },
+    "ids": ["bookmarkAllWorksOnPage"]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-附加功能-书签页面",
+      "en": "Buttons-Extra features-Bookmark page"
+    },
+    "ids": [
+      "addTagToUnmarkedWork",
+      "removeTagsFromAllWorksOnPage",
+      "unBookmarkAllWorksOnPage",
+      "findBookmark404Works",
+      "unBookmarkAll404Works",
+      "exportBookmarkList",
+      "importBookmarkList"
+    ]
+  }
+]
