@@ -1,0 +1,426 @@
+[
+  {
+    "id": "stopCrawling",
+    "nameKey": "_停止抓取",
+    "name": {
+      "zh-cn": "停止抓取",
+      "en": "Stop crawling"
+    }
+  },
+  {
+    "id": "manuallySelectWork",
+    "nameKey": "_手动选择作品",
+    "name": {
+      "zh-cn": "手动选择作品",
+      "en": "Manually select"
+    }
+  },
+  {
+    "id": "clearSelectedWork",
+    "nameKey": "_清空选择的作品",
+    "name": {
+      "zh-cn": "清空选择的作品",
+      "en": "Clear selected works"
+    }
+  },
+  {
+    "id": "crawlSelectedWork",
+    "nameKey": "_抓取选择的作品",
+    "name": {
+      "zh-cn": "抓取选择的作品",
+      "en": "Crawl selected works"
+    }
+  },
+  {
+    "id": "startCrawling",
+    "nameKey": "_开始抓取",
+    "name": {
+      "zh-cn": "开始抓取",
+      "en": "Start crawl"
+    }
+  },
+  {
+    "id": "scheduleCrawling",
+    "nameKey": "_定时抓取",
+    "name": {
+      "zh-cn": "定时抓取",
+      "en": "Timed crawl"
+    }
+  },
+  {
+    "id": "cancelScheduledCrawling",
+    "nameKey": "_取消定时抓取",
+    "name": {
+      "zh-cn": "取消定时抓取",
+      "en": "Cancel timed crawl"
+    }
+  },
+  {
+    "id": "addTagToUnmarkedWork",
+    "nameKey": "_给未分类作品添加添加tag",
+    "name": {
+      "zh-cn": "给未分类的作品添加标签",
+      "en": "Add tag to uncategorized work"
+    }
+  },
+  {
+    "id": "removeTagsFromAllWorksOnPage",
+    "nameKey": "_移除本页面中所有作品的标签",
+    "name": {
+      "zh-cn": "移除本页面中所有作品的标签",
+      "en": "Remove tags from all works on this page"
+    }
+  },
+  {
+    "id": "unBookmarkAllWorksOnPage",
+    "nameKey": "_取消收藏本页面的所有作品",
+    "name": {
+      "zh-cn": "取消收藏本页面中的所有作品",
+      "en": "Unbookmark all works on this page"
+    }
+  },
+  {
+    "id": "findBookmark404Works",
+    "nameKey": "_查找所有已被删除的作品",
+    "name": {
+      "zh-cn": "查找所有已被删除的作品",
+      "en": "Find all deleted works"
+    }
+  },
+  {
+    "id": "unBookmarkAll404Works",
+    "nameKey": "_取消收藏所有已被删除的作品",
+    "name": {
+      "zh-cn": "取消收藏所有已被删除的作品",
+      "en": "Unbookmark all deleted works"
+    }
+  },
+  {
+    "id": "exportBookmarkList",
+    "nameKey": "_导出收藏列表",
+    "name": {
+      "zh-cn": "导出收藏列表（JSON）",
+      "en": "Export bookmark list（JSON）"
+    }
+  },
+  {
+    "id": "importBookmarkList",
+    "nameKey": "_导入收藏列表",
+    "name": {
+      "zh-cn": "导入收藏列表（批量添加收藏）",
+      "en": "Import bookmark list (add bookmarks in batches)"
+    }
+  },
+  {
+    "id": "importCrawlResults",
+    "nameKey": "_导入抓取结果",
+    "name": {
+      "zh-cn": "导入抓取结果",
+      "en": "Import results"
+    }
+  },
+  {
+    "id": "exportCrawlResultsJSON",
+    "nameKey": "_导出抓取结果",
+    "name": {
+      "zh-cn": "导出抓取结果",
+      "en": "Export results"
+    }
+  },
+  {
+    "id": "exportCrawlResultsCSV",
+    "nameKey": "_导出csv",
+    "name": {
+      "zh-cn": "导出 CSV 文件",
+      "en": "Export CSV file"
+    }
+  },
+  {
+    "id": "startDownload",
+    "nameKey": "_开始下载",
+    "name": {
+      "zh-cn": "开始下载",
+      "en": "Start download"
+    }
+  },
+  {
+    "id": "pauseDownload",
+    "nameKey": "_暂停下载",
+    "name": {
+      "zh-cn": "暂停下载",
+      "en": "Pause download"
+    }
+  },
+  {
+    "id": "stopDownload",
+    "nameKey": "_停止下载",
+    "name": {
+      "zh-cn": "停止下载",
+      "en": "Stop download"
+    }
+  },
+  {
+    "id": "copyURLs",
+    "nameKey": "_复制url",
+    "name": {
+      "zh-cn": "复制 URL",
+      "en": "Copy URLs"
+    }
+  },
+  {
+    "id": "previewFileName",
+    "nameKey": "_预览文件名",
+    "name": {
+      "zh-cn": "预览文件名",
+      "en": "Preview file name"
+    }
+  },
+  {
+    "id": "startCrawlingFromCurrentPageNew",
+    "nameKey": "_从本页开始抓取new",
+    "name": {
+      "zh-cn": "从本页开始抓取新作品",
+      "en": "Crawl the new works from this page"
+    }
+  },
+  {
+    "id": "startCrawlingFromCurrentPageOld",
+    "nameKey": "_从本页开始抓取old",
+    "name": {
+      "zh-cn": "从本页开始抓取旧作品",
+      "en": "Crawl the old works from this page"
+    }
+  },
+  {
+    "id": "crawlRelatedWork",
+    "nameKey": "_抓取相关作品",
+    "name": {
+      "zh-cn": "抓取相关作品",
+      "en": "Crawl the related works"
+    }
+  },
+  {
+    "id": "saveUserAvatar",
+    "nameKey": "_保存用户头像",
+    "name": {
+      "zh-cn": "保存用户头像",
+      "en": "Save user avatar"
+    }
+  },
+  {
+    "id": "saveUserAvatarAsIcon",
+    "nameKey": "_保存用户头像为图标",
+    "name": {
+      "zh-cn": "保存用户头像为图标",
+      "en": "Save user avatar as icon"
+    }
+  },
+  {
+    "id": "saveUserCoverImage",
+    "nameKey": "_保存用户封面",
+    "name": {
+      "zh-cn": "保存用户封面",
+      "en": "Save user cover"
+    }
+  },
+  {
+    "id": "bookmarkAllWorksOnPage",
+    "nameKey": "_收藏本页面的所有作品",
+    "name": {
+      "zh-cn": "收藏本页面的所有作品",
+      "en": "Bookmark all works on this page"
+    }
+  },
+  {
+    "id": "crawlById",
+    "nameKey": "_输入id进行抓取",
+    "name": {
+      "zh-cn": "输入 ID 进行抓取",
+      "en": "Type ID to crawl"
+    }
+  },
+  {
+    "id": "crawlIdRange",
+    "nameKey": "_抓取id区间",
+    "name": {
+      "zh-cn": "抓取 ID 区间",
+      "en": "Crawl ID range"
+    }
+  },
+  {
+    "id": "importIDList",
+    "nameKey": "_导入ID列表",
+    "name": {
+      "zh-cn": "导入 ID 列表",
+      "en": "Import ID list"
+    }
+  },
+  {
+    "id": "clearSavedCrawlResult",
+    "nameKey": "_清空已保存的抓取结果",
+    "name": {
+      "zh-cn": "清空已保存的抓取结果",
+      "en": "Clear saved crawl results"
+    }
+  },
+  {
+    "id": "crawlTagList",
+    "nameKey": "_抓取标签列表",
+    "name": {
+      "zh-cn": "抓取标签列表",
+      "en": "Crawl tag list"
+    }
+  },
+  {
+    "id": "filterResults",
+    "nameKey": "_在结果中筛选",
+    "name": {
+      "zh-cn": "在结果中筛选",
+      "en": "Screen in results"
+    }
+  },
+  {
+    "id": "clearMultiImageWork",
+    "nameKey": "_清除多图作品",
+    "name": {
+      "zh-cn": "清除多图作品",
+      "en": "Remove multi-image works"
+    }
+  },
+  {
+    "id": "clearUgoiraWork",
+    "nameKey": "_清除动图作品",
+    "name": {
+      "zh-cn": "清除动图作品",
+      "en": "Remove ugoira works"
+    }
+  },
+  {
+    "id": "manuallyDeleteWork",
+    "nameKey": "_手动删除作品",
+    "name": {
+      "zh-cn": "手动删除作品",
+      "en": "Manually delete the work"
+    }
+  },
+  {
+    "id": "crawlRankingWork",
+    "nameKey": "_抓取本排行榜作品",
+    "name": {
+      "zh-cn": "抓取本排行榜作品",
+      "en": "Crawl this ranking's works"
+    }
+  },
+  {
+    "id": "crawlDebutWork",
+    "nameKey": "_抓取首次登场的作品",
+    "name": {
+      "zh-cn": "抓取首次登场作品",
+      "en": "Crawl the debut works"
+    }
+  },
+  {
+    "id": "crawlSeriesNovel",
+    "nameKey": "_抓取系列小说",
+    "name": {
+      "zh-cn": "抓取系列小说",
+      "en": "Crawl series of novels"
+    }
+  },
+  {
+    "id": "mergeSeriesNovel",
+    "nameKey": "_合并系列小说",
+    "name": {
+      "zh-cn": "合并系列小说",
+      "en": "Merge series of novels"
+    }
+  },
+  {
+    "id": "startCrawlingInFollowingPage",
+    "nameKey": "_开始抓取",
+    "name": {
+      "zh-cn": "开始抓取",
+      "en": "Start crawl"
+    }
+  },
+  {
+    "id": "exportFollowingListCSV",
+    "nameKey": "_导出关注列表CSV",
+    "name": {
+      "zh-cn": "导出关注的用户列表（CSV）",
+      "en": "Export followed users list (CSV)"
+    }
+  },
+  {
+    "id": "exportFollowingListJSON",
+    "nameKey": "_导出关注列表JSON",
+    "name": {
+      "zh-cn": "导出关注的用户列表（JSON）",
+      "en": "Export followed users list (JSON)"
+    }
+  },
+  {
+    "id": "batchFollowUser",
+    "nameKey": "_批量关注用户",
+    "name": {
+      "zh-cn": "批量关注用户（JSON）",
+      "en": "Follow users in batches (JSON)"
+    }
+  },
+  {
+    "id": "findDeactivatedUsers",
+    "nameKey": "_查找已注销的用户",
+    "name": {
+      "zh-cn": "查找已注销的用户",
+      "en": "Find deactivated users"
+    }
+  },
+  {
+    "id": "crawlCurrentWork",
+    "nameKey": "_抓取当前作品",
+    "name": {
+      "zh-cn": "抓取当前作品",
+      "en": "Crawl current works"
+    }
+  },
+  {
+    "id": "crawlApplicationWork",
+    "nameKey": "_抓取应募作品",
+    "name": {
+      "zh-cn": "抓取应募作品",
+      "en": "Crawl application works"
+    }
+  },
+  {
+    "id": "crawlWinningWork",
+    "nameKey": "_抓取获奖作品",
+    "name": {
+      "zh-cn": "抓取获奖作品",
+      "en": "Crawl winning works"
+    }
+  },
+  {
+    "id": "exportDashboardData",
+    "nameKey": "_导出作品数据CSV",
+    "name": {
+      "zh-cn": "导出作品数据（CSV）",
+      "en": "Export work data (CSV)"
+    }
+  },
+  {
+    "id": "crawlSimilarImage",
+    "nameKey": "_抓取相似图片",
+    "name": {
+      "zh-cn": "抓取相似图片",
+      "en": "Crawl similar works"
+    }
+  },
+  {
+    "id": "crawlImagesOnThisPage",
+    "nameKey": "_抓取该页面的图片",
+    "name": {
+      "zh-cn": "抓取该页面的图片",
+      "en": "Crawl images on this page"
+    }
+  }
+]
