@@ -1,0 +1,25 @@
+{
+  "name": "pbdwiki",
+  "version": "19.0.0",
+  "description": "This is the Wiki for Pixiv Batch Downloader",
+  "homepage": "https://github.com/xuejianxianzun/PBDWiki#readme",
+  "bugs": {
+    "url": "https://github.com/xuejianxianzun/PBDWiki/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuejianxianzun/PBDWiki.git"
+  },
+  "license": "MIT",
+  "author": "xuejianxianzun",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "less": "lessc docs/style/style.less docs/style/style.css",
+    "ts": "tsc docs/js/form.ts --outDir docs/js"
+  },
+  "dependencies": {}
+}
