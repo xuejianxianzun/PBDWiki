@@ -1,0 +1,8 @@
+## Crawl this ranking's works
+
+<button id="crawlRankingWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_抓取本排行榜作品Title" title="Crawl all of the works in this list, including those that are not yet loaded."><span data-xztext="_抓取本排行榜作品">Crawl this ranking's works</span><span class="ripple"></span></button>
+
+## Crawl the debut works
+
+<button id="crawlDebutWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" data-xztitle="_抓取首次登场的作品Title" title="Download only debut works"><span data-xztext="_抓取首次登场的作品">Crawl the debut works</span><span class="ripple"></span></button>
+

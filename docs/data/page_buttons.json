@@ -152,7 +152,7 @@
       "zh-cn": "按钮-附加功能/搜索页面",
       "en": "Buttons-Extra-features/SearchPage"
     },
-    "ids": ["bookmarkAllWorksOnPage"]
+    "ids": ["bookmarkAllWorksOnSearchPage"]
   },
   {
     "page": {
