@@ -1,10 +1,65 @@
-# Understanding the Settings Panel
+# Getting to Know the Settings Panel
 
 After installing this extension, open a Pixiv web page, and you will see a blue button on the right:
 
 ![](images/2021-11-07_192344.png)
 
-Click the button to open the settings panel and start crawling and downloading.
+Click this button to open the downloader's settings panel and start crawling and downloading.
+
+![](images/Settings-Panel-en.png)
+
+## Title Bar
+
+![](images/20260608_015005.png)
+
+On the right side of the title bar there are 4 areas:
+- Search bar, for searching all setting names
+- Expand or collapse all settings
+- Support me
+- Close the settings panel
+
+## Navigation Area
+
+The left side of the settings panel is the navigation area:
+
+![](images/Settings-Panel-en.png)
+
+Most sections store the settings in that category.
+
+From top to bottom, they are:
+- `Home`: the dashboard, which centralizes pinned settings, the Start crawl button, the download area, and extra feature buttons.
+- `Crawl`: stores crawl-related settings.
+- `Naming`: stores file name-related settings.
+- `Download`: stores download-related settings.
+- `Enhance`: stores settings for enhanced features.
+- `General`: stores language, operation method, appearance, and other settings unrelated to downloading.
+- `Help`: stores some help information and external links.
+
+PS: When you search, a temporary `Search` item appears in the navigation area to show the results. It is not shown normally.
+
+## Get Help
+
+Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
+
+![](images/20260608_032950.png)
+
+Some settings also have a **Help** or **Tip** button on the right. Click it to see more detailed instructions.
+
+If you want to view more detailed instructions on the Wiki, click the name of the setting item and the downloader will open the corresponding Wiki page.
+
+PS: For buttons on the Home page, you can also long-press a button to open its Wiki page.
+
+## Pin Settings
+
+The downloader has more than 100 settings. If you use some settings frequently, it is inefficient to search for them every time. The best way to improve efficiency is to pin commonly used settings so they are grouped in the Home page's "Pinned settings" area, for example:
+
+![](images/20260608_020038.png)
+
+PS: Pinned setting cards have a light blue border.
+
+**How to use:**
+
+Long-press a setting card for 0.5 seconds to pin it. Long-press again to unpin it.
 
 ## Opening and Closing the Settings Panel
 
@@ -14,81 +69,17 @@ There are multiple ways to open and close the settings panel.
 
 ![](images/2021-11-07_192344.png)
 
-Click the close button in the top-right corner to close the settings panel:
-
-![](images/20250908_235732.png)
-
-Alternatively, when the settings panel is displayed, you can click a blank area on the page to close it.
+Click the close button in the top-right corner of the settings panel to close it.
 
 2. Click the extension's icon to toggle the settings panel's open/closed state:
 
 ![](images/20250911_000723.png)
 
-!> If the current tab is not a pixiv.net web page, clicking the extension icon will have no effect, as this extension only works on pixiv.net.
+!> If the current tab is not a pixiv.net web page, clicking the extension icon has no effect, because this extension only works on pixiv.net.
 
 3. The shortcut key `Alt` + `x` can toggle the settings panel's open/closed state.
 
-## Tabs
-
-The settings panel has three tabs:
-
-### Crawl
-
-![](images/ui-en-0.png)
-
-You can set the crawling range and filtering conditions, then start crawling.
-
-To view the descriptions of settings and buttons in this tab, click the links below:
-- [Settings - Crawl](/en/Settings-Crawl)
-- [Buttons - Crawl](/en/Buttons-Crawl)
-
-### Download
-
-![](images/ui-en-1.png)
-
-You can set file names here. When downloads are ready, you can also view the download status.
-
-To view the descriptions of settings and buttons in this tab, click the links below:
-- [Settings - Download](/en/Settings-Download)
-- [Buttons - Download](/en/Buttons-Download)
-
-### More
-
-![](images/20250829_014439.png)
-
-This tab contains many settings, categorized into: crawling, naming, downloading, enhancements, and others.
-
-Since the downloader has numerous settings, only essential ones are placed in the first two commonly used tabs, with the remaining settings included here.
-
-Additionally, when you are on certain pages, this tab may display some functional buttons.
-
-To view the descriptions of settings and buttons in this tab, click the links below:
-- [Settings - More](/en/Settings-More)
-- [Buttons - More](/en/Buttons-More)
-
-## Get Help
-
-Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
-
-![](images/20251003_031909.png)
-
-If you want to view more detailed instructions, you can click on the name of the setting item, or long press on the solid color button, and the downloader will open the corresponding Wiki page.
-
-## Pin Settings
-
-The downloader has nearly 100 settings, so it often takes some time to find a specific one. To improve efficiency, I added a feature that lets you pin settings to the top.
-
-You can pin the settings you use most often, and they will always stay at the top (they will still be shown even if you have not enabled "Show Advanced Settings"). This not only helps you quickly find the settings you need, but also lets you keep advanced settings hidden most of the time, making the interface cleaner.
-
-There are 2 ways to pin a setting:
-1. Move the mouse pointer over a setting, then click the pin icon on the left.
-2. Press and hold the setting name for 0.5 seconds.
-
-Repeat the same action to unpin it.
-
-The effect of pinned settings is shown below:
-
-![](images/20260423_005305.png)
+4. When the settings panel is displayed, you can click a blank area on the page to close it.
 
 ## How Settings Work
 
