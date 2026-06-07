@@ -1,8 +1,8 @@
 [
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-通用",
-      "en": "Buttons-Start crawl-General"
+      "zh-cn": "按钮-开始抓取/通用",
+      "en": "Buttons-Start-crawl/General"
     },
     "ids": [
       "startCrawling",
@@ -16,15 +16,15 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-首页",
-      "en": "Buttons-Start crawl-HomePage"
+      "zh-cn": "按钮-开始抓取/首页",
+      "en": "Buttons-Start-crawl/HomePage"
     },
     "ids": ["crawlById", "crawlIdRange", "importIDList"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-作品页面",
-      "en": "Buttons-Start crawl-WorkPage"
+      "zh-cn": "按钮-开始抓取/作品页面",
+      "en": "Buttons-Start-crawl/WorkPage"
     },
     "ids": [
       "startCrawlingFromCurrentPageNew",
@@ -35,15 +35,15 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-系列小说页面",
-      "en": "Buttons-Start crawl-Novel series page"
+      "zh-cn": "按钮-开始抓取/系列小说页面",
+      "en": "Buttons-Start-crawl/Novel-series-page"
     },
     "ids": ["crawlSeriesNovel", "mergeSeriesNovel"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-搜索页面",
-      "en": "Buttons-Start crawl-SearchPage"
+      "zh-cn": "按钮-开始抓取/搜索页面",
+      "en": "Buttons-Start-crawl/SearchPage"
     },
     "ids": [
       "crawlTagList",
@@ -55,22 +55,22 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-排行榜",
-      "en": "Buttons-Start crawl-Ranking"
+      "zh-cn": "按钮-开始抓取/排行榜",
+      "en": "Buttons-Start-crawl/Ranking"
     },
     "ids": ["crawlRankingWork", "crawlDebutWork"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-发现",
-      "en": "Buttons-Start crawl-Discover"
+      "zh-cn": "按钮-开始抓取/发现",
+      "en": "Buttons-Start-crawl/Discover"
     },
     "ids": ["crawlCurrentWork"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-关注页面",
-      "en": "Buttons-Start crawl-Following page"
+      "zh-cn": "按钮-开始抓取/关注页面",
+      "en": "Buttons-Start-crawl/Following-page"
     },
     "ids": [
       "startCrawlingInFollowingPage",
@@ -82,36 +82,36 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-比赛页面",
-      "en": "Buttons-Start crawl-Contest page"
+      "zh-cn": "按钮-开始抓取/比赛页面",
+      "en": "Buttons-Start-crawl/Contest-page"
     },
     "ids": ["crawlApplicationWork", "crawlWinningWork"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-仪表盘",
-      "en": "Buttons-Start crawl-Dashboard"
+      "zh-cn": "按钮-开始抓取/仪表盘",
+      "en": "Buttons-Start-crawl/Dashboard"
     },
     "ids": ["exportDashboardData"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-书签详情",
-      "en": "Buttons-Start crawl-Bookmark details"
+      "zh-cn": "按钮-开始抓取/书签详情",
+      "en": "Buttons-Start-crawl/Bookmark-details"
     },
     "ids": ["crawlSimilarImage"]
   },
   {
     "page": {
-      "zh-cn": "按钮-开始抓取-pixivision",
-      "en": "Buttons-Start crawl-pixivision"
+      "zh-cn": "按钮-开始抓取/pixivision",
+      "en": "Buttons-Start-crawl/pixivision"
     },
     "ids": ["crawlImagesOnThisPage"]
   },
   {
     "page": {
-      "zh-cn": "按钮-下载区域-抓取结果",
-      "en": "Buttons-Download area-Crawl results"
+      "zh-cn": "按钮-下载区域/抓取结果",
+      "en": "Buttons-Download-area/Crawl-results"
     },
     "ids": [
       "importCrawlResults",
@@ -123,22 +123,22 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-下载区域-下载控制",
-      "en": "Buttons-Download area-Download control"
+      "zh-cn": "按钮-下载区域/下载控制",
+      "en": "Buttons-Download-area/Download-control"
     },
     "ids": ["startDownload", "pauseDownload", "stopDownload"]
   },
   {
     "page": {
-      "zh-cn": "按钮-附加功能-首页",
-      "en": "Buttons-Extra features-HomePage"
+      "zh-cn": "按钮-附加功能/首页",
+      "en": "Buttons-Extra-features/HomePage"
     },
     "ids": ["clearSavedCrawlResult"]
   },
   {
     "page": {
-      "zh-cn": "按钮-附加功能-用户页面",
-      "en": "Buttons-Extra features-User page"
+      "zh-cn": "按钮-附加功能/用户页面",
+      "en": "Buttons-Extra-features/User-page"
     },
     "ids": [
       "saveUserAvatar",
@@ -149,15 +149,15 @@
   },
   {
     "page": {
-      "zh-cn": "按钮-附加功能-搜索页面",
-      "en": "Buttons-Extra features-SearchPage"
+      "zh-cn": "按钮-附加功能/搜索页面",
+      "en": "Buttons-Extra-features/SearchPage"
     },
     "ids": ["bookmarkAllWorksOnPage"]
   },
   {
     "page": {
-      "zh-cn": "按钮-附加功能-书签页面",
-      "en": "Buttons-Extra features-Bookmark page"
+      "zh-cn": "按钮-附加功能/书签页面",
+      "en": "Buttons-Extra-features/Bookmark-page"
     },
     "ids": [
       "addTagToUnmarkedWork",

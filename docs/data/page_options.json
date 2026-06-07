@@ -1,0 +1,191 @@
+[
+  {
+    "page": {
+      "zh-cn": "设置-抓取/抓取范围",
+      "en": "Settings-Crawl/Crawl-scope"
+    },
+    "ids": [0, 1, 2]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/作品类型",
+      "en": "Settings-Crawl/Work-type"
+    },
+    "ids": [3, 4, 5, 6, 7, 8]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/作品数据",
+      "en": "Settings-Crawl/Work-data"
+    },
+    "ids": [9, 10, 11, 12, 13, 14]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/标签与标题",
+      "en": "Settings-Crawl/Tags-and-title"
+    },
+    "ids": [15, 16, 17, 18, 19]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/多图作品",
+      "en": "Settings-Crawl/Multi-image-works"
+    },
+    "ids": [20, 21, 22, 23, 24, 25]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/执行策略",
+      "en": "Settings-Crawl/Execution-strategy"
+    },
+    "ids": [26, 27, 28, 29, 30, 31]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/文件夹和文件的名字",
+      "en": "Settings-Naming/Folder-and-file-names"
+    },
+    "ids": [32, 33, 34, 35, 36, 37, 38, 39]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/调整文件夹",
+      "en": "Settings-Naming/Adjust-folders"
+    },
+    "ids": [40, 41, 42, 43]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/别名",
+      "en": "Settings-Naming/Aliases"
+    },
+    "ids": [44, 45]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/序号",
+      "en": "Settings-Naming/Serial"
+    },
+    "ids": [46, 47, 48]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/移除特殊字符",
+      "en": "Settings-Naming/Remove-special-characters"
+    },
+    "ids": [49, 50]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/下载行为",
+      "en": "Settings-Download/Download-behavior"
+    },
+    "ids": [51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/下载记录",
+      "en": "Settings-Download/Download-records"
+    },
+    "ids": [62, 63]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/图片尺寸",
+      "en": "Settings-Download/Image-size"
+    },
+    "ids": [64]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/动图",
+      "en": "Settings-Download/Ugoira"
+    },
+    "ids": [65, 66]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/小说",
+      "en": "Settings-Download/Novels"
+    },
+    "ids": [67, 68, 69, 70, 71, 72]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/元数据",
+      "en": "Settings-Download/Metadata"
+    },
+    "ids": [73, 74]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/预览",
+      "en": "Settings-Enhance/Preview"
+    },
+    "ids": [75, 76, 77]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/缩略图",
+      "en": "Settings-Enhance/Thumbnails"
+    },
+    "ids": [78, 79, 80, 81]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/缩略图上的按钮",
+      "en": "Settings-Enhance/Thumbnail-buttons"
+    },
+    "ids": [82, 83, 84, 85]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/其他",
+      "en": "Settings-Enhance/Other"
+    },
+    "ids": [86, 87, 88, 89]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/搜索页面",
+      "en": "Settings-Enhance/Search-page"
+    },
+    "ids": [90, 91, 92, 93]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/语言",
+      "en": "Settings-General/Language"
+    },
+    "ids": [94]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/操作方式",
+      "en": "Settings-General/Operation-method"
+    },
+    "ids": [95, 96, 97]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/外观",
+      "en": "Settings-General/Appearance"
+    },
+    "ids": [98, 99, 100]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/日志",
+      "en": "Settings-General/Logs"
+    },
+    "ids": [101, 102]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/管理设置",
+      "en": "Settings-General/Manage-settings"
+    },
+    "ids": [103]
+  }
+]
