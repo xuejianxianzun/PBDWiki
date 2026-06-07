@@ -18,7 +18,7 @@ Here are the general steps:
 2. Move the `powerfulpixivdownloader` folder to the same location as the old version, overwriting the old version's files.
 3. In the extension management page, click the refresh button for this extension:
 
-![](images/20250829_000138.png)
+![](../images/20250829_000138.png)
 
 This will successfully load the new version of the extension.
 

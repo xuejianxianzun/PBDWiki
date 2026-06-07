@@ -40,7 +40,7 @@
 
 ## 中文文件与英语文件的对照表
 
-你可以读取简体中文的导航目录 `docs\zh-cn\_sidebar.md` 和英语的导航目录 `docs\en\_sidebar.md` 并建立对照列表，里面的每个超链接都指向一个文件，这些文件是一一对应的。
+你可以读取简体中文的导航目录 `docs\zh-cn\_sidebar.md` 和英语的导航目录 `docs\en\_sidebar.md` 并建立对照列表，里面的每个超链接都指向一个 markdown 文件，这些文件是一一对应的。
 
 不在 `_sidebar.md` 里的文件不需要翻译成英语，例如：`README.md`、`翻译用的prompt.md`（本文件）。
 

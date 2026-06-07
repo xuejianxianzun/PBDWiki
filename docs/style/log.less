@@ -1,0 +1,107 @@
+.logWrap {
+  font-family: var(--pixiv-font-family);
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  // 默认不显示。显示时是 block
+  display: none;
+  color: #333;
+  background: #fff;
+}
+
+.logContent {
+  width: 96vw;
+  max-width: 950px;
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 14px;
+  // 在内容区域周围添加 padding，是为了让用户使用鼠标选择文字内容时，点击左键时的坐标依然属于 logContent
+  // 如果不加 padding，那么鼠标在文字之外点击时就超出了 logContent 区域，会导致日志区域隐藏，无法选择和复制文字
+  padding: 10px 30px;
+
+  .blue {
+    color: var(--beautify-blue);
+  }
+
+  span {
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  br {
+    display: inline;
+  }
+
+  a {
+    color: var(--beautify-blue);
+  }
+}
+
+.logBtn {
+  font-family: var(--pixiv-font-family);
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  background-color: var(--beautify-blue);
+  color: white;
+  padding: 8px 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  // z-index 设置为 1, 这是因为这个提示经常会和 Pixiv 顶部的搜索框重叠在一起。
+  // 如果设置为 0, 那么鼠标经过重叠区域时，会优先触发搜索框的鼠标经过效果（搜索框变暗）
+  z-index: 1;
+  transition: opacity 0.3s;
+
+  &.show {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+// 在比赛页面里因为顶部有个固定的横幅，所以需要进行一些调整
+.contest {
+  .logWrap {
+    z-index: 1000;
+  }
+
+  .logBtn {
+    z-index: 1001;
+  }
+}
+
+.theme-dark {
+  &.logWrap {
+    background: #222;
+    color: #fff;
+  }
+}
+
+.xzBG {
+  &.logWrap {
+    background: #222;
+    color: #fff;
+    text-shadow: var(--text-shadow-on-xzbg);
+
+    .logContent * {
+      color: #fff !important;
+    }
+  }
+}
+
+.logWrap.mobile {
+  font-size: 16px;
+  font-family: var(--mobile-font-family);
+  padding: 10px 10px;
+
+  .logContent {
+    max-width: 100%;
+    padding: 0;
+  }
+}

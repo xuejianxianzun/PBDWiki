@@ -1,101 +1,286 @@
-@themeBlue: #0ea8ef;
-@beautifyBlue: #29b3f3;
-@boxShadowBlue: #2ca6df;
-@darkBoxShadow: #10506e;
-@pixivFontFamily: 'Noto Sans SC', 'Noto Sans', 'Segeo UI Mono',
-  'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-// 表单里每个选项的行高都是 26 px。有些内部元素（特别是按钮）的高度不到 26px，所以我使用 margin 将其占据的高度增加到 26px，以使它们在视觉上垂直居中对齐。
-@height: 26px;
-
-// 覆写一些样式
-body {
-  position: relative;
+:root {
+  // 主题色，主要用于标题栏、导航栏、按钮的高亮颜色。它不会在内容区域里大量使用，以免造成视觉疲劳。
+  --theme-blue: #199df5;
+  // 蓝色按钮的背景颜色
+  --blue-buttons-bg: #0ea8ef;
+  // 比主题色浅一些的蓝色，主要用于蓝色文字
+  --beautify-blue: #1dacf5;
+  // 美化的复选框、单选框的蓝色
+  --bg-checkbox-blue: #1fb2fd;
+  // 下载进度条的蓝色
+  --bg-progress-blue: #0eb3f3;
+  --box-shadow-blue: #2ca6df;
+  --box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
+  --dark-box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px;
+  --pixiv-font-family:
+    'Noto Sans SC', 'Noto Sans', 'Segeo UI', 'Segeo UI Mono',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --mobile-font-family: sans-serif;
+  // 表单里每个选项的行高都是 26 px。
+  // PS：有些内部元素（特别是按钮）的高度不到 26px，我会使用 margin 将其占据的高度增加到 26px，以使它们在视觉上垂直居中对齐。
+  --line-height: 26px;
+  --color-r18: rgb(246, 61, 91);
+  --color-ai: rgb(176 54 246);
+  // 设置面板的背景颜色
+  --settings-panel-bg: #fff;
+  --settings-panel-bg-white: #fff;
+  --settings-panel-bg-dark: #161a1f;
+  // 启用背景图片之后，面板的背景颜色
+  --settings-panel-bg-xzbg: rgb(10, 18, 28);
+  // 启用背景图片之后，背景图片层会显示在面板和内容区域中间
+  // 启用背景图片之后，把整个内容区域的背景颜色设置为半透明的黑色遮罩，降低背景图片的亮度，使得文字更清晰易读。
+  --mask-on-xzbg: rgba(10, 18, 28, 0.3);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --text-shadow-on-xzbg: #003247 0px 0px 2px;
+  --settings-panel-text: #444;
 }
 
-.sidebar ul li a {
-  color: #333;
-  font-size: 15px;
+@import './deleteWorks.less';
+@import './selectWork.less';
+@import './search.less';
+@import './rightButtons.less';
+@import './settingsPanel.less';
+@import './outputWrap.less';
+@import './log.less';
+@import './msgBox.less';
+@import './blockAds.less';
+@import './imageViewer.less';
+@import './blockTagsForSpecificUser.less';
+@import './Loading.less';
+@import './setUserName.less';
+@import './setTagAlias.less';
+@import './DoNotDownloadLastFewImages.less';
+@import './UseDifferentNameRuleIfWorkHasTagWarp.less';
+@import './input.less';
+@import './previewWorkDetailPanel.less';
+@import './wiki.less';
+
+// 储存通用规则和一些零散的元素的规则
+
+.red {
+  color: #f00;
 }
 
-.anchor span {
-  color: #333;
+.green {
+  color: #00bd17;
 }
 
-h3 .anchor span {
-  color: #444;
-  font-size: 1.4rem;
+.flexBasis100 {
+  flex-basis: 100%;
 }
 
-.markdown-section p a,
-.markdown-section li a {
-  font-weight: 400;
+.nowrap {
+  flex-wrap: nowrap;
 }
 
-h2 a,
-h2 a span,
-.markdown-section a {
-  color: @themeBlue !important;
+.shrink0 {
+  flex-shrink: 0;
 }
 
-// 对 a 标签设置颜色只会影响 hover 时的下划线颜色
-// 文字颜色需要对里面的 span 标签设置
-h3 a {
-  color: @themeBlue !important;
+.shrink1 {
+  flex-shrink: 1;
 }
 
-// 使左侧导航栏里的 3 级标题与 2 级标题区分开
-// 2 级标题不显示前面的横线 -
-.app-sub-sidebar {
-  li::before {
-    display: none;
+.mr0 {
+  margin-right: 0 !important;
+}
+
+.mr4 {
+  margin-right: 4px !important;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.pr4 {
+  padding-right: 4px !important;
+}
+.w20 {
+  width: 20px !important;
+  min-width: 20px !important;
+}
+
+.w30 {
+  width: 30px !important;
+  min-width: 30px !important;
+}
+
+.w40 {
+  width: 40px !important;
+  min-width: 40px !important;
+}
+
+.w50 {
+  width: 50px !important;
+  min-width: 50px !important;
+}
+
+.w60 {
+  width: 60px !important;
+}
+
+.w70 {
+  width: 70px !important;
+}
+
+.w80 {
+  width: 80px !important;
+}
+
+.w90 {
+  width: 90px !important;
+}
+
+.w100 {
+  width: 100px !important;
+}
+
+.w150 {
+  width: 150px !important;
+}
+
+.w200 {
+  width: 200px !important;
+}
+
+.w250 {
+  width: 250px !important;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: initial;
+  fill: currentColor;
+  overflow: hidden;
+
+  use {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(var(--icon-scale, 1));
   }
 }
 
-// 3 级标题显示前面的横线 -
-.app-sub-sidebar .app-sub-sidebar {
-  li::before {
-    display: block;
+.beautify_scrollbar {
+  // 滚动条整体
+  // width 是垂直滚动条的宽度，height 是水平滚动条的高度
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  // 整个滚动条的底色
+  //&::-webkit-scrollbar-track-piece {background:#fcfcfc;}
+
+  // 滚动条的滑块部分
+  &::-webkit-scrollbar-thumb {
+    background-color: #3ab8f2;
+    border-radius: 10px;
+  }
+
+  // 垂直滚动条的滑块部分
+  // &::-webkit-scrollbar-thumb:vertical {
+  //   background-color: var(--beautify-blue);
+  //   border-radius: 10px;
+  // }
+
+  // 水平滚动条的滑块部分
+  // &::-webkit-scrollbar-thumb:horizontal {
+  //   background-color: var(--beautify-blue);
+  //   border-radius: 10px;
+  // }
+}
+
+// 隐藏一些广告元素
+div[id^='adsdk'] {
+  display: none !important;
+}
+
+// 作品页面里，作品大图下方的作品列表导航区域
+.cAicGw,
+main section nav[style] {
+  // 滚动条整体
+  // width 是垂直滚动条的宽度，height 是水平滚动条的高度
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  // 滚动条的滑块部分
+  &::-webkit-scrollbar-thumb {
+    background-color: #0096fa;
+    border-radius: 10px;
   }
 }
 
-.sidebar ul li.active>a {
-  color: @themeBlue !important;
+#quickBookmarkEl {
+  font-size: 34px;
+  line-height: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
-.sidebar-toggle span {
-  background-color: @beautifyBlue;
-}
-
-.markdown-section hr {
-  margin: 1em 0;
-}
-
-.markdown-section figure,
-.markdown-section p {
-  margin: .8em 0;
-}
-
-.markdown-section>* {
+#copyBtnOnWorkPage {
+  padding: 0;
+  padding-top: 3px;
+  margin-right: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
   font-size: 16px;
+
+  &:hover,
+  &:active {
+    color: var(--beautify-blue);
+  }
+
+  svg {
+    width: 1.6em;
+    height: 1.6em;
+  }
 }
 
-.markdown-section code {
-  font-size: 1rem !important;
-  color: #29b3f3;
-  font-family: inherit;
+body.mobile {
+  #copyBtnOnWorkPage {
+    padding: 0;
+    margin: 6px 4px 4px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: var(--beautify-blue);
+    }
+
+    svg {
+      width: 2.1em;
+      height: 2.1em;
+    }
+  }
 }
 
-// docsify 的代码块默认是一行（会出现横向滚动条），改为多行显示
-.markdown-section pre>code {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+html[data-xzpagetheme='white'] #quickBookmarkEl {
+  color: #1f1f1f;
 }
 
-// 下载器的提示元素的样式
+html[data-xzpagetheme='dark'] #quickBookmarkEl {
+  color: #fff;
+}
+
+.bookmarkedColor {
+  color: #ff4060 !important;
+}
+
 #tip {
   color: #fff;
-  font-size: 14px;
-  font-family: @pixivFontFamily;
+  font-size: 15px;
+  font-family: var(--pixiv-font-family);
   position: fixed;
   z-index: 5001;
   max-width: 500px;
@@ -109,98 +294,287 @@ h3 a {
   display: none;
 }
 
-// 下载器的轻提示的样式
+#xzMaskWrap {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: none;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
 .xzToast {
+  position: fixed;
+  z-index: 2147483647;
   margin: auto;
   font-size: 15px;
   pointer-events: none;
   display: inline-block;
   max-width: 500px;
   color: #fff;
-  background-color: @beautifyBlue;
-  box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
-  padding: 4px 10px;
-  border-radius: 4px;
-
-  &.success {
-    background-color: #00BD17;
-  }
-
-  &.warning {
-    background-color: #e49d00;
-  }
-
-  &.error {
-    background-color: #f00;
-  }
-}
-
-// 日志的样式
-.logContent span {
-  font-size: 15px;
-}
-
-.log {
-  font-size: 15px;
-
-  a {
-    color: rgb(14, 168, 239);
-    text-decoration: none;
-    font-weight: normal;
-  }
-}
-
-// 按钮
-.btnsWrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.xzbtns {
-  font-family: @pixivFontFamily;
-  display: inline-flex;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  background-color: rgb(14, 168, 239);
-  box-sizing: border-box;
-  width: 150px;
-  margin-right: 10px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 20px;
-  cursor: pointer;
-  margin-bottom: 8px;
-  vertical-align: top;
-  box-shadow: rgb(238, 238, 238) 0px 1px 6px;
-  border-width: initial;
-  border-style: none;
-  border-color: initial;
-  border-image: initial;
-  padding: 8px 10px;
+  background-color: var(--beautify-blue);
+  box-shadow: var(--box-shadow);
+  padding: 9px 13px;
   border-radius: 6px;
 }
 
+.xzToast.mobile {
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-family: var(--mobile-font-family);
+}
+
+#previewWorkWrap {
+  position: fixed;
+  z-index: 100000;
+  display: none;
+  width: 600px;
+  height: 600px;
+  left: 200px;
+  top: 500px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid var(--beautify-blue);
+  background-color: rgba(41, 179, 243, 0.1);
+  box-shadow: var(--box-shadow);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#previewWorkTip {
+  background-color: var(--beautify-blue);
+  color: #fff;
+  height: 23px;
+  line-height: 20px;
+  display: none;
+  // display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: var(--pixiv-font-family);
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    max-height: 22px;
+    font-size: 14px;
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &:last-child {
+      // 允许最后一项缩小尺寸（简介文本）
+      flex-shrink: 1;
+    }
+
+    &.flag {
+      align-items: center;
+      height: 18px;
+      line-height: 18px;
+      font-weight: bold;
+      font-size: 12px;
+      border-radius: 4px;
+      margin: 0 3px;
+
+      svg {
+        padding-right: 4px;
+      }
+    }
+
+    &.r18 {
+      background: var(--color-r18);
+    }
+
+    &.ai {
+      background: var(--color-ai);
+    }
+
+    &.index {
+      background: #0d5ee9;
+    }
+
+    &.bmk {
+      background: #eda200;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+#originSizeWrap {
+  display: none;
+  position: fixed;
+  z-index: 100001;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 1200px;
+  height: 1200px;
+  border: 2px solid var(--beautify-blue);
+  background-color: rgba(41, 179, 243, 0.2);
+  box-shadow: var(--box-shadow);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.btnOnThumb {
+  position: absolute;
+  // 如果使用 fixed，将导致页面滚动时按钮停留在原地，造成不好的体验，所以使用 absolute
+  z-index: 99999;
+  display: none;
+  left: 0px;
+  top: 0px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  background-color: var(--beautify-blue);
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 22px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &#zoomBtnOnThumb {
+    z-index: 99998;
+  }
+}
+
+.xzBGLayer {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  opacity: 0.4;
+}
+
+.xzBG .xzbgMask {
+  background-color: var(--mask-on-xzbg);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.id_range_tip {
+  display: none;
+  padding: 14px;
+  text-align: center;
+  margin: 10px auto;
+  position: relative;
+  z-index: 9;
+  font-size: 16px;
+}
+
+html[data-xzpagetheme='white'] body .pbdHighlightFollowing {
+  background-color: yellow;
+}
+
+html[data-xzpagetheme='dark'] body .pbdHighlightFollowing,
+html[data-xzpagetheme='dark'] body .pbdHighlightFollowing * {
+  // 这里覆盖上面的黄色背景，必须把背景颜色设置为 transparent，设置为 none 是无效的，因为 none 不是颜色
+  background-color: transparent !important;
+  color: yellow !important;
+}
+
+// 模仿 Pixiv 的蓝底白字的文字按钮
+.blueTextBtn {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #0096fa;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  appearance: none;
+  padding: 0px;
+  margin: 0px 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-style: none;
+  border-radius: 99px;
+  transition:
+    color 0.2s ease 0s,
+    background-color 0.2s ease 0s,
+    box-shadow 0.2s ease 0s;
+  height: 32px;
+
+  &:hover {
+    background-color: #0090f0;
+  }
+}
+
+// 按钮动画：模仿水波扩散的效果
 .hasRippleAnimation {
   position: relative;
   overflow: hidden;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 
   &:hover::before,
   &:focus::before {
-    content: "";
+    content: '';
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
     z-index: 1;
     pointer-events: none;
-    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &:hover .ripple,
+  &:focus .ripple {
+    animation: ripple-effect 0.6s linear;
   }
 
   .ripple {
     position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
     transform: scale(0);
     pointer-events: none;
     width: 100px;
@@ -210,13 +584,6 @@ h3 a {
     transform-origin: center center;
     margin-left: -50px;
     margin-top: -50px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-  }
-
-  &:hover .ripple,
-  &:focus .ripple {
-    animation: 0.6s linear 0s 1 normal none running ripple-effect;
   }
 }
 
@@ -231,759 +598,3 @@ h3 a {
     opacity: 0;
   }
 }
-
-.blueTextBtn {
-  display: flex;
-  align-items: center;
-  width: min-content;
-  -webkit-box-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 150, 250);
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: bold;
-  appearance: none;
-  height: 32px;
-  white-space: nowrap;
-  padding: 0px 16px;
-  margin: 0px 8px;
-  border-style: none;
-  border-radius: 99px;
-  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
-}
-
-// 输入面板的样式
-.XZInputWrap {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgb(44, 166, 223) 0px 0px 15px;
-  width: 720px;
-  max-width: 90vw;
-  height: max-content;
-  font-size: 16px;
-  padding: 20px;
-  border-radius: 8px;
-
-  .XZInputInstruction {
-    display: flex;
-    color: rgb(51, 51, 51);
-    line-height: 24px;
-    margin: 0px 0px 10px;
-  }
-
-  .XZInputContainer {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    .XZInput {
-      color: rgb(51, 51, 51);
-      box-sizing: border-box;
-      font-size: 16px;
-      line-height: 24px;
-      flex-basis: 600px;
-      flex-grow: 0;
-      font-family: sans-serif;
-      border-width: 1px;
-      border-style: solid;
-      border-color: rgb(0, 150, 250);
-      border-image: initial;
-      padding: 2px 8px;
-      border-radius: 6px;
-    }
-
-    textarea.XZInput {
-      height: auto;
-    }
-
-    .XZInputButton {
-      margin-left: 10px;
-      flex-shrink: 0;
-      background-color: rgb(0, 150, 250);
-      color: rgb(255, 255, 255);
-      height: 36px;
-      line-height: 36px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 0px 25px;
-      border-width: initial;
-      border-style: none;
-      border-color: initial;
-      border-image: initial;
-      border-radius: 18px;
-
-      &.cancel {
-        background-color: rgb(228, 157, 0);
-      }
-    }
-  }
-}
-
-
-p.result {
-  margin-bottom: 10px;
-
-  .color999 {
-    color: rgb(153, 153, 153);
-  }
-
-  .colorFolder {
-    color: rgb(14, 168, 239);
-  }
-
-  .color000 {
-    color: rgb(0, 0, 0);
-  }
-}
-
-// 设置面板里的选项的样式
-.option {
-  font-size: 15px;
-  font-family: @pixivFontFamily;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  column-gap: 4px;
-  margin: 2px 0px;
-  line-height: 26px;
-  min-height: 26px;
-  height: auto;
-  padding: 8px 12px;
-  border: 1px dotted #aaa;
-  border-radius: 4px;
-
-  &>* {
-    line-height: 26px;
-    flex-shrink: 0;
-  }
-
-  &>a {
-    text-decoration: none;
-    color: inherit !important;
-  }
-
-  span {
-    margin: 0;
-    padding: 0;
-  }
-
-  .key {
-    vertical-align: baseline !important;
-    font-weight: bold;
-    color: rgb(14, 168, 239);
-  }
-
-  .gray1 {
-    color: rgb(119, 119, 119);
-  }
-
-  .settingNameStyle1 {
-    cursor: pointer;
-    margin-right: 4px;
-    max-width: 650px;
-  }
-
-  label {
-    cursor: pointer;
-    padding-right: 5px;
-  }
-
-  label.active {
-    color: rgb(41, 179, 243);
-  }
-
-  .need_beautify {
-    display: none;
-  }
-
-  .beautify_switch {
-    display: inline-flex;
-    align-items: center;
-    width: 24px;
-    height: 14px;
-    position: relative;
-    cursor: pointer;
-    border-radius: 7px;
-    background: rgb(204, 204, 204);
-    transition: 0.3s;
-  }
-
-  .beautify_switch,
-  .beautify_checkbox {
-    margin: 6px 0px;
-  }
-
-  .beautify_switch::before {
-    content: "";
-    height: 12px;
-    width: 12px;
-    margin-left: 0px;
-    border-radius: 50%;
-    background: rgb(255, 255, 255);
-    transition: 0.3s;
-  }
-
-  .checkbox_switch:checked+.beautify_switch {
-    background: rgb(41, 179, 243);
-  }
-
-  .checkbox_switch:checked+.beautify_switch::before {
-    margin-left: 11px;
-  }
-
-  .beautify_checkbox {
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    width: 14px;
-    height: 14px;
-    background-color: rgb(255, 255, 255);
-    z-index: 1;
-    cursor: pointer;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(220, 223, 230);
-    border-image: initial;
-    border-radius: 2px;
-    margin: 6px 0px;
-    transition: 0.3s;
-  }
-
-  .checkbox_common:checked+.beautify_checkbox {
-    background: rgb(41, 179, 243);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(41, 179, 243);
-    border-image: initial;
-  }
-
-  .checkbox_common:checked+.beautify_checkbox::after {
-    transform: rotate(45deg) scaleY(1);
-  }
-
-  .beautify_checkbox::after {
-    box-sizing: content-box;
-    content: "";
-    height: 7px;
-    left: 4px;
-    position: absolute;
-    top: 1px;
-    transform: rotate(45deg) scaleY(0);
-    width: 3px;
-    transform-origin: center center;
-    border-width: 0px 1px 1px 0px;
-    border-style: solid solid;
-    border-color: rgb(255, 255, 255) rgb(255, 255, 255);
-    border-image: initial;
-    border-left: 0px;
-    border-top: 0px;
-    transition: 0.2s;
-  }
-
-  .beautify_radio {
-    width: 12px;
-    height: 12px;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(220, 223, 230);
-    border-image: initial;
-    border-radius: 100%;
-    margin: 7px 0px;
-  }
-
-  .beautify_radio::after {
-    width: 6px;
-    height: 6px;
-    background-color: rgb(255, 255, 255);
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 100%;
-    transition: transform 0.15s ease-in;
-  }
-
-  .radio:checked+.beautify_radio {
-    background: rgb(41, 179, 243);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(41, 179, 243);
-    border-image: initial;
-  }
-
-  .radio:checked+.beautify_radio::after {
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .rowWrap {
-    display: inline-flex;
-  }
-
-  .textButton {
-    cursor: pointer;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    background: none;
-    padding: 1px 6px;
-    flex-shrink: 0;
-  }
-
-  .textButton:hover {
-    color: rgb(14, 168, 239) !important;
-    fill: rgb(14, 168, 239) !important;
-  }
-
-  .grayButton {
-    margin-right: 8px;
-    background: rgb(238, 238, 238);
-    border-radius: 3px;
-    padding: 0px 6px;
-  }
-
-  .grayButton:hover {
-    color: rgb(255, 255, 255) !important;
-    background: rgb(41, 179, 243);
-  }
-
-  .setinput_style1 {
-    width: 50px;
-    min-width: 50px;
-    height: 20px;
-    line-height: 20px;
-    text-indent: 4px;
-    box-sizing: border-box;
-    font-size: 14px !important;
-    margin: 3px 0px;
-    outline: 0px;
-    border: none;
-    border-bottom: 1px solid rgb(204, 204, 204);
-    padding: 0px;
-    background: none;
-
-    &.postDate {
-      width: 190px;
-    }
-  }
-
-  .blue {
-    color: rgb(14, 168, 239);
-  }
-
-  #setMin,
-  #setMax {
-    height: 22px;
-    line-height: 22px;
-    margin: 2px 0px;
-  }
-
-  .has_tip:hover,
-  label:hover {
-    color: @themeBlue;
-  }
-
-  .subOptionWrap {
-    max-width: 100%;
-    min-height: 26px;
-    line-height: 26px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-grow: 1;
-    column-gap: 4px;
-  }
-
-  .subOptionWrap>* {
-    line-height: 26px;
-  }
-
-  .verticalSplit {
-    display: inline-block;
-    width: 0px;
-    height: 16px;
-    margin: 5px 4px;
-    border-right: 1px solid rgb(204, 204, 204);
-  }
-
-  .centerPanelTextArea {
-    font-family: @pixivFontFamily;
-    color: rgb(41, 179, 243);
-    font-size: 14px;
-    flex-basis: 100%;
-    flex-grow: 1;
-    min-height: 26px;
-    line-height: 1.7;
-    height: auto;
-    max-height: 200px;
-    resize: none;
-    border-top-width: initial;
-    border-right-width: initial;
-    border-left-width: initial;
-    border-top-color: initial;
-    border-right-color: initial;
-    border-left-color: initial;
-    background: transparent;
-    padding: 0px;
-    border-style: none none solid;
-    border-image: initial;
-    border-bottom: 1px solid rgb(204, 204, 204);
-  }
-
-  &[data-no="12"] .subOptionWrap,
-  &[data-no="35"] .subOptionWrap,
-  &[data-no="39"] .subOptionWrap,
-  &[data-no="43"] .subOptionWrap,
-  &[data-no="80"] .subOptionWrap,
-  .setUserNameWrap,
-  .DoNotDownloadLastFewImagesWarp {
-    flex-basis: 100%;
-  }
-
-  .setinput_tag {
-    min-width: 300px;
-    flex-grow: 1;
-  }
-
-  input[type="datetime-local" i] {
-    font-family: @pixivFontFamily;
-  }
-
-  .fileNameRule {
-    min-width: 310px;
-  }
-
-  .saveNamingRuleWrap {
-    display: inline-block;
-    position: relative;
-  }
-
-  select {
-    width: 80px;
-    height: 22px;
-    vertical-align: middle;
-    margin: 2px 0px;
-    border-radius: 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-image: initial;
-  }
-
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit;
-  }
-
-  input[name="workDirNameRule"] {
-    min-width: 200px !important;
-  }
-
-  .beautify_scrollbar {
-
-    // 滚动条整体
-    // width 是垂直滚动条的宽度，height 是水平滚动条的高度
-    &::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
-    }
-
-    // 整个滚动条的底色
-    //&::-webkit-scrollbar-track-piece {background:#fcfcfc;}
-
-    // 滚动条的滑块部分
-    &::-webkit-scrollbar-thumb {
-      background-color: #3ab8f2;
-      border-radius: 10px;
-    }
-  }
-
-  .blockTagsForSpecificUserWrap .textButton {
-    cursor: pointer;
-    color: rgb(102, 102, 102);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    background: none;
-    outline: none;
-    padding: 0px 3px;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 5px 0px;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem {
-    margin-right: 10px;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem .label {
-    color: rgb(68, 68, 68);
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem span {
-    padding-right: 4px;
-    line-height: 26px;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem.uid input {
-    width: auto !important;
-    min-width: 100px !important;
-  }
-
-  .blockTagsForSpecificUserWrap .addWrap .addUidInput {
-    max-width: 120px;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem.tags {
-    display: flex;
-    max-width: 320px;
-    flex: 1 1 0%;
-  }
-
-  .blockTagsForSpecificUserWrap .settingItem .inputItem.tags input {
-    width: auto !important;
-    flex: 1 1 0%;
-  }
-
-  .setUserNameWrap .settingItem {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 5px 0px;
-  }
-
-  .setUserNameWrap .settingItem .inputItem {
-    margin-right: 10px;
-  }
-
-  .setUserNameWrap .settingItem .inputItem span {
-    padding-right: 4px;
-    line-height: 26px;
-  }
-
-  .setUserNameWrap .settingItem .inputItem .label {
-    color: rgb(68, 68, 68);
-  }
-
-  .setUserNameWrap .settingItem .inputItem.uid input {
-    width: auto !important;
-    min-width: 100px !important;
-  }
-
-  .setUserNameWrap .settingItem .inputItem.name {
-    display: flex;
-    min-width: 100px;
-    max-width: 220px;
-    flex: 1 1 0%;
-  }
-
-  .setUserNameWrap .settingItem .inputItem.name input {
-    width: auto !important;
-    flex: 1 1 0%;
-  }
-
-  .setUserNameWrap .textButton {
-    cursor: pointer;
-    color: rgb(102, 102, 102);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    background: none;
-    outline: none;
-    padding: 0px 3px;
-  }
-
-  .DoNotDownloadLastFewImagesWarp {
-
-    .controlBar {
-      display: inline;
-      color: rgb(102, 102, 102);
-      padding: 5px 0px;
-
-      .textButton {
-        cursor: pointer;
-        color: rgb(102, 102, 102);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-width: initial;
-        border-style: none;
-        border-color: initial;
-        border-image: initial;
-        background: none;
-        outline: none;
-        padding: 1px 3px;
-      }
-    }
-
-    .settingItem {
-      display: flex;
-      flex-wrap: wrap;
-      flex-basis: 100%;
-      align-items: center;
-      padding: 5px 0px;
-
-      span {
-        padding-right: 4px;
-        line-height: 26px;
-      }
-
-      .inputItem {
-        margin-right: 10px;
-
-        .label {
-          color: rgb(68, 68, 68);
-        }
-
-        &.uid input {
-          width: auto !important;
-          min-width: 100px !important;
-        }
-      }
-    }
-  }
-
-  .UseDifferentNameRuleIfWorkHasTagWarp {
-    .controlBar {
-      display: inline;
-      color: rgb(102, 102, 102);
-      padding: 5px 0px;
-    }
-
-    .textButton {
-      cursor: pointer;
-      color: rgb(102, 102, 102);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-width: initial;
-      border-style: none;
-      border-color: initial;
-      border-image: initial;
-      background: none;
-      outline: none;
-      padding: 1px 3px;
-    }
-
-    .settingItem {
-      display: flex;
-      flex-wrap: wrap;
-      flex-basis: 100%;
-      align-items: center;
-      padding: 5px 0px;
-
-      .inputItem {
-        display: flex;
-        margin-right: 10px;
-        flex-basis: 40%;
-
-        &.tags input {
-          width: auto !important;
-          flex: 1 1 0%;
-        }
-
-        &.rule {
-          display: flex;
-          min-width: 100px;
-          max-width: 220px;
-          flex: 1 1 0%;
-
-          input {
-            width: auto !important;
-            flex: 1 1 0%;
-          }
-        }
-
-        .label {
-          color: rgb(68, 68, 68);
-        }
-
-        span {
-          padding-right: 4px;
-          line-height: 26px;
-        }
-      }
-    }
-  }
-
-  .fileNameRuleLine1 {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 4px;
-  }
-
-  .fileNameRuleBtnsArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 4px;
-  }
-
-  .grow {
-    flex-grow: 1;
-  }
-
-  .noGrow {
-    flex-grow: 0;
-  }
-
-  .flexBasis100 {
-    flex-basis: 100%;
-  }
-
-  a.settingNameStyle {
-    color: unset !important;
-    font-weight: 400;
-    text-decoration: none;
-  }
-
-  .rowWrap {
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
-
-.pinButton {
-  display: none;
-}
-
-// 在左侧的设置项目录前面显示一个图标，以区分它和它的子项目
-li>ul.app-sub-sidebar>li::before {
-  content: "🌼";
-  display: inline-block;
-  width: 1em;
-  margin-left: -1.1em;
-  color: #aaa;
-}
-
-// lessc docs/style/style.less docs/style/style.css

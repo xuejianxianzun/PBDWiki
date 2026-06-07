@@ -6,29 +6,29 @@
 
 Install the Microsoft Edge Canary browser from Google Play:
 
-![](images/20250827_221754.png)
+![](../images/20250827_221754.png)
 
 ?>Currently, the stable version of Microsoft Edge does not support installing extensions, so the Canary version is required.
 
 After installation, open the menu, go to **Settings** > **About Microsoft Edge**, and tap the version number multiple times to enable developer options:
 
-![](images/20250828_013934.png)
+![](../images/20250828_013934.png)
 
 Return to the menu and select **Developer Options** at the bottom:
 
-![](images/20250828_014037.png)
+![](../images/20250828_014037.png)
 
 There are many features here; click **Extension install by crx**:
 
-![](images/20250827_230459.png)
+![](../images/20250827_230459.png)
 
 Click **Choose .crx file**:
 
-![](images/20250828_014137.png)
+![](../images/20250828_014137.png)
 
 Select the downloader's crx file from the file manager and click **OK**:
 
-![](images/20250828_014143.png)
+![](../images/20250828_014143.png)
 
 !> You must use a crx file, not a zip file.
 
@@ -38,25 +38,25 @@ Select the downloader's crx file from the file manager and click **OK**:
 
 You can download the crx file from the [releases page](https://github.com/xuejianxianzun/PixivBatchDownloader/releases) and transfer it to your Android device:
 
-![](images/20250828_001142.png)
+![](../images/20250828_001142.png)
 
 If no crx file is available, you can create one yourself. Download the zip file, extract it to a folder, and use the extension management page in a browser on your PC to select the folder and package it as a crx file. For example:
 
-![](images/20250828_014324.png)
+![](../images/20250828_014324.png)
 
 ----------
 
 Then agree to add the extension:
 
-![](images/20250828_014410.png)
+![](../images/20250828_014410.png)
 
 Afterward, from the Edge Canary browser's menu, click **Extensions**, and you should see the extension:
 
-![](images/20250828_014617.png)
+![](../images/20250828_014617.png)
 
 Open or refresh a pixiv.net page, and you should see the downloader's button on the right:
 
-![](images/20250827_231241.png)
+![](../images/20250827_231241.png)
 
 You can now use the downloader. Most of its features are the same as on PC, allowing batch downloads from various pages.
 
@@ -67,16 +67,16 @@ You can now use the downloader. Most of its features are the same as on PC, allo
 - Since the browser does not create folders, only the last segment of the downloader's naming rule takes effect. For example, the default naming rule is `pixiv/{user}-{user_id}/{id}-{title}`, but only `{id}-{title}` will apply. If you modify the naming rule, ensure the last segment includes `{id}`, which is the unique identifier for each file on Pixiv, to avoid duplicate filenames for different works.
 - On PC, the downloader overwrites old files when saving duplicates, but Edge Canary saves duplicate files with added sequence numbers, for example:
 
-![](images/20250827_232639.png)
+![](../images/20250827_232639.png)
 
 - On mobile web pages, some of the downloader's enhanced features may be unavailable or affected, such as work previews.
 - If your device is in landscape mode (e.g., a tablet), try enabling desktop mode in the browser's menu to potentially improve the downloader's experience:
 
-![](images/20250828_014805.png)
+![](../images/20250828_014805.png)
 
 Landscape effect on a phone:
 
-![](images/20250827_233618.jpg)
+![](../images/20250827_233618.jpg)
 
 ## Differences in Pagination
 
@@ -88,9 +88,9 @@ If you start crawling all works from the first page, this difference has no impa
 
 Here is an example: A user has 31,544 bookmarks, which amounts to 658 pages on the PC version but 1,753 pages on the mobile version:
 
-![](images/20250929_231536.webp)
+![](../images/20250929_231536.webp)
 
-![](images/20250929_231038.webp)
+![](../images/20250929_231038.webp)
 
 **Potential Impacts:**
 
