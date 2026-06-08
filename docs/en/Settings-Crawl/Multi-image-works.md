@@ -9,9 +9,11 @@
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap" data-show="multiImageWorkImageLimitSwitch" style="display: none;">
     &lt;=&nbsp;
-    <input type="text" name="multiImageWorkImageLimit" class="setinput_style blue" value="1">
+    <input type="text" name="multiImageWorkImageLimit" class="setinput_style blue" value="10">
   </div>
 </div>
+
+If a multi-image work contains more images than the number you set, the downloader will not crawl that work.
 
 ## Only crawl the first few images of multi-image works
 
@@ -27,30 +29,7 @@
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
 </div>
 
-
-You can filter original works and non-original works.
-
-**How it works:**
-
-When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
-
-For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
-
-![](../images/20260405_005635.png)
-
-If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
-
-![](../images/20260405_005754.png)
-
-The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
-
-Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
-
-```
-原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
-```
-
-PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+If you do not want to download too many images from a multi-image work, or if you think the first image is the most valuable one, you can enable this setting.
 
 ## Only crawl the last few images of multi-image works
 
@@ -70,30 +49,12 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
     </svg>
     </span></div>
 
+A common use case is when users post character cards or scene cards from games such as Koikatsu. The earlier images are screenshots, while the last image contains the actual card data. You can enable this setting to crawl only the last one or several images.
 
-You can filter original works and non-original works.
+For example, in multi-image works by [日月](https://www.pixiv.net/users/42064021/artworks), the last image is the character card.
 
-**How it works:**
-
-When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
-
-For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
-
-![](../images/20260405_005635.png)
-
-If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
-
-![](../images/20260405_005754.png)
-
-The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
-
-Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
-
-```
-原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
-```
-
-PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+**Tip:**
+- The two `crawl only` conditions can be used at the same time. In that case, an image is kept if it matches either condition. This lets you skip the middle images and download only the images at the beginning and the end.
 
 ## Do not crawl the first few images of multi-image works
 
@@ -113,30 +74,16 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
     </svg>
     </span></div>
 
+A common use case is when an artist's first image contains text while the second image does not, or the first image is all-ages while the second image is R-18. If you want to skip the first image and start crawling from the second image, you can use this setting.
 
-You can filter original works and non-original works.
+For example, in multi-image works by [こけもも](https://www.pixiv.net/users/1472682), the first image contains text while the second one is clean. If you want to exclude the first image, you can use this setting.
 
-**How it works:**
+Also, their last images are promotional images, so this setting can be used together with `Multi-image works: do not crawl the last few images`.
 
-When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+**Notes:**
 
-For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
-
-![](../images/20260405_005635.png)
-
-If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
-
-![](../images/20260405_005754.png)
-
-The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
-
-Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
-
-```
-原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
-```
-
-PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+- If the number you set is larger than the number of images in the work, the downloader will keep the last image instead of excluding the whole work.
+- `Crawl only` and `do not crawl` conditions for the first/last few images can be used together. `Do not crawl` has higher priority. If an image matches both kinds of conditions, the downloader will not crawl it.
 
 ## Do not crawl the last few images of multi-image works
 
@@ -157,29 +104,13 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
     </span></div>
 
 
-You can filter original works and non-original works.
+A common use case is when an artist's last one or several images are promotional images, or images with mosaics, and you do not want to crawl them. In that case, you can use this setting to exclude the last one or several images.
 
-**How it works:**
+For example, in multi-image works by [儒宅 Ruzhai](https://www.pixiv.net/users/12539859), the last image is always a promotional image, so this setting is useful.
 
-When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
-
-For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
-
-![](../images/20260405_005635.png)
-
-If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
-
-![](../images/20260405_005754.png)
-
-The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
-
-Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
-
-```
-原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
-```
-
-PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+**Notes:**
+- If the number you set is larger than the number of images in the work, the downloader will keep the first image instead of excluding the whole work.
+- `Crawl only` and `do not crawl` conditions for the first/last few images can be used together. `Do not crawl` has higher priority. If an image matches both kinds of conditions, the downloader will not crawl it.
 
 ## Don't download the last few images for specific user's multi-image works
 
@@ -197,7 +128,7 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_用户id">User ID (Number)</span>
-          <input type="text" class="setinput_style blue addUidInput" data-xzplaceholder="_必须是数字" placeholder="Number">
+          <input type="text" class="setinput_style blue addUidInput w100" data-xzplaceholder="_必须是数字" placeholder="Number">
         </div>
         <div class="inputItem value">
           <span class="label nameLabel" data-xztext="_不下载最后几张图片">Do not download last few images</span>
@@ -209,7 +140,6 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
               <use xlink:href="#yes_submit"></use>
             </svg>
           </button>
-          
           <button type="button" class="textButton cancel" data-xztitle="_取消" title="Cancel">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#close_cancel"></use>
@@ -223,4 +153,8 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
 </div>
 
 
+This is a hidden setting.
 
+This setting is always active, whether displayed or not. By default, it has no rules, so it has no effect. It only takes effect after you add rules.
+
+Click the "Add" button to enter a user ID and specify how many of their work's last images to exclude from downloading.
