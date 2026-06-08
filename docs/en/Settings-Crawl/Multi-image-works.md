@@ -21,7 +21,7 @@
   </a>
   <input type="checkbox" name="onlyCrawlFirstFewImagesSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <div class="subOptionWrap noGrow" data-show="onlyCrawlFirstFewImagesSwitch" style="display: inline-flex;">
+  <div class="subOptionWrap noGrow" data-show="onlyCrawlFirstFewImagesSwitch" style="display: none;">
     <input type="text" name="onlyCrawlFirstFewImagesCount" class="setinput_style blue" value="1">
   </div>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
@@ -83,7 +83,7 @@
 
 ## Don't download the last few images for specific user's multi-image works
 
-<div class="option settingsPanel_optionCard" data-no="25" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="25" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=25" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_特定用户的多图作品不下载最后几张图片">Don't download the <span class="key">last few</span> images for specific user's multi-image works</span>
   </a>

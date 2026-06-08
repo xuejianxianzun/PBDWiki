@@ -1,6 +1,6 @@
 ## How many works to crawl
 
-<div class="option settingsPanel_optionCard pinned" data-no="0" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="0" data-pin-bound="true" style="display: flex;">
   <a href="http://localhost:3000/#/en/Settings-Crawl/Crawl-scope?flag=0" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span class="textTip" data-xztext="_抓取多少作品">How <span class="key">many</span> works to crawl</span>
   </a>
@@ -13,7 +13,7 @@
 
 ## How many pages to crawl
 
-<div class="option settingsPanel_optionCard pinned" data-no="1" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="1" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Crawl/Crawl-scope?flag=1" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span class="textTip" data-xztext="_抓取多少页面">How <span class="key">many</span> pages to crawl</span>
   </a>
@@ -26,7 +26,7 @@
 
 ## Crawl the latest few works of each user
 
-<div class="option settingsPanel_optionCard" data-no="2" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="2" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Crawl/Crawl-scope?flag=2" target="_blank" class="has_tip settingNameStyle" data-xztip="_必须大于0" data-tip="must be greater than 0" data-bind-click="true">
     <span data-xztext="_抓取每个用户最新的几个作品">Crawl the <span class="key">latest</span> few works of each user</span>
     <span class="gray1"> ? </span>

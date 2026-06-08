@@ -52,7 +52,7 @@
   <input type="checkbox" name="blockTagsForSpecificUser" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="blockTagsForSpecificUser" style="display: none;">
-    <slot data-name="blockTagsForSpecificUser"><div class="blockTagsForSpecificUserWrap theme-white" style="display: none;">
+    <slot data-name="blockTagsForSpecificUser"><div class="blockTagsForSpecificUserWrap theme-white">
     <div class="controlBar">
       <span class="total">0</span>
       <button type="button" class="textButton expand" data-xztext="_收起">Collapse</button>

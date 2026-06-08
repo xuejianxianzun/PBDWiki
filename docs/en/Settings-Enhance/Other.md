@@ -97,7 +97,7 @@ On the work page, and when previewing a work, you can use the shortcut key &lt;s
   <div class="optionLine nowrap">
     <span data-xztext="_文本格式" class="mr4">Text format</span>
     <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#copyWorkInfoFormatTip" data-for-no="89" data-xztext="_提示">Tip</button>
-    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}"></textarea>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}">id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}</textarea>
   </div>
   <p class="tip namingTipArea" id="copyWorkInfoFormatTip">
     <span data-xztext="_复制内容的格式的提示">You can set the format of the text content, which will affect the content copied in <span class="blue">text/plain</span> and <span class="blue">text/html</span> formats.

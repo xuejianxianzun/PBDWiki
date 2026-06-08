@@ -41,7 +41,7 @@
     <span data-xztext="_减慢抓取速度"><span class="key">Slow down</span> crawl</span>
     <span class="gray1"> ? </span>
   </a>
-  <input type="checkbox" name="slowCrawl" class="need_beautify checkbox_switch">
+  <input type="checkbox" name="slowCrawl" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="slowCrawl" style="display: inline-flex;">
     <div class="optionLine">

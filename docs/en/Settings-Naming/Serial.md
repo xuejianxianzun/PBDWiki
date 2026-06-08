@@ -26,7 +26,7 @@
   </a>
   <input type="checkbox" name="noSerialNo" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <div class="subOptionWrap" data-show="noSerialNo" style="display: inline-flex;">
+  <div class="subOptionWrap" data-show="noSerialNo" style="display: none;">
     <input type="checkbox" name="noSerialNoForSingleImg" id="setNoSerialNoForSingleImg" class="need_beautify checkbox_common" checked="">
     <span class="beautify_checkbox" tabindex="0"></span>
     <label for="setNoSerialNoForSingleImg" data-xztext="_单图作品">Single image works</label>

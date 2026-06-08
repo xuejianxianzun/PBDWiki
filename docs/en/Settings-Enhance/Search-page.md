@@ -11,7 +11,7 @@
 
 ## Filter works on the search page
 
-<div class="option settingsPanel_optionCard" data-no="91" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="91" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Enhance/Search-page?flag=91" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_过滤搜索页面的作品"><span class="key">Filter</span> works on the search page</span>
   </a>

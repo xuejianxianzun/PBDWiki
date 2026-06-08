@@ -21,7 +21,7 @@
 
 <div class="option settingsPanel_optionCard" data-no="83" data-pin-bound="true" style="display: flex;">
   <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示放大按钮" data-bind-click="true">Show <span class="key">zoom</span> button on thumbnail</a>
-  <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch">
+  <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="magnifier" style="display: inline-flex;">
     <div class="optionLine">

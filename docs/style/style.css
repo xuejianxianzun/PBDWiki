@@ -315,7 +315,6 @@
   display: block;
   box-sizing: content-box;
   color: inherit;
-  line-height: 1;
   height: 32px;
   cursor: pointer;
   padding: 0px;
@@ -490,7 +489,7 @@
 body.mobile #quickCrawlBtn {
   top: 26%;
 }
-.centerWrap.theme-white {
+:root {
   --settings-panel-text: #444;
   --settings-panel-border: #9dd4f9;
   --settings-panel-shadow: 0 0 25px #b4e0f5;
@@ -615,7 +614,7 @@ body.mobile #quickCrawlBtn {
   --settings-panel-search-summary: #444;
   --settings-panel-search-mark-bg: #ffe74b;
 }
-.centerWrap.theme-dark {
+:root.theme-dark {
   --settings-panel-text: #dfe7ef;
   --settings-panel-border: rgba(94, 172, 230, 0.45);
   --settings-panel-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
@@ -733,7 +732,7 @@ body.mobile #quickCrawlBtn {
   --settings-panel-search-summary: #dfe7ef;
   --settings-panel-search-mark-bg: #ae9a14;
 }
-.centerWrap.xzBG {
+:root.xzBG {
   --settings-panel-text: #fff;
   --settings-panel-head-bg: rgba(10, 18, 28, 0.2);
   --settings-panel-con-bg: rgba(10, 18, 28, 0.1);
@@ -849,176 +848,100 @@ body.mobile #quickCrawlBtn {
   --settings-panel-search-summary: #fff;
   --settings-panel-search-mark-bg: #c1b504;
 }
-.centerWrap.mobile {
-  width: calc(100vw - 32px);
-  left: 50%;
-  top: 5vh;
-  max-height: calc(80vh);
-  transform: translateX(-50%);
-  font-size: 15px;
-  font-family: var(--mobile-font-family);
-  overflow: auto;
-}
-.centerWrap.mobile p {
-  line-height: 32px;
-}
-.centerWrap.mobile .centerWrap_head {
-  padding: 12px;
-  flex-direction: column;
-  align-items: stretch;
-}
-.centerWrap.mobile .centerWrap_head .settingsPanel_headerMain,
-.centerWrap.mobile .centerWrap_head .settingsPanel_headerActions {
-  min-height: 32px;
-  justify-content: space-between;
-}
-.centerWrap.mobile .centerWrap_head .settingsPanel_headerActions {
-  padding-top: 10px;
-}
-.centerWrap.mobile .centerWrap_head .settingsPanel_headerSearch {
-  flex: 1;
-  min-width: 0;
-}
-.centerWrap.mobile .settingsPanel_searchBar {
-  width: 100%;
-  max-width: none;
-}
-.centerWrap.mobile .settingsPanel_headerMinor,
-.centerWrap.mobile .centerWrap_close_pc {
-  display: none;
-}
-.centerWrap.mobile .centerWrap_close_mobile {
-  display: inline-flex;
-}
-.centerWrap.mobile .centerWrap_con {
-  padding: 0;
-  flex-direction: column;
-  max-height: calc(80vh - 120px);
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar {
-  width: 100%;
-  overflow: visible;
-  padding: 0 1vw;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar .settingsPanel_nav {
-  margin: 6px 0;
-  gap: 6px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar .settingsPanel_navItem {
-  flex: 0 1 auto;
-  width: auto;
-  max-width: 100%;
-  min-height: 42px;
-  padding: 8px 12px;
-  justify-content: center;
-  gap: 6px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar .settingsPanel_navText {
-  flex: none;
-  min-width: 0;
-  font-size: 17px;
-  min-height: 26px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar.lang_zh-cn .settingsPanel_navText,
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar.lang_zh-tw .settingsPanel_navText {
-  letter-spacing: 2px;
-  text-indent: 2px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_main {
-  width: 100%;
-  padding: 0 1vw;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .settingsPanel_panelContent {
-  padding: 10px 12px;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .centerWrap_btns {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.centerWrap.mobile .centerWrap_con .settingForm .setinput_style {
-  font-size: 15px !important;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .centerWrap_btns button {
-  font-size: 15px;
-  line-height: 24px;
-  padding: 7px 10px;
-}
-.centerWrap.mobile .centerWrap_con .settingForm input[name='needTag'] {
-  flex-basis: 100% !important;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .fileNameRuleLine1,
-.centerWrap.mobile .centerWrap_con .settingForm .fileNameRuleBtnsArea {
-  flex-wrap: wrap !important;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .namingRuleList {
-  left: 20px;
-  top: 66px;
-  right: auto;
-  width: 100vw;
-  max-width: 80% !important;
-  min-width: unset !important;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .namingRuleList li {
-  min-width: unset !important;
-  max-width: none !important;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .namingRuleList li .rule {
-  padding-left: 12px;
-}
-.centerWrap.mobile .centerWrap_con .settingForm .namingRuleList li .delete {
-  margin-right: 2px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_sidebar {
-  align-items: center;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummary {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding: 12px 12px;
-  width: 98%;
-  border-top: none;
-  background: var(--settings-panel-surface-bg);
-  border-radius: 12px;
-  box-shadow: var(--settings-panel-surface-shadow);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummary button,
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummary svg {
-  font-size: 26px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummaryStatus,
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummaryActions {
-  gap: 16px;
-  flex-basis: auto;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummaryStatus {
-  margin-bottom: 0px;
-  gap: 6px;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon {
-  top: 0;
-}
-.centerWrap.mobile .centerWrap_con .settingsPanel_helpActions {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 @media (max-width: 414px) {
-  .centerWrap.mobile .centerWrap_con .settingForm .centerWrap_btns button {
+  p {
+    line-height: 32px;
+  }
+  .centerPanelTextArea {
+    min-width: unset !important;
+  }
+  input[name="dateFormat"] {
+    min-width: unset !important;
+    flex-basis: 100%;
+  }
+  .settingsPanel_main {
+    width: 100%;
+    padding: 0 1vw;
+  }
+  .settingsPanel_panelContent {
+    padding: 10px 12px;
+  }
+  .centerWrap_btns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .setinput_style {
+    font-size: 15px !important;
+  }
+  .centerWrap_btns button {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 7px 10px;
+  }
+  input[name='needTag'] {
+    flex-basis: 100% !important;
+  }
+  .fileNameRuleLine1,
+  .fileNameRuleBtnsArea {
+    flex-wrap: wrap !important;
+  }
+  .namingRuleList {
+    left: 20px;
+    top: 66px;
+    right: auto;
+    width: 100vw;
+    max-width: 80% !important;
+    min-width: unset !important;
+  }
+  .namingRuleList li {
+    min-width: unset !important;
+    max-width: none !important;
+  }
+  .namingRuleList li .rule {
+    padding-left: 12px;
+  }
+  .namingRuleList li .delete {
+    margin-right: 2px;
+  }
+  .settingsPanel_sidebar {
+    align-items: center;
+  }
+  .settingsPanel_downloadSummary {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 12px 12px;
+    width: 98%;
+    border-top: none;
+    background: var(--settings-panel-surface-bg);
+    border-radius: 12px;
+    box-shadow: var(--settings-panel-surface-shadow);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .settingsPanel_downloadSummary button,
+  .settingsPanel_downloadSummary svg {
+    font-size: 26px;
+  }
+  .settingsPanel_downloadSummaryStatus,
+  .settingsPanel_downloadSummaryActions {
+    gap: 16px;
+    flex-basis: auto;
+  }
+  .settingsPanel_downloadSummaryStatus {
+    margin-bottom: 0px;
+    gap: 6px;
+  }
+  .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon {
+    top: 0;
+  }
+  .settingsPanel_helpActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  button {
     padding: 10px 6px;
   }
 }
-@media (max-width: 388px) {
-  .centerWrap.mobile .centerWrap_con .settingForm .centerWrap_btns button {
-    padding: 12px 6px;
-  }
-}
-.centerWrap {
+:root {
   --settings-panel-bg: #fff;
   --settings-panel-text: #444;
   --settings-panel-border: #9dd4f9;
@@ -1141,349 +1064,173 @@ body.mobile #quickCrawlBtn {
   --settings-panel-naming-list-empty: #93a1ac;
   --settings-panel-search-summary: #444;
   --settings-panel-search-mark-bg: #ffe74b;
-  display: none;
-  box-sizing: border-box;
-  width: 925px;
-  max-width: calc(100vw - 24px);
-  max-height: 84vh;
-  left: 50%;
-  top: 10vh;
-  margin-left: 0;
-  transform: translateX(-54%);
-  padding: 0;
-  border-radius: 16px;
-  border: 1px solid var(--settings-panel-border);
-  box-shadow: var(--settings-panel-shadow);
-  background: var(--settings-panel-bg);
-  position: fixed;
-  z-index: 5000;
-  font-size: 15px;
-  color: var(--settings-panel-text);
-  overflow: hidden;
   font-family: var(--pixiv-font-family);
+  /*--------美化作为开关的复选框------------*/
+  /*--------美化普通的复选框------------*/
+  /*--------美化单选框------------*/
 }
-.centerWrap ::selection {
+:root ::selection {
   background: var(--theme-blue);
   color: #fff;
 }
-.centerWrap hr {
+:root hr {
   border: none;
   height: 1px;
   background: none;
   margin: 5px 0;
 }
-.centerWrap p,
-.centerWrap div,
-.centerWrap span,
-.centerWrap ul,
-.centerWrap li,
-.centerWrap input {
-  padding: 0;
-  margin: 0;
-}
-.centerWrap p,
-.centerWrap div,
-.centerWrap span,
-.centerWrap button,
-.centerWrap .centerWrap_head,
-.centerWrap .centerWrap_con,
-.centerWrap .settingForm,
-.centerWrap .settingsPanel_page,
-.centerWrap .settingsPanel_pageInner,
-.centerWrap .settingsPanel_sidebar,
-.centerWrap .settingsPanel_main,
-.centerWrap .settingsPanel_navItem,
-.centerWrap .settingsPanel_tipCard,
-.centerWrap .settingsPanel_helpAction,
-.centerWrap .settingsPanel_sectionHeader,
-.centerWrap .settingsPanel_downloadSummaryBtn {
+:root p,
+:root div,
+:root span,
+:root button,
+:root .centerWrap_head,
+:root .centerWrap_con,
+:root .settingForm,
+:root .settingsPanel_page,
+:root .settingsPanel_pageInner,
+:root .settingsPanel_sidebar,
+:root .settingsPanel_main,
+:root .settingsPanel_navItem,
+:root .settingsPanel_tipCard,
+:root .settingsPanel_helpAction,
+:root .settingsPanel_sectionHeader,
+:root .settingsPanel_downloadSummaryBtn {
   box-sizing: border-box;
 }
-.centerWrap button {
+:root button {
   color: #444;
 }
-.centerWrap p {
+:root p {
   line-height: var(--line-height);
   min-height: var(--line-height);
   height: auto;
   margin: 0;
   max-width: 100%;
 }
-.centerWrap .tip {
+:root .tip {
   display: none;
   color: #888;
 }
-.centerWrap .blue {
+:root .blue {
   color: var(--beautify-blue) !important;
 }
-.centerWrap .fwb {
+:root .fwb {
   font-weight: 700;
 }
-.centerWrap .gray1 {
+:root .gray1 {
   color: #777;
 }
-.centerWrap .hidden {
+:root .hidden {
   display: none;
 }
-.centerWrap .textButton {
+:root .textButton {
   border: none;
   background: none;
   padding: 0px 6px;
   cursor: pointer;
 }
-.centerWrap .textButton.fireEvent {
+:root .textButton.fireEvent {
   border: 1px solid var(--settings-panel-btn-secondary-border);
   border-radius: 6px;
   margin-right: 3px;
 }
-.centerWrap .grayButton {
+:root .grayButton {
   background: #eee;
   color: #333;
   border-radius: 4px;
   padding: 0px 6px;
   margin: 0 4px;
 }
-.centerWrap .grayButton:hover {
+:root .grayButton:hover {
   background: var(--beautify-blue);
   color: #fff !important;
 }
-.centerWrap .centerWrap_head {
-  padding: 10px 10px 10px 20px;
-  background: var(--settings-panel-head-bg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-  border-bottom: 1px solid var(--settings-panel-head-border);
-}
-.centerWrap .centerWrap_head .centerWrap_title {
-  line-height: 30px;
-  text-align: center;
-  font-size: 18px;
-  position: relative;
-}
-.centerWrap .centerWrap_head .btns {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.centerWrap .centerWrap_head .btns .centerWrap_top_btn {
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #666;
-  user-select: none;
-  display: inline-block;
-  vertical-align: baseline;
-  background: none;
-  border: none;
-}
-.centerWrap .centerWrap_head .btns .centerWrap_top_btn .icon {
-  vertical-align: initial;
-  padding-top: 5px;
-}
-.centerWrap .settingsPanel_headerMain,
-.centerWrap .settingsPanel_headerActions,
-.centerWrap .settingsPanel_headerSearch,
-.centerWrap .settingsPanel_brand {
+:root .settingsPanel_headerMain,
+:root .settingsPanel_headerActions,
+:root .settingsPanel_headerSearch,
+:root .settingsPanel_brand {
   display: flex;
   align-items: center;
 }
-.centerWrap .settingsPanel_headerActions {
+:root .settingsPanel_headerActions {
   gap: 0px;
 }
-.centerWrap .settingsPanel_headerSearch {
+:root .settingsPanel_headerSearch {
   gap: 5px;
 }
-.centerWrap .settingsPanel_brand {
+:root .settingsPanel_brand {
   gap: 6px;
   min-width: 0;
   color: var(--settings-panel-brand-color);
 }
-.centerWrap .settingsPanel_logo {
+:root .settingsPanel_logo {
   width: 28px;
   height: 28px;
   flex: none;
 }
-.centerWrap .settingsPanel_brandName {
+:root .settingsPanel_brandName {
   font-size: 17px;
   font-weight: 700;
-  line-height: 1;
   white-space: nowrap;
 }
-.centerWrap .centerWrap_top_btn {
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--settings-panel-top-btn-color);
-  transition: color 0.2s, background-color 0.2s;
-  background: none;
-  border: none;
-}
-.centerWrap .centerWrap_top_btn:hover {
-  color: var(--settings-panel-top-btn-hover-color);
-  background: var(--settings-panel-top-btn-hover-bg);
-}
-.centerWrap .centerWrap_top_btn.centerWrap_close_pc:hover,
-.centerWrap .centerWrap_top_btn.centerWrap_close_pc:active {
-  color: var(--settings-panel-top-btn-close-hover-color);
-  background: var(--settings-panel-top-btn-close-hover-bg);
-}
-.centerWrap .centerWrap_top_btn .icon {
-  font-size: 20px;
-}
-.centerWrap .settingsPanel_sponsorBtn:hover {
+:root .settingsPanel_sponsorBtn:hover {
   color: var(--settings-panel-sponsor-hover-color);
   background: var(--settings-panel-sponsor-hover-bg);
 }
-.centerWrap .centerWrap_close_mobile {
+:root .centerWrap_close_mobile {
   display: none;
 }
-.centerWrap .settingsPanel_searchBar {
-  width: 210px;
-  max-width: 80vw;
-  height: 32px;
-  border: 1px solid var(--settings-panel-input-border);
-  border-radius: var(--settings-panel-input-radius);
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--settings-panel-input-bg);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.centerWrap .settingsPanel_searchBar:focus-within {
-  border-color: var(--settings-panel-search-border-focus);
-  box-shadow: var(--settings-panel-input-focus-shadow);
-}
-.centerWrap .settingsPanel_searchBar input {
-  flex: 1;
-  min-width: 0;
-  border: none;
-  height: 100%;
-  background: transparent;
-  color: var(--settings-panel-search-text);
-  font-size: 15px;
-  outline: none;
-}
-.centerWrap .settingsPanel_searchBar input::placeholder {
-  color: var(--settings-panel-search-placeholder);
-}
-.centerWrap .settingsPanel_searchBar button {
-  background: none;
-  border: none;
-}
-.centerWrap .settingsPanel_searchIcon {
-  color: var(--settings-panel-search-icon);
-  font-size: 20px;
-  flex: none;
-}
-.centerWrap .settingsPanel_clearSearch {
-  width: 24px;
-  height: 24px;
-  padding: 4px;
-  border-radius: 50%;
-  color: var(--settings-panel-clear-color);
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-.centerWrap .settingsPanel_clearSearch.visible {
-  display: inline-flex;
-  color: var(--settings-panel-clear-visible-color);
-}
-.centerWrap .settingsPanel_clearSearch:hover {
-  color: var(--settings-panel-clear-hover-color);
-  background: var(--settings-panel-clear-hover-bg);
-}
-.centerWrap .settingsPanel_expandAll {
-  position: relative;
-  transition: transform 0.2s, color 0.2s, background-color 0.2s;
-}
-.centerWrap .settingsPanel_expandAll svg {
-  transform: rotate(180deg);
-  transition: transform 0.2s;
-}
-.centerWrap .settingsPanel_expandAll.partial svg {
-  transform: rotate(90deg);
-}
-.centerWrap .settingsPanel_expandAll.expanded svg {
-  transform: rotate(0deg);
-}
-.centerWrap .centerWrap_con {
-  display: flex;
-  align-items: stretch;
-  width: 100%;
-  background: var(--settings-panel-con-bg);
-  overflow: auto;
-  max-height: 76vh;
-  min-height: 600px;
-}
-.centerWrap .centerWrap_con slot[data-name='namingBtns'] button,
-.centerWrap .centerWrap_con slot[data-name='exportResult'] button {
+:root slot[data-name='namingBtns'] button,
+:root slot[data-name='exportResult'] button {
   display: none;
 }
-.centerWrap .centerWrap_con .showFileNameTip {
+:root .showFileNameTip {
   height: var(--line-height);
 }
-.centerWrap .centerWrap_con a.settingNameStyle:hover,
-.centerWrap .centerWrap_con .has_tip:hover,
-.centerWrap .centerWrap_con label:hover,
-.centerWrap .centerWrap_con .showFileNameTip:hover,
-.centerWrap .centerWrap_con .showFileNameTip:focus,
-.centerWrap .centerWrap_con .textButton:hover,
-.centerWrap .centerWrap_con .textButton:focus,
-.centerWrap .centerWrap_con .help_bar > *:hover,
-.centerWrap .centerWrap_con .updateActiveClass {
+:root a.settingNameStyle:hover,
+:root .has_tip:hover,
+:root label:hover,
+:root .showFileNameTip:hover,
+:root .showFileNameTip:focus,
+:root .textButton:hover,
+:root .textButton:focus,
+:root .help_bar > *:hover,
+:root .updateActiveClass {
   color: var(--beautify-blue) !important;
 }
-.centerWrap .centerWrap_con .grayButton:hover,
-.centerWrap .centerWrap_con .grayButton:focus {
+:root .grayButton:hover,
+:root .grayButton:focus {
   background: var(--beautify-blue);
   color: #fff !important;
 }
-.centerWrap .centerWrap_con .settingForm {
-  position: relative;
-  width: 100%;
-  /*--------美化作为开关的复选框------------*/
-  /*--------美化普通的复选框------------*/
-  /*--------美化单选框------------*/
-}
-.centerWrap .centerWrap_con .settingForm .optionAnchor {
+:root .optionAnchor {
   display: none;
 }
-.centerWrap .centerWrap_con .settingForm .option {
+:root .option {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   column-gap: 4px;
 }
-.centerWrap .centerWrap_con .settingForm .option:hover {
+:root .option:hover {
   outline: 2px solid #f5c519;
   outline-offset: -2px;
 }
-.centerWrap .centerWrap_con .settingForm .option > * {
+:root .option > * {
   line-height: var(--line-height);
   flex-shrink: 0;
 }
-.centerWrap .centerWrap_con .settingForm .option .beautify_switch,
-.centerWrap .centerWrap_con .settingForm .option .beautify_checkbox {
+:root .option .beautify_switch,
+:root .option .beautify_checkbox {
   margin: 6px 0;
   flex-shrink: 0;
 }
-.centerWrap .centerWrap_con .settingForm .option .beautify_radio {
+:root .option .beautify_radio {
   margin: 7px 0;
   flex-shrink: 0;
 }
-.centerWrap .centerWrap_con .settingForm .option .subOptionWrap {
+:root .option .subOptionWrap {
   max-width: 100%;
   min-height: var(--line-height);
   line-height: var(--line-height);
@@ -1493,13 +1240,13 @@ body.mobile #quickCrawlBtn {
   flex-grow: 1;
   column-gap: 4px;
 }
-.centerWrap .centerWrap_con .settingForm .option .subOptionWrap > * {
+:root .option .subOptionWrap > * {
   line-height: var(--line-height);
 }
-.centerWrap .centerWrap_con .settingForm .option .subOptionWrap.noGrow {
+:root .option .subOptionWrap.noGrow {
   flex-grow: 0;
 }
-.centerWrap .centerWrap_con .settingForm .option .optionLine {
+:root .option .optionLine {
   position: relative;
   display: flex;
   flex-basis: 100%;
@@ -1509,17 +1256,17 @@ body.mobile #quickCrawlBtn {
   gap: 4px;
   line-height: var(--line-height);
 }
-.centerWrap .centerWrap_con .settingForm .option .optionLine * {
+:root .option .optionLine * {
   line-height: var(--line-height);
 }
-.centerWrap .centerWrap_con .settingForm .option .setUserNameWrap,
-.centerWrap .centerWrap_con .settingForm .option .DoNotDownloadLastFewImagesWarp {
+:root .option .setUserNameWrap,
+:root .option .DoNotDownloadLastFewImagesWarp {
   flex-basis: 100%;
 }
-.centerWrap .centerWrap_con .settingForm .option .grow {
+:root .option .grow {
   flex-grow: 1;
 }
-.centerWrap .centerWrap_con .settingForm .option .setinput_style {
+:root .option .setinput_style {
   width: 60px;
   min-width: 60px;
   height: 24px;
@@ -1534,29 +1281,29 @@ body.mobile #quickCrawlBtn {
   background: var(--settings-panel-input-bg) !important;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.centerWrap .centerWrap_con .settingForm .option .setinput_style:focus,
-.centerWrap .centerWrap_con .settingForm .option .setinput_style:hover {
+:root .option .setinput_style:focus,
+:root .option .setinput_style:hover {
   border-color: var(--settings-panel-search-border-focus) !important;
 }
-.centerWrap .centerWrap_con .settingForm .option .setinput_style:focus {
+:root .option .setinput_style:focus {
   box-shadow: var(--settings-panel-input-focus-shadow);
 }
-.centerWrap .centerWrap_con .settingForm .option .setinput_style.postDate {
+:root .option .setinput_style.postDate {
   width: 170px;
 }
-.centerWrap .centerWrap_con .settingForm .option .setinput_style.bmkNum {
+:root .option .setinput_style.bmkNum {
   width: 76px;
 }
-.centerWrap .centerWrap_con .settingForm .option button[role='setMin'],
-.centerWrap .centerWrap_con .settingForm .option button[role='setMax'] {
+:root .option button[role='setMin'],
+:root .option button[role='setMax'] {
   margin: 0 4px;
 }
-.centerWrap .centerWrap_con .settingForm .option[data-no='62'] .optionLine,
-.centerWrap .centerWrap_con .settingForm .option[data-no='99'] .optionLine,
-.centerWrap .centerWrap_con .settingForm .option[data-no='103'] .optionLine {
+:root .option[data-no='62'] .optionLine,
+:root .option[data-no='99'] .optionLine,
+:root .option[data-no='103'] .optionLine {
   margin: 3px 0 !important;
 }
-.centerWrap .centerWrap_con .settingForm select {
+:root select {
   width: auto;
   height: 24px;
   margin: 2px 0;
@@ -1567,28 +1314,25 @@ body.mobile #quickCrawlBtn {
   padding: 0 8px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.centerWrap .centerWrap_con .settingForm select:hover,
-.centerWrap .centerWrap_con .settingForm select:focus {
+:root select:hover,
+:root select:focus {
   border-color: var(--settings-panel-search-border-focus);
 }
-.centerWrap .centerWrap_con .settingForm select:focus {
+:root select:focus {
   box-shadow: var(--settings-panel-input-focus-shadow);
 }
-.centerWrap .centerWrap_con .settingForm option {
+:root option {
   line-height: 24px;
 }
-.centerWrap .centerWrap_con .settingForm p * {
-  line-height: 1;
-}
-.centerWrap .centerWrap_con .settingForm p strong,
-.centerWrap .centerWrap_con .settingForm p .key {
+:root p strong,
+:root p .key {
   vertical-align: baseline !important;
 }
-.centerWrap .centerWrap_con .settingForm p button,
-.centerWrap .centerWrap_con .settingForm .controlBar span {
+:root p button,
+:root .controlBar span {
   line-height: var(--line-height);
 }
-.centerWrap .centerWrap_con .settingForm .centerPanelTextArea {
+:root .centerPanelTextArea {
   box-sizing: border-box;
   font-family: var(--pixiv-font-family);
   color: var(--beautify-blue);
@@ -1607,45 +1351,45 @@ body.mobile #quickCrawlBtn {
   border-radius: var(--settings-panel-input-radius);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.centerWrap .centerWrap_con .settingForm .centerPanelTextArea:hover,
-.centerWrap .centerWrap_con .settingForm .centerPanelTextArea:focus {
+:root .centerPanelTextArea:hover,
+:root .centerPanelTextArea:focus {
   border-color: var(--settings-panel-search-border-focus);
 }
-.centerWrap .centerWrap_con .settingForm .centerPanelTextArea:focus {
+:root .centerPanelTextArea:focus {
   box-shadow: var(--settings-panel-input-focus-shadow);
 }
-.centerWrap .centerWrap_con .settingForm .flexTip {
+:root .flexTip {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.centerWrap .centerWrap_con .settingForm .flexTip .right {
+:root .flexTip .right {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
 }
-.centerWrap .centerWrap_con .settingForm .tipWithBtn .left {
+:root .tipWithBtn .left {
   display: inline-block;
 }
-.centerWrap .centerWrap_con .settingForm .tipWithBtn .right {
+:root .tipWithBtn .right {
   display: inline-block;
   margin-left: 20px;
 }
-.centerWrap .centerWrap_con .settingForm .need_beautify {
+:root .need_beautify {
   display: none;
 }
-.centerWrap .centerWrap_con .settingForm label {
+:root label {
   cursor: pointer;
   padding-right: 5px;
 }
-.centerWrap .centerWrap_con .settingForm .tabsContent {
+:root .tabsContent {
   position: relative;
   display: none;
 }
-.centerWrap .centerWrap_con .settingForm .tabsContent:first-child {
+:root .tabsContent:first-child {
   display: block;
 }
-.centerWrap .centerWrap_con .settingForm .beautify_switch {
+:root .beautify_switch {
   display: inline-flex;
   align-items: center;
   width: 24px;
@@ -1656,7 +1400,7 @@ body.mobile #quickCrawlBtn {
   cursor: pointer;
   transition: all 0.3s;
 }
-.centerWrap .centerWrap_con .settingForm .beautify_switch::before {
+:root .beautify_switch::before {
   content: '';
   height: 12px;
   width: 12px;
@@ -1665,13 +1409,13 @@ body.mobile #quickCrawlBtn {
   margin-left: 0px;
   transition: all 0.3s;
 }
-.centerWrap .centerWrap_con .settingForm .checkbox_switch:checked + .beautify_switch {
+:root .checkbox_switch:checked + .beautify_switch {
   background: var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .checkbox_switch:checked + .beautify_switch::before {
+:root .checkbox_switch:checked + .beautify_switch::before {
   margin-left: 11px;
 }
-.centerWrap .centerWrap_con .settingForm .beautify_checkbox {
+:root .beautify_checkbox {
   display: inline-block;
   position: relative;
   border: 1px solid #dcdfe6;
@@ -1685,7 +1429,7 @@ body.mobile #quickCrawlBtn {
   transition: all 0.3s;
   cursor: pointer;
 }
-.centerWrap .centerWrap_con .settingForm .beautify_checkbox::after {
+:root .beautify_checkbox::after {
   box-sizing: content-box;
   content: '';
   border: 2px solid #fff;
@@ -1700,20 +1444,20 @@ body.mobile #quickCrawlBtn {
   transition: all 0.2s;
   transform-origin: center;
 }
-.centerWrap .centerWrap_con .settingForm .checkbox_common:checked + .beautify_checkbox {
+:root .checkbox_common:checked + .beautify_checkbox {
   background: var(--bg-checkbox-blue);
   border: 1px solid var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .beautify_checkbox:hover {
+:root .beautify_checkbox:hover {
   border: 1px solid var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .checkbox_common:checked + .beautify_checkbox::after {
+:root .checkbox_common:checked + .beautify_checkbox::after {
   transform: rotate(45deg) scaleY(1);
 }
-.centerWrap .centerWrap_con .settingForm .checkbox_common:focus + .beautify_checkbox {
+:root .checkbox_common:focus + .beautify_checkbox {
   border: 1px solid var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .beautify_radio {
+:root .beautify_radio {
   border: 1px solid #dcdfe6;
   border-radius: 100%;
   width: 12px;
@@ -1724,7 +1468,7 @@ body.mobile #quickCrawlBtn {
   display: inline-block;
   box-sizing: border-box;
 }
-.centerWrap .centerWrap_con .settingForm .beautify_radio::after {
+:root .beautify_radio::after {
   width: 6px;
   height: 6px;
   border-radius: 100%;
@@ -1736,63 +1480,66 @@ body.mobile #quickCrawlBtn {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.15s ease-in;
 }
-.centerWrap .centerWrap_con .settingForm .radio:checked + .beautify_radio {
+:root .radio:checked + .beautify_radio {
   background: var(--bg-checkbox-blue);
   border: 1px solid var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .beautify_radio:hover {
+:root .beautify_radio:hover {
   border: 1px solid var(--bg-checkbox-blue);
 }
-.centerWrap .centerWrap_con .settingForm .radio:checked + .beautify_radio::after {
+:root .radio:checked + .beautify_radio::after {
   transform: translate(-50%, -50%) scale(1);
 }
-.centerWrap .centerWrap_con .settingForm li {
+:root li {
   list-style: none;
 }
-.centerWrap .centerWrap_con .settingForm .download_progress1,
-.centerWrap .centerWrap_con .settingForm .right1 {
+:root .download_progress1,
+:root .right1 {
   position: relative;
 }
-.centerWrap .centerWrap_con .settingForm .progressBar1,
-.centerWrap .centerWrap_con .settingForm .right1 {
+:root .progressBar1,
+:root .right1 {
   width: 100%;
 }
-.centerWrap .centerWrap_con .settingForm .fileNameRuleLine1 {
+:root .fileNameRuleLine1 {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
   align-items: center;
   column-gap: 4px;
 }
-.centerWrap .centerWrap_con .settingForm .fileNameRuleBtnsArea {
+:root .fileNameRuleBtnsArea {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 4px;
 }
-.centerWrap .centerWrap_con .settingForm .fileNameRuleBtnsArea button {
+:root .fileNameRuleBtnsArea button {
   color: #333;
 }
-.centerWrap .centerWrap_con .settingForm .fileNameRule {
+:root input[name="dateFormat"] {
+  min-width: 250px;
+}
+:root .fileNameRule {
   display: flex;
   flex-grow: 1;
-  min-width: 310px !important;
+  min-width: 310px;
 }
-.centerWrap .centerWrap_con .settingForm .setinput_tag {
+:root .setinput_tag {
   min-width: 300px;
   flex-grow: 1;
 }
-.centerWrap .centerWrap_con .settingForm .showFileNameTip {
+:root .showFileNameTip {
   cursor: pointer;
 }
-.centerWrap .centerWrap_con .settingForm .fileNameTip {
+:root .fileNameTip {
   display: none;
   padding-top: 5px;
 }
-.centerWrap .centerWrap_con .settingForm .namingTipArea .name {
+:root .namingTipArea .name {
   cursor: pointer;
 }
-.centerWrap .centerWrap_con .settingForm .settingsPanel_downloadEmptyHint {
+:root .settingsPanel_downloadEmptyHint {
   grid-column: 1 / -1;
   display: flex;
   align-items: flex-start;
@@ -1807,16 +1554,14 @@ body.mobile #quickCrawlBtn {
   font-size: 14px;
   line-height: 1.6;
 }
-.centerWrap .centerWrap_con .settingForm .settingsPanel_downloadEmptyHint.is-hidden {
+:root .settingsPanel_downloadEmptyHint.is-hidden {
   display: none;
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns {
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button {
+:root .settingsPanelActionBtn {
+  font-size: 15px;
+  max-width: 160px;
+  width: 25%;
+  margin: 14px;
   box-sizing: border-box;
   border: 1px solid currentColor;
   width: 100%;
@@ -1836,115 +1581,115 @@ body.mobile #quickCrawlBtn {
   box-shadow: var(--settings-panel-btn-secondary-shadow);
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-intent='success'] {
+:root .settingsPanelActionBtn[data-btn-intent='success'] {
   color: var(--settings-panel-btn-secondary-success-text);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-intent='warning'] {
+:root .settingsPanelActionBtn[data-btn-intent='warning'] {
   color: var(--settings-panel-btn-secondary-warning-text);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-intent='danger'] {
+:root .settingsPanelActionBtn[data-btn-intent='danger'] {
   color: var(--settings-panel-btn-secondary-danger-text);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary']:hover,
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary']:focus {
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary']:hover,
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary']:focus {
   background: var(--settings-panel-btn-secondary-hover-bg);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary'][data-btn-intent='warning']:hover,
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary'][data-btn-intent='warning']:focus {
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary'][data-btn-intent='warning']:hover,
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary'][data-btn-intent='warning']:focus {
   background: var(--settings-panel-btn-secondary-warning-hover-bg);
   border-color: var(--settings-panel-btn-secondary-warning-hover-border);
   color: var(--settings-panel-btn-secondary-warning-hover-text);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary'][data-btn-intent='danger']:hover,
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='secondary'][data-btn-intent='danger']:focus {
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary'][data-btn-intent='danger']:hover,
+:root .settingsPanelActionBtn[data-btn-emphasis='secondary'][data-btn-intent='danger']:focus {
   background: var(--settings-panel-btn-secondary-danger-hover-bg);
   border-color: var(--settings-panel-btn-secondary-danger-hover-border);
   color: var(--settings-panel-btn-secondary-danger-hover-text);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary'] {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary'] {
   color: var(--settings-panel-btn-primary-text);
   border-color: transparent;
   box-shadow: var(--settings-panel-btn-primary-shadow);
   font-weight: 600;
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary']:hover,
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary']:focus {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary']:hover,
+:root .settingsPanelActionBtn[data-btn-emphasis='primary']:focus {
   transform: translateY(-1px);
   box-shadow: var(--settings-panel-btn-primary-shadow-hover);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary'][data-btn-intent='brand'] {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary'][data-btn-intent='brand'] {
   background: var(--settings-panel-btn-brand);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary'][data-btn-intent='success'] {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary'][data-btn-intent='success'] {
   background: var(--settings-panel-btn-success);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary'][data-btn-intent='warning'] {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary'][data-btn-intent='warning'] {
   background: var(--settings-panel-btn-warning);
 }
-.centerWrap .centerWrap_con .settingForm .centerWrap_btns button[data-btn-emphasis='primary'][data-btn-intent='danger'] {
+:root .settingsPanelActionBtn[data-btn-emphasis='primary'][data-btn-intent='danger'] {
   background: var(--settings-panel-btn-danger);
 }
-.centerWrap .centerWrap_con .settingForm .progressTip {
+:root .progressTip {
   font-size: 15px;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap {
+:root .progressBarWrap {
   display: none;
   margin-top: 12px;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .total {
+:root .progressBarWrap .total {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .total .text {
+:root .progressBarWrap .total .text {
   flex: none;
   line-height: 24px;
   color: var(--settings-panel-progress-label);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .total .right1 {
+:root .progressBarWrap .total .right1 {
   flex: 1;
   min-width: 0;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progress,
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBar {
+:root .progressBarWrap .progress,
+:root .progressBarWrap .progressBar {
   border-radius: 999px;
   height: 28px;
   overflow: hidden;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .right1 {
+:root .progressBarWrap .right1 {
   display: block;
   height: 28px;
   position: relative;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBar {
+:root .progressBarWrap .progressBar {
   position: absolute;
   inset: 0;
   border: 1px solid var(--settings-panel-progress-item-border);
   background: var(--settings-panel-progress-item-track);
   box-shadow: inset 0 1px 2px rgba(15, 53, 86, 0.04), 0 1px 3px rgba(15, 53, 86, 0.04);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progress {
+:root .progressBarWrap .progress {
   transition: width 0.15s ease;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressTip {
+:root .progressBarWrap .progressTip {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progress1 {
+:root .progressBarWrap .progress1 {
   width: 0;
   background: var(--settings-panel-progress-total-fill);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBar1 {
+:root .progressBarWrap .progressBar1 {
   background: var(--settings-panel-progress-total-track);
   border-color: var(--settings-panel-progress-total-border);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressTip1 {
+:root .progressBarWrap .progressTip1 {
   width: 100%;
   text-align: center;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .totalNumberWrap {
+:root .progressBarWrap .totalNumberWrap {
   position: absolute;
   width: 100%;
   height: 28px;
@@ -1954,10 +1699,10 @@ body.mobile #quickCrawlBtn {
   font-weight: 600;
   letter-spacing: 0.2px;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .totalNumberWrap span {
+:root .progressBarWrap .totalNumberWrap span {
   position: initial;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList {
+:root .progressBarWrap .progressBarList {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1965,7 +1710,7 @@ body.mobile #quickCrawlBtn {
   margin: 0;
   padding-left: 0;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .downloadBar {
+:root .progressBarWrap .progressBarList .downloadBar {
   list-style: none;
   position: relative;
   width: 100%;
@@ -1973,20 +1718,20 @@ body.mobile #quickCrawlBtn {
   height: 30px;
   box-sizing: content-box;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .progressBar2 {
+:root .progressBarWrap .progressBarList .progressBar2 {
   width: 100%;
   background: var(--settings-panel-progress-item-track);
   border-color: var(--settings-panel-progress-item-border);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .progress2 {
+:root .progressBarWrap .progressBarList .progress2 {
   width: 0;
   background: var(--settings-panel-progress-item-fill);
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .progressTip2 {
+:root .progressBarWrap .progressBarList .progressTip2 {
   width: 100%;
   height: 30px;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .fileName {
+:root .progressBarWrap .progressBarList .fileName {
   line-height: 30px;
   height: 30px;
   white-space: nowrap;
@@ -1998,7 +1743,7 @@ body.mobile #quickCrawlBtn {
   color: var(--settings-panel-progress-name);
   font-weight: 500;
 }
-.centerWrap .centerWrap_con .settingForm .progressBarWrap .progressBarList .loadedWrap {
+:root .progressBarWrap .progressBarList .loadedWrap {
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -2007,10 +1752,10 @@ body.mobile #quickCrawlBtn {
   font-family: inherit;
   letter-spacing: 0.1px;
 }
-.centerWrap .centerWrap_con .settingForm .download_area {
+:root .download_area {
   display: none;
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap {
+:root .download_area .download_status_text_wrap {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -2019,17 +1764,17 @@ body.mobile #quickCrawlBtn {
   line-height: var(--line-height);
   margin-top: 10px;
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap > * {
+:root .download_area .download_status_text_wrap > * {
   padding-right: 0;
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status {
+:root .download_area .download_status_text_wrap .down_status {
   display: flex;
   align-items: center;
   gap: 7px;
   color: var(--settings-panel-download-state-start);
   font-weight: 500;
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status::before {
+:root .download_area .download_status_text_wrap .down_status::before {
   content: '';
   width: 8px;
   height: 8px;
@@ -2037,42 +1782,42 @@ body.mobile #quickCrawlBtn {
   background: currentColor;
   flex: none;
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status[data-state='loading'] {
+:root .download_area .download_status_text_wrap .down_status[data-state='loading'] {
   color: var(--settings-panel-download-state-loading);
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status[data-state='pause'] {
+:root .download_area .download_status_text_wrap .down_status[data-state='pause'] {
   color: var(--settings-panel-download-state-pause);
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status[data-state='stop'] {
+:root .download_area .download_status_text_wrap .down_status[data-state='stop'] {
   color: var(--settings-panel-download-state-stop);
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status[data-state='complete'] {
+:root .download_area .download_status_text_wrap .down_status[data-state='complete'] {
   color: var(--settings-panel-download-state-complete-text);
 }
-.centerWrap .centerWrap_con .settingForm .download_area .download_status_text_wrap .down_status[data-state='complete']::before {
+:root .download_area .download_status_text_wrap .down_status[data-state='complete']::before {
   background: var(--settings-panel-download-state-complete-dot);
 }
-.centerWrap .centerWrap_con .settingForm .settingNameStyle {
+:root .settingNameStyle {
   cursor: pointer;
   margin-right: 4px;
   max-width: 100%;
 }
-.centerWrap .centerWrap_con .settingForm .verticalSplit {
+:root .verticalSplit {
   display: inline-block;
   width: 0px;
   height: 16px;
   margin: 5px 4px;
   border-right: 1px solid #ccc;
 }
-.centerWrap .centerWrap_con .settingForm .saveNamingRuleWrap {
+:root .saveNamingRuleWrap {
   display: inline-block;
   position: relative;
 }
-.centerWrap .centerWrap_con .settingForm .saveNamingRuleWrap button {
+:root .saveNamingRuleWrap button {
   color: #333;
   height: var(--line-height);
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList {
+:root .namingRuleList {
   position: absolute;
   right: 0;
   top: 36px;
@@ -2091,7 +1836,7 @@ body.mobile #quickCrawlBtn {
   list-style: none;
   --li-height: 38px;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li {
+:root .namingRuleList li {
   padding: 0;
   color: var(--settings-panel-naming-list-text);
   cursor: pointer;
@@ -2102,14 +1847,14 @@ body.mobile #quickCrawlBtn {
   min-width: 0;
   border-radius: calc(var(--settings-panel-control-radius) - 2px);
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li > * {
+:root .namingRuleList li > * {
   min-height: var(--li-height);
   line-height: var(--li-height);
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li + li {
+:root .namingRuleList li + li {
   border-top: 1px solid var(--settings-panel-naming-list-divider);
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList .rule {
+:root .namingRuleList .rule {
   flex: 1;
   line-height: var(--li-height) !important;
   min-width: 0;
@@ -2119,16 +1864,16 @@ body.mobile #quickCrawlBtn {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li:hover {
+:root .namingRuleList li:hover {
   background: var(--settings-panel-naming-list-hover-bg);
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li:first-child {
+:root .namingRuleList li:first-child {
   margin-top: 0;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList li:last-child {
+:root .namingRuleList li:last-child {
   margin-bottom: 0;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList .delete {
+:root .namingRuleList .delete {
   width: 28px;
   min-width: 28px;
   margin-right: 6px;
@@ -2139,23 +1884,23 @@ body.mobile #quickCrawlBtn {
   font-weight: 300;
   transition: background-color 0.2s, color 0.2s;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList .delete:hover,
-.centerWrap .centerWrap_con .settingForm .namingRuleList .delete:focus {
+:root .namingRuleList .delete:hover,
+:root .namingRuleList .delete:focus {
   background: var(--settings-panel-naming-list-delete-hover-bg);
   color: var(--settings-panel-naming-list-delete-hover-color) !important;
 }
-.centerWrap .centerWrap_con .settingForm .namingRuleList i {
+:root .namingRuleList i {
   display: block;
   padding: 8px 14px;
   color: var(--settings-panel-naming-list-empty);
   font-style: normal;
 }
-.centerWrap .centerWrap_con .settingForm .setinput_style,
-.centerWrap .centerWrap_con .settingForm .setinput_style:focus,
-.centerWrap .centerWrap_con .settingForm .setinput_style:hover {
+:root .setinput_style,
+:root .setinput_style:focus,
+:root .setinput_style:hover {
   background: var(--settings-panel-input-bg) !important;
 }
-.centerWrap .centerWrap_con .settingsPanel_sidebar {
+:root .settingsPanel_sidebar {
   width: 190px;
   flex: none;
   padding: 15px 10px;
@@ -2166,14 +1911,14 @@ body.mobile #quickCrawlBtn {
   display: flex;
   flex-direction: column;
 }
-.centerWrap .centerWrap_con .settingsPanel_nav {
+:root .settingsPanel_nav {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex: 1;
   min-height: 0;
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem {
+:root .settingsPanel_navItem {
   min-height: 50px;
   padding: 0 15px;
   border: none;
@@ -2189,7 +1934,7 @@ body.mobile #quickCrawlBtn {
   overflow: hidden;
   transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem::before {
+:root .settingsPanel_navItem::before {
   content: '';
   position: absolute;
   left: 0;
@@ -2200,86 +1945,86 @@ body.mobile #quickCrawlBtn {
   background: transparent;
   transition: background-color 0.2s;
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem[hidden] {
+:root .settingsPanel_navItem[hidden] {
   display: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem:hover {
+:root .settingsPanel_navItem:hover {
   background: var(--settings-panel-nav-hover-bg);
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem.active {
+:root .settingsPanel_navItem.active {
   background: var(--settings-panel-nav-active-bg);
   color: var(--settings-panel-nav-active-text);
   font-weight: 600;
   box-shadow: var(--settings-panel-nav-active-shadow);
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem.active::before {
+:root .settingsPanel_navItem.active::before {
   background: var(--settings-panel-nav-active-accent);
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem.active:hover,
-.centerWrap .centerWrap_con .settingsPanel_navItem.active:focus {
+:root .settingsPanel_navItem.active:hover,
+:root .settingsPanel_navItem.active:focus {
   background: var(--settings-panel-nav-active-bg);
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem:hover .ripple,
-.centerWrap .centerWrap_con .settingsPanel_navItem:focus .ripple {
+:root .settingsPanel_navItem:hover .ripple,
+:root .settingsPanel_navItem:focus .ripple {
   animation: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_navItem.ripple-active .ripple {
+:root .settingsPanel_navItem.ripple-active .ripple {
   animation: ripple-effect 0.6s linear;
 }
-.centerWrap .centerWrap_con .settingsPanel_navIconWrap {
+:root .settingsPanel_navIconWrap {
   width: 26px;
   height: 26px;
   flex: none;
   position: relative;
 }
-.centerWrap .centerWrap_con .settingsPanel_navIcon {
+:root .settingsPanel_navIcon {
   font-size: 26px;
   position: absolute;
   inset: 0;
 }
-.centerWrap .centerWrap_con .settingsPanel_navIconFill {
+:root .settingsPanel_navIconFill {
   display: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_navText {
+:root .settingsPanel_navText {
   flex: 1;
   min-width: 0;
   font-size: 18px;
   line-height: 1.3;
   text-align: center;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummary {
+:root .settingsPanel_downloadSummary {
   display: none;
   flex-wrap: wrap;
   margin-top: auto;
   padding: 14px 0 0px 2px;
   border-top: 1px solid var(--settings-panel-download-summary-border);
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryStatus,
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryActions {
+:root .settingsPanel_downloadSummaryStatus,
+:root .settingsPanel_downloadSummaryActions {
   display: flex;
   flex-basis: 100%;
   align-items: center;
   flex-wrap: wrap;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryStatus {
+:root .settingsPanel_downloadSummaryStatus {
   gap: 10px;
   color: var(--settings-panel-download-summary-status);
   margin-bottom: 12px;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon {
+:root .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon {
   position: relative;
   top: 2px;
   font-size: 24px;
   transform-origin: center;
   opacity: 0.4;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon.is-loading {
+:root .settingsPanel_downloadSummaryStatus .settingsPanel_downloadSummaryStateIcon.is-loading {
   animation: settingsPanelSummarySpin 1s linear infinite;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryActions {
+:root .settingsPanel_downloadSummaryActions {
   gap: 12px;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryBtn {
+:root .settingsPanel_downloadSummaryBtn {
   width: 1em;
   height: 1em;
   padding: 0;
@@ -2293,35 +2038,35 @@ body.mobile #quickCrawlBtn {
   background: none;
   border: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadSummaryBtn:hover {
+:root .settingsPanel_downloadSummaryBtn:hover {
   color: var(--settings-panel-download-summary-btn-hover-color);
   background: var(--settings-panel-download-summary-btn-hover-bg);
 }
-.centerWrap .centerWrap_con .settingsPanel_main {
+:root .settingsPanel_main {
   flex: 1;
   min-width: 0;
   width: 735px;
   overflow-y: auto;
   padding: 0px 15px 15px 15px;
 }
-.centerWrap .centerWrap_con .settingsPanel_form,
-.centerWrap .centerWrap_con .settingsPanel_pages {
+:root .settingsPanel_form,
+:root .settingsPanel_pages {
   display: block;
 }
-.centerWrap .centerWrap_con .settingsPanel_page {
+:root .settingsPanel_page {
   width: 100%;
   display: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_page.active {
+:root .settingsPanel_page.active {
   display: block;
 }
-.centerWrap .centerWrap_con .settingsPanel_page[data-page='home'] .settingsPanel_optionCard.option {
+:root .settingsPanel_page[data-page='home'] .settingsPanel_optionCard.option {
   margin-top: 10px;
 }
-.centerWrap .centerWrap_con .settingsPanel_pageInner {
+:root .settingsPanel_pageInner {
   padding-bottom: 5px;
 }
-.centerWrap .centerWrap_con .settingsPanel_stickyHeader {
+:root .settingsPanel_stickyHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2339,14 +2084,14 @@ body.mobile #quickCrawlBtn {
   top: 0;
   z-index: 4;
 }
-.centerWrap .centerWrap_con .settingsPanel_stickyHeader[hidden] {
+:root .settingsPanel_stickyHeader[hidden] {
   display: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_titleSection,
-.centerWrap .centerWrap_con .settingsPanel_panelSection {
+:root .settingsPanel_titleSection,
+:root .settingsPanel_panelSection {
   margin-top: 15px;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionHeader {
+:root .settingsPanel_sectionHeader {
   width: 100%;
   padding: 8px 15px;
   border: 1px solid var(--settings-panel-card-border);
@@ -2361,30 +2106,30 @@ body.mobile #quickCrawlBtn {
   box-shadow: var(--settings-panel-card-shadow);
   text-align: left;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionHeader:hover svg {
+:root .settingsPanel_sectionHeader:hover svg {
   color: var(--settings-panel-section-hover-color);
 }
-.centerWrap .centerWrap_con .settingsPanel_panelSection {
+:root .settingsPanel_panelSection {
   border: 1px solid var(--settings-panel-card-border);
   border-radius: var(--settings-panel-card-radius);
   background: var(--settings-panel-surface-bg);
   box-shadow: var(--settings-panel-card-shadow);
   overflow: hidden;
 }
-.centerWrap .centerWrap_con .settingsPanel_panelSection .settingsPanel_sectionHeader {
+:root .settingsPanel_panelSection .settingsPanel_sectionHeader {
   margin-top: 0;
   border: none;
   box-shadow: none;
   border-bottom: 1px solid var(--settings-panel-surface-border);
   border-radius: 0;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionHeadMain {
+:root .settingsPanel_sectionHeadMain {
   display: flex;
   align-items: center;
   gap: 12px;
   min-width: 0;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionIconWrap {
+:root .settingsPanel_sectionIconWrap {
   width: 32px;
   height: 32px;
   border-radius: 6px;
@@ -2395,78 +2140,78 @@ body.mobile #quickCrawlBtn {
   justify-content: center;
   flex: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionIconWrap.hidden {
+:root .settingsPanel_sectionIconWrap.hidden {
   display: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionIconWrap .icon {
+:root .settingsPanel_sectionIconWrap .icon {
   font-size: 22px;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionTitle {
+:root .settingsPanel_sectionTitle {
   padding: 5px 0;
   min-width: 0;
   font-size: 16px;
   line-height: 1.35;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionArrow {
+:root .settingsPanel_sectionArrow {
   font-size: 18px;
   color: var(--settings-panel-section-arrow-color);
   transition: transform 0.2s;
   flex: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_panelSection.expanded .settingsPanel_sectionArrow,
-.centerWrap .centerWrap_con .settingsPanel_titleSection.expanded .settingsPanel_sectionArrow {
+:root .settingsPanel_panelSection.expanded .settingsPanel_sectionArrow,
+:root .settingsPanel_titleSection.expanded .settingsPanel_sectionArrow {
   transform: rotate(180deg);
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionHeader:hover .settingsPanel_sectionTitle,
-.centerWrap .centerWrap_con .settingsPanel_sectionHeader:hover .settingsPanel_sectionArrow {
+:root .settingsPanel_sectionHeader:hover .settingsPanel_sectionTitle,
+:root .settingsPanel_sectionHeader:hover .settingsPanel_sectionArrow {
   color: var(--settings-panel-section-hover-color);
 }
-.centerWrap .centerWrap_con .settingsPanel_titleContent,
-.centerWrap .centerWrap_con .settingsPanel_panelContent {
+:root .settingsPanel_titleContent,
+:root .settingsPanel_panelContent {
   min-height: 0;
   overflow: hidden;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.16s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.centerWrap .centerWrap_con .settingsPanel_panelContent {
+:root .settingsPanel_panelContent {
   padding: 15px 20px;
 }
-.centerWrap .centerWrap_con .settingsPanel_titleContent {
+:root .settingsPanel_titleContent {
   padding-top: 0;
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionContentShell {
+:root .settingsPanel_sectionContentShell {
   display: grid;
   grid-template-rows: 1fr;
   min-height: 0;
   transition: grid-template-rows 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.centerWrap .centerWrap_con .settingsPanel_sectionContentWrap {
+:root .settingsPanel_sectionContentWrap {
   min-height: 0;
   overflow: hidden;
 }
-.centerWrap .centerWrap_con .settingsPanel_titleSection.collapsed .settingsPanel_sectionContentShell,
-.centerWrap .centerWrap_con .settingsPanel_panelSection.collapsed .settingsPanel_sectionContentShell {
+:root .settingsPanel_titleSection.collapsed .settingsPanel_sectionContentShell,
+:root .settingsPanel_panelSection.collapsed .settingsPanel_sectionContentShell {
   grid-template-rows: 0fr;
 }
-.centerWrap .centerWrap_con .settingsPanel_titleSection.collapsed .settingsPanel_titleContent,
-.centerWrap .centerWrap_con .settingsPanel_panelSection.collapsed .settingsPanel_titleContent,
-.centerWrap .centerWrap_con .settingsPanel_titleSection.collapsed .settingsPanel_panelContent,
-.centerWrap .centerWrap_con .settingsPanel_panelSection.collapsed .settingsPanel_panelContent {
+:root .settingsPanel_titleSection.collapsed .settingsPanel_titleContent,
+:root .settingsPanel_panelSection.collapsed .settingsPanel_titleContent,
+:root .settingsPanel_titleSection.collapsed .settingsPanel_panelContent,
+:root .settingsPanel_panelSection.collapsed .settingsPanel_panelContent {
   opacity: 0;
   transform: translateY(-6px);
   transition-delay: 0s;
   pointer-events: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_titleSection.expanded .settingsPanel_titleContent,
-.centerWrap .centerWrap_con .settingsPanel_panelSection.expanded .settingsPanel_titleContent,
-.centerWrap .centerWrap_con .settingsPanel_titleSection.expanded .settingsPanel_panelContent,
-.centerWrap .centerWrap_con .settingsPanel_panelSection.expanded .settingsPanel_panelContent {
+:root .settingsPanel_titleSection.expanded .settingsPanel_titleContent,
+:root .settingsPanel_panelSection.expanded .settingsPanel_titleContent,
+:root .settingsPanel_titleSection.expanded .settingsPanel_panelContent,
+:root .settingsPanel_panelSection.expanded .settingsPanel_panelContent {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.08s;
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option {
+:root .settingsPanel_optionCard.option {
   width: calc(100% - 20px);
   margin: 10px auto 0;
   padding: 8px 15px;
@@ -2475,18 +2220,22 @@ body.mobile #quickCrawlBtn {
   border-radius: var(--settings-panel-card-radius);
   box-shadow: var(--settings-panel-card-shadow);
   line-height: 26px;
+  font-size: 15px;
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option.pinned {
+:root .settingsPanel_optionCard.option * {
+  font-size: 15px;
+}
+:root .settingsPanel_optionCard.option.pinned {
   border: 2px solid var(--settings-panel-option-card-pinned-border);
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option.new {
+:root .settingsPanel_optionCard.option.new {
   position: relative;
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option.new::before {
+:root .settingsPanel_optionCard.option.new::before {
   content: none !important;
   display: none !important;
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option.new .settingsPanel_newBadge {
+:root .settingsPanel_optionCard.option.new .settingsPanel_newBadge {
   width: 30px;
   position: absolute;
   top: -15px;
@@ -2495,18 +2244,18 @@ body.mobile #quickCrawlBtn {
   line-height: 0;
   color: var(--settings-panel-new-badge-color);
 }
-.centerWrap .centerWrap_con .settingsPanel_optionCard.option.new .settingsPanel_newBadgeIcon.icon {
+:root .settingsPanel_optionCard.option.new .settingsPanel_newBadgeIcon.icon {
   width: 30px;
   height: 30px;
 }
-.centerWrap .centerWrap_con .settingsPanel_downloadContentWrap .progressBarWrap {
+:root .settingsPanel_downloadContentWrap .progressBarWrap {
   margin-top: 8px;
 }
-.centerWrap .centerWrap_con .settingsPanel_helpTips {
+:root .settingsPanel_helpTips {
   display: flex;
   flex-direction: column;
 }
-.centerWrap .centerWrap_con .settingsPanel_tipCard {
+:root .settingsPanel_tipCard {
   width: 100%;
   margin-top: 15px;
   min-height: 42px;
@@ -2519,7 +2268,7 @@ body.mobile #quickCrawlBtn {
   align-items: flex-start;
   gap: 10px;
 }
-.centerWrap .centerWrap_con .settingsPanel_tipIcon {
+:root .settingsPanel_tipIcon {
   width: 26px;
   height: 26px;
   padding: 5px;
@@ -2529,7 +2278,7 @@ body.mobile #quickCrawlBtn {
   color: var(--settings-panel-tip-icon-color);
   flex: none;
 }
-.centerWrap .centerWrap_con .settingsPanel_tipText {
+:root .settingsPanel_tipText {
   flex: 1;
   min-width: 0;
   padding-top: 1px;
@@ -2537,7 +2286,7 @@ body.mobile #quickCrawlBtn {
   font-size: 14px;
   color: var(--settings-panel-tip-card-text);
 }
-.centerWrap .centerWrap_con .settingsPanel_tipConfirm {
+:root .settingsPanel_tipConfirm {
   margin-left: 4px;
   width: 1.7em;
   height: 1.7em;
@@ -2553,16 +2302,16 @@ body.mobile #quickCrawlBtn {
   vertical-align: middle;
   transform: translateY(-1px);
 }
-.centerWrap .centerWrap_con .settingsPanel_tipConfirm:hover {
+:root .settingsPanel_tipConfirm:hover {
   background: var(--settings-panel-tip-confirm-hover-bg);
 }
-.centerWrap .centerWrap_con .settingsPanel_helpActions {
+:root .settingsPanel_helpActions {
   margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 15px;
 }
-.centerWrap .centerWrap_con .settingsPanel_helpAction {
+:root .settingsPanel_helpAction {
   width: 100%;
   min-width: 0;
   min-height: 46px;
@@ -2579,19 +2328,19 @@ body.mobile #quickCrawlBtn {
   cursor: pointer;
   position: relative;
 }
-.centerWrap .centerWrap_con .settingsPanel_helpAction:hover {
+:root .settingsPanel_helpAction:hover {
   background: var(--settings-panel-btn-secondary-hover-bg);
   border: 1px solid var(--settings-panel-btn-secondary-border);
   color: var(--settings-panel-btn-secondary-brand-text);
 }
-.centerWrap .centerWrap_con .settingsPanel_helpAction:hover .settingsPanel_helpActionIcon {
+:root .settingsPanel_helpAction:hover .settingsPanel_helpActionIcon {
   color: var(--settings-panel-btn-secondary-brand-text);
 }
-.centerWrap .centerWrap_con .settingsPanel_helpAction:hover .ripple,
-.centerWrap .centerWrap_con .settingsPanel_helpAction:focus .ripple {
+:root .settingsPanel_helpAction:hover .ripple,
+:root .settingsPanel_helpAction:focus .ripple {
   animation: ripple-effect 0.6s linear;
 }
-.centerWrap .centerWrap_con .settingsPanel_helpAction.hasUpdate::after {
+:root .settingsPanel_helpAction.hasUpdate::after {
   content: '';
   width: 10px;
   height: 10px;
@@ -2601,50 +2350,56 @@ body.mobile #quickCrawlBtn {
   top: 10px;
   right: 10px;
 }
-.centerWrap .centerWrap_con .settingsPanel_helpActionIcon {
+:root .settingsPanel_helpActionIcon {
   font-size: 20px;
   flex: none;
   position: relative;
   top: 1px;
   color: var(--settings-panel-help-action-icon);
 }
-.centerWrap .centerWrap_con .settingsPanel_searchSummary {
+:root .settingsPanel_searchSummary {
   margin: 15px 0 0 5px;
   color: var(--settings-panel-search-summary);
   line-height: 26px;
 }
-.centerWrap .centerWrap_con .settingsPanel_searchMark {
+:root .settingsPanel_searchMark {
   background: var(--settings-panel-search-mark-bg);
   color: inherit;
   padding: 0 2px;
   border-radius: 4px;
 }
-.centerWrap .centerWrap_con .download_area {
+:root .download_area {
   margin-top: 13px;
 }
-.centerWrap .centerWrap_con .progressBarWrap {
+:root .progressBarWrap {
   margin-top: 10px;
 }
-.centerWrap .centerWrap_con .help_bar {
+:root .help_bar {
   line-height: 24px;
 }
-.centerWrap .centerWrap_con .help_bar > * {
+:root .help_bar > * {
   padding: 0 3px;
 }
-.centerWrap .centerWrap_con input[name='exportLogExclude'] {
+:root input[name='exportLogExclude'] {
   width: auto !important;
 }
-.centerWrap .centerWrap_con input[name='bgOpacity'] {
+:root input[name='bgOpacity'] {
   margin: 5px 0;
 }
-.centerWrap.lang_zh-cn .settingsPanel_navText,
-.centerWrap.lang_zh-tw .settingsPanel_navText {
+:root.lang_zh-cn .settingsPanel_navText,
+:root.lang_zh-tw .settingsPanel_navText {
   letter-spacing: 6px;
   text-indent: 6px;
 }
-.centerWrap.theme-white .option > .settingNameStyle,
-.centerWrap.theme-white .optionName {
-  color: #333;
+.content .markdown-section .option > .settingNameStyle,
+.content .markdown-section .optionName {
+  font-weight: normal;
+  text-decoration: none;
+  color: #333 !important;
+}
+.content .markdown-section .option > .settingNameStyle:hover,
+.content .markdown-section .optionName:hover {
+  color: var(--beautify-blue) !important;
 }
 .centerWrap.theme-dark {
   background: var(--settings-panel-bg-dark);
@@ -2654,8 +2409,8 @@ body.mobile #quickCrawlBtn {
 .centerWrap.theme-dark .settingsPanel_sidebar {
   box-shadow: none !important;
 }
-.centerWrap.theme-dark .option > .settingNameStyle,
-.centerWrap.theme-dark .optionName {
+.centerWrap.theme-dark .content .markdown-section .option > .settingNameStyle,
+.centerWrap.theme-dark .content .markdown-section .optionName {
   color: inherit;
 }
 .centerWrap.theme-dark .option.new::before {
@@ -2775,8 +2530,8 @@ body.mobile #quickCrawlBtn {
 .centerWrap.xzBG .saveNamingRuleWrap .namingRuleList {
   text-shadow: none;
 }
-.showBlobKeywords .option > a .key,
-.showBlobKeywords .optionName .key {
+.option > a .key,
+.optionName .key {
   color: var(--beautify-blue);
   font-weight: bold;
 }

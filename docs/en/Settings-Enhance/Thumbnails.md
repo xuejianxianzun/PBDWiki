@@ -5,7 +5,7 @@
     <span data-xztext="_显示更大的缩略图">Show <span class="key">larger</span> thumbnails</span>
     <span class="gray1"> ? </span>
   </a>
-  <input type="checkbox" name="showLargerThumbnails" class="need_beautify checkbox_switch" checked="">
+  <input type="checkbox" name="showLargerThumbnails" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
@@ -33,7 +33,7 @@
 
 ## Display images in grayscale
 
-<div class="option settingsPanel_optionCard" data-no="81" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="81" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnails?flag=81" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_把图片显示为灰色">Display images in <span class="key">grayscale</span></span>
   </a>

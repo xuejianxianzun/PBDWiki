@@ -278,7 +278,7 @@ Tip: Click a token name to copy it.<br></span>
 
 ## Use a different naming rule for the work if it has certain tags
 
-<div class="option settingsPanel_optionCard" data-no="35" data-pin-bound="true" style="display: none;">
+<div class="option settingsPanel_optionCard" data-no="35" data-pin-bound="true">
   <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=35" target="_blank" class="settingNameStyle" data-xztext="_如果作品含有某些标签则对这个作品使用另一种命名规则" data-bind-click="true">Use a different naming rule for the work if it has certain <span class="key">tags</span></a>
   <input type="checkbox" name="UseDifferentNameRuleIfWorkHasTagSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -325,7 +325,7 @@ Tip: Click a token name to copy it.<br></span>
   <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=36" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则" data-bind-click="true"><span class="key">Naming</span> rule when merging novel series</a>
   <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#seriesNovelNameTip" data-for-no="36" data-xztext="_提示">Tip</button>
   <div class="optionLine">
-    <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1"></textarea>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1">novel series/{page_tag}/{series_title}-{series_id}-{user}-{part}-{tags}.{ext}</textarea>
   </div>
   <p class="tip fileNameTip namingTipArea" id="seriesNovelNameTip">
     <span data-xztext="_系列小说的命名标记提醒">This naming rule is used to set the name of the collection file, not the name of individual novels.<br>
@@ -410,7 +410,7 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
 
 <div class="option settingsPanel_optionCard" data-no="38" data-pin-bound="true" style="display: flex;">
   <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=38" target="_blank" class="settingNameStyle" data-xztext="_日期格式" data-bind-click="true">Date and time <span class="key">format</span></a>
-  <input type="text" name="dateFormat" class="setinput_style blue" style="width: 250px" value="YYYY-MM-DD">
+  <input type="text" name="dateFormat" class="setinput_style blue" value="YYYY-MM-DD">
   <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="38" data-xztext="_提示">Tip</button>
   <p class="tip" id="dateFormatTip">
     <span data-xztext="_日期格式提示">You can use the following notation to set the date and time format. This will affect <span class="blue">{date}</span> and <span class="blue">{upload_date}</span> and <span class="blue">{task_date}</span> in the naming rules. <br>For time such as 2021-04-30T06:40:08</span>
