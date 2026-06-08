@@ -46,7 +46,7 @@ In other words, this button has both add bookmark and unbookmark functions, swit
 
 ------------
 
-You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34) settings: whether to add tags and whether the bookmark is public.
+You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-Enhance/Other?flag=88) settings: whether to add tags and whether the bookmark is public.
 
 ## Preview Works
 
@@ -56,7 +56,7 @@ When hovering over a work's thumbnail, the downloader displays a larger preview 
 
 While previewing, press the `C` key to download the currently previewed image, or press `D` to download the entire work.
 
-See detailed explanation: [Preview works](/en/Settings-More-Enhance?id=preview-works)
+See detailed explanation: [Preview works](/en/Settings-Enhance/Preview?id=preview-works)
 
 ## Long press the right mouse button on the thumbnail to display the large image
 
@@ -64,7 +64,7 @@ With this feature, you can view the original image of a work directly without vi
 
 If you want to quickly copy the original image of a work (without downloading), you can use this feature: after the original image is displayed, right-click the mouse and select "Copy Image".
 
-See detailed explanation: [Long press the right mouse button on the thumbnail to display the large image](/en/Settings-More-Enhance?id=long-press-the-right-mouse-button-on-the-thumbnail-to-display-the-large-image)
+See detailed explanation: [Long press the right mouse button on the thumbnail to display the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-the-thumbnail-to-display-the-large-image)
 
 ## Show zoom button on thumbnail
 
@@ -82,7 +82,7 @@ When the mouse hovers over the work thumbnail, the downloader will display a cop
 
 Clicking the copy button allows you to copy both the images and text summary of the work at the same time, then paste them into other software to save, or share with others.
 
-View detailed instructions: [Copy button](/en/Settings-More-Enhance?id=copy-button)
+View detailed instructions: [Copy button](/en/Settings-Enhance/Other?id=copy-button)
 
 ## Show download button on thumbnail
 
@@ -92,7 +92,7 @@ When the mouse hovers over a work thumbnail, the downloader displays a download 
 
 Click the download button to download the work.
 
-See detailed explanation: [Show download button on thumbnail](/en/Settings-More-Enhance?id=show-download-button-on-thumbnail)
+See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhance/Thumbnail buttons?id=show-download-button-on-thumbnail)
 
 ## Image Viewer
 
@@ -145,7 +145,7 @@ When on a **multi-image work** page (e.g., [134821751](https://www.pixiv.net/art
 
 You can preview or download each image.
 
-See detailed explanation: [Show thumbnail list on multi-image work pages](/en/Settings-More-Enhance?id=show-thumbnail-list-on-multi-image-work-pages)
+See detailed explanation: [Show thumbnail list on multi-image work pages](/en/Settings-Enhance/Thumbnails?id=show-thumbnail-list-on-multi-image-work-pages)
 
 ## Add Quick Search Area on Search Pages
 
@@ -155,7 +155,7 @@ The downloader adds buttons for specific bookmark counts at the top of search pa
 
 Clicking these buttons adds the bookmark count as a tag to the current search tag and performs the search.
 
-See detailed explanation: [Add a quick search area on the search page](/en/Settings-More-Enhance?id=add-a-quick-search-area-on-the-search-page)
+See detailed explanation: [Add a quick search area on the search page](/en/Settings-Enhance/Search page?id=add-a-quick-search-area-on-the-search-page)
 
 ## Click Popular Works
 
@@ -171,11 +171,11 @@ The downloader optimizes this area, allowing you to click works to visit their p
 
 On user profile and search pages, the "More" tab includes a button:
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);"><span data-xztext="_Bookmark All Works on This Page">Bookmark all works on this page</span><span class="ripple"></span></button>
+<button id="bookmarkAllWorksOnPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_收藏本页面的所有作品">Bookmark all works on this page</span><span class="ripple"></span></button>
 
 Click it to add all works on the current page to your bookmarks.
 
-See detailed explanation: [Bookmark all works on this page](/en/Buttons-More?id=bookmark-all-works-on-this-page)
+See detailed explanation: [Bookmark all works on this page](/en/Buttons-Extra-features/User-page?id=bookmark-all-works-on-this-page)
 
 ## Manage Your Bookmarks
 
@@ -183,4 +183,4 @@ On the bookmark page, the "More" tab includes several buttons to help manage you
 
 For example, if you didn't add tags when bookmarking a work, the downloader can automatically add tags for it.
 
-See detailed explanation: [Bookmark Page Buttons](/en/Buttons-More?id=bookmark-page)
+See detailed explanation: [Bookmark Page Buttons](/en/Buttons-Extra-features/Bookmark-page)
