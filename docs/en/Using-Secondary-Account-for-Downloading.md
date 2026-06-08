@@ -53,4 +53,4 @@ If you already clicked the "Stop Download" button, click the "Export Crawl Resul
 
 After logging in to a new Pixiv account, you can import the crawl results to resume downloading those files.
 
-See details: [Export results](/en/Buttons-Download?id=export-results)
+See details: [Export results](/en/Buttons-Download-area/Crawl-results?id=export-results)
