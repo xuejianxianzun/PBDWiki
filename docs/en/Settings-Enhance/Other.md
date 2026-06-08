@@ -9,6 +9,19 @@
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+
+The names of users you are following will be highlighted, allowing you to quickly see whether you are following a user.
+
+The visual effect varies depending on the color mode of the Pixiv page.
+
+In default (light) mode, usernames will have a yellow background:
+
+![](images/20250903_020510.png)
+
+In night mode, usernames will be displayed in yellow:
+
+![](images/20250903_020520.png)
+
 ## Display a border on downloaded works
 
 <div class="option settingsPanel_optionCard new" data-no="87" data-pin-bound="true" style="display: flex;">
@@ -114,4 +127,5 @@ Additionally, you can use these tags:</span>
     <br>
   </p>
 </div>
+
 

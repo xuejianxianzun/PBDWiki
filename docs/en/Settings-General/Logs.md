@@ -13,6 +13,21 @@
   <label for="logVisibleDefault2" data-xztext="_隐藏">Hide</label>
 </div>
 
+
+When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default. The default value is `Show`.
+
+What is the difference between the two options?
+
+If you frequently need to view logs, choosing `Show` will be more convenient. However, this option may affect the browsing experience in certain cases: if the page has not been scrolled yet, displaying the log area will cause the page content to move downward. Illustration:
+
+![](./images/20260303_005450.png)
+
+If the page has already been scrolled down some distance, there will be no such effect (the page content will not move downward).
+
+If you do not want the log area to disturb you, you can choose `Hide`, which will not cause the above issue.
+
+PS: No matter which option you choose, when you want to view the logs, you can always press the shortcut key `L` to display the log area.
+
 ## Export log
 
 <div class="option settingsPanel_optionCard" data-no="102" data-pin-bound="true" style="display: flex;">
@@ -44,4 +59,14 @@
     </div>
   </div>
 </div>
+
+
+
+This feature exports the logs displayed at the top of the webpage to an HTML file.
+
+?> HTML format is used because it supports colored text, preserving the log area's display effect.
+
+?> This feature is a legacy addition. Previously, during a task (from crawling to download completion), if the downloader generated too many logs (e.g., over 300), it would clear earlier logs. Since users couldn't view cleared logs, this feature was added to back up logs, retaining the complete log. However, the downloader no longer clears logs during a task, so this feature is less necessary now.
+
+Sub-options:
 

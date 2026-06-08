@@ -14,6 +14,16 @@
     </svg>
     </span></div>
 
+
+If you enable this feature, the downloader will check whether each work has a download record before crawling it. If it does, the downloader will skip it. This reduces unnecessary crawling and saves time. This feature is also useful for incremental updates, because you can crawl only works that have not been downloaded.
+
+In addition, when merging a novel series, enabling this setting can skip novels that already have download records and merge only newly added novels in the series.
+
+**Notes:**
+- This feature depends on the download records saved by the downloader, so it is not completely accurate. If you clear the downloader's download records, it will forget which files it has downloaded. If you want to learn more about the downloader's download records, see [Manage download records](/en/Settings-More-Download?id=manage-download-records).
+- This feature does not work for novel series, because the downloader does not save download records for novel series.
+- For multi-image works, the downloader checks only whether the first image has a download record. So as long as you downloaded the first image, the downloader can show a border for that work. But if you did not download the first image and downloaded only later images, the downloader will not show a border for it.
+
 ## User block list
 
 <div class="option settingsPanel_optionCard" data-no="27" data-pin-bound="true" style="display: flex;">
@@ -103,4 +113,5 @@
   <input type="checkbox" name="exportIDList" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
 

@@ -12,6 +12,11 @@
   <label for="setDownBookmarked" data-xztext="_已收藏" class="active">Bookmarked</label>
 </div>
 
+
+You can filter works based on their bookmark status.
+
+The downloader checks whether each work is bookmarked by you during crawling and excludes those that do not meet the criteria.
+
 ## Number of bookmarks
 
 <div class="option settingsPanel_optionCard" data-no="10" data-pin-bound="true" style="display: flex;">
@@ -94,6 +99,19 @@
   </div>
 </div>
 
+
+You can set the width and height conditions for the images you want to download. The downloader will not download images that do not meet these conditions.
+
+**Tips:**
+
+- The `>=`, `=`, or `<=` conditions apply to both width and height.
+- The first input box sets the width, and the second sets the height.
+- Selecting `And` means the image's width and height must both meet the set conditions.
+- Selecting `Or` means the image only needs to meet either the width or height condition.
+- The default values for width and height are 0, meaning no restrictions.
+
+?> For example, you can set `>= Width 1920 And Height 1080` to filter images suitable for computer wallpapers.
+
 ## Aspect ratio
 
 <div class="option settingsPanel_optionCard" data-no="12" data-pin-bound="true" style="display: flex;">
@@ -136,6 +154,17 @@
     </div>
   </div>
 </div>
+
+
+You can download only images of specific shapes:
+
+Horizontal, Vertical, or Square.
+
+?> Horizontal images have a width greater than their height; vertical images have a width less than their height.
+
+You can also manually set the range of the image aspect ratio.
+
+?> The aspect ratio is the width divided by the height. An aspect ratio less than 1 indicates a vertical image. An aspect ratio greater than 1 indicates a horizontal image. The larger the aspect ratio, the flatter and longer the image appears.
 
 ## ID range
 
@@ -180,6 +209,16 @@
   </div>
 </div>
 
+
+You can enter a work ID and crawl works with IDs greater than it (newer works) or less than it (older works).
+
+It is divided into 3 work types:
+- `Image works`: including illustration, manga, and Ugoira
+- `Novel`
+- `Novel series`
+
+You can set the ID for each type according to your needs.
+
 ## Posting time
 
 <div class="option settingsPanel_optionCard" data-no="14" data-pin-bound="true" style="display: flex;">
@@ -204,4 +243,23 @@
     </div>
   </div>
 </div>
+
+
+
+        -&nbsp;
+        <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2100-01-01T00:00">
+        <button class="textButton grayButton mr0" type="button" role="setDate" data-for="postDateEnd" data-value="now" data-xztext="_现在">Now</button>
+        <button class="textButton grayButton" type="button" role="setDate" data-for="postDateEnd" data-value="2100-01-01T00:00" data-xztext="_未来">Future</button>
+      </span>
+    </p>
+
+You can download only works published within a specific time range.
+
+You can click the icon to the right of the input field to use the browser's time and date picker, or you can enter the value manually.
+
+**Note:** When entering the value manually, you must include the full time and date. As shown in the image below, the value on the left is incorrect because it doesn't include the time:
+
+![](images/20250910_012836.png)
+
+?> The first illustration on Pixiv is https://www.pixiv.net/artworks/20, published at `2007-09-09T13:14:07+00:00`.
 

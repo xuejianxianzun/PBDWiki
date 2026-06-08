@@ -27,6 +27,31 @@
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
 </div>
 
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+
 ## Only crawl the last few images of multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="22" data-pin-bound="true" style="display: flex;">
@@ -44,6 +69,31 @@
       <use xlink:href="#new"></use>
     </svg>
     </span></div>
+
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
 
 ## Do not crawl the first few images of multi-image works
 
@@ -63,6 +113,31 @@
     </svg>
     </span></div>
 
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+
 ## Do not crawl the last few images of multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="24" data-pin-bound="true" style="display: flex;">
@@ -80,6 +155,31 @@
       <use xlink:href="#new"></use>
     </svg>
     </span></div>
+
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
 
 ## Don't download the last few images for specific user's multi-image works
 
@@ -121,4 +221,5 @@
     <div class="listWrap" style="display: none;"></div>
   </span></slot>
 </div>
+
 

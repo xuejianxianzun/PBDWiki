@@ -18,3 +18,22 @@
   </div>
 </div>
 
+
+
+This feature includes four buttons:
+
+- `Export settings`: Exports the downloader's settings to a JSON file, saved to the browser's download directory.
+- `Import settings`: Allows you to select a previously exported JSON file to restore settings.
+- `Reset settings`: Restores all downloader options to their default values.
+- `Show help again`: When using certain features (e.g., previewing images), the downloader shows one-time help messages. Click this button to view these help messages again.
+
+Possible use cases:
+- Save multiple presets. If you need different settings at different times, export them separately and load specific settings as needed.
+- If you plan to remove and reinstall the extension, export settings to avoid losing them.
+- Share exported settings with others.
+- When submitting an issue, export settings and include them as an attachment.
+
+?> The downloader's settings are stored in `browser.storage.local`. They are only cleared when the extension is removed. Clearing browser data does not affect the downloader's settings.
+
+?> If you want to understand how settings work, you can check: [How Settings Work](/en/SettingsPanel?id=how-settings-work).
+

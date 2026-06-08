@@ -7,6 +7,17 @@
   <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="24" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
 </div>
 
+
+You can enter a number between 1 and 6 to set the concurrent download count. The default is 3.
+
+**Reminder:**
+
+- Downloading multiple files concurrently can improve download speed.
+- If your download speed is slow, reduce the concurrent download count, e.g., to 2, to avoid timeouts that may cause download failures.
+- If your download speed is fast, you can increase the concurrent download count.
+
+!> When downloading a large number of files, if the download speed is very fast (e.g., 5 files per second), it's recommended to set a lower concurrent download count, such as 1. Excessive downloading frequency may increase the risk of your account being banned.
+
 ## Download starts automatically
 
 <div class="option settingsPanel_optionCard" data-no="52" data-pin-bound="true" style="display: flex;">
@@ -18,6 +29,23 @@
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
 </div>
 
+
+When crawling is complete and downloading can begin, the downloader will automatically start downloading.
+
+If this option is disabled, the downloader will not start downloading automatically after crawling but will display the settings panel. You need to manually click the "Start Download" button to begin downloading.
+
+?>There is one situation where the download **will not** start automatically:
+
+When crawling on a **search page** with the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
+
+?>Some **quick download** methods always start downloading automatically (even if this option is disabled), such as:
+
+- Clicking the quick download button on the right side of a work page.
+- Clicking the download button on a work thumbnail.
+- Clicking the download button in the image viewer.
+- Pressing the `C` or `D` shortcut key to download a work during preview.
+- Crawling manually selected works.
+
 ## Bookmark works after downloading
 
 <div class="option settingsPanel_optionCard" data-no="53" data-pin-bound="true" style="display: flex;">
@@ -28,6 +56,23 @@
   <input type="checkbox" name="bmkAfterDL" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
+
+When enabled, the downloader will bookmark the work associated with each downloaded file.
+
+Bookmark progress is displayed in the download progress area, e.g., `Bookmarked 1/3`.
+
+![](images/20250909_005501.png)
+
+After downloading, if the bookmark progress shows matching numbers, e.g., `Bookmarked 3/3`, bookmarking is complete. If the numbers differ, wait for bookmarking to finish.
+
+**Notes:**
+
+1. If a work is skipped due to the "Don't download duplicate files" setting, it is still considered successfully downloaded and will be bookmarked.
+2. A work may have multiple files but is bookmarked only once. If the bookmark count is less than the file count, this is normal, as the bookmark count reflects the number of works, not files.
+3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
+
+If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).
 
 ## Download a work when you click the bookmark button
 
@@ -152,4 +197,5 @@ This is because when continuously downloading many files (especially novels), yo
   <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
 

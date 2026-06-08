@@ -11,6 +11,22 @@
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_抓取多少作品" data-msg="_抓取多少作品的提示" data-xztext="_帮助">Help</button>
 </div>
 
+For pages where downloading is **based on works**, this setting will be displayed. You can set how many works to crawl.
+
+?> The right side of this setting shows gray text to indicate the range of acceptable numbers. This range may vary depending on the page.
+
+**Instructions for Different Usage Scenarios:**
+
+- On **illustration or novel work pages**, crawling starts from the current work (including the current work). Setting it to 1 will crawl only the current work. Setting it to -1 means no limit on the number of works, and the downloader will crawl from the current work to the last one.
+
+- On **other pages** (e.g., rankings or followed users' new works), the downloader starts crawling from the first work on the current page. Setting it to 1 will crawl only the first work. Setting it to -1 means crawling all works on the current page.
+
+**Note:**
+
+If you modify the default crawl filter conditions, some works may be excluded.
+
+For example: If you set to crawl 10 works, and 6 of them are excluded, the downloader will only keep the 4 that meet the conditions.
+
 ## How many pages to crawl
 
 <div class="option settingsPanel_optionCard" data-no="1" data-pin-bound="true">
@@ -23,6 +39,16 @@
   <span class="gray1" data-xztext="_负1或者大于0" role="tip">-1, or greater than 0</span>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_抓取多少页面" data-msg="_抓取多少页面的提示" data-xztext="_帮助">Help</button>
 </div>
+
+When you are on **paginated list pages**, you will see this setting. You can set how many pages to crawl.
+
+?> The right side of this setting shows gray text to indicate the range of acceptable numbers. This range may vary depending on the page.
+
+The downloader always starts crawling **from the current page** (including the current page). If you are on page 1, it starts from page 1. If you are on page 2, it starts from page 2.
+
+- Setting it to 1 will crawl only the works on the current page.
+- Setting it to 2 will crawl the current page and the next page, and so on.
+- Setting it to -1 will make the downloader crawl from the current page to the last page.
 
 ## Crawl the latest few works of each user
 
@@ -37,4 +63,5 @@
     <input type="text" name="crawlLatestFewWorksNumber" class="setinput_style blue" value="10">
   </div>
 </div>
+
 

@@ -19,6 +19,13 @@
   </div>
 </div>
 
+
+You can require works to contain certain tags. Works without these tags will not be crawled.
+
+?> Tags refer to the tag list below the work's description, for example:
+
+![](images/20250909_001538.png)
+
 ## Exclude tag
 
 <div class="option settingsPanel_optionCard" data-no="16" data-pin-bound="true" style="display: flex;">
@@ -41,6 +48,17 @@
     <textarea class="centerPanelTextArea beautify_scrollbar" name="notNeedTag" rows="1" placeholder="tag1,tag2,tag3"></textarea>
   </div>
 </div>
+
+
+You can require works to not contain certain tags. If a work has **any one** of the tags set here, the downloader will not crawl it.
+
+**Tips:**
+
+- You can add multiple tags, separated by **English commas** `,`.
+- If multiple tags are set, a work with **any one** of them will not be downloaded.
+- Case-insensitive.
+- The **priority** of "Excluded Tags" is higher than "Required Tags". If a work meets both conditions, the downloader will exclude it (i.e., not crawl or download it).
+- Using Japanese (original) tags is recommended. Translated tags are not recommended.
 
 ## Block tags for specific users
 
@@ -132,4 +150,5 @@ Exclusion takes priority over inclusion." data-bind-click="true">
       <use xlink:href="#new"></use>
     </svg>
     </span></div>
+
 

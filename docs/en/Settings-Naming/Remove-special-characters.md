@@ -12,6 +12,9 @@
     </svg>
     </span></div>
 
+
+Usernames and work titles often contain emoji. If you do not want emoji to appear in filenames, you can enable this setting.
+
 ## Remove @ and subsequent characters in username
 
 <div class="option settingsPanel_optionCard" data-no="50" data-pin-bound="true" style="display: flex;">
@@ -22,4 +25,20 @@
   <input type="checkbox" name="removeAtFromUsername" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
+
+
+Some users add an @ suffix to their usernames, for example:
+
+- Anmi@画集発売中
+- 奥馬@skeb募集中
+- TonyG@__tony_g
+
+Additionally, the text after the @ may change over time.
+
+If you want to remove the @ and subsequent text, enable this option. This will cause the `{user}` naming tag to truncate the username at the @, resulting in:
+
+- Anmi
+- 奥馬
+- TonyG
 

@@ -58,6 +58,40 @@
     </svg>
     </span></div>
 
+
+        &gt;
+        <input class="setinput_style1 blue w150 noGrow" type="text" name="folderForMultiImageWorksImageNumber" id="folderForMultiImageWorksImageNumber" value="1">
+        <label for="folderForMultiImageWorksRule" data-xztext="_文件夹规则">Folder rule</label>
+        <input class="setinput_style1 blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{pid}">
+      </span>
+    </div>
+
+The downloader can add a separate folder layer for multi-image works. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+
+For example, work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_blank') has 3 images. After enabling this feature, you can put those images into a folder named with the work ID, like this:
+
+```
+79239641/
+  |---- 79239641_p0.jpg
+  |---- 79239641_p1.jpg
+  |---- 79239641_p2.jpg
+```
+
+**Sub-options:**
+
+- `Image count`: The downloader adds the configured folder only when the number of images in the work is greater than this value. The default is 1, so it applies to all multi-image works. You can set other values if needed.
+- `Folder rule`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{pid}`, which uses the work ID without the page number.
+
+After that, you also need to modify the `Naming rule for image works` setting and insert `/{multi_image_folder}/` where needed to add the folder layer. Example: `pixiv/{user}-{user_id}/{multi_image_folder}/{id}-{title}`
+
+You need to insert this tag manually so you can decide where this folder layer should appear. Usually it is placed before the filename, but some users may want it in a higher-level folder or even inside the filename.
+
+**Tips:**
+
+- If you want to use the work ID in the folder name, do not use `{id}`. Use `{pid}` instead. In a multi-image work, each image has a different `{id}`, so using `{id}` would create a separate folder for each image.
+- Although the setting name says `add one folder layer`, you can actually configure multiple nested folders here.
+- `{multi_image_folder}` itself does not create a folder unless your folder rule already ends with a slash `/`. So in most cases you need to add `/` after it. But this can also be useful: if you do not want to create a folder and only want to mark multi-image works in the filename, you can use it in the filename directly. For example, if the folder rule is `multi-image` and you add it to the filename like `pixiv/{user}-{user_id}/{id}-{multi_image_folder}`, the filename will include the `multi-image` marker.
+
 ## Add a folder layer for R-18(G) works
 
 <div class="option settingsPanel_optionCard" data-no="42" data-pin-bound="true" style="display: flex;">
@@ -70,6 +104,11 @@
     <input type="text" name="r18FolderName" id="r18FolderName" class="setinput_style blue grow" value="[R-18&amp;R-18G]" style="min-width: 100px">
   </div>
 </div>
+
+
+If you want to put R-18(G) works into a separate folder layer, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+
+To make this setting take effect, you also need to modify the naming rule and use `{r18_g_folder}` to represent the folder rule configured here. When downloading an R-18(G) work, the downloader replaces `{r18_g_folder}` with the folder rule set here.
 
 ## Create a folder with the first matched tag
 
@@ -87,4 +126,24 @@
     <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList2" rows="1" placeholder="tag1,tag2,tag3"></textarea>
   </div>
 </div>
+
+
+
+If you want to create a special folder layer when a work contains certain tags, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+
+For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the `Original` tag:
+
+![](images/20250910_224628.png)
+
+If you include `Original` in this setting, the downloader will create an `Original` folder for this work:
+
+![](images/20250910_224541.png)
+
+----------
+
+After enabling this setting, you can configure two tag lists.
+
+When downloading each file, the downloader checks whether the work's tags contain **any** of the tags you configured here. Once it finds a matching tag, it uses that tag to create a folder.
+
+This setting lets you categorize files with specific tags separately.
 

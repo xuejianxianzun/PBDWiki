@@ -17,6 +17,13 @@
     </svg>
     </span></div>
 
+
+When you hover over a thumbnail, the downloader displays some buttons on it, as shown below:
+
+![](./images/20260426_233917.png)
+
+By default they are shown on the right side, but you can switch them to the left side if you want.
+
 ## Show zoom button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="83" data-pin-bound="true" style="display: flex;">
@@ -36,6 +43,17 @@
   </div>
 </div>
 
+
+When the mouse hovers over a work's thumbnail, the downloader displays a magnifier icon, as shown below:
+
+![](images/20250910_235026.png)
+
+Clicking the magnifier icon opens the image viewer to view each image in the work. The effect is shown below:
+
+![](images/20260404_232758.webp)
+
+You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
+
 ## Display copy button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="84" data-pin-bound="true" style="display: flex;">
@@ -51,4 +69,8 @@
   <input type="checkbox" name="showDownloadBtnOnThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
+
+
+When the mouse hovers over a work thumbnail, the downloader will display a download button on the thumbnail. Clicking the download button allows you to download this work. This feature makes downloading works much more convenient.
 

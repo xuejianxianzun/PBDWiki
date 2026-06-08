@@ -46,6 +46,15 @@
     </svg>
     </span></div>
 
+
+If a tag has multiple variants, you can set a custom alias for them. Example:
+
+![](images/20260426_191855.png)
+
+This alias can be used both for `Create a folder with the first matched tag` and for the `{tags}`-related naming tags.
+
+There is a `Help` button on the right side of this setting. Click it to view the detailed instructions. In the Wiki it has no effect.
+
 ## Customize username
 
 <div class="option settingsPanel_optionCard" data-no="45" data-pin-bound="true" style="display: flex;">
@@ -89,4 +98,5 @@
     <div class="listWrap" style="display: flex;"></div>
   </span></slot>
 </div>
+
 

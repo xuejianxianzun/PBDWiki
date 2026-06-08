@@ -406,6 +406,25 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
   </p>
 </div>
 
+
+This affects only the results of these naming tags: `{tags}`, `{tags_translate}`, `{tags_transl_only}`.
+
+By default, the downloader uses `,` to separate tags, so the output of these tags looks like: `tag1,tag2,tag3`. If you want to use a different symbol, you can change it here.
+
+For example, if you set it to `#`, the tag list output will be `tag1#tag2#tag3`.
+
+Here are some commonly used separators:
+
+```
+,
+#
+&
+_
+-
+```
+
+?> The separator can be a single character or multiple characters (if needed).
+
 ## Date and time format
 
 <div class="option settingsPanel_optionCard" data-no="38" data-pin-bound="true" style="display: flex;">
@@ -436,6 +455,28 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
   </p>
 </div>
 
+
+Some naming tags in the downloader generate date and time strings:
+- `{date}`
+- `{upload_date}`
+- `{task_date}`
+
+Their default format is `YYYY-MM-DD` (for example `2021-04-30`), which includes only the date and not the time.
+
+If you want to change the format, modify this setting.
+
+For a time such as `2021-04-30T06:40:08`, the available tags and their outputs are as follows (**case-sensitive**):
+
+- `YYYY` 2021
+- `YY` 21
+- `MM` 04
+- `MMM` Apr
+- `MMMM` April
+- `DD` 30
+- `hh` 06
+- `mm` 40
+- `ss` 08
+
 ## File name length limit
 
 <div class="option settingsPanel_optionCard" data-no="39" data-pin-bound="true" style="display: flex;">
@@ -449,4 +490,18 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
     <button type="button" class="gray1 textButton showMsgBtn" data-title="_文件名长度限制" data-msg="_文件名长度限制的说明" data-xztext="_帮助">Help</button>
   </div>
 </div>
+
+
+
+You can set a character limit for the full filename. The full filename includes: the folder name, path separators, the filename itself, and the extension.
+
+The default value is `210`. If the total number of characters in the full filename exceeds this limit, the downloader will prioritize truncating the filename to keep the character count below the limit. If necessary, it will also truncate folder names.
+
+**Why might filenames become too long?**
+
+Some tags in the naming rule can output a large amount of text, which may cause the filename length to exceed the limit allowed by the operating system (usually no more than 256 characters).
+
+Two types of tags are particularly likely to cause this issue:
+- Titles, including `{title}` and `{page_title}`, because some novel titles are very long.
+- Tag lists, including `{tags}`, `{tags_translate}`, `{tags_transl_only}`, and `{page_tag}`, because some tags contain a large number of characters.
 

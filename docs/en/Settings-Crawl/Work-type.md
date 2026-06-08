@@ -18,6 +18,11 @@
   <label for="setWorkType3" data-xztext="_小说" class="active">Novels</label>
 </div>
 
+
+This setting allows you to filter the types of works you want to download.
+
+The downloader checks the type of each work during crawling and excludes those that do not meet the criteria.
+
 ## Age restriction
 
 <div class="option settingsPanel_optionCard" data-no="4" data-pin-bound="true" style="display: flex;">
@@ -35,6 +40,11 @@
   <label for="downR18G" class="active"> R-18G</label>
 </div>
 
+
+You can filter works based on their age restriction.
+
+The downloader checks the age restriction of each work during crawling and excludes those that do not meet the criteria.
+
 ## AI works
 
 <div class="option settingsPanel_optionCard" data-no="5" data-pin-bound="true" style="display: flex;">
@@ -51,6 +61,37 @@
   <span class="beautify_checkbox" tabindex="0"></span>
   <label for="UnknownAI" data-xztext="_未知" class="has_tip active" data-xztip="_AI未知作品的说明" data-tip="Early works are not marked and cannot be judged">Unknown</label>
 </div>
+
+
+You can filter works based on whether they are AI-generated.
+
+The downloader checks the AI tag of each work during crawling and excludes those that do not meet the criteria.
+
+--------
+
+When users submit works, illustrations, manga, and Ugoira must select whether they are AI-generated, while novels have the option to select whether they are AI-generated. Therefore, the downloader can determine whether these works are AI-generated.
+
+If the user selects that the work is AI-generated, Pixiv will display the bolded text "AI-generated" at the beginning of the tag list, for example:
+
+![](images/20260405_010411.png)
+
+If there is no bold "AI-generated", it means the user has set the work as "non-AI-generated".
+
+The `Unknown` type applies to early works. Because AI image generation technology was not widely available in the early days, Pixiv did not require works to add this mark at that time, so the downloader cannot determine whether they are AI-generated. Generally, you can treat `Unknown` works as non-AI-generated.
+
+**Additional Processing:**
+
+Since many users deliberately set AI-generated images as "non-AI-generated" to evade moderation, the downloader will check the work's tags. If it contains specific tags, it will treat the work as AI-generated. For example:
+
+![](images/20260405_010326.png)
+
+These tags are:
+
+```
+AI生成,AI-generated,AIイラスト,AI生成作品,AI 画作,AI生成イラスト,AI 생성,сгенерированный ИИ,สร้างโดย AI,Janaan AI
+```
+
+However, some users deliberately do not add any AI-related tags. In this case, the downloader cannot determine whether it is an AI-generated work based on the tags.
 
 ## Original works
 
@@ -75,6 +116,31 @@
     </svg>
     </span></div>
 
+
+You can filter original works and non-original works.
+
+**How it works:**
+
+When artists submit a work, they can set whether it is an original work. This becomes a property of the work (`isOriginal`).
+
+For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
+
+![](images/20260405_005635.png)
+
+If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
+
+![](images/20260405_005754.png)
+
+The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
+
+Additionally, the downloader enables the `Loose matching` rule by default: for non-original works, if it contains any of the specific tags, the downloader will treat it as an original work when checking this filter condition. These tags are:
+
+```
+原创,原創,創作,オリジナル,Original,original,Creation,creation,창작,오리지널,Asli,ออริจินัล,Оригинал
+```
+
+PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
+
 ## Image color
 
 <div class="option settingsPanel_optionCard" data-no="7" data-pin-bound="true" style="display: flex;">
@@ -89,6 +155,19 @@
   <label for="setDownBlackWhiteImg" data-xztext="_黑白图片" class="active">Black and white images</label>
 </div>
 
+
+You can filter works based on the color of the images.
+
+If you set filters for color or black-and-white images, the downloader checks the average color of the image to determine if it is color or black-and-white. A common use case is to exclude black-and-white manga images.
+
+The downloader checks this setting during both crawling and downloading.
+
+?> Some images may appear mostly black-and-white but contain some color. These are considered color images, not black-and-white.
+
+When downloading, if a file is excluded due to its color, a corresponding message will appear in the log. For example:
+
+<span class="log" style="color: rgb(210, 126, 0);"><a href="https://www.pixiv.net/i/134469561#1" target="_blank">134469561_p0</a> was not saved because its color does not meet the settings.<br></span>
+
 ## Number of images
 
 <div class="option settingsPanel_optionCard" data-no="8" data-pin-bound="true" style="display: flex;">
@@ -102,4 +181,14 @@
   <span class="beautify_checkbox" tabindex="0"></span>
   <label for="setDownMultiImg" data-xztext="_多图作品" class="active">Multi-image works</label>
 </div>
+
+
+
+You can filter works based on the number of images.
+
+The downloader checks this setting during crawling and excludes works that do not meet the criteria.
+
+Single-image works have only one image; multi-image works contain multiple images, often marked in the top-right corner, for example:
+
+![](images/20250829_232042.png)
 
