@@ -7,7 +7,7 @@ Clicking this button displays an input area at the top of the page. You can ente
 
 Example:
 
-![](images/20250909_231123.png)
+![](../images/20250909_231123.png)
 
 **Tips:**
 
@@ -49,4 +49,5 @@ Removes all Ugoira works from the crawl results.
 Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
 
 ?> These filter buttons only appear on illustration and manga search pages, not on novel search pages, as the downloader cannot preview novel crawl results.
+
 

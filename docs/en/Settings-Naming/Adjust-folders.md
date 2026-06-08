@@ -133,11 +133,11 @@ If you want to create a special folder layer when a work contains certain tags, 
 
 For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the `Original` tag:
 
-![](images/20250910_224628.png)
+![](../images/20250910_224628.png)
 
 If you include `Original` in this setting, the downloader will create an `Original` folder for this work:
 
-![](images/20250910_224541.png)
+![](../images/20250910_224541.png)
 
 ----------
 
@@ -146,4 +146,5 @@ After enabling this setting, you can configure two tag lists.
 When downloading each file, the downloader checks whether the work's tags contain **any** of the tags you configured here. Once it finds a matching tag, it uses that tag to create a folder.
 
 This setting lets you categorize files with specific tags separately.
+
 

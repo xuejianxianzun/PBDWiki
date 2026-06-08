@@ -37,7 +37,8 @@ The default is `Auto`, where the downloader uses the same language as the Pixiv 
 
 Tip: Pixiv offers multiple language options. Click your avatar and select Language settings to switch languages:
 
-![](images/20250904_225526.png)
+![](../images/20250904_225526.png)
 
 ?> Pixiv previously offered a Russian language option, but it's no longer available. If you're a Russian user, you can manually select `Русский` in the downloader's Language settings to use Russian.
+
 

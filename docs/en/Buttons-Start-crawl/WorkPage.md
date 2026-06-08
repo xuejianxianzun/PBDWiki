@@ -13,7 +13,7 @@ You can set how many works to crawl (including the current work) in the first cr
 
 Diagram:
 
-![](images/20250906_011151.webp)
+![](../images/20250906_011151.webp)
 
 Newer works are on the left, older works on the right.
 
@@ -47,7 +47,7 @@ You can set how many related works to crawl (including the current work) in the 
 
 After clicking the bookmark button, Pixiv displays recommended works, and the downloader shows this button, as illustrated below:
 
-![](images/20250909_230842.webp)
+![](../images/20250909_230842.webp)
 
 Click this button to crawl recommended works.
 
@@ -56,4 +56,5 @@ You can set how many recommended works to crawl in the first crawl condition, `H
 ?> Recommended works are limited to a maximum of 20.
 
 ?> When downloading recommended works, the downloader always starts downloading automatically.
+
 

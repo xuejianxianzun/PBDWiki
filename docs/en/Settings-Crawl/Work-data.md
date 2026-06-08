@@ -259,7 +259,8 @@ You can click the icon to the right of the input field to use the browser's time
 
 **Note:** When entering the value manually, you must include the full time and date. As shown in the image below, the value on the left is incorrect because it doesn't include the time:
 
-![](images/20250910_012836.png)
+![](../images/20250910_012836.png)
 
 ?> The first illustration on Pixiv is https://www.pixiv.net/artworks/20, published at `2007-09-09T13:14:07+00:00`.
+
 

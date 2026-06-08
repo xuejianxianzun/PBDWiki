@@ -42,7 +42,7 @@ To schedule crawling of new works by followed users, follow these steps:
 
 2. Set the number of pages to crawl each time:
 
-![](images/20250909_225712.png)
+![](../images/20250909_225712.png)
 
 This page count should consider the "interval time." For example, if you want to crawl every 120 minutes and the page's new works in 120 minutes do not exceed 3 pages, set it to `3`.
 
@@ -100,11 +100,11 @@ Use this button to manually select any works on the page and crawl them.
 
 Clicking this button enters selection mode. A blue circle with crosshair guidelines appears under the mouse cursor, as shown below:
 
-![](images/20250905_224727.png)
+![](../images/20250905_224727.png)
 
 You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
 
-![](images/20251126_033447.png)
+![](../images/20251126_033447.png)
 
 You can later crawl the selected works.
 
@@ -153,9 +153,10 @@ For example, navigating from a user profile to a work page without refreshing re
 
 However, navigating to certain pages (e.g., rankings) or refreshing the page discards the current page content. In such cases, the downloader prompts the browser to display a confirmation dialog, as shown below:
 
-![](images/20250909_225629.png)
+![](../images/20250909_225629.png)
 
 If you choose to leave the page, the selected works are lost. If you cancel the navigation, the selected works are retained.
 
 In short, you don't need to worry about accidentally losing selected works, as you'll have the opportunity to choose.
+
 

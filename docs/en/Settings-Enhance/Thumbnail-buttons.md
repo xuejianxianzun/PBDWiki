@@ -46,11 +46,11 @@ By default they are shown on the right side, but you can switch them to the left
 
 When the mouse hovers over a work's thumbnail, the downloader displays a magnifier icon, as shown below:
 
-![](images/20250910_235026.png)
+![](../images/20250910_235026.png)
 
 Clicking the magnifier icon opens the image viewer to view each image in the work. The effect is shown below:
 
-![](images/20260404_232758.webp)
+![](../images/20260404_232758.webp)
 
 You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
 
@@ -73,4 +73,5 @@ You can find detailed information about the image viewer here: [Image Viewer](/e
 
 
 When the mouse hovers over a work thumbnail, the downloader will display a download button on the thumbnail. Clicking the download button allows you to download this work. This feature makes downloading works much more convenient.
+
 

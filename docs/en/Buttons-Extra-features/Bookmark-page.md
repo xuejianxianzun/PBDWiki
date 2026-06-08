@@ -16,7 +16,7 @@ When using this feature, the button displays progress information, for example:
 - This feature crawls **all** uncategorized works; you cannot set a limit on the number to crawl.
 - The downloader adds **the work's own tags** to uncategorized works, i.e., the tags visible on their work page, for example:
 
-![](images/20250909_234748.png)
+![](../images/20250909_234748.png)
 
 **What are uncategorized works?**
 
@@ -28,7 +28,7 @@ When adding bookmarks, you can optionally add tags (custom or otherwise). Howeve
 
 **Trivia:** On your bookmark page, Pixiv displays a list of tags, such as:
 
-![](images/20250909_234915.png)
+![](../images/20250909_234915.png)
 
 These are the tags associated with bookmarked works, sorted by frequency.
 
@@ -67,7 +67,7 @@ Click this button, and the downloader crawls all works on the **current page** (
 
 Your bookmarks may include works that are no longer available, which you cannot view or download. For example:
 
-![](images/20250909_235316.png)
+![](../images/20250909_235316.png)
 
 Click this button, and the downloader crawls your bookmark list (without fetching detailed data for each work, so it's relatively quick). It then identifies **all** deleted works and removes them from your bookmarks.
 
@@ -77,7 +77,7 @@ Click this button, and the downloader crawls your bookmark list (without fetchin
 
 After identifying all deleted works, the downloader exports their ID list to the download directory, for example:
 
-![](images/20251003_182304.png)
+![](../images/20251003_182304.png)
 
 This feature is useful for some users, as work IDs can help locate archived versions of these works on other illustration websites.
 
@@ -114,4 +114,5 @@ Click this button to select a previously exported bookmark list (JSON file) and 
 - If the imported list includes works you've already bookmarked, the final bookmark count may be lower than expected, which is normal. For example, if you import 48 works and 20 are already bookmarked, your bookmark count will increase by only 28.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page, e.g., "Bookmarking works 5/48".
+
 

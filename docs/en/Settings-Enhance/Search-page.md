@@ -12,7 +12,7 @@
 
 The downloader adds buttons for specific bookmark counts at the top of search pages, for example:
 
-![](images/20250909_220353.png)
+![](../images/20250909_220353.png)
 
 Clicking these buttons adds the bookmark count tag to the current search and performs the search.
 
@@ -42,7 +42,7 @@ The bookmark count buttons added by the downloader are:
 
 This feature is enabled by default. When the mouse cursor hovers over a work thumbnail, the downloader displays a larger preview image, as shown below:
 
-![](images/20251025_015955.webp)
+![](../images/20251025_015955.webp)
 <!-- https://www.pixiv.net/artworks/134677173 -->
 
 ?> The preview image adapts to the available area and won't exceed the screen.
@@ -86,5 +86,6 @@ This helps you focus on works from unfollowed users when discovering new artists
     <input type="text" name="previewResultLimit" class="setinput_style blue w80" value="1000">
   </div>
 </div>
+
 
 

@@ -125,7 +125,7 @@ Normally, you can only view detailed information, such as a work's description, 
 
 If you want to view details without entering the work's page, enable this feature. When you hover over a thumbnail, the downloader will display detailed information, such as:
 
-![](images/20251025_033102.png)
+![](../images/20251025_033102.png)
 
 Links in this panel, such as URLs in the description or tag links, are clickable.
 
@@ -141,4 +141,5 @@ There are some buttons at the bottom of the panel:
 - `Copy Button` Click it, and the downloader will copy the first image of the work and the text summary.
 
 ?> This feature depends on the [Preview works](/en/Settings-More-Enhance?id=preview-works) feature. If the "Preview work" feature is disabled, this feature will not work. This is mainly to simplify code and avoid multiple requests for work data without caching.
+
 

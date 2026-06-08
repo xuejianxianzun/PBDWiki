@@ -24,7 +24,7 @@ You can choose the downloader's color theme.
 
 Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar and select "Dark mode" from the menu, as shown:
 
-![](images/20250909_221310.png)
+![](../images/20250909_221310.png)
 
 !> Some users may use [Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), an extension that displays websites in dark mode. If you want dark mode on Pixiv, use Pixiv's built-in dark mode. If you keep Pixiv in its default light theme and use Dark Reader to display it in dark mode, the downloader's `Auto` option will still use light mode, which may not meet your expectations. You can manually set the downloader's color theme to `Dark`.
 
@@ -76,7 +76,7 @@ You can set a favorite image as the downloader's background image and adjust its
 
 The effect is shown below:
 
-![](images/20250909_221755.webp)
+![](../images/20250909_221755.webp)
 
 ?> The downloader does not include built-in background images, so you need to select one yourself. The background image in the example above is from [92215267](https://www.pixiv.net/artworks/92215267).
 
@@ -99,7 +99,8 @@ This setting includes buttons and options:
 
 The downloader displays keywords in each setting item in blue and bold, for example:
 
-![](images/20250909_221934.png)
+![](../images/20250909_221934.png)
 
 This is because the downloader has many settings, and finding a specific one can take time. This feature improves efficiency.
+
 

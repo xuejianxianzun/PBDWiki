@@ -73,7 +73,7 @@ When users submit works, illustrations, manga, and Ugoira must select whether th
 
 If the user selects that the work is AI-generated, Pixiv will display the bolded text "AI-generated" at the beginning of the tag list, for example:
 
-![](images/20260405_010411.png)
+![](../images/20260405_010411.png)
 
 If there is no bold "AI-generated", it means the user has set the work as "non-AI-generated".
 
@@ -83,7 +83,7 @@ The `Unknown` type applies to early works. Because AI image generation technolog
 
 Since many users deliberately set AI-generated images as "non-AI-generated" to evade moderation, the downloader will check the work's tags. If it contains specific tags, it will treat the work as AI-generated. For example:
 
-![](images/20260405_010326.png)
+![](../images/20260405_010326.png)
 
 These tags are:
 
@@ -125,11 +125,11 @@ When artists submit a work, they can set whether it is an original work. This be
 
 For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
 
-![](images/20260405_005635.png)
+![](../images/20260405_005635.png)
 
 If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
 
-![](images/20260405_005754.png)
+![](../images/20260405_005754.png)
 
 The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
 
@@ -190,5 +190,6 @@ The downloader checks this setting during crawling and excludes works that do no
 
 Single-image works have only one image; multi-image works contain multiple images, often marked in the top-right corner, for example:
 
-![](images/20250829_232042.png)
+![](../images/20250829_232042.png)
+
 

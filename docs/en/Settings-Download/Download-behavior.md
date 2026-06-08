@@ -62,7 +62,7 @@ When enabled, the downloader will bookmark the work associated with each downloa
 
 Bookmark progress is displayed in the download progress area, e.g., `Bookmarked 1/3`.
 
-![](images/20250909_005501.png)
+![](../images/20250909_005501.png)
 
 After downloading, if the bookmark progress shows matching numbers, e.g., `Bookmarked 3/3`, bookmarking is complete. If the numbers differ, wait for bookmarking to finish.
 
@@ -197,5 +197,6 @@ This is because when continuously downloading many files (especially novels), yo
   <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
 
 

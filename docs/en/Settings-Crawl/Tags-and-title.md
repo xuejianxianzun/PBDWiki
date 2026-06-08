@@ -24,7 +24,7 @@ You can require works to contain certain tags. Works without these tags will not
 
 ?> Tags refer to the tag list below the work's description, for example:
 
-![](images/20250909_001538.png)
+![](../images/20250909_001538.png)
 
 ## Exclude tag
 
@@ -150,5 +150,6 @@ Exclusion takes priority over inclusion." data-bind-click="true">
       <use xlink:href="#new"></use>
     </svg>
     </span></div>
+
 
 

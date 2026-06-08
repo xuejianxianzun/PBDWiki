@@ -16,7 +16,7 @@
 
 "Tabs" refer to the three tabs at the top of the downloader: "Crawl," "Download," and "More":
 
-![](images/20250909_221919.png)
+![](../images/20250909_221919.png)
 
 - `Mouse hover`: Default. Moving the mouse pointer over a tab title immediately switches to that tab, which is convenient.
 - `Mouse click`: Moving the mouse pointer over a tab title doesn't switch tabs; you need to click the title to switch. This is for users who find the hover method causes accidental switches.
@@ -45,5 +45,6 @@
   <input type="checkbox" name="clickSettingNameOpenWiki" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
 
 

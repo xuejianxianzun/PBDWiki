@@ -36,11 +36,11 @@ When artists submit a work, they can set whether it is an original work. This be
 
 For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
 
-![](images/20260405_005635.png)
+![](../images/20260405_005635.png)
 
 If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
 
-![](images/20260405_005754.png)
+![](../images/20260405_005754.png)
 
 The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
 
@@ -79,11 +79,11 @@ When artists submit a work, they can set whether it is an original work. This be
 
 For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
 
-![](images/20260405_005635.png)
+![](../images/20260405_005635.png)
 
 If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
 
-![](images/20260405_005754.png)
+![](../images/20260405_005754.png)
 
 The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
 
@@ -122,11 +122,11 @@ When artists submit a work, they can set whether it is an original work. This be
 
 For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
 
-![](images/20260405_005635.png)
+![](../images/20260405_005635.png)
 
 If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
 
-![](images/20260405_005754.png)
+![](../images/20260405_005754.png)
 
 The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
 
@@ -165,11 +165,11 @@ When artists submit a work, they can set whether it is an original work. This be
 
 For original works, Pixiv displays the bolded word "Original" at the beginning of the tag list, for example:
 
-![](images/20260405_005635.png)
+![](../images/20260405_005635.png)
 
 If it is not an original work, there will be no bold "Original" text. Even if it contains tags related to originality, it is **not** considered an original work, for example:
 
-![](images/20260405_005754.png)
+![](../images/20260405_005754.png)
 
 The downloader first checks the work's `isOriginal` property to determine whether it is an original work. If `isOriginal` is `true`, it is an original work; otherwise, it is a non-original work.
 
@@ -221,5 +221,6 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
     <div class="listWrap" style="display: none;"></div>
   </span></slot>
 </div>
+
 
 

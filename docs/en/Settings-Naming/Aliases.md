@@ -49,7 +49,7 @@
 
 If a tag has multiple variants, you can set a custom alias for them. Example:
 
-![](images/20260426_191855.png)
+![](../images/20260426_191855.png)
 
 This alias can be used both for `Create a folder with the first matched tag` and for the `{tags}`-related naming tags.
 
@@ -98,5 +98,6 @@ There is a `Help` button on the right side of this setting. Click it to view the
     <div class="listWrap" style="display: flex;"></div>
   </span></slot>
 </div>
+
 
 
