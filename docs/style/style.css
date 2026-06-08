@@ -1490,9 +1490,6 @@ body.mobile #quickCrawlBtn {
 :root .radio:checked + .beautify_radio::after {
   transform: translate(-50%, -50%) scale(1);
 }
-:root li {
-  list-style: none;
-}
 :root .download_progress1,
 :root .right1 {
   position: relative;
@@ -2060,9 +2057,6 @@ body.mobile #quickCrawlBtn {
 :root .settingsPanel_page.active {
   display: block;
 }
-:root .settingsPanel_page[data-page='home'] .settingsPanel_optionCard.option {
-  margin-top: 10px;
-}
 :root .settingsPanel_pageInner {
   padding-bottom: 5px;
 }
@@ -2213,7 +2207,6 @@ body.mobile #quickCrawlBtn {
 }
 :root .settingsPanel_optionCard.option {
   width: calc(100% - 20px);
-  margin: 10px auto 0;
   padding: 8px 15px;
   background: var(--settings-panel-surface-bg);
   border: 1px solid var(--settings-panel-card-border);

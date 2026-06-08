@@ -17,6 +17,7 @@ You can filter works based on their bookmark status.
 
 The downloader checks whether each work is bookmarked by you during crawling and excludes those that do not meet the criteria.
 
+
 ## Number of bookmarks
 
 <div class="option settingsPanel_optionCard" data-no="10" data-pin-bound="true" style="display: flex;">
@@ -52,6 +53,15 @@ The downloader checks whether each work is bookmarked by you during crawling and
   </div>
 </div>
 
+Bookmark count is the number of people who bookmarked this work. A higher bookmark count usually means the work is more valuable.
+
+This setting has two filtering methods:
+
+1. Bookmark count (total)
+2. Average daily bookmark count
+
+As long as a work meets either of these options, it will be downloaded.
+
 ## Width and height
 
 <div class="option settingsPanel_optionCard" data-no="11" data-pin-bound="true" style="display: flex;">
@@ -61,7 +71,7 @@ The downloader checks whether each work is bookmarked by you during crawling and
   </a>
   <input type="checkbox" name="setWHSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <div class="subOptionWrap flexBasis100" data-show="setWHSwitch" style="display: inline-flex;">
+  <div class="subOptionWrap flexBasis100" data-show="setWHSwitch" style="display: none;">
     <div class="optionLine">
       <span data-xztext="_宽度">Width</span>
       <input type="radio" name="widthComparison" id="widthComparison1" class="need_beautify radio" value="&gt;=" checked="">
@@ -102,15 +112,13 @@ The downloader checks whether each work is bookmarked by you during crawling and
 
 You can set the width and height conditions for the images you want to download. The downloader will not download images that do not meet these conditions.
 
+You can separately set the width and height values and comparison methods.
+
 **Tips:**
 
-- The `>=`, `=`, or `<=` conditions apply to both width and height.
-- The first input box sets the width, and the second sets the height.
-- Selecting `And` means the image's width and height must both meet the set conditions.
-- Selecting `Or` means the image only needs to meet either the width or height condition.
 - The default values for width and height are 0, meaning no restrictions.
-
-?> For example, you can set `>= Width 1920 And Height 1080` to filter images suitable for computer wallpapers.
+- Selecting `And` means the image's width and height must both meet the set width and height conditions.
+- Selecting `Or` means the image's width and height only need one to meet the requirements, and the image will be kept.
 
 ## Aspect ratio
 
@@ -244,15 +252,6 @@ You can set the ID for each type according to your needs.
   </div>
 </div>
 
-
-
-        -&nbsp;
-        <input type="datetime-local" name="postDateEnd" placeholder="yyyy-MM-dd HH:mm" class="setinput_style1 postDate blue" value="2100-01-01T00:00">
-        <button class="textButton grayButton mr0" type="button" role="setDate" data-for="postDateEnd" data-value="now" data-xztext="_现在">Now</button>
-        <button class="textButton grayButton" type="button" role="setDate" data-for="postDateEnd" data-value="2100-01-01T00:00" data-xztext="_未来">Future</button>
-      </span>
-    </p>
-
 You can download only works published within a specific time range.
 
 You can click the icon to the right of the input field to use the browser's time and date picker, or you can enter the value manually.
@@ -262,5 +261,3 @@ You can click the icon to the right of the input field to use the browser's time
 ![](../images/20250910_012836.png)
 
 ?> The first illustration on Pixiv is https://www.pixiv.net/artworks/20, published at `2007-09-09T13:14:07+00:00`.
-
-

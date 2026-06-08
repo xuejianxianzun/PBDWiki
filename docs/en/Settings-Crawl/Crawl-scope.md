@@ -64,4 +64,9 @@ The downloader always starts crawling **from the current page** (including the c
   </div>
 </div>
 
+This is a hidden setting, and it only works on the Following page.
+
+When you crawl on the Following page, if this setting is enabled and the number of works is greater than 0, the downloader only crawls the latest few works of each user.
+
+For example, if you set it to 1, the downloader will crawl only the latest work of each user.
 
