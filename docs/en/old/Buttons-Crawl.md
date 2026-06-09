@@ -54,7 +54,7 @@ To schedule crawling of new works by followed users, follow these steps:
 
 2. Set the number of pages to crawl each time:
 
-![](images/20250909_225712.png)
+![](images/20260610_005403.png)
 
 This page count should consider the "interval time." For example, if you want to crawl every 120 minutes and the page's new works in 120 minutes do not exceed 3 pages, set it to `3`.
 

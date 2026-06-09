@@ -2222,7 +2222,7 @@ h3 a {
   flex-direction: column;
   background-color: #ffffff;
   box-shadow: #2ca6df 0px 0px 15px;
-  width: 720px;
+  width: 100%;
   max-width: 90vw;
   height: max-content;
   font-size: 16px;
@@ -2245,7 +2245,6 @@ h3 a {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 24px;
-  flex-basis: 600px;
   flex-grow: 0;
   font-family: sans-serif;
   border-width: 1px;

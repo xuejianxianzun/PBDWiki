@@ -1,6 +1,6 @@
 # Buttons-Start crawl
 
-Secondary classification:
+In the downloader's home page, the "Start crawl" area displays several buttons. Some buttons appear on most pages, while others only show up on specific pages.
 
 * [General](en/Buttons-Start-crawl/General)
 * [HomePage](en/Buttons-Start-crawl/HomePage)
