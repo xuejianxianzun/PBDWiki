@@ -127,7 +127,7 @@ After you modify settings in one tab, other tabs will not be affected. The new s
 
 **Export Settings:**
 
-The downloader provides export and import settings functions in the "More" → "Others" category: [Manage Settings](/en/Settings-More-Other?id=manage-settings).
+The downloader provides export and import settings functions in the "More" → "Others" category: [Manage Settings](/en/Settings-General/Manage-settings?id=manage-settings).
 
 You can export settings as a backup, or export separate configuration files for different usage scenarios and import them when needed.
 

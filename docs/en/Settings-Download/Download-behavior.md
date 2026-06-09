@@ -35,7 +35,7 @@ If this option is disabled, the downloader will not start downloading automatica
 
 ?>There is one situation where the download **will not** start automatically:
 
-When crawling on a **search page** with the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
+When crawling on a **search page** with the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
 
 ?>Some **quick download** methods always start downloading automatically (even if this option is disabled), such as:
 
@@ -69,7 +69,7 @@ After downloading, if the bookmark progress shows matching numbers, e.g., `Bookm
 
 1. If a work is skipped due to the "Don't download duplicate files" setting, it is still considered successfully downloaded and will be bookmarked.
 2. A work may have multiple files but is bookmarked only once. If the bookmark count is less than the file count, this is normal, as the bookmark count reflects the number of works, not files.
-3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
+3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
 
 If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).
 
@@ -224,7 +224,7 @@ If you need this, you can enable the setting, but it is usually unnecessary. I d
 - To sort by `Bookmark count`, use `{bmk}` at the beginning of the filename.
 - To sort by `Bookmark time`, use `{bmk_id}` at the beginning of the filename.
 
-Please refer to: [Sorting with Naming Tags](/en/Settings-Download?id=sorting-with-naming-tags).
+Please refer to: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=sorting-with-naming-tags).
 
 -----------------
 

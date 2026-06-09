@@ -110,7 +110,7 @@ You can use this setting to control the downloader's behavior when bookmarking w
 
 3. Bookmarking a work with the `B` shortcut while previewing.
 4. Bookmarking a work by clicking the (☆) button in the image viewer.
-5. [Bookmark after download](/en/Settings-Download?id=bookmark-works-after-downloading) feature.
+5. [Bookmark after download](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) feature.
 6. "Bookmark all works on this page" feature in the downloader's "More" tab on user homepages and search pages.
 
 **Features not affected by this setting:**

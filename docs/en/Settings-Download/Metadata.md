@@ -48,7 +48,7 @@ Divided into `illustration`, `manga`, `Ugoira`, `novel`.
 
 The downloader will create a metadata file for the work only if the downloaded file type matches the types you have checked.
 
-?> Novels have a separate setting for saving metadata: [Save metadata in the novel](/en/Settings-More-Download?id=save-metadata-in-the-novel), which saves some metadata at the beginning of the novel without creating a separate TXT file, making it more convenient. However, it saves less metadata. If you have enabled "Save metadata in the novel," you usually do not need to select the "Novel" type in this option.
+?> Novels have a separate setting for saving metadata: [Save metadata in the novel](/en/Settings-Download/Novels?id=save-metadata-in-the-novel), which saves some metadata at the beginning of the novel without creating a separate TXT file, making it more convenient. However, it saves less metadata. If you have enabled "Save metadata in the novel," you usually do not need to select the "Novel" type in this option.
 
 ### File Format
 

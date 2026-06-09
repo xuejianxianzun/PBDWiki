@@ -118,7 +118,7 @@ A common case is usernames with an @ symbol, such as:
 - 奥馬@skeb募集中
 - さしみなす@依頼募集中
 
-While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=remove-and-subsequent-characters-in-username) feature can address this, some users' names may not use @, for example:
+While the [Remove @ and subsequent characters from username](/en/Settings-Naming/Remove-special-characters?id=remove-and-subsequent-characters-in-username) feature can address this, some users' names may not use @, for example:
 
 - いの字/inoji
 - 焔すばる★２日目 東C17a
@@ -136,6 +136,5 @@ You can set a fixed name for them here.
 For example, if a user's name is in Japanese but you don't input Japanese and it's inconvenient to search on your device, you can set a English alias (or another language you can use) for easier searching.
 
 If a user's name is hard to remember, you can also set an easy-to-remember alias.
-
 
 

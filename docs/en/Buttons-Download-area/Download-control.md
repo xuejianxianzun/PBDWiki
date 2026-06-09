@@ -5,7 +5,7 @@
 
 After crawling is complete, click this button to start downloading.
 
-?> The downloader enables the [Download starts automatically](/en/Settings-Download?id=download-starts-automatically) function by default, so you don't need to manually click this button.
+?> The downloader enables the [Download starts automatically](/en/Settings-Download/Download-behavior?id=download-starts-automatically) function by default, so you don't need to manually click this button.
 
 ## Pause download
 

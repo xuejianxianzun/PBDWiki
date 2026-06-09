@@ -49,7 +49,7 @@ If you do not want to change the browser's file save location, you can manually 
 
 Use a slash `/` in the naming rule, and the part before the slash will be used as the folder name.
 
-See detailed instructions: [Creating Folders](/en/Settings-Download?id=Creating-Folders)
+See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=Creating-Folders)
 
 ## How to Save All Works of an Artist/User to the Same Folder
 
@@ -76,7 +76,7 @@ Downloads
 │          99276627_p1.png
 ```
 
-Please check this setting: [Add a folder layer for multi-image works](/en/Settings-More-Naming?id=add-a-folder-layer-for-multi-image-works).
+Please check this setting: [Add a folder layer for multi-image works](/en/Settings-Naming/Adjust-folders?id=add-a-folder-layer-for-multi-image-works).
 
 ## Crawling Completed, but No Works Match the Filter Conditions
 
@@ -144,7 +144,7 @@ If the download is not complete, the downloader can use the saved data to resume
 
 *How to avoid downloading works that have already been downloaded?*
 
-You can enable the [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) feature.
+You can enable the [Don't download duplicate files](/en/Settings-Download/Download-records?id=don39t-download-duplicate-files) feature.
 
 In some cases, you can also consider using incremental updates to only crawl recently posted works. See the [Incremental Updates](/en/Usage-Tips?id=incremental-updates) section on the "Tips" page.
 
@@ -313,7 +313,7 @@ If the naming rule does not include `{id}` or `{p}`, watch out for potential dup
 
 Most operating systems have a file name length limit of 255 characters. If the file name exceeds this limit, the browser may not save the file and will display a "Save As" dialog for user action.
 
-If you encounter this issue, enable the [File name length limit](/en/Settings-More-Naming?id=file-name-length-limit) feature to set a file name length limit.
+If you encounter this issue, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
 
 **Reason 4**: The download location may not exist.
 
@@ -323,7 +323,7 @@ If your browser's download location is `D:\downloads` and this folder no longer 
 
 *File name too long/File name exceeds limit*
 
-If you cannot save files due to overly long file names, enable the [File name length limit](/en/Settings-More-Naming?id=file-name-length-limit) feature to set a file name length limit.
+If you cannot save files due to overly long file names, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
 
 ## Why Do Downloaded Images Open Automatically?
 
@@ -341,11 +341,11 @@ If there is a checkmark ✔ in front of it, this feature is enabled. Click it ag
 
 *Not automatically starting download*
 
-If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-More-Enhance?id=preview-filter-results-on-search-page) feature.
+If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) feature.
 
 ## Date Format Error!
 
-This occurs because the time format entered in the [Posting time](/en/Settings-Crawl?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
+This occurs because the time format entered in the [Posting time](/en/Settings-Crawl/Work-data?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
 
 As shown below, the value on the left is incorrect because it does not include the time:
 
@@ -363,7 +363,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Crawl?id=type-id-to-crawl) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawl/HomePage?id=type-id-to-crawl) feature or similar functions.
 
 ## Browser Freezes While Running
 
@@ -415,7 +415,7 @@ See: [Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-craw
 
 This issue typically occurs in the file manager on Android systems.
 
-You can enable the [Add 0 in front of the serial number](/en/Settings-More-Naming?id=add-0-in-front-of-the-serial-number) feature to resolve this issue.
+You can enable the [Add 0 in front of the serial number](/en/Settings-Naming/Serial?id=add-0-in-front-of-the-serial-number) feature to resolve this issue.
 
 ## How to Sort Downloaded Files in the Same Order as on the Webpage
 
@@ -423,7 +423,7 @@ You can enable the [Add 0 in front of the serial number](/en/Settings-More-Namin
 
 How to keep downloaded works in the same order as on the webpage?
 
-See: [Sorting with Naming Tags](/en/Settings-Download?id=Sorting-with-Naming-Tags).
+See: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
 
 ## How to Sort Downloaded Bookmarked Works by Bookmark Order
 
@@ -431,7 +431,7 @@ When downloading bookmarked works, how to make the downloaded files match the bo
 
 This issue arises because the sorting of bookmarked works is not based on work IDs but on the time you bookmarked them. If the file name starts with the work ID, it will not match the bookmark order.
 
-You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Download?id=Sorting-with-Naming-Tags).
+You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
 
 ## Pixiv Returned Empty Data
 
@@ -461,7 +461,7 @@ This restriction lasts a few minutes. During this time, the downloader cannot cr
 
 When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
 
-Additionally, the downloader now enables the [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+Additionally, the downloader now enables the [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
 --------
 

@@ -250,7 +250,7 @@ Example effect:
 
 #### Remove the sequence number from the first image of each work
 
-If you think the first image doesn't need a sequence number and want to change `44920385_p0` to `44920385`, you can enable the [The first image without a serial number](/en/Settings-More-Naming?id=the-first-image-without-a-serial-number) option.
+If you think the first image doesn't need a sequence number and want to change `44920385_p0` to `44920385`, you can enable the [The first image without a serial number](/en/Settings-Naming/Serial?id=the-first-image-without-a-serial-number) option.
 
 #### Naming rules used by others
 

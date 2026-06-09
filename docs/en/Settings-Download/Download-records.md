@@ -114,7 +114,7 @@ When the downloader skips duplicate files, it displays a list of file IDs in the
 
 <span class="log" style="color: inherit;"><span style="color:#d27e00">因为不下载重复文件，跳过了 1 个文件 : </span><br><a href="https://www.pixiv.net/n/25755517" target="_blank">25755517</a><br></span>
 
-?> This feature takes effect during the download stage. If you want to skip already downloaded works during crawling, enable the crawl setting [Do not crawl already downloaded works](/en/Settings-Crawl?id=do-not-crawl-already-downloaded-works).
+?> This feature takes effect during the download stage. If you want to skip already downloaded works during crawling, enable the crawl setting [Do not crawl already downloaded works](/en/Settings-Crawl/Execution-strategy?id=do-not-crawl-already-downloaded-works).
 
 ### Loose strategy
 

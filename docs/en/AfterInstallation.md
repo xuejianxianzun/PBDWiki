@@ -61,8 +61,8 @@ When you need to crawl and download more than a few thousand works, there are so
 **Slow Down:**
 
 The downloader has settings to reduce the likelihood of warnings:
-- By default, the downloader [Slow down crawl](/en/Settings-More-Crawl?id=slow-down-crawl). When crawling many works, it sends requests at intervals. This feature is enabled by default.
-- When downloading many files, you can set the [Download interval](/en/Settings-More-Download?id=download-interval) to reduce download frequency.
+- By default, the downloader [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl). When crawling many works, it sends requests at intervals. This feature is enabled by default.
+- When downloading many files, you can set the [Download interval](/en/Settings-Download/Download-behavior?id=download-interval) to reduce download frequency.
 
 The above two settings both allow custom interval times. If you only crawl and download a few hundred works per day, the default interval time is usually safe.
 

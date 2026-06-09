@@ -12,13 +12,13 @@ Using naming tags effectively can help you organize and sort files. Below are so
 - Place the `{bmk}` tag at the start of the file name to sort downloaded files by bookmark count.
 - When downloading your bookmarks, use `{bmk_id}` at the start of the file name to sort files in the order you bookmarked them.
 
-See detailed explanation: [Naming rule for image works](/en/Settings-Download?id=naming-rules-for-image-works).
+See detailed explanation: [Naming rule for image works](/en/Settings-Naming/Folder-and-file-names?id=naming-rules-for-image-works).
 
 ## Timed Crawl
 
 The downloader has a "Timed Crawl" function, allowing you to crawl and download new works at regular intervals on certain pages.
 
-See detailed explanation: [Timed crawl](/en/Buttons-Crawl?id=timed-crawl).
+See detailed explanation: [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl).
 
 ## Incremental Updates
 
@@ -27,8 +27,8 @@ If you previously downloaded works from a user or page and want to download new 
 ### Recommended Settings
 
 First, I recommend enabling these two settings:
-- [Do not crawl already downloaded works](/en/Settings-Crawl?id=do-not-crawl-already-downloaded-works) in the "Crawl" tab. If a work has a download record, it can be skipped directly.
-- [Don't download duplicate files](/en/Settings-More-Download?id=don39t-download-duplicate-files) in the "More" tab. If a file has a download record, it will not be downloaded again.
+- [Do not crawl already downloaded works](/en/Settings-Crawl/Execution-strategy?id=do-not-crawl-already-downloaded-works) in the "Crawl" tab. If a work has a download record, it can be skipped directly.
+- [Don't download duplicate files](/en/Settings-Download/Download-records?id=don39t-download-duplicate-files) in the "More" tab. If a file has a download record, it will not be downloaded again.
 
 Usually these are enough. If you want to narrow the crawl range further, you can also use the methods below.
 
@@ -36,13 +36,13 @@ Usually these are enough. If you want to narrow the crawl range further, you can
 
 On some pages, works are sorted from newest to oldest, with recently posted works at the front and older ones at the back.
 
-Work IDs correlate with posting time: newer works have larger IDs. You can set the [ID range](/en/Settings-Crawl?id=id-range) in the downloader's "Crawl" tab.
+Work IDs correlate with posting time: newer works have larger IDs. You can set the [ID range](/en/Settings-Crawl/Work-data?id=id-range) in the downloader's "Crawl" tab.
 
 For example, if you previously downloaded works from a user's profile and the largest ID in the file names was 65000000, you can set the ID range to greater than 65000000 to crawl works posted afterward.
 
 ### Set Posting Time
 
-In addition to setting an ID range, you can set the [Posting time](/en/Settings-Crawl?id=posting-time) to crawl newly posted works.
+In addition to setting an ID range, you can set the [Posting time](/en/Settings-Crawl/Work-data?id=posting-time) to crawl newly posted works.
 
 Both settings work similarly but use different filtering criteria.
 
@@ -56,13 +56,13 @@ You can manually set the number of pages to crawl. For example:
 
 Flip through pages starting from page 1 to check which page you last downloaded. If you last downloaded up to page 5, the works from pages 1 to 5 are the newly bookmarked works.
 
-Return to page 1, set the [How many pages to crawl](/en/Settings-Crawl?id=how-many-pages-to-crawl) to 5, and start crawling. This downloads only the newly bookmarked works.
+Return to page 1, set the [How many pages to crawl](/en/Settings-Crawl/Crawl-scope?id=how-many-pages-to-crawl) to 5, and start crawling. This downloads only the newly bookmarked works.
 
-?> If you frequently need incremental updates on the bookmark page, consider adding the `{bmk_id}` tag at the start of file names to align the file order with the page's display order. This helps you see where you last downloaded. See detailed explanation: [Tags Reflecting Time Order](/en/Settings-Download?id=tags-reflecting-time-order).
+?> If you frequently need incremental updates on the bookmark page, consider adding the `{bmk_id}` tag at the start of file names to align the file order with the page's display order. This helps you see where you last downloaded. See detailed explanation: [Tags Reflecting Time Order](/en/Settings-Naming/Folder-and-file-names?id=tags-reflecting-time-order).
 
 ### Manually Select Works
 
-If there are few new works, you can use the [Manually select](/en/Buttons-Crawl?id=manually-select) function to download them.
+If there are few new works, you can use the [Manually select](/en/Buttons-Start-crawl/General?id=manually-select) function to download them.
 
 For example, if a user's profile has only the latest 10 works that you haven't downloaded, manually select those 10 works and download them.
 
@@ -71,7 +71,7 @@ For example, if a user's profile has only the latest 10 works that you haven't d
 To download daily rankings, do the following:
 
 1. Download all works from today's ranking.
-2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Crawl?id=crawl-the-debut-works) button to crawl only the works newly added that day.
+2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Start-crawl/Ranking?id=crawl-the-debut-works) button to crawl only the works newly added that day.
 
 ## Batch crawling and downloading (Split tasks)
 
@@ -118,11 +118,11 @@ This will take you to page 101.
 
 If you need to batch bookmark multiple works, you can do the following:
 
-1. Enable the downloader's [Bookmark works after downloading](/en/Settings-Download?id=bookmark-works-after-downloading) function.
-2. Optional: If you do not need to download the original images of these works, you can set the [Image size](/en/Settings-More-Download?id=image-size) during download to `Small` to speed up the download process.
+1. Enable the downloader's [Bookmark works after downloading](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) function.
+2. Optional: If you do not need to download the original images of these works, you can set the [Image size](/en/Settings-Download/Image-size?id=image-size) during download to `Small` to speed up the download process.
 3. Crawl and download these works. The downloader will bookmark them.
 
-On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Crawl?id=timed-crawl) function in combination with the method above.
+On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl) function in combination with the method above.
 
 ## Getting IDs of Expired Bookmarked Works
 
@@ -144,7 +144,7 @@ In this case, do the following:
 
 When importing crawl results, the downloader applies filter conditions, removing results that don't meet the criteria.
 
-See detailed explanation: [Import results](/en/Buttons-Download?id=import-results).
+See detailed explanation: [Import results](/en/Buttons-Download-area/Crawl-results?id=import-results).
 
 ## What to Do If Tag Search Can Only Crawl 1000 Pages?
 
