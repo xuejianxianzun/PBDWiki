@@ -20,7 +20,7 @@
 
 When you hover over a thumbnail, the downloader displays some buttons on it, as shown below:
 
-![](./images/20260426_233917.png)
+![](../images/20260426_233917.png)
 
 By default they are shown on the right side, but you can switch them to the left side if you want.
 
@@ -62,6 +62,12 @@ You can find detailed information about the image viewer here: [Image Viewer](/e
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+When you hover the mouse over a work's thumbnail, the downloader will show a Copy button on the thumbnail, as shown below:
+
+![](../images/20260609_202250.png)
+
+Clicking it copies the original image and some information about the work. You can adjust what gets copied in the [Copy Button](/en/Settings-Enhance/Other?id=copy-button) settings.
+
 ## Show download button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="85" data-pin-bound="true" style="display: flex;">
@@ -71,7 +77,6 @@ You can find detailed information about the image viewer here: [Image Viewer](/e
 </div>
 
 
-
 When the mouse hovers over a work thumbnail, the downloader will display a download button on the thumbnail. Clicking the download button allows you to download this work. This feature makes downloading works much more convenient.
 
-
+![](../images/20260609_202802.png)
