@@ -17,6 +17,7 @@ var Form = /** @class */ (function () {
                     _this.bindInputEvents();
                     _this.addTipEl();
                     _this.bindTipEvents();
+                    _this.bindClickOptionCardToToggleSwitch();
                 });
             },
         ]);
@@ -145,6 +146,37 @@ var Form = /** @class */ (function () {
         else if (mouse.type === 0) {
             this.tipEl.style.display = 'none';
         }
+    };
+    /** 点击设置项的卡片时，如果它有一个 checkBox 开关，那么就切换该设置的启用/禁用状态 */
+    Form.prototype.bindClickOptionCardToToggleSwitch = function () {
+        var allOptions = document.querySelectorAll('.option');
+        allOptions.forEach(function (option) {
+            window.addEventListener('click', function (ev) {
+                if (!(ev.target instanceof HTMLElement)) {
+                    return;
+                }
+                var target = ev.target;
+                // 只在点击该设置卡片上的空白区域时才切换开关状态，以避免和卡片上其他元素的事件发生冲突
+                // 匹配两种点击的元素：
+                // 1. 点击了卡片本身，说明点击在了卡片的空白区域上
+                // 2. 点击了子选项容器，这表示该设置已经启用，所以子选项容器显示了出来。此时点击空白处，大概率是点击到了子选项容器上。
+                // PS: 不管该设置是否启用，都可以点击到卡片上.只不过子选项容器显示之后，可点击到卡片的区域很小.
+                if (target === option ||
+                    target.matches('.subOptionWrap') ||
+                    target.matches('.optionLine')) {
+                    // 只查找第一个开关，因为设置的总开关始终是第一个
+                    var switchEl = option.querySelector('input.need_beautify.checkbox_switch');
+                    if (!switchEl) {
+                        return;
+                    }
+                    // 但是有些设置本身没有总开关，子选项里却有开关(例如"标签别名")，所以第一个开关可能是子选项里的开关，需要进一步判断
+                    // 要求这个 input 的前一个元素是 a.settingNameStyle 标签(也就是设置名称)，这样才能确保它是总开关，而不是子选项的开关
+                    // 现在我没有执行这个判断（这是有意为之的），这意味着：
+                    // 点击这个设置卡片的空白区域时，总是会切换第一个开关(不管它是总开关还是子开关)
+                    switchEl.click();
+                }
+            });
+        });
     };
     return Form;
 }());

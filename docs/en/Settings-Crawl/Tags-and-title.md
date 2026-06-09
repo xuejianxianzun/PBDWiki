@@ -86,7 +86,7 @@ This setting works similarly to `Include tag`, with the differences:
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_用户id">User ID (Number)</span>
-          <input type="text" class="setinput_style blue addUidInput w100" data-xzplaceholder="_必须是数字" placeholder="Number">
+          <input type="text" class="setinput_style blue addUidInput w200" data-xzplaceholder="_必须是数字" placeholder="Number">
         </div>
         <div class="inputItem tags">
           <span class="label tagsLabel">Tags</span>

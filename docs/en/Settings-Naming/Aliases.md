@@ -18,11 +18,11 @@
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_别名">Alias</span>
-          <input type="text" class="setinput_style blue addUidInput w100">
+          <input type="text" class="setinput_style blue addUidInput w200">
         </div>
         <div class="inputItem name">
           <span class="label nameLabel" data-xztext="_标签列表">Tag list</span>
-          <input type="text" class="setinput_style blue addNameInput w100" placeholder="tag1,tag2,tag3">
+          <input type="text" class="setinput_style blue addNameInput w200" placeholder="tag1,tag2,tag3">
         </div>
         <div class="btns">
           <button type="button" class="textButton add" data-xztitle="_添加" title="Add">
@@ -70,11 +70,11 @@ There is a `Help` button on the right side of this setting. Click it to view the
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_用户id">User ID (Number)</span>
-          <input type="text" class="setinput_style blue addUidInput" data-xzplaceholder="_必须是数字" placeholder="Number">
+          <input type="text" class="setinput_style blue addUidInput w200" data-xzplaceholder="_必须是数字" placeholder="Number">
         </div>
         <div class="inputItem name">
           <span class="label nameLabel" data-xztext="_命名标记user">User name</span>
-          <input type="text" class="setinput_style blue addNameInput">
+          <input type="text" class="setinput_style blue addNameInput w200">
         </div>
         <div class="btns">
           <button type="button" class="textButton add" data-xztitle="_添加" title="Add">

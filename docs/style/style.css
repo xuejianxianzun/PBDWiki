@@ -2093,6 +2093,19 @@
 body {
   position: relative;
 }
+.content {
+  padding-top: 0;
+}
+.markdown-section h2 {
+  margin: 0.8rem 0;
+}
+.markdown-section h3 {
+  margin: 0.6rem 0;
+}
+.sidebar {
+  width: 25%;
+  max-width: 360px;
+}
 .sidebar ul li a {
   color: #333;
   font-size: 15px;
@@ -2146,6 +2159,7 @@ h3 a {
 .markdown-section pre > code {
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: 15px !important;
 }
 #tip {
   color: #fff;
@@ -2226,7 +2240,7 @@ h3 a {
   background-color: #ffffff;
   box-shadow: #2ca6df 0px 0px 15px;
   width: 100%;
-  max-width: 90vw;
+  max-width: 700px;
   height: max-content;
   font-size: 16px;
   padding: 20px;
@@ -2310,15 +2324,6 @@ li > ul.app-sub-sidebar > li::before {
   --white-30: rgba(255, 255, 255, 0.3);
   --text-shadow-on-xzbg: #003247 0px 0px 2px;
   --settings-panel-text: #444;
-}
-.content {
-  padding-top: 0;
-}
-.markdown-section h2 {
-  margin: 0.8rem 0;
-}
-.markdown-section h3 {
-  margin: 0.6rem 0;
 }
 .red {
   color: #f00;

@@ -36,7 +36,7 @@ If you’re worried about accidental clicks, you can disable this setting.
 
 <div class="option settingsPanel_optionCard" data-no="97" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-General/Operation-method?flag=97" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_点击设置名字时打开wiki链接">Open Wiki link when clicking setting name</span>
+    <span data-xztext="_点击设置名字时打开wiki链接">Open <span class="key">Wiki</span> link when clicking setting name</span>
   </a>
   <input type="checkbox" name="clickSettingNameOpenWiki" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>

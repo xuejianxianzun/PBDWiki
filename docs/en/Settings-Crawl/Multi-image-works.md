@@ -128,7 +128,7 @@ For example, in multi-image works by [儒宅 Ruzhai](https://www.pixiv.net/users
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_用户id">User ID (Number)</span>
-          <input type="text" class="setinput_style blue addUidInput w100" data-xzplaceholder="_必须是数字" placeholder="Number">
+          <input type="text" class="setinput_style blue addUidInput w200" data-xzplaceholder="_必须是数字" placeholder="Number">
         </div>
         <div class="inputItem value">
           <span class="label nameLabel" data-xztext="_不下载最后几张图片">Do not download last few images</span>
