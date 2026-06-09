@@ -18,11 +18,11 @@
       <div class="settingItem addInputWrap">
         <div class="inputItem uid">
           <span class="label uidLabel" data-xztext="_别名">Alias</span>
-          <input type="text" class="setinput_style blue addUidInput">
+          <input type="text" class="setinput_style blue addUidInput w100">
         </div>
         <div class="inputItem name">
           <span class="label nameLabel" data-xztext="_标签列表">Tag list</span>
-          <input type="text" class="setinput_style blue addNameInput" placeholder="tag1,tag2,tag3">
+          <input type="text" class="setinput_style blue addNameInput w100" placeholder="tag1,tag2,tag3">
         </div>
         <div class="btns">
           <button type="button" class="textButton add" data-xztitle="_添加" title="Add">
@@ -40,11 +40,7 @@
     </div>
     <div class="listWrap" style="display: flex;"></div>
   </span></slot>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
+</div>
 
 
 If a tag has multiple variants, you can set a custom alias for them. Example:
@@ -86,7 +82,6 @@ There is a `Help` button on the right side of this setting. Click it to view the
               <use xlink:href="#yes_submit"></use>
             </svg>
           </button>
-          
           <button type="button" class="textButton cancel" data-xztitle="_取消" title="Cancel">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#close_cancel"></use>
@@ -98,6 +93,49 @@ There is a `Help` button on the right side of this setting. Click it to view the
     <div class="listWrap" style="display: flex;"></div>
   </span></slot>
 </div>
+
+You can add a user's ID and set a custom name for them here. This affects the `{user}` naming tag.
+
+For example, the username for https://www.pixiv.net/users/3316400 is `MだSたろう`. If you want to set a custom name, you can enter the user ID as `3316400` and the username as `msTarou`, then save.
+
+When downloading their works, the `{user}` tag will ignore the original name and output the custom name `msTarou`.
+
+After adding a rule, the downloader will display it like this:
+
+![](../images/20250910_231514.png)
+
+If needed, you can modify the settings here (e.g., change the username) and click the refresh button on the right to update the rule. You can also delete the rule.
+
+---
+
+**Use Case 1:** Prevent issues with users changing names.
+
+Some users may frequently change their names. If you want to use their original name, you can set it manually here.
+
+A common case is usernames with an @ symbol, such as:
+
+- Anmi@画集発売中
+- 奥馬@skeb募集中
+- さしみなす@依頼募集中
+
+While the [Remove @ and subsequent characters from username](/en/Settings-More-Naming?id=remove-and-subsequent-characters-in-username) feature can address this, some users' names may not use @, for example:
+
+- いの字/inoji
+- 焔すばる★２日目 東C17a
+- 送り萬都 🔞仕事募集中
+- しりー＊C99木曜東A21b
+- ショーンC99木東ユ40b
+- オムレットマト西ぬ31b
+
+You can set a fixed name for them here.
+
+---
+
+**Use Case 2:** Set aliases or nicknames for users.
+
+For example, if a user's name is in Japanese but you don't input Japanese and it's inconvenient to search on your device, you can set a English alias (or another language you can use) for easier searching.
+
+If a user's name is hard to remember, you can also set an easy-to-remember alias.
 
 
 
