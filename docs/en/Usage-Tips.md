@@ -73,6 +73,47 @@ To download daily rankings, do the following:
 1. Download all works from today's ranking.
 2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Crawl?id=crawl-the-debut-works) button to crawl only the works newly added that day.
 
+## Batch crawling and downloading (Split tasks)
+
+If you need to crawl many pages, consider batch crawling, i.e., crawling only a portion of pages at a time.
+
+This is because crawling many works takes a long time, and accidentally closing the page during crawling loses progress.
+
+Another reason is that too many crawl results (e.g., hundreds of thousands) increase the downloader's memory usage.
+
+If you need to crawl a large number of pages, consider splitting the task into multiple sessions to reduce losses from unexpected issues (e.g., accidentally closing the tab or crawling getting stuck).
+
+**For example:**
+
+if you need to crawl 1000 pages, you can do this:
+
+1. Set the number of pages to crawl to 100, then start crawling from page 1. The downloader will crawl works from pages 1 to 100.
+2. After downloading all files, you can close the page and reopen it to fully release memory.
+3. You can wait for a while (for example, until the next day) before continuing to crawl.
+4. Navigate to page 101 and start the next crawl. The downloader will crawl works from pages 101 to 200.
+5. Continue in this manner.
+
+**Page Navigation Tip:**
+
+On paginated pages, you can modify the page number in the address bar to quickly jump to a specific page. Here's an example:
+
+When you enter a search page, it defaults to page 1, and the address bar does not show a page number.
+
+Click on any page number, such as page 2:
+
+![](images/20250907_194850.png)
+
+After navigating to page 2, the `p=2` in the address bar indicates the page number:
+
+![](images/20250907_194909.png)
+
+Change the `2` to the desired number, such as `101`, and press Enter:
+
+![](images/20250907_194922.png)
+
+This will take you to page 101.
+
+
 ## Batch Bookmarking Works
 
 If you need to batch bookmark multiple works, you can do the following:
@@ -89,17 +130,7 @@ Your bookmarks may contain some works that have already expired, and you cannot 
 
 ![](images/20250909_235316.png)
 
-If you want to get their IDs, please refer to the description of this feature: [Unbookmark all deleted works](/en/Buttons-More?id=unbookmark-all-deleted-works).
-
-## Batch Crawling and Downloading
-
-If you need to crawl many pages, consider batch crawling, i.e., crawling only a portion of pages at a time.
-
-This is because crawling many works takes a long time, and accidentally closing the page during crawling loses progress.
-
-Another reason is that too many crawl results (e.g., hundreds of thousands) increase the downloader's memory usage.
-
-See detailed explanation: [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+If you want to get their IDs, please refer to the description of this feature: [Find all deleted works](/en/Buttons-Extra-features/Bookmark-page?id=find-all-deleted-works).
 
 ## Filter/Modify Crawl Results
 
