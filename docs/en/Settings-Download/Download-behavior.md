@@ -4,9 +4,8 @@
   <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=51" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_同时下载数量">Download <span class="key">thread</span></span>
   </a>
-  <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="24" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
+  <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="3" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
 </div>
-
 
 You can enter a number between 1 and 6 to set the concurrent download count. The default is 3.
 
@@ -84,6 +83,32 @@ If you want to set the public status when bookmarking a work, as well as whether
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+When this feature is enabled, the downloader will automatically download the work when you click its bookmark button.
+
+There are two main use cases:
+
+1. Clicking the bookmark button in the bottom-right corner of the work:
+
+![](../images/20250902_144603.png) ![](../images/20250902_145045.png)
+
+2. Clicking the bookmark button inside the work page:
+
+![](../images/20250910_231820.png)
+
+?> Although the screenshots above are for illustrations, this feature also works for novels.
+
+?> This feature is only triggered by **clicking the bookmark button**. The downloader provides some batch bookmarking and quick bookmarking features, but they do not require clicking the bookmark button and thus will not trigger this feature. For example, pressing B while previewing a work will bookmark it but will not trigger this feature.
+
+!> In page types not supported by the downloader, this feature will not work, even if you manually click the bookmark button. This is because the feature requires the downloader to locate the work thumbnail element, but the downloader does not perform this action on some less common pages.
+
+The downloader provides this feature by default:
+
+![](../images/20250902_145913.png)
+
+When you are on a page, hovering the mouse over an illustration thumbnail should show a button in the top-right corner.
+
+This indicates that the downloader supports the page and can use the "Download Work When Clicking the Bookmark Button" feature. However, if the downloader does not display the top-right button, the page is not supported, and the "Download Work When Clicking the Bookmark Button" feature cannot be used.
+
 ## Download a work when you click the like button
 
 <div class="option settingsPanel_optionCard" data-no="55" data-pin-bound="true" style="display: flex;">
@@ -93,6 +118,14 @@ If you want to set the public status when bookmarking a work, as well as whether
   <input type="checkbox" name="downloadOnClickLike" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
+When this feature is enabled, the downloader will automatically download the work when you like it on the work page.
+
+Like button:
+
+![](../images/20250910_231828.png)
+
+?> Although the screenshot above is for an illustration, this feature also works for novels.
 
 ## Download interval
 
@@ -113,11 +146,42 @@ This is because when continuously downloading many files (especially novels), yo
     </div>
     <div class="optionLine">
       <span data-xztext="_间隔时间">Interval time: </span>
-      <input type="text" name="downloadInterval" class="setinput_style blue" value="0">
+      <input type="text" name="downloadInterval" class="setinput_style blue" value="1">
       <span data-xztext="_秒">seconds</span>
     </div>
   </div>
 </div>
+
+You can set how many seconds to wait before allowing the downloader to start a download.
+
+?> The purpose of this setting is to proactively reduce the download frequency during large downloads to reduce the risk of your account being banned by Pixiv.
+
+?> You can modify this setting during the download (e.g., change the interval time, enable or disable the restriction), and the changes will take effect immediately.
+
+### Enable when the number of files exceeds the specified number
+
+This setting will only be enabled if the number of works in the **crawling results** exceeds the set value. The default is `150`.
+
+Note that the judgment is based on the number of crawling results, i.e., how many files need to be downloaded in total, not how many remain. If 150 files are crawled (meeting the conditions) and this setting is activated, it will remain active even if only 1 file is left at the end.
+
+### Interval Time
+
+Whenever the downloader **starts** downloading a file, it sets a timer, and the next download is only allowed after the interval time has passed.
+
+**Detailed Explanation of How It Works:**
+
+- If set to `0`, the downloader will not add delay time, and this setting will not take effect.
+- If set to `1` second, a maximum of 3600 files can be downloaded from Pixiv per hour.
+
+If you only download a few hundred files per day, the default interval time is usually safe. If you frequently download more files, you can increase the interval time, for example `2`, `3`, etc. Setting it to `4` is almost absolutely safe, but usually no need to use such a large interval time.
+
+----------
+
+The interval time is not affected by the time required for downloads:
+
+If the previous file takes more than 1 second, the downloader will not wait for it and will start the next file when the countdown ends. This means multiple files may be downloaded simultaneously.
+
+If a file finishes downloading in less than 1 second, the downloader will continue waiting until the countdown ends before starting the next download. When file download times are short, it appears as single-threaded downloading, with only 1 file downloading at a time.
 
 ## File download order
 
@@ -139,7 +203,7 @@ This is because when continuously downloading many files (especially novels), yo
       <label for="downloadOrderSortBy3" data-xztext="_收藏时间">Bookmark time</label>
     </div>
     <div class="optionLine">
-      <span class="settingNameStyle" data-xztext="_排序方式">Sorting method</span>
+      <span class="settingNameStyle" data-xztext="_排序方式">Sorting order</span>
       <input type="radio" name="downloadOrder" id="downloadOrder1" class="need_beautify radio" value="desc" checked="">
       <span class="beautify_radio" tabindex="0"></span>
       <label for="downloadOrder1" data-xztext="_降序" class="active">Descending</label>
@@ -150,15 +214,59 @@ This is because when continuously downloading many files (especially novels), yo
   </div>
 </div>
 
+Some users want the downloader to download files in a specific order so that when sorting by **modification time** in the file explorer, the files are organized.
+
+If you need this, you can enable the setting, but it is usually unnecessary. I do not recommend sorting works by modification time, as this method is unreliable, especially when some files are re-downloaded, refreshing their modification time and disrupting the order.
+
+**Using specific naming tags** and sorting by filename achieves the same effect and is more reliable, as filenames are independent of modification time and unaffected by re-downloads.
+
+- To sort by `Work ID`, use `{id}` at the beginning of the filename.
+- To sort by `Bookmark count`, use `{bmk}` at the beginning of the filename.
+- To sort by `Bookmark time`, use `{bmk_id}` at the beginning of the filename.
+
+Please refer to: [Sorting with Naming Tags](/en/Settings-Download?id=sorting-with-naming-tags).
+
+-----------------
+
+This setting has 2 sub-options:
+1. **Sort by**: Indicates how the downloader sorts the files.
+2. **Sort order**: Indicates how the downloader downloads files. If set to `Descending`, the downloader downloads files with higher values first, then lower ones. `Ascending` is the opposite.
+
+---------
+
+**Note:** Enabling this setting may increase the time required to complete downloads.
+
+This is because when downloading multiple files simultaneously, later files may finish before earlier ones. To maintain the order, the downloader will make later files wait.
+
+For example, with 5 simultaneous downloads, files numbered 1, 2, 3, 4, 5, but 5 may finish first. The downloader will wait for 1, 2, 3, 4 to download and save to disk before saving 5, causing 5 to wait and potentially increasing download time.
+
+When downloads include Ugoira, wait times can increase further. If a Ugoira starts converting after download (even assuming it's the first and not yet finished downloading or converting), later images may finish but must wait for the Ugoira conversion. Since Ugoira conversion can take time, waiting increases.
+
+---------
+
+Trivia:
+
+By default, this setting is disabled, and the downloader only sorts crawling results on certain page types:
+
+- On user profiles and following pages, the downloader sorts by work ID in descending order to prioritize newly posted works.
+- On search pages, the downloader sorts by bookmark count in descending order to prioritize high-bookmark works.
+- On other pages, crawling results are not sorted.
+
+If this setting is not enabled, the downloader does not guarantee files are saved to disk in strict order, as download times vary, changing the order.
+
 ## Prioritize downloading Ugoira
 
 <div class="option settingsPanel_optionCard" data-no="58" data-pin-bound="true" style="display: flex;">
   <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=58" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_优先下载动图">Prioritize downloading Ugoira</span>
+    <span data-xztext="_优先下载动图">Prioritize downloading <span class="key">Ugoira</span></span>
   </a>
   <input type="checkbox" name="downloadUgoiraFirst" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
+
+If you enable this setting, the downloader will sort the crawl results before starting downloads and place Ugoira at the front, so Ugoira are downloaded first.
+
+Note: If you also enable `File download order` and `Prioritize downloading Ugoira`, they are applied in sequence — Ugoira will always be placed at the very front.
 
 ## File size limit
 
@@ -175,6 +283,16 @@ This is because when continuously downloading many files (especially novels), yo
   </div>
 </div>
 
+If you have requirements for file sizes, you can set a range.
+
+?> You can enter numbers with decimals here, e.g., `0.5`.
+
+When the downloader starts downloading a file, it can retrieve its size. If it does not meet your set conditions, the downloader will cancel the download and display a log:
+
+<span class="log" style="color: rgb(210, 126, 0);"><a href="https://www.pixiv.net/i/133950803#3" target="_blank">133950803_p2</a> was not saved because its size does not meet the set conditions.<br></span>
+
+?> This check occurs during the downloading phase. It is not checked during crawling.
+
 ## Save file to the user's last selected location
 
 <div class="option settingsPanel_optionCard" data-no="60" data-pin-bound="true" style="display: flex;">
@@ -182,10 +300,45 @@ This is because when continuously downloading many files (especially novels), yo
     <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
     <span class="gray1"> ? </span>
   </a>
-  <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch" checked="">
+  <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_把文件保存到用户上次选择的位置" data-msg="_把文件保存到用户上次选择的位置的说明" data-xztext="_帮助">Help</button>
 </div>
+
+This setting is designed for users who prefer to **save files manually** with the `Save As` dialog and want the downloader to remember the last location they chose.
+
+If you want to use this feature, note the following:
+
+- To make this setting work correctly, you must enable `Ask where to save each file before downloading` in the browser's download settings. Otherwise, the browser will not show the Save As dialog, and files will be saved to the browser's configured download location instead of the last location you chose.
+- If you disable `Ask where to save each file before downloading` in the browser's download settings, you should also disable this setting.
+- If you enable this setting, the downloader will not create folders; it will only set the filename. That is because remembering the last save location requires downloading via the `download` attribute of an `a` tag, and folders cannot be created in that case.
+- If you enable this setting, the downloader always assumes the file was downloaded successfully, even if you cancel saving it. This is to simplify processing.
+
+**Technical details:**
+
+When this setting is disabled (the default), the downloader uses the browser API to download files, for example:
+
+```js
+browser.downloads.download({
+  url,
+  filename,
+  conflictAction: 'overwrite',
+  saveAs: false,
+})
+```
+
+The downloader sets `saveAs: false` to try to save the file directly.
+
+If you enable `Ask where to save each file before downloading` in the browser's download settings, the browser will still show the Save As dialog. However, the dialog will always open in the default download folder, not the folder you used last time.
+
+If you enable this setting, the downloader uses the `download` attribute of an `a` tag to download the file. In that case, the Save As dialog opens in the location you saved to last time. The code looks like this:
+
+```js
+const a = document.createElement('a')
+a.href = url
+a.download = fileName
+a.click()
+```
 
 ## Show notification after download is complete
 
@@ -198,5 +351,6 @@ This is because when continuously downloading many files (especially novels), yo
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+If you enable this option, the downloader will display a system notification after all files have finished downloading. It may also request notification permission, and there may be a notification sound depending on your operating system settings.
 
-
+The style of the notification varies by operating system. 
