@@ -2,6 +2,18 @@
 
 <button id="startCrawlingInFollowingPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_默认下载多页" title="Start crawl, if there are multiple pages, the default will be downloaded."><span data-xztext="_开始抓取">Start crawl</span><span class="ripple"></span></button>
 
+Clicking this button makes the downloader crawl all works of users in the current subpage (followed users, friends, or fans).
+
+?> The number of users crawled depends on the "How Many Pages to Crawl" setting. Each page has up to 24 users.
+
+**Note:**
+
+If you follow many users, their total works may be numerous.
+
+For example, if each user has 50 works and you follow 4,730 users, the total number of works could be 236,500 or more.
+
+You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split into multiple tasks. See [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+
 ## Export followed users list (CSV)
 
 <button id="exportFollowingListCSV" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出关注列表CSV">Export followed users list (CSV)</span><span class="ripple"></span></button>
@@ -29,7 +41,7 @@ The CSV file contains the following data for each user:
 
 For example, my following page shows 4,743 users:
 
-![](./images/20251111_004046.png)
+![](../images/20251111_004046.png)
 
 Some users have already deactivated, but Pixiv does not subtract them from the total count, which can be somewhat misleading. However, you might notice clues: usually, 24 users are displayed per page, but some pages may have only 23 or fewer users, which is because some users no longer exist.
 
@@ -131,7 +143,7 @@ You can find deactivated users in your following list.
 - The downloader retrieves data for these users one by one and checks if they have been deactivated. The downloader will display progress information in the top log.
 - After the check is complete, it displays the results. If there are deactivated users, the downloader will output their list, which might look like this:
 
-![](./images/20260303_004345.png)
+![](../images/20260303_004345.png)
 
 **Note:**
 This feature cannot find users who deactivated before; it can only find users who deactivated after the downloader saved the historical following data.
