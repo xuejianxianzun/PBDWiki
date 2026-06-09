@@ -196,6 +196,120 @@ Tip: Click a token name to copy it.<br></span>
   </p>
 </div>
 
+This is a very important feature, allowing you to set the **filename** saved by the downloader and **create folders** for organization.
+
+When saving files, the downloader replaces tags in the naming rule to generate filenames. For example, `{id}` is replaced with the work ID, such as `75863159_p0`.
+
+?> You can modify the naming rule as needed. Only `{id}` is mandatory, as it is the unique identifier for each file.
+
+**Some function buttons:**
+
+The `Save` button saves the current naming rule, and the `Load` button displays previously saved naming rules. With these two buttons, you can save multiple commonly used naming rules and switch between them conveniently.
+
+The `Tip` button lets you view all tags and their descriptions. However, this is a Wiki, so it has no effect here.
+
+The dropdown list displays all tags. Clicking one inserts it at the cursor position. However, this is a Wiki, so it has no effect here.
+
+### Creating Folders
+
+You can use a slash `/` to create folders. If needed, you can use multiple slashes `/` to create nested folders.
+
+The default naming rule `pixiv/{user}-{user_id}/{id}-{title}` creates two levels of folders:
+- First, a `pixiv` folder is created.
+- Inside it, a folder with the username and user ID is created.
+- Inside that, the work is saved with a filename consisting of the work ID and title.
+
+Example effect:
+
+![](../images/20250910_200313.png)
+
+?> The `/` is not mandatory. If you don't want to create folders, you can omit the `/`. For example, setting the naming rule to `{id}` saves files directly to the browser's download directory without creating subfolders.
+
+### Additional Notes
+
+- You can use multiple tags; it's recommended to add separators between tags, such as `{id}-{tags}-{user}`, to avoid tag content blending together. There's no fixed requirement for separators; use what you prefer.
+- Besides preset tags, you can input custom text, e.g., `Title {title} Tags {tags}`. Non-preset text will be retained as is.
+- There's no suffix tag because the downloader automatically adds the file extension.
+- If the generated filename contains special characters invalid for filenames, they are replaced with similar full-width symbols. For example, a tag containing a slash `/` cannot be used in filenames, so the downloader replaces it with a full-width `／`.
+- If you use `{tags_translate}`, there's no need to use `{tags}`, as the former includes the latter. Translated content depends on your Pixiv language settings. For example, if your Pixiv interface is in Chinese, tag translations are typically in Chinese.
+- `{tags_transl_only}` saves only translated tags, not original Japanese tags. If a tag has no translation, the original Japanese tag is saved.
+- Filenames must include a **unique identifier** to prevent duplicates, which could cause files to overwrite each other or trigger a save-as dialog.
+- The default naming rule's `{id}` is the unique identifier. Some users may want to replace `{id}` with `{pid}` and `{p}`. This is possible, but both must be used together, not individually. This is because multi-image works have multiple images with the same `{pid}`, and `{p}` is needed to differentiate them.
+- `{bmk_1000}` doesn't show the exact bookmark count but displays an integer in units of 1000 with a `+` (below 1000 displays as `0+`). This makes bookmark counts less cluttered.
+- When saving files, if a file with the same name exists, the downloader will overwrite it rather than appending a number. Most PC browsers do this, but Edge Canary on Android may append a number instead.
+- Filenames may exceed the operating system's length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
+- When a filename is too long, some browsers may truncate the excess to save the file. This varies by case. Chrome on Windows does this, but browsers on Linux or Android may not. Saving to remote locations (e.g., network drives) may also prevent truncation, even in Chrome.
+
+### Some Examples
+
+#### Remove the p tag in {id}
+
+`{id}` includes the page number, for example `44920385_p0`. If you want to remove `_p`, you can replace `{id}` with `{pid} {p}`, which will generate `44920385 0`.
+
+?>Note: If you want to replace `{id}`, the naming rule must include both `{pid}` and `{p}` to prevent duplicate filenames.
+
+#### Remove the sequence number from the first image of each work
+
+If you think the first image doesn't need a sequence number and want to change `44920385_p0` to `44920385`, you can enable the [The first image without a serial number](/en/Settings-More-Naming?id=the-first-image-without-a-serial-number) option.
+
+#### Naming rules used by others
+
+Here are some naming rules used by users, you can refer to:
+
+```
+{user}/{title}{id}
+{user}/{title}{date}/{id}
+{user_id}_{user}/{type}/{date} {title}/{id}
+{user_id}-{user}/{title}-{id}
+{user} (id={user_id})/{id}
+{user} {user_id}/{id} {title} {upload_date}
+{user}_{date}_{title}_{id}
+{id}_{title}_{user_id}_{user}
+{id}{user}-{user_id}-{title}{tags}{tags_translate}{page_tag}-{like}-{bmk}-{upload_date}
+```
+
+**Note:** The last naming rule is not a good idea because it easily generates filenames that are too long (more than 256 characters), leading to truncation, so the actual filename may only have the first half.
+
+Some works have a large number of tags, so using `{tags}`, `{tags_translate}`, `{tags_transl_only}` in the filename may lead to the filename being too long. If you want to use these naming tags, it is recommended to place them at the end of the filename to avoid truncation of content from other naming tags.
+
+### Sorting with Naming Tags
+
+Some tags have predictable patterns. Using them as the **first part** of the filename allows sorting in the file explorer.
+
+#### Tags Reflecting Time Order
+
+On most pages, works are sorted by work ID in descending order. Later-posted works have larger IDs and appear first.
+
+`{id}` (work ID) is incremental. Using `{id}` at the start of the filename and sorting files by ID in descending order aligns with the webpage's order. For example:
+
+![](../images/20250830_225311.png)
+
+`{date}` (posting time) has a similar effect.
+
+--------
+
+`{bmk_id}` reflects the order in which you bookmarked works. Using it at the start, e.g., `{bmk_id}-{id}`, and sorting in descending order aligns files with your bookmark order.
+
+For example, this is the webpage order:
+
+![](../images/20250907_175541.webp)
+
+This is the effect of sorting with `{bmk_id}`:
+
+![](../images/20250907_175520.webp)
+
+#### Tags Reflecting Quantity
+
+Some tags are numeric, e.g., `{like}`, `{view}`, `{bmk}`, `{bmk_1000}`, `{rank}`.
+
+Example: Sorting works by `{bmk}` (bookmark count) in descending order prioritizes high-quality works:
+
+![](../images/20250830_230834.png)
+
+Example: When downloading from a leaderboard page, sort by `{rank}`:
+
+![](../images/20250830_230636.png)
+
 ## Naming rule for novels
 
 <div class="option settingsPanel_optionCard new" data-no="33" data-pin-bound="true" style="display: flex;">
@@ -267,6 +381,12 @@ Tip: Click a token name to copy it.<br></span>
     </svg>
     </span></div>
 
+Novels can use the same naming tags as image works, and they also have one special tag:
+
+`{follow_artwork}` follows the naming rule for image works. It is also the default value, meaning novels use the same naming rule as image works. If you want to set an independent naming rule for novels, remove this tag and configure the naming rule as needed.
+
+PS: This setting affects only the filenames of individual novels. It does not affect the filename of the merged collection file generated for a novel series. That has a separate naming setting.
+
 ## Use different naming rules in different page types
 
 <div class="option settingsPanel_optionCard" data-no="34" data-pin-bound="true" style="display: flex;">
@@ -275,6 +395,22 @@ Tip: Click a token name to copy it.<br></span>
   <span class="beautify_switch" tabindex="0"></span>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_在不同的页面类型中使用不同的命名规则" data-msg="_在不同的页面类型中使用不同的命名规则的帮助" data-xztext="_帮助">Help</button>
 </div>
+
+The "Naming Rule" setting above applies to all pages, meaning the same naming rule is used for all page types.
+
+If you want to set independent naming rules for each page type, enable this setting.
+
+**Example Use Cases:**
+
+- On a user's homepage, set to `{user}/{id}` to create folders by username.
+- On a search page, set to `{page_tag}/{id}` to create folders by the page's tag.
+- On a leaderboard page, set to `{rank}-{id}` to save the work's ranking.
+
+**Notes:**
+- After enabling this setting, the downloader uses the preset rule for the page type, overriding the current naming rule. You can modify these rules as needed.
+- If you switch page types during downloading after enabling this setting, the naming rule may change, which may cause the file name or folder name to change. This may not be desired, so avoid switching to a different page type during downloading (though switching within the same page type is fine).
+
+For example, if downloading from a user's homepage, don't switch to a search page. If downloading from a work page, don't switch to a user's homepage or search page.
 
 ## Use a different naming rule for the work if it has certain tags
 
@@ -305,7 +441,6 @@ Tip: Click a token name to copy it.<br></span>
               <use xlink:href="#yes_submit"></use>
             </svg>
           </button>
-          
           <button type="button" class="textButton cancel" data-xztitle="_取消" title="Cancel">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#close_cancel"></use>
@@ -318,6 +453,19 @@ Tip: Click a token name to copy it.<br></span>
   </div></slot>
   </div>
 </div>
+
+This is a hidden setting.
+
+You can add custom rules, for example:
+
+![](../images/20250904_234610.png)
+
+If a work contains the specified tags, the downloader uses the folder part from the default naming rule combined with the filename part specified here to create a new naming rule.
+
+Since this setting was designed for a specific user, it has special rules:
+
+1. The "naming rule" here should only include the **filename** rule. It should not include folders (i.e., no slashes `/`), as this may cause unexpected results.
+2. The "naming rule" must start with `{id}`. Regardless of whether you include `{id}`, the downloader internally adds `{id}` to the beginning.
 
 ## Naming rule when merging novel series
 
@@ -394,6 +542,16 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
     <span data-xztext="_系列小说的命名标记_page_title">Title of the current page</span>
   </p>
 </div>
+
+You can set the filename of the merged collection file generated when the downloader merges a novel series.
+
+You can click the `Tip` button for this setting in the downloader panel to view the detailed explanation, so it will not be repeated here.
+
+**Notes:**
+- This setting affects only the name of the merged collection file. It does not affect the filenames of individual novels.
+- If the merged collection includes images, the image filenames will also use this setting so that they stay consistent with the merged collection filename.
+
+For example, if the merged collection file is named `abcd.epub` and the cover image is also saved separately, the image file may be named `abcd.png`.
 
 ## Tag separation symbol
 
@@ -490,8 +648,6 @@ For a time such as `2021-04-30T06:40:08`, the available tags and their outputs a
     <button type="button" class="gray1 textButton showMsgBtn" data-title="_文件名长度限制" data-msg="_文件名长度限制的说明" data-xztext="_帮助">Help</button>
   </div>
 </div>
-
-
 
 You can set a character limit for the full filename. The full filename includes: the folder name, path separators, the filename itself, and the extension.
 
