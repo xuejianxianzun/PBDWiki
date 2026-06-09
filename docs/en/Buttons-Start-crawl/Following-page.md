@@ -12,7 +12,7 @@ If you follow many users, their total works may be numerous.
 
 For example, if each user has 50 works and you follow 4,730 users, the total number of works could be 236,500 or more.
 
-You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split into multiple tasks. See [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+You can set "How Many Pages to Crawl," e.g., crawl 10 pages at a time and split into multiple tasks. See[Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-crawling-and-downloading-split-tasks).
 
 ## Export followed users list (CSV)
 

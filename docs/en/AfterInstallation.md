@@ -72,7 +72,7 @@ The more files you need to crawl and download, the larger the interval time you 
 
 If you want to download all your bookmarks, which may span hundreds of pages or more, you can split the task into multiple sessions, crawling 50 or 100 pages at a time.
 
-See details: [Tip: Split Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+See details:[Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-crawling-and-downloading-split-tasks).
 
 **Using a Secondary Account:**
 

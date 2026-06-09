@@ -407,7 +407,7 @@ Find the history file that is relatively large in size, and the path contains th
 
 On pages with many results, if you expect a large number of crawling results, consider crawling and downloading in batches.
 
-See: [Tip: Splitting Tasks](/en/Settings-Crawl?id=tip-split-tasks).
+See: [Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-crawling-and-downloading-split-tasks).
 
 ## File Name Sorting Is Messy on Android
 
