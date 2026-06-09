@@ -1,7 +1,7 @@
 ## Type of work
 
 <div class="option settingsPanel_optionCard" data-no="3" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=3" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=3" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_作品类型"><span class="key">Type</span> of work</span>
   </a>
   <input type="checkbox" name="downType0" id="setWorkType0" class="need_beautify checkbox_common" checked="">
@@ -26,7 +26,7 @@ The downloader checks the type of each work during crawling and excludes those t
 ## Age restriction
 
 <div class="option settingsPanel_optionCard" data-no="4" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=4" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=4" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_年龄限制"><span class="key">Age</span> restriction</span>
   </a>
   <input type="checkbox" name="downAllAges" id="downAllAges" class="need_beautify checkbox_common" checked="">
@@ -48,7 +48,7 @@ The downloader checks the age restriction of each work during crawling and exclu
 ## AI works
 
 <div class="option settingsPanel_optionCard" data-no="5" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=5" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=5" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_AI作品"><span class="key">AI</span> works</span>
   </a>
   <input type="checkbox" name="AIGenerated" id="AIGenerated" class="need_beautify checkbox_common" checked="">
@@ -96,7 +96,7 @@ However, some users deliberately do not add any AI-related tags. In this case, t
 ## Original works
 
 <div class="option settingsPanel_optionCard new" data-no="6" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=6" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=6" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_原创作品"><span class="key">Original</span> works</span>
   </a>
   <input type="checkbox" name="crawlOriginalWork" id="setCrawlOriginalWork" class="need_beautify checkbox_common" checked="">
@@ -144,7 +144,7 @@ PS: If you disable the `Loose matching` rule, the downloader will not check the 
 ## Image color
 
 <div class="option settingsPanel_optionCard" data-no="7" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=7" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=7" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_图片色彩">Image <span class="key">color</span></span>
   </a>
   <input type="checkbox" name="downColorImg" id="setDownColorImg" class="need_beautify checkbox_common" checked="">
@@ -171,7 +171,7 @@ When downloading, if a file is excluded due to its color, a corresponding messag
 ## Number of images
 
 <div class="option settingsPanel_optionCard" data-no="8" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-type?flag=8" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-type?flag=8" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_图片数量"><span class="key">Number</span> of images</span>
   </a>
   <input type="checkbox" name="downSingleImg" id="setDownSingleImg" class="need_beautify checkbox_common" checked="">

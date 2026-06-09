@@ -1,7 +1,7 @@
 ## Highlight following users
 
 <div class="option settingsPanel_optionCard" data-no="86" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Other?flag=86" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮关注的用户的说明" data-tip="The names of users you are following will have a yellow background, or be displayed in yellow. &lt;br&gt;This is convenient for you to confirm whether you follow a certain user." data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Other?flag=86" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮关注的用户的说明" data-tip="The names of users you are following will have a yellow background, or be displayed in yellow. &lt;br&gt;This is convenient for you to confirm whether you follow a certain user." data-bind-click="true">
     <span data-xztext="_高亮关注的用户"><span class="key">Highlight</span> following users</span>
     <span class="gray1"> ? </span>
   </a>
@@ -25,7 +25,7 @@ In night mode, usernames will be displayed in yellow:
 ## Display a border on downloaded works
 
 <div class="option settingsPanel_optionCard new" data-no="87" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Other?flag=87" target="_blank" class="settingNameStyle" data-xztext="_在下载过的作品上显示边框" data-bind-click="true">Display a <span class="key">border</span> on downloaded works</a>
+  <a href="/#/en/Settings-Enhance/Other?flag=87" target="_blank" class="settingNameStyle" data-xztext="_在下载过的作品上显示边框" data-bind-click="true">Display a <span class="key">border</span> on downloaded works</a>
   <input type="checkbox" name="showBorderOnDownloadedWorks" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="showBorderOnDownloadedWorks" style="display: none;">
@@ -68,7 +68,7 @@ To prevent the border from being covered or clipped by other elements, the downl
 ## Downloader's bookmark feature (✩)
 
 <div class="option settingsPanel_optionCard" data-no="88" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Other?flag=88" target="_blank" class="has_tip settingNameStyle" data-xztip="_收藏设置的说明" data-tip="Sometimes you'll see a bookmark button (✩) added by the downloader, which you can click to bookmark the work. &lt;br&gt;
+  <a href="/#/en/Settings-Enhance/Other?flag=88" target="_blank" class="has_tip settingNameStyle" data-xztip="_收藏设置的说明" data-tip="Sometimes you'll see a bookmark button (✩) added by the downloader, which you can click to bookmark the work. &lt;br&gt;
 You can choose whether to include tags for the work, and whether to make it public.&lt;br&gt;
 This setting is also used when you use the Downloader to bookmark works in batches." data-bind-click="true">
     <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> feature (✩)</span>
@@ -130,7 +130,7 @@ The default is to add tags and bookmark publicly.
 ## Copy button
 
 <div class="option settingsPanel_optionCard" data-no="89" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Other?flag=89" target="_blank" class="has_tip settingNameStyle" data-xztip="_显示复制按钮的提示" data-tip="The downloader will display a copy button on the work thumbnail and within the work page. Clicking it allows you to copy the work's image and some data.
+  <a href="/#/en/Settings-Enhance/Other?flag=89" target="_blank" class="has_tip settingNameStyle" data-xztip="_显示复制按钮的提示" data-tip="The downloader will display a copy button on the work thumbnail and within the work page. Clicking it allows you to copy the work's image and some data.
 &lt;br&gt;
 You can customize the data and format to be copied.
 &lt;br&gt;

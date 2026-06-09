@@ -1,7 +1,7 @@
 ## Include tag
 
 <div class="option settingsPanel_optionCard" data-no="15" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Tags-and-title?flag=15" target="_blank" class="has_tip settingNameStyle" data-xztip="_必须tag的提示文字" data-tip="Before downloading, you can set the tag that must be included. Not case sensitive; If you need to set multiple tags, you can use comma (,) separated." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Tags-and-title?flag=15" target="_blank" class="has_tip settingNameStyle" data-xztip="_必须tag的提示文字" data-tip="Before downloading, you can set the tag that must be included. Not case sensitive; If you need to set multiple tags, you can use comma (,) separated." data-bind-click="true">
     <span data-xztext="_必须含有tag"><span class="key">Include</span> tag</span>
     <span class="gray1"> ? </span>
   </a>
@@ -38,7 +38,7 @@ You can require works to contain certain tags. Works without these tags will not
 ## Exclude tag
 
 <div class="option settingsPanel_optionCard" data-no="16" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Tags-and-title?flag=16" target="_blank" class="has_tip settingNameStyle" data-xztip="_排除tag的提示文字" data-tip="Before downloading, you can set the tag you want to exclude. &lt;br&gt;Not case sensitive; If you need to set multiple tags, you can use comma (,) separated. &lt;br&gt;The excluded tag takes precedence over the included tag" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Tags-and-title?flag=16" target="_blank" class="has_tip settingNameStyle" data-xztip="_排除tag的提示文字" data-tip="Before downloading, you can set the tag you want to exclude. &lt;br&gt;Not case sensitive; If you need to set multiple tags, you can use comma (,) separated. &lt;br&gt;The excluded tag takes precedence over the included tag" data-bind-click="true">
     <span data-xztext="_不能含有tag"><span class="key">Exclude</span> tag</span>
     <span class="gray1"> ? </span>
   </a>
@@ -69,7 +69,7 @@ This setting works similarly to `Include tag`, with the differences:
 ## Block tags for specific users
 
 <div class="option settingsPanel_optionCard" data-no="17" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Tags-and-title?flag=17" target="_blank" class="has_tip settingNameStyle" data-xztip="_针对特定用户屏蔽tag的提示" data-tip="For example, when crawling the works of user 123456, exclude specific tags." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Tags-and-title?flag=17" target="_blank" class="has_tip settingNameStyle" data-xztip="_针对特定用户屏蔽tag的提示" data-tip="For example, when crawling the works of user 123456, exclude specific tags." data-bind-click="true">
     <span data-xztext="_针对特定用户屏蔽标签">Block <span class="key">tags</span> for specific users</span>
     <span class="gray1"> ? </span>
   </a>
@@ -120,7 +120,7 @@ For example, you can set to exclude `tag1,tag2,tag3` from user ID `123456`.
 ## Title must contain
 
 <div class="option settingsPanel_optionCard new" data-no="18" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Tags-and-title?flag=18" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题必须含有的说明" data-tip="You can require that the work's title must contain specific characters. Case-insensitive.&lt;br&gt;
+  <a href="/#/en/Settings-Crawl/Tags-and-title?flag=18" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题必须含有的说明" data-tip="You can require that the work's title must contain specific characters. Case-insensitive.&lt;br&gt;
 You can set multiple strings, separated by commas (,).&lt;br&gt;
 The matching mode is &quot;any one&quot;, meaning as long as the title contains any one of the specified strings, the downloader will crawl it." data-bind-click="true">
     <span data-xztext="_标题必须含有"><span class="key">Title</span> must contain</span>
@@ -146,7 +146,7 @@ You can require that the work's title must contain specific characters. After en
 ## Title must not contain
 
 <div class="option settingsPanel_optionCard new" data-no="19" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Tags-and-title?flag=19" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题不能含有的说明" data-tip="You can require that the work's title must not contain specific characters. Case-insensitive.&lt;br&gt;
+  <a href="/#/en/Settings-Crawl/Tags-and-title?flag=19" target="_blank" class="has_tip settingNameStyle" data-xztip="_标题不能含有的说明" data-tip="You can require that the work's title must not contain specific characters. Case-insensitive.&lt;br&gt;
 You can set multiple strings, separated by commas (,).&lt;br&gt;
 The matching mode is &quot;any one&quot;, meaning if the title contains any one of the specified strings, the downloader will not crawl it.&lt;br&gt;
 Exclusion takes priority over inclusion." data-bind-click="true">

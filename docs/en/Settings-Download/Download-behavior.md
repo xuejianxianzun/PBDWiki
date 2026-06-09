@@ -1,7 +1,7 @@
 ## Download thread
 
 <div class="option settingsPanel_optionCard" data-no="51" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=51" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=51" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_同时下载数量">Download <span class="key">thread</span></span>
   </a>
   <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="3" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
@@ -20,7 +20,7 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
 ## Download starts automatically
 
 <div class="option settingsPanel_optionCard" data-no="52" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=52" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=52" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_自动开始下载">Download starts <span class="key">automatically</span></span>
   </a>
   <input type="checkbox" name="autoStartDownload" class="need_beautify checkbox_switch" checked="">
@@ -48,7 +48,7 @@ When crawling on a **search page** with the [Preview filter results on search pa
 ## Bookmark works after downloading
 
 <div class="option settingsPanel_optionCard" data-no="53" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=53" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载之后收藏作品的提示" data-tip="After you download a file, the downloader will automatically bookmark the work." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=53" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载之后收藏作品的提示" data-tip="After you download a file, the downloader will automatically bookmark the work." data-bind-click="true">
     <span data-xztext="_下载之后收藏作品"><span class="key">Bookmark</span> works after downloading</span>
     <span class="gray1"> ? </span>
   </a>
@@ -76,7 +76,7 @@ If you want to set the public status when bookmarking a work, as well as whether
 ## Download a work when you click the bookmark button
 
 <div class="option settingsPanel_optionCard" data-no="54" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=54" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=54" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_点击收藏按钮时下载作品">Download a work when you click the <span class="key">bookmark</span> button</span>
   </a>
   <input type="checkbox" name="downloadOnClickBookmark" class="need_beautify checkbox_switch">
@@ -112,7 +112,7 @@ This indicates that the downloader supports the page and can use the "Download W
 ## Download a work when you click the like button
 
 <div class="option settingsPanel_optionCard" data-no="55" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=55" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=55" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_点击点赞按钮时下载作品">Download a work when you click the <span class="key">like</span> button</span>
   </a>
   <input type="checkbox" name="downloadOnClickLike" class="need_beautify checkbox_switch">
@@ -130,7 +130,7 @@ Like button:
 ## Download interval
 
 <div class="option settingsPanel_optionCard" data-no="56" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=56" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载间隔的说明" data-tip="Start a download every certain interval of time.&lt;br&gt;
+  <a href="/#/en/Settings-Download/Download-behavior?flag=56" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载间隔的说明" data-tip="Start a download every certain interval of time.&lt;br&gt;
 If the interval time is set to 0, the downloader will not add delay time.&lt;br&gt;
 If set to 1 second (default value), then up to 3600 crawl results will be downloaded per hour (not counting attached download files, such as novel cover images and embedded images).&lt;br&gt;
 This is because when continuously downloading many files (especially novels), your Pixiv account may be warned or banned. Setting the interval time can alleviate this issue.&lt;br&gt;" data-bind-click="true">
@@ -186,7 +186,7 @@ If a file finishes downloading in less than 1 second, the downloader will contin
 ## File download order
 
 <div class="option settingsPanel_optionCard" data-no="57" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=57" target="_blank" class="settingNameStyle" data-xztext="_文件下载顺序" data-bind-click="true">File download <span class="key">order</span></a>
+  <a href="/#/en/Settings-Download/Download-behavior?flag=57" target="_blank" class="settingNameStyle" data-xztext="_文件下载顺序" data-bind-click="true">File download <span class="key">order</span></a>
   <input type="checkbox" name="setFileDownloadOrder" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="setFileDownloadOrder" style="display: none;">
@@ -257,7 +257,7 @@ If this setting is not enabled, the downloader does not guarantee files are save
 ## Prioritize downloading Ugoira
 
 <div class="option settingsPanel_optionCard" data-no="58" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=58" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=58" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_优先下载动图">Prioritize downloading <span class="key">Ugoira</span></span>
   </a>
   <input type="checkbox" name="downloadUgoiraFirst" class="need_beautify checkbox_switch">
@@ -271,7 +271,7 @@ Note: If you also enable `File download order` and `Prioritize downloading Ugoir
 ## File size limit
 
 <div class="option settingsPanel_optionCard" data-no="59" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=59" target="_blank" class="has_tip settingNameStyle" data-xztip="_文件体积限制的说明" data-tip="If a file does not meet the required size, the downloader will not download it." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=59" target="_blank" class="has_tip settingNameStyle" data-xztip="_文件体积限制的说明" data-tip="If a file does not meet the required size, the downloader will not download it." data-bind-click="true">
     <span data-xztext="_文件体积限制">File <span class="key">size</span> limit</span>
     <span class="gray1"> ? </span>
   </a>
@@ -296,7 +296,7 @@ When the downloader starts downloading a file, it can retrieve its size. If it d
 ## Save file to the user's last selected location
 
 <div class="option settingsPanel_optionCard" data-no="60" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=60" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=60" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use" data-bind-click="true">
     <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
     <span class="gray1"> ? </span>
   </a>
@@ -343,7 +343,7 @@ a.click()
 ## Show notification after download is complete
 
 <div class="option settingsPanel_optionCard" data-no="61" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-behavior?flag=61" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载完成后显示通知的说明" data-tip="Show a system notification when all files have been downloaded. May require notification permission." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=61" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载完成后显示通知的说明" data-tip="Show a system notification when all files have been downloaded. May require notification permission." data-bind-click="true">
     <span data-xztext="_下载完成后显示通知">Show <span class="key">notification</span> after download is complete</span>
     <span class="gray1"> ? </span>
   </a>

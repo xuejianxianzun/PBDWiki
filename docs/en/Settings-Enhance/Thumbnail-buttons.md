@@ -1,7 +1,7 @@
 ## Button position on thumbnails
 
 <div class="option settingsPanel_optionCard new" data-no="82" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="settingNameStyle has_tip" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="settingNameStyle has_tip" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
     <span data-xztext="_缩略图上按钮的位置">Button <span class="key">position</span> on thumbnails</span>
     <span class="gray1"> ? </span>
   </a>
@@ -27,7 +27,7 @@ By default they are shown on the right side, but you can switch them to the left
 ## Show zoom button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="83" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示放大按钮" data-bind-click="true">Show <span class="key">zoom</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示放大按钮" data-bind-click="true">Show <span class="key">zoom</span> button on thumbnail</a>
   <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="magnifier" style="display: inline-flex;">
@@ -57,7 +57,7 @@ You can find detailed information about the image viewer here: [Image Viewer](/e
 ## Display copy button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="84" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnail-buttons?flag=84" target="_blank" class="settingNameStyle" data-xztext="_在缩略图上显示复制按钮" data-bind-click="true">Display <span class="key">copy</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=84" target="_blank" class="settingNameStyle" data-xztext="_在缩略图上显示复制按钮" data-bind-click="true">Display <span class="key">copy</span> button on thumbnail</a>
   <input type="checkbox" name="showCopyBtnOnThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
@@ -71,7 +71,7 @@ Clicking it copies the original image and some information about the work. You c
 ## Show download button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="85" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Thumbnail-buttons?flag=85" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示下载按钮" data-bind-click="true">Show <span class="key">download</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=85" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示下载按钮" data-bind-click="true">Show <span class="key">download</span> button on thumbnail</a>
   <input type="checkbox" name="showDownloadBtnOnThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>

@@ -1,7 +1,7 @@
 ## Default visibility of the log area
 
 <div class="option settingsPanel_optionCard" data-no="101" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Logs?flag=101" target="_blank" class="has_tip settingNameStyle" data-xztip="_日志区域的默认可见性的说明" data-tip="When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default." data-bind-click="true">
+  <a href="/#/en/Settings-General/Logs?flag=101" target="_blank" class="has_tip settingNameStyle" data-xztip="_日志区域的默认可见性的说明" data-tip="When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default." data-bind-click="true">
     <span data-xztext="_日志区域的默认可见性">Default <span class="key">visibility</span> of the log area</span>
     <span class="gray1"> ? </span>
   </a>
@@ -31,7 +31,7 @@ PS: No matter which option you choose, when you want to view the logs, you can a
 ## Export log
 
 <div class="option settingsPanel_optionCard" data-no="102" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Logs?flag=102" target="_blank" class="settingNameStyle" data-xztext="_导出日志" data-bind-click="true">Export <span class="key">log</span></a>
+  <a href="/#/en/Settings-General/Logs?flag=102" target="_blank" class="settingNameStyle" data-xztext="_导出日志" data-bind-click="true">Export <span class="key">log</span></a>
   <input type="checkbox" name="exportLog" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="exportLog" style="display: none;">

@@ -1,7 +1,7 @@
 ## Do not crawl already downloaded works
 
 <div class="option settingsPanel_optionCard new" data-no="26" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_不抓取下载过的作品的说明" data-tip="If the downloader has a download record for this work, it will not be crawled." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_不抓取下载过的作品的说明" data-tip="If the downloader has a download record for this work, it will not be crawled." data-bind-click="true">
     <span data-xztext="_不抓取下载过的作品">Do not crawl <span class="key">already downloaded</span> works</span>
     <span class="gray1"> ? </span>
   </a>
@@ -27,7 +27,7 @@ In addition, when merging a novel series, enabling this setting can skip novels 
 ## User block list
 
 <div class="option settingsPanel_optionCard" data-no="27" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=27" target="_blank" class="has_tip settingNameStyle" data-xztip="_用户阻止名单的说明" data-tip="The works of these users will not be downloaded. Need to type the user ID.&lt;br&gt;
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=27" target="_blank" class="has_tip settingNameStyle" data-xztip="_用户阻止名单的说明" data-tip="The works of these users will not be downloaded. Need to type the user ID.&lt;br&gt;
     If there are multiple user ID, use comma (,) separated." data-bind-click="true">
     <span data-xztext="_用户阻止名单">User <span class="key">block</span> list</span>
     <span class="gray1"> ? </span>
@@ -65,7 +65,7 @@ When the downloader removes works from certain users, it will display details in
 ## Slow down crawl
 
 <div class="option settingsPanel_optionCard" data-no="28" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=28" target="_blank" class="has_tip settingNameStyle" data-xztip="_减慢抓取速度的说明" data-tip="Slowing down the crawl speed can help avoid Pixiv temporarily blocking your crawl (429 status code). &lt;br&gt;This will increase crawl time." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=28" target="_blank" class="has_tip settingNameStyle" data-xztip="_减慢抓取速度的说明" data-tip="Slowing down the crawl speed can help avoid Pixiv temporarily blocking your crawl (429 status code). &lt;br&gt;This will increase crawl time." data-bind-click="true">
     <span data-xztext="_减慢抓取速度"><span class="key">Slow down</span> crawl</span>
     <span class="gray1"> ? </span>
   </a>
@@ -116,7 +116,7 @@ This setting cannot completely avoid 429 errors. Reasons:
 ## The interval time of timed crawl
 
 <div class="option settingsPanel_optionCard" data-no="29" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=29" target="_blank" class="has_tip settingNameStyle" data-xztip="_定时抓取的间隔时间的说明" data-tip="There is a &quot;Timed crawl&quot; button on some pages, which automatically starts crawling and downloading at a certain interval. &lt;br&gt;You can set the interval time for each crawl here." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=29" target="_blank" class="has_tip settingNameStyle" data-xztip="_定时抓取的间隔时间的说明" data-tip="There is a &quot;Timed crawl&quot; button on some pages, which automatically starts crawling and downloading at a certain interval. &lt;br&gt;You can set the interval time for each crawl here." data-bind-click="true">
     <span data-xztext="_定时抓取的间隔时间">The interval time of <span class="key">timed crawl</span></span>
     <span class="gray1"> ? </span>
   </a>
@@ -133,7 +133,7 @@ The default value is 30 minutes.
 ## Automatically export crawl results
 
 <div class="option settingsPanel_optionCard" data-no="30" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=30" target="_blank" class="has_tip settingNameStyle" data-xztip="_自动导出抓取结果的说明" data-tip="The crawl results can be automatically exported when the crawl is completed. &lt;br&gt;Two formats are available: CSV format is easy to read, and JSON format can be used to import crawl results." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=30" target="_blank" class="has_tip settingNameStyle" data-xztip="_自动导出抓取结果的说明" data-tip="The crawl results can be automatically exported when the crawl is completed. &lt;br&gt;Two formats are available: CSV format is easy to read, and JSON format can be used to import crawl results." data-bind-click="true">
     <span data-xztext="_自动导出抓取结果">Automatically <span class="key">export</span> crawl results</span>
     <span class="gray1"> ? </span>
   </a>
@@ -166,7 +166,7 @@ When this setting is enabled, the downloader will automatically export crawling 
 ## After obtaining the work ID list, export the ID list and stop the task
 
 <div class="option settingsPanel_optionCard" data-no="31" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Execution-strategy?flag=31" target="_blank" class="has_tip settingNameStyle" data-xztip="_导出ID列表的说明" data-tip="Only a crawl will be run, no download will be started. &lt;br&gt;Most filters are ignored." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Execution-strategy?flag=31" target="_blank" class="has_tip settingNameStyle" data-xztip="_导出ID列表的说明" data-tip="Only a crawl will be run, no download will be started. &lt;br&gt;Most filters are ignored." data-bind-click="true">
     <span data-xztext="_导出ID列表">After obtaining the work ID list, export the <span class="key">ID list</span> and stop the task</span>
     <span class="gray1"> ? </span>
   </a>

@@ -1,7 +1,7 @@
 ## Manage settings
 
 <div class="option settingsPanel_optionCard" data-no="103" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Manage-settings?flag=103" target="_blank" class="has_tip settingNameStyle" data-xztip="_管理设置的说明" data-tip="You can manage the Downloader settings, such as exporting to back up your settings, sharing with others, and resetting your settings." data-bind-click="true">
+  <a href="/#/en/Settings-General/Manage-settings?flag=103" target="_blank" class="has_tip settingNameStyle" data-xztip="_管理设置的说明" data-tip="You can manage the Downloader settings, such as exporting to back up your settings, sharing with others, and resetting your settings." data-bind-click="true">
     <span data-xztext="_管理设置">Manage <span class="key">settings</span></span>
     <span class="gray1"> ? </span>
   </a>

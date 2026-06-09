@@ -1,7 +1,7 @@
 ## Tag alias
 
 <div class="option settingsPanel_optionCard new" data-no="44" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Aliases?flag=44" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Naming/Aliases?flag=44" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_标签别名">Tag <span class="key">alias</span></span>
   </a>
   <label for="useTagAliasForTagsNamingRule" data-xztext="_应用到文件名里的tags系列标记">{tags} series tokens applied to the file name</label>
@@ -54,7 +54,7 @@ There is a `Help` button on the right side of this setting. Click it to view the
 ## Customize username
 
 <div class="option settingsPanel_optionCard" data-no="45" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Aliases?flag=45" target="_blank" class="has_tip settingNameStyle" data-xztip="_自定义用户名的说明" data-tip="Some users may change their name. If you want to use his original name, you can manually set his name here. &lt;br&gt;
+  <a href="/#/en/Settings-Naming/Aliases?flag=45" target="_blank" class="has_tip settingNameStyle" data-xztip="_自定义用户名的说明" data-tip="Some users may change their name. If you want to use his original name, you can manually set his name here. &lt;br&gt;
     You can also set aliases for users. &lt;br&gt;
     When you use the {user} tag in the naming rule, the downloader will give priority to the name you set." data-bind-click="true">
     <span data-xztext="_自定义用户名">Customize <span class="key">username</span></span>

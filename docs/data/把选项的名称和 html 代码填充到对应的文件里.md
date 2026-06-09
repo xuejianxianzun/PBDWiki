@@ -21,7 +21,7 @@
   "no": 0,
   "name": "抓取多少作品",
   "nameKey": "_抓取多少作品",
-  "html": "<div class=\"option settingsPanel_optionCard pinned\" data-no=\"0\" data-pin-bound=\"true\" style=\"display: flex;\">\n  <a href=\"http://localhost:3000/#/zh-cn/设置-抓取/抓取范围?flag=0\" target=\"_blank\" class=\"settingNameStyle\" data-bind-click=\"true\">\n    <span class=\"textTip\" data-xztext=\"_抓取多少作品\">抓取<span class=\"key\">多少</span>作品</span>\n  </a>\n  <input type=\"text\" name=\"setWantWork\" class=\"setinput_style blue\" value=\"-1\">\n  <button type=\"button\" class=\"textButton grayButton mr0\" role=\"setMin\">1</button>\n  <button type=\"button\" class=\"textButton grayButton\" role=\"setMax\">-1</button>\n  <span class=\"gray1\" data-xztext=\"_负1或者大于0\" role=\"tip\">-1, 或者大于 0</span>\n  <button type=\"button\" class=\"gray1 textButton showMsgBtn\" data-title=\"_抓取多少作品\" data-msg=\"_抓取多少作品的提示\" data-xztext=\"_帮助\">帮助</button>\n</div>"
+  "html": "<div class=\"option settingsPanel_optionCard pinned\" data-no=\"0\" data-pin-bound=\"true\" style=\"display: flex;\">\n  <a href=\"/#/zh-cn/设置-抓取/抓取范围?flag=0\" target=\"_blank\" class=\"settingNameStyle\" data-bind-click=\"true\">\n    <span class=\"textTip\" data-xztext=\"_抓取多少作品\">抓取<span class=\"key\">多少</span>作品</span>\n  </a>\n  <input type=\"text\" name=\"setWantWork\" class=\"setinput_style blue\" value=\"-1\">\n  <button type=\"button\" class=\"textButton grayButton mr0\" role=\"setMin\">1</button>\n  <button type=\"button\" class=\"textButton grayButton\" role=\"setMax\">-1</button>\n  <span class=\"gray1\" data-xztext=\"_负1或者大于0\" role=\"tip\">-1, 或者大于 0</span>\n  <button type=\"button\" class=\"gray1 textButton showMsgBtn\" data-title=\"_抓取多少作品\" data-msg=\"_抓取多少作品的提示\" data-xztext=\"_帮助\">帮助</button>\n</div>"
 }
 ```
 

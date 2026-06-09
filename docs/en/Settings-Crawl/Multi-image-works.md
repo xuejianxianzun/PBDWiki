@@ -1,7 +1,7 @@
 ## Maximum number of images for multi-image works
 
 <div class="option settingsPanel_optionCard" data-no="20" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=20" target="_blank" class="has_tip settingNameStyle" data-xztip="_多图作品的图片数量上限提示" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=20" target="_blank" class="has_tip settingNameStyle" data-xztip="_多图作品的图片数量上限提示" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work." data-bind-click="true">
     <span data-xztext="_多图作品的图片数量上限"><span class="key">Maximum number</span> of images for multi-image works</span>
     <span class="gray1"> ? </span>
   </a>
@@ -18,7 +18,7 @@ If a multi-image work contains more images than the number you set, the download
 ## Only crawl the first few images of multi-image works
 
 <div class="option settingsPanel_optionCard" data-no="21" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=21" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=21" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_多图作品只抓取前几张图片">Only crawl the <span class="key">first few</span> images of multi-image works</span>
   </a>
   <input type="checkbox" name="onlyCrawlFirstFewImagesSwitch" class="need_beautify checkbox_switch">
@@ -34,7 +34,7 @@ If you do not want to download too many images from a multi-image work, or if yo
 ## Only crawl the last few images of multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="22" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=22" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=22" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_多图作品只抓取后几张图片">Only crawl the <span class="key">last few</span> images of multi-image works</span>
   </a>
   <input type="checkbox" name="onlyCrawlLastFewImagesSwitch" class="need_beautify checkbox_switch">
@@ -59,7 +59,7 @@ For example, in multi-image works by [日月](https://www.pixiv.net/users/420640
 ## Do not crawl the first few images of multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="23" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=23" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=23" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_多图作品不抓取前几张图片">Do not crawl the <span class="key">first few</span> images of multi-image works</span>
   </a>
   <input type="checkbox" name="doNotCrawlFirstImagesSwitch" class="need_beautify checkbox_switch">
@@ -88,7 +88,7 @@ Also, their last images are promotional images, so this setting can be used toge
 ## Do not crawl the last few images of multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="24" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=24" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=24" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_多图作品不抓取后几张图片">Do not crawl the <span class="key">last few</span> images of multi-image works</span>
   </a>
   <input type="checkbox" name="doNotCrawlLastImagesSwitch" class="need_beautify checkbox_switch">
@@ -115,7 +115,7 @@ For example, in multi-image works by [儒宅 Ruzhai](https://www.pixiv.net/users
 ## Don't download the last few images for specific user's multi-image works
 
 <div class="option settingsPanel_optionCard" data-no="25" data-pin-bound="true">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Multi-image-works?flag=25" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Multi-image-works?flag=25" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_特定用户的多图作品不下载最后几张图片">Don't download the <span class="key">last few</span> images for specific user's multi-image works</span>
   </a>
   <slot data-name="DoNotDownloadLastFewImagesSlot"><span class="DoNotDownloadLastFewImagesWarp theme-white">

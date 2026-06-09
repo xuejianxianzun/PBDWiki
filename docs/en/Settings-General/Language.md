@@ -1,7 +1,7 @@
 ## Language
 
 <div class="option settingsPanel_optionCard " data-no="94" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Language?flag=94" target="_blank" class="settingNameStyle" data-xztext="_Language" data-bind-click="true">Language</a>
+  <a href="/#/en/Settings-General/Language?flag=94" target="_blank" class="settingNameStyle" data-xztext="_Language" data-bind-click="true">Language</a>
   <input type="radio" name="userSetLang" id="userSetLang1" class="need_beautify radio" value="auto" checked="">
   <span class="beautify_radio" tabindex="0"></span>
   <label for="userSetLang1" data-xztext="_自动检测">Auto</label>

@@ -1,7 +1,7 @@
 ## Bookmark status
 
 <div class="option settingsPanel_optionCard" data-no="9" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=9" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=9" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_收藏状态"><span class="key">Bookmark</span> status</span>
   </a>
   <input type="checkbox" name="downNotBookmarked" id="setDownNotBookmarked" class="need_beautify checkbox_common" checked="">
@@ -21,7 +21,7 @@ The downloader checks whether each work is bookmarked by you during crawling and
 ## Number of bookmarks
 
 <div class="option settingsPanel_optionCard" data-no="10" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=10" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置收藏数量的提示" data-tip="If the number of bookmarks of the work is less than the set number, the work will not be downloaded." data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=10" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置收藏数量的提示" data-tip="If the number of bookmarks of the work is less than the set number, the work will not be downloaded." data-bind-click="true">
     <span data-xztext="_收藏数量">Number of <span class="key">bookmarks</span></span>
     <span class="gray1"> ? </span>
   </a>
@@ -65,7 +65,7 @@ As long as a work meets either of these options, it will be downloaded.
 ## Width and height
 
 <div class="option settingsPanel_optionCard" data-no="11" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=11" target="_blank" class="has_tip settingNameStyle" data-xztip="_筛选宽高的提示文字" data-tip="Please type the minimum width and minimum height. Will not download images that do not meet the requirements" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=11" target="_blank" class="has_tip settingNameStyle" data-xztip="_筛选宽高的提示文字" data-tip="Please type the minimum width and minimum height. Will not download images that do not meet the requirements" data-bind-click="true">
     <span data-xztext="_图片的宽高"><span class="key">Width</span> and height</span>
     <span class="gray1"> ? </span>
   </a>
@@ -123,7 +123,7 @@ You can separately set the width and height values and comparison methods.
 ## Aspect ratio
 
 <div class="option settingsPanel_optionCard" data-no="12" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=12" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置宽高比例Title" data-tip="Set the aspect ratio, or manually type the aspect ratio" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=12" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置宽高比例Title" data-tip="Set the aspect ratio, or manually type the aspect ratio" data-bind-click="true">
     <span data-xztext="_图片的宽高比例">Aspect <span class="key">ratio</span></span>
     <span class="gray1"> ? </span>
   </a>
@@ -177,7 +177,7 @@ You can also manually set the range of the image aspect ratio.
 ## ID range
 
 <div class="option settingsPanel_optionCard" data-no="13" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=13" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置id范围提示" data-tip="You can enter a work ID to crawl works with IDs larger than it (new works) or smaller than it (old works)" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=13" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置id范围提示" data-tip="You can enter a work ID to crawl works with IDs larger than it (new works) or smaller than it (old works)" data-bind-click="true">
     <span data-xztext="_id范围"><span class="key">ID</span> range</span>
     <span class="gray1"> ? </span>
   </a>
@@ -230,7 +230,7 @@ You can set the ID for each type according to your needs.
 ## Posting time
 
 <div class="option settingsPanel_optionCard" data-no="14" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Crawl/Work-data?flag=14" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置投稿时间提示" data-tip="You can download works posted in a specified period of time" data-bind-click="true">
+  <a href="/#/en/Settings-Crawl/Work-data?flag=14" target="_blank" class="has_tip settingNameStyle" data-xztip="_设置投稿时间提示" data-tip="You can download works posted in a specified period of time" data-bind-click="true">
     <span data-xztext="_投稿时间">Posting <span class="key">time</span></span>
     <span class="gray1"> ? </span>
   </a>

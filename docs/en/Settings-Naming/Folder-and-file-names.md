@@ -2,7 +2,7 @@
 
 <div class="option settingsPanel_optionCard" data-no="32" data-pin-bound="true" style="display: flex;">
   <span class="fileNameRuleLine1">
-    <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=32" target="_blank" class="settingNameStyle optionName" data-xztext="_图像作品的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for image works</a>
+    <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=32" target="_blank" class="settingNameStyle optionName" data-xztext="_图像作品的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for image works</a>
     <span class="fileNameRuleBtnsArea">
       <slot data-name="saveNamingRuleForArtwork"><div class="saveNamingRuleWrap theme-white">
     <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
@@ -314,7 +314,7 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 
 <div class="option settingsPanel_optionCard new" data-no="33" data-pin-bound="true" style="display: flex;">
   <span class="fileNameRuleLine1">
-    <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=33" target="_blank" class="settingNameStyle optionName" data-xztext="_小说的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for novels</a>
+    <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=33" target="_blank" class="settingNameStyle optionName" data-xztext="_小说的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for novels</a>
     <span class="fileNameRuleBtnsArea">
       <slot data-name="saveNamingRuleForNovel"><div class="saveNamingRuleWrap theme-white">
     <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
@@ -390,7 +390,7 @@ PS: This setting affects only the filenames of individual novels. It does not af
 ## Use different naming rules in different page types
 
 <div class="option settingsPanel_optionCard" data-no="34" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=34" target="_blank" class="settingNameStyle" data-xztext="_在不同的页面类型中使用不同的命名规则" data-bind-click="true">Use <span class="key">different</span> naming rules in different page types</a>
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=34" target="_blank" class="settingNameStyle" data-xztext="_在不同的页面类型中使用不同的命名规则" data-bind-click="true">Use <span class="key">different</span> naming rules in different page types</a>
   <input type="checkbox" name="setNameRuleForEachPageType" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_在不同的页面类型中使用不同的命名规则" data-msg="_在不同的页面类型中使用不同的命名规则的帮助" data-xztext="_帮助">Help</button>
@@ -415,7 +415,7 @@ For example, if downloading from a user's homepage, don't switch to a search pag
 ## Use a different naming rule for the work if it has certain tags
 
 <div class="option settingsPanel_optionCard" data-no="35" data-pin-bound="true">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=35" target="_blank" class="settingNameStyle" data-xztext="_如果作品含有某些标签则对这个作品使用另一种命名规则" data-bind-click="true">Use a different naming rule for the work if it has certain <span class="key">tags</span></a>
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=35" target="_blank" class="settingNameStyle" data-xztext="_如果作品含有某些标签则对这个作品使用另一种命名规则" data-bind-click="true">Use a different naming rule for the work if it has certain <span class="key">tags</span></a>
   <input type="checkbox" name="UseDifferentNameRuleIfWorkHasTagSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="UseDifferentNameRuleIfWorkHasTagSwitch" style="display: none;">
@@ -470,7 +470,7 @@ Since this setting was designed for a specific user, it has special rules:
 ## Naming rule when merging novel series
 
 <div class="option settingsPanel_optionCard" data-no="36" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=36" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则" data-bind-click="true"><span class="key">Naming</span> rule when merging novel series</a>
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=36" target="_blank" class="settingNameStyle" data-xztext="_合并系列小说时的命名规则" data-bind-click="true"><span class="key">Naming</span> rule when merging novel series</a>
   <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#seriesNovelNameTip" data-for-no="36" data-xztext="_提示">Tip</button>
   <div class="optionLine">
     <textarea class="centerPanelTextArea beautify_scrollbar" name="seriesNovelNameRule" rows="1">novel series/{page_tag}/{series_title}-{series_id}-{user}-{part}-{tags}.{ext}</textarea>
@@ -556,7 +556,7 @@ For example, if the merged collection file is named `abcd.epub` and the cover im
 ## Tag separation symbol
 
 <div class="option settingsPanel_optionCard" data-no="37" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=37" target="_blank" class="settingNameStyle" data-xztext="_标签分隔符号" data-bind-click="true">Tag <span class="key">separation</span> symbol</a>
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=37" target="_blank" class="settingNameStyle" data-xztext="_标签分隔符号" data-bind-click="true">Tag <span class="key">separation</span> symbol</a>
   <input type="text" name="tagsSeparator" class="setinput_style blue" value=",">
   <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#tagsSeparatorTip" data-for-no="37" data-xztext="_提示">Tip</button>
   <p class="tip" id="tagsSeparatorTip">
@@ -586,7 +586,7 @@ _
 ## Date and time format
 
 <div class="option settingsPanel_optionCard" data-no="38" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=38" target="_blank" class="settingNameStyle" data-xztext="_日期格式" data-bind-click="true">Date and time <span class="key">format</span></a>
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=38" target="_blank" class="settingNameStyle" data-xztext="_日期格式" data-bind-click="true">Date and time <span class="key">format</span></a>
   <input type="text" name="dateFormat" class="setinput_style blue" value="YYYY-MM-DD">
   <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="38" data-xztext="_提示">Tip</button>
   <p class="tip" id="dateFormatTip">
@@ -638,7 +638,7 @@ For a time such as `2021-04-30T06:40:08`, the available tags and their outputs a
 ## File name length limit
 
 <div class="option settingsPanel_optionCard" data-no="39" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Folder-and-file-names?flag=39" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=39" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_文件名长度限制">File name <span class="key">length</span> limit</span>
   </a>
   <input type="checkbox" name="fullNameLengthLimitSwitch" class="need_beautify checkbox_switch" checked="">

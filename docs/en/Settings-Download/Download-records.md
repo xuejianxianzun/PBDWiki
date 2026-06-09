@@ -1,7 +1,7 @@
 ## Manage download records
 
 <div class="option settingsPanel_optionCard new" data-no="62" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-records?flag=62" target="_blank" class="settingNameStyle" data-xztext="_管理下载记录" data-bind-click="true">Manage download <span class="key">records</span></a>
+  <a href="/#/en/Settings-Download/Download-records?flag=62" target="_blank" class="settingNameStyle" data-xztext="_管理下载记录" data-bind-click="true">Manage download <span class="key">records</span></a>
   <button type="button" class="textButton gray1 showMsgBtn" data-title="_管理下载记录" data-msg="_管理下载记录的提示" data-xztext="_帮助">Help</button>
   <div class="optionLine">
     <button type="button" class="textButton fireEvent" id="exportDownloadRecord" data-event="exportDownloadRecord" data-xztext="_导出">Export</button>
@@ -91,7 +91,7 @@ If this happens, you can clear the download records or disable the "Don't downlo
 ## Don't download duplicate files
 
 <div class="option settingsPanel_optionCard" data-no="63" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Download-records?flag=63" target="_blank" class="settingNameStyle" data-xztext="_不下载重复文件" data-bind-click="true">Don't download <span class="key">duplicate</span> files</a>
+  <a href="/#/en/Settings-Download/Download-records?flag=63" target="_blank" class="settingNameStyle" data-xztext="_不下载重复文件" data-bind-click="true">Don't download <span class="key">duplicate</span> files</a>
   <input type="checkbox" name="deduplication" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap noGrow" data-show="deduplication" style="display: none;">

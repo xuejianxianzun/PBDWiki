@@ -1,7 +1,7 @@
 ## How to switch tabs
 
 <div class="option settingsPanel_optionCard" data-no="95" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Operation-method?flag=95" target="_blank" class="has_tip settingNameStyle" data-xztip="_选项卡切换方式的说明" data-tip="Sets how to switch the primary category navigation of the Downloader." data-bind-click="true">
+  <a href="/#/en/Settings-General/Operation-method?flag=95" target="_blank" class="has_tip settingNameStyle" data-xztip="_选项卡切换方式的说明" data-tip="Sets how to switch the primary category navigation of the Downloader." data-bind-click="true">
     <span data-xztext="_选项卡切换方式">How to switch <span class="key">tabs</span></span>
     <span class="gray1"> ? </span>
   </a>
@@ -20,7 +20,7 @@
 ## Click the setting card to toggle its switch status
 
 <div class="option settingsPanel_optionCard new" data-no="96" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Operation-method?flag=96" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-General/Operation-method?flag=96" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_点击设置卡片时切换它的开关状态">Click the setting card to toggle its <span class="key">switch</span> status</span>
   </a>
   <input type="checkbox" name="clickOptionCardToToggleSwitch" class="need_beautify checkbox_switch" checked="">
@@ -35,7 +35,7 @@ If you’re worried about accidental clicks, you can disable this setting.
 ## Open Wiki link when clicking setting name
 
 <div class="option settingsPanel_optionCard" data-no="97" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Operation-method?flag=97" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-General/Operation-method?flag=97" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_点击设置名字时打开wiki链接">Open Wiki link when clicking setting name</span>
   </a>
   <input type="checkbox" name="clickSettingNameOpenWiki" class="need_beautify checkbox_switch" checked>

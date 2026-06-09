@@ -1,7 +1,7 @@
 ## Serial number starting value
 
 <div class="option settingsPanel_optionCard new" data-no="46" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Serial?flag=46" target="_blank" class="has_tip settingNameStyle" data-xztip="_序号起始值的说明" data-tip="Set whether the image serial number starts from 0 or from 1" data-bind-click="true">
+  <a href="/#/en/Settings-Naming/Serial?flag=46" target="_blank" class="has_tip settingNameStyle" data-xztip="_序号起始值的说明" data-tip="Set whether the image serial number starts from 0 or from 1" data-bind-click="true">
     <span data-xztext="_序号起始值"><span class="key">Serial number</span> starting value</span>
     <span class="gray1"> ? </span>
   </a>
@@ -29,7 +29,7 @@ This setting affects naming tags that include serial numbers: `{id}` and `{p}`.
 ## The first image without a serial number
 
 <div class="option settingsPanel_optionCard" data-no="47" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Serial?flag=47" target="_blank" class="has_tip settingNameStyle" data-xztip="_第一张图不带序号说明" data-tip="Remove the serial number of the first image of each work. For example 80036479_p0 becomes 80036479." data-bind-click="true">
+  <a href="/#/en/Settings-Naming/Serial?flag=47" target="_blank" class="has_tip settingNameStyle" data-xztip="_第一张图不带序号说明" data-tip="Remove the serial number of the first image of each work. For example 80036479_p0 becomes 80036479." data-bind-click="true">
     <span data-xztext="_第一张图不带序号">The first image without a <span class="key">serial number</span></span>
     <span class="gray1"> ? </span>
   </a>
@@ -78,7 +78,7 @@ If you enable this option, the downloader will remove the sequence number from t
 ## Add 0 in front of the serial number
 
 <div class="option settingsPanel_optionCard" data-no="48" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Naming/Serial?flag=48" target="_blank" class="has_tip settingNameStyle" data-xztip="_在序号前面填充0的说明" data-tip="This can solve the problem that some software cannot correctly sort files by file name." data-bind-click="true">
+  <a href="/#/en/Settings-Naming/Serial?flag=48" target="_blank" class="has_tip settingNameStyle" data-xztip="_在序号前面填充0的说明" data-tip="This can solve the problem that some software cannot correctly sort files by file name." data-bind-click="true">
     <span data-xztext="_在序号前面填充0"><span class="key">Add 0</span> in front of the serial number</span>
     <span class="gray1"> ? </span>
   </a>

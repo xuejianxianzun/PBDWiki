@@ -1,7 +1,7 @@
 ## Save the metadata of the work
 
 <div class="option settingsPanel_optionCard" data-no="73" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Metadata?flag=73" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品的元数据说明" data-tip="The downloader can generate a file with the same name (but different extension) for each work to save its metadata.&lt;br&gt;
+  <a href="/#/en/Settings-Download/Metadata?flag=73" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品的元数据说明" data-tip="The downloader can generate a file with the same name (but different extension) for each work to save its metadata.&lt;br&gt;
 You can choose which types of works to generate metadata files for, and you can choose TXT format or (and) JSON format.&lt;br&gt;
 TXT format is easy to read but only contains relatively common data.&lt;br&gt;
 JSON format is the downloader's internal data and saves more information." data-bind-click="true">
@@ -186,7 +186,7 @@ An example of the metadata content saved in the JSON file is as follows:
 ## Save work description
 
 <div class="option settingsPanel_optionCard" data-no="74" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Download/Metadata?flag=74" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品简介的说明" data-tip="Create a TXT file to save the work description" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Metadata?flag=74" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品简介的说明" data-tip="Create a TXT file to save the work description" data-bind-click="true">
     <span data-xztext="_保存作品的简介">Save work <span class="key">description</span></span>
     <span class="gray1"> ? </span>
   </a>

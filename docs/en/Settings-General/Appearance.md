@@ -1,7 +1,7 @@
 ## Color theme
 
 <div class="option settingsPanel_optionCard" data-no="98" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Appearance?flag=98" target="_blank" class="settingNameStyle" data-xztext="_颜色主题" data-bind-click="true">Color <span class="key">theme</span></a>
+  <a href="/#/en/Settings-General/Appearance?flag=98" target="_blank" class="settingNameStyle" data-xztext="_颜色主题" data-bind-click="true">Color <span class="key">theme</span></a>
   <input type="radio" name="theme" id="theme1" class="need_beautify radio" value="auto" checked="">
   <span class="beautify_radio" tabindex="0"></span>
   <label for="theme1" data-xztext="_自动检测" class="active">Auto</label>
@@ -28,7 +28,7 @@ Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar a
 ## Background image
 
 <div class="option settingsPanel_optionCard" data-no="99" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Appearance?flag=99" target="_blank" class="has_tip settingNameStyle" data-xztip="_背景图片的说明" data-tip="You can select a local image as the background image of the downloader." data-bind-click="true">
+  <a href="/#/en/Settings-General/Appearance?flag=99" target="_blank" class="has_tip settingNameStyle" data-xztip="_背景图片的说明" data-tip="You can select a local image as the background image of the downloader." data-bind-click="true">
     <span data-xztext="_背景图片"><span class="key">Background</span> image</span>
     <span class="gray1"> ? </span>
   </a>
@@ -92,7 +92,7 @@ Increasing opacity makes the image closer to its original appearance; decreasing
 ## Highlight keywords
 
 <div class="option settingsPanel_optionCard" data-no="100" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Appearance?flag=100" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮显示关键字的说明" data-tip="Highlight the keywords in each setting name so that you can quickly find the settings you need." data-bind-click="true">
+  <a href="/#/en/Settings-General/Appearance?flag=100" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮显示关键字的说明" data-tip="Highlight the keywords in each setting name so that you can quickly find the settings you need." data-bind-click="true">
     <span data-xztext="_高亮显示关键字"><span class="key">Highlight</span> keywords</span>
     <span class="gray1"> ? </span>
   </a>

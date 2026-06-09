@@ -1,7 +1,7 @@
 ## Preview works
 
 <div class="option settingsPanel_optionCard" data-no="75" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Preview?flag=75" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的说明" data-tip="When you hover the mouse over the image thumbnail, the downloader can display a larger image." data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Preview?flag=75" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的说明" data-tip="When you hover the mouse over the image thumbnail, the downloader can display a larger image." data-bind-click="true">
     <span data-xztext="_预览作品"><span class="key">Preview</span> works</span>
     <span class="gray1"> ? </span>
   </a>
@@ -188,7 +188,7 @@ The original image width is 4093 px, so the display area is larger:
 ## Long press the right mouse button on the thumbnail to display the large image
 
 <div class="option settingsPanel_optionCard" data-no="76" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Preview?flag=76" target="_blank" class="settingNameStyle" data-xztext="_长按右键显示大图" data-bind-click="true">Long press the right mouse button on the thumbnail to display the <span class="key">large image</span></a>
+  <a href="/#/en/Settings-Enhance/Preview?flag=76" target="_blank" class="settingNameStyle" data-xztext="_长按右键显示大图" data-bind-click="true">Long press the right mouse button on the thumbnail to display the <span class="key">large image</span></a>
   <input type="checkbox" name="showOriginImage" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="showOriginImage" style="display: inline-flex;">
@@ -250,7 +250,7 @@ Regular images have a maximum size of 1200 px, while original images may be larg
 ## Preview the details of the work
 
 <div class="option settingsPanel_optionCard" data-no="77" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-Enhance/Preview?flag=77" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的详细信息的说明" data-tip="Mouse over the thumbnail of the work to view the work data" data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Preview?flag=77" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的详细信息的说明" data-tip="Mouse over the thumbnail of the work to view the work data" data-bind-click="true">
     <span data-xztext="_预览作品的详细信息">Preview the <span class="key">details</span> of the work</span>
     <span class="gray1"> ? </span>
   </a>
