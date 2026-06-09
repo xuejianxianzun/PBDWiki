@@ -44,6 +44,24 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   </div>
 </div>
 
+You can enter the IDs of users you want to block, and the downloader will not download works from these users.
+
+?> Note: You need to enter **user IDs** (numbers), not usernames, as usernames are not unique.
+
+?> To block multiple users, enter multiple user IDs separated by commas `,`.
+
+**Sub-option:** 
+
+- Remove their works from the page.
+
+When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won't see works from users you don't like.
+
+When the downloader removes works from certain users, it will display details in the log at the top, for example:
+
+<span style="color: rgb(210, 126, 0);" class="log">Removed works from user <a href="https://www.pixiv.net/users/6756759" target="blank">村上水軍</a><br></span>
+
+?> Works from blocked users will not be removed from their own profile pages, allowing you to view their profiles normally.
+
 ## Slow down crawl
 
 <div class="option settingsPanel_optionCard" data-no="28" data-pin-bound="true" style="display: flex;">
@@ -66,6 +84,35 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   </div>
 </div>
 
+Slowing down the crawling speed can prevent the downloader from being temporarily restricted by Pixiv during crawling (see [What Is a 429 Error?](/en/FAQ?id=what-is-a-429-error)), but it will increase the crawling time.
+
+If this setting is enabled, the downloader will limit concurrent requests to 1 during crawling. After each request is completed, it will wait for a certain period (depending on the interval time value) before sending the next request, reducing the crawling frequency to avoid triggering the 429 restriction.
+
+This setting has 2 sub-options:
+
+### Enabled when the number of works exceeds the specified number
+
+When the number of works to crawl exceeds this number (default is `100`), the downloader will use slow crawl mode.
+
+If the number of works to crawl is less than this number, the downloader will crawl quickly (no interval time).
+
+### Interval time
+
+After one request is completed, how long to wait before sending the next request. Unit is milliseconds, default value is `1600`.
+
+If you only crawl a few hundred works per day, the default interval time is usually safe. If you frequently trigger 429 errors, or often crawl more works, you can increase the interval time, for example `2000`, `3000`. `4000` ms is almost absolutely safe, even for crawling more than ten thousand works, no problem, but usually no need to use such a large interval time.
+
+?> The interval time not only takes effect during the crawling stage, but also in some scenarios that require sending a large number of requests. For example: batch adding bookmarks, retrieving the list of followed users.
+
+------------
+
+**Note:**
+
+This setting cannot completely avoid 429 errors. Reasons:
+
+1. It assumes the user is only crawling on one page, which should not trigger 429 errors. But if the user is crawling on 2 or 3 pages simultaneously, because requests are sent frequently, it may still trigger 429 errors.
+2. Some normal user operations also consume quota, such as opening work pages, previewing works, bookmarking works, etc. When the quota is exhausted, it will trigger 429 errors. So during crawling, if the user performs many such operations, it may also lead to triggering 429 errors.
+
 ## The interval time of timed crawl
 
 <div class="option settingsPanel_optionCard" data-no="29" data-pin-bound="true" style="display: flex;">
@@ -76,6 +123,12 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   <input type="text" name="timedCrawlInterval" class="setinput_style blue" value="30">
   <span class="mr4" data-xztext="_分钟">Minute</span>
 </div>
+
+Set the interval for timed crawling.
+
+Some pages have a [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl) button. Clicking it allows the downloader to automatically perform crawling and downloading at regular intervals. You can set the interval between each crawl here.
+
+The default value is 30 minutes.
 
 ## Automatically export crawl results
 
@@ -103,6 +156,13 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   </div>
 </div>
 
+When this setting is enabled, the downloader will automatically export crawling results **after crawling is complete**.
+
+**Sub-options:**
+
+- Enable when the crawl results exceed the specified number: Results will only be exported if the number of crawling results exceeds the specified value.
+- File format: You can choose to export as a CSV file, a JSON file, or both. CSV format is easy to read, while JSON format can be used to import crawling results. The content in the two formats differs: JSON contains complete data, while CSV is generated based on JSON and includes only partial data, excluding some less commonly used information.
+
 ## After obtaining the work ID list, export the ID list and stop the task
 
 <div class="option settingsPanel_optionCard" data-no="31" data-pin-bound="true" style="display: flex;">
@@ -114,4 +174,21 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+If you want to obtain the list of work IDs crawled by the downloader without downloading files, you can enable this option.
+
+**Export timing:**
+
+- The export occurs after the downloader has obtained the list of all work IDs to be crawled. Note that this is not "after crawling is complete" but earlier.
+
+The crawling phase of the downloader consists of two steps:
+1. Obtain the list of all work IDs.
+2. Retrieve detailed data for each work, check filtering conditions, and save data for works that meet the conditions.
+
+The export occurs after step 1 and stops the task, meaning step 2 is not executed.
+
+!> Since the export happens early, filters are not applied at this stage, so the exported work ID list may include works that do not meet the filtering conditions.
+
+**Exported content:**
+
+The exported work ID list is saved to a JSON file. You can process this file as needed, but its design purpose is to work with another feature: the [Import ID List](/en/Buttons-Start-crawl/HomePage?id=import-id-list) button on the homepage.
 
