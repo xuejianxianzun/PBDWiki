@@ -1,6 +1,6 @@
 # Introduction
 
-Pixiv Batch Downloader is a browser extension designed for batch downloading images and novels from [Pixiv.net](https://www.pixiv.net/ ':target=_blank'). It also includes [enhanced features](/en/Settings-More-Enhance) to optimize the Pixiv user experience.
+Pixiv Batch Downloader is a browser extension designed for batch downloading images and novels from [Pixiv.net](https://www.pixiv.net/ ':target=_blank'). It also includes [enhanced features](/en/Settings-Enhance/Settings-Enhance-menu) to optimize the Pixiv user experience.
 
 **Supported languages:** Simplified Chinese, Traditional Chinese, Japanese, English, Korean, Russian.
 
@@ -89,3 +89,7 @@ Below are the types of pages supported for downloading by this extension, with t
 22 [Link-Only Access](https://www.pixiv.net/artworks/unlisted/eE3fTYaROT9IsZmep386)
 
 23 [Discovery Users](https://www.pixiv.net/discovery/users)
+
+24 [Dashboard](https://www.pixiv.net/dashboard)
+
+25 [Contest](https://www.pixiv.net/contest/gf2)

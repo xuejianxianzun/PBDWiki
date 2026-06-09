@@ -14,7 +14,7 @@ The downloader will automatically start crawling works.
 
 Once crawling is complete, the downloader will automatically begin downloading files, and the progress will be shown in the Home page's "Download area":
 
-![](images/20260608_154057.png)
+![](images/ui-en-1.png)
 
 PS: By default, the downloader automatically starts downloading. You can change this default behavior in the "Download" settings:
 
