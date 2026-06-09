@@ -19,10 +19,13 @@ Example:
 - During tag list crawling, the downloader does not display crawled works on the page, so you cannot preview results.
 - The downloader saves the task state. If the page or browser is closed before completion, reopening the page allows the downloader to resume crawling the remaining tags.
 
+------
+
+On illustration and manga search pages, there are also buttons that can filter the crawl results. After crawling is complete, you can click these buttons to remove unwanted works from the crawl results.
+
 ## Screen in results
 
 <button id="filterResults" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" data-xztitle="_在结果中筛选说明" title="You can change the settings and screen again in the results."><span data-xztext="_在结果中筛选">Screen in results</span><span class="ripple"></span></button>
-
 
 If needed, modify crawl conditions (filters) and click this button to recheck crawl results, removing works that don't meet the conditions. For example, you can increase the bookmark count requirement after crawling and filter again.
 
@@ -48,6 +51,5 @@ Removes all Ugoira works from the crawl results.
 
 Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
 
-?> These filter buttons only appear on illustration and manga search pages, not on novel search pages, as the downloader cannot preview novel crawl results.
-
+**Note:** This button must be used together with [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page). You can only manually delete works after the downloader displays the crawl results on the page.
 
