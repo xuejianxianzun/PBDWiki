@@ -7,7 +7,7 @@ Click this button, and the downloader will crawl all uncategorized works in your
 
 When using this feature, the button displays progress information, for example:
 
-<button type="button" class="xzbtns hasRippleAnimation" style="background-color: rgb(20, 173, 39);" disabled="disabled"><span data-xztext="_Add Tags to Uncategorized Works">3 / 912</span><span class="ripple"></span></button>
+<button id="addTagToUnmarkedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" disabled="disabled"><span data-xztext="_给未分类作品添加添加tag">2 / 1330</span><span class="ripple"></span></button>
 
 ?> To stop this task after it starts, you need to close the current page.
 
@@ -60,28 +60,25 @@ Click this button, and the downloader crawls all works on the **current page** (
 
 <button id="findBookmark404Works" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_查找所有已被删除的作品">Find all deleted works</span><span class="ripple"></span></button>
 
-## Unbookmark all deleted works
-
-<button id="unBookmarkAll404Works" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_取消收藏所有已被删除的作品">Unbookmark all deleted works</span><span class="ripple"></span></button>
-
-
 Your bookmarks may include works that are no longer available, which you cannot view or download. For example:
 
 ![](../images/20250909_235316.png)
 
-Click this button, and the downloader crawls your bookmark list (without fetching detailed data for each work, so it's relatively quick). It then identifies **all** deleted works and removes them from your bookmarks.
-
-?> When using this feature, the downloader displays progress information in the log at the top of the page. The work count in the log, e.g., "Currently 1585 works," refers to the number of deleted works detected.
-
-#### Export IDs of Deleted Works
-
-After identifying all deleted works, the downloader exports their ID list to the download directory, for example:
+Click this button, and the downloader crawls your bookmark list (without fetching detailed data for each work, so it's relatively quick). It then identifies **all** deleted works and exports their ID list to the download directory, for example:
 
 ![](../images/20251003_182304.png)
 
 This feature is useful for some users, as work IDs can help locate archived versions of these works on other illustration websites.
 
 ?> The downloader exports only work IDs, as other data (e.g., user IDs) for deleted works is invalid and set to meaningless values by Pixiv.
+
+?> When using this feature, the downloader displays progress information in the log at the top of the page. The work count in the log, e.g., "Currently 1585 works," refers to the number of deleted works detected.
+
+## Unbookmark all deleted works
+
+<button id="unBookmarkAll404Works" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_取消收藏所有已被删除的作品">Unbookmark all deleted works</span><span class="ripple"></span></button>
+
+Find all deleted works and remove them from your bookmarks.
 
 ## Export bookmark list（JSON）
 
@@ -114,5 +111,4 @@ Click this button to select a previously exported bookmark list (JSON file) and 
 - If the imported list includes works you've already bookmarked, the final bookmark count may be lower than expected, which is normal. For example, if you import 48 works and 20 are already bookmarked, your bookmark count will increase by only 28.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page, e.g., "Bookmarking works 5/48".
-
 
