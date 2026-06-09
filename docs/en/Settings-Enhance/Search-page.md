@@ -83,9 +83,29 @@ This helps you focus on works from unfollowed users when discovering new artists
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap" data-show="previewResult" style="display: inline-flex;">
     <span class="settingNameStyle" data-xztext="_上限">Upper limit</span>
-    <input type="text" name="previewResultLimit" class="setinput_style blue w80" value="1000">
+    <input type="text" name="previewResultLimit" class="setinput_style blue w80" value="3000">
   </div>
 </div>
 
+
+When crawling on search pages for illustrations, manga, or Ugoira, the downloader displays crawled works on the current page, sorted by bookmark count from high to low.
+
+Example:
+
+![](../images/20250909_220752.webp)
+
+This feature provides a what-you-see-is-what-you-get experience. You can preview crawl results, filter them, and then download.
+
+?> After crawling, you can use buttons in the downloader's "Crawl" tab to filter results.
+
+**Note:** When this feature is enabled, the "Automatically start downloading" setting is disabled. This allows users to filter results before downloading. To start downloading automatically after crawling, disable this feature.
+
+?> This feature does not work on novel search pages.
+
+### Upper Limit
+
+When the downloader crawls many works (e.g., thousands), displaying them all on the page increases memory usage. In extreme cases, this may cause the page to crash.
+
+You can set a "Limit" to control the maximum number of displayed works. The default is `3000`.
 
 
