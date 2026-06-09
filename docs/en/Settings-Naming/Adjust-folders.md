@@ -35,6 +35,10 @@
     </svg>
     </span></div>
 
+If your naming rule creates folders, but you want some downloaded files to be saved directly in the download directory instead, you can enable this setting.
+
+This setting has multiple sub-options. Whether folders are skipped can depend on the work type and on how many images are downloaded from the work. Click the `Help` button on the right side of this setting to view the detailed explanation.
+
 ## Add a folder layer for multi-image works
 
 <div class="option settingsPanel_optionCard new" data-no="41" data-pin-bound="true" style="display: flex;">
@@ -52,19 +56,7 @@
       <input class="setinput_style blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{pid}" style="min-width: 100px">
     </div>
   </div>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
-
-
-        &gt;
-        <input class="setinput_style1 blue w150 noGrow" type="text" name="folderForMultiImageWorksImageNumber" id="folderForMultiImageWorksImageNumber" value="1">
-        <label for="folderForMultiImageWorksRule" data-xztext="_文件夹规则">Folder rule</label>
-        <input class="setinput_style1 blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{pid}">
-      </span>
-    </div>
+  </div>
 
 The downloader can add a separate folder layer for multi-image works. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
 
@@ -79,8 +71,8 @@ For example, work [79239641](https://www.pixiv.net/artworks/79239641 ':target=_b
 
 **Sub-options:**
 
-- `Image count`: The downloader adds the configured folder only when the number of images in the work is greater than this value. The default is 1, so it applies to all multi-image works. You can set other values if needed.
-- `Folder rule`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{pid}`, which uses the work ID without the page number.
+- `Enable when the number of images in the work exceeds the specified number`: The downloader adds the configured folder only when the number of images in the work is greater than this value. The default is 1, so it applies to all multi-image works. You can set other values if needed.
+- `Rule for the folder layer to add`: The name of the folder added for multi-image works. Like the regular naming rule, you can use tags and custom text here, and you can also use `/` to create nested folders. The default value is `{pid}`, which uses the work ID without the page number.
 
 After that, you also need to modify the `Naming rule for image works` setting and insert `/{multi_image_folder}/` where needed to add the folder layer. Example: `pixiv/{user}-{user_id}/{multi_image_folder}/{id}-{title}`
 
