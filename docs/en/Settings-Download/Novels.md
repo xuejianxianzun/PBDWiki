@@ -24,7 +24,7 @@ PS: Compared with EPUB, TXT has some disadvantages:
 - TXT files do not have a unified heading-level structure. When they contain multiple novels or chapters, many readers cannot recognize the chapter structure correctly.
 - TXT files cannot store illustrations inside the novel, so images can only be saved as separate files. Sometimes one TXT file may end up with more than a dozen related images, which becomes messy.
 
-### Some Readers
+### Some Novel Readers
 
 **Online Reading**: https://epub-reader.online/
 
