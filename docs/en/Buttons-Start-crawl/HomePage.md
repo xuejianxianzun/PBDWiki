@@ -5,7 +5,7 @@
 
 Clicking this button displays an input box where you can enter or paste a list of work IDs:
 
-<div class="XZInputWrap" id="input1757090876229" style="width: 584px; opacity: 1;"><p class="XZInputInstruction">Enter work IDs. For multiple IDs, separate them with newlines (one ID per line).<br><br>Since this tab displays images, the entered IDs will be treated as image work IDs.</p><div class="XZInputContainer"><textarea class="XZInput" placeholder="10000
+<div class="XZInputWrap" id="input1757090876229"><p class="XZInputInstruction">Enter work IDs. For multiple IDs, separate them with newlines (one ID per line).<br><br>Since this tab displays images, the entered IDs will be treated as image work IDs.</p><div class="XZInputContainer"><textarea class="XZInput" placeholder="10000
 10001
 10002
 10003" rows="10" style="flex-basis: 400px;"></textarea><button class="XZInputButton hasRippleAnimation">
@@ -31,7 +31,7 @@ Clicking this button displays two input boxes sequentially. You can set an ID ra
 
 First, enter the starting ID:
 
-<div class="XZInputWrap" id="input1757091219116" style="width: 584px; opacity: 1;"><p class="XZInputInstruction">You can set a work ID range to crawl all works within it (including start and end IDs).<br>Note: If a single task produces too many crawl results, it may cause the page to crash.<br>If you need to crawl many IDs, consider splitting them into multiple tasks. I recommend crawling no more than 100,000 IDs per batch.<br><br>Since this tab displays images, entered IDs will be treated as image work IDs.<br><br>Enter the starting ID: </p><div class="XZInputContainer"><input class="XZInput" placeholder="10000" type="text" value="" style="flex-basis: 400px;"><button class="XZInputButton hasRippleAnimation">
+<div class="XZInputWrap" id="input1757091219116"><p class="XZInputInstruction">You can set a work ID range to crawl all works within it (including start and end IDs).<br>Note: If a single task produces too many crawl results, it may cause the page to crash.<br>If you need to crawl many IDs, consider splitting them into multiple tasks. I recommend crawling no more than 100,000 IDs per batch.<br><br>Since this tab displays images, entered IDs will be treated as image work IDs.<br><br>Enter the starting ID: </p><div class="XZInputContainer"><input class="XZInput" placeholder="10000" type="text" value="" style="flex-basis: 400px;"><button class="XZInputButton hasRippleAnimation">
       <span>Submit</span>
       <span class="ripple"></span>
     </button><button class="XZInputButton cancel hasRippleAnimation">
@@ -41,7 +41,7 @@ First, enter the starting ID:
 
 Then, enter the ending ID:
 
-<div class="XZInputWrap" id="input1757091349171" style="width: 584px; opacity: 1;"><p class="XZInputInstruction">Enter the ending ID: </p><div class="XZInputContainer"><input class="XZInput" placeholder="20000" type="text" value="" style="flex-basis: 400px;"><button class="XZInputButton hasRippleAnimation">
+<div class="XZInputWrap" id="input1757091349171"><p class="XZInputInstruction">Enter the ending ID: </p><div class="XZInputContainer"><input class="XZInput" placeholder="20000" type="text" value="" style="flex-basis: 400px;"><button class="XZInputButton hasRippleAnimation">
       <span>Submit</span>
       <span class="ripple"></span>
     </button><button class="XZInputButton cancel hasRippleAnimation">

@@ -1070,7 +1070,7 @@
   font-size: 15px;
   max-width: 160px;
   width: 25%;
-  margin: 14px;
+  margin: 14px 0;
   box-sizing: border-box;
   border: 1px solid currentColor;
   width: 100%;
@@ -1137,6 +1137,9 @@
 }
 :root .settingsPanelActionBtn[data-btn-emphasis='primary'][data-btn-intent='danger'] {
   background: var(--settings-panel-btn-danger);
+}
+:root #downloadRecommendedWorks {
+  color: #fff;
 }
 :root .progressTip {
   font-size: 15px;
