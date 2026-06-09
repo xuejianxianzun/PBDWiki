@@ -13,10 +13,9 @@
   <label for="theme3">Dark</label>
 </div>
 
-
 You can choose the downloader's color theme.
 
-- `Auto`: Default. The downloader automatically detects Pixiv's color theme and uses the same.
+- `Auto detect`: the default. The downloader will automatically detect the page background color and Pixiv's color theme to decide whether to use light mode or dark mode.
 - `White`: Light mode
 - `Dark`: Dark mode
 
@@ -25,8 +24,6 @@ You can choose the downloader's color theme.
 Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar and select "Dark mode" from the menu, as shown:
 
 ![](../images/20250909_221310.png)
-
-!> Some users may use [Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh), an extension that displays websites in dark mode. If you want dark mode on Pixiv, use Pixiv's built-in dark mode. If you keep Pixiv in its default light theme and use Dark Reader to display it in dark mode, the downloader's `Auto` option will still use light mode, which may not meet your expectations. You can manually set the downloader's color theme to `Dark`.
 
 ## Background image
 
@@ -57,32 +54,40 @@ Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar a
     </div>
   </div>
 </div>
-
-
-    &nbsp;
-    <span data-xztext="_Alignment">Alignment</span>&nbsp;
-    <input type="radio" name="bgPositionY" id="bgPosition1" class="need_beautify radio" value="center" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="bgPosition1" data-xztext="_Center" class="active">Center</label>
-    <input type="radio" name="bgPositionY" id="bgPosition2" class="need_beautify radio" value="top">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="bgPosition2" data-xztext="_Top">Top</label>
-    <span data-xztext="_Opacity">Opacity</span>&nbsp;
-    <input name="bgOpacity" type="range">
-    </span>
-    </p>
-
 You can set a favorite image as the downloader's background image and adjust its transparency and alignment.
 
 The effect is shown below:
 
-![](../images/20250909_221755.webp)
+![](../images/ui-en-background.webp)
 
-?> The downloader does not include built-in background images, so you need to select one yourself. The background image in the example above is from [92215267](https://www.pixiv.net/artworks/92215267).
-
-?> It's recommended to use a darker image as the background, as bright backgrounds can make text harder to read.
+?> The downloader does not include built-in background images, so you need to select one yourself.
 
 This setting includes buttons and options:
+
+### Select File
+
+Clicking this button opens a file selection dialog, allowing you to choose an image as the background.
+
+?> Supported image formats: `.jpg, .jpeg, .png, .bmp, .webp`.
+
+### Clear
+
+Clicking this button removes the downloader's background image, restoring it to no background.
+
+### Alignment
+
+- `Center`: Aligns the center of the background image with the center of the settings panel. If the image's height exceeds the panel's height, the top and bottom may be cropped.
+- `Top`: Default. Aligns the top of the background image with the top of the settings panel. If the image's height exceeds the panel's height, the bottom may be cropped.
+
+You can adjust the alignment based on the specific image for a better display effect.
+
+### Opacity
+
+You can use this slider to adjust the background image's opacity. The default is `75%`.
+
+?> There is a black background layer beneath the background image, and the image is semi-transparent by default, making it appear darker. This design ensures the text on the settings panel is readable. Adjusting opacity essentially controls how much the background image obscures the black background.
+
+Increasing opacity makes the image closer to its original appearance; decreasing it darkens the image.
 
 ## Highlight keywords
 
@@ -91,16 +96,10 @@ This setting includes buttons and options:
     <span data-xztext="_高亮显示关键字"><span class="key">Highlight</span> keywords</span>
     <span class="gray1"> ? </span>
   </a>
-  <input type="checkbox" name="boldKeywords" class="need_beautify checkbox_switch">
+  <input type="checkbox" name="boldKeywords" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-
-
-The downloader displays keywords in each setting item in blue and bold, for example:
-
-![](../images/20250909_221934.png)
-
-This is because the downloader has many settings, and finding a specific one can take time. This feature improves efficiency.
+Keywords in each setting are highlighted in blue and bold to help users find specific settings more quickly.
 
 

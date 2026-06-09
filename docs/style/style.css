@@ -1,28 +1,4 @@
 :root {
-  --theme-blue: #199df5;
-  --blue-buttons-bg: #0ea8ef;
-  --beautify-blue: #1dacf5;
-  --bg-checkbox-blue: #1fb2fd;
-  --bg-progress-blue: #0eb3f3;
-  --box-shadow-blue: #2ca6df;
-  --box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
-  --dark-box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px;
-  --pixiv-font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI', 'Segeo UI Mono',
-    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-  --mobile-font-family: sans-serif;
-  --line-height: 26px;
-  --color-r18: #f63d5b;
-  --color-ai: #b036f6;
-  --settings-panel-bg: #fff;
-  --settings-panel-bg-white: #fff;
-  --settings-panel-bg-dark: #161a1f;
-  --settings-panel-bg-xzbg: #0a121c;
-  --mask-on-xzbg: rgba(10, 18, 28, 0.3);
-  --white-30: rgba(255, 255, 255, 0.3);
-  --text-shadow-on-xzbg: #003247 0px 0px 2px;
-  --settings-panel-text: #444;
-}
-:root {
   --settings-panel-text: #444;
   --settings-panel-border: #9dd4f9;
   --settings-panel-shadow: 0 0 25px #b4e0f5;
@@ -753,6 +729,9 @@
 :root .option > * {
   line-height: var(--line-height);
   flex-shrink: 0;
+}
+:root .option .fireEvent {
+  height: var(--line-height);
 }
 :root .option .beautify_switch,
 :root .option .beautify_checkbox {
@@ -2305,6 +2284,39 @@ li > ul.app-sub-sidebar > li::before {
   width: 1em;
   margin-left: -1.1em;
   color: #aaa;
+}
+:root {
+  --theme-blue: #199df5;
+  --blue-buttons-bg: #0ea8ef;
+  --beautify-blue: #1dacf5;
+  --bg-checkbox-blue: #1fb2fd;
+  --bg-progress-blue: #0eb3f3;
+  --box-shadow-blue: #2ca6df;
+  --box-shadow: rgba(14, 168, 239, 0.4) 0px 2px 6px;
+  --dark-box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px;
+  --pixiv-font-family: 'Noto Sans SC', 'Noto Sans', 'Segeo UI', 'Segeo UI Mono',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --mobile-font-family: sans-serif;
+  --line-height: 26px;
+  --color-r18: #f63d5b;
+  --color-ai: #b036f6;
+  --settings-panel-bg: #fff;
+  --settings-panel-bg-white: #fff;
+  --settings-panel-bg-dark: #161a1f;
+  --settings-panel-bg-xzbg: #0a121c;
+  --mask-on-xzbg: rgba(10, 18, 28, 0.3);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --text-shadow-on-xzbg: #003247 0px 0px 2px;
+  --settings-panel-text: #444;
+}
+.content {
+  padding-top: 0;
+}
+.markdown-section h2 {
+  margin: 0.8rem 0;
+}
+.markdown-section h3 {
+  margin: 0.6rem 0;
 }
 .red {
   color: #f00;

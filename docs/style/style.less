@@ -1,3 +1,6 @@
+@import './settingsPanel.less';
+@import './wiki.less';
+
 // 这些 less 文件是从下载器里复制过来的，经过了修改和整理，适合在 wiki 里使用。
 :root {
   // 主题色，主要用于标题栏、导航栏、按钮的高亮颜色。它不会在内容区域里大量使用，以免造成视觉疲劳。
@@ -36,8 +39,17 @@
   --settings-panel-text: #444;
 }
 
-@import './settingsPanel.less';
-@import './wiki.less';
+.content{
+  padding-top: 0;
+}
+
+.markdown-section h2{
+  margin: .8rem 0;
+}
+
+.markdown-section h3{
+  margin: .6rem 0;
+}
 
 // 储存通用规则和一些零散的元素的规则
 
