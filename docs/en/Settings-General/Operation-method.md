@@ -13,13 +13,9 @@
   <label for="switchTabBar2" data-xztext="_鼠标点击">Mouse click</label>
 </div>
 
-
-"Tabs" refer to the three tabs at the top of the downloader: "Crawl," "Download," and "More":
-
-![](../images/20250909_221919.png)
-
-- `Mouse hover`: Default. Moving the mouse pointer over a tab title immediately switches to that tab, which is convenient.
-- `Mouse click`: Moving the mouse pointer over a tab title doesn't switch tabs; you need to click the title to switch. This is for users who find the hover method causes accidental switches.
+“Tab” refers to the downloader’s navigation categories. You can choose how to activate a navigation category:
+- `Mouse over`: the default. Moving the mouse pointer over a title will immediately switch tabs, which is convenient.
+- `Mouse click`: hovering over a title will not switch tabs; you must click the title to switch. This option is for users who find mouse-over causes accidental switches.
 
 ## Click the setting card to toggle its switch status
 
@@ -30,11 +26,11 @@
   <input type="checkbox" name="clickOptionCardToToggleSwitch" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
   <button type="button" class="gray1 textButton showMsgBtn" data-title="_点击设置卡片时切换它的开关状态" data-msg="_点击设置卡片时切换它的开关状态的说明" data-xztext="_帮助">Help</button>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
+</div>
+
+If a settings card contains a toggle switch (like this card), clicking the blank area of the card will toggle that switch.
+
+If you’re worried about accidental clicks, you can disable this setting.
 
 ## Open Wiki link when clicking setting name
 
@@ -46,5 +42,7 @@
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
+Each setting name is a hyperlink; clicking it will open the corresponding Wiki page.
 
+If you’re worried about accidental clicks, you can disable this setting.
 
