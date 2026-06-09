@@ -20,7 +20,7 @@ What is the difference between the two options?
 
 If you frequently need to view logs, choosing `Show` will be more convenient. However, this option may affect the browsing experience in certain cases: if the page has not been scrolled yet, displaying the log area will cause the page content to move downward. Illustration:
 
-![](./images/20260303_005450.png)
+![](../images/20260610_003207.webp)
 
 If the page has already been scrolled down some distance, there will be no such effect (the page content will not move downward).
 
@@ -55,12 +55,10 @@ PS: No matter which option you choose, when you want to view the logs, you can a
     </div>
     <div class="optionLine">
       <span data-xztext="_排除关键字">Exclude keywords</span>&nbsp;
-      <input type="text" name="exportLogExclude" class="setinput_style blue setinput_tag">
+      <input type="text" name="exportLogExclude" class="setinput_style blue setinput_tag" value="404,429,500">
     </div>
   </div>
 </div>
-
-
 
 This feature exports the logs displayed at the top of the webpage to an HTML file.
 
@@ -70,3 +68,24 @@ This feature exports the logs displayed at the top of the webpage to an HTML fil
 
 Sub-options:
 
+### Export Timing
+
+- `Crawl complete`: Exports logs when crawling is complete. This includes only crawl-stage logs.
+- `Download complete`: Exports logs when downloading is complete. This includes the full log.
+
+### Log Type
+
+- `Normal`: Exports normal-level logs (non-red logs).
+- `Error`: Exports error-level logs (red logs).
+
+Both options can be enabled simultaneously.
+
+?> The downloader has four log levels, each with a different color. Only red logs are error logs.
+
+### Exclude Keywords
+
+You can specify multiple keywords to exclude.
+
+If a log contains **any** of these keywords, the downloader will not export it, allowing you to filter out unwanted logs.
+
+The default value `404,429,500` excludes some error messages.
