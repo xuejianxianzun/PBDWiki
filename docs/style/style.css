@@ -2120,6 +2120,12 @@ body {
   width: 25%;
   max-width: 360px;
 }
+.sidebar-nav li > ul {
+  display: none;
+}
+.sidebar-nav li.sidebar-section-open > ul {
+  display: block;
+}
 .sidebar ul li a {
   color: #333;
   font-size: 15px;

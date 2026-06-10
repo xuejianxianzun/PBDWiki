@@ -169,11 +169,11 @@ var Form = /** @class */ (function () {
                     if (!switchEl) {
                         return;
                     }
-                    // 但是有些设置本身没有总开关，子选项里却有开关(例如"标签别名")，所以第一个开关可能是子选项里的开关，需要进一步判断
-                    // 要求这个 input 的前一个元素是 a.settingNameStyle 标签(也就是设置名称)，这样才能确保它是总开关，而不是子选项的开关
-                    // 现在我没有执行这个判断（这是有意为之的），这意味着：
-                    // 点击这个设置卡片的空白区域时，总是会切换第一个开关(不管它是总开关还是子开关)
-                    switchEl.click();
+                    // 在 wiki 里由于没有 settings 对象，所以需要点击 span 元素来显示/隐藏子选项区域
+                    var span = switchEl.nextElementSibling;
+                    if (span.matches('.beautify_switch')) {
+                        span.click();
+                    }
                 }
             });
         });
