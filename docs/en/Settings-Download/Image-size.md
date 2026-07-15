@@ -1,7 +1,7 @@
-## Image dimensions when downloading
+## Image dimensions when downloading illustrations, manga, and Ugoira
 
 <div class="option settingsPanel_optionCard" data-no="64" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Image-size?flag=64" target="_blank" class="settingNameStyle" data-xztext="_下载图片时的尺寸" data-bind-click="true">Image <span class="key">dimensions</span> when downloading</a>
+  <a href="/en/Settings-Download/Image-size?flag=64" target="_blank" class="settingNameStyle" data-xztext="_下载图片时的尺寸" data-bind-click="true">Image <span class="key">dimensions</span> when downloading illustrations, manga, and Ugoira</a>
   <div class="optionLine">
     <input type="radio" name="imageSize" id="imageSize1" class="need_beautify radio" value="original" checked="">
     <span class="beautify_radio" tabindex="0"></span>

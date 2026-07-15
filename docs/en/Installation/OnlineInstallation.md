@@ -21,7 +21,7 @@ Firefox browser can install this extension from [Add-Ons](https://addons.mozilla
 
 You can now install this extension offline using the Microsoft Edge Canary browser. For specific steps, please refer to:
 
-[Installing on Microsoft Edge Canary Browser](/en/MicrosoftEdgeCanary.md)
+[Installing on Microsoft Edge Canary Browser](/en/Installation/MicrosoftEdgeCanary)
 
 *Previously, the Kiwi browser on Android supported online installation of this extension, but it has stopped development and been removed from Google Play, so it is no longer recommended.*
 

@@ -119,9 +119,27 @@ Currently, regardless of whether this option is enabled, the downloader always a
   <a href="/#/en/Settings-Download/Novels?flag=70" target="_blank" class="settingNameStyle" data-xztext="_下载小说里的内嵌图片" data-bind-click="true">Download <span class="key">embedded</span> images in novels</a>
   <input type="checkbox" name="downloadNovelEmbeddedImage" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
+  <div class="subOptionWrap flexBasis100" data-show="downloadNovelEmbeddedImage" style="display: inline-flex;">
+    <span class="mr4" data-xztext="_图片尺寸">Image size</span>
+    <input type="radio" name="novelEmbeddedImageSize" id="novelEmbeddedImageSizeOriginal" class="need_beautify radio" value="original" checked="">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelEmbeddedImageSizeOriginal" data-xztext="_原图" class="active">Original</label>
+    <input type="radio" name="novelEmbeddedImageSize" id="novelEmbeddedImageSize1200" class="need_beautify radio" value="1200">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelEmbeddedImageSize1200">1200px</label>
+    <input type="radio" name="novelEmbeddedImageSize" id="novelEmbeddedImageSize480" class="need_beautify radio" value="480">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelEmbeddedImageSize480">480px</label>
+    <input type="radio" name="novelEmbeddedImageSize" id="novelEmbeddedImageSize240" class="need_beautify radio" value="240">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelEmbeddedImageSize240">240px</label>
+    <input type="radio" name="novelEmbeddedImageSize" id="novelEmbeddedImageSize128" class="need_beautify radio" value="128">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelEmbeddedImageSize128">128px</label>
+  </div>
 </div>
 
-Some novels have images inserted in the body (mainly R-18 novels); these are embedded images.
+Some novels have images inserted in the body; these are embedded images.
 
 The downloader saves embedded images by default. There are differences depending on the novel save format.
 
@@ -133,7 +151,22 @@ When saving novels as EPUB, images are not saved separately but stored inside th
 
 ![](../images/20250910_232703.webp)
 
-!> For large PNG format embedded images, some novel readers may only display part of them. This is an issue with the reader, not the downloader.
+Note: For large PNG format embedded images, some novel readers may only display part of them. This is an issue with the reader, not the downloader.
+
+**Sub-options:**
+
+### Image size
+
+There are five sizes to choose from:
+- `Original`
+- `1200px`
+- `480px`
+- `240px`
+- `128px`
+
+Note: Even if you choose an image size smaller than 1200px, some images will still use the 1200px size. This is normal because there are two kinds of images in novels:
+1. Images uploaded by the author to the novel can use all sizes.
+2. Images referenced from illustration works have a minimum available size of 1200px.
 
 ## Automatically merge novel series
 
@@ -237,6 +270,25 @@ During the development of this feature, I conducted several large-scale crawl te
 The above data volume is relatively small, just for reference, to have a rough idea.
 
 Due to too many requests, I was warned by Pixiv several times, and one account was even banned. So I gradually increased the interval time to reduce the possibility of being warned.
+
+## When merging a novel series, save all novels in the series if one matches the filter conditions
+
+<div class="option settingsPanel_optionCard" data-no="104" data-pin-bound="true" style="display: flex;">
+  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download/Novels?flag=104" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说">When merging series novels, as long as one novel meets the <span class="key">filtering criteria</span>, all novels in the series will be saved</span>
+  </a>
+  <input type="checkbox" name="saveAllSeriesNovelsIfOneMatches" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <button type="button" class="textButton gray1 showMsgBtn" data-title="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说" data-msg="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说的提示" data-xztext="_帮助">Help</button>
+</div>
+
+Use this setting when you have configured filter conditions and want the downloader to merge all novels in a series as long as one novel meets those conditions.
+
+For example:
+
+Suppose you set the bookmark count to more than 100, and a series has 10 novels, only 1 of which meets the condition.
+
+By default (with this setting disabled), the downloader merges only that 1 novel. If you enable this setting, it merges all novels in the series.
 
 ## Split threshold when merging series novels
 

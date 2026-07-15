@@ -61,6 +61,7 @@
   * [User page](en/Buttons-Extra-features/User-page)
   * [SearchPage](en/Buttons-Extra-features/SearchPage)
   * [Bookmark page](en/Buttons-Extra-features/Bookmark-page)
+  * [Following page](en/Buttons-Extra-features/Following-page)
 * [Convenience Features](en/Convenience-Features)
 * [Usage Tips](en/Usage-Tips)
 * [Using Secondary Account for Downloading](en/Using-Secondary-Account-for-Downloading)

@@ -16,5 +16,5 @@ Crawls all novels in the series and merges them into a single file.
 
 - Based on the [Novel Save Format](/en/Settings-Download/Novels?id=save-the-novel-as) setting, the downloader generates a TXT or EPUB file.
 - If you want to change the names of the merged files, see [Naming rule when merging novel series](/en/Settings-Naming/Folder-and-file-names?id=naming-rule-when-merging-novel-series).
-- When merging a novel series, the downloader panel does not display a progress bar, but you can check some progress information in the log.
-
+- When you click this button to merge a novel series, the settings panel does not display a download progress bar because this is not a normal download task. However, you can check some progress information in the log.
+- On a novel series page, you can choose to merge selected novels rather than all novels. First use "Manually select works" to select some novels, then click "Merge series of novels" to merge them.

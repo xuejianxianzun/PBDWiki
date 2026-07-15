@@ -515,8 +515,8 @@
     "no": 64,
     "nameKey": "_下载图片时的尺寸",
     "name": {
-      "zh-cn": "下载图片时的尺寸",
-      "en": "Image dimensions when downloading"
+      "zh-cn": "下载插画、漫画、动图时的尺寸",
+      "en": "Image dimensions when downloading illustrations, manga, and Ugoira"
     }
   },
   {
@@ -573,6 +573,14 @@
     "name": {
       "zh-cn": "自动合并系列小说",
       "en": "Automatically merge novel series"
+    }
+  },
+  {
+    "no": 104,
+    "nameKey": "_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说",
+    "name": {
+      "zh-cn": "在合并系列小说时，只要有一篇小说符合过滤条件，就保存该系列里的所有小说",
+      "en": "When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved"
     }
   },
   {

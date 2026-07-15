@@ -6,3 +6,4 @@ On a few pages, the "Additional features" area on the downloader's home page con
 * [User page](en/Buttons-Extra-features/User-page)
 * [SearchPage](en/Buttons-Extra-features/SearchPage)
 * [Bookmark page](en/Buttons-Extra-features/Bookmark-page)
+* [Following page](en/Buttons-Extra-features/Following-page)

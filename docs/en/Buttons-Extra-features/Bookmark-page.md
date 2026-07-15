@@ -38,23 +38,33 @@ A special tag, `未分類`, includes all uncategorized works (this tag name is f
 
 <button id="removeTagsFromAllWorksOnPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="warning"><span data-xztext="_移除本页面中所有作品的标签">Remove tags from all works on this page</span><span class="ripple"></span></button>
 
-
 This button does the opposite of the previous one. Clicking it crawls all works on the **current page** (one page only) and removes their tags, making them uncategorized.
 
 ?> This does not unbookmark the works; it only removes their associated tags.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page.
 
+## Remove tags from all works
+
+<button id="removeTagsFromAllWorks" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="warning"><span data-xztext="_移除所有作品的标签">Remove tags from all works</span><span class="ripple"></span></button>
+
+This button functions similarly to the previous one, except that it removes the tags from all bookmarked works, instead of only processing works on the current page.
+
 ## Unbookmark all works on this page
 
-<button id="unBookmarkAllWorksOnPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_取消收藏本页面的所有作品">Unbookmark all works on this page</span><span class="ripple"></span></button>
-
+<button id="unBookmarkWorksOnThisPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_取消收藏本页面的所有作品">Unbookmark all works on this page</span><span class="ripple"></span></button>
 
 Click this button, and the downloader crawls all works on the **current page** (one page only) and removes them from your bookmarks.
 
 ?> To prevent accidental operations, this button processes only one page at a time.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page.
+
+## Unbookmark all works
+
+<button id="unBookmarkAllWorks" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_取消收藏所有作品">Unbookmark all works</span><span class="ripple"></span></button>
+
+This button functions similarly to the previous one, except that it will cancel all bookmarked works instead of only those on the current page.
 
 ## Find all deleted works
 

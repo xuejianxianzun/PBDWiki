@@ -72,11 +72,27 @@
     }
   },
   {
-    "id": "unBookmarkAllWorksOnPage",
+    "id": "removeTagsFromAllWorks",
+    "nameKey": "_移除所有作品的标签",
+    "name": {
+      "zh-cn": "移除所有作品的标签",
+      "en": "Remove tags from all works"
+    }
+  },
+  {
+    "id": "unBookmarkWorksOnThisPage",
     "nameKey": "_取消收藏本页面的所有作品",
     "name": {
       "zh-cn": "取消收藏本页面中的所有作品",
       "en": "Unbookmark all works on this page"
+    }
+  },
+  {
+    "id": "unBookmarkAllWorks",
+    "nameKey": "_取消收藏所有作品",
+    "name": {
+      "zh-cn": "取消收藏所有作品",
+      "en": "Unbookmark all works"
     }
   },
   {

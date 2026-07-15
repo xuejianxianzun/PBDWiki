@@ -72,13 +72,7 @@
       "zh-cn": "按钮-开始抓取/关注页面",
       "en": "Buttons-Start-crawl/Following-page"
     },
-    "ids": [
-      "startCrawlingInFollowingPage",
-      "exportFollowingListCSV",
-      "exportFollowingListJSON",
-      "batchFollowUser",
-      "findDeactivatedUsers"
-    ]
+    "ids": ["startCrawlingInFollowingPage"]
   },
   {
     "page": {
@@ -162,11 +156,25 @@
     "ids": [
       "addTagToUnmarkedWork",
       "removeTagsFromAllWorksOnPage",
-      "unBookmarkAllWorksOnPage",
+      "removeTagsFromAllWorks",
+      "unBookmarkWorksOnThisPage",
+      "unBookmarkAllWorks",
       "findBookmark404Works",
       "unBookmarkAll404Works",
       "exportBookmarkList",
       "importBookmarkList"
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-附加功能/关注页面",
+      "en": "Buttons-Extra-features/Following-page"
+    },
+    "ids": [
+      "exportFollowingListCSV",
+      "exportFollowingListJSON",
+      "batchFollowUser",
+      "findDeactivatedUsers"
     ]
   }
 ]

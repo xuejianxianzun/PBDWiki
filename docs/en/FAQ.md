@@ -51,6 +51,17 @@ Use a slash `/` in the naming rule, and the part before the slash will be used a
 
 See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=Creating-Folders)
 
+## Why Wasn't a Folder Created?
+
+*No folder created/No directory created*
+
+The default naming rule, `pixiv/{user}-{user_id}/{id}-{title}`, creates folders; each slash `/` marks where a folder is created.
+
+If no folders are created after downloading files (and the files are saved directly in the browser's download directory), check the following:
+- Did you change the naming rule and omit slashes `/` for creating folders? If so, add slashes `/` to create folders.
+- If the downloaded filenames are abnormal and the downloader displays a "Filename abnormal" notification, resolve the filename issue as instructed.
+- You may have enabled [Save file to the user's last selected location](/en/Settings-Download/Download-behavior?id=save-file-to-the-user39s-last-selected-location) in "Download behavior." If so, disable it.
+
 ## How to Save All Works of an Artist/User to the Same Folder
 
 *How to group an artist's works together?*

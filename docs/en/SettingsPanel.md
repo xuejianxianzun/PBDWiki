@@ -37,6 +37,18 @@ From top to bottom, they are:
 
 PS: When you search, a temporary `Search` item appears in the navigation area to show the results. It is not shown normally.
 
+## Download Summary Bar
+
+After crawling is complete, the downloader displays a download summary bar below the navigation area:
+
+![](images/ui-en-1.png)
+
+Previously, the downloader displayed download progress only on the Home page (dashboard), so users could not see it when they were in another navigation category. The download summary bar is always displayed, making it convenient to check download progress at any time.
+
+It has two rows:
+- The first row displays the download status and task progress.
+- The second row displays three clickable buttons: start downloading, pause downloading, and stop downloading.
+
 ## Get Help
 
 Some settings have a question mark after their names. Hovering the mouse over the name will display a simple tooltip, for example:
