@@ -326,9 +326,14 @@ Most operating systems have a file name length limit of 255 characters. If the f
 
 If you encounter this issue, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
 
-**Reason 4**: The download location may not exist.
+**Reason 4**: The browser's download location may be invalid, preventing the browser from saving files and causing it to display a "Save As" dialog.
 
-If your browser's download location is `D:\downloads` and this folder no longer exists, a "Save As" dialog will appear.
+Here, "invalid" can refer to several situations, for example:
+
+- The download directory does not exist. It may not have been created yet, or it may have been moved or deleted.
+- If the download directory is on a local disk, check whether the disk is damaged or has another access issue.
+- If the download directory is a network location, it may currently be inaccessible.
+- A folder in the save path is a symbolic link. For example, the downloader creates a `pixiv` subfolder in the download directory by default. Some users actually store the `pixiv` folder elsewhere and create a symbolic link to it in the download directory. The browser may be unable to save files in a symbolic link or create subfolders within one, causing it to display a "Save As" dialog.
 
 ## What to Do If File Names Are Too Long
 
