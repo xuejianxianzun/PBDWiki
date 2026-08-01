@@ -240,6 +240,12 @@ Example effect:
 - Filenames may exceed the operating system's length limit, often due to tags like `{tags}`. If a filename is too long, the file may not save automatically, and the browser may show a save-as dialog. To address this, enable the "Filename Length Limit" option under the "More" tab in the "Naming" category.
 - When a filename is too long, some browsers may truncate the excess to save the file. This varies by case. Chrome on Windows does this, but browsers on Linux or Android may not. Saving to remote locations (e.g., network drives) may also prevent truncation, even in Chrome.
 
+The available values for `{page_type}` (page type name) are as follows:
+
+```
+Unsupported, Home, Artwork, UserHome, BookmarkLegacy, Bookmark, ArtworkSearch, AreaRanking, ArtworkRanking, Pixivision, BookmarkDetail, NewArtworkFromFollowing, Discover, NewArtworkFromAllUsers, Novel, NovelSeries, NovelSearch, NovelRanking, NewNovelFromFollowing, NewNovelFromAllUsers, ArtworkSeries, Following, Request, Unlisted, DiscoverUsers, Dashboard, Contest, SearchUsers
+```
+
 ### Some Examples
 
 #### Remove the p tag in {id}

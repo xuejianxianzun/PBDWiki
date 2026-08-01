@@ -93,7 +93,7 @@ When viewing a preview image, you can use the following shortcuts:
 - `C`urrent: Download the currently displayed image (if the work has multiple images, only the current one is downloaded)
 - `D`ownload: Download the entire previewed work (if the work has multiple images, all are downloaded)
 - `Alt` + `C` copies the current preview image and work information
-- `Esc`: Close the preview image
+- `Esc`: Close the preview image. You can also close it by left-clicking the preview image
 - `←` `↑`: Previous image
 - `→` `↓`: Next image
 - `Space`: Next image
