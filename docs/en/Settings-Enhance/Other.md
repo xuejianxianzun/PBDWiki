@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="86" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Other?flag=86" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮关注的用户的说明" data-tip="The names of users you are following will have a yellow background, or be displayed in yellow. &lt;br&gt;This is convenient for you to confirm whether you follow a certain user." data-bind-click="true">
     <span data-xztext="_高亮关注的用户"><span class="key">Highlight</span> following users</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="highlightFollowingUsers" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
@@ -72,7 +72,7 @@ To prevent the border from being covered or clipped by other elements, the downl
 You can choose whether to include tags for the work, and whether to make it public.&lt;br&gt;
 This setting is also used when you use the Downloader to bookmark works in batches." data-bind-click="true">
     <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> feature (✩)</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <div class="optionLine">
     <span data-xztext="_是否添加标签" class="mr4">Whether to add tags</span>
@@ -136,7 +136,7 @@ You can customize the data and format to be copied.
 &lt;br&gt;
 On the work page, and when previewing a work, you can use the shortcut key &lt;span class=&quot;blue&quot;&gt;Alt + C&lt;/span&gt; to copy." data-bind-click="true">
     <span data-xztext="_复制按钮"><span class="key">Copy</span> button</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <div class="optionLine">
     <span data-xztext="_复制内容" class="mr4">Copy content</span>
@@ -149,7 +149,7 @@ On the work page, and when previewing a work, you can use the shortcut key &lt;s
     <input type="checkbox" name="copyFormatHtml" id="setCopyFormatHtml" class="need_beautify checkbox_common" checked="">
     <span class="beautify_checkbox" tabindex="0"></span>
     <label for="setCopyFormatHtml" class="active">text/html</label>
-    <button type="button" class="gray1 textButton showMsgBtn" data-title="_复制内容" data-msg="_对复制的内容的说明" data-xztext="_帮助">Help</button>
+    <button type="button" class="gray textButton showMsgBtn" data-title="_复制内容" data-msg="_对复制的内容的说明" data-xztext="_帮助">Help</button>
   </div>
   <div class="optionLine nowrap">
     <span class="mr4" data-xztext="_图片尺寸2">Image size</span>
@@ -162,7 +162,7 @@ On the work page, and when previewing a work, you can use the shortcut key &lt;s
   </div>
   <div class="optionLine nowrap">
     <span data-xztext="_文本格式" class="mr4">Text format</span>
-    <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#copyWorkInfoFormatTip" data-for-no="89" data-xztext="_提示">Tip</button>
+    <button type="button" class="gray textButton toggleArea" data-toggle-target="#copyWorkInfoFormatTip" data-for-no="89" data-xztext="_提示">Tip</button>
     <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}">id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}</textarea>
   </div>
   <p class="tip namingTipArea" id="copyWorkInfoFormatTip">

@@ -4,7 +4,7 @@
   <a href="/#/en/Settings-Download/Ugoira?flag=65" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_动图保存格式">Save the <span class="key">ugoira</span> work as</span>
   </a>
-  <button type="button" class="textButton gray1 showMsgBtn" data-title="_动图保存格式" data-msg="_动图保存格式的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="textButton gray showMsgBtn" data-title="_动图保存格式" data-msg="_动图保存格式的说明" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap flexBasis100" style="display: inline-flex">
     <div class="optionLine">
       <input type="checkbox" name="ugoiraSaveAsWebP" id="ugoiraSaveAsWebP" class="need_beautify checkbox_common" checked="">
@@ -62,7 +62,7 @@ Click the `Help` button on the right side of this setting to view the detailed e
     It is recommended not to exceed 3.
     " data-bind-click="true">
     <span data-xztext="_同时转换多少个动图">How many animations are <span class="key">converted</span> at the same time</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="text" name="convertUgoiraThread" class="setinput_style blue" value="1">
 </div>

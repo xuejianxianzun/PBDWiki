@@ -7,8 +7,8 @@
   <input type="text" name="setWantWork" class="setinput_style blue" value="-1">
   <button type="button" class="textButton grayButton mr0" role="setMin">1</button>
   <button type="button" class="textButton grayButton" role="setMax">-1</button>
-  <span class="gray1" data-xztext="_负1或者大于0" role="tip">-1, or greater than 0</span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_抓取多少作品" data-msg="_抓取多少作品的提示" data-xztext="_帮助">Help</button>
+  <span class="gray" data-xztext="_负1或者大于0" role="tip">-1, or greater than 0</span>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_抓取多少作品" data-msg="_抓取多少作品的提示" data-xztext="_帮助">Help</button>
 </div>
 
 For pages where downloading is **based on works**, this setting will be displayed. You can set how many works to crawl.
@@ -36,8 +36,8 @@ For example: If you set to crawl 10 works, and 6 of them are excluded, the downl
   <input type="text" name="setWantPage" class="setinput_style blue" value="-1">
   <button type="button" class="textButton grayButton mr0" role="setMin"></button>
   <button type="button" class="textButton grayButton" role="setMax"></button>
-  <span class="gray1" data-xztext="_负1或者大于0" role="tip">-1, or greater than 0</span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_抓取多少页面" data-msg="_抓取多少页面的提示" data-xztext="_帮助">Help</button>
+  <span class="gray" data-xztext="_负1或者大于0" role="tip">-1, or greater than 0</span>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_抓取多少页面" data-msg="_抓取多少页面的提示" data-xztext="_帮助">Help</button>
 </div>
 
 When you are on **paginated list pages**, you will see this setting. You can set how many pages to crawl.
@@ -55,7 +55,7 @@ The downloader always starts crawling **from the current page** (including the c
 <div class="option settingsPanel_optionCard" data-no="2" data-pin-bound="true">
   <a href="/#/en/Settings-Crawl/Crawl-scope?flag=2" target="_blank" class="has_tip settingNameStyle" data-xztip="_必须大于0" data-tip="must be greater than 0" data-bind-click="true">
     <span data-xztext="_抓取每个用户最新的几个作品">Crawl the <span class="key">latest</span> few works of each user</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="crawlLatestFewWorks" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>

@@ -25,7 +25,7 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
   </a>
   <input type="checkbox" name="autoStartDownload" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
 </div>
 
 
@@ -50,7 +50,7 @@ When crawling on a **search page** with the [Preview filter results on search pa
 <div class="option settingsPanel_optionCard" data-no="53" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-behavior?flag=53" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载之后收藏作品的提示" data-tip="After you download a file, the downloader will automatically bookmark the work." data-bind-click="true">
     <span data-xztext="_下载之后收藏作品"><span class="key">Bookmark</span> works after downloading</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="bmkAfterDL" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -135,7 +135,7 @@ If the interval time is set to 0, the downloader will not add delay time.&lt;br&
 If set to 1 second (default value), then up to 3600 crawl results will be downloaded per hour (not counting attached download files, such as novel cover images and embedded images).&lt;br&gt;
 This is because when continuously downloading many files (especially novels), your Pixiv account may be warned or banned. Setting the interval time can alleviate this issue.&lt;br&gt;" data-bind-click="true">
     <span data-xztext="_下载间隔">Download <span class="key">interval</span></span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="downloadIntervalSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -273,7 +273,7 @@ Note: If you also enable `File download order` and `Prioritize downloading Ugoir
 <div class="option settingsPanel_optionCard" data-no="59" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-behavior?flag=59" target="_blank" class="has_tip settingNameStyle" data-xztip="_文件体积限制的说明" data-tip="If a file does not meet the required size, the downloader will not download it." data-bind-click="true">
     <span data-xztext="_文件体积限制">File <span class="key">size</span> limit</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="sizeSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -298,11 +298,11 @@ When the downloader starts downloading a file, it can retrieve its size. If it d
 <div class="option settingsPanel_optionCard" data-no="60" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-behavior?flag=60" target="_blank" class="has_tip settingNameStyle" data-xztip="_使用前请先查看提示" data-tip="View the tip before use" data-bind-click="true">
     <span data-xztext="_把文件保存到用户上次选择的位置">Save file to the user's last <span class="key">selected</span> location</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_把文件保存到用户上次选择的位置" data-msg="_把文件保存到用户上次选择的位置的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_把文件保存到用户上次选择的位置" data-msg="_把文件保存到用户上次选择的位置的说明" data-xztext="_帮助">Help</button>
 </div>
 
 This setting is designed for users who prefer to **save files manually** with the `Save As` dialog and want the downloader to remember the last location they chose.
@@ -345,7 +345,7 @@ a.click()
 <div class="option settingsPanel_optionCard" data-no="61" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-behavior?flag=61" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载完成后显示通知的说明" data-tip="Show a system notification when all files have been downloaded. May require notification permission." data-bind-click="true">
     <span data-xztext="_下载完成后显示通知">Show <span class="key">notification</span> after download is complete</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>

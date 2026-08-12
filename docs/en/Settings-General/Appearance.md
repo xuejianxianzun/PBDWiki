@@ -30,7 +30,7 @@ Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar a
 <div class="option settingsPanel_optionCard" data-no="99" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-General/Appearance?flag=99" target="_blank" class="has_tip settingNameStyle" data-xztip="_背景图片的说明" data-tip="You can select a local image as the background image of the downloader." data-bind-click="true">
     <span data-xztext="_背景图片"><span class="key">Background</span> image</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="bgDisplay" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -94,7 +94,7 @@ Increasing opacity makes the image closer to its original appearance; decreasing
 <div class="option settingsPanel_optionCard" data-no="100" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-General/Appearance?flag=100" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮显示关键字的说明" data-tip="Highlight the keywords in each setting name so that you can quickly find the settings you need." data-bind-click="true">
     <span data-xztext="_高亮显示关键字"><span class="key">Highlight</span> keywords</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="boldKeywords" class="need_beautify checkbox_switch" checked>
   <span class="beautify_switch" tabindex="0"></span>

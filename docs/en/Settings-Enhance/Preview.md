@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="75" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Preview?flag=75" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的说明" data-tip="When you hover the mouse over the image thumbnail, the downloader can display a larger image." data-bind-click="true">
     <span data-xztext="_预览作品"><span class="key">Preview</span> works</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="PreviewWork" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
@@ -23,7 +23,7 @@
       <label for="checkBlockTagsForPreviewWork" data-xztext="_检查屏蔽的标签">Check blocked tags</label>
       <input type="checkbox" name="checkBlockTagsForPreviewWork" id="checkBlockTagsForPreviewWork" class="need_beautify checkbox_switch">
       <span class="beautify_switch" tabindex="0"></span>
-      <button type="button" class="gray1 textButton showMsgBtn" data-title="_检查屏蔽的标签" data-msg="_检查屏蔽的标签的帮助" data-xztext="_帮助">Help</button>
+      <button type="button" class="gray textButton showMsgBtn" data-title="_检查屏蔽的标签" data-msg="_检查屏蔽的标签的帮助" data-xztext="_帮助">Help</button>
     </div>
     <div class="optionLine">
       <label for="wheelScrollSwitchImageOnPreviewWork" class="has_tip active" data-xztext="_使用鼠标滚轮切换作品里的图片" data-xztip="_这可能会阻止页面滚动" data-tip="This might stop the page from scrolling">Use the mouse wheel to switch images in multi-image works</label>
@@ -55,7 +55,7 @@
       <label for="prevWorkSize2" data-xztext="_普通" class="active">Regular</label>
     </div>
     <div class="optionLine">
-      <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#previewWorkShortcutTip" data-for-no="75" data-xztext="_快捷键列表">Shortcut list</button>
+      <button type="button" class="gray textButton toggleArea" data-toggle-target="#previewWorkShortcutTip" data-for-no="75" data-xztext="_快捷键列表">Shortcut list</button>
     </div>
   </div>
   <p class="tip" id="previewWorkShortcutTip">
@@ -202,7 +202,7 @@ The original image width is 4093 px, so the display area is larger:
       <label for="showOriginImageSize2" data-xztext="_普通">Regular</label>
     </div>
     <div class="optionLine">
-      <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#showOriginImageShortcutTip" data-for-no="76" data-xztext="_快捷键列表">Shortcut list</button>
+      <button type="button" class="gray textButton toggleArea" data-toggle-target="#showOriginImageShortcutTip" data-for-no="76" data-xztext="_快捷键列表">Shortcut list</button>
     </div>
   </div>
   <p class="tip" id="showOriginImageShortcutTip">
@@ -252,7 +252,7 @@ Regular images have a maximum size of 1200 px, while original images may be larg
 <div class="option settingsPanel_optionCard" data-no="77" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Preview?flag=77" target="_blank" class="has_tip settingNameStyle" data-xztip="_预览作品的详细信息的说明" data-tip="Mouse over the thumbnail of the work to view the work data" data-bind-click="true">
     <span data-xztext="_预览作品的详细信息">Preview the <span class="key">details</span> of the work</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="PreviewWorkDetailInfo" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>

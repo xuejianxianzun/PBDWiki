@@ -626,7 +626,7 @@
 :root .fwb {
   font-weight: 700;
 }
-:root .gray1 {
+:root .gray {
   color: #777;
 }
 :root .hidden {
@@ -1928,7 +1928,7 @@
 .centerWrap.theme-dark .tip {
   color: #fff;
 }
-.centerWrap.theme-dark .gray1 {
+.centerWrap.theme-dark .gray {
   color: #bbb;
 }
 .centerWrap.theme-dark .blue,
@@ -1988,7 +1988,7 @@
 .centerWrap.xzBG .tip {
   color: #fff;
 }
-.centerWrap.xzBG .gray1,
+.centerWrap.xzBG .gray,
 .centerWrap.xzBG .centerWrap_top_btn {
   color: #eee !important;
 }

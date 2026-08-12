@@ -7,7 +7,7 @@
   <label for="useTagAliasForTagsNamingRule" data-xztext="_应用到文件名里的tags系列标记">{tags} series tokens applied to the file name</label>
   <input type="checkbox" name="useTagAliasForTagsNamingRule" id="useTagAliasForTagsNamingRule" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_标签别名" data-msg="_标签别名的帮助" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_标签别名" data-msg="_标签别名的帮助" data-xztext="_帮助">Help</button>
   <slot data-name="setTagAliasSlot"><span class="setUserNameWrap setTagAliasWrap theme-white">
     <span class="controlBar">
     <span class="total">0</span>
@@ -58,7 +58,7 @@ There is a `Help` button on the right side of this setting. Click it to view the
     You can also set aliases for users. &lt;br&gt;
     When you use the {user} tag in the naming rule, the downloader will give priority to the name you set." data-bind-click="true">
     <span data-xztext="_自定义用户名">Customize <span class="key">username</span></span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <slot data-name="setUserNameSlot"><span class="setUserNameWrap theme-white">
     <span class="controlBar">

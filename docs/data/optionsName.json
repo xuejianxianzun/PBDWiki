@@ -832,6 +832,22 @@
     }
   },
   {
+    "no": 105,
+    "nameKey": "_当你修改设置时其他标签页",
+    "name": {
+      "zh-cn": "当你修改设置时，其他标签页",
+      "en": "Other tabs when you change settings"
+    }
+  },
+  {
+    "no": 106,
+    "nameKey": "_自动导出设置",
+    "name": {
+      "zh-cn": "自动导出设置",
+      "en": "Automatically export settings"
+    }
+  },
+  {
     "no": 103,
     "nameKey": "_管理设置",
     "name": {

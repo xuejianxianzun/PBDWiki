@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="15" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Crawl/Tags-and-title?flag=15" target="_blank" class="has_tip settingNameStyle" data-xztip="_必须tag的提示文字" data-tip="Before downloading, you can set the tag that must be included. Not case sensitive; If you need to set multiple tags, you can use comma (,) separated." data-bind-click="true">
     <span data-xztext="_必须含有tag"><span class="key">Include</span> tag</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="needTagSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -40,13 +40,13 @@ You can require works to contain certain tags. Works without these tags will not
 <div class="option settingsPanel_optionCard" data-no="16" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Crawl/Tags-and-title?flag=16" target="_blank" class="has_tip settingNameStyle" data-xztip="_排除tag的提示文字" data-tip="Before downloading, you can set the tag you want to exclude. &lt;br&gt;Not case sensitive; If you need to set multiple tags, you can use comma (,) separated. &lt;br&gt;The excluded tag takes precedence over the included tag" data-bind-click="true">
     <span data-xztext="_不能含有tag"><span class="key">Exclude</span> tag</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="notNeedTagSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="notNeedTagSwitch" style="display: none;">
     <span data-xztext="_匹配模式">Match mode: </span>
-    <span class="gray1" data-xztext="_任一">One</span>
+    <span class="gray" data-xztext="_任一">One</span>
     <span class="verticalSplit"></span>
     <input type="radio" id="tagMatchMode2" class="need_beautify radio" name="tagMatchMode" value="whole" checked="">
     <span class="beautify_radio" tabindex="0"></span>
@@ -71,7 +71,7 @@ This setting works similarly to `Include tag`, with the differences:
 <div class="option settingsPanel_optionCard" data-no="17" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Crawl/Tags-and-title?flag=17" target="_blank" class="has_tip settingNameStyle" data-xztip="_针对特定用户屏蔽tag的提示" data-tip="For example, when crawling the works of user 123456, exclude specific tags." data-bind-click="true">
     <span data-xztext="_针对特定用户屏蔽标签">Block <span class="key">tags</span> for specific users</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="blockTagsForSpecificUser" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -124,7 +124,7 @@ For example, you can set to exclude `tag1,tag2,tag3` from user ID `123456`.
 You can set multiple strings, separated by commas (,).&lt;br&gt;
 The matching mode is &quot;any one&quot;, meaning as long as the title contains any one of the specified strings, the downloader will crawl it." data-bind-click="true">
     <span data-xztext="_标题必须含有"><span class="key">Title</span> must contain</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="titleIncludeSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -151,14 +151,14 @@ You can set multiple strings, separated by commas (,).&lt;br&gt;
 The matching mode is &quot;any one&quot;, meaning if the title contains any one of the specified strings, the downloader will not crawl it.&lt;br&gt;
 Exclusion takes priority over inclusion." data-bind-click="true">
     <span data-xztext="_标题不能含有"><span class="key">Title</span> must not contain</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="titleExcludeSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="titleExcludeSwitch" style="display: none;">
     <textarea class="centerPanelTextArea beautify_scrollbar" name="titleExcludeList" rows="1" placeholder="word1,word2,word3"></textarea>
     <label for="alsoCheckSeriesTitle" class="has_tip" data-xztext="_也检查系列标题" data-xztip="_也检查系列标题的说明" data-tip="If the work belongs to a series, enabling this setting will also check if the series title meets the conditions.">Also check series title</label>
-    <span class="gray1 mr4"> ? </span>
+    <span class="gray mr4"> ? </span>
     <input type="checkbox" name="alsoCheckSeriesTitle" id="alsoCheckSeriesTitle" class="need_beautify checkbox_switch" checked="">
     <span class="beautify_switch" tabindex="0"></span>
   </div>

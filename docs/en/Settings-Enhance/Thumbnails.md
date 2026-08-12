@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="78" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnails?flag=78" target="_blank" class="has_tip settingNameStyle" data-xztip="_显示更大的缩略图的说明" data-tip="Pixiv's default thumbnails are relatively small, and the downloader can display larger thumbnails for easier preview.&lt;br&gt;This feature is not very stable, because Pixiv's code updates may cause this feature to partially fail." data-bind-click="true">
     <span data-xztext="_显示更大的缩略图">Show <span class="key">larger</span> thumbnails</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="showLargerThumbnails" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -31,7 +31,7 @@ This makes images clearer and easier on the eyes, reducing fatigue.
 <div class="option settingsPanel_optionCard" data-no="79" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnails?flag=79" target="_blank" class="has_tip settingNameStyle" data-xztip="_替换方形缩略图以显示图片比例的说明" data-tip="Pixiv's thumbnails are square, so you can't see the whole picture or whether it's horizontal or vertical. &lt;br&gt;The downloader can display the full thumbnail to show the image ratio." data-bind-click="true">
     <span data-xztext="_替换方形缩略图以显示图片比例">Replace square <span class="key">thumbnails</span> to show image ratio</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="replaceSquareThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
@@ -51,7 +51,7 @@ Enabling this feature replaces square thumbnails with 540 px thumbnails, showing
 <div class="option settingsPanel_optionCard" data-no="80" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnails?flag=80" target="_blank" class="has_tip settingNameStyle" data-xztip="_在多图作品页面里显示缩略图列表的说明" data-tip="On a multi-image artwork page (/artworks/), the downloader can display a preview of each image." data-bind-click="true">
     <span data-xztext="_在多图作品页面里显示缩略图列表">Show <span class="key">thumbnail</span> list on multi-image work pages</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="displayThumbnailListOnMultiImageWorkPage" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>

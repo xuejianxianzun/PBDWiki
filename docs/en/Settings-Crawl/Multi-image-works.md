@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="20" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Crawl/Multi-image-works?flag=20" target="_blank" class="has_tip settingNameStyle" data-xztip="_多图作品的图片数量上限提示" data-tip="If the number of images in a multi-image work exceeds the set number, the downloader will not crawl this work." data-bind-click="true">
     <span data-xztext="_多图作品的图片数量上限"><span class="key">Maximum number</span> of images for multi-image works</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="multiImageWorkImageLimitSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -26,7 +26,7 @@ If a multi-image work contains more images than the number you set, the download
   <div class="subOptionWrap noGrow" data-show="onlyCrawlFirstFewImagesSwitch" style="display: none;">
     <input type="text" name="onlyCrawlFirstFewImagesCount" class="setinput_style blue" value="1">
   </div>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_多图作品只抓取前几张图片" data-msg="_多图作品只抓取前几张图片的说明" data-xztext="_帮助">Help</button>
 </div>
 
 If you do not want to download too many images from a multi-image work, or if you think the first image is the most valuable one, you can enable this setting.
@@ -42,7 +42,7 @@ If you do not want to download too many images from a multi-image work, or if yo
   <div class="subOptionWrap noGrow" data-show="onlyCrawlLastFewImagesSwitch" style="display: none;">
     <input type="text" name="onlyCrawlLastFewImagesCount" class="setinput_style blue" value="1">
   </div>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品只抓取后几张图片" data-msg="_多图作品只抓取后几张图片的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_多图作品只抓取后几张图片" data-msg="_多图作品只抓取后几张图片的说明" data-xztext="_帮助">Help</button>
 <span class="settingsPanel_newBadge" aria-hidden="true">
     <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
       <use xlink:href="#new"></use>
@@ -67,7 +67,7 @@ For example, in multi-image works by [日月](https://www.pixiv.net/users/420640
   <div class="subOptionWrap noGrow" data-show="doNotCrawlFirstImagesSwitch" style="display: none;">
     <input type="text" name="doNotCrawlFirstImagesCount" class="setinput_style blue" value="1">
   </div>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品不抓取前几张图片" data-msg="_多图作品不抓取前几张图片的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_多图作品不抓取前几张图片" data-msg="_多图作品不抓取前几张图片的说明" data-xztext="_帮助">Help</button>
 <span class="settingsPanel_newBadge" aria-hidden="true">
     <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
       <use xlink:href="#new"></use>
@@ -96,7 +96,7 @@ Also, their last images are promotional images, so this setting can be used toge
   <div class="subOptionWrap noGrow" data-show="doNotCrawlLastImagesSwitch" style="display: none;">
     <input type="text" name="doNotCrawlLastImagesCount" class="setinput_style blue" value="1">
   </div>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_多图作品不抓取后几张图片" data-msg="_多图作品不抓取后几张图片的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_多图作品不抓取后几张图片" data-msg="_多图作品不抓取后几张图片的说明" data-xztext="_帮助">Help</button>
 <span class="settingsPanel_newBadge" aria-hidden="true">
     <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
       <use xlink:href="#new"></use>

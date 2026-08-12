@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard new" data-no="82" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="settingNameStyle has_tip" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
     <span data-xztext="_缩略图上按钮的位置">Button <span class="key">position</span> on thumbnails</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="radio" name="magnifierPosition" id="magnifierPosition1" class="need_beautify radio" value="left">
   <span class="beautify_radio" tabindex="0"></span>

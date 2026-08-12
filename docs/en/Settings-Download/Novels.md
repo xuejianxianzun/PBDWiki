@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="67" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Novels?flag=67" target="_blank" class="has_tip settingNameStyle" data-xztip="_小说保存格式的说明" data-tip="TXT is a plain text file. When you select TXT format, the pictures in the novel will be saved separately. &lt;br&gt;EPUB is an e-book format, and the pictures in the novel will be embedded in the EPUB file." data-bind-click="true">
     <span data-xztext="_小说保存格式">Save the <span class="key">novel</span> as</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked="">
   <span class="beautify_radio" tabindex="0"></span>
@@ -49,7 +49,7 @@ You can install it from the Microsoft Store.
 <div class="option settingsPanel_optionCard" data-no="68" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Novels?flag=68" target="_blank" class="has_tip settingNameStyle" data-xztip="_在小说里保存元数据提示" data-tip="Save the novel's title, author, tags and other information to the beginning of the novel." data-bind-click="true">
     <span data-xztext="_在小说里保存元数据">Save <span class="key">metadata</span> in the novel</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="saveNovelMeta" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -173,13 +173,13 @@ Note: Even if you choose an image size smaller than 1200px, some images will sti
 <div class="option settingsPanel_optionCard" data-no="71" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Novels?flag=71" target="_blank" class="has_tip settingNameStyle" data-xztip="_自动合并系列小说的说明" data-tip="When crawling works, if a novel belongs to a series, automatically crawl all novels in that series and merge them." data-bind-click="true">
     <span data-xztext="_自动合并系列小说">Automatically <span class="key">merge</span> novel series</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="autoMergeNovel" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap" data-show="autoMergeNovel" style="display: none;">
     <label for="skipNovelsInSeriesWhenAutoMerge" data-xztext="_不再单独下载系列里的小说" class="has_tip active" data-xztip="_不再单独下载系列里的小说的说明" data-tip="When you enable &quot;Automatically merge series novels&quot;, there is usually no need to download novels in the series individually, as they are already included in the merged novel file.&lt;br&gt;If you still want to download them, you can uncheck this sub-setting.">No longer download novels in the series individually</label>
-    <span class="gray1"> ? &nbsp;</span>
+    <span class="gray"> ? &nbsp;</span>
     <input type="checkbox" name="skipNovelsInSeriesWhenAutoMerge" id="skipNovelsInSeriesWhenAutoMerge" class="need_beautify checkbox_switch" checked="">
     <span class="beautify_switch" tabindex="0"></span>
   </div>
@@ -279,7 +279,7 @@ Due to too many requests, I was warned by Pixiv several times, and one account w
   </a>
   <input type="checkbox" name="saveAllSeriesNovelsIfOneMatches" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="textButton gray1 showMsgBtn" data-title="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说" data-msg="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说的提示" data-xztext="_帮助">Help</button>
+  <button type="button" class="textButton gray showMsgBtn" data-title="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说" data-msg="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说的提示" data-xztext="_帮助">Help</button>
 </div>
 
 Use this setting when you have configured filter conditions and want the downloader to merge all novels in a series as long as one novel meets those conditions.
@@ -298,7 +298,7 @@ By default (with this setting disabled), the downloader merges only that 1 novel
   </a>
   <input type="text" name="singleEPUBFileSizeLimit" class="setinput_style blue" value="200">
   <span>MiB</span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_合并系列小说时的分割阈值" data-msg="_合并系列小说时的分割阈值的帮助" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_合并系列小说时的分割阈值" data-msg="_合并系列小说时的分割阈值的帮助" data-xztext="_帮助">Help</button>
 <span class="settingsPanel_newBadge" aria-hidden="true">
     <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
       <use xlink:href="#new"></use>

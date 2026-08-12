@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="101" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-General/Logs?flag=101" target="_blank" class="has_tip settingNameStyle" data-xztip="_日志区域的默认可见性的说明" data-tip="When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default." data-bind-click="true">
     <span data-xztext="_日志区域的默认可见性">Default <span class="key">visibility</span> of the log area</span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="radio" name="logVisibleDefault" id="logVisibleDefault1" class="need_beautify radio" value="show" checked="">
   <span class="beautify_radio" tabindex="0"></span>

@@ -109,7 +109,7 @@ However, some users deliberately do not add any AI-related tags. In this case, t
   <input type="checkbox" name="looseMatchOriginal" id="looseMatchOriginal" class="need_beautify checkbox_common" checked="">
   <span class="beautify_checkbox" tabindex="0"></span>
   <label for="looseMatchOriginal" data-xztext="_宽松匹配" class="active">Loose matching</label>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_原创作品" data-msg="_宽松匹配原创作品的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_原创作品" data-msg="_宽松匹配原创作品的说明" data-xztext="_帮助">Help</button>
 <span class="settingsPanel_newBadge" aria-hidden="true">
     <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
       <use xlink:href="#new"></use>

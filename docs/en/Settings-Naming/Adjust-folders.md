@@ -6,7 +6,7 @@
   </a>
   <input type="checkbox" name="noFolderSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap noGrow flexBasis100" data-show="noFolderSwitch" style="display: none;">
     <div class="optionLine">
       <input type="checkbox" name="noFolderWhenDownload1Image" id="noFolderWhenDownload1Image" class="need_beautify checkbox_common" checked="">
@@ -45,7 +45,7 @@ This setting has multiple sub-options. Whether folders are skipped can depend on
   <a href="/#/en/Settings-Naming/Adjust-folders?flag=41" target="_blank" class="settingNameStyle" data-xztext="_为多图作品添加一层文件夹" data-bind-click="true">Add a folder layer for <span class="key">multi-image</span> works</a>
   <input type="checkbox" name="folderForMultiImageWorksSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_为多图作品添加一层文件夹" data-msg="_为多图作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_为多图作品添加一层文件夹" data-msg="_为多图作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap flexBasis100" data-show="folderForMultiImageWorksSwitch" style="display: none;">
     <div class="optionLine">
       <label for="folderForMultiImageWorksImageNumber" class="pr0" data-xztext="_当作品里的图片大于指定数量时启用">Enable when the number of images in the work exceeds the specified number: </label>
@@ -90,7 +90,7 @@ You need to insert this tag manually so you can decide where this folder layer s
   <a href="/#/en/Settings-Naming/Adjust-folders?flag=42" target="_blank" class="settingNameStyle" data-xztext="_为r18作品添加一层文件夹" data-bind-click="true">Add a folder layer for <span class="key">R-18(G)</span> works</a>
   <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_为r18作品添加一层文件夹" data-msg="_为r18作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_为r18作品添加一层文件夹" data-msg="_为r18作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap flexBasis100" data-show="r18Folder" style="display: none;">
     <label for="r18FolderName" class="pr0" data-xztext="_要添加的这层文件夹的规则">Rule for the folder layer to add: </label>
     <input type="text" name="r18FolderName" id="r18FolderName" class="setinput_style blue grow" value="[R-18&amp;R-18G]" style="min-width: 100px">
@@ -110,7 +110,7 @@ To make this setting take effect, you also need to modify the naming rule and us
   </a>
   <input type="checkbox" name="createFolderByTag" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_使用第一个匹配的标签建立文件夹" data-msg="_使用第一个匹配的标签建立文件夹的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_使用第一个匹配的标签建立文件夹" data-msg="_使用第一个匹配的标签建立文件夹的说明" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap namingTipArea flexBasis100" data-show="createFolderByTag" style="display: none;">
     <span class="name" data-bind-copy="true">{match_tag_folder1}</span>
     <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList" rows="1" placeholder="tag1,tag2,tag3"></textarea>

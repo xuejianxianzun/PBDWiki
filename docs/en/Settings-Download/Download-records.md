@@ -2,7 +2,7 @@
 
 <div class="option settingsPanel_optionCard new" data-no="62" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-records?flag=62" target="_blank" class="settingNameStyle" data-xztext="_管理下载记录" data-bind-click="true">Manage download <span class="key">records</span></a>
-  <button type="button" class="textButton gray1 showMsgBtn" data-title="_管理下载记录" data-msg="_管理下载记录的提示" data-xztext="_帮助">Help</button>
+  <button type="button" class="textButton gray showMsgBtn" data-title="_管理下载记录" data-msg="_管理下载记录的提示" data-xztext="_帮助">Help</button>
   <div class="optionLine">
     <button type="button" class="textButton fireEvent" id="exportDownloadRecord" data-event="exportDownloadRecord" data-xztext="_导出">Export</button>
     <button type="button" class="textButton fireEvent" id="importDownloadRecord" data-event="importDownloadRecord" data-xztext="_导入">Import</button>
@@ -103,7 +103,7 @@ If this happens, you can clear the download records or disable the "Don't downlo
     <span class="beautify_radio" tabindex="0"></span>
     <label class="has_tip" for="dupliStrategy1" data-xztip="_严格模式说明" data-xztext="_严格" data-tip="Judgment conditions: id, upload date, file name of the work">Strict</label>
   </div>
-  <button type="button" class="textButton gray1 showMsgBtn" data-title="_不下载重复文件" data-msg="_不下载重复文件的提示" data-xztext="_帮助">Help</button>
+  <button type="button" class="textButton gray showMsgBtn" data-title="_不下载重复文件" data-msg="_不下载重复文件的提示" data-xztext="_帮助">Help</button>
 </div>
 
 This feature depends on the download records saved by the downloader itself.

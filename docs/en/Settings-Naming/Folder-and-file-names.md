@@ -399,7 +399,7 @@ PS: This setting affects only the filenames of individual novels. It does not af
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=34" target="_blank" class="settingNameStyle" data-xztext="_在不同的页面类型中使用不同的命名规则" data-bind-click="true">Use <span class="key">different</span> naming rules in different page types</a>
   <input type="checkbox" name="setNameRuleForEachPageType" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_在不同的页面类型中使用不同的命名规则" data-msg="_在不同的页面类型中使用不同的命名规则的帮助" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_在不同的页面类型中使用不同的命名规则" data-msg="_在不同的页面类型中使用不同的命名规则的帮助" data-xztext="_帮助">Help</button>
 </div>
 
 The "Naming Rule" setting above applies to all pages, meaning the same naming rule is used for all page types.
@@ -564,7 +564,7 @@ For example, if the merged collection file is named `abcd.epub` and the cover im
 <div class="option settingsPanel_optionCard" data-no="37" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=37" target="_blank" class="settingNameStyle" data-xztext="_标签分隔符号" data-bind-click="true">Tag <span class="key">separation</span> symbol</a>
   <input type="text" name="tagsSeparator" class="setinput_style blue" value=",">
-  <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#tagsSeparatorTip" data-for-no="37" data-xztext="_提示">Tip</button>
+  <button type="button" class="gray textButton toggleArea" data-toggle-target="#tagsSeparatorTip" data-for-no="37" data-xztext="_提示">Tip</button>
   <p class="tip" id="tagsSeparatorTip">
     <span data-xztext="_标签分隔符号提示">Only affects results for these named tags: <span class="blue">{tags}</span>, <span class="blue">{tags_translate}</span>, <span class="blue">{ tags_transl_only}</span>. <br>Recommended symbols <span class="blue"> , # ^ &amp; _</span></span>
   </p>
@@ -594,7 +594,7 @@ _
 <div class="option settingsPanel_optionCard" data-no="38" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=38" target="_blank" class="settingNameStyle" data-xztext="_日期格式" data-bind-click="true">Date and time <span class="key">format</span></a>
   <input type="text" name="dateFormat" class="setinput_style blue" value="YYYY-MM-DD">
-  <button type="button" class="gray1 textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="38" data-xztext="_提示">Tip</button>
+  <button type="button" class="gray textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="38" data-xztext="_提示">Tip</button>
   <p class="tip" id="dateFormatTip">
     <span data-xztext="_日期格式提示">You can use the following notation to set the date and time format. This will affect <span class="blue">{date}</span> and <span class="blue">{upload_date}</span> and <span class="blue">{task_date}</span> in the naming rules. <br>For time such as 2021-04-30T06:40:08</span>
     <br>
@@ -651,7 +651,7 @@ For a time such as `2021-04-30T06:40:08`, the available tags and their outputs a
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap" data-show="fullNameLengthLimitSwitch" style="display: inline-flex;">
     <input type="text" name="fullNameLengthLimit" class="setinput_style blue" value="210">
-    <button type="button" class="gray1 textButton showMsgBtn" data-title="_文件名长度限制" data-msg="_文件名长度限制的说明" data-xztext="_帮助">Help</button>
+    <button type="button" class="gray textButton showMsgBtn" data-title="_文件名长度限制" data-msg="_文件名长度限制的说明" data-xztext="_帮助">Help</button>
   </div>
 </div>
 

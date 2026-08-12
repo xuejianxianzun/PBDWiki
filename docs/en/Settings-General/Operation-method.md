@@ -3,7 +3,7 @@
 <div class="option settingsPanel_optionCard" data-no="95" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-General/Operation-method?flag=95" target="_blank" class="has_tip settingNameStyle" data-xztip="_选项卡切换方式的说明" data-tip="Sets how to switch the primary category navigation of the Downloader." data-bind-click="true">
     <span data-xztext="_选项卡切换方式">How to switch <span class="key">tabs</span></span>
-    <span class="gray1"> ? </span>
+    <span class="gray"> ? </span>
   </a>
   <input type="radio" name="switchTabBar" id="switchTabBar1" class="need_beautify radio" value="over" checked="">
   <span class="beautify_radio" tabindex="0"></span>
@@ -25,7 +25,7 @@
   </a>
   <input type="checkbox" name="clickOptionCardToToggleSwitch" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray1 textButton showMsgBtn" data-title="_点击设置卡片时切换它的开关状态" data-msg="_点击设置卡片时切换它的开关状态的说明" data-xztext="_帮助">Help</button>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_点击设置卡片时切换它的开关状态" data-msg="_点击设置卡片时切换它的开关状态的说明" data-xztext="_帮助">Help</button>
 </div>
 
 If a settings card contains a toggle switch (like this card), clicking the blank area of the card will toggle that switch.
