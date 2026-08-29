@@ -638,7 +638,8 @@
   padding: 0px 6px;
   cursor: pointer;
 }
-:root .textButton.fireEvent {
+:root .textButton.fireEvent,
+:root .textButton.borderButton {
   border: 1px solid var(--settings-panel-btn-secondary-border);
   border-radius: 6px;
   margin-right: 3px;
@@ -2320,6 +2321,92 @@ li > ul.app-sub-sidebar > li::before {
   width: 1em;
   margin-left: -1.1em;
   color: #aaa;
+}
+.hotkeyEditorWrap {
+  margin-top: 6px !important;
+}
+.hotkeyEditorWrap .hotkeyTable {
+  border: 1px solid #e3e6e9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.hotkeyEditorWrap .tableHeader,
+.hotkeyEditorWrap .settingItem {
+  display: grid;
+  grid-template-columns: 45% 30% 25%;
+}
+.hotkeyEditorWrap .tableHeader {
+  background: #f8f8f8;
+  color: #444;
+}
+.hotkeyEditorWrap .tableHeader .cell {
+  font-weight: bold;
+}
+.hotkeyEditorWrap .settingItem + .settingItem {
+  border-top: 1px solid #e3e6e9;
+}
+.hotkeyEditorWrap .cell {
+  box-sizing: border-box;
+  padding: 6px 8px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  word-break: break-word;
+}
+.hotkeyEditorWrap .cell .label {
+  color: #444;
+  line-height: var(--line-height);
+}
+.hotkeyEditorWrap .cell .value {
+  line-height: var(--line-height);
+  font-family: var(--pixiv-font-family);
+}
+.hotkeyEditorWrap .cell .value.recording {
+  color: var(--theme-blue);
+}
+.hotkeyEditorWrap .cellHotkey {
+  gap: 6px;
+}
+.hotkeyEditorWrap .cellAction {
+  padding-left: 0;
+}
+.hotkeyEditorWrap .btns {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2px;
+}
+.hotkeyEditorWrap .textButton {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0px 3px;
+  cursor: pointer;
+  color: var(--settings-panel-clear-visible-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.hotkeyEditorWrap .textButton .icon {
+  font-size: 1.3em;
+}
+.hotkeyEditorWrap .textButton:hover,
+.hotkeyEditorWrap .textButton:focus {
+  color: var(--beautify-blue);
+}
+.hotkeyEditorWrap .textButton.reset {
+  margin-top: 6px;
+  color: #444;
+}
+.hotkeyEditorWrap .escCancel {
+  display: none;
+  justify-content: flex-start;
+  margin-top: 2px;
+  font-size: 0.9em;
+  color: #999;
+}
+.hotkeyEditorWrap .settingItem.recording .escCancel {
+  display: inline-flex;
 }
 :root {
   --theme-blue: #199df5;

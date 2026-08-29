@@ -39,7 +39,7 @@ You can set how many related works to crawl (including the current work) in the 
 
 ?> Related works are limited to a maximum of 180.
 
-### download recommended works
+## download recommended works
 
 <button class="blueTextBtn hasRippleAnimation" id="downloadRecommendedWorks" type="button">
   <span data-xztext="_下载推荐作品">download recommended works</span><span class="ripple"></span>

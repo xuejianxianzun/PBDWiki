@@ -202,7 +202,8 @@
     cursor: pointer;
 
     // 会触发事件的按钮，不同于显示帮助的按钮，需要为它们添加轻量级的按钮样式，方便用户识别
-    &.fireEvent {
+    &.fireEvent,
+    &.borderButton {
       border: 1px solid var(--settings-panel-btn-secondary-border);
       border-radius: 6px;
       margin-right: 3px;
@@ -315,7 +316,7 @@
       flex-shrink: 0;
     }
 
-    .fireEvent{
+    .fireEvent {
       height: var(--line-height);
     }
 
@@ -694,10 +695,10 @@
     }
   }
 
-  input[name="dateFormat"]{
+  input[name="dateFormat"] {
     min-width: 250px;
   }
-  
+
   .fileNameRule {
     display: flex;
     flex-grow: 1;
@@ -836,10 +837,10 @@
   }
 
   // 下载推荐作品的按钮
-  #downloadRecommendedWorks{
-    color:#fff;
+  #downloadRecommendedWorks {
+    color: #fff;
   }
-  
+
   .progressTip {
     font-size: 15px;
   }
