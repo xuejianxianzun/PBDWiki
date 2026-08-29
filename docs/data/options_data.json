@@ -1,0 +1,1244 @@
+[
+  {
+    "page": {
+      "zh-cn": "设置-抓取/抓取范围",
+      "en": "Settings-Crawl/Crawl-scope"
+    },
+    "ids": [
+      0,
+      1,
+      2
+    ],
+    "names": [
+      {
+        "id": 0,
+        "nameKey": "_抓取多少作品",
+        "name": {
+          "zh-cn": "抓取多少作品",
+          "en": "How many works to crawl"
+        }
+      },
+      {
+        "id": 1,
+        "nameKey": "_抓取多少页面",
+        "name": {
+          "zh-cn": "抓取多少页面",
+          "en": "How many pages to crawl"
+        }
+      },
+      {
+        "id": 2,
+        "nameKey": "_抓取每个用户最新的几个作品",
+        "name": {
+          "zh-cn": "抓取每个用户最新的几个作品",
+          "en": "Crawl the latest few works of each user"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/作品类型",
+      "en": "Settings-Crawl/Work-type"
+    },
+    "ids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "names": [
+      {
+        "id": 3,
+        "nameKey": "_作品类型",
+        "name": {
+          "zh-cn": "作品类型",
+          "en": "Type of work"
+        }
+      },
+      {
+        "id": 4,
+        "nameKey": "_年龄限制",
+        "name": {
+          "zh-cn": "年龄限制",
+          "en": "Age restriction"
+        }
+      },
+      {
+        "id": 5,
+        "nameKey": "_AI作品",
+        "name": {
+          "zh-cn": "AI 作品",
+          "en": "AI works"
+        }
+      },
+      {
+        "id": 6,
+        "nameKey": "_原创作品",
+        "name": {
+          "zh-cn": "原创作品",
+          "en": "Original works"
+        }
+      },
+      {
+        "id": 7,
+        "nameKey": "_图片色彩",
+        "name": {
+          "zh-cn": "图片色彩",
+          "en": "Image color"
+        }
+      },
+      {
+        "id": 8,
+        "nameKey": "_图片数量",
+        "name": {
+          "zh-cn": "图片数量",
+          "en": "Number of images"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/作品数据",
+      "en": "Settings-Crawl/Work-data"
+    },
+    "ids": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "names": [
+      {
+        "id": 9,
+        "nameKey": "_收藏状态",
+        "name": {
+          "zh-cn": "收藏状态",
+          "en": "Bookmark status"
+        }
+      },
+      {
+        "id": 10,
+        "nameKey": "_收藏数量",
+        "name": {
+          "zh-cn": "收藏数量",
+          "en": "Number of bookmarks"
+        }
+      },
+      {
+        "id": 11,
+        "nameKey": "_图片的宽高",
+        "name": {
+          "zh-cn": "图片的宽高",
+          "en": "Width and height"
+        }
+      },
+      {
+        "id": 12,
+        "nameKey": "_图片的宽高比例",
+        "name": {
+          "zh-cn": "图片的宽高比例",
+          "en": "Aspect ratio"
+        }
+      },
+      {
+        "id": 13,
+        "nameKey": "_id范围",
+        "name": {
+          "zh-cn": "ID 范围",
+          "en": "ID range"
+        }
+      },
+      {
+        "id": 14,
+        "nameKey": "_投稿时间",
+        "name": {
+          "zh-cn": "投稿时间",
+          "en": "Posting time"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/标签与标题",
+      "en": "Settings-Crawl/Tags-and-title"
+    },
+    "ids": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "names": [
+      {
+        "id": 15,
+        "nameKey": "_必须含有tag",
+        "name": {
+          "zh-cn": "必须含有标签",
+          "en": "Include tag"
+        }
+      },
+      {
+        "id": 16,
+        "nameKey": "_不能含有tag",
+        "name": {
+          "zh-cn": "不能含有标签",
+          "en": "Exclude tag"
+        }
+      },
+      {
+        "id": 17,
+        "nameKey": "_针对特定用户屏蔽标签",
+        "name": {
+          "zh-cn": "针对特定用户屏蔽标签",
+          "en": "Block tags for specific users"
+        }
+      },
+      {
+        "id": 18,
+        "nameKey": "_标题必须含有",
+        "name": {
+          "zh-cn": "标题必须含有",
+          "en": "Title must contain"
+        }
+      },
+      {
+        "id": 19,
+        "nameKey": "_标题不能含有",
+        "name": {
+          "zh-cn": "标题不能含有",
+          "en": "Title must not contain"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/多图作品",
+      "en": "Settings-Crawl/Multi-image-works"
+    },
+    "ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "names": [
+      {
+        "id": 20,
+        "nameKey": "_多图作品的图片数量上限",
+        "name": {
+          "zh-cn": "多图作品的图片数量上限",
+          "en": "Maximum number of images for multi-image works"
+        }
+      },
+      {
+        "id": 21,
+        "nameKey": "_多图作品只抓取前几张图片",
+        "name": {
+          "zh-cn": "多图作品只抓取前几张图片",
+          "en": "Only crawl the first few images of multi-image works"
+        }
+      },
+      {
+        "id": 22,
+        "nameKey": "_多图作品只抓取后几张图片",
+        "name": {
+          "zh-cn": "多图作品只抓取后几张图片",
+          "en": "Only crawl the last few images of multi-image works"
+        }
+      },
+      {
+        "id": 23,
+        "nameKey": "_多图作品不抓取前几张图片",
+        "name": {
+          "zh-cn": "多图作品不抓取前几张图片",
+          "en": "Do not crawl the first few images of multi-image works"
+        }
+      },
+      {
+        "id": 24,
+        "nameKey": "_多图作品不抓取后几张图片",
+        "name": {
+          "zh-cn": "多图作品不抓取后几张图片",
+          "en": "Do not crawl the last few images of multi-image works"
+        }
+      },
+      {
+        "id": 25,
+        "nameKey": "_特定用户的多图作品不下载最后几张图片",
+        "name": {
+          "zh-cn": "特定用户的多图作品不下载最后几张图片",
+          "en": "Don't download the last few images for specific user's multi-image works"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-抓取/执行策略",
+      "en": "Settings-Crawl/Execution-strategy"
+    },
+    "ids": [
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "names": [
+      {
+        "id": 26,
+        "nameKey": "_不抓取下载过的作品",
+        "name": {
+          "zh-cn": "不抓取下载过的作品",
+          "en": "Do not crawl already downloaded works"
+        }
+      },
+      {
+        "id": 27,
+        "nameKey": "_用户屏蔽名单",
+        "name": {
+          "zh-cn": "用户屏蔽名单",
+          "en": "User block list"
+        }
+      },
+      {
+        "id": 28,
+        "nameKey": "_减慢抓取速度",
+        "name": {
+          "zh-cn": "减慢抓取速度",
+          "en": "Slow down crawl"
+        }
+      },
+      {
+        "id": 29,
+        "nameKey": "_定时抓取的间隔时间",
+        "name": {
+          "zh-cn": "定时抓取的间隔时间",
+          "en": "The interval time of timed crawl"
+        }
+      },
+      {
+        "id": 30,
+        "nameKey": "_自动导出抓取结果",
+        "name": {
+          "zh-cn": "自动导出抓取结果",
+          "en": "Automatically export crawl results"
+        }
+      },
+      {
+        "id": 31,
+        "nameKey": "_导出ID列表",
+        "name": {
+          "zh-cn": "获取作品 ID 列表后导出 ID 列表，并停止任务",
+          "en": "After obtaining the work ID list, export the ID list and stop the task"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/文件夹和文件的名字",
+      "en": "Settings-Naming/Folder-and-file-names"
+    },
+    "ids": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "names": [
+      {
+        "id": 32,
+        "nameKey": "_图像作品的命名规则",
+        "name": {
+          "zh-cn": "图像作品的命名规则",
+          "en": "Naming rule for image works"
+        }
+      },
+      {
+        "id": 33,
+        "nameKey": "_小说的命名规则",
+        "name": {
+          "zh-cn": "小说的命名规则",
+          "en": "Naming rule for novels"
+        }
+      },
+      {
+        "id": 34,
+        "nameKey": "_在不同的页面类型中使用不同的命名规则",
+        "name": {
+          "zh-cn": "在不同的页面类型中使用不同的命名规则",
+          "en": "Use different naming rules in different page types"
+        }
+      },
+      {
+        "id": 35,
+        "nameKey": "_如果作品含有某些标签则对这个作品使用另一种命名规则",
+        "name": {
+          "zh-cn": "如果作品含有某些特定标签，则对这个作品使用另一种命名规则",
+          "en": "Use a different naming rule for the work if it has certain tags"
+        }
+      },
+      {
+        "id": 36,
+        "nameKey": "_合并系列小说时的命名规则",
+        "name": {
+          "zh-cn": "合并系列小说时的命名规则",
+          "en": "Naming rule when merging novel series"
+        }
+      },
+      {
+        "id": 37,
+        "nameKey": "_标签分隔符号",
+        "name": {
+          "zh-cn": "标签分隔符号",
+          "en": "Tag separation symbol"
+        }
+      },
+      {
+        "id": 38,
+        "nameKey": "_日期格式",
+        "name": {
+          "zh-cn": "日期和时间格式",
+          "en": "Date and time format"
+        }
+      },
+      {
+        "id": 39,
+        "nameKey": "_文件名长度限制",
+        "name": {
+          "zh-cn": "文件名长度限制",
+          "en": "File name length limit"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/调整文件夹",
+      "en": "Settings-Naming/Adjust-folders"
+    },
+    "ids": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "names": [
+      {
+        "id": 40,
+        "nameKey": "_不创建文件夹",
+        "name": {
+          "zh-cn": "不创建文件夹",
+          "en": "Do not create folder"
+        }
+      },
+      {
+        "id": 41,
+        "nameKey": "_为多图作品添加一层文件夹",
+        "name": {
+          "zh-cn": "为多图作品添加一层文件夹",
+          "en": "Add a folder layer for multi-image works"
+        }
+      },
+      {
+        "id": 42,
+        "nameKey": "_为r18作品添加一层文件夹",
+        "name": {
+          "zh-cn": "为 R-18(G) 作品添加一层文件夹",
+          "en": "Add a folder layer for R-18(G) works"
+        }
+      },
+      {
+        "id": 43,
+        "nameKey": "_使用第一个匹配的标签建立文件夹",
+        "name": {
+          "zh-cn": "使用第一个匹配的标签建立文件夹",
+          "en": "Create a folder with the first matched tag"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/别名",
+      "en": "Settings-Naming/Aliases"
+    },
+    "ids": [
+      44,
+      45
+    ],
+    "names": [
+      {
+        "id": 44,
+        "nameKey": "_标签别名",
+        "name": {
+          "zh-cn": "标签别名",
+          "en": "Tag alias"
+        }
+      },
+      {
+        "id": 45,
+        "nameKey": "_自定义用户名",
+        "name": {
+          "zh-cn": "自定义用户名",
+          "en": "Customize username"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/序号",
+      "en": "Settings-Naming/Serial"
+    },
+    "ids": [
+      46,
+      47,
+      48
+    ],
+    "names": [
+      {
+        "id": 46,
+        "nameKey": "_序号起始值",
+        "name": {
+          "zh-cn": "序号的起始值",
+          "en": "Serial number starting value"
+        }
+      },
+      {
+        "id": 47,
+        "nameKey": "_第一张图不带序号",
+        "name": {
+          "zh-cn": "第一张图不带序号",
+          "en": "The first image without a serial number"
+        }
+      },
+      {
+        "id": 48,
+        "nameKey": "_在序号前面填充0",
+        "name": {
+          "zh-cn": "在序号前面填充 0",
+          "en": "Add 0 in front of the serial number"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-命名/移除特殊字符",
+      "en": "Settings-Naming/Remove-special-characters"
+    },
+    "ids": [
+      49,
+      50
+    ],
+    "names": [
+      {
+        "id": 49,
+        "nameKey": "_移除文件名里的emoji",
+        "name": {
+          "zh-cn": "移除文件名里的 Emoji",
+          "en": "Remove Emoji from filename"
+        }
+      },
+      {
+        "id": 50,
+        "nameKey": "_移除用户名中的at和后续字符",
+        "name": {
+          "zh-cn": "移除用户名中的 @ 和后续字符",
+          "en": "Remove @ and subsequent characters in username"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/下载行为",
+      "en": "Settings-Download/Download-behavior"
+    },
+    "ids": [
+      52,
+      51,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "names": [
+      {
+        "id": 52,
+        "nameKey": "_抓取完成后自动开始下载",
+        "name": {
+          "zh-cn": "抓取完成后，自动开始下载",
+          "en": "Start downloading automatically after crawling is complete"
+        }
+      },
+      {
+        "id": 51,
+        "nameKey": "_同时下载多少个文件",
+        "name": {
+          "zh-cn": "同时下载多少个文件",
+          "en": "Download how many files at the same time"
+        }
+      },
+      {
+        "id": 53,
+        "nameKey": "_下载之后收藏作品",
+        "name": {
+          "zh-cn": "下载之后收藏作品",
+          "en": "Bookmark works after downloading"
+        }
+      },
+      {
+        "id": 54,
+        "nameKey": "_点击收藏按钮时下载作品",
+        "name": {
+          "zh-cn": "点击收藏按钮时下载作品",
+          "en": "Download a work when you click the bookmark button"
+        }
+      },
+      {
+        "id": 55,
+        "nameKey": "_点击点赞按钮时下载作品",
+        "name": {
+          "zh-cn": "点击点赞按钮时下载作品",
+          "en": "Download a work when you click the like button"
+        }
+      },
+      {
+        "id": 56,
+        "nameKey": "_下载间隔",
+        "name": {
+          "zh-cn": "下载间隔",
+          "en": "Download interval"
+        }
+      },
+      {
+        "id": 57,
+        "nameKey": "_文件下载顺序",
+        "name": {
+          "zh-cn": "文件下载顺序",
+          "en": "File download order"
+        }
+      },
+      {
+        "id": 58,
+        "nameKey": "_优先下载动图",
+        "name": {
+          "zh-cn": "优先下载动图",
+          "en": "Prioritize downloading Ugoira"
+        }
+      },
+      {
+        "id": 59,
+        "nameKey": "_文件体积限制",
+        "name": {
+          "zh-cn": "文件体积限制",
+          "en": "File size limit"
+        }
+      },
+      {
+        "id": 60,
+        "nameKey": "_把文件保存到用户上次选择的位置",
+        "name": {
+          "zh-cn": "把文件保存到用户上次选择的位置",
+          "en": "Save file to the user's last selected location"
+        }
+      },
+      {
+        "id": 61,
+        "nameKey": "_下载完成后显示通知",
+        "name": {
+          "zh-cn": "下载完成后显示通知",
+          "en": "Show notification after download is complete"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/下载记录",
+      "en": "Settings-Download/Download-records"
+    },
+    "ids": [
+      62,
+      63
+    ],
+    "names": [
+      {
+        "id": 62,
+        "nameKey": "_管理下载记录",
+        "name": {
+          "zh-cn": "管理下载记录",
+          "en": "Manage download records"
+        }
+      },
+      {
+        "id": 63,
+        "nameKey": "_不下载重复文件",
+        "name": {
+          "zh-cn": "不下载重复文件",
+          "en": "Don't download duplicate files"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/图片尺寸",
+      "en": "Settings-Download/Image-size"
+    },
+    "ids": [
+      64
+    ],
+    "names": [
+      {
+        "id": 64,
+        "nameKey": "_下载图片时的尺寸",
+        "name": {
+          "zh-cn": "下载插画、漫画、动图时的尺寸",
+          "en": "Image dimensions when downloading illustrations, manga, and Ugoira"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/动图",
+      "en": "Settings-Download/Ugoira"
+    },
+    "ids": [
+      65,
+      66
+    ],
+    "names": [
+      {
+        "id": 65,
+        "nameKey": "_动图保存格式",
+        "name": {
+          "zh-cn": "动图保存格式",
+          "en": "Save the ugoira work as"
+        }
+      },
+      {
+        "id": 66,
+        "nameKey": "_同时转换多少个动图",
+        "name": {
+          "zh-cn": "同时转换多少个动图",
+          "en": "How many animations are converted at the same time"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/小说",
+      "en": "Settings-Download/Novels"
+    },
+    "ids": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      104,
+      72
+    ],
+    "names": [
+      {
+        "id": 67,
+        "nameKey": "_小说保存格式",
+        "name": {
+          "zh-cn": "小说保存格式",
+          "en": "Save the novel as"
+        }
+      },
+      {
+        "id": 68,
+        "nameKey": "_在小说里保存元数据",
+        "name": {
+          "zh-cn": "在小说里保存元数据",
+          "en": "Save metadata in the novel"
+        }
+      },
+      {
+        "id": 69,
+        "nameKey": "_下载小说的封面图片",
+        "name": {
+          "zh-cn": "下载小说的封面图片",
+          "en": "Download the novel's cover image"
+        }
+      },
+      {
+        "id": 70,
+        "nameKey": "_下载小说里的内嵌图片",
+        "name": {
+          "zh-cn": "下载小说里的内嵌图片",
+          "en": "Download embedded images in novels"
+        }
+      },
+      {
+        "id": 71,
+        "nameKey": "_自动合并系列小说",
+        "name": {
+          "zh-cn": "自动合并系列小说",
+          "en": "Automatically merge novel series"
+        }
+      },
+      {
+        "id": 104,
+        "nameKey": "_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说",
+        "name": {
+          "zh-cn": "在合并系列小说时，只要有一篇小说符合过滤条件，就保存该系列里的所有小说",
+          "en": "When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved"
+        }
+      },
+      {
+        "id": 72,
+        "nameKey": "_合并系列小说时的分割阈值",
+        "name": {
+          "zh-cn": "合并系列小说时的分割阈值",
+          "en": "Split threshold when merging series novels"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-下载/元数据",
+      "en": "Settings-Download/Metadata"
+    },
+    "ids": [
+      73,
+      74
+    ],
+    "names": [
+      {
+        "id": 73,
+        "nameKey": "_保存作品的元数据",
+        "name": {
+          "zh-cn": "保存作品的元数据",
+          "en": "Save the metadata of the work"
+        }
+      },
+      {
+        "id": 74,
+        "nameKey": "_保存作品的简介",
+        "name": {
+          "zh-cn": "保存作品简介",
+          "en": "Save work description"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/预览",
+      "en": "Settings-Enhance/Preview"
+    },
+    "ids": [
+      75,
+      76,
+      77
+    ],
+    "names": [
+      {
+        "id": 75,
+        "nameKey": "_预览作品",
+        "name": {
+          "zh-cn": "预览作品",
+          "en": "Preview works"
+        }
+      },
+      {
+        "id": 76,
+        "nameKey": "_长按右键显示大图",
+        "name": {
+          "zh-cn": "在缩略图上长按鼠标右键时显示大图",
+          "en": "Long press the right mouse button on the thumbnail to display the large image"
+        }
+      },
+      {
+        "id": 77,
+        "nameKey": "_预览作品的详细信息",
+        "name": {
+          "zh-cn": "预览作品的详细信息",
+          "en": "Preview the details of the work"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/缩略图",
+      "en": "Settings-Enhance/Thumbnails"
+    },
+    "ids": [
+      78,
+      79,
+      80,
+      81
+    ],
+    "names": [
+      {
+        "id": 78,
+        "nameKey": "_显示更大的缩略图",
+        "name": {
+          "zh-cn": "显示更大的缩略图",
+          "en": "Show larger thumbnails"
+        }
+      },
+      {
+        "id": 79,
+        "nameKey": "_替换方形缩略图以显示图片比例",
+        "name": {
+          "zh-cn": "替换方形缩略图以显示图片比例",
+          "en": "Replace square thumbnails to show image ratio"
+        }
+      },
+      {
+        "id": 80,
+        "nameKey": "_在多图作品页面里显示缩略图列表",
+        "name": {
+          "zh-cn": "在多图作品页面里显示缩略图列表",
+          "en": "Show thumbnail list on multi-image work pages"
+        }
+      },
+      {
+        "id": 81,
+        "nameKey": "_把图片显示为灰色",
+        "name": {
+          "zh-cn": "把图片显示为灰色",
+          "en": "Display images in grayscale"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/缩略图上的按钮",
+      "en": "Settings-Enhance/Thumbnail-buttons"
+    },
+    "ids": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "names": [
+      {
+        "id": 82,
+        "nameKey": "_缩略图上按钮的位置",
+        "name": {
+          "zh-cn": "缩略图上按钮的位置",
+          "en": "Button position on thumbnails"
+        }
+      },
+      {
+        "id": 83,
+        "nameKey": "_在作品缩略图上显示图片查看器按钮",
+        "name": {
+          "zh-cn": "在作品缩略图上显示图片查看器按钮",
+          "en": "Show Image viewer button on thumbnail"
+        }
+      },
+      {
+        "id": 84,
+        "nameKey": "_在缩略图上显示复制按钮",
+        "name": {
+          "zh-cn": "在作品缩略图上显示复制按钮",
+          "en": "Display copy button on thumbnail"
+        }
+      },
+      {
+        "id": 85,
+        "nameKey": "_在作品缩略图上显示下载按钮",
+        "name": {
+          "zh-cn": "在作品缩略图上显示下载按钮",
+          "en": "Show download button on thumbnail"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/其他",
+      "en": "Settings-Enhance/Other"
+    },
+    "ids": [
+      86,
+      87,
+      88,
+      89
+    ],
+    "names": [
+      {
+        "id": 86,
+        "nameKey": "_高亮关注的用户",
+        "name": {
+          "zh-cn": "高亮关注的用户",
+          "en": "Highlight following users"
+        }
+      },
+      {
+        "id": 87,
+        "nameKey": "_在下载过的作品上显示边框",
+        "name": {
+          "zh-cn": "在下载过的作品上显示边框",
+          "en": "Display a border on downloaded works"
+        }
+      },
+      {
+        "id": 88,
+        "nameKey": "_下载器的收藏功能",
+        "name": {
+          "zh-cn": "下载器的收藏功能 (✩)",
+          "en": "Downloader's bookmark feature (✩)"
+        }
+      },
+      {
+        "id": 89,
+        "nameKey": "_复制作品信息带高亮关键字",
+        "name": {
+          "zh-cn": "复制作品信息",
+          "en": "Copy work info"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-增强/搜索页面",
+      "en": "Settings-Enhance/Search-page"
+    },
+    "ids": [
+      90,
+      91,
+      92,
+      93
+    ],
+    "names": [
+      {
+        "id": 90,
+        "nameKey": "_在搜索页面添加快捷搜索区域",
+        "name": {
+          "zh-cn": "在搜索页面添加快捷搜索区域",
+          "en": "Add a quick search area on the search page"
+        }
+      },
+      {
+        "id": 91,
+        "nameKey": "_过滤搜索页面的作品",
+        "name": {
+          "zh-cn": "过滤搜索页面的作品",
+          "en": "Filter works on the search page"
+        }
+      },
+      {
+        "id": 92,
+        "nameKey": "_在搜索页面里移除已关注用户的作品",
+        "name": {
+          "zh-cn": "在搜索页面里移除已关注用户的作品",
+          "en": "Remove the works of followed users from the search page"
+        }
+      },
+      {
+        "id": 93,
+        "nameKey": "_预览搜索结果",
+        "name": {
+          "zh-cn": "预览搜索页面的筛选结果",
+          "en": "Preview filter results on search page"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/语言",
+      "en": "Settings-General/Language"
+    },
+    "ids": [
+      94
+    ],
+    "names": [
+      {
+        "id": 94,
+        "nameKey": "_Language",
+        "name": {
+          "zh-cn": "Language",
+          "en": "Language"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/操作方式",
+      "en": "Settings-General/Operation-method"
+    },
+    "ids": [
+      95,
+      96,
+      97,
+      107
+    ],
+    "names": [
+      {
+        "id": 95,
+        "nameKey": "_选项卡切换方式",
+        "name": {
+          "zh-cn": "选项卡切换方式",
+          "en": "How to switch tabs"
+        }
+      },
+      {
+        "id": 96,
+        "nameKey": "_点击设置卡片时切换它的开关状态",
+        "name": {
+          "zh-cn": "点击设置卡片时切换它的开关状态",
+          "en": "Click the setting card to toggle its switch status"
+        }
+      },
+      {
+        "id": 97,
+        "nameKey": "_点击设置名字时打开wiki链接",
+        "name": {
+          "zh-cn": "点击设置名字时打开 Wiki 链接",
+          "en": "Open Wiki link when clicking setting name"
+        }
+      },
+      {
+        "id": 107,
+        "nameKey": "_自定义快捷键",
+        "name": {
+          "zh-cn": "自定义快捷键",
+          "en": "Customize hotkeys"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/外观",
+      "en": "Settings-General/Appearance"
+    },
+    "ids": [
+      98,
+      99,
+      100
+    ],
+    "names": [
+      {
+        "id": 98,
+        "nameKey": "_颜色主题",
+        "name": {
+          "zh-cn": "颜色主题",
+          "en": "Color theme"
+        }
+      },
+      {
+        "id": 99,
+        "nameKey": "_背景图片",
+        "name": {
+          "zh-cn": "背景图片",
+          "en": "Background image"
+        }
+      },
+      {
+        "id": 100,
+        "nameKey": "_高亮显示关键字",
+        "name": {
+          "zh-cn": "高亮显示关键字",
+          "en": "Highlight keywords"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/日志",
+      "en": "Settings-General/Logs"
+    },
+    "ids": [
+      101,
+      102
+    ],
+    "names": [
+      {
+        "id": 101,
+        "nameKey": "_日志区域的默认可见性",
+        "name": {
+          "zh-cn": "日志区域的默认可见性",
+          "en": "Default visibility of the log area"
+        }
+      },
+      {
+        "id": 102,
+        "nameKey": "_自动导出日志",
+        "name": {
+          "zh-cn": "自动导出日志",
+          "en": "Automatic log export"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "设置-通用/管理设置",
+      "en": "Settings-General/Manage-settings"
+    },
+    "ids": [
+      105,
+      106,
+      103
+    ],
+    "names": [
+      {
+        "id": 105,
+        "nameKey": "_当你修改设置时其他标签页",
+        "name": {
+          "zh-cn": "当你修改设置时，其他标签页",
+          "en": "Other tabs when you change settings"
+        }
+      },
+      {
+        "id": 106,
+        "nameKey": "_自动导出设置",
+        "name": {
+          "zh-cn": "自动导出设置",
+          "en": "Automatically export settings"
+        }
+      },
+      {
+        "id": 103,
+        "nameKey": "_管理设置",
+        "name": {
+          "zh-cn": "管理设置",
+          "en": "Manage settings"
+        }
+      }
+    ]
+  }
+]

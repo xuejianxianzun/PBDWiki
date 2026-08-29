@@ -79,9 +79,8 @@ When using timed crawl, note the following:
 4. If the extension updates automatically, the page may not download files correctly (refresh the page to restore functionality). For long-term timed crawl, consider installing the extension offline to avoid interruptions from updates. See the [Offline Installation](/en/Installation/OfflineInstallation?id=offline-installation) page.
 5. Set a lower page count to avoid crawling too many duplicate works. For example, on a search page, you can crawl up to 1000 pages, but it's unnecessary to crawl all of them. Setting 10 pages or fewer is fine if new content within the interval doesn't exceed 10 pages.
 6. On search pages, crawled works are not displayed on the page (i.e., no preview of search results).
-7. Timed crawl always starts downloading automatically.
-8. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-Crawl/Execution-strategy?id=the-interval-time-of-timed-crawl) setting.
-9. The downloader uses the interval set at the task's start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
+7. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-Crawl/Execution-strategy?id=the-interval-time-of-timed-crawl) setting.
+8. The downloader uses the interval set at the task's start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
 
 ## Cancel timed crawl
 

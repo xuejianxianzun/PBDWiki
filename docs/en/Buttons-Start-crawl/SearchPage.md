@@ -12,7 +12,7 @@ Example:
 **Tips:**
 
 - Separate multiple tags with newlines (one tag per line).
-- The downloader crawls and downloads each tag's works sequentially (always starting downloads automatically). It moves to the next tag after finishing the current one.
+- The downloader crawls and downloads each tag's works sequentially. It moves to the next tag after finishing the current one.
 - To save each tag's works to corresponding folders, use the `{page_tag}` tag to capture the current tag for folder creation. Refer to the naming rule: `{page_tag}/{id}`.
 - Current crawl conditions apply when crawling each tag's works.
 - Do not navigate to other pages while crawling a tag list (avoid clicking links on the page).

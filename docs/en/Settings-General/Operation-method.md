@@ -1,7 +1,7 @@
 ## Customize hotkeys
 
 <div class="option settingsPanel_optionCard new" data-no="107" data-pin-bound="true" style="display: flex;">
-  <a href="http://localhost:3000/#/en/Settings-General/Operation-method?flag=107" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-General/Operation-method?flag=107" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_自定义快捷键">Customize <span class="key">hotkeys</span></span>
   </a>
   <button type="button" class="gray textButton showMsgBtn" data-title="_自定义快捷键" data-msg="_自定义快捷键的说明" data-xztext="_帮助">Help</button>

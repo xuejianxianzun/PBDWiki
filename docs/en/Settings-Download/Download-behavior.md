@@ -1,8 +1,28 @@
-## Download thread
+## Start downloading automatically after crawling is complete
+
+<div class="option settingsPanel_optionCard" data-no="52" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=52" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_抓取完成后自动开始下载">Start downloading <span class="key">automatically</span> after crawling is complete</span>
+  </a>
+  <button type="button" class="gray textButton showMsgBtn" data-title="_抓取完成后自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
+  <div class="optionLine">
+    <span class="mb4" data-xztext="_应用到">Apply to:</span>
+    <input type="checkbox" name="autoStartDownload" id="autoStartDownload" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="autoStartDownload" data-xztext="_普通下载任务" class="active">Normal download task</label>
+    <input type="checkbox" name="autoStartDownloadForQuickDownload" id="autoStartDownloadForQuickDownload" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="autoStartDownloadForQuickDownload" data-xztext="_快速下载任务" class="active">Quick download task</label>
+  </div>
+</div>
+
+Please click the "Help" button in the downloader to view the detailed instructions.
+
+## Download how many files at the same time
 
 <div class="option settingsPanel_optionCard" data-no="51" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-behavior?flag=51" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_同时下载数量">Download <span class="key">thread</span></span>
+    <span data-xztext="_同时下载多少个文件">Download <span class="key">how many</span> files at the same time</span>
   </a>
   <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="3" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
 </div>
@@ -16,34 +36,6 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
 - If your download speed is fast, you can increase the concurrent download count.
 
 !> When downloading a large number of files, if the download speed is very fast (e.g., 5 files per second), it's recommended to set a lower concurrent download count, such as 1. Excessive downloading frequency may increase the risk of your account being banned.
-
-## Download starts automatically
-
-<div class="option settingsPanel_optionCard" data-no="52" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Download-behavior?flag=52" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_自动开始下载">Download starts <span class="key">automatically</span></span>
-  </a>
-  <input type="checkbox" name="autoStartDownload" class="need_beautify checkbox_switch" checked="">
-  <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
-</div>
-
-
-When crawling is complete and downloading can begin, the downloader will automatically start downloading.
-
-If this option is disabled, the downloader will not start downloading automatically after crawling but will display the settings panel. You need to manually click the "Start Download" button to begin downloading.
-
-?>There is one situation where the download **will not** start automatically:
-
-When crawling on a **search page** with the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) option enabled (default), downloading won't start automatically after crawling. This allows you to adjust the crawl results before starting the download.
-
-?>Some **quick download** methods always start downloading automatically (even if this option is disabled), such as:
-
-- Clicking the quick download button on the right side of a work page.
-- Clicking the download button on a work thumbnail.
-- Clicking the download button in the image viewer.
-- Pressing the `C` or `D` shortcut key to download a work during preview.
-- Crawling manually selected works.
 
 ## Bookmark works after downloading
 
