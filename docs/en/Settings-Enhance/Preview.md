@@ -253,13 +253,17 @@ For example, when viewing the original image of this work, only the top half is 
 To **close the full image**, use one of these methods:
 - Click the left mouse button.
 - Press the `Esc` key.
+- Press the `V` key.
 
 ### Shortcut Key List
 
-When the downloader displays the full image, you can use these shortcuts:
-- `C`urrent: Download the currently displayed image
-- `D`ownload: Download the entire work the image belongs to (if the work has multiple images, all are downloaded)
-- `Alt` + `C` copies the current preview image and work information
+When you view the full image of a work, you can use these shortcuts:
+- Mouse wheel: Zoom the image in or out
+- `B`(ookmark) Bookmark the work you are viewing
+- `C`(urrent) Download the currently viewed image (if the work has multiple images, only the current one is downloaded)
+- `D`(ownload) Download the currently viewed work (if the work has multiple images, all of them are downloaded by default)
+- `Alt` + `C`(opy) Copy the currently viewed image and work info (you can modify this shortcut)
+- `V` and `Esc` Close the preview. Also, clicking the left mouse button on the preview can also close it
 
 ### View image dimensions
 

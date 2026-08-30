@@ -127,7 +127,7 @@ The default is to add tags and bookmark publicly.
 
 ?> If a work has already been bookmarked, you can still bookmark it again. This will not change its bookmark time (and thus will not affect its order on the bookmark page), but it can update its public status and tag list. For example: if a work was previously set to public and had tags added, you can, if needed, change the settings to private with no tags and have the downloader bookmark it again.
 
-## Copy button
+## Copy work info
 
 <div class="option settingsPanel_optionCard" data-no="89" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Other?flag=89" target="_blank" class="has_tip settingNameStyle" data-xztip="_显示复制按钮的提示" data-tip="The downloader will display a copy button on the work thumbnail and within the work page. Clicking it allows you to copy the work's image and some data.
@@ -135,7 +135,7 @@ The default is to add tags and bookmark publicly.
 You can customize the data and format to be copied.
 &lt;br&gt;
 On the work page, and when previewing a work, you can use the shortcut key &lt;span class=&quot;blue&quot;&gt;Alt + C&lt;/span&gt; to copy." data-bind-click="true">
-    <span data-xztext="_复制按钮"><span class="key">Copy</span> button</span>
+    <span data-xztext="_复制作品信息带高亮关键字"><span class="key">Copy</span> work info</span>
     <span class="gray"> ? </span>
   </a>
   <div class="optionLine">

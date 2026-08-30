@@ -82,7 +82,7 @@ When the mouse hovers over the work thumbnail, the downloader will display a cop
 
 Clicking the copy button allows you to copy both the images and text summary of the work at the same time, then paste them into other software to save, or share with others.
 
-View detailed instructions: [Copy button](/en/Settings-Enhance/Other?id=copy-button)
+View detailed instructions: [Copy work info](/en/Settings-Enhance/Other?flag=89)
 
 ## Show download button on thumbnail
 

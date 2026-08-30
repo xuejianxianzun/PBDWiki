@@ -66,7 +66,7 @@ When you hover the mouse over a work's thumbnail, the downloader will show a Cop
 
 ![](../images/20260609_202250.png)
 
-Clicking it copies the original image and some information about the work. You can adjust what gets copied in the [Copy Button](/en/Settings-Enhance/Other?id=copy-button) settings.
+Clicking it copies the original image and some information about the work. You can adjust what gets copied in the [Copy work info](/en/Settings-Enhance/Other?flag=89) settings.
 
 ## Show download button on thumbnail
 
