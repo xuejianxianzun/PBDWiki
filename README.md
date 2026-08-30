@@ -4,18 +4,26 @@
 
 [https://xuejianxianzun.github.io/PBDWiki](https://xuejianxianzun.github.io/PBDWiki)
 
-## 开发步骤
+## 项目结构
 
-> 本 Wiki 使用 [docsify](https://docsify.js.org/) 构建。
+Wiki 的内容保存在 `docs` 目录里，每种语言的内容分别保存，使用语言代码作为文件夹的名字，例如 `zh-cn` 和 `en`。
 
-打开项目文件夹，并执行下面的命令：
+本 Wiki 使用 [docsify](https://docsify.js.org/) 构建。
 
-```
+开发命令：
+
+```bash
 # 安装 docsify-cli
 npm i docsify-cli -g
 
 # 启动本地测试服务器
 docsify serve docs
+
+# 编译样式
+npm run less
+
+# 编译 TypeScript
+npm run ts
 ```
 
 ## 语言支持

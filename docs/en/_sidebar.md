@@ -44,6 +44,7 @@
   * [General](en/Buttons-Start-crawling/General)
   * [HomePage](en/Buttons-Start-crawling/HomePage)
   * [WorkPage](en/Buttons-Start-crawling/WorkPage)
+  * [User's request page](en/Buttons-Start-crawling/User's-request-page)
   * [Novel series page](en/Buttons-Start-crawling/Novel-series-page)
   * [SearchPage](en/Buttons-Start-crawling/SearchPage)
   * [Ranking](en/Buttons-Start-crawling/Ranking)

@@ -6,9 +6,9 @@ This is the Wiki for [Pixiv Batch Downloader](https://github.com/xuejianxianzun/
 
 GitHub：[PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
 
-Wiki version: 19.3.0
+Wiki version: 19.4.0
 
-Last updated: 2026-08-12
+Last updated: 2026-08-30
 
 ----------
 
