@@ -24,11 +24,11 @@ When you hover over a thumbnail, the downloader displays some buttons on it, as 
 
 By default they are shown on the right side, but you can switch them to the left side if you want.
 
-## Show zoom button on thumbnail
+## Show Image viewer button on thumbnail
 
 <div class="option settingsPanel_optionCard" data-no="83" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示放大按钮" data-bind-click="true">Show <span class="key">zoom</span> button on thumbnail</a>
-  <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示图片查看器按钮" data-bind-click="true">Show <span class="key">Image viewer</span> button on thumbnail</a>
+  <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="magnifier" style="display: inline-flex;">
     <div class="optionLine">
@@ -40,9 +40,28 @@ By default they are shown on the right side, but you can switch them to the left
       <span class="beautify_radio" tabindex="0"></span>
       <label for="magnifierSize2" data-xztext="_普通">Regular</label>
     </div>
+    <button type="button" class="gray textButton toggleArea pl0" data-toggle-target="#showMagnifierTip" data-for-no="83" data-xztext="_快捷键列表">Shortcut list</button>
   </div>
+  <p class="tip" id="showMagnifierTip">
+    <span data-xztext="_图片查看器的快捷键列表">When using the image viewer, you can use these control keys:<br>
+<span class="blue">←</span> Previous image<br>
+<span class="blue">→</span> Next image<br>
+<span class="blue">↑</span> Increase zoom<br>
+<span class="blue">↓</span> Decrease zoom<br>
+<span class="blue">Esc</span> Exit the image viewer<br>
+You can also use the mouse wheel to switch images or control zoom, depending on whether the mouse pointer is over the image:<br>
+- When the mouse wheel scrolls over the image, the image zooms in or out;<br>
+- When the mouse wheel scrolls outside the image, the image switches.<br>
+<br>
+In addition, there are some function buttons at the bottom of the image viewer, each with its own hotkey:<br>
+<span class="blue">F</span>(ull) Toggle display scale: 100% or fit-to-screen<br>
+<span class="blue">L</span>(ink) Copy the work link<br>
+<span class="blue">B</span>(ookmark) Quickly bookmark the current work<br>
+<span class="blue">Alt</span> + <span class="blue">C</span>(opy) Copy the currently viewed image and work info (you can modify this hotkey)<br>
+<span class="blue">C</span>(urrent) Download the currently viewed image (if the work has multiple images, only the current one is downloaded)<br>
+<span class="blue">D</span>(ownload) Download the currently viewed work (if the work has multiple images, all of them are downloaded by default)<br></span>
+  </p>
 </div>
-
 
 When the mouse hovers over a work's thumbnail, the downloader displays a magnifier icon, as shown below:
 

@@ -121,21 +121,24 @@ There are multiple ways to exit the image viewer:
 
 **Shortcut Key List:**
 
-- `F` Display at original size; Return to initial ratio
-- `B` Bookmark this work
-- `Alt` + `C` Click the copy button
-- `C` Download the currently displayed image
-- `D` Download the currently viewed work
-- `L` Copy the URL of the work page
-- `←` Switch to the previous image
-- `→` Switch to the next image
-- `↑` Zoom in the image.
-- `↓` Zoom out the image.
-- `ESC` Exit fullscreen mode; Exit viewer
+When using the image viewer, you can use these control keys:
+- `←` Previous image
+- `→` Next image
+- `↑` Increase zoom
+- `↓` Decrease zoom
+- `Esc` Exit the image viewer
 
-You can also use the mouse wheel to switch or zoom images. This depends on whether the mouse pointer is over the image:
-- When the mouse wheel is scrolled over the image, the image will zoom in or out;
-- When the mouse wheel is scrolled outside the image, the image will switch to the next or previous one.
+You can also use the mouse wheel to switch images or control zoom, depending on whether the mouse pointer is over the image:
+- When the mouse wheel scrolls over the image, the image zooms in or out;
+- When the mouse wheel scrolls outside the image, the image switches.
+
+In addition, there are some function buttons at the bottom of the image viewer, each with its own hotkey:
+- `F`(ull) Toggle display scale: 100% or fit-to-screen
+- `L`(ink) Copy the work link
+- `B`(ookmark) Quickly bookmark the current work
+- `Alt` + `C`(opy) Copy the currently viewed image and work info (you can modify this hotkey)
+- `C`(urrent) Download the currently viewed image (if the work has multiple images, only the current one is downloaded)
+- `D`(ownload) Download the currently viewed work (if the work has multiple images, all of them are downloaded by default)
 
 ## In the multi-image work page, display the thumbnail list
 
