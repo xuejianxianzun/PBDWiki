@@ -60,21 +60,34 @@ Enabling this feature replaces square thumbnails with 540 px thumbnails, showing
 
 When on a **multi-image work** page (e.g., [121525173](https://www.pixiv.net/artworks/121525173)), the downloader can display thumbnails for each image. For example:
 
-![](../images/20250910_235702.webp)
+![](../images/20260830_174125.png)
 
 You can preview or download each image.
 
+### Select some images to download
+
+Some buttons are displayed at the top of the thumbnail list. If you only need to download some images of this work, you can use these buttons.
+
+Click the `Manually select images` button to enter/exit manual selection mode. In manual selection mode, click an image to select it; click it again to deselect it.
+
+After you finish selecting, click the `Download` button on the right side of this area to download the selected images.
+
+?> Tip: If you click the `Download` button without selecting any images, the downloader will download all images.
+
+### Enhanced features
+
 When hovering over a thumbnail, you can use enhancement features, such as:
 
-![](../images/20250903_230346.webp)
+![](../images/20260830_174439.webp)
 
 These features include:
+- Copy button (click it to copy the work info)
+- Download button (clicking this button downloads only the image it belongs to)
 - Preview work (you can still use shortcuts `C` to download a single image or `D` to download the entire work)
 - View full image by long-pressing the right mouse button
-- Show download button on thumbnails (clicking this button downloads only the specific image)
 - Clicking a thumbnail opens the image viewer, for example:
 
-![](../images/20250903_230239.webp)
+![](../images/20260830_174657.webp)
 
 ## Display images in grayscale
 

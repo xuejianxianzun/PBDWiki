@@ -98,7 +98,7 @@ See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhan
 
 The downloader includes a built-in image viewer, as shown below:
 
-![](images/20260404_232758.webp)
+![](images/20260830_174657.webp)
 
 ?> If the work contains multiple images, the downloader displays thumbnails of all images at the bottom. Click a thumbnail to view its full-size image.
 
@@ -144,7 +144,7 @@ In addition, there are some function buttons at the bottom of the image viewer, 
 
 When on a **multi-image work** page (e.g., [134821751](https://www.pixiv.net/artworks/134821751)), the downloader displays thumbnails for each image, as shown below:
 
-![](images/20250907_172829.webp)
+![](images/20260830_173821.png)
 
 You can preview or download each image.
 
