@@ -46,3 +46,12 @@ When using this feature, the button displays progress information. The downloade
 <button id="bookmarkAllWorksOnPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" disabled="disabled"><span data-xztext="_收藏本页面的所有作品">Get data 8 / 48</span><span class="ripple"></span></button>
 
 <button id="bookmarkAllWorksOnPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" disabled="disabled"><span data-xztext="_收藏本页面的所有作品">Add bookmark 4 / 48</span><span class="ripple"></span></button>
+
+## Bookmark all request works
+
+<button id="bookmarkAllRequestWorks" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_收藏所有约稿作品">Bookmark all request works</span><span class="ripple"></span></button>
+
+This button can be seen when you are in the "Requests" category on the user's profile page. Its behavior is similar to the `Bookmark all works on this page` button, but with some differences:
+- It only bookmarks works in the "Requests" category.
+- It bookmarks **all** request works, not just one page of works. This is because request works have no pagination.
+

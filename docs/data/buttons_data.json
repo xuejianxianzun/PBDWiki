@@ -564,7 +564,8 @@
       "saveUserAvatar",
       "saveUserAvatarAsIcon",
       "saveUserCoverImage",
-      "bookmarkAllWorksOnPage"
+      "bookmarkAllWorksOnPage",
+      "bookmarkAllRequestWorks"
     ],
     "names": [
       {
@@ -597,6 +598,14 @@
         "name": {
           "zh-cn": "收藏本页面的所有作品",
           "en": "Bookmark all works on this page"
+        }
+      },
+      {
+        "id": "bookmarkAllRequestWorks",
+        "nameKey": "_收藏所有约稿作品",
+        "name": {
+          "zh-cn": "收藏所有约稿作品",
+          "en": "Bookmark all request works"
         }
       }
     ]
@@ -753,25 +762,6 @@
         "name": {
           "zh-cn": "查找已注销的用户",
           "en": "Find deactivated users"
-        }
-      }
-    ]
-  },
-  {
-    "page": {
-      "zh-cn": "按钮-附加功能/用户的约稿页面",
-      "en": "Buttons-Extra-features/User's-request-page"
-    },
-    "ids": [
-      "bookmarkAllRequestWorks"
-    ],
-    "names": [
-      {
-        "id": "bookmarkAllRequestWorks",
-        "nameKey": "_收藏所有约稿作品",
-        "name": {
-          "zh-cn": "收藏所有约稿作品",
-          "en": "Bookmark all request works"
         }
       }
     ]
