@@ -20,6 +20,21 @@
       <label for="previewUgoira" data-xztext="_动图" class="active">Ugoira</label>
     </div>
     <div class="optionLine">
+      <span class="settingNameStyle" data-xztext="_查看的图片尺寸">View image dimensions</span>
+      <input type="radio" name="prevWorkSize" id="prevWorkSize1" class="need_beautify radio" value="original">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="prevWorkSize1" data-xztext="_原图">Original</label>
+      <input type="radio" name="prevWorkSize" id="prevWorkSize2" class="need_beautify radio" value="regular" checked="">
+      <span class="beautify_radio" tabindex="0"></span>
+      <label for="prevWorkSize2" data-xztext="_普通" class="active">Regular</label>
+    </div>
+    <div class="optionLine">
+      <label for="allowPreviewCoverThumbnail" data-xztext="_允许预览图遮挡缩略图">Allow the preview image to cover the thumbnail</label>
+      <input type="checkbox" name="allowPreviewCoverThumbnail" id="allowPreviewCoverThumbnail" class="need_beautify checkbox_switch">
+      <span class="beautify_switch" tabindex="0"></span>
+      <button type="button" class="gray textButton showMsgBtn" data-title="_允许预览图遮挡缩略图" data-msg="_允许预览图遮挡缩略图的帮助" data-xztext="_帮助">Help</button>
+    </div>
+    <div class="optionLine">
       <label for="checkBlockTagsForPreviewWork" data-xztext="_检查屏蔽的标签">Check blocked tags</label>
       <input type="checkbox" name="checkBlockTagsForPreviewWork" id="checkBlockTagsForPreviewWork" class="need_beautify checkbox_switch">
       <span class="beautify_switch" tabindex="0"></span>
@@ -46,29 +61,21 @@
       <span class="beautify_switch" tabindex="0"></span>
     </div>
     <div class="optionLine">
-      <span class="settingNameStyle" data-xztext="_查看的图片尺寸">View image dimensions</span>
-      <input type="radio" name="prevWorkSize" id="prevWorkSize1" class="need_beautify radio" value="original">
-      <span class="beautify_radio" tabindex="0"></span>
-      <label for="prevWorkSize1" data-xztext="_原图">Original</label>
-      <input type="radio" name="prevWorkSize" id="prevWorkSize2" class="need_beautify radio" value="regular" checked="">
-      <span class="beautify_radio" tabindex="0"></span>
-      <label for="prevWorkSize2" data-xztext="_普通" class="active">Regular</label>
-    </div>
-    <div class="optionLine">
-      <button type="button" class="gray textButton toggleArea" data-toggle-target="#previewWorkShortcutTip" data-for-no="75" data-xztext="_快捷键列表">Shortcut list</button>
+      <button type="button" class="gray textButton toggleArea pl0" data-toggle-target="#previewWorkShortcutTip" data-for-no="75" data-xztext="_快捷键列表">Shortcut list</button>
     </div>
   </div>
-  <p class="tip" id="previewWorkShortcutTip">
-    <span data-xztext="_预览作品的快捷键说明"><span class="blue">Alt</span> + <span class="blue">P</span> Toggle preview work function on/off<br>
-When viewing the preview image, you can use the following shortcut keys:<br>
+  <p class="tip" id="previewWorkShortcutTip" style="display: none;">
+    <span data-xztext="_预览作品的快捷键说明">When you view the preview, you can use these hotkeys:<br>
+<span class="blue">V</span>(iew) View the original image at 1:1 native ratio<br>
 <span class="blue">B</span>(ookmark) Bookmark the previewed work<br>
-<span class="blue">C</span>(urrent) Download the currently previewed image (if the work has multiple images, only the current one will be downloaded)<br>
-<span class="blue">D</span>(ownload) Download the currently previewed work (if the work has multiple images, all will be downloaded by default)<br>
-<span class="blue">Alt</span> + <span class="blue">C</span> Copy the currently previewed image and work information<br>
-<span class="blue">Esc</span> Close the preview image<br>
+<span class="blue">C</span>(urrent) Download the currently previewed image (if the work has multiple images, only the current one is downloaded)<br>
+<span class="blue">D</span>(ownload) Download the currently previewed work (if the work has multiple images, all of them are downloaded by default)<br>
+<span class="blue">Alt</span> + <span class="blue">C</span>(opy) Copy the currently previewed image and work info (you can modify this hotkey)<br>
+<span class="blue">Esc</span> Close the preview. Also, clicking the left mouse button on the preview can also close it<br>
 <span class="blue">← ↑</span> Previous image<br>
 <span class="blue">→ ↓</span> Next image<br>
-<span class="blue">Spacebar</span> Next image</span>
+<span class="blue">Space</span> Next image<br>
+You can view this hotkey list anytime in the "Preview work" settings</span>
   </p>
 </div>
 
@@ -88,15 +95,56 @@ To **close the preview image**, use one of these methods:
 
 Use the shortcut key `Alt` + `P` to toggle the preview work feature on or off.
 
-When viewing a preview image, you can use the following shortcuts:
-- `B`ookmark: Bookmark the previewed work
-- `C`urrent: Download the currently displayed image (if the work has multiple images, only the current one is downloaded)
-- `D`ownload: Download the entire previewed work (if the work has multiple images, all are downloaded)
-- `Alt` + `C` copies the current preview image and work information
-- `Esc`: Close the preview image. You can also close it by left-clicking the preview image
-- `←` `↑`: Previous image
-- `→` `↓`: Next image
-- `Space`: Next image
+When you view the preview, you can use these hotkeys:
+- `V`(iew) View the original image at 1:1 native ratio
+- `B`(ookmark) Bookmark the previewed work
+- `C`(urrent) Download the currently previewed image (if the work has multiple images, only the current one is downloaded)
+- `D`(ownload) Download the currently previewed work (if the work has multiple images, all of them are downloaded by default)
+- `Alt` + `C`(opy) Copy the currently previewed image and work info (you can modify this hotkey)
+- `Esc` Close the preview. Also, clicking the left mouse button on the preview can also close it
+- `← ↑` Previous image
+- `→ ↓` Next image
+- `Space` Next image
+
+------
+
+**Sub-option:**
+
+### View image dimensions
+
+You can choose which image size the downloader loads when previewing works.
+
+- `Original`: Loads the original image. Some original images may be large, so loading may be slower.
+- `Regular`: Default, loads regular-sized images. These are smaller, so they load quickly.
+
+?> This option only affects the image size during preview, not the size during download.
+
+**Difference between sizes:**
+
+- If the original image's dimensions exceed 1200 px, the regular size will be 1200 px.
+- If the original image is smaller than 1200 px, the regular size matches it. For example, if the original is 500 x 500 px, the regular size is also 500 x 500 px.
+
+**Display area differences:**
+
+When selecting "Original," if the image is larger than 1200 px and there's enough space around it, the downloader displays a larger preview image.
+
+Here's an example. The regular image width is 1200 px:
+
+![](../images/20250903_214644.webp)
+
+The original image width is 4093 px, so the display area is larger:
+
+![](../images/20250903_214628.webp)
+
+?> Although the original image can sometimes be displayed larger, this isn't always the case. If the available area around the thumbnail is limited, the regular image may already fill it, and the original won't appear larger.
+
+### Allow the preview image to cover the thumbnail
+
+When previewing a horizontal image, the preview is often quite wide. If the view image dimensions setting is `Regular`, the preview is usually 1200px wide; if it is `Original`, the preview may take up the full page width.
+
+However, the space on the left or right side of the thumbnail may not be enough to fully display the preview, in which case:
+- If this switch is enabled, the preview maintains its original size as much as possible (without shrinking), but it may cover the thumbnail. Tip: you can click the thumbnail to make it disappear.
+- If this switch is disabled, the preview is usually displayed smaller to avoid covering the thumbnail.
 
 ### Check blocked tags
 
@@ -156,34 +204,6 @@ The information displayed from left to right is as follows:
 - Posting time of the work
 - Title of the work
 - Description of the work (if any)
-
-### View image dimensions
-
-You can choose which image size the downloader loads when previewing works.
-
-- `Original`: Loads the original image. Some original images may be large, so loading may be slower.
-- `Regular`: Default, loads regular-sized images. These are smaller, so they load quickly.
-
-?> This option only affects the image size during preview, not the size during download.
-
-**Difference between sizes:**
-
-- If the original image's dimensions exceed 1200 px, the regular size will be 1200 px.
-- If the original image is smaller than 1200 px, the regular size matches it. For example, if the original is 500 x 500 px, the regular size is also 500 x 500 px.
-
-**Display area differences:**
-
-When selecting "Original," if the image is larger than 1200 px and there's enough space around it, the downloader displays a larger preview image.
-
-Here's an example. The regular image width is 1200 px:
-
-![](../images/20250903_214644.webp)
-
-The original image width is 4093 px, so the display area is larger:
-
-![](../images/20250903_214628.webp)
-
-?> Although the original image can sometimes be displayed larger, this isn't always the case. If the available area around the thumbnail is limited, the regular image may already fill it, and the original won't appear larger.
 
 ## Long press the right mouse button on the thumbnail to display the large image
 

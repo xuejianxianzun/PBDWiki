@@ -18,7 +18,7 @@ See detailed explanation: [Naming rule for image works](/en/Settings-Naming/Fold
 
 The downloader has a "Timed Crawl" function, allowing you to crawl and download new works at regular intervals on certain pages.
 
-See detailed explanation: [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl).
+See detailed explanation: [Timed crawl](/en/Buttons-Start-crawling/General?id=timed-crawl).
 
 ## Incremental Updates
 
@@ -62,7 +62,7 @@ Return to page 1, set the [How many pages to crawl](/en/Settings-Crawl/Crawl-sco
 
 ### Manually Select Works
 
-If there are few new works, you can use the [Manually select](/en/Buttons-Start-crawl/General?id=manually-select) function to download them.
+If there are few new works, you can use the [Manually select](/en/Buttons-Start-crawling/General?id=manually-select) function to download them.
 
 For example, if a user's profile has only the latest 10 works that you haven't downloaded, manually select those 10 works and download them.
 
@@ -71,7 +71,7 @@ For example, if a user's profile has only the latest 10 works that you haven't d
 To download daily rankings, do the following:
 
 1. Download all works from today's ranking.
-2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Start-crawl/Ranking?id=crawl-the-debut-works) button to crawl only the works newly added that day.
+2. On subsequent days, use the [Crawl the debut works](/en/Buttons-Start-crawling/Ranking?id=crawl-the-debut-works) button to crawl only the works newly added that day.
 
 ## Batch crawling and downloading (Split tasks)
 
@@ -122,7 +122,7 @@ If you need to batch bookmark multiple works, you can do the following:
 2. Optional: If you do not need to download the original images of these works, you can set the [Image size](/en/Settings-Download/Image-size?id=image-size) during download to `Small` to speed up the download process.
 3. Crawl and download these works. The downloader will bookmark them.
 
-On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl) function in combination with the method above.
+On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Start-crawling/General?id=timed-crawl) function in combination with the method above.
 
 ## Getting IDs of Expired Bookmarked Works
 

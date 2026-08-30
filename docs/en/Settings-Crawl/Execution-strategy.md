@@ -139,7 +139,7 @@ This setting cannot completely avoid 429 errors. Reasons:
 
 Set the interval for timed crawling.
 
-Some pages have a [Timed crawl](/en/Buttons-Start-crawl/General?id=timed-crawl) button. Clicking it allows the downloader to automatically perform crawling and downloading at regular intervals. You can set the interval between each crawl here.
+Some pages have a [Timed crawl](/en/Buttons-Start-crawling/General?id=timed-crawl) button. Clicking it allows the downloader to automatically perform crawling and downloading at regular intervals. You can set the interval between each crawl here.
 
 The default value is 30 minutes.
 
@@ -203,5 +203,5 @@ The export occurs after step 1 and stops the task, meaning step 2 is not execute
 
 **Exported content:**
 
-The exported work ID list is saved to a JSON file. You can process this file as needed, but its design purpose is to work with another feature: the [Import ID List](/en/Buttons-Start-crawl/HomePage?id=import-id-list) button on the homepage.
+The exported work ID list is saved to a JSON file. You can process this file as needed, but its design purpose is to work with another feature: the [Import ID List](/en/Buttons-Start-crawling/HomePage?id=import-id-list) button on the homepage.
 

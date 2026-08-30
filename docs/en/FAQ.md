@@ -379,7 +379,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawl/HomePage?id=type-id-to-crawl) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawling/HomePage?id=type-id-to-crawl) feature or similar functions.
 
 ## Browser Freezes While Running
 

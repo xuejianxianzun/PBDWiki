@@ -104,7 +104,7 @@ Clicking this button enters selection mode. A blue circle with crosshair guideli
 
 You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
 
-![](../images/20251126_033447.png)
+![](../images/20260830_171519.png)
 
 You can later crawl the selected works.
 
