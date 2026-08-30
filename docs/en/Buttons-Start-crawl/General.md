@@ -108,26 +108,29 @@ You can then click the left mouse button on any work to select it. The downloade
 
 You can later crawl the selected works.
 
-?> If the current page has pagination (e.g., on a user profile), you can select works across multiple pages. For example, select 2 works on page 1, then go to page 2 and select 3 works, resulting in 5 selected works that can be crawled at once.
+**Additional notes:**
 
-?> When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work's page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work's thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
+- Select works across multiple pages: If the current page has pagination (e.g., on a user profile), you can select works across multiple pages. For example, select 2 works on page 1, then go to page 2 and select 3 works, resulting in 5 selected works that can be crawled at once.
 
----------
+- Clicking a work does not open its link: When in manual selection mode, clicking a work does not open its link to prevent page content changes. To view a work's page, use one of these methods: 1. Hold `Ctrl` and click the work. 2. Right-click the work's thumbnail and select "Open link in new tab." 3. Exit manual selection mode (shortcut: `Esc`).
 
-After you click the `Manually select works` button, its label will change to `Pause select` or `Continue select` depending on the state. Additionally, two buttons will appear after this button.
+- Deselect: Clicking a work selects it; clicking it again deselects it.
 
-## Clear selected works
+Additionally, after you click the `Manually select works` button, its label will change to `Pause selection` or `Continue selection` depending on the state, and two buttons will appear after this button.
 
-<button id="clearSelectedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清空选择的作品">Clear selected works</span><span class="ripple"></span></button>
+## Select all displayed works
 
+<button id="selectAllWorks" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_全选当前显示的作品">Select all displayed works</span><span class="ripple"></span></button>
 
-Exits manual selection mode and clears all selected works. Click this if you no longer need the previously selected works.
+This is the select all button. Clicking it makes the downloader select all works currently displayed on the page.
+
+**Tips:**
+- This button only selects the works already present on the page. Some pages have works spread across multiple pages, while others load works as you scroll, so only a portion of the works may currently be displayed. The select all button only selects the currently loaded works; it does not select works that are not displayed or loaded.
+- This button always changes works to the "selected" state. Regardless of a work's previous state (unselected, selected, or excluded), it will become selected.
 
 ## Crawl selected works
 
 <button id="crawlSelectedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_抓取选择的作品">Crawl selected works</span><span class="ripple"></span></button>
-
-
 
 Crawls the selected works. The downloader retains the selected works.
 
@@ -137,7 +140,7 @@ After selecting the works you want to crawl, click the `crawl selected works` bu
 
 **Tips:**
 
-- If needed, you can click `Pause select` and `Continue select` to make multiple selections. The downloader does not clear previously selected works, so selections accumulate.
+- If needed, you can click `Pause selection` and `Continue selection` to make multiple selections. The downloader does not clear previously selected works, so selections accumulate.
 - Press the `Esc` key to exit manual selection mode.
 - If works are selected, the downloader displays the number of selected works on the `crawl selected works` button.
 - The downloader's filter conditions also apply to manually selected works, so some works may be excluded during crawling.
@@ -157,4 +160,48 @@ If you choose to leave the page, the selected works are lost. If you cancel the 
 
 In short, you don't need to worry about accidentally losing selected works, as you'll have the opportunity to choose.
 
+## Clear selected works
 
+<button id="clearSelectedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清空选择的作品">Clear selected works</span><span class="ripple"></span></button>
+
+Exits manual selection mode and clears all selected works. Click this if you no longer need the previously selected works.
+
+## Manually exclude
+
+<button id="excludeWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_手动排除作品">Manually exclude</span><span class="ripple"></span></button>
+
+Use this button to exclude any works on the page; the downloader will not crawl them.
+
+?> The shortcut for this function is `Alt` + `E`. Press it to enter/exit manual exclusion mode.
+
+Clicking this button enters exclusion mode. A red circle with crosshair guidelines appears under the mouse cursor, as shown below:
+
+![](../images/20260830_162226.png)
+
+You can then click the left mouse button on any work to exclude it. The downloader adds an X mark to indicate that the work has been excluded, as shown below:
+
+![](../images/20260830_162237.png)
+
+Manual exclusion shares some similarities with manual selection, such as excluding works across multiple pages, not opening links when clicking works, and deselecting. However, it is more flexible in use.
+
+**When to use:**
+
+Manual selection requires you to select first and then crawl; manual exclusion, however, can be used at any time. That is, you can:
+- Exclude first, then start crawling, so the downloader will not crawl the excluded works.
+- Exclude after crawling: if a work has not been crawled yet, the downloader will not crawl it; if it has already been crawled, the downloader will remove it from the crawl results so it will not be downloaded.
+
+However, if a work has already been downloaded, excluding it afterwards has no effect, because the downloader will not delete its files. If you want to crawl first and then exclude, I recommend disabling the "Start downloading automatically after crawling is complete" setting, so files will not be downloaded automatically. After you finish excluding, you can manually click the "Start download" button to start downloading.
+
+**How selection and exclusion interact:**
+
+If a work is already selected, using exclusion mode to select it will directly turn it into an excluded state, and vice versa.
+
+Additionally, after you click the `Manually exclude` button, its label will change to `Pause exclusion` or `Continue exclusion` depending on the state.
+
+## Clear excluded works
+
+<button id="clearExcludedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger" style="display: flex;"><span data-xztext="_清空排除的作品">Clear excluded works</span><span class="ripple"></span></button>
+
+After you enter manual exclusion mode, the downloader displays this button, which you can click to clear the excluded works.
+
+Additionally, this button shows how many works are currently excluded.
