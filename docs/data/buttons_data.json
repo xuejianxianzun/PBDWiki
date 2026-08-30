@@ -2,7 +2,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/通用",
-      "en": "Buttons-Start-crawling/General"
+      "zh-tw": "按鈕-開始擷取/通用",
+      "en": "Buttons-Start-crawling/General",
+      "ja": "ボタン-クロールを開始する/一般的な",
+      "ko": "버튼-긁어오기-시작/일반적인",
+      "ru": "Кнопки-Начать-сканирование/Общий"
     },
     "ids": [
       "startCrawling",
@@ -22,7 +26,11 @@
         "nameKey": "_开始抓取",
         "name": {
           "zh-cn": "开始抓取",
-          "en": "Start crawling"
+          "zh-tw": "開始擷取",
+          "en": "Start crawling",
+          "ja": "クロールを開始する",
+          "ko": "긁어오기 시작",
+          "ru": "Начать сканирование"
         }
       },
       {
@@ -30,7 +38,11 @@
         "nameKey": "_停止抓取",
         "name": {
           "zh-cn": "停止抓取",
-          "en": "Stop crawling"
+          "zh-tw": "停止擷取",
+          "en": "Stop crawling",
+          "ja": "クロールをやめる",
+          "ko": "크롤링 중지",
+          "ru": "Остановить сканирование"
         }
       },
       {
@@ -38,7 +50,11 @@
         "nameKey": "_定时抓取",
         "name": {
           "zh-cn": "定时抓取",
-          "en": "Timed crawl"
+          "zh-tw": "定時抓取",
+          "en": "Timed crawl",
+          "ja": "時限クロール",
+          "ko": "시간 제한 크롤링",
+          "ru": "Сканирование по таймеру"
         }
       },
       {
@@ -46,7 +62,11 @@
         "nameKey": "_取消定时抓取",
         "name": {
           "zh-cn": "取消定时抓取",
-          "en": "Cancel timed crawl"
+          "zh-tw": "取消定時抓取",
+          "en": "Cancel timed crawl",
+          "ja": "時間指定クロールをキャンセル",
+          "ko": "시간 지정 크롤링 취소",
+          "ru": "Отменить сканирование по таймеру"
         }
       },
       {
@@ -54,7 +74,11 @@
         "nameKey": "_手动选择作品",
         "name": {
           "zh-cn": "手动选择作品",
-          "en": "Manually select"
+          "zh-tw": "手動選擇作品",
+          "en": "Manually select",
+          "ja": "手動で作品を選ぶ",
+          "ko": "수동 선택",
+          "ru": "Ручной выбор"
         }
       },
       {
@@ -62,7 +86,11 @@
         "nameKey": "_全选当前显示的作品",
         "name": {
           "zh-cn": "全选当前显示的作品",
-          "en": "Select all displayed works"
+          "zh-tw": "全選目前顯示的作品",
+          "en": "Select all displayed works",
+          "ja": "現在表示されている作品をすべて選ぶ",
+          "ko": "표시된 작품 모두 선택",
+          "ru": "Выбрать все отображаемые работы"
         }
       },
       {
@@ -70,7 +98,11 @@
         "nameKey": "_抓取选择的作品",
         "name": {
           "zh-cn": "抓取选择的作品",
-          "en": "Crawl selected works"
+          "zh-tw": "擷取選擇的作品",
+          "en": "Crawl selected works",
+          "ja": "選ばれた作品をクロール",
+          "ko": "선택된 작품 긁어오기",
+          "ru": "Сканировать выбранные работы"
         }
       },
       {
@@ -78,7 +110,11 @@
         "nameKey": "_清空选择的作品",
         "name": {
           "zh-cn": "清空选择的作品",
-          "en": "Clear selected works"
+          "zh-tw": "清空選擇的作品",
+          "en": "Clear selected works",
+          "ja": "選んだ作品をクリアします",
+          "ko": "선택된 작품 비우기",
+          "ru": "Очистить выбранные работы"
         }
       },
       {
@@ -86,7 +122,11 @@
         "nameKey": "_手动排除作品",
         "name": {
           "zh-cn": "手动排除作品",
-          "en": "Manually exclude"
+          "zh-tw": "手動排除作品",
+          "en": "Manually exclude",
+          "ja": "手動で作品を除外",
+          "ko": "수동 제외",
+          "ru": "Ручное исключение"
         }
       },
       {
@@ -94,7 +134,11 @@
         "nameKey": "_清空排除的作品",
         "name": {
           "zh-cn": "清空排除的作品",
-          "en": "Clear excluded works"
+          "zh-tw": "清空排除的作品",
+          "en": "Clear excluded works",
+          "ja": "除外した作品をクリア",
+          "ko": "제외한 작품 비우기",
+          "ru": "Очистить исключенные работы"
         }
       }
     ]
@@ -102,7 +146,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/首页",
-      "en": "Buttons-Start-crawling/HomePage"
+      "zh-tw": "按鈕-開始擷取/首頁",
+      "en": "Buttons-Start-crawling/HomePage",
+      "ja": "ボタン-クロールを開始する/ホーム",
+      "ko": "버튼-긁어오기-시작/홈",
+      "ru": "Кнопки-Начать-сканирование/Главная"
     },
     "ids": [
       "crawlById",
@@ -115,7 +163,11 @@
         "nameKey": "_输入id进行抓取",
         "name": {
           "zh-cn": "输入 ID 进行抓取",
-          "en": "Enter ID to crawl"
+          "zh-tw": "輸入 ID 進行擷取",
+          "en": "Enter ID to crawl",
+          "ja": "IDを入力してクロールする",
+          "ko": "ID를 입력하여 긁어오기",
+          "ru": "Введите ID для сканирования"
         }
       },
       {
@@ -123,7 +175,11 @@
         "nameKey": "_抓取id区间",
         "name": {
           "zh-cn": "抓取 ID 区间",
-          "en": "Crawl ID range"
+          "zh-tw": "擷取 ID 區間",
+          "en": "Crawl ID range",
+          "ja": "ID 範囲をクロール",
+          "ko": "ID 범위 긁어오기",
+          "ru": "Сканировать диапазон идентификаторов"
         }
       },
       {
@@ -131,7 +187,11 @@
         "nameKey": "_导入ID列表",
         "name": {
           "zh-cn": "导入 ID 列表",
-          "en": "Import ID list"
+          "zh-tw": "匯入 ID 列表",
+          "en": "Import ID list",
+          "ja": "インポートIDリスト",
+          "ko": "ID 목록 가져오기",
+          "ru": "Список идентификаторов импорта"
         }
       }
     ]
@@ -139,7 +199,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/作品页面",
-      "en": "Buttons-Start-crawling/WorkPage"
+      "zh-tw": "按鈕-開始擷取/作品頁面",
+      "en": "Buttons-Start-crawling/WorkPage",
+      "ja": "ボタン-クロールを開始する/作品ページ",
+      "ko": "버튼-긁어오기-시작/작품-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-работы"
     },
     "ids": [
       "startCrawlingFromCurrentPageNew",
@@ -153,7 +217,11 @@
         "nameKey": "_从本页开始抓取new",
         "name": {
           "zh-cn": "从本页开始抓取新作品",
-          "en": "Crawl the new works from this page"
+          "zh-tw": "從本頁開始擷取新作品",
+          "en": "Crawl the new works from this page",
+          "ja": "このページから新しい作品を入手する",
+          "ko": "이 페이지부터 새 작품 긁어오기",
+          "ru": "Просканировать новые работы с этой страницы"
         }
       },
       {
@@ -161,7 +229,11 @@
         "nameKey": "_从本页开始抓取old",
         "name": {
           "zh-cn": "从本页开始抓取旧作品",
-          "en": "Crawl the old works from this page"
+          "zh-tw": "從本頁開始擷取舊作品",
+          "en": "Crawl the old works from this page",
+          "ja": "このページから古い作品を入手する",
+          "ko": "이 페이지부터 오래된 작품 긁어오기",
+          "ru": "Просканировать старые работы с этой страницы"
         }
       },
       {
@@ -169,7 +241,11 @@
         "nameKey": "_抓取相关作品",
         "name": {
           "zh-cn": "抓取相关作品",
-          "en": "Crawl the related works"
+          "zh-tw": "擷取相關作品",
+          "en": "Crawl the related works",
+          "ja": "関連作品をダウンロードする",
+          "ko": "관련 작품 긁어오기",
+          "ru": "Просканировать похожие работы"
         }
       },
       {
@@ -177,7 +253,11 @@
         "nameKey": "_下载推荐作品",
         "name": {
           "zh-cn": "下载推荐作品",
-          "en": "download recommended works"
+          "zh-tw": "下載推薦作品",
+          "en": "download recommended works",
+          "ja": "おすすめ作品をダウンロードする",
+          "ko": "추천 작품 다운로드",
+          "ru": "скачать рекомендуемые работы"
         }
       }
     ]
@@ -185,7 +265,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/系列小说页面",
-      "en": "Buttons-Start-crawling/Novel-series-page"
+      "zh-tw": "按鈕-開始擷取/系列小說頁面",
+      "en": "Buttons-Start-crawling/Novel-series-page",
+      "ja": "ボタン-クロールを開始する/シリーズ小説ページ",
+      "ko": "버튼-긁어오기-시작/시리즈-소설-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-серии-романов"
     },
     "ids": [
       "crawlSeriesNovel",
@@ -197,7 +281,11 @@
         "nameKey": "_抓取系列小说",
         "name": {
           "zh-cn": "抓取系列小说",
-          "en": "Crawl series of novels"
+          "zh-tw": "擷取系列小說",
+          "en": "Crawl series of novels",
+          "ja": "小説のシリーズをクロールする",
+          "ko": "시리즈 소설 긁어오기",
+          "ru": "Просканировать серию новелл"
         }
       },
       {
@@ -205,7 +293,11 @@
         "nameKey": "_合并系列小说",
         "name": {
           "zh-cn": "合并系列小说",
-          "en": "Merge series of novels"
+          "zh-tw": "合併系列小說",
+          "en": "Merge series of novels",
+          "ja": "シリーズ小説の統合",
+          "ko": "시리즈 소설 합치기",
+          "ru": "Объединить серию новелл"
         }
       }
     ]
@@ -213,7 +305,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/搜索页面",
-      "en": "Buttons-Start-crawling/SearchPage"
+      "zh-tw": "按鈕-開始擷取/搜尋頁面",
+      "en": "Buttons-Start-crawling/SearchPage",
+      "ja": "ボタン-クロールを開始する/検索ページ",
+      "ko": "버튼-긁어오기-시작/검색-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-поиска"
     },
     "ids": [
       "crawlTagList",
@@ -228,7 +324,11 @@
         "nameKey": "_抓取标签列表",
         "name": {
           "zh-cn": "抓取标签列表",
-          "en": "Crawl tag list"
+          "zh-tw": "擷取標籤列表",
+          "en": "Crawl tag list",
+          "ja": "タグのリストをクロール",
+          "ko": "태그 긁어오기",
+          "ru": "Сканировать список тегов"
         }
       },
       {
@@ -236,7 +336,11 @@
         "nameKey": "_在结果中筛选",
         "name": {
           "zh-cn": "在结果中筛选",
-          "en": "Screen in results"
+          "zh-tw": "在結果中篩選",
+          "en": "Screen in results",
+          "ja": "結果の中からスクリーニング",
+          "ko": "결과 중에서 선별",
+          "ru": "Экран результатов"
         }
       },
       {
@@ -244,7 +348,11 @@
         "nameKey": "_清除多图作品",
         "name": {
           "zh-cn": "清除多图作品",
-          "en": "Remove multi-image works"
+          "zh-tw": "清除多圖作品",
+          "en": "Remove multi-image works",
+          "ja": "複数画像をクリア",
+          "ko": "여러 이미지 작품 지우기",
+          "ru": "Удалить работы с несколькими изображениями"
         }
       },
       {
@@ -252,7 +360,11 @@
         "nameKey": "_清除动图作品",
         "name": {
           "zh-cn": "清除动图作品",
-          "en": "Remove ugoira works"
+          "zh-tw": "清除動圖作品",
+          "en": "Remove ugoira works",
+          "ja": "うごイラ作品を削除する",
+          "ko": "움직이는 일러스트 작품 지우기",
+          "ru": "Убрать Ugoira(gif) работы"
         }
       },
       {
@@ -260,7 +372,11 @@
         "nameKey": "_手动删除作品",
         "name": {
           "zh-cn": "手动删除作品",
-          "en": "Manually delete works"
+          "zh-tw": "手動刪除作品",
+          "en": "Manually delete works",
+          "ja": "作品を手動で削除する",
+          "ko": "수동으로 작품 지우기",
+          "ru": "Вручную удалить работу"
         }
       }
     ]
@@ -268,7 +384,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/排行榜",
-      "en": "Buttons-Start-crawling/Ranking"
+      "zh-tw": "按鈕-開始擷取/排行榜",
+      "en": "Buttons-Start-crawling/Ranking",
+      "ja": "ボタン-クロールを開始する/ランキング",
+      "ko": "버튼-긁어오기-시작/랭킹",
+      "ru": "Кнопки-Начать-сканирование/Рейтинг"
     },
     "ids": [
       "crawlRankingWork",
@@ -281,7 +401,11 @@
         "nameKey": "_抓取本排行榜作品",
         "name": {
           "zh-cn": "抓取本排行榜作品",
-          "en": "Crawl works on this ranking"
+          "zh-tw": "擷取本排行榜作品",
+          "en": "Crawl works on this ranking",
+          "ja": "このリストの作品をクロールする",
+          "ko": "이 랭킹의 작품 긁어오기",
+          "ru": "Просканировать работы из этого рейтинга"
         }
       },
       {
@@ -289,7 +413,11 @@
         "nameKey": "_抓取首次登场的作品",
         "name": {
           "zh-cn": "抓取首次登场作品",
-          "en": "Crawl the debut works"
+          "zh-tw": "擷取首次登場作品",
+          "en": "Crawl the debut works",
+          "ja": "初登場作品をクロールする",
+          "ko": "데뷔작 긁어오기",
+          "ru": "Просканировать дебютные работы"
         }
       },
       {
@@ -297,7 +425,11 @@
         "nameKey": "_抓取本页作品",
         "name": {
           "zh-cn": "抓取本页作品",
-          "en": "Crawl works on this page"
+          "zh-tw": "擷取本頁作品",
+          "en": "Crawl works on this page",
+          "ja": "このページをクロールする",
+          "ko": "이 페이지의 작품 긁어오기",
+          "ru": "Просканировать работы с этой страницы"
         }
       }
     ]
@@ -305,7 +437,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/发现",
-      "en": "Buttons-Start-crawling/Discover"
+      "zh-tw": "按鈕-開始擷取/發現",
+      "en": "Buttons-Start-crawling/Discover",
+      "ja": "ボタン-クロールを開始する/発見",
+      "ko": "버튼-긁어오기-시작/발견",
+      "ru": "Кнопки-Начать-сканирование/Обнаружить"
     },
     "ids": [
       "crawlCurrentWork"
@@ -316,7 +452,11 @@
         "nameKey": "_抓取当前作品",
         "name": {
           "zh-cn": "抓取当前作品",
-          "en": "Crawl current works"
+          "zh-tw": "擷取目前作品",
+          "en": "Crawl current works",
+          "ja": "現在の作品をクロールする",
+          "ko": "현재 작품 긁어오기",
+          "ru": "Просканировать текущую работу"
         }
       }
     ]
@@ -324,7 +464,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/关注页面",
-      "en": "Buttons-Start-crawling/Following-page"
+      "zh-tw": "按鈕-開始擷取/關注頁面",
+      "en": "Buttons-Start-crawling/Following-page",
+      "ja": "ボタン-クロールを開始する/フォロー中ページ",
+      "ko": "버튼-긁어오기-시작/팔로잉-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-подписок"
     },
     "ids": [
       "startCrawlingInFollowingPage"
@@ -335,7 +479,11 @@
         "nameKey": "_开始抓取",
         "name": {
           "zh-cn": "开始抓取",
-          "en": "Start crawling"
+          "zh-tw": "開始擷取",
+          "en": "Start crawling",
+          "ja": "クロールを開始する",
+          "ko": "긁어오기 시작",
+          "ru": "Начать сканирование"
         }
       }
     ]
@@ -343,7 +491,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/比赛页面",
-      "en": "Buttons-Start-crawling/Contest-page"
+      "zh-tw": "按鈕-開始擷取/比賽頁面",
+      "en": "Buttons-Start-crawling/Contest-page",
+      "ja": "ボタン-クロールを開始する/コンテストページ",
+      "ko": "버튼-긁어오기-시작/콘테스트-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-конкурса"
     },
     "ids": [
       "crawlApplicationWork",
@@ -355,7 +507,11 @@
         "nameKey": "_抓取应募作品",
         "name": {
           "zh-cn": "抓取应募作品",
-          "en": "Crawl application works"
+          "zh-tw": "抓取應募作品",
+          "en": "Crawl application works",
+          "ja": "応募作品をクロール",
+          "ko": "응모 작품 크롤링",
+          "ru": "Скраулить конкурсные работы"
         }
       },
       {
@@ -363,7 +519,11 @@
         "nameKey": "_抓取获奖作品",
         "name": {
           "zh-cn": "抓取获奖作品",
-          "en": "Crawl winning works"
+          "zh-tw": "抓取獲獎作品",
+          "en": "Crawl winning works",
+          "ja": "受賞作品をクロール",
+          "ko": "수상 작품 크롤링",
+          "ru": "Скраулить победившие работы"
         }
       }
     ]
@@ -371,7 +531,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/仪表盘",
-      "en": "Buttons-Start-crawling/Dashboard"
+      "zh-tw": "按鈕-開始擷取/儀表板",
+      "en": "Buttons-Start-crawling/Dashboard",
+      "ja": "ボタン-クロールを開始する/ダッシュボード",
+      "ko": "버튼-긁어오기-시작/대시보드",
+      "ru": "Кнопки-Начать-сканирование/Панель-управления"
     },
     "ids": [
       "exportDashboardData"
@@ -382,7 +546,11 @@
         "nameKey": "_导出作品数据CSV",
         "name": {
           "zh-cn": "导出作品数据（CSV）",
-          "en": "Export work data (CSV)"
+          "zh-tw": "匯出作品資料（CSV）",
+          "en": "Export work data (CSV)",
+          "ja": "作品データをエクスポート（CSV）",
+          "ko": "작품 데이터 내보내기 (CSV)",
+          "ru": "Экспорт данных работы (CSV)"
         }
       }
     ]
@@ -390,7 +558,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/书签详情",
-      "en": "Buttons-Start-crawling/Bookmark-details"
+      "zh-tw": "按鈕-開始擷取/書籤詳細",
+      "en": "Buttons-Start-crawling/Bookmark-details",
+      "ja": "ボタン-クロールを開始する/ブックマークの詳細",
+      "ko": "버튼-긁어오기-시작/북마크-세부-정보",
+      "ru": "Кнопки-Начать-сканирование/Подробности-закладки"
     },
     "ids": [
       "crawlSimilarImage"
@@ -401,7 +573,11 @@
         "nameKey": "_抓取相似图片",
         "name": {
           "zh-cn": "抓取相似图片",
-          "en": "Crawl similar images"
+          "zh-tw": "擷取相似圖片",
+          "en": "Crawl similar images",
+          "ja": "類似の画像をクロールする",
+          "ko": "비슷한 이미지 긁어오기",
+          "ru": "Просканировать похожие изображения"
         }
       }
     ]
@@ -409,7 +585,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/pixivision",
-      "en": "Buttons-Start-crawling/pixivision"
+      "zh-tw": "按鈕-開始擷取/pixivision",
+      "en": "Buttons-Start-crawling/pixivision",
+      "ja": "ボタン-クロールを開始する/pixivision",
+      "ko": "버튼-긁어오기-시작/pixivision",
+      "ru": "Кнопки-Начать-сканирование/pixivision"
     },
     "ids": [
       "crawlImagesOnThisPage"
@@ -420,7 +600,11 @@
         "nameKey": "_抓取该页面的图片",
         "name": {
           "zh-cn": "抓取该页面的图片",
-          "en": "Crawl images on this page"
+          "zh-tw": "擷取該頁面的圖片",
+          "en": "Crawl images on this page",
+          "ja": "ページの画像をクロールする",
+          "ko": "페이지의 이미지 긁어오기",
+          "ru": "Просканировать изображения этой страницы"
         }
       }
     ]
@@ -428,7 +612,11 @@
   {
     "page": {
       "zh-cn": "按钮-开始抓取/用户的约稿页面",
-      "en": "Buttons-Start-crawling/User's-request-page"
+      "zh-tw": "按鈕-開始擷取/用戶的約稿頁面",
+      "en": "Buttons-Start-crawling/User's-request-page",
+      "ja": "ボタン-クロールを開始する/ユーザーのリクエストページ",
+      "ko": "버튼-긁어오기-시작/사용자의-리퀘스트-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-запросов-пользователя"
     },
     "ids": [
       "startCrawlRequestWorks"
@@ -439,7 +627,11 @@
         "nameKey": "_抓取约稿作品",
         "name": {
           "zh-cn": "抓取约稿作品",
-          "en": "Crawl request works"
+          "zh-tw": "抓取約稿作品",
+          "en": "Crawl request works",
+          "ja": "リクエスト作品をクロール",
+          "ko": "리퀘스트 작품 크롤링",
+          "ru": "Собрать работы из запросов"
         }
       }
     ]
@@ -447,7 +639,11 @@
   {
     "page": {
       "zh-cn": "按钮-下载区域/抓取结果",
-      "en": "Buttons-Download-area/Crawl-results"
+      "zh-tw": "按鈕-下載區域/擷取結果",
+      "en": "Buttons-Download-area/Crawl-results",
+      "ja": "ボタン-ダウンロードエリア/クロール結果",
+      "ko": "버튼-다운로드-영역/크롤링-결과",
+      "ru": "Кнопки-Область-загрузки/Результаты-сканирования"
     },
     "ids": [
       "importCrawlResults",
@@ -462,7 +658,11 @@
         "nameKey": "_导入抓取结果",
         "name": {
           "zh-cn": "导入抓取结果",
-          "en": "Import results"
+          "zh-tw": "匯入擷取結果",
+          "en": "Import results",
+          "ja": "クロール結果をインポート",
+          "ko": "결과 불러오기",
+          "ru": "Импорт результатов"
         }
       },
       {
@@ -470,7 +670,11 @@
         "nameKey": "_导出抓取结果",
         "name": {
           "zh-cn": "导出抓取结果",
-          "en": "Export results"
+          "zh-tw": "匯出擷取結果",
+          "en": "Export results",
+          "ja": "クロール結果をエクスポート",
+          "ko": "결과 내보내기",
+          "ru": "Экспорт результатов"
         }
       },
       {
@@ -478,7 +682,11 @@
         "nameKey": "_导出csv",
         "name": {
           "zh-cn": "导出 CSV 文件",
-          "en": "Export CSV file"
+          "zh-tw": "匯出 CSV 檔",
+          "en": "Export CSV file",
+          "ja": "CSV ファイルをエクスポート",
+          "ko": "CSV 파일 내보내기",
+          "ru": "Экспорт в файл CSV"
         }
       },
       {
@@ -486,7 +694,11 @@
         "nameKey": "_预览文件名",
         "name": {
           "zh-cn": "预览文件名",
-          "en": "Preview file name"
+          "zh-tw": "預覽檔案名稱",
+          "en": "Preview file name",
+          "ja": "ファイル名",
+          "ko": "파일명 미리보기",
+          "ru": "Имя файла предварительного просмотра"
         }
       },
       {
@@ -494,7 +706,11 @@
         "nameKey": "_复制url",
         "name": {
           "zh-cn": "复制 URL",
-          "en": "Copy URLs"
+          "zh-tw": "複製下載網址",
+          "en": "Copy URLs",
+          "ja": "URL をコピー",
+          "ko": "URL 복사",
+          "ru": "Копировать URL"
         }
       }
     ]
@@ -502,7 +718,11 @@
   {
     "page": {
       "zh-cn": "按钮-下载区域/下载控制",
-      "en": "Buttons-Download-area/Download-control"
+      "zh-tw": "按鈕-下載區域/下載控制",
+      "en": "Buttons-Download-area/Download-control",
+      "ja": "ボタン-ダウンロードエリア/ダウンロードコントロール",
+      "ko": "버튼-다운로드-영역/다운로드-제어",
+      "ru": "Кнопки-Область-загрузки/Управление-загрузкой"
     },
     "ids": [
       "startDownload",
@@ -515,7 +735,11 @@
         "nameKey": "_开始下载",
         "name": {
           "zh-cn": "开始下载",
-          "en": "Start download"
+          "zh-tw": "開始下載",
+          "en": "Start download",
+          "ja": "開始",
+          "ko": "다운로드 시작",
+          "ru": "Начать загрузку"
         }
       },
       {
@@ -523,7 +747,11 @@
         "nameKey": "_暂停下载",
         "name": {
           "zh-cn": "暂停下载",
-          "en": "Pause download"
+          "zh-tw": "暫停下載",
+          "en": "Pause download",
+          "ja": "一時停止",
+          "ko": "다운로드 일시중지",
+          "ru": "Приостановить загрузку"
         }
       },
       {
@@ -531,7 +759,11 @@
         "nameKey": "_停止下载",
         "name": {
           "zh-cn": "停止下载",
-          "en": "Stop download"
+          "zh-tw": "停止下載",
+          "en": "Stop download",
+          "ja": "停止",
+          "ko": "다운로드 정지",
+          "ru": "Остановить загрузку"
         }
       }
     ]
@@ -539,7 +771,11 @@
   {
     "page": {
       "zh-cn": "按钮-附加功能/首页",
-      "en": "Buttons-Extra-features/HomePage"
+      "zh-tw": "按鈕-附加功能/首頁",
+      "en": "Buttons-Extra-features/HomePage",
+      "ja": "ボタン-追加機能/ホーム",
+      "ko": "버튼-부가-기능/홈",
+      "ru": "Кнопки-Дополнительные-функции/Главная"
     },
     "ids": [
       "clearSavedCrawlResult"
@@ -550,7 +786,11 @@
         "nameKey": "_清空已保存的抓取结果",
         "name": {
           "zh-cn": "清空已保存的抓取结果",
-          "en": "Clear saved crawl results"
+          "zh-tw": "清除已儲存的擷取結果",
+          "en": "Clear saved crawl results",
+          "ja": "セーブしたクロール結果をクリアします",
+          "ko": "저장된 긁어오기 결과 비우기",
+          "ru": "Очистить сохраненные результаты сканирования"
         }
       }
     ]
@@ -558,7 +798,11 @@
   {
     "page": {
       "zh-cn": "按钮-附加功能/用户页面",
-      "en": "Buttons-Extra-features/User-page"
+      "zh-tw": "按鈕-附加功能/使用者頁面",
+      "en": "Buttons-Extra-features/User-page",
+      "ja": "ボタン-追加機能/ユーザーページ",
+      "ko": "버튼-부가-기능/사용자-페이지",
+      "ru": "Кнопки-Дополнительные-функции/Страница-пользователя"
     },
     "ids": [
       "saveUserAvatar",
@@ -573,7 +817,11 @@
         "nameKey": "_保存用户头像",
         "name": {
           "zh-cn": "保存用户头像",
-          "en": "Save user avatar"
+          "zh-tw": "儲存使用者頭貼",
+          "en": "Save user avatar",
+          "ja": "ユーザーアイコンの保存",
+          "ko": "유저 프로필 이미지 저장",
+          "ru": "Сохранить аватар пользователя"
         }
       },
       {
@@ -581,7 +829,11 @@
         "nameKey": "_保存用户头像为图标",
         "name": {
           "zh-cn": "保存用户头像为图标",
-          "en": "Save user avatar as icon"
+          "zh-tw": "將使用者頭貼另存為圖示檔案",
+          "en": "Save user avatar as icon",
+          "ja": "プロフィール画像をアイコンとして保存",
+          "ko": "아이콘으로 유저 프로필 이미지 저장",
+          "ru": "Сохранить аватар пользователя как иконку"
         }
       },
       {
@@ -589,7 +841,11 @@
         "nameKey": "_保存用户封面",
         "name": {
           "zh-cn": "保存用户封面",
-          "en": "Save user cover"
+          "zh-tw": "儲存使用者封面",
+          "en": "Save user cover",
+          "ja": "ユーザーカバーの保存",
+          "ko": "유저 커버 저장",
+          "ru": "Сохранить обложку пользователя"
         }
       },
       {
@@ -597,7 +853,11 @@
         "nameKey": "_收藏本页面的所有作品",
         "name": {
           "zh-cn": "收藏本页面的所有作品",
-          "en": "Bookmark all works on this page"
+          "zh-tw": "收藏本頁面的所有作品",
+          "en": "Bookmark all works on this page",
+          "ja": "この頁の全ての作品をブックマークに追加します",
+          "ko": "이 페이지의 모든 작품 북마크",
+          "ru": "Перенести в закладки все работы на этой странице"
         }
       },
       {
@@ -605,7 +865,11 @@
         "nameKey": "_收藏所有约稿作品",
         "name": {
           "zh-cn": "收藏所有约稿作品",
-          "en": "Bookmark all request works"
+          "zh-tw": "收藏所有約稿作品",
+          "en": "Bookmark all request works",
+          "ja": "すべてのリクエスト作品をブックマーク",
+          "ko": "모든 리퀘스트 작품 북마크",
+          "ru": "Добавить в закладки все работы из запросов"
         }
       }
     ]
@@ -613,7 +877,11 @@
   {
     "page": {
       "zh-cn": "按钮-附加功能/搜索页面",
-      "en": "Buttons-Extra-features/SearchPage"
+      "zh-tw": "按鈕-附加功能/搜尋頁面",
+      "en": "Buttons-Extra-features/SearchPage",
+      "ja": "ボタン-追加機能/検索ページ",
+      "ko": "버튼-부가-기능/검색-페이지",
+      "ru": "Кнопки-Дополнительные-функции/Страница-поиска"
     },
     "ids": [
       "bookmarkAllWorksOnSearchPage"
@@ -624,7 +892,11 @@
         "nameKey": "_收藏本页面的所有作品",
         "name": {
           "zh-cn": "收藏本页面的所有作品",
-          "en": "Bookmark all works on this page"
+          "zh-tw": "收藏本頁面的所有作品",
+          "en": "Bookmark all works on this page",
+          "ja": "この頁の全ての作品をブックマークに追加します",
+          "ko": "이 페이지의 모든 작품 북마크",
+          "ru": "Перенести в закладки все работы на этой странице"
         }
       }
     ]
@@ -632,7 +904,11 @@
   {
     "page": {
       "zh-cn": "按钮-附加功能/书签页面",
-      "en": "Buttons-Extra-features/Bookmark-page"
+      "zh-tw": "按鈕-附加功能/書籤頁面",
+      "en": "Buttons-Extra-features/Bookmark-page",
+      "ja": "ボタン-追加機能/ブックマークページ",
+      "ko": "버튼-부가-기능/북마크-페이지",
+      "ru": "Кнопки-Дополнительные-функции/Страница-закладок"
     },
     "ids": [
       "addTagToUnmarkedWork",
@@ -651,7 +927,11 @@
         "nameKey": "_给未分类作品添加tag",
         "name": {
           "zh-cn": "给未分类的作品添加标签",
-          "en": "Add tag to uncategorized works"
+          "zh-tw": "幫未分類的作品加入標籤",
+          "en": "Add tag to uncategorized works",
+          "ja": "未分類の作品にタグを追加",
+          "ko": "분류되지 않은 작품에 태그 추가",
+          "ru": "Добавить метку к неклассифицированной работе"
         }
       },
       {
@@ -659,7 +939,11 @@
         "nameKey": "_移除本页面中所有作品的标签",
         "name": {
           "zh-cn": "移除本页面中所有作品的标签",
-          "en": "Remove tags from all works on this page"
+          "zh-tw": "移除本頁面中所有作品的標籤",
+          "en": "Remove tags from all works on this page",
+          "ja": "このページのすべての作品からタグを削除します",
+          "ko": "이 페이지의 모든 작품에서 태그 제거",
+          "ru": "Удалить теги со всех работ на этой странице"
         }
       },
       {
@@ -667,7 +951,11 @@
         "nameKey": "_移除所有作品的标签",
         "name": {
           "zh-cn": "移除所有作品的标签",
-          "en": "Remove tags from all works"
+          "zh-tw": "移除所有作品的標籤",
+          "en": "Remove tags from all works",
+          "ja": "すべての作品からタグを削除します",
+          "ko": "모든 작품에서 태그 제거",
+          "ru": "Удалить теги со всех работ"
         }
       },
       {
@@ -675,7 +963,11 @@
         "nameKey": "_取消收藏本页面的所有作品",
         "name": {
           "zh-cn": "取消收藏本页面中的所有作品",
-          "en": "Unbookmark all works on this page"
+          "zh-tw": "取消收藏本頁面中的所有作品",
+          "en": "Unbookmark all works on this page",
+          "ja": "このページのすべての作品のブックマークを解除",
+          "ko": "이 페이지의 모든 작품에 대한 북마크 해제",
+          "ru": "Удалить из избранного все работы на этой странице"
         }
       },
       {
@@ -683,7 +975,11 @@
         "nameKey": "_取消收藏所有作品",
         "name": {
           "zh-cn": "取消收藏所有作品",
-          "en": "Unbookmark all works"
+          "zh-tw": "取消收藏所有作品",
+          "en": "Unbookmark all works",
+          "ja": "すべての作品のブックマークを解除します",
+          "ko": "모든 작품에 대한 북마크 해제",
+          "ru": "Удалить из избранного все работы"
         }
       },
       {
@@ -691,7 +987,11 @@
         "nameKey": "_查找所有已被删除的作品",
         "name": {
           "zh-cn": "查找所有已被删除的作品",
-          "en": "Find all deleted works"
+          "zh-tw": "查找所有已被刪除的作品",
+          "en": "Find all deleted works",
+          "ja": "すべての削除された作品を見つける",
+          "ko": "모든 삭제된 작품 찾기",
+          "ru": "Найдите все удаленные работы"
         }
       },
       {
@@ -699,7 +999,11 @@
         "nameKey": "_取消收藏所有已被删除的作品",
         "name": {
           "zh-cn": "取消收藏所有已被删除的作品",
-          "en": "Unbookmark all deleted works"
+          "zh-tw": "取消收藏所有已被刪除的作品",
+          "en": "Unbookmark all deleted works",
+          "ja": "削除した作品をすべてブックマーク解除する",
+          "ko": "삭제된 모든 작품 북마크 해제",
+          "ru": "Снять закладку со всех удаленных работ"
         }
       },
       {
@@ -707,7 +1011,11 @@
         "nameKey": "_导出收藏列表",
         "name": {
           "zh-cn": "导出收藏列表（JSON）",
-          "en": "Export bookmark list（JSON）"
+          "zh-tw": "匯出收藏列表（JSON）",
+          "en": "Export bookmark list（JSON）",
+          "ja": "ブックマークリストをエクスポートする（JSON）",
+          "ko": "북마크 목록 내보내기（JSON）",
+          "ru": "Экспортировать список закладок（JSON）"
         }
       },
       {
@@ -715,7 +1023,11 @@
         "nameKey": "_导入收藏列表",
         "name": {
           "zh-cn": "导入收藏列表（批量添加收藏）",
-          "en": "Import bookmark list (add bookmarks in batches)"
+          "zh-tw": "匯入收藏列表（批次新增收藏）",
+          "en": "Import bookmark list (add bookmarks in batches)",
+          "ja": "ブックマークリストをインポート（ブックマークを一括追加）",
+          "ko": "북마크 목록 가져오기(북마크 일괄 추가)",
+          "ru": "Импортировать список закладок (добавлять закладки пакетно)"
         }
       }
     ]
@@ -723,7 +1035,11 @@
   {
     "page": {
       "zh-cn": "按钮-附加功能/关注页面",
-      "en": "Buttons-Extra-features/Following-page"
+      "zh-tw": "按鈕-附加功能/關注頁面",
+      "en": "Buttons-Extra-features/Following-page",
+      "ja": "ボタン-追加機能/フォロー中ページ",
+      "ko": "버튼-부가-기능/팔로잉-페이지",
+      "ru": "Кнопки-Дополнительные-функции/Страница-подписок"
     },
     "ids": [
       "exportFollowingListCSV",
@@ -737,7 +1053,11 @@
         "nameKey": "_导出关注列表CSV",
         "name": {
           "zh-cn": "导出关注的用户列表（CSV）",
-          "en": "Export followed users list (CSV)"
+          "zh-tw": "匯出關注的使用者列表（CSV）",
+          "en": "Export followed users list (CSV)",
+          "ja": "フォローされているユーザーのリストをエクスポートする（CSV）",
+          "ko": "팔로우한 사용자 목록 내보내기 (CSV)",
+          "ru": "Экспорт списка отслеживаемых пользователей (CSV)"
         }
       },
       {
@@ -745,7 +1065,11 @@
         "nameKey": "_导出关注列表JSON",
         "name": {
           "zh-cn": "导出关注的用户列表（JSON）",
-          "en": "Export followed users list (JSON)"
+          "zh-tw": "匯出關注的使用者列表（JSON）",
+          "en": "Export followed users list (JSON)",
+          "ja": "フォローされているユーザーのリストをエクスポートする（JSON）",
+          "ko": "팔로우한 사용자 목록 내보내기 (JSON)",
+          "ru": "Экспорт списка отслеживаемых пользователей (JSON)"
         }
       },
       {
@@ -753,7 +1077,11 @@
         "nameKey": "_批量关注用户",
         "name": {
           "zh-cn": "批量关注用户（JSON）",
-          "en": "Follow users in batches (JSON)"
+          "zh-tw": "批次關注使用者（JSON）",
+          "en": "Follow users in batches (JSON)",
+          "ja": "ユーザーをバッチでフォローする（JSON）",
+          "ko": "일괄적으로 사용자 팔로우 (JSON)",
+          "ru": "Подписывайтесь на пользователей пакетами (JSON)"
         }
       },
       {
@@ -761,7 +1089,11 @@
         "nameKey": "_查找已注销的用户",
         "name": {
           "zh-cn": "查找已注销的用户",
-          "en": "Find deactivated users"
+          "zh-tw": "查找已註銷的用戶",
+          "en": "Find deactivated users",
+          "ja": "退会済みユーザーを検索",
+          "ko": "탈퇴한 사용자 찾기",
+          "ru": "Поиск деактивированных пользователей"
         }
       }
     ]

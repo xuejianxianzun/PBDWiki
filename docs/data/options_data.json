@@ -2,7 +2,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/抓取范围",
-      "en": "Settings-Crawl/Crawl-scope"
+      "zh-tw": "設定-擷取/抓取範圍",
+      "en": "Settings-Crawl/Crawl-scope",
+      "ja": "設定-クロール/クロール範囲",
+      "ko": "설정-긁어오기/수집-범위",
+      "ru": "Настройки-Сканирование/Область-сбора"
     },
     "ids": [
       0,
@@ -15,7 +19,11 @@
         "nameKey": "_抓取多少作品",
         "name": {
           "zh-cn": "抓取多少作品",
-          "en": "How many works to crawl"
+          "zh-tw": "擷取多少作品",
+          "en": "How many works to crawl",
+          "ja": "クロールする作品の数",
+          "ko": "긁어올 작품 수",
+          "ru": "Какое количество работ сканировать"
         }
       },
       {
@@ -23,7 +31,11 @@
         "nameKey": "_抓取多少页面",
         "name": {
           "zh-cn": "抓取多少页面",
-          "en": "How many pages to crawl"
+          "zh-tw": "擷取多少頁面",
+          "en": "How many pages to crawl",
+          "ja": "クロールするページ数",
+          "ko": "긁어올 페이지 수",
+          "ru": "Какое количество страниц сканировать"
         }
       },
       {
@@ -31,7 +43,11 @@
         "nameKey": "_抓取每个用户最新的几个作品",
         "name": {
           "zh-cn": "抓取每个用户最新的几个作品",
-          "en": "Crawl the latest few works of each user"
+          "zh-tw": "抓取每個用戶最新的幾個作品",
+          "en": "Crawl the latest few works of each user",
+          "ja": "各ユーザーの最新の数作品をクロール",
+          "ko": "각 사용자별 최신 몇 작품 크롤링",
+          "ru": "Собрать последние несколько работ каждого пользователя"
         }
       }
     ]
@@ -39,7 +55,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/作品类型",
-      "en": "Settings-Crawl/Work-type"
+      "zh-tw": "設定-擷取/作品類型",
+      "en": "Settings-Crawl/Work-type",
+      "ja": "設定-クロール/作品タイプ",
+      "ko": "설정-긁어오기/작품-유형",
+      "ru": "Настройки-Сканирование/Тип-работы"
     },
     "ids": [
       3,
@@ -55,7 +75,11 @@
         "nameKey": "_作品类型",
         "name": {
           "zh-cn": "作品类型",
-          "en": "Type of work"
+          "zh-tw": "作品類型",
+          "en": "Type of work",
+          "ja": "作品の種類",
+          "ko": "작품 유형",
+          "ru": "Тип работы"
         }
       },
       {
@@ -63,7 +87,11 @@
         "nameKey": "_年龄限制",
         "name": {
           "zh-cn": "年龄限制",
-          "en": "Age restriction"
+          "zh-tw": "年齡限制",
+          "en": "Age restriction",
+          "ja": "年齢制限",
+          "ko": "연령 제한",
+          "ru": "Возраст ограничение"
         }
       },
       {
@@ -71,7 +99,11 @@
         "nameKey": "_AI作品",
         "name": {
           "zh-cn": "AI 作品",
-          "en": "AI works"
+          "zh-tw": "AI 作品",
+          "en": "AI works",
+          "ja": "AI 作品",
+          "ko": "AI 작품",
+          "ru": "ИИ работы"
         }
       },
       {
@@ -79,7 +111,11 @@
         "nameKey": "_原创作品",
         "name": {
           "zh-cn": "原创作品",
-          "en": "Original works"
+          "zh-tw": "原創作品",
+          "en": "Original works",
+          "ja": "オリジナル作品",
+          "ko": "오리지널 작품",
+          "ru": "Оригинальные работы"
         }
       },
       {
@@ -87,7 +123,11 @@
         "nameKey": "_图片色彩",
         "name": {
           "zh-cn": "图片色彩",
-          "en": "Image color"
+          "zh-tw": "圖片色彩",
+          "en": "Image color",
+          "ja": "画像の色",
+          "ko": "이미지 색채",
+          "ru": "Цвет изображения"
         }
       },
       {
@@ -95,7 +135,11 @@
         "nameKey": "_图片数量",
         "name": {
           "zh-cn": "图片数量",
-          "en": "Number of images"
+          "zh-tw": "圖片數量",
+          "en": "Number of images",
+          "ja": "画像の数",
+          "ko": "이미지 수",
+          "ru": "Количество изображений"
         }
       }
     ]
@@ -103,7 +147,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/作品数据",
-      "en": "Settings-Crawl/Work-data"
+      "zh-tw": "設定-擷取/作品數據",
+      "en": "Settings-Crawl/Work-data",
+      "ja": "設定-クロール/作品データ",
+      "ko": "설정-긁어오기/작품-데이터",
+      "ru": "Настройки-Сканирование/Данные-работы"
     },
     "ids": [
       9,
@@ -119,7 +167,11 @@
         "nameKey": "_收藏状态",
         "name": {
           "zh-cn": "收藏状态",
-          "en": "Bookmark status"
+          "zh-tw": "收藏狀態",
+          "en": "Bookmark status",
+          "ja": "ブックマークステータス",
+          "ko": "북마크 상태",
+          "ru": "Статус закладки"
         }
       },
       {
@@ -127,7 +179,11 @@
         "nameKey": "_收藏数量",
         "name": {
           "zh-cn": "收藏数量",
-          "en": "Number of bookmarks"
+          "zh-tw": "收藏數量",
+          "en": "Number of bookmarks",
+          "ja": "ブックマークの数",
+          "ko": "북마크 수",
+          "ru": "Количество закладок"
         }
       },
       {
@@ -135,7 +191,11 @@
         "nameKey": "_图片的宽高",
         "name": {
           "zh-cn": "图片的宽高",
-          "en": "Width and height"
+          "zh-tw": "圖片的寬高",
+          "en": "Width and height",
+          "ja": "画像の幅と高さ",
+          "ko": "너비 그리고 높이",
+          "ru": "Ширина и высота"
         }
       },
       {
@@ -143,7 +203,11 @@
         "nameKey": "_图片的宽高比例",
         "name": {
           "zh-cn": "图片的宽高比例",
-          "en": "Aspect ratio"
+          "zh-tw": "圖片的寬高比例",
+          "en": "Aspect ratio",
+          "ja": "画像の縦横比",
+          "ko": "종횡비",
+          "ru": "Соотношение сторон"
         }
       },
       {
@@ -151,7 +215,11 @@
         "nameKey": "_id范围",
         "name": {
           "zh-cn": "ID 范围",
-          "en": "ID range"
+          "zh-tw": "ID 範圍",
+          "en": "ID range",
+          "ja": "ID 範囲",
+          "ko": "ID 범위",
+          "ru": "ID диапазон"
         }
       },
       {
@@ -159,7 +227,11 @@
         "nameKey": "_投稿时间",
         "name": {
           "zh-cn": "投稿时间",
-          "en": "Posting time"
+          "zh-tw": "投稿時間",
+          "en": "Posting time",
+          "ja": "投稿日時",
+          "ko": "게시 날짜",
+          "ru": "Дата публикации"
         }
       }
     ]
@@ -167,7 +239,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/标签与标题",
-      "en": "Settings-Crawl/Tags-and-title"
+      "zh-tw": "設定-擷取/標籤與標題",
+      "en": "Settings-Crawl/Tags-and-title",
+      "ja": "設定-クロール/タグとタイトル",
+      "ko": "설정-긁어오기/태그-및-제목",
+      "ru": "Настройки-Сканирование/Теги-и-заголовок"
     },
     "ids": [
       15,
@@ -182,7 +258,11 @@
         "nameKey": "_必须含有tag",
         "name": {
           "zh-cn": "必须含有标签",
-          "en": "Include tag"
+          "zh-tw": "必須含有標籤",
+          "en": "Include tag",
+          "ja": "必要なタグ",
+          "ko": "포함 태그",
+          "ru": "Включать ярлык"
         }
       },
       {
@@ -190,7 +270,11 @@
         "nameKey": "_不能含有tag",
         "name": {
           "zh-cn": "不能含有标签",
-          "en": "Exclude tag"
+          "zh-tw": "不能含有標籤",
+          "en": "Exclude tag",
+          "ja": "タグを除外する",
+          "ko": "제외 태그",
+          "ru": "Исключить ярлык"
         }
       },
       {
@@ -198,7 +282,11 @@
         "nameKey": "_针对特定用户屏蔽标签",
         "name": {
           "zh-cn": "针对特定用户屏蔽标签",
-          "en": "Block tags for specific users"
+          "zh-tw": "針對特定使用者排除標籤",
+          "en": "Block tags for specific users",
+          "ja": "特定のユーザーに対してタグをブロック",
+          "ko": "특정 유저에 대한 차단 태그",
+          "ru": "Блокировать теги для определенных пользователей"
         }
       },
       {
@@ -206,7 +294,11 @@
         "nameKey": "_标题必须含有",
         "name": {
           "zh-cn": "标题必须含有",
-          "en": "Title must contain"
+          "zh-tw": "標題必須含有",
+          "en": "Title must contain",
+          "ja": "タイトルは必ず含む",
+          "ko": "제목 반드시 포함",
+          "ru": "Заголовок должен содержать"
         }
       },
       {
@@ -214,7 +306,11 @@
         "nameKey": "_标题不能含有",
         "name": {
           "zh-cn": "标题不能含有",
-          "en": "Title must not contain"
+          "zh-tw": "標題不能含有",
+          "en": "Title must not contain",
+          "ja": "タイトルは含まない",
+          "ko": "제목 포함하지 않음",
+          "ru": "Заголовок не должен содержать"
         }
       }
     ]
@@ -222,7 +318,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/多图作品",
-      "en": "Settings-Crawl/Multi-image-works"
+      "zh-tw": "設定-擷取/多圖作品",
+      "en": "Settings-Crawl/Multi-image-works",
+      "ja": "設定-クロール/複数画像作品",
+      "ko": "설정-긁어오기/다중-이미지-작품",
+      "ru": "Настройки-Сканирование/Многостраничные-работы"
     },
     "ids": [
       20,
@@ -238,7 +338,11 @@
         "nameKey": "_多图作品的图片数量上限",
         "name": {
           "zh-cn": "多图作品的图片数量上限",
-          "en": "Maximum number of images for multi-image works"
+          "zh-tw": "多圖作品的圖片數量上限",
+          "en": "Maximum number of images for multi-image works",
+          "ja": "マルチ作品の最大画像数",
+          "ko": "여러 이미지 작품의 최대 수",
+          "ru": "Максимальное количество изображений для работ с несколькими изображениями"
         }
       },
       {
@@ -246,7 +350,11 @@
         "nameKey": "_多图作品只抓取前几张图片",
         "name": {
           "zh-cn": "多图作品只抓取前几张图片",
-          "en": "Only crawl the first few images of multi-image works"
+          "zh-tw": "多圖作品只抓取前幾張圖片",
+          "en": "Only crawl the first few images of multi-image works",
+          "ja": "マルチ画像作品は最初の数枚の画像のみクロールします",
+          "ko": "멀티 이미지 작품은 처음 몇 장 이미지만 크롤링합니다",
+          "ru": "Многоизображные работы загружают только первые несколько изображений"
         }
       },
       {
@@ -254,7 +362,11 @@
         "nameKey": "_多图作品只抓取后几张图片",
         "name": {
           "zh-cn": "多图作品只抓取后几张图片",
-          "en": "Only crawl the last few images of multi-image works"
+          "zh-tw": "多圖作品只抓取後幾張圖片",
+          "en": "Only crawl the last few images of multi-image works",
+          "ja": "複数画像作品で後ろの数枚の画像のみをクロール",
+          "ko": "다중 이미지 작품에서 뒤의 몇 장 이미지만 크롤링",
+          "ru": "Краулить только последние несколько изображений в многоизображных работах"
         }
       },
       {
@@ -262,7 +374,11 @@
         "nameKey": "_多图作品不抓取前几张图片",
         "name": {
           "zh-cn": "多图作品不抓取前几张图片",
-          "en": "Do not crawl the first few images of multi-image works"
+          "zh-tw": "多圖作品不抓取前幾張圖片",
+          "en": "Do not crawl the first few images of multi-image works",
+          "ja": "複数画像作品で最初の数枚の画像をクロールしない",
+          "ko": "다중 이미지 작품에서 앞의 몇 장 이미지를 크롤링하지 않음",
+          "ru": "Не сканировать первые несколько изображений в многоизображных работах"
         }
       },
       {
@@ -270,7 +386,11 @@
         "nameKey": "_多图作品不抓取后几张图片",
         "name": {
           "zh-cn": "多图作品不抓取后几张图片",
-          "en": "Do not crawl the last few images of multi-image works"
+          "zh-tw": "多圖作品不抓取後幾張圖片",
+          "en": "Do not crawl the last few images of multi-image works",
+          "ja": "複数画像作品で後ろの数枚の画像をクロールしない",
+          "ko": "다중 이미지 작품에서 뒤의 몇 장 이미지를 크롤링하지 않음",
+          "ru": "Не сканировать последние несколько изображений в многоизображных работах"
         }
       },
       {
@@ -278,7 +398,11 @@
         "nameKey": "_特定用户的多图作品不下载最后几张图片",
         "name": {
           "zh-cn": "特定用户的多图作品不下载最后几张图片",
-          "en": "Don't download the last few images for specific user's multi-image works"
+          "zh-tw": "特定使用者的多圖作品不下載最後幾張圖片",
+          "en": "Don't download the last few images for specific user's multi-image works",
+          "ja": "特定のユーザーのマルチイメージ作品の最後のいくつかのイメージをダウンロードしないでください",
+          "ko": "특정 사용자의 다중 이미지 작품에 대한 마지막 몇 개의 이미지를 다운로드하지 마십시오",
+          "ru": "Не загружайте последние несколько изображений для работ с несколькими изображениями конкретного пользователя"
         }
       }
     ]
@@ -286,7 +410,11 @@
   {
     "page": {
       "zh-cn": "设置-抓取/执行策略",
-      "en": "Settings-Crawl/Execution-strategy"
+      "zh-tw": "設定-擷取/執行策略",
+      "en": "Settings-Crawl/Execution-strategy",
+      "ja": "設定-クロール/実行戦略",
+      "ko": "설정-긁어오기/실행-전략",
+      "ru": "Настройки-Сканирование/Стратегия-выполнения"
     },
     "ids": [
       26,
@@ -302,7 +430,11 @@
         "nameKey": "_不抓取下载过的作品",
         "name": {
           "zh-cn": "不抓取下载过的作品",
-          "en": "Do not crawl already downloaded works"
+          "zh-tw": "不抓取下載過的作品",
+          "en": "Do not crawl already downloaded works",
+          "ja": "ダウンロード済みの作品をクロールしない",
+          "ko": "이미 다운로드한 작품 크롤링 안 함",
+          "ru": "Не сканировать уже скачанные работы"
         }
       },
       {
@@ -310,7 +442,11 @@
         "nameKey": "_用户屏蔽名单",
         "name": {
           "zh-cn": "用户屏蔽名单",
-          "en": "User block list"
+          "zh-tw": "使用者封鎖名單",
+          "en": "User block list",
+          "ja": "ユーザーブロックリスト",
+          "ko": "사용자 차단 목록",
+          "ru": "Список заблокированных пользователей"
         }
       },
       {
@@ -318,7 +454,11 @@
         "nameKey": "_减慢抓取速度",
         "name": {
           "zh-cn": "减慢抓取速度",
-          "en": "Slow down crawl"
+          "zh-tw": "減慢抓取速度",
+          "en": "Slow down crawl",
+          "ja": "クロールを遅くする",
+          "ko": "천천히 크롤링",
+          "ru": "Замедлить сканирование"
         }
       },
       {
@@ -326,7 +466,11 @@
         "nameKey": "_定时抓取的间隔时间",
         "name": {
           "zh-cn": "定时抓取的间隔时间",
-          "en": "The interval time of timed crawl"
+          "zh-tw": "定時抓取的間隔時間",
+          "en": "The interval time of timed crawl",
+          "ja": "時間指定クロールの間隔時間",
+          "ko": "정기 크롤링 간격 시간",
+          "ru": "Интервальное время сканирования с таймером"
         }
       },
       {
@@ -334,7 +478,11 @@
         "nameKey": "_自动导出抓取结果",
         "name": {
           "zh-cn": "自动导出抓取结果",
-          "en": "Automatically export crawl results"
+          "zh-tw": "自動匯出擷取結果",
+          "en": "Automatically export crawl results",
+          "ja": "クロール結果の自動エクスポート",
+          "ko": "자동으로 긁어오기 결과 내보내기",
+          "ru": "Автоматически экспортировать результаты сканирования"
         }
       },
       {
@@ -342,7 +490,11 @@
         "nameKey": "_导出ID列表",
         "name": {
           "zh-cn": "获取作品 ID 列表后导出 ID 列表，并停止任务",
-          "en": "After obtaining the work ID list, export the ID list and stop the task"
+          "zh-tw": "獲取作品 ID 列表後匯出 ID 列表，並停止任務",
+          "en": "After obtaining the work ID list, export the ID list and stop the task",
+          "ja": "ワークIDリストを取得後、IDリストをエクスポートしてタスクを停止する",
+          "ko": "작업 ID 목록을 가져온 후 ID 목록을 내보내고 작업을 중지합니다",
+          "ru": "После получения списка идентификаторов работ экспортируйте список идентификаторов и остановите задачу"
         }
       }
     ]
@@ -350,7 +502,11 @@
   {
     "page": {
       "zh-cn": "设置-命名/文件夹和文件的名字",
-      "en": "Settings-Naming/Folder-and-file-names"
+      "zh-tw": "設定-命名/資料夾和檔案的名字",
+      "en": "Settings-Naming/Folder-and-file-names",
+      "ja": "設定-命名/フォルダーとファイルの名前",
+      "ko": "설정-이름/폴더와-파일-이름",
+      "ru": "Настройки-Имя/Имена-папок-и-файлов"
     },
     "ids": [
       32,
@@ -368,7 +524,11 @@
         "nameKey": "_图像作品的命名规则",
         "name": {
           "zh-cn": "图像作品的命名规则",
-          "en": "Naming rule for image works"
+          "zh-tw": "圖像作品的命名規則",
+          "en": "Naming rule for image works",
+          "ja": "画像作品の命名ルール",
+          "ko": "이미지 작품의 명명 규칙",
+          "ru": "Правило именования для работ с изображениями"
         }
       },
       {
@@ -376,7 +536,11 @@
         "nameKey": "_小说的命名规则",
         "name": {
           "zh-cn": "小说的命名规则",
-          "en": "Naming rule for novels"
+          "zh-tw": "小說的命名規則",
+          "en": "Naming rule for novels",
+          "ja": "小説の命名ルール",
+          "ko": "소설의 명명 규칙",
+          "ru": "Правило именования для новеллы"
         }
       },
       {
@@ -384,7 +548,11 @@
         "nameKey": "_在不同的页面类型中使用不同的命名规则",
         "name": {
           "zh-cn": "在不同的页面类型中使用不同的命名规则",
-          "en": "Use different naming rules in different page types"
+          "zh-tw": "在不同的頁面類型中使用不同的命名規則",
+          "en": "Use different naming rules in different page types",
+          "ja": "ページの種類によって異なる命名規則を使用",
+          "ko": "페이지 유형에 따라 다른 명명 규칙 사용",
+          "ru": "Использовать различные правила именования в разных типах страниц"
         }
       },
       {
@@ -392,7 +560,11 @@
         "nameKey": "_如果作品含有某些标签则对这个作品使用另一种命名规则",
         "name": {
           "zh-cn": "如果作品含有某些特定标签，则对这个作品使用另一种命名规则",
-          "en": "Use a different naming rule for the work if it has certain tags"
+          "zh-tw": "如果作品含有某些特定標籤，則對這個作品使用另一種命名規則",
+          "en": "Use a different naming rule for the work if it has certain tags",
+          "ja": "特定のタグがある場合は、作品に別の命名規則を使用する",
+          "ko": "특정 태그가 있는 경우 작업에 다른 명명 규칙을 사용하십시오",
+          "ru": "Используйте другое правило именования для работы, если она имеет определенные теги"
         }
       },
       {
@@ -400,7 +572,11 @@
         "nameKey": "_合并系列小说时的命名规则",
         "name": {
           "zh-cn": "合并系列小说时的命名规则",
-          "en": "Naming rule when merging novel series"
+          "zh-tw": "合併系列小說時的命名規則",
+          "en": "Naming rule when merging novel series",
+          "ja": "シリーズ小説をマージする際の命名ルール",
+          "ko": "시리즈 소설 병합 시 명명 규칙",
+          "ru": "Правило наименования при объединении серий романов"
         }
       },
       {
@@ -408,7 +584,11 @@
         "nameKey": "_标签分隔符号",
         "name": {
           "zh-cn": "标签分隔符号",
-          "en": "Tag separation symbol"
+          "zh-tw": "標簽分隔符號",
+          "en": "Tag separation symbol",
+          "ja": "タグ セパレーションシンボル",
+          "ko": "태그 분리 기호",
+          "ru": "Тег символ разделения"
         }
       },
       {
@@ -416,7 +596,11 @@
         "nameKey": "_日期格式",
         "name": {
           "zh-cn": "日期和时间格式",
-          "en": "Date and time format"
+          "zh-tw": "日期和時間格式",
+          "en": "Date and time format",
+          "ja": "日付と時刻の書式",
+          "ko": "날짜 및 시간 형식",
+          "ru": "Формат даты и времени"
         }
       },
       {
@@ -424,7 +608,11 @@
         "nameKey": "_文件名长度限制",
         "name": {
           "zh-cn": "文件名长度限制",
-          "en": "File name length limit"
+          "zh-tw": "檔案名稱長度限制",
+          "en": "File name length limit",
+          "ja": "ファイル名の長さ制限",
+          "ko": "파일명 길이 제한",
+          "ru": "Лимит длины имени файла"
         }
       }
     ]
@@ -432,7 +620,11 @@
   {
     "page": {
       "zh-cn": "设置-命名/调整文件夹",
-      "en": "Settings-Naming/Adjust-folders"
+      "zh-tw": "設定-命名/調整資料夾",
+      "en": "Settings-Naming/Adjust-folders",
+      "ja": "設定-命名/フォルダー調整",
+      "ko": "설정-이름/폴더-조정",
+      "ru": "Настройки-Имя/Настройка-папок"
     },
     "ids": [
       40,
@@ -446,7 +638,11 @@
         "nameKey": "_不创建文件夹",
         "name": {
           "zh-cn": "不创建文件夹",
-          "en": "Do not create folder"
+          "zh-tw": "不建立資料夾",
+          "en": "Do not create folder",
+          "ja": "フォルダを作成しない",
+          "ko": "폴더를 생성하지 않음",
+          "ru": "Не создавать папку"
         }
       },
       {
@@ -454,7 +650,11 @@
         "nameKey": "_为多图作品添加一层文件夹",
         "name": {
           "zh-cn": "为多图作品添加一层文件夹",
-          "en": "Add a folder layer for multi-image works"
+          "zh-tw": "為多圖作品添加一層資料夾",
+          "en": "Add a folder layer for multi-image works",
+          "ja": "複数画像作品に1層のフォルダを追加",
+          "ko": "다중 이미지 작품에 한 층의 폴더 추가",
+          "ru": "Добавить слой папки для многоизображных работ"
         }
       },
       {
@@ -462,7 +662,11 @@
         "nameKey": "_为r18作品添加一层文件夹",
         "name": {
           "zh-cn": "为 R-18(G) 作品添加一层文件夹",
-          "en": "Add a folder layer for R-18(G) works"
+          "zh-tw": "為 R-18(G) 作品添加一層資料夾",
+          "en": "Add a folder layer for R-18(G) works",
+          "ja": "R-18(G)作品に1層のフォルダを追加",
+          "ko": "R-18(G) 작품에 한 층의 폴더 추가",
+          "ru": "Добавить слой папки для работ R-18(G)"
         }
       },
       {
@@ -470,7 +674,11 @@
         "nameKey": "_使用第一个匹配的标签建立文件夹",
         "name": {
           "zh-cn": "使用第一个匹配的标签建立文件夹",
-          "en": "Create a folder with the first matched tag"
+          "zh-tw": "使用第一個符合的標籤建立資料夾",
+          "en": "Create a folder with the first matched tag",
+          "ja": "最初の一致するタグにフォルダを作成",
+          "ko": "첫 번째 일치하는 태그로 디렉토리 생성",
+          "ru": "Создать папку с первым совпавшим тегом"
         }
       }
     ]
@@ -478,7 +686,11 @@
   {
     "page": {
       "zh-cn": "设置-命名/别名",
-      "en": "Settings-Naming/Aliases"
+      "zh-tw": "設定-命名/別名",
+      "en": "Settings-Naming/Aliases",
+      "ja": "設定-命名/別名",
+      "ko": "설정-이름/별칭",
+      "ru": "Настройки-Имя/Псевдонимы"
     },
     "ids": [
       44,
@@ -490,7 +702,11 @@
         "nameKey": "_标签别名",
         "name": {
           "zh-cn": "标签别名",
-          "en": "Tag alias"
+          "zh-tw": "標籤別名",
+          "en": "Tag alias",
+          "ja": "タグの別名",
+          "ko": "태그 별칭",
+          "ru": "Псевдоним тега"
         }
       },
       {
@@ -498,7 +714,11 @@
         "nameKey": "_自定义用户名",
         "name": {
           "zh-cn": "自定义用户名",
-          "en": "Customize username"
+          "zh-tw": "自訂使用者名稱",
+          "en": "Customize username",
+          "ja": "カスタムユーザー名",
+          "ko": "사용자 정의 유저명",
+          "ru": "Настроить имя пользователя"
         }
       }
     ]
@@ -506,7 +726,11 @@
   {
     "page": {
       "zh-cn": "设置-命名/序号",
-      "en": "Settings-Naming/Serial"
+      "zh-tw": "設定-命名/序號",
+      "en": "Settings-Naming/Serial",
+      "ja": "設定-命名/連番",
+      "ko": "설정-이름/일련번호",
+      "ru": "Настройки-Имя/Нумерация"
     },
     "ids": [
       46,
@@ -519,7 +743,11 @@
         "nameKey": "_序号起始值",
         "name": {
           "zh-cn": "序号的起始值",
-          "en": "Serial number starting value"
+          "zh-tw": "序號的起始值",
+          "en": "Serial number starting value",
+          "ja": "番号の開始値",
+          "ko": "일련번호 시작값",
+          "ru": "Серийный номер начальное значение"
         }
       },
       {
@@ -527,7 +755,11 @@
         "nameKey": "_第一张图不带序号",
         "name": {
           "zh-cn": "第一张图不带序号",
-          "en": "The first image without a serial number"
+          "zh-tw": "第一張圖片不包含序號",
+          "en": "The first image without a serial number",
+          "ja": "最初のイメージの番号を削除",
+          "ko": "일련번호가 없는 첫 번째 이미지",
+          "ru": "Первое изображение без серийного номера"
         }
       },
       {
@@ -535,7 +767,11 @@
         "nameKey": "_在序号前面填充0",
         "name": {
           "zh-cn": "在序号前面填充 0",
-          "en": "Add 0 in front of the serial number"
+          "zh-tw": "在序號前面填充 0",
+          "en": "Add 0 in front of the serial number",
+          "ja": "シリアル番号の前に0を記入",
+          "ko": "일련번호 앞 0 채우기",
+          "ru": "Добавьте 0 перед серийным номером"
         }
       }
     ]
@@ -543,7 +779,11 @@
   {
     "page": {
       "zh-cn": "设置-命名/移除特殊字符",
-      "en": "Settings-Naming/Remove-special-characters"
+      "zh-tw": "設定-命名/移除特殊字元",
+      "en": "Settings-Naming/Remove-special-characters",
+      "ja": "設定-命名/特殊文字を削除",
+      "ko": "설정-이름/특수-문자-제거",
+      "ru": "Настройки-Имя/Удаление-специальных-символов"
     },
     "ids": [
       49,
@@ -555,7 +795,11 @@
         "nameKey": "_移除文件名里的emoji",
         "name": {
           "zh-cn": "移除文件名里的 Emoji",
-          "en": "Remove Emoji from filename"
+          "zh-tw": "移除檔名裡的 Emoji",
+          "en": "Remove Emoji from filename",
+          "ja": "ファイル名から Emoji を削除",
+          "ko": "파일 이름에서 Emoji 제거",
+          "ru": "Удалить Emoji из имени файла"
         }
       },
       {
@@ -563,7 +807,11 @@
         "nameKey": "_移除用户名中的at和后续字符",
         "name": {
           "zh-cn": "移除用户名中的 @ 和后续字符",
-          "en": "Remove @ and subsequent characters in username"
+          "zh-tw": "移除使用者名稱中的 @ 和後續字元",
+          "en": "Remove @ and subsequent characters in username",
+          "ja": "ユーザー名から @ 以降の文字を削除する",
+          "ko": "유저명에서 @와 후속 문자 제거",
+          "ru": "Удалить @ и последующие символы в имени пользователя"
         }
       }
     ]
@@ -571,7 +819,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/下载行为",
-      "en": "Settings-Download/Download-behavior"
+      "zh-tw": "設定-下載/下載行為",
+      "en": "Settings-Download/Download-behavior",
+      "ja": "設定-ダウンロード/ダウンロード動作",
+      "ko": "설정-다운로드/다운로드-동작",
+      "ru": "Настройки-Скачивание/Поведение-загрузки"
     },
     "ids": [
       52,
@@ -592,7 +844,11 @@
         "nameKey": "_抓取完成后自动开始下载",
         "name": {
           "zh-cn": "抓取完成后，自动开始下载",
-          "en": "Start downloading automatically after crawling is complete"
+          "zh-tw": "抓取完成後，自動開始下載",
+          "en": "Start downloading automatically after crawling is complete",
+          "ja": "クロール完了後、自動的にダウンロードを開始",
+          "ko": "크롤링 완료 후 자동으로 다운로드 시작",
+          "ru": "Начать загрузку автоматически после завершения сканирования"
         }
       },
       {
@@ -600,7 +856,11 @@
         "nameKey": "_同时下载多少个文件",
         "name": {
           "zh-cn": "同时下载多少个文件",
-          "en": "Download how many files at the same time"
+          "zh-tw": "同時下載多少個文件",
+          "en": "Download how many files at the same time",
+          "ja": "同時にいくつのファイルをダウンロードする",
+          "ko": "몇 개의 파일을 동시에 다운로드",
+          "ru": "Скачивать сколько файлов одновременно"
         }
       },
       {
@@ -608,7 +868,11 @@
         "nameKey": "_下载之后收藏作品",
         "name": {
           "zh-cn": "下载之后收藏作品",
-          "en": "Bookmark works after downloading"
+          "zh-tw": "下載之後收藏作品",
+          "en": "Bookmark works after downloading",
+          "ja": "ダウンロードした作品をブックマークする",
+          "ko": "다운로드 후 작품 북마크",
+          "ru": "Закладка работ после загрузки"
         }
       },
       {
@@ -616,7 +880,11 @@
         "nameKey": "_点击收藏按钮时下载作品",
         "name": {
           "zh-cn": "点击收藏按钮时下载作品",
-          "en": "Download a work when you click the bookmark button"
+          "zh-tw": "點選收藏按鈕時下載作品",
+          "en": "Download a work when you click the bookmark button",
+          "ja": "ブックマークボタンをクリックすると作品をダウンロード",
+          "ko": "북마크 버튼 클릭 시 작품 다운로드",
+          "ru": "Загрузка произведения при нажатии кнопки закладка"
         }
       },
       {
@@ -624,7 +892,11 @@
         "nameKey": "_点击点赞按钮时下载作品",
         "name": {
           "zh-cn": "点击点赞按钮时下载作品",
-          "en": "Download a work when you click the like button"
+          "zh-tw": "點選點贊按鈕時下載作品",
+          "en": "Download a work when you click the like button",
+          "ja": "いいねボタンをクリックすると作品がダウンロードされます",
+          "ko": "좋아요 버튼 클릭 시 작품 다운로드",
+          "ru": "Загрузка произведения при нажатии на кнопку лайк"
         }
       },
       {
@@ -632,7 +904,11 @@
         "nameKey": "_下载间隔",
         "name": {
           "zh-cn": "下载间隔",
-          "en": "Download interval"
+          "zh-tw": "下載間隔",
+          "en": "Download interval",
+          "ja": "ダウンロード間隔",
+          "ko": "다운로드 간격",
+          "ru": "Интервал загрузки"
         }
       },
       {
@@ -640,7 +916,11 @@
         "nameKey": "_文件下载顺序",
         "name": {
           "zh-cn": "文件下载顺序",
-          "en": "File download order"
+          "zh-tw": "檔案下載順序",
+          "en": "File download order",
+          "ja": "ファイルのダウンロード順序",
+          "ko": "파일 다운로드 순서",
+          "ru": "Порядок загрузки файлов"
         }
       },
       {
@@ -648,7 +928,11 @@
         "nameKey": "_优先下载动图",
         "name": {
           "zh-cn": "优先下载动图",
-          "en": "Prioritize downloading Ugoira"
+          "zh-tw": "優先下載動圖",
+          "en": "Prioritize downloading Ugoira",
+          "ja": "動圖を優先してダウンロード",
+          "ko": "움짤 다운로드 우선",
+          "ru": "Приоритет загрузки Ugoira"
         }
       },
       {
@@ -656,7 +940,11 @@
         "nameKey": "_文件体积限制",
         "name": {
           "zh-cn": "文件体积限制",
-          "en": "File size limit"
+          "zh-tw": "檔案體積限制",
+          "en": "File size limit",
+          "ja": "ファイルサイズ制限",
+          "ko": "파일 크기 제한",
+          "ru": "Ограничение размера файла"
         }
       },
       {
@@ -664,7 +952,11 @@
         "nameKey": "_把文件保存到用户上次选择的位置",
         "name": {
           "zh-cn": "把文件保存到用户上次选择的位置",
-          "en": "Save file to the user's last selected location"
+          "zh-tw": "把檔案保存到用戶上次選擇的位置",
+          "en": "Save file to the user's last selected location",
+          "ja": "ファイルをユーザーが最後に選択した場所に保存",
+          "ko": "파일을 사용자가 마지막으로 선택한 위치에 저장",
+          "ru": "Сохранить файл в последнем выбранном пользователем месте"
         }
       },
       {
@@ -672,7 +964,11 @@
         "nameKey": "_下载完成后显示通知",
         "name": {
           "zh-cn": "下载完成后显示通知",
-          "en": "Show notification after download is complete"
+          "zh-tw": "下載完成後顯示通知",
+          "en": "Show notification after download is complete",
+          "ja": "ダウンロードが完了した後に通知を表示する",
+          "ko": "다운로드가 완료되면 알림 표시",
+          "ru": "Показать уведомление после завершения загрузки"
         }
       }
     ]
@@ -680,7 +976,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/下载记录",
-      "en": "Settings-Download/Download-records"
+      "zh-tw": "設定-下載/下載記錄",
+      "en": "Settings-Download/Download-records",
+      "ja": "設定-ダウンロード/ダウンロード履歴",
+      "ko": "설정-다운로드/다운로드-기록",
+      "ru": "Настройки-Скачивание/История-загрузок"
     },
     "ids": [
       62,
@@ -692,7 +992,11 @@
         "nameKey": "_管理下载记录",
         "name": {
           "zh-cn": "管理下载记录",
-          "en": "Manage download records"
+          "zh-tw": "管理下載記錄",
+          "en": "Manage download records",
+          "ja": "ダウンロード記録の管理",
+          "ko": "다운로드 기록 관리",
+          "ru": "Управление записями загрузки"
         }
       },
       {
@@ -700,7 +1004,11 @@
         "nameKey": "_不下载重复文件",
         "name": {
           "zh-cn": "不下载重复文件",
-          "en": "Don't download duplicate files"
+          "zh-tw": "不下載重複檔案",
+          "en": "Don't download duplicate files",
+          "ja": "重複ファイルをダウンロードしない",
+          "ko": "중복 파일 다운로드하지 않기",
+          "ru": "Не загружать дубликаты файлов"
         }
       }
     ]
@@ -708,7 +1016,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/图片尺寸",
-      "en": "Settings-Download/Image-size"
+      "zh-tw": "設定-下載/圖片尺寸",
+      "en": "Settings-Download/Image-size",
+      "ja": "設定-ダウンロード/画像サイズ",
+      "ko": "설정-다운로드/이미지-크기",
+      "ru": "Настройки-Скачивание/Размер-изображения"
     },
     "ids": [
       64
@@ -719,7 +1031,11 @@
         "nameKey": "_下载图片时的尺寸",
         "name": {
           "zh-cn": "下载插画、漫画、动图时的尺寸",
-          "en": "Image dimensions when downloading illustrations, manga, and Ugoira"
+          "zh-tw": "下載插畫、漫畫、動圖時的尺寸",
+          "en": "Image dimensions when downloading illustrations, manga, and Ugoira",
+          "ja": "イラスト、漫画、アニメーションをダウンロードする際のサイズ",
+          "ko": "일러스트, 만화, 애니메이션을 다운로드할 때의 크기",
+          "ru": "Размер изображения при загрузке иллюстраций, манги и анимаций"
         }
       }
     ]
@@ -727,7 +1043,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/动图",
-      "en": "Settings-Download/Ugoira"
+      "zh-tw": "設定-下載/動圖",
+      "en": "Settings-Download/Ugoira",
+      "ja": "設定-ダウンロード/うごイラ",
+      "ko": "설정-다운로드/움짤",
+      "ru": "Настройки-Скачивание/Угоира"
     },
     "ids": [
       65,
@@ -739,7 +1059,11 @@
         "nameKey": "_动图保存格式",
         "name": {
           "zh-cn": "动图保存格式",
-          "en": "Save the ugoira work as"
+          "zh-tw": "動圖儲存格式",
+          "en": "Save the ugoira work as",
+          "ja": "うごイラの保存タイプ",
+          "ko": "움직이는 일러스트 작품 저장 형식",
+          "ru": "Сохранить Ugoira как"
         }
       },
       {
@@ -747,7 +1071,11 @@
         "nameKey": "_同时转换多少个动图",
         "name": {
           "zh-cn": "同时转换多少个动图",
-          "en": "How many animations are converted at the same time"
+          "zh-tw": "同時轉換多少個動圖",
+          "en": "How many animations are converted at the same time",
+          "ja": "同時変換のうごイラの上限",
+          "ko": "동시에 변환할 움직이는 일러스트 수",
+          "ru": "Сколько анимаций преобразуется одновременно"
         }
       }
     ]
@@ -755,7 +1083,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/小说",
-      "en": "Settings-Download/Novels"
+      "zh-tw": "設定-下載/小說",
+      "en": "Settings-Download/Novels",
+      "ja": "設定-ダウンロード/小説",
+      "ko": "설정-다운로드/소설",
+      "ru": "Настройки-Скачивание/Новеллы"
     },
     "ids": [
       67,
@@ -772,7 +1104,11 @@
         "nameKey": "_小说保存格式",
         "name": {
           "zh-cn": "小说保存格式",
-          "en": "Save the novel as"
+          "zh-tw": "小說儲存格式",
+          "en": "Save the novel as",
+          "ja": "小説の保存形式",
+          "ko": "소설 저장 형식",
+          "ru": "Сохранить новеллу как"
         }
       },
       {
@@ -780,7 +1116,11 @@
         "nameKey": "_在小说里保存元数据",
         "name": {
           "zh-cn": "在小说里保存元数据",
-          "en": "Save metadata in the novel"
+          "zh-tw": "在小說裡儲存元資料",
+          "en": "Save metadata in the novel",
+          "ja": "小説の中にメタデータを保存する",
+          "ko": "소설 내 메타데이터 저장",
+          "ru": "Сохранить метаданные новеллы"
         }
       },
       {
@@ -788,7 +1128,11 @@
         "nameKey": "_下载小说的封面图片",
         "name": {
           "zh-cn": "下载小说的封面图片",
-          "en": "Download the novel's cover image"
+          "zh-tw": "下載小說的封面圖片",
+          "en": "Download the novel's cover image",
+          "ja": "小説の表紙画像をダウンロード",
+          "ko": "소설의 표지 이미지 다운로드",
+          "ru": "Скачать обложку изображения романа"
         }
       },
       {
@@ -796,7 +1140,11 @@
         "nameKey": "_下载小说里的内嵌图片",
         "name": {
           "zh-cn": "下载小说里的内嵌图片",
-          "en": "Download embedded images in novels"
+          "zh-tw": "下載小說裡的內嵌圖片",
+          "en": "Download embedded images in novels",
+          "ja": "小説に埋め込まれた画像をダウンロードする",
+          "ko": "소설에서 인라인 이미지 다운로드",
+          "ru": "Загрузка вложенных изображений в новеллах"
         }
       },
       {
@@ -804,7 +1152,11 @@
         "nameKey": "_自动合并系列小说",
         "name": {
           "zh-cn": "自动合并系列小说",
-          "en": "Automatically merge novel series"
+          "zh-tw": "自動合併系列小說",
+          "en": "Automatically merge novel series",
+          "ja": "自動マージシリーズ小説",
+          "ko": "자동 병합 시리즈 소설",
+          "ru": "Автоматически объединять серии романов"
         }
       },
       {
@@ -812,7 +1164,11 @@
         "nameKey": "_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说",
         "name": {
           "zh-cn": "在合并系列小说时，只要有一篇小说符合过滤条件，就保存该系列里的所有小说",
-          "en": "When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved"
+          "zh-tw": "在合併系列小說時，只要有一篇小說符合過濾條件，就保存該系列裡的所有小說",
+          "en": "When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved",
+          "ja": "シリーズ小説をマージする際、1つの小説がフィルタリング条件を満たす場合、シリーズ内のすべての小説が保存されます",
+          "ko": "시리즈 소설을 병합할 때, 하나의 소설이 필터링 조건을 충족하면 시리즈의 모든 소설이 저장됩니다",
+          "ru": "При объединении серийных романов, если хотя бы один роман соответствует критериям фильтрации, все романы в серии будут сохранены"
         }
       },
       {
@@ -820,7 +1176,11 @@
         "nameKey": "_合并系列小说时的分割阈值",
         "name": {
           "zh-cn": "合并系列小说时的分割阈值",
-          "en": "Split threshold when merging series novels"
+          "zh-tw": "合併系列小說時的分割閾值",
+          "en": "Split threshold when merging series novels",
+          "ja": "シリーズ小説をマージする際の分割閾値",
+          "ko": "시리즈 소설 병합 시 분할 임계값",
+          "ru": "Порог разделения при объединении серийных новелл"
         }
       }
     ]
@@ -828,7 +1188,11 @@
   {
     "page": {
       "zh-cn": "设置-下载/元数据",
-      "en": "Settings-Download/Metadata"
+      "zh-tw": "設定-下載/元數據",
+      "en": "Settings-Download/Metadata",
+      "ja": "設定-ダウンロード/メタデータ",
+      "ko": "설정-다운로드/메타데이터",
+      "ru": "Настройки-Скачивание/Метаданные"
     },
     "ids": [
       73,
@@ -840,7 +1204,11 @@
         "nameKey": "_保存作品的元数据",
         "name": {
           "zh-cn": "保存作品的元数据",
-          "en": "Save the metadata of the work"
+          "zh-tw": "儲存作品的元資料",
+          "en": "Save the metadata of the work",
+          "ja": "作品のメタデータを保存する",
+          "ko": "작품 메타데이터 저장",
+          "ru": "Сохранить метаданные работы"
         }
       },
       {
@@ -848,7 +1216,11 @@
         "nameKey": "_保存作品的简介",
         "name": {
           "zh-cn": "保存作品简介",
-          "en": "Save work description"
+          "zh-tw": "儲存作品說明",
+          "en": "Save work description",
+          "ja": "作品説明の保存",
+          "ko": "작품 설명 저장",
+          "ru": "Сохранить описание работы"
         }
       }
     ]
@@ -856,7 +1228,11 @@
   {
     "page": {
       "zh-cn": "设置-增强/预览",
-      "en": "Settings-Enhance/Preview"
+      "zh-tw": "設定-增強/預覽",
+      "en": "Settings-Enhance/Preview",
+      "ja": "設定-強化機能/プレビュー",
+      "ko": "설정-향상/미리보기",
+      "ru": "Настройки-Улучшение/Предпросмотр"
     },
     "ids": [
       75,
@@ -869,7 +1245,11 @@
         "nameKey": "_预览作品",
         "name": {
           "zh-cn": "预览作品",
-          "en": "Preview works"
+          "zh-tw": "預覽作品",
+          "en": "Preview works",
+          "ja": "作品のプレビュー",
+          "ko": "작품 미리보기",
+          "ru": "Превью работ"
         }
       },
       {
@@ -877,7 +1257,11 @@
         "nameKey": "_长按右键显示大图",
         "name": {
           "zh-cn": "在缩略图上长按鼠标右键时显示大图",
-          "en": "Long press the right mouse button on the thumbnail to display the large image"
+          "zh-tw": "在縮圖上長按滑鼠右鍵時顯示大圖",
+          "en": "Long press the right mouse button on the thumbnail to display the large image",
+          "ja": "サムネイルでマウスの右ボタンを長押しすると、大きな画像が表示されます",
+          "ko": "썸네일을 마우스 오른쪽 버튼으로 클릭했을 때 큰 이미지 표시",
+          "ru": "Длительное нажатие правой кнопки мыши на миниатюре для отображения большого изображения"
         }
       },
       {
@@ -885,7 +1269,11 @@
         "nameKey": "_预览作品的详细信息",
         "name": {
           "zh-cn": "预览作品的详细信息",
-          "en": "Preview the details of the work"
+          "zh-tw": "預覽作品時的詳細資料",
+          "en": "Preview the details of the work",
+          "ja": "作品の詳細をプレビュー",
+          "ko": "작품의 상세한 정보를 미리보다",
+          "ru": "Предпросмотр подробностей работы"
         }
       }
     ]
@@ -893,7 +1281,11 @@
   {
     "page": {
       "zh-cn": "设置-增强/缩略图",
-      "en": "Settings-Enhance/Thumbnails"
+      "zh-tw": "設定-增強/縮圖",
+      "en": "Settings-Enhance/Thumbnails",
+      "ja": "設定-強化機能/サムネイル",
+      "ko": "설정-향상/썸네일",
+      "ru": "Настройки-Улучшение/Миниатюры"
     },
     "ids": [
       78,
@@ -907,7 +1299,11 @@
         "nameKey": "_显示更大的缩略图",
         "name": {
           "zh-cn": "显示更大的缩略图",
-          "en": "Show larger thumbnails"
+          "zh-tw": "顯示更大的縮圖",
+          "en": "Show larger thumbnails",
+          "ja": "大きなサムネイルを表示する",
+          "ko": "더 큰 썸네일 표시",
+          "ru": "Показывать большие миниатюры"
         }
       },
       {
@@ -915,7 +1311,11 @@
         "nameKey": "_替换方形缩略图以显示图片比例",
         "name": {
           "zh-cn": "替换方形缩略图以显示图片比例",
-          "en": "Replace square thumbnails to show image ratio"
+          "zh-tw": "替換方形縮圖以顯示圖片比例",
+          "en": "Replace square thumbnails to show image ratio",
+          "ja": "正方形のサムネイルを置き換えて、画像のスケールを表示",
+          "ko": "이미지 종횡비를 표시하기 위해 정사각형 썸네일 교체",
+          "ru": "Замените квадратные миниатюры, чтобы показать соотношение сторон изображения"
         }
       },
       {
@@ -923,7 +1323,11 @@
         "nameKey": "_在多图作品页面里显示缩略图列表",
         "name": {
           "zh-cn": "在多图作品页面里显示缩略图列表",
-          "en": "Show thumbnail list on multi-image work pages"
+          "zh-tw": "在多圖作品頁面裡顯示縮圖列表",
+          "en": "Show thumbnail list on multi-image work pages",
+          "ja": "複数画像作品ページでサムネイル一覧を表示",
+          "ko": "멀티 이미지 작품 페이지에서 썸네일 목록을 표시",
+          "ru": "На странице работы с несколькими изображениями отображайте список миниатюр"
         }
       },
       {
@@ -931,7 +1335,11 @@
         "nameKey": "_把图片显示为灰色",
         "name": {
           "zh-cn": "把图片显示为灰色",
-          "en": "Display images in grayscale"
+          "zh-tw": "把圖片顯示為灰色",
+          "en": "Display images in grayscale",
+          "ja": "画像をグレースケールで表示する",
+          "ko": "이미지를 회색조로 표시",
+          "ru": "Показывать изображения в оттенках серого"
         }
       }
     ]
@@ -939,7 +1347,11 @@
   {
     "page": {
       "zh-cn": "设置-增强/缩略图上的按钮",
-      "en": "Settings-Enhance/Thumbnail-buttons"
+      "zh-tw": "設定-增強/縮圖上的按鈕",
+      "en": "Settings-Enhance/Thumbnail-buttons",
+      "ja": "設定-強化機能/サムネイル上のボタン",
+      "ko": "설정-향상/썸네일-위-버튼",
+      "ru": "Настройки-Улучшение/Кнопки-на-миниатюре"
     },
     "ids": [
       82,
@@ -953,7 +1365,11 @@
         "nameKey": "_缩略图上按钮的位置",
         "name": {
           "zh-cn": "缩略图上按钮的位置",
-          "en": "Button position on thumbnails"
+          "zh-tw": "縮略圖上按鈕的位置",
+          "en": "Button position on thumbnails",
+          "ja": "サムネイル上のボタンの位置",
+          "ko": "썸네일에 있는 버튼의 위치",
+          "ru": "Позиция кнопок на миниатюрах"
         }
       },
       {
@@ -961,7 +1377,11 @@
         "nameKey": "_在作品缩略图上显示图片查看器按钮",
         "name": {
           "zh-cn": "在作品缩略图上显示图片查看器按钮",
-          "en": "Show Image viewer button on thumbnail"
+          "zh-tw": "在作品縮圖上顯示圖片查看器按鈕",
+          "en": "Show Image viewer button on thumbnail",
+          "ja": "作品のサムネイルに画像ビューアボタンを表示",
+          "ko": "작품 썸네일에 이미지 뷰어 버튼 표시",
+          "ru": "Показать кнопку Просмотрщик изображений на миниатюре"
         }
       },
       {
@@ -969,7 +1389,11 @@
         "nameKey": "_在缩略图上显示复制按钮",
         "name": {
           "zh-cn": "在作品缩略图上显示复制按钮",
-          "en": "Display copy button on thumbnail"
+          "zh-tw": "在作品縮略圖上顯示複製按鈕",
+          "en": "Display copy button on thumbnail",
+          "ja": "作品のサムネイルにコピーボタンを表示",
+          "ko": "작품 썸네일에 복사 버튼 표시",
+          "ru": "Отображать кнопку копирования на миниатюре работы"
         }
       },
       {
@@ -977,7 +1401,11 @@
         "nameKey": "_在作品缩略图上显示下载按钮",
         "name": {
           "zh-cn": "在作品缩略图上显示下载按钮",
-          "en": "Show download button on thumbnail"
+          "zh-tw": "在作品縮圖上顯示下載按鈕",
+          "en": "Show download button on thumbnail",
+          "ja": "作品のサムネイルにダウンロードボタンを表示",
+          "ko": "썸네일에 다운로드 버튼 표시",
+          "ru": "Показать кнопку загрузить на миниатюре"
         }
       }
     ]
@@ -985,7 +1413,11 @@
   {
     "page": {
       "zh-cn": "设置-增强/其他",
-      "en": "Settings-Enhance/Other"
+      "zh-tw": "設定-增強/其他",
+      "en": "Settings-Enhance/Other",
+      "ja": "設定-強化機能/その他",
+      "ko": "설정-향상/기타",
+      "ru": "Настройки-Улучшение/Другое"
     },
     "ids": [
       86,
@@ -999,7 +1431,11 @@
         "nameKey": "_高亮关注的用户",
         "name": {
           "zh-cn": "高亮关注的用户",
-          "en": "Highlight following users"
+          "zh-tw": "高亮關注的使用者",
+          "en": "Highlight following users",
+          "ja": "強調表示するフォローしているユーザー",
+          "ko": "강조표시하는 팔로우한 사용자",
+          "ru": "Выделить следующих пользователей"
         }
       },
       {
@@ -1007,7 +1443,11 @@
         "nameKey": "_在下载过的作品上显示边框",
         "name": {
           "zh-cn": "在下载过的作品上显示边框",
-          "en": "Display a border on downloaded works"
+          "zh-tw": "在下載過的作品上顯示邊框",
+          "en": "Display a border on downloaded works",
+          "ja": "ダウンロード済みの作品に枠線を表示する",
+          "ko": "다운로드한 작품에 테두리 표시",
+          "ru": "Показывать рамку на скачанных работах"
         }
       },
       {
@@ -1015,7 +1455,11 @@
         "nameKey": "_下载器的收藏功能",
         "name": {
           "zh-cn": "下载器的收藏功能 (✩)",
-          "en": "Downloader's bookmark feature (✩)"
+          "zh-tw": "下載器的收藏功能 (✩)",
+          "en": "Downloader's bookmark feature (✩)",
+          "ja": "ダウンロードツールのブックマーク機能 (✩)",
+          "ko": "다운로더의 북마크 기능 (✩)",
+          "ru": "Функция закладок загрузчика (✩)"
         }
       },
       {
@@ -1023,7 +1467,11 @@
         "nameKey": "_复制作品信息带高亮关键字",
         "name": {
           "zh-cn": "复制作品信息",
-          "en": "Copy work info"
+          "zh-tw": "複製作品資訊",
+          "en": "Copy work info",
+          "ja": "コピー作品情報",
+          "ko": "복사 작품 정보",
+          "ru": "Копировать информацию о работе"
         }
       }
     ]
@@ -1031,7 +1479,11 @@
   {
     "page": {
       "zh-cn": "设置-增强/搜索页面",
-      "en": "Settings-Enhance/Search-page"
+      "zh-tw": "設定-增強/搜尋頁面",
+      "en": "Settings-Enhance/Search-page",
+      "ja": "設定-強化機能/検索ページ",
+      "ko": "설정-향상/검색-페이지",
+      "ru": "Настройки-Улучшение/Страница-поиска"
     },
     "ids": [
       90,
@@ -1045,7 +1497,11 @@
         "nameKey": "_在搜索页面添加快捷搜索区域",
         "name": {
           "zh-cn": "在搜索页面添加快捷搜索区域",
-          "en": "Add a quick search area on the search page"
+          "zh-tw": "在搜尋頁面新增快速搜尋區域",
+          "en": "Add a quick search area on the search page",
+          "ja": "検索ページにクイック検索領域を追加します",
+          "ko": "검색 페이지에 빠른 검색 영역 추가",
+          "ru": "Добавить область быстрого поиска на странице поиска"
         }
       },
       {
@@ -1053,7 +1509,11 @@
         "nameKey": "_过滤搜索页面的作品",
         "name": {
           "zh-cn": "过滤搜索页面的作品",
-          "en": "Filter works on the search page"
+          "zh-tw": "過濾搜尋頁面的作品",
+          "en": "Filter works on the search page",
+          "ja": "フィルタリング検索ページの作品",
+          "ko": "필터링 검색 페이지의 작품",
+          "ru": "Фильтрация работ на странице поиска"
         }
       },
       {
@@ -1061,7 +1521,11 @@
         "nameKey": "_在搜索页面里移除已关注用户的作品",
         "name": {
           "zh-cn": "在搜索页面里移除已关注用户的作品",
-          "en": "Remove the works of followed users from the search page"
+          "zh-tw": "在搜尋頁面裡移除已關注使用者的作品",
+          "en": "Remove the works of followed users from the search page",
+          "ja": "フォローしているユーザーの作品を検索ページから削除します",
+          "ko": "검색 페이지에서 팔로우한 사용자의 작품을 제거합니다",
+          "ru": "Удалить работы подписавшихся пользователей со страницы поиска"
         }
       },
       {
@@ -1069,7 +1533,11 @@
         "nameKey": "_预览搜索结果",
         "name": {
           "zh-cn": "预览搜索页面的筛选结果",
-          "en": "Preview filter results on search page"
+          "zh-tw": "預覽搜尋頁面的篩選結果",
+          "en": "Preview filter results on search page",
+          "ja": "検索ページのフィルタ結果をプレビューします",
+          "ko": "미리보기 검색 페이지 필터 결과",
+          "ru": "Предварительный просмотр результатов фильтрации на странице поиска"
         }
       }
     ]
@@ -1077,7 +1545,11 @@
   {
     "page": {
       "zh-cn": "设置-通用/语言",
-      "en": "Settings-General/Language"
+      "zh-tw": "設定-通用/語言",
+      "en": "Settings-General/Language",
+      "ja": "設定-一般的な/言語",
+      "ko": "설정-일반적인/언어",
+      "ru": "Настройки-Общий/Язык"
     },
     "ids": [
       94
@@ -1088,7 +1560,11 @@
         "nameKey": "_Language",
         "name": {
           "zh-cn": "Language",
-          "en": "Language"
+          "zh-tw": "Language",
+          "en": "Language",
+          "ja": "Language",
+          "ko": "Language",
+          "ru": "Language"
         }
       }
     ]
@@ -1096,7 +1572,11 @@
   {
     "page": {
       "zh-cn": "设置-通用/操作方式",
-      "en": "Settings-General/Operation-method"
+      "zh-tw": "設定-通用/操作方式",
+      "en": "Settings-General/Operation-method",
+      "ja": "設定-一般的な/操作方法",
+      "ko": "설정-일반적인/조작-방법",
+      "ru": "Настройки-Общий/Способ-управления"
     },
     "ids": [
       95,
@@ -1110,7 +1590,11 @@
         "nameKey": "_选项卡切换方式",
         "name": {
           "zh-cn": "选项卡切换方式",
-          "en": "How to switch tabs"
+          "zh-tw": "頁籤切換方式",
+          "en": "How to switch tabs",
+          "ja": "タブ切り替え方式",
+          "ko": "탭 전환 방식",
+          "ru": "Как переключать вкладки"
         }
       },
       {
@@ -1118,7 +1602,11 @@
         "nameKey": "_点击设置卡片时切换它的开关状态",
         "name": {
           "zh-cn": "点击设置卡片时切换它的开关状态",
-          "en": "Click the setting card to toggle its switch status"
+          "zh-tw": "點擊設定卡片時切換它的開關狀態",
+          "en": "Click the setting card to toggle its switch status",
+          "ja": "設定カードをクリックして、そのスイッチ状態を切り替えます",
+          "ko": "설정 카드를 클릭하여 스위치 상태를 전환합니다",
+          "ru": "Нажмите на карточку настройки, чтобы переключить ее переключатель состояние"
         }
       },
       {
@@ -1126,7 +1614,11 @@
         "nameKey": "_点击设置名字时打开wiki链接",
         "name": {
           "zh-cn": "点击设置名字时打开 Wiki 链接",
-          "en": "Open Wiki link when clicking setting name"
+          "zh-tw": "點擊設定名字時打開 Wiki 連結",
+          "en": "Open Wiki link when clicking setting name",
+          "ja": "設定名をクリックすると Wiki リンクを開く",
+          "ko": "설정 이름을 클릭할 때 Wiki 링크 열기",
+          "ru": "Открывать ссылку на Wiki при клике на имя настройки"
         }
       },
       {
@@ -1134,7 +1626,11 @@
         "nameKey": "_自定义快捷键",
         "name": {
           "zh-cn": "自定义快捷键",
-          "en": "Customize hotkeys"
+          "zh-tw": "自訂快捷鍵",
+          "en": "Customize hotkeys",
+          "ja": "ショートカットキーをカスタマイズ",
+          "ko": "단축키 사용자 지정",
+          "ru": "Настроить горячие клавиши"
         }
       }
     ]
@@ -1142,7 +1638,11 @@
   {
     "page": {
       "zh-cn": "设置-通用/外观",
-      "en": "Settings-General/Appearance"
+      "zh-tw": "設定-通用/外觀",
+      "en": "Settings-General/Appearance",
+      "ja": "設定-一般的な/外観",
+      "ko": "설정-일반적인/외관",
+      "ru": "Настройки-Общий/Внешний-вид"
     },
     "ids": [
       98,
@@ -1155,7 +1655,11 @@
         "nameKey": "_颜色主题",
         "name": {
           "zh-cn": "颜色主题",
-          "en": "Color theme"
+          "zh-tw": "色彩主題",
+          "en": "Color theme",
+          "ja": "カラーテーマ",
+          "ko": "테마",
+          "ru": "Цветовая тема"
         }
       },
       {
@@ -1163,7 +1667,11 @@
         "nameKey": "_背景图片",
         "name": {
           "zh-cn": "背景图片",
-          "en": "Background image"
+          "zh-tw": "背景圖片",
+          "en": "Background image",
+          "ja": "背景画像",
+          "ko": "배경 이미지",
+          "ru": "Фоновое изображение"
         }
       },
       {
@@ -1171,7 +1679,11 @@
         "nameKey": "_高亮显示关键字",
         "name": {
           "zh-cn": "高亮显示关键字",
-          "en": "Highlight keywords"
+          "zh-tw": "標明顯示關鍵字",
+          "en": "Highlight keywords",
+          "ja": "強調表示キーワード",
+          "ko": "강조 키워드 표시",
+          "ru": "Выделить ключевые слова"
         }
       }
     ]
@@ -1179,7 +1691,11 @@
   {
     "page": {
       "zh-cn": "设置-通用/日志",
-      "en": "Settings-General/Logs"
+      "zh-tw": "設定-通用/日誌",
+      "en": "Settings-General/Logs",
+      "ja": "設定-一般的な/ログ",
+      "ko": "설정-일반적인/로그",
+      "ru": "Настройки-Общий/Журнал"
     },
     "ids": [
       101,
@@ -1191,7 +1707,11 @@
         "nameKey": "_日志区域的默认可见性",
         "name": {
           "zh-cn": "日志区域的默认可见性",
-          "en": "Default visibility of the log area"
+          "zh-tw": "日誌區域的預設可見性",
+          "en": "Default visibility of the log area",
+          "ja": "ログ領域のデフォルト可視性",
+          "ko": "로그 영역의 기본 가시성",
+          "ru": "Область журнала по умолчанию видимость"
         }
       },
       {
@@ -1199,7 +1719,11 @@
         "nameKey": "_自动导出日志",
         "name": {
           "zh-cn": "自动导出日志",
-          "en": "Automatic log export"
+          "zh-tw": "自動匯出日誌",
+          "en": "Automatic log export",
+          "ja": "ログの自動エクスポート",
+          "ko": "자동 로그 내보내기",
+          "ru": "Автоматический экспорт журнала"
         }
       }
     ]
@@ -1207,7 +1731,11 @@
   {
     "page": {
       "zh-cn": "设置-通用/管理设置",
-      "en": "Settings-General/Manage-settings"
+      "zh-tw": "設定-通用/管理設定",
+      "en": "Settings-General/Manage-settings",
+      "ja": "設定-一般的な/設定を管理",
+      "ko": "설정-일반적인/설정-관리",
+      "ru": "Настройки-Общий/Управление-настройками"
     },
     "ids": [
       105,
@@ -1220,7 +1748,11 @@
         "nameKey": "_当你修改设置时其他标签页",
         "name": {
           "zh-cn": "当你修改设置时，其他标签页",
-          "en": "Other tabs when you change settings"
+          "zh-tw": "當你修改設定時，其他分頁",
+          "en": "Other tabs when you change settings",
+          "ja": "設定を変更したとき、他のタブ",
+          "ko": "설정을 변경할 때 다른 탭",
+          "ru": "Другие вкладки при изменении настроек"
         }
       },
       {
@@ -1228,7 +1760,11 @@
         "nameKey": "_自动导出设置",
         "name": {
           "zh-cn": "自动导出设置",
-          "en": "Automatically export settings"
+          "zh-tw": "自動匯出設定",
+          "en": "Automatically export settings",
+          "ja": "設定を自動的にエクスポート",
+          "ko": "설정 자동 내보내기",
+          "ru": "Автоматический экспорт настроек"
         }
       },
       {
@@ -1236,7 +1772,11 @@
         "nameKey": "_管理设置",
         "name": {
           "zh-cn": "管理设置",
-          "en": "Manage settings"
+          "zh-tw": "管理設定",
+          "en": "Manage settings",
+          "ja": "設定の管理",
+          "ko": "설정 관리",
+          "ru": "Изменение настроек"
         }
       }
     ]
