@@ -1,6 +1,6 @@
 ![logo](./docs/images/logo128.png)
 
-**Pixiv Batch Downloader's Wiki**
+**Powerful Pixiv Downloader's Wiki**
 
 [https://xuejianxianzun.github.io/PBDWiki](https://xuejianxianzun.github.io/PBDWiki)
 

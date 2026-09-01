@@ -1,8 +1,8 @@
-# Pixiv Batch Downloader Wiki
+# Powerful Pixiv Downloader Wiki
 
 ![image](./images/logo128.png)
 
-This is the Wiki for [Pixiv Batch Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader).
+This is the Wiki for [Powerful Pixiv Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader).
 
 GitHub：[PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
 

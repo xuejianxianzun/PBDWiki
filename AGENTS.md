@@ -4,7 +4,7 @@
 
 ## 项目概述
 
-本仓库是浏览器扩展 [Pixiv Batch Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader) 的 Wiki 文档站点，使用 [docsify](https://docsify.js.org/) 构建，托管于 GitHub Pages。
+本仓库是浏览器扩展 [Powerful Pixiv Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader) 的 Wiki 文档站点，使用 [docsify](https://docsify.js.org/) 构建，托管于 GitHub Pages。
 
 - 站点地址：https://xuejianxianzun.github.io/PBDWiki
 - 当前支持两种语言：简体中文（`zh-cn`）和英语（`en`）

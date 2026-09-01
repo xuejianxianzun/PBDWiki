@@ -2,8 +2,6 @@
 
 !> Before performing an offline installation, check the extension management page to see if this extension is already installed. Some users may have installed it online, in which case you should disable it first before installing the offline version to avoid running multiple instances of this extension simultaneously.
 
-?> The steps below describe installation on a PC. If you want to install on Android, please refer to: [Installing on Microsoft Edge Canary Browser](/en/Installation/MicrosoftEdgeCanary)
-
 ## Download the File
 
 Open the [GitHub releases page](https://github.com/xuejianxianzun/PixivBatchDownloader/releases ':target=_blank') for this program, where you can see the release versions, for example:

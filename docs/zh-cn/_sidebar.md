@@ -3,7 +3,7 @@
 * [安装](zh-cn/安装/安装-menu)
   * [在线安装](zh-cn/安装/在线安装)
   * [离线安装](zh-cn/安装/离线安装)
-  * [Android](zh-cn/安装/MicrosoftEdgeCanary.md)
+  * [Android](zh-cn/安装/QuettaBrowser.md)
   * [如何更新](zh-cn/安装/如何更新)
 * [安装之后](zh-cn/安装之后)
 * [了解设置面板](zh-cn/设置面板)

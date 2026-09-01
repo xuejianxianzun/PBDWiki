@@ -19,11 +19,9 @@ Firefox browser can install this extension from [Add-Ons](https://addons.mozilla
 
 ## Android
 
-You can now install this extension offline using the Microsoft Edge Canary browser. For specific steps, please refer to:
+You can install this extension online using the Quetta browser. For detailed steps, please see:
 
-[Installing on Microsoft Edge Canary Browser](/en/Installation/MicrosoftEdgeCanary)
-
-*Previously, the Kiwi browser on Android supported online installation of this extension, but it has stopped development and been removed from Google Play, so it is no longer recommended.*
+[Install the extension on the Quetta browser on mobile](/en/Installation/QuettaBrowser)
 
 ------------
 
