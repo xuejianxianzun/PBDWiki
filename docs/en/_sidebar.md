@@ -65,7 +65,7 @@
   * [Following page](en/Buttons-Extra-features/Following-page)
 * [Convenience Features](en/Convenience-Features)
 * [Usage Tips](en/Usage-Tips)
-* [Using Secondary Account for Downloading](en/Using-Secondary-Account-for-Downloading)
+* [Risk of Account Ban](en/Risk-of-Account-Ban)
 * [FAQ](en/FAQ)
 * [Contact Me](en/Contact-Me)
 * [Support Me](en/Support-Me)

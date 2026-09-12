@@ -493,7 +493,7 @@ Yes.
 
 If you frequently crawl and download large amounts of files, Pixiv may issue a warning. A second warning may result in Pixiv deleting your account.
 
-See detailed instructions: [Large Downloads May Lead to Your Account Being Banned](/en/AfterInstallation?id=large-downloads-may-lead-to-your-account-being-banned).
+See detailed instructions: [Risk of Account Ban](/en/Risk-of-Account-Ban).
 
 ## Cannot Open EPUB Files
 

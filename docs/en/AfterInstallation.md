@@ -29,56 +29,7 @@ You need to log in to your pixiv.net account, as many pages and works are not ac
 
 ## Large Downloads May Lead to Your Account Being Banned
 
-The downloader usually first crawls work data, then downloads files; both steps request data from Pixiv's servers. If the number of requests is too many, or the frequency is too dense, it may cause Pixiv to issue a warning to your account. If your account is warned multiple times, it may be banned.
-
-?> Based on current experience, downloading a few hundred works per day usually won't trigger a warning.
-
-### Pixiv's Handling Method
-
-If you frequently download large amounts of files, such as thousands or tens of thousands of works per day, you may be warned by Pixiv. When the first warning is triggered, you will receive an in-site message, which may look like this:
-
-![Pixiv warning in-site message](images/20250909_183204.webp)
-
-During large downloads, the downloader checks every 100 files saved whether you have received such an in-site message. If you have received such an in-site message within the last 1 hour, the downloader will pause the download to avoid making the situation worse.
-
-If your account receives a second warning, there may be different situations:
-1. If the first warning was several years ago, the second warning may just be a reminder with no actual effect. For example, if you were warned once in 2022 and warned a second time in 2025, the account functions may not be restricted at all. But if the time between the two warnings is relatively short (I don't know the specific threshold), your account may face the following two situations:
-2. Milder disposition: Your account is frozen, you cannot follow users or bookmark works, but other functions are normal (you can browse, crawl, and download normally). If you encounter this, you can try emailing customer service to request unban, and it may be restored.
-3. Severe disposition: Your account will be deleted, you cannot log in, and cannot request unban. Since your account no longer exists, other users also cannot view your profile, bookmarks, etc.
-
-In the past few years, it was often the milder disposition, but recently accounts are often deleted, indicating that Pixiv has strengthened its handling of violations. This will lead to account ban.
-
-!> If your account is banned, I am not responsible for it. However, the downloader also has some settings to slow down the crawling and download speed, which can reduce the possibility of being banned.
-
-### How to Reduce Risk
-
-Many people often ask me: How many works can I download per day without getting a warning? In fact, there is no fixed value, because the conditions for triggering a warning depend not only on the number of works, but also on an important factor: the request frequency.
-
-If the request frequency is very high, downloading a few hundred works may trigger a warning. Conversely, if the request frequency is lowered, downloading a few thousand works may not trigger a warning.
-
-When you need to crawl and download more than a few thousand works, there are some methods to reduce risk:
-
-**Slow Down:**
-
-The downloader has settings to reduce the likelihood of warnings:
-- By default, the downloader [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl). When crawling many works, it sends requests at intervals. This feature is enabled by default.
-- When downloading many files, you can set the [Download interval](/en/Settings-Download/Download-behavior?id=download-interval) to reduce download frequency.
-
-The above two settings both allow custom interval times. If you only crawl and download a few hundred works per day, the default interval time is usually safe.
-
-The more files you need to crawl and download, the larger the interval time you should set. In extreme cases, you can consider setting an interval of about 4 seconds (of course, this will increase the time to complete the task).
-
-**Batch Downloading:**
-
-If you want to download all your bookmarks, which may span hundreds of pages or more, you can split the task into multiple sessions, crawling 50 or 100 pages at a time.
-
-See details:[Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-crawling-and-downloading-split-tasks).
-
-**Using a Secondary Account:**
-
-If you frequently download large amounts of files, the above settings cannot completely guarantee safety. You can use an alt account to download. The main account is only used for downloading small amounts of files during daily browsing, while the alt account is specifically used for large downloads, and needs to be used in conjunction with the methods above.
-
-Detailed instructions: [Using Secondary Account for Downloading](/en/Using-Secondary-Account-for-Downloading).
+If you frequently download large amounts of files, please check the instructions in [Risk of Account Ban](/en/Risk-of-Account-Ban).
 
 ## Issues with Abnormal File Names After Download
 
