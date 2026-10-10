@@ -1,7 +1,7 @@
 ## Button position on thumbnails
 
-<div class="option settingsPanel_optionCard new" data-no="82" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="settingNameStyle has_tip" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
+<div class="option settingsPanel_optionCard" data-no="82" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="has_tip settingNameStyle" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
     <span data-xztext="_缩略图上按钮的位置">Button <span class="key">position</span> on thumbnails</span>
     <span class="gray"> ? </span>
   </a>
@@ -11,16 +11,11 @@
   <input type="radio" name="magnifierPosition" id="magnifierPosition2" class="need_beautify radio" value="right" checked="">
   <span class="beautify_radio" tabindex="0"></span>
   <label for="magnifierPosition2" data-xztext="_右侧" class="active">Right</label>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
-
+</div>
 
 When you hover over a thumbnail, the downloader displays some buttons on it, as shown below:
 
-![](../images/20260426_233917.png)
+![](../../template/publicImages/20260426_233917.png)
 
 By default they are shown on the right side, but you can switch them to the left side if you want.
 
@@ -35,10 +30,10 @@ By default they are shown on the right side, but you can switch them to the left
       <span class="settingNameStyle" data-xztext="_查看的图片尺寸">View image dimensions</span>
       <input type="radio" name="magnifierSize" id="magnifierSize1" class="need_beautify radio" value="original">
       <span class="beautify_radio" tabindex="0"></span>
-      <label for="magnifierSize1" data-xztext="_原图" class="active">Original</label>
+      <label for="magnifierSize1" data-xztext="_原图">Original</label>
       <input type="radio" name="magnifierSize" id="magnifierSize2" class="need_beautify radio" value="regular" checked="">
       <span class="beautify_radio" tabindex="0"></span>
-      <label for="magnifierSize2" data-xztext="_普通">Regular</label>
+      <label for="magnifierSize2" data-xztext="_普通" class="active">Regular</label>
     </div>
     <button type="button" class="gray textButton toggleArea pl0" data-toggle-target="#showMagnifierTip" data-for-no="83" data-xztext="_快捷键列表">Shortcut list</button>
   </div>
@@ -65,11 +60,11 @@ In addition, there are some function buttons at the bottom of the image viewer, 
 
 When the mouse hovers over a work's thumbnail, the downloader displays a magnifier icon, as shown below:
 
-![](../images/20250910_235026.png)
+![](../../template/publicImages/20250910_235026.png)
 
 Clicking the magnifier icon opens the image viewer to view each image in the work. The effect is shown below:
 
-![](../images/20260830_174657.webp)
+![](../../template/publicImages/20260830_174657.webp)
 
 You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
 
@@ -83,7 +78,7 @@ You can find detailed information about the image viewer here: [Image Viewer](/e
 
 When you hover the mouse over a work's thumbnail, the downloader will show a Copy button on the thumbnail, as shown below:
 
-![](../images/20260609_202250.png)
+![](../../template/publicImages/20260609_202250.png)
 
 Clicking it copies the original image and some information about the work. You can adjust what gets copied in the [Copy work info](/en/Settings-Enhance/Other?flag=89) settings.
 
@@ -95,7 +90,6 @@ Clicking it copies the original image and some information about the work. You c
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-
 When the mouse hovers over a work thumbnail, the downloader will display a download button on the thumbnail. Clicking the download button allows you to download this work. This feature makes downloading works much more convenient.
 
-![](../images/20260609_202802.png)
+![](../../template/publicImages/20260609_202802.png)

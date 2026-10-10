@@ -4,7 +4,7 @@
 
 Open the browser's download settings:
 
-![](images/20250828_013640.png)
+![](../template/en/images/20250828_013640.png)
 
 In the browser's download settings, you can confirm:
 
@@ -19,7 +19,7 @@ This extension can only be used on pixiv.net web pages. It will not function on 
 
 After installing the extension, open a Pixiv web page, and you should see a blue button on the right:
 
-![](images/2021-11-07_192344.png)
+![](../template/publicImages/2021-11-07_192344.png)
 
 Click the button to open the settings panel and start crawling and downloading.
 
@@ -39,7 +39,7 @@ Many such extensions exist (even if they don't run on Pixiv or Fanbox, they may 
 
 If the downloaded filename is a string of random letters and numbers, or does not use the naming rule set in the downloader, it indicates that this issue has occurred. For example:
 
-![](images/20251117_171653.png)
+![](../template/publicImages/20251117_171653.png)
 
 ### Solutions
 
@@ -63,13 +63,13 @@ I have listed some known extensions that can cause this issue in the [Known Conf
 
 To disable an extension, do so in the browser's extension management page. For example, to disable IDM Integration Module, click the button in its bottom-right corner to stop it from running:
 
-![](images/20250908_235031.png)
+![](../template/en/images/20250908_235031.png)
 
 The following methods are **incorrect** and will not help resolve the issue:
 - Excluding pixiv.net in IDM's program settings.
 - Clicking the IDM Integration Module icon on pixiv.net to disable it for that site:
 
-![](images/20250906_220458.png)
+![](../template/publicImages/20250906_220458.png)
 
 Using the above methods, IDM Integration Module will still be running, so the issue persists.
 
@@ -91,51 +91,51 @@ Below are some known extensions that cause conflicts:
 
 - IDM Integration Module
 
-![](images/20250820_140536.png)
+![](../template/publicImages/20250820_140536.png)
 
 - Chrono Download Manager
 
-![](images/2021-11-12_174410.png)
+![](../template/publicImages/2021-11-12_174410.png)
 
 - [Save image as Type](https://chromewebstore.google.com/detail/save-image-as-type/gabfmnliflodkdafenbcpjdlppllnemd)
 
-![](images/20260213_013548.png)
+![](../template/en/images/20260213_013548.png)
 
 - [Video DownloadHelper](https://chromewebstore.google.com/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk)
 
-![](images/20250928_234105.png)
+![](../template/publicImages/20250928_234105.png)
 
 - [Image downloader - Imageye](https://chromewebstore.google.com/detail/image-downloader-imageye/agionbommeaifngbhincahgmoflcikhm)
 
-![](images/20251025_025601.png)
+![](../template/en/images/20251025_025601.png)
 
 - [BitComet Extension](https://chromewebstore.google.com/detail/bitcomet-download-extensi/dhigneefebkcagnpnpbibganpmfgebnk)
 
-![](images/2021-11-12_174403.png)
+![](../template/publicImages/2021-11-12_174403.png)
 
 - [Free Download Manager](https://chromewebstore.google.com/detail/free-download-manager/ahmpjcflkgiildlgicmcieglgoilbfdp)
 
-![](images/2021-11-12_174418.png)
+![](../template/publicImages/2021-11-12_174418.png)
 
 - [Media Harvest: Twitter Multimedia Downloader](https://chromewebstore.google.com/detail/media-harvest-x%EF%BC%88twitter%EF%BC%89%E5%A4%9A/hpcgabhdlnapolkkjpejieegfpehfdok)
 
-![](images/2022-01-06_212820.png)
+![](../template/publicImages/2022-01-06_212820.png)
 
 - [Image Downloader](https://chromewebstore.google.com/detail/image-downloader/cnpniohnfphhjihaiiggeabnkjhpaldj)
 
-![](images/20220310221554.png)
+![](../template/publicImages/20220310221554.png)
 
 - [DownThemAll!](https://chromewebstore.google.com/detail/downthemall/nljkibfhlpcnanjgbnlnbjecgicbjkge)
 
-![](images/20220322084123.png)
+![](../template/publicImages/20220322084123.png)
 
 - Double-click Image Downloader
 
-![](images/20221228_182641.png)
+![](../template/publicImages/20221228_182641.png)
 
 - Patreon Downloader
 
-![](images/20230326_123231.png)
+![](../template/publicImages/20230326_123231.png)
 
 ## Do Not Block Pixiv Images
 
@@ -143,6 +143,6 @@ In Chrome, users can block images on web pages, preventing Chrome from downloadi
 
 When Chrome blocks Pixiv images, an intercept icon appears on the right side of the address bar, for example:
 
-![](images/20250908_235137.png)
+![](../template/en/images/20250908_235137.png)
 
 Do not block Pixiv images, as this will prevent the downloader from downloading images.

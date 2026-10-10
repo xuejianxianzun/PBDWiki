@@ -53,7 +53,7 @@ The downloader has four log levels, each with a different color. Examples:
 
 After crawling begins, the downloader adds symbols to the front of the page title to indicate its status. For example:
 
-![](images/20250901_005150.png)
+![](../publicImages/20250901_005150.png)
 
 The `[↓]` at the start indicates downloading is in progress; the number 36 that follows means 36 files remain to be downloaded.
 
@@ -75,7 +75,7 @@ There are also some less common statuses:
 
 Downloaded files are saved in the **browser's download directory**. The downloader will create subfolders to store files, for example:
 
-![](images/20250901_005628.png)
+![](../publicImages/20250901_005628.png)
 
 ?> The downloader cannot save files outside the browser's download directory due to browser restrictions. To save to a different location, change the browser's download directory.
 

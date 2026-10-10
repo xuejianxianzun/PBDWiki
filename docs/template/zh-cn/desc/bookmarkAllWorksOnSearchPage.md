@@ -1,0 +1,3 @@
+当你处于搜索标签的页面时可以看到这个按钮。例如这个页面：[バーチャルYouTuber](https://www.pixiv.net/tags/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%ABYouTuber/artworks?s_mode=s_tag)
+
+用户主页里也有这个按钮，它们的功能是相同的，所以你可以参考前面的说明。

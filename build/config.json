@@ -1,0 +1,41 @@
+{
+  "_说明": "PBDWiki 构造系统配置。路径与覆盖表可手动编辑；migrate-menus 会自动填充覆盖表。",
+  "pbdRepo": "C:/document/github/PixivBatchDownloader",
+  "languages": [
+    "zh-cn",
+    "en"
+  ],
+  "langIndex": {
+    "zh-cn": 0,
+    "en": 2
+  },
+  "prefixes": {
+    "zh-cn": {
+      "option": "设置-",
+      "button": "按钮-"
+    },
+    "en": {
+      "option": "Settings-",
+      "button": "Buttons-"
+    }
+  },
+  "newBadgeDays": 90,
+  "folderDisplayNames": {
+    "Buttons-Download-area": "Buttons-Download area",
+    "Buttons-Extra-features": "Buttons-Extra features",
+    "Buttons-Start-crawling": "Buttons-Start crawl"
+  },
+  "menuFileNameOverrides": {},
+  "menuIntroOverrides": {
+    "zh-cn": {
+      "按钮-下载区域": "下载器首页的“下载区域”里有一些按钮，主要分为两类。有些按钮一开始不会显示，只在有抓取结果之后才会显示。",
+      "按钮-开始抓取": "下载器首页的“开始抓取”区域里会显示一些按钮。有些按钮在大部分页面里都会出现，有些按钮则只在特定页面里出现。",
+      "按钮-附加功能": "在少数页面里，下载器首页的“附加功能”区域里有一些按钮，你可以按页面类型查看："
+    },
+    "en": {
+      "Buttons-Download-area": "The downloader's home page \"Download area\" contains several buttons, grouped into two main categories. Some buttons are hidden initially and only appear after crawl results are available.",
+      "Buttons-Extra-features": "On a few pages, the \"Additional features\" area on the downloader's home page contains some buttons; you can view them by page type:",
+      "Buttons-Start-crawling": "In the downloader's home page, the \"Start crawl\" area displays several buttons. Some buttons appear on most pages, while others only show up on specific pages."
+    }
+  }
+}

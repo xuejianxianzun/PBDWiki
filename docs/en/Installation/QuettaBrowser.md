@@ -6,31 +6,31 @@ The Quetta browser is a mobile browser based on the Chromium engine. You can ins
 
 Install the Quetta browser from Google Play:
 
-![](../images/20260901_171701.png)
+![](../../template/en/images/20260901_171701.png)
 
 After installation, open it. The home page has an "Extensions" feature:
 
-![](../images/20260901_171744.png)
+![](../../template/en/images/20260901_171744.png)
 
 Click it, then select `Install extension...`:
 
-![](../images/20260901_171804.png)
+![](../../template/en/images/20260901_171804.png)
 
 This opens the extension management page, where you can search for extensions:
 
-![](../images/20260901_171827.png)
+![](../../template/en/images/20260901_171827.png)
 
 Enter `pixiv` and search, then click the install button on the right side of `Powerful Pixiv Downloader`:
 
-![](../images/20260901_171841.png)
+![](../../template/en/images/20260901_171841.png)
 
 After the installation is complete, go back to the previous page, and you can see that the extension has been installed:
 
-![](../images/20260901_171909.png)
+![](../../template/en/images/20260901_171909.png)
 
 Then open a Pixiv tab and refresh it once. You should see the downloader's blue button on the right side of the web page:
 
-![](../images/20260901_171925.png)
+![](../../template/en/images/20260901_171925.png)
 
 Now you can use the downloader. Most of its features are the same as on PC, and you can batch download works on various pages.
 
@@ -41,7 +41,7 @@ Now you can use the downloader. Most of its features are the same as on PC, and 
 - Since the browser does not create folders, only the last segment of the downloader's naming rules takes effect. For example, the default naming rule is `pixiv/{user}-{user_id}/{id}-{title}`, but in practice only `{id}-{title}` takes effect. If you modify the naming rules, you need to make sure the last segment contains `{id}`, which is the unique identifier of each file on pixiv and can avoid works with different IDs producing the same file name.
 - On PC, when the downloader saves the same file again, it overwrites the old file. However, mobile browsers save files with the same name and add a sequence number, for example:
 
-![](../images/20250827_232639.png)
+![](../../template/publicImages/20250827_232639.png)
 
 - On the mobile web page, some enhancement features of the downloader are unavailable or affected, such as previewing works.
 - If your device is in landscape orientation (e.g., a tablet), you can try enabling desktop mode in the browser's menu to improve the downloader experience. This is because the downloader interface has a lot of content, which is inefficient and not a good experience in portrait mode.
@@ -56,9 +56,9 @@ If you start crawling all works from the first page, there is no impact. But if 
 
 Here is an example. A user currently has 31,544 bookmarks, which is 658 pages on PC, but 1753 pages on mobile:
 
-![](../images/20250929_231049.webp)
+![](../../template/publicImages/20250929_231049.webp)
 
-![](../images/20250929_231038.webp)
+![](../../template/publicImages/20250929_231038.webp)
 
 **Possible impacts:**
 

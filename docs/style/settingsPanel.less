@@ -1954,6 +1954,55 @@
   }
 }
 
+.secondary_hint {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+  max-width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 9px 12px;
+  border: 1px solid var(--settings-panel-tip-card-border);
+  border-radius: var(--settings-panel-control-radius);
+  background: var(--settings-panel-tip-card-bg);
+  color: var(--settings-panel-tip-card-text);
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 1.6;
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.option {
+  .secondary_hint {
+    margin-top: 4px;
+  }
+}
+
+.longTextButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--settings-panel-input-radius);
+
+  &::before {
+    content: 'ⓘ';
+    color: var(--settings-panel-section-icon-color);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--settings-panel-section-icon-bg);
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--settings-panel-section-icon-color);
+    outline-offset: 1px;
+  }
+}
 
 // 把设置项的标题加粗
 .option>a,
@@ -2039,5 +2088,13 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+// docsify 默认为 p.tip 的左侧添加了警告的红色图标，去掉
+.tip.namingTipArea {
+  border: none !important;
+  &::before {
+    content: none !important;
   }
 }

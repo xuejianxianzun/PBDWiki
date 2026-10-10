@@ -1,6 +1,6 @@
-## Start crawl
+## Start crawling
 
-<button id="startCrawling" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_默认下载多页" title="Start crawl, if there are multiple pages, the default will be downloaded."><span data-xztext="_开始抓取">Start crawl</span><span class="ripple"></span></button>
+<button id="startCrawling" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_默认下载多页" title="Start crawling. If there are multiple pages, all will be downloaded by default."><span data-xztext="_开始抓取">Start crawling</span><span class="ripple"></span></button>
 
 Starts crawling works based on the user-defined crawl conditions (filters).
 
@@ -24,7 +24,6 @@ This is because the downloader's crawling is usually divided into two stages:
 
 <button id="scheduleCrawling" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" data-xztitle="_定时抓取说明" title="Automatically start crawling and downloading at regular intervals."><span data-xztext="_定时抓取">Timed crawl</span><span class="ripple"></span></button>
 
-
 On some pages, new works may appear over time, such as:
 
 - User profile
@@ -43,7 +42,7 @@ To schedule crawling of new works by followed users, follow these steps:
 
 2. Set the number of pages to crawl each time:
 
-![](../images/20260610_005403.png)
+![](../../template/en/images/20260610_005403.png)
 
 This page count should consider the "interval time." For example, if you want to crawl every 30 minutes and the page's new works in 30 minutes do not exceed 1 pages, set it to `1`.
 
@@ -79,20 +78,18 @@ When using timed crawl, note the following:
 4. If the extension updates automatically, the page may not download files correctly (refresh the page to restore functionality). For long-term timed crawl, consider installing the extension offline to avoid interruptions from updates. See the [Offline Installation](/en/Installation/OfflineInstallation?id=offline-installation) page.
 5. Set a lower page count to avoid crawling too many duplicate works. For example, on a search page, you can crawl up to 1000 pages, but it's unnecessary to crawl all of them. Setting 10 pages or fewer is fine if new content within the interval doesn't exceed 10 pages.
 6. On search pages, crawled works are not displayed on the page (i.e., no preview of search results).
-7. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [Timed crawl Interval](/en/Settings-Crawl/Execution-strategy?id=the-interval-time-of-timed-crawl) setting.
+7. When clicking the `Timed crawl` button, the downloader prompts for the interval time, which syncs with the [The interval time of timed crawl](/en/Settings-Filter/Execution-strategy?id=the-interval-time-of-timed-crawl) setting.
 8. The downloader uses the interval set at the task's start. Changing the interval later does not affect the ongoing task. To apply a new interval, click `Cancel timed crawl`, then click `Timed crawl` to start a new task with the updated interval.
 
 ## Cancel timed crawl
 
 <button id="cancelScheduledCrawling" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="warning"><span data-xztext="_取消定时抓取">Cancel timed crawl</span><span class="ripple"></span></button>
 
-
 After starting timed crawl, the downloader displays a `Cancel timed crawl` button. To cancel timed crawl, click this button or close the page running the timed crawl task.
 
 ## Manually select
 
-<button id="manuallySelectWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand" title="Alt + S"><span data-xztext="_手动选择作品">Manually select</span><span class="ripple"></span></button>
-
+<button id="manuallySelectWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_手动选择作品">Manually select</span><span class="ripple"></span></button>
 
 Use this button to manually select any works on the page and crawl them.
 
@@ -100,11 +97,11 @@ Use this button to manually select any works on the page and crawl them.
 
 Clicking this button enters selection mode. A blue circle with crosshair guidelines appears under the mouse cursor, as shown below:
 
-![](../images/20250905_224727.png)
+![](../../template/publicImages/20250905_224727.png)
 
 You can then click the left mouse button on any work to select it. The downloader adds a checkmark to indicate selection, as shown below:
 
-![](../images/20260830_171519.png)
+![](../../template/publicImages/20260830_171519.png)
 
 You can later crawl the selected works.
 
@@ -154,7 +151,7 @@ For example, navigating from a user profile to a work page without refreshing re
 
 However, navigating to certain pages (e.g., rankings) or refreshing the page discards the current page content. In such cases, the downloader prompts the browser to display a confirmation dialog, as shown below:
 
-![](../images/20250909_225629.png)
+![](../../template/en/images/20250909_225629.png)
 
 If you choose to leave the page, the selected works are lost. If you cancel the navigation, the selected works are retained.
 
@@ -176,11 +173,11 @@ Use this button to exclude any works on the page; the downloader will not crawl 
 
 Clicking this button enters exclusion mode. A red circle with crosshair guidelines appears under the mouse cursor, as shown below:
 
-![](../images/20260830_162226.png)
+![](../../template/publicImages/20260830_162226.png)
 
 You can then click the left mouse button on any work to exclude it. The downloader adds an X mark to indicate that the work has been excluded, as shown below:
 
-![](../images/20260830_162237.png)
+![](../../template/publicImages/20260830_162237.png)
 
 Manual exclusion shares some similarities with manual selection, such as excluding works across multiple pages, not opening links when clicking works, and deselecting. However, it is more flexible in use.
 
@@ -200,7 +197,7 @@ Additionally, after you click the `Manually exclude` button, its label will chan
 
 ## Clear excluded works
 
-<button id="clearExcludedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger" style="display: flex;"><span data-xztext="_清空排除的作品">Clear excluded works</span><span class="ripple"></span></button>
+<button id="clearExcludedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清空排除的作品">Clear excluded works</span><span class="ripple"></span></button>
 
 After you enter manual exclusion mode, the downloader displays this button, which you can click to clear the excluded works.
 

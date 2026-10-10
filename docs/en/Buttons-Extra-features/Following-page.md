@@ -2,7 +2,6 @@
 
 <button id="exportFollowingListCSV" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出关注列表CSV">Export followed users list (CSV)</span><span class="ripple"></span></button>
 
-
 Clicking this button makes the downloader crawl user data from the current subpage (followed users, friends, or fans) and generate a CSV file, saved to the browser's download directory.
 
 You can export your own following list as a backup for future needs.
@@ -25,7 +24,7 @@ The CSV file contains the following data for each user:
 
 For example, my following page shows 4,743 users:
 
-![](../images/20251111_004046.png)
+![](../../template/en/images/20251111_004046.png)
 
 Some users have already deactivated, but Pixiv does not subtract them from the total count, which can be somewhat misleading. However, you might notice clues: usually, 24 users are displayed per page, but some pages may have only 23 or fewer users, which is because some users no longer exist.
 
@@ -34,7 +33,6 @@ The downloader is more likely to observe this situation when crawling data: the 
 ## Export followed users list (JSON)
 
 <button id="exportFollowingListJSON" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出关注列表JSON">Export followed users list (JSON)</span><span class="ripple"></span></button>
-
 
 This button functions similarly to the previous one but exports a JSON file.
 
@@ -85,8 +83,7 @@ The exported JSON file can be used for importing (batch following users), while 
 
 ## Follow users in batches (JSON)
 
-<button id="batchFollowUser" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_批量关注用户">Follow users in batches (JSON)</span><span class="ripple"></span></button>
-
+<button id="batchFollowUser" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_批量关注用户JSON">Follow users in batches (JSON)</span><span class="ripple"></span></button>
 
 ### Supported Data Formats
 
@@ -173,8 +170,6 @@ For safer importing of many users, split the task into batches, e.g., crawl 20 p
 
 <button id="findDeactivatedUsers" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_查找已注销的用户">Find deactivated users</span><span class="ripple"></span></button>
 
-
-
 You can find deactivated users in your following list.
 
 **How it works:**
@@ -183,7 +178,7 @@ You can find deactivated users in your following list.
 - The downloader retrieves data for these users one by one and checks if they have been deactivated. The downloader will display progress information in the top log.
 - After the check is complete, it displays the results. If there are deactivated users, the downloader will output their list, which might look like this:
 
-![](../images/20260303_004345.png)
+![](../../template/en/images/20260303_004345.png)
 
 **Note:**
 This feature cannot find users who deactivated before; it can only find users who deactivated after the downloader saved the historical following data.

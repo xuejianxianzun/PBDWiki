@@ -1,20 +1,24 @@
 ## Other tabs when you change settings
 
 <div class="option settingsPanel_optionCard new" data-no="105" data-pin-bound="true" style="display: flex;">
-  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-General/Manage-settings?flag=105" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-General/Manage-settings?flag=105" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_当你修改设置时其他标签页">Other tabs when you <span class="key">change</span> settings</span>
     <span class="mr4">:</span>
   </a>
   <input type="radio" name="settingsAcrossDifferentTabs" id="settingsAcrossDifferentTabs1" class="need_beautify radio" value="synchronizeChanges" checked="">
   <span class="beautify_radio" tabindex="0"></span>
-  <label for="settingsAcrossDifferentTabs1" data-xztext="_同步变化" class="active">Synchronize changes</label>
+  <label for="settingsAcrossDifferentTabs1" data-xztext="_同步变化" class="active">Sync changes</label>
   <input type="radio" name="settingsAcrossDifferentTabs" id="settingsAcrossDifferentTabs2" class="need_beautify radio" value="doNotSynchronizeChanges">
   <span class="beautify_radio" tabindex="0"></span>
   <label for="settingsAcrossDifferentTabs2">
     <span data-xztext="_保持不变">Keep unchanged</span>
     <span class="gray" data-xztext="_旧版行为">(Legacy behavior)</span>
   </label>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_当你修改设置时其他标签页" data-msg="_当你修改设置时其他标签页的说明" data-xztext="_帮助">Help</button>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
 </div>
 
 Users often have several Pixiv.net tabs open. This setting determines whether those tabs use the same settings or keep independent settings.
@@ -38,18 +42,17 @@ Because of these disadvantages, starting with version 19.3.0 (August 2026), the 
 ## Automatically export settings
 
 <div class="option settingsPanel_optionCard new" data-no="106" data-pin-bound="true" style="display: flex;">
-  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-General/Manage-settings?flag=106" target="_blank" class="settingNameStyle" data-bind-click="true">
+  <a href="/#/en/Settings-General/Manage-settings?flag=106" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_自动导出设置">Automatically <span class="key">export</span> settings</span>
   </a>
   <input type="checkbox" name="autoExportSettings" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_自动导出设置" data-msg="_自动导出设置的说明" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap flexBasis100" data-show="autoExportSettings" style="display: none;">
     <div class="optionLine">
       <input type="radio" name="autoExportSettingsStrategy" id="autoExportSettingsStrategyTimed" class="need_beautify radio" value="timed" checked="">
       <span class="beautify_radio" tabindex="0"></span>
       <label for="autoExportSettingsStrategyTimed" class="active">
-        <span data-xztext="_定时导出间隔">Export at an interval of:</span>
+        <span data-xztext="_定时导出间隔">Timed export, interval:</span>
         <input type="text" name="autoExportSettingsInterval" class="setinput_style blue" value="24">
         <span data-xztext="_小时">hours</span>
       </label>
@@ -60,6 +63,11 @@ Because of these disadvantages, starting with version 19.3.0 (August 2026), the 
       <label for="autoExportSettingsStrategyOnChange" data-xztext="_每当设置变化后立即导出">Export immediately whenever settings change</label>
     </div>
   </div>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
 </div>
 
 Enable this feature to automatically export (back up) your settings. Exported settings are saved in the `PPD Settings` folder within the browser's download directory.
@@ -77,15 +85,15 @@ You can choose between two export strategies:
     <span class="gray"> ? </span>
   </a>
   <div class="optionLine">
-    <button type="button" class="textButton fireEvent" data-event="exportSettings" id="exportSettings" data-xztext="_导出设置">Export settings</button>
-    <button type="button" class="textButton fireEvent" data-event="importSettings" id="importSettings" data-xztext="_导入设置">Import settings</button>
-    <button type="button" class="textButton fireEvent" data-event="resetSettings" id="resetSettings" data-xztext="_重置设置">Reset settings</button>
+    <button type="button" class="textButton fireEvent borderButton" data-event="exportSettings" id="exportSettings" data-xztext="_导出设置">Export settings</button>
+    <button type="button" class="textButton fireEvent borderButton" data-event="importSettings" id="importSettings" data-xztext="_导入设置">Import settings</button>
+    <button type="button" class="textButton fireEvent borderButton" data-event="resetSettings" id="resetSettings" data-xztext="_重置设置">Reset settings</button>
   </div>
   <div class="optionLine">
-    <button type="button" class="textButton fireEvent" data-event="resetFollowingData" id="resetFollowingData" data-xztext="_清除下载器保存的关注数据">Clear the following data saved by the Downloader</button>
+    <button type="button" class="textButton fireEvent borderButton" data-event="resetFollowingData" id="resetFollowingData" data-xztext="_清除下载器保存的关注数据">Clear the follow data saved by the Downloader</button>
   </div>
   <div class="optionLine">
-    <button type="button" class="textButton fireEvent" data-event="resetHelpTip" id="resetHelpTip" data-xztext="_重新显示帮助">Redisplay help</button>
+    <button type="button" class="textButton fireEvent borderButton" data-event="resetHelpTip" id="resetHelpTip" data-xztext="_重新显示帮助">Redisplay help</button>
   </div>
 </div>
 

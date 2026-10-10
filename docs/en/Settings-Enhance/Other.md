@@ -1,14 +1,12 @@
 ## Highlight following users
 
 <div class="option settingsPanel_optionCard" data-no="86" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Other?flag=86" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮关注的用户的说明" data-tip="The names of users you are following will have a yellow background, or be displayed in yellow. &lt;br&gt;This is convenient for you to confirm whether you follow a certain user." data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Other?flag=86" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_高亮关注的用户"><span class="key">Highlight</span> following users</span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="highlightFollowingUsers" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
-
 
 The names of users you are following will be highlighted, allowing you to quickly see whether you are following a user.
 
@@ -16,22 +14,22 @@ The visual effect varies depending on the color mode of the Pixiv page.
 
 In default (light) mode, usernames will have a yellow background:
 
-![](../images/20250903_020510.png)
+![](../../template/publicImages/20250903_020510.png)
 
 In night mode, usernames will be displayed in yellow:
 
-![](../images/20250903_020520.png)
+![](../../template/publicImages/20250903_020520.png)
 
 ## Display a border on downloaded works
 
-<div class="option settingsPanel_optionCard new" data-no="87" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="87" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Other?flag=87" target="_blank" class="settingNameStyle" data-xztext="_在下载过的作品上显示边框" data-bind-click="true">Display a <span class="key">border</span> on downloaded works</a>
   <input type="checkbox" name="showBorderOnDownloadedWorks" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="showBorderOnDownloadedWorks" style="display: none;">
     <div class="optionLine">
       <span data-xztext="_宽度" class="mr4">Width</span>
-      <input type="text" name="borderWidth" class="setinput_style blue w30" value="3">
+      <input type="text" name="borderWidth" class="setinput_style blue w40" value="3">
       px
     </div>
     <div class="optionLine">
@@ -39,11 +37,7 @@ In night mode, usernames will be displayed in yellow:
       <input type="text" name="borderColor" class="setinput_style blue w80" id="borderColor" value="#ff4060">
     </div>
   </div>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
+</div>
 
 This feature depends on the download records saved by the downloader itself.
 
@@ -51,29 +45,27 @@ If you want to see at a glance whether a work has already been downloaded, you c
 
 The downloader will display a border on downloaded works. The default border is red, as shown below:
 
-![](../images/20260426_231619.png)
+![](../../template/publicImages/20260426_231619.png)
 
 The left one has not been downloaded, and the right one has.
 
 This setting has 2 sub-options: you can set the border width and color. Below is the effect with a border width of `4` px and a color of `#91e2df`:
 
-![](../images/20260426_231819.png)
+![](../../template/publicImages/20260426_231819.png)
 
 Known issue:
 
 To prevent the border from being covered or clipped by other elements, the downloader displays it inside the thumbnail area. Because of that, it covers the edge area. This usually does not matter for image works, but on some pages for novel works it may cover the text at the top:
 
-![](../images/20260426_232332.png)
+![](../../template/publicImages/20260426_232332.png)
 
 ## Downloader's bookmark feature (✩)
 
 <div class="option settingsPanel_optionCard" data-no="88" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Other?flag=88" target="_blank" class="has_tip settingNameStyle" data-xztip="_收藏设置的说明" data-tip="Sometimes you'll see a bookmark button (✩) added by the downloader, which you can click to bookmark the work. &lt;br&gt;
-You can choose whether to include tags for the work, and whether to make it public.&lt;br&gt;
-This setting is also used when you use the Downloader to bookmark works in batches." data-bind-click="true">
-    <span data-xztext="_收藏设置">Downloader's <span class="key">bookmark</span> feature (✩)</span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-Enhance/Other?flag=88" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_下载器的收藏功能">Downloader's <span class="key">bookmark</span> feature (✩)</span>
   </a>
+
   <div class="optionLine">
     <span data-xztext="_是否添加标签" class="mr4">Whether to add tags</span>
     <input type="radio" name="widthTag" id="widthTag1" class="need_beautify radio" value="yes" checked="">
@@ -102,15 +94,15 @@ You can use this setting to control the downloader's behavior when bookmarking w
 
 1. Quick bookmark button (☆) on work pages:
 
-![](../images/20250910_235924.png)
+![](../../template/en/images/20250910_235924.png)
 
 2. Quick bookmark button (☆) when previewing search results on search pages:
 
-![](../images/20250903_234654.png)
+![](../../template/publicImages/20250903_234654.png)
 
 3. Bookmarking a work with the `B` shortcut while previewing.
 4. Bookmarking a work by clicking the (☆) button in the image viewer.
-5. [Bookmark after download](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) feature.
+5. [Bookmark works after downloading](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) feature.
 6. "Bookmark all works on this page" feature in the downloader's "More" tab on user homepages and search pages.
 
 **Features not affected by this setting:**
@@ -130,14 +122,10 @@ The default is to add tags and bookmark publicly.
 ## Copy work info
 
 <div class="option settingsPanel_optionCard" data-no="89" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Other?flag=89" target="_blank" class="has_tip settingNameStyle" data-xztip="_显示复制按钮的提示" data-tip="The downloader will display a copy button on the work thumbnail and within the work page. Clicking it allows you to copy the work's image and some data.
-&lt;br&gt;
-You can customize the data and format to be copied.
-&lt;br&gt;
-On the work page, and when previewing a work, you can use the shortcut key &lt;span class=&quot;blue&quot;&gt;Alt + C&lt;/span&gt; to copy." data-bind-click="true">
+  <a href="/#/en/Settings-Enhance/Other?flag=89" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_复制作品信息带高亮关键字"><span class="key">Copy</span> work info</span>
-    <span class="gray"> ? </span>
   </a>
+
   <div class="optionLine">
     <span data-xztext="_复制内容" class="mr4">Copy content</span>
     <input type="checkbox" name="copyFormatImage" id="setCopyFormatImage" class="need_beautify checkbox_common">
@@ -149,21 +137,20 @@ On the work page, and when previewing a work, you can use the shortcut key &lt;s
     <input type="checkbox" name="copyFormatHtml" id="setCopyFormatHtml" class="need_beautify checkbox_common" checked="">
     <span class="beautify_checkbox" tabindex="0"></span>
     <label for="setCopyFormatHtml" class="active">text/html</label>
-    <button type="button" class="gray textButton showMsgBtn" data-title="_复制内容" data-msg="_对复制的内容的说明" data-xztext="_帮助">Help</button>
   </div>
   <div class="optionLine nowrap">
-    <span class="mr4" data-xztext="_图片尺寸2">Image size</span>
+    <span class="mr4" data-xztext="_图片尺寸">Image size</span>
     <input type="radio" name="copyImageSize" id="copyImageSize1" class="need_beautify radio" value="original">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="copyImageSize1" data-xztext="_原图" class="active">Original</label>
+    <label for="copyImageSize1" data-xztext="_原图">Original</label>
     <input type="radio" name="copyImageSize" id="copyImageSize2" class="need_beautify radio" value="regular" checked="">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="copyImageSize2" data-xztext="_普通">Regular</label>
+    <label for="copyImageSize2" data-xztext="_普通" class="active">Regular</label>
   </div>
   <div class="optionLine nowrap">
     <span data-xztext="_文本格式" class="mr4">Text format</span>
     <button type="button" class="gray textButton toggleArea" data-toggle-target="#copyWorkInfoFormatTip" data-for-no="89" data-xztext="_提示">Tip</button>
-    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}">id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}</textarea>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}"></textarea>
   </div>
   <p class="tip namingTipArea" id="copyWorkInfoFormatTip">
     <span data-xztext="_复制内容的格式的提示">You can set the format of the text content, which will affect the content copied in <span class="blue">text/plain</span> and <span class="blue">text/html</span> formats.
@@ -181,10 +168,9 @@ Additionally, you can use these tags:</span>
   </p>
 </div>
 
-
 The downloader will display a copy button on the work thumbnail and within the work page. Clicking it allows you to copy the work's image and some data. You can paste it into other software to save or share with others. For example:
 
-![](../images/20251012_033111.webp)
+![](../../template/publicImages/20251012_033111.webp)
 
 ### Usable Scenarios
 
@@ -196,7 +182,7 @@ Detailed explanations follow:
 
 #### Copy Button on Thumbnails
 
-![](../images/20251022_025758.webp)
+![](../../template/publicImages/20251022_025758.webp)
 
 Click the copy button to copy.
 
@@ -204,7 +190,7 @@ At this point, the downloader will only copy the first image of the work.
 
 #### Copy Button Below the Image in the Work Page
 
-![](../images/20251022_025855.png)
+![](../../template/en/images/20251022_025855.png)
 
 Click the copy button to copy.
 
@@ -214,7 +200,7 @@ At this point, the downloader will only copy the first image of the work.
 
 #### When Previewing Work Details
 
-![](../images/20251022_030440.png)
+![](../../template/publicImages/20251022_030440.png)
 
 Click the copy button to copy.
 
@@ -226,7 +212,7 @@ In the following usage scenarios, the downloader will copy the currently viewed 
 
 #### Copy Button on Thumbnail List in the Work Page
 
-![](../images/20251022_025834.webp)
+![](../../template/publicImages/20251022_025834.webp)
 
 The downloader adds a thumbnail list on multi-image work pages. Click the copy button to copy.
 
@@ -242,7 +228,7 @@ Press the shortcut `Alt` + `C` to copy the currently viewed image.
 
 #### In the Image Viewer
 
-![](../images/20251022_030735.png)
+![](../../template/publicImages/20251022_030735.png)
 
 Click the copy button, or use the shortcut `Alt` + `C` to copy the currently viewed image.
 
@@ -312,13 +298,13 @@ Some web applications may have targeted optimizations, for example, in Discord y
 
 In Gmail, you can paste both image and text simultaneously, i.e., `text/html`, for example:
 
-![](../images/20251012_032638.webp)
+![](../../template/publicImages/20251012_032638.webp)
 
 #### Microsoft Word
 
 Word prioritizes `text/html` format content, then `image/png`, and finally `text/plain`. For example:
 
-![](../images/20251009_172842.webp)
+![](../../template/publicImages/20251009_172842.webp)
 
 #### Telegram
 
@@ -328,7 +314,7 @@ Other format priorities are: `image/png`, `text/plain`.
 
 If you want to paste an image in Telegram, select the `image/png` format to paste the image:
 
-![](../images/20251012_033232.png)
+![](../../template/publicImages/20251012_033232.png)
 
 #### QQ
 
@@ -336,22 +322,20 @@ QQ's priority is: `image/png`, `text/html`, `text/plain`.
 
 If you want to paste both image and text in QQ, select `text/html` and deselect `image/png`; otherwise, only the image will be pasted.
 
-![](../images/20251012_033111.webp)
+![](../../template/publicImages/20251012_033111.webp)
 
 #### WeChat
 
 WeChat has the same priority as QQ. You can paste both image and text simultaneously, but WeChat splits them during sending. For example:
 
-![](../images/20251012_033032.png)
+![](../../template/publicImages/20251012_033032.png)
 
 #### Android Applications
 
 Some Android applications can paste `text/html` content, but the image may not display:
 
-![](../images/20251022_033641.png)
+![](../../template/publicImages/20251022_033641.png)
 
 If you want to send an image, select the `image/png` format and deselect other formats. This way, the downloader only copies the image, which can be pasted in some applications.
 
 Some Android applications can paste images copied by the downloader, such as Telegram and WeChat. But in some applications, images cannot be pasted, such as QQ.
-
-

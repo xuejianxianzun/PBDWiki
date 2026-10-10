@@ -1,13 +1,10 @@
-## Save the metadata of the work
+## Save the metadata of the work to a separate file
 
 <div class="option settingsPanel_optionCard" data-no="73" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Metadata?flag=73" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品的元数据说明" data-tip="The downloader can generate a file with the same name (but different extension) for each work to save its metadata.&lt;br&gt;
-You can choose which types of works to generate metadata files for, and you can choose TXT format or (and) JSON format.&lt;br&gt;
-TXT format is easy to read but only contains relatively common data.&lt;br&gt;
-JSON format is the downloader's internal data and saves more information." data-bind-click="true">
-    <span data-xztext="_保存作品的元数据">Save the <span class="key">metadata</span> of the work</span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-Download/Metadata?flag=73" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_保存作品的元数据">Save the <span class="key">metadata</span> of the work to a separate file</span>
   </a>
+
   <div class="optionLine">
     <span class="mb4" data-xztext="_作品类型带冒号">Work type: </span>
     <input type="checkbox" name="saveMetaType0" id="setSaveMetaType0" class="need_beautify checkbox_common">
@@ -30,7 +27,7 @@ JSON format is the downloader's internal data and saves more information." data-
     <label for="saveMetaFormatTXT" class="active"> TXT </label>
     <input type="checkbox" name="saveMetaFormatJSON" id="saveMetaFormatJSON" class="need_beautify checkbox_common" checked="">
     <span class="beautify_checkbox" tabindex="0"></span>
-    <label for="saveMetaFormatJSON"> JSON </label>
+    <label for="saveMetaFormatJSON" class="active"> JSON </label>
   </div>
 </div>
 
@@ -38,7 +35,7 @@ The downloader can generate a file for each work during download to save some of
 
 Example:
 
-![](../images/20250902_204653.png)
+![](../../template/publicImages/20250902_204653.png)
 
 ?> The filename of the metadata includes a `meta` marker at the end.
 
@@ -183,19 +180,33 @@ An example of the metadata content saved in the JSON file is as follows:
 }
 ```
 
-## Save work description
+## Save work description to a TXT file
 
 <div class="option settingsPanel_optionCard" data-no="74" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Metadata?flag=74" target="_blank" class="has_tip settingNameStyle" data-xztip="_保存作品简介的说明" data-tip="Create a TXT file to save the work description" data-bind-click="true">
-    <span data-xztext="_保存作品的简介">Save work <span class="key">description</span></span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-Download/Metadata?flag=74" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_保存作品的简介">Save work <span class="key">description</span> to a TXT file</span>
   </a>
   <input type="checkbox" name="saveWorkDescription" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
+
   <div class="subOptionWrap flexBasis100" data-show="saveWorkDescription" style="display: none;">
     <div class="optionLine">
-      <label for="saveEachDescription" data-xztext="_每个作品分别保存" class="has_tip active" data-xztip="_简介的Links标记" data-tip="Save each work's description in a separate TXT file.&lt;br&gt;If the work description contains hyperlinks, the downloader will add a 'links' tag at the end of the file name">Save each work separately</label>
-      <span class="gray"> ? &nbsp;</span>
+      <span class="mb4" data-xztext="_作品类型带冒号">Work type: </span>
+      <input type="checkbox" name="saveDescriptionType0" id="setSaveDescriptionType0" class="need_beautify checkbox_common" checked="">
+      <span class="beautify_checkbox" tabindex="0"></span>
+      <label for="setSaveDescriptionType0" data-xztext="_插画" class="active">Illustrations</label>
+      <input type="checkbox" name="saveDescriptionType1" id="setSaveDescriptionType1" class="need_beautify checkbox_common" checked="">
+      <span class="beautify_checkbox" tabindex="0"></span>
+      <label for="setSaveDescriptionType1" data-xztext="_漫画" class="active">Manga</label>
+      <input type="checkbox" name="saveDescriptionType2" id="setSaveDescriptionType2" class="need_beautify checkbox_common" checked="">
+      <span class="beautify_checkbox" tabindex="0"></span>
+      <label for="setSaveDescriptionType2" data-xztext="_动图" class="active">Ugoira</label>
+      <input type="checkbox" name="saveDescriptionType3" id="setSaveDescriptionType3" class="need_beautify checkbox_common">
+      <span class="beautify_checkbox" tabindex="0"></span>
+      <label for="setSaveDescriptionType3" data-xztext="_小说">Novels</label>
+    </div>
+    <div class="optionLine">
+      <label for="saveEachDescription" data-xztext="_每个作品分别保存">Save each work separately</label>
       <input type="checkbox" name="saveEachDescription" id="saveEachDescription" class="need_beautify checkbox_switch">
       <span class="beautify_switch" tabindex="0"></span>
     </div>
@@ -210,11 +221,11 @@ An example of the metadata content saved in the JSON file is as follows:
 If you enable this feature, the downloader will create a TXT file for each work to save its description.
 The description refers to the text below the work's title. For example:
 
-![](../images/20250910_233024.png)
+![](../../template/en/images/20250910_233024.png)
 
 The TXT description file saved by the downloader:
 
-![](../images/20250910_233123.png)
+![](../../template/en/images/20250910_233123.png)
 
 The filename of the TXT description file may include two markers:
 
@@ -253,4 +264,3 @@ For example:
 ```
 description summary-user saihate-No_Logic, virtual YouTuber ／ 【動画絵】 No Logic ／ September 2nd, 2025 - pixiv-9／10／2025, 11：31：11 PM.txt
 ```
-

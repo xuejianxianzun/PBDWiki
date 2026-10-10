@@ -16,7 +16,7 @@ The following actions may pose a risk:
 
 If you frequently download large amounts of files, such as thousands or tens of thousands of works per day, Pixiv may warn you. When the first warning is triggered, you will receive an in-site message, which may look like this:
 
-![Pixiv warning in-site message](images/20250909_183204.webp)
+![Pixiv warning in-site message](../template/en/images/20250909_183204.webp)
 
 During large downloads, the downloader checks every 100 files saved whether you have received such an in-site message. If you have received such an in-site message within the last 1 hour, the downloader will pause the download to avoid making the situation worse.
 
@@ -41,7 +41,7 @@ When you need to crawl and download more than a few thousand works, there are so
 ### Slow Down
 
 The downloader has settings to reduce the likelihood of warnings:
-- By default, the downloader [slows down crawling](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl). When crawling many works, it sends requests at intervals.
+- By default, the downloader [Slow down crawl](/en/Settings-Filter/Execution-strategy?id=slow-down-crawl). When crawling many works, it sends requests at intervals.
 - When downloading many files, you can set the [Download interval](/en/Settings-Download/Download-behavior?id=download-interval) to reduce download frequency.
 
 The above two settings both allow you to customize the interval. If you only crawl and download a few hundred works per day, the default interval is usually safe.
@@ -72,7 +72,7 @@ However, I recommend using a single browser because it is more convenient.
 
 Click the profile icon in the top-right corner of the browser to create a new profile (local browser user). For example, in Chrome, you can add a new profile from here:
 
-![](images/20260427_023507.png)
+![](../template/en/images/20260427_023507.png)
 
 When you use the newly added browser profile, Chrome opens a separate browser window where you can log in to the secondary account and install this extension for use.
 
@@ -80,7 +80,7 @@ When you use the newly added browser profile, Chrome opens a separate browser wi
 
 If you want to download the main account's followed users or bookmarks, first use the main account to navigate to the corresponding page, then copy the URL from the address bar, for example:
 
-![](images/20250910_010357.png)
+![](../template/en/images/20250910_010357.png)
 
 In the secondary account's browser, paste the URL and press Enter to access the main account's corresponding page for crawling and downloading.
 
@@ -125,19 +125,19 @@ Open a Pixiv page, then type the command `ppdtask` directly on the keyboard.
 
 The downloader will then display a command list, as shown below:
 
-![Command list](images/20260913_004914.png)
+![Command list](../template/en/images/20260913_004914.png)
 
 Enter `12` in the input field at the bottom and click the Confirm button. The downloader will export a JSON file named `Powerful Pixiv Downloader browser.storage.local.json`. This file contains the settings and following list data saved internally by the downloader.
 
 Open this JSON file with a code editor. The `following` array contains your following list, as shown below:
 
-![Cached following list](images/20260913_005458.png)
+![Cached following list](../template/publicImages/20260913_005458.png)
 
 Note: If you have logged in to multiple Pixiv accounts in this browser, the downloader may have saved following lists for multiple accounts. You can distinguish them by `user` (your user ID) and `total` (the total number of followed users).
 
 Both the `followedUsersInfo` and `following` arrays can be used to restore your following list. You can choose either one. Using `following` as an example, select its contents (from `[` to `]`, excluding the final comma `,`):
 
-![Cached following list data](images/20260913_005955.png)
+![Cached following list data](../template/publicImages/20260913_005955.png)
 
 Then copy the selected content, create a new file, paste it, and save it as a file with the `.json` extension. You may choose any file name. This is your following list.
 

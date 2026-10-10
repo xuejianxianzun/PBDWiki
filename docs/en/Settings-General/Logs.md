@@ -13,14 +13,13 @@
   <label for="logVisibleDefault2" data-xztext="_隐藏">Hide</label>
 </div>
 
-
 When the downloader outputs logs at the top of the page, you can control whether the log area is shown or hidden by default. The default value is `Show`.
 
 What is the difference between the two options?
 
 If you frequently need to view logs, choosing `Show` will be more convenient. However, this option may affect the browsing experience in certain cases: if the page has not been scrolled yet, displaying the log area will cause the page content to move downward. Illustration:
 
-![](../images/20260610_003207.webp)
+![](../../template/publicImages/20260610_003207.webp)
 
 If the page has already been scrolled down some distance, there will be no such effect (the page content will not move downward).
 
@@ -28,10 +27,10 @@ If you do not want the log area to disturb you, you can choose `Hide`, which wil
 
 PS: No matter which option you choose, when you want to view the logs, you can always press the shortcut key `L` to display the log area.
 
-## Export log
+## Automatic log export
 
 <div class="option settingsPanel_optionCard" data-no="102" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-General/Logs?flag=102" target="_blank" class="settingNameStyle" data-xztext="_导出日志" data-bind-click="true">Export <span class="key">log</span></a>
+  <a href="/#/en/Settings-General/Logs?flag=102" target="_blank" class="settingNameStyle" data-xztext="_自动导出日志" data-bind-click="true">Automatic <span class="key">log export</span></a>
   <input type="checkbox" name="exportLog" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="exportLog" style="display: none;">
@@ -48,14 +47,14 @@ PS: No matter which option you choose, when you want to view the logs, you can a
       <span class="settingNameStyle" data-xztext="_日志类型">Log type</span>
       <input type="checkbox" name="exportLogNormal" id="exportLogNormal" class="need_beautify checkbox_common" checked="">
       <span class="beautify_checkbox" tabindex="0"></span>
-      <label for="exportLogNormal" data-xztext="_正常">Normal</label>
+      <label for="exportLogNormal" data-xztext="_正常" class="active">Normal</label>
       <input type="checkbox" name="exportLogError" id="exportLogError" class="need_beautify checkbox_common" checked="">
       <span class="beautify_checkbox" tabindex="0"></span>
       <label for="exportLogError" data-xztext="_错误" class="active">Error</label>
     </div>
     <div class="optionLine">
       <span data-xztext="_排除关键字">Exclude keywords</span>&nbsp;
-      <input type="text" name="exportLogExclude" class="setinput_style blue setinput_tag" value="404,429,500">
+      <input type="text" name="exportLogExclude" class="setinput_style blue setinput_tag">
     </div>
   </div>
 </div>

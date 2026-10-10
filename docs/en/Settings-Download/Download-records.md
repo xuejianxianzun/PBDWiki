@@ -1,14 +1,14 @@
 ## Manage download records
 
-<div class="option settingsPanel_optionCard new" data-no="62" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="62" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Download-records?flag=62" target="_blank" class="settingNameStyle" data-xztext="_管理下载记录" data-bind-click="true">Manage download <span class="key">records</span></a>
-  <button type="button" class="textButton gray showMsgBtn" data-title="_管理下载记录" data-msg="_管理下载记录的提示" data-xztext="_帮助">Help</button>
   <div class="optionLine">
-    <button type="button" class="textButton fireEvent" id="exportDownloadRecord" data-event="exportDownloadRecord" data-xztext="_导出">Export</button>
-    <button type="button" class="textButton fireEvent" id="importDownloadRecord" data-event="importDownloadRecord" data-xztext="_导入">Import</button>
-    <button type="button" class="textButton fireEvent" id="importDownloadRecordTXT" data-event="importDownloadRecordTXT" data-xztext="_导入txt">Import (TXT)</button>
-    <button type="button" class="textButton fireEvent" id="clearDownloadRecord" data-event="clearDownloadRecord" data-xztext="_清除">Clear</button>
-  </div></div>
+    <button type="button" class="textButton fireEvent borderButton" id="exportDownloadRecord" data-event="exportDownloadRecord" data-xztext="_导出">Export</button>
+    <button type="button" class="textButton fireEvent borderButton" id="importDownloadRecord" data-event="importDownloadRecord" data-xztext="_导入">Import</button>
+    <button type="button" class="textButton fireEvent borderButton" id="importDownloadRecordTXT" data-event="importDownloadRecordTXT" data-xztext="_导入txt">Import (TXT)</button>
+    <button type="button" class="textButton fireEvent borderButton" id="clearDownloadRecord" data-event="clearDownloadRecord" data-xztext="_清除">Clear</button>
+  </div>
+</div>
 
 The download records here refer to the downloader's own download records, not the browser's download history.
 
@@ -98,12 +98,11 @@ If this happens, you can clear the download records or disable the "Don't downlo
     <span data-xztext="_策略">Strategy:</span>
     <input type="radio" name="dupliStrategy" id="dupliStrategy2" class="need_beautify radio" value="loose">
     <span class="beautify_radio" tabindex="0"></span>
-    <label class="has_tip active" for="dupliStrategy2" data-xztip="_宽松模式说明" data-xztext="_宽松" data-tip="Judgment conditions: id, upload date of the work">Loose</label>
+    <label for="dupliStrategy2" class="has_tip" data-xztip="_宽松模式说明" data-xztext="_宽松" data-tip="Judgment conditions: id, upload date of the work">Loose</label>
     <input type="radio" name="dupliStrategy" id="dupliStrategy1" class="need_beautify radio" value="strict" checked="">
     <span class="beautify_radio" tabindex="0"></span>
-    <label class="has_tip" for="dupliStrategy1" data-xztip="_严格模式说明" data-xztext="_严格" data-tip="Judgment conditions: id, upload date, file name of the work">Strict</label>
+    <label for="dupliStrategy1" class="has_tip active" data-xztip="_严格模式说明" data-xztext="_严格" data-tip="Judgment conditions: id, upload date, file name of the work">Strict</label>
   </div>
-  <button type="button" class="textButton gray showMsgBtn" data-title="_不下载重复文件" data-msg="_不下载重复文件的提示" data-xztext="_帮助">Help</button>
 </div>
 
 This feature depends on the download records saved by the downloader itself.
@@ -114,7 +113,7 @@ When the downloader skips duplicate files, it displays a list of file IDs in the
 
 <span class="log" style="color: inherit;"><span style="color:#d27e00">因为不下载重复文件，跳过了 1 个文件 : </span><br><a href="https://www.pixiv.net/n/25755517" target="_blank">25755517</a><br></span>
 
-?> This feature takes effect during the download stage. If you want to skip already downloaded works during crawling, enable the crawl setting [Do not crawl already downloaded works](/en/Settings-Crawl/Execution-strategy?id=do-not-crawl-already-downloaded-works).
+?> This feature takes effect during the download stage. If you want to skip already downloaded works during crawling, enable the crawl setting [Do not crawl already downloaded works](/en/Settings-Filter/Execution-strategy?id=do-not-crawl-already-downloaded-works).
 
 ### Loose strategy
 
@@ -137,4 +136,3 @@ If a file is skipped, some related tasks will also be skipped, for example:
 - Downloading embedded images in novels
 
 However, the "Bookmark works after downloading" feature is not affected.
-

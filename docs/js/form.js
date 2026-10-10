@@ -18,6 +18,7 @@ var Form = /** @class */ (function () {
                     _this.addTipEl();
                     _this.bindTipEvents();
                     _this.bindClickOptionCardToToggleSwitch();
+                    _this.bindToggleAreaEvents();
                 });
             },
         ]);
@@ -39,7 +40,7 @@ var Form = /** @class */ (function () {
                     input: input,
                     span: input.nextElementSibling,
                     label: document.querySelector("label[for=\"".concat(input.id, "\"]")),
-                    subOption: subOption
+                    subOption: subOption,
                 });
             });
         }
@@ -121,7 +122,7 @@ var Form = /** @class */ (function () {
                         _this.showTip(text, {
                             type: ev === 'mouseenter' ? 1 : 0,
                             x: e.clientX,
-                            y: e.clientY
+                            y: e.clientY,
                         });
                     });
                 };
@@ -175,6 +176,28 @@ var Form = /** @class */ (function () {
                         span.click();
                     }
                 }
+            });
+        });
+    };
+    /** 点击 .toggleArea 按钮时，切换对应的提示区域的显示（移植自 PPD 的 FormHelpManager.toggleHelpArea） */
+    Form.prototype.bindToggleAreaEvents = function () {
+        var btns = document.querySelectorAll('.toggleArea');
+        btns.forEach(function (btn) {
+            if (btn.dataset.toggleAreaBound) {
+                return;
+            }
+            btn.dataset.toggleAreaBound = 'true';
+            btn.addEventListener('click', function () {
+                var targetSelector = btn.dataset.toggleTarget;
+                if (!targetSelector) {
+                    return;
+                }
+                var tipEl = document.querySelector(targetSelector);
+                if (!tipEl) {
+                    return;
+                }
+                // 与 PPD 的 Utils.toggleEl(el, 'block') 行为一致
+                tipEl.style.display = tipEl.style.display === 'block' ? 'none' : 'block';
             });
         });
     };

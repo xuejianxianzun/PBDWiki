@@ -6,15 +6,15 @@
 
 Open the [GitHub releases page](https://github.com/xuejianxianzun/PixivBatchDownloader/releases ':target=_blank') for this program, where you can see the release versions, for example:
 
-![](../images/20250829_000638.png)
+![](../../publicImages/20250829_000638.png)
 
 The topmost entry is the latest version. Download the `powerfulpixivdownloader.zip` file from the Assets section:
 
-![](../images/20250829_000749.png)
+![](../../publicImages/20250829_000749.png)
 
 **Note:** Do not download the "Source code" archive or the entire project source code directly from the main page of the repository.
 
-![](../images/20250829_000939.png)
+![](../../publicImages/20250829_000939.png)
 
 The source code is not a browser extension and cannot be installed directly. Only the `dist` directory contains the extension, but loading the `dist` directory is less convenient than downloading `powerfulpixivdownloader.zip`.
 

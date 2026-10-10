@@ -23,7 +23,7 @@ You can choose the downloader's color theme.
 
 Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar and select "Dark mode" from the menu, as shown:
 
-![](../images/20250909_221310.png)
+![](../../template/en/images/20250909_221310.png)
 
 ## Background image
 
@@ -36,17 +36,17 @@ Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar a
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="bgDisplay" style="display: none;">
     <div class="optionLine">
-      <button type="button" class="textButton fireEvent" data-event="selectBG" id="selectBG" data-xztext="_选择文件">Select a file</button>
-      <button type="button" class="textButton fireEvent" data-event="clearBG" id="clearBG" data-xztext="_清除">Clear</button>
+      <button type="button" class="textButton fireEvent borderButton" data-event="selectBG" id="selectBG" data-xztext="_选择文件">Select a file</button>
+      <button type="button" class="textButton fireEvent borderButton" data-event="clearBG" id="clearBG" data-xztext="_清除">Clear</button>
     </div>
     <div class="optionLine">
       <span data-xztext="_对齐方式">Alignment</span>&nbsp;
       <input type="radio" name="bgPositionY" id="bgPosition1" class="need_beautify radio" value="center" checked="">
       <span class="beautify_radio" tabindex="0"></span>
-      <label for="bgPosition1" data-xztext="_居中">center</label>
+      <label for="bgPosition1" data-xztext="_居中" class="active">center</label>
       <input type="radio" name="bgPositionY" id="bgPosition2" class="need_beautify radio" value="top">
       <span class="beautify_radio" tabindex="0"></span>
-      <label for="bgPosition2" data-xztext="_顶部" class="active">top</label>
+      <label for="bgPosition2" data-xztext="_顶部">top</label>
     </div>
     <div class="optionLine">
       <span data-xztext="_不透明度" class="mr4">Opacity</span>
@@ -54,11 +54,12 @@ Pixiv's pages default to light mode. To use dark mode, click your Pixiv avatar a
     </div>
   </div>
 </div>
+
 You can set a favorite image as the downloader's background image and adjust its transparency and alignment.
 
 The effect is shown below:
 
-![](../images/ui-en-background.webp)
+![](../../template/en/images/ui-en-background.webp)
 
 ?> The downloader does not include built-in background images, so you need to select one yourself.
 
@@ -89,17 +90,14 @@ You can use this slider to adjust the background image's opacity. The default is
 
 Increasing opacity makes the image closer to its original appearance; decreasing it darkens the image.
 
-## Highlight keywords
+## Highlight keywords in setting names
 
 <div class="option settingsPanel_optionCard" data-no="100" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-General/Appearance?flag=100" target="_blank" class="has_tip settingNameStyle" data-xztip="_高亮显示关键字的说明" data-tip="Highlight the keywords in each setting name so that you can quickly find the settings you need." data-bind-click="true">
-    <span data-xztext="_高亮显示关键字"><span class="key">Highlight</span> keywords</span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-General/Appearance?flag=100" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_高亮显示设置名称里的关键字"><span class="key">Highlight</span> keywords in setting names</span>
   </a>
-  <input type="checkbox" name="boldKeywords" class="need_beautify checkbox_switch" checked>
+  <input type="checkbox" name="boldKeywords" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
 Keywords in each setting are highlighted in blue and bold to help users find specific settings more quickly.
-
-

@@ -20,6 +20,11 @@
 
 --------
 
-数据源是如何生成的：
+这两个数据源（JSON 文件）是如何生成的：
 
-打开 pixiv.net 的页面，按下 `ppdtask` 触发下载器的命令面板，输入 `13` 并回车。下载器会根据内部的配置数据生成对应的数据源，并导出为这两个文件。
+自动生成：
+从 Powerful Pixiv Downloader 的 `/src/ts/setting/Wiki.ts` 里，使用 `outputDataSource()` 方法的逻辑自动生成目标文件。
+本项目的 `build/config.json` 里的 `pbdRepo` 属性是 Powerful Pixiv Downloader 在本机上的本地仓库路径；如果该路径不存在，可以尝试从 Powerful Pixiv Downloader 的 Github 仓库里读取相关文件。
+
+手动生成：
+打开 pixiv.net 的页面，按下 `ppdtask` 打开 Powerful Pixiv Downloader 的命令面板，输入 `13` 并回车。下载器会根据内部的配置数据生成对应的数据源，并导出为这两个文件。

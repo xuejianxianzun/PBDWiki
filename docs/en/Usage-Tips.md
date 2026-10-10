@@ -12,7 +12,7 @@ Using naming tags effectively can help you organize and sort files. Below are so
 - Place the `{bmk}` tag at the start of the file name to sort downloaded files by bookmark count.
 - When downloading your bookmarks, use `{bmk_id}` at the start of the file name to sort files in the order you bookmarked them.
 
-See detailed explanation: [Naming rule for image works](/en/Settings-Naming/Folder-and-file-names?id=naming-rules-for-image-works).
+See detailed explanation: [Naming rule for image works](/en/Settings-Naming/Folder-and-file-names?id=naming-rule-for-image-works).
 
 ## Timed Crawl
 
@@ -27,7 +27,7 @@ If you previously downloaded works from a user or page and want to download new 
 ### Recommended Settings
 
 First, I recommend enabling these two settings:
-- [Do not crawl already downloaded works](/en/Settings-Crawl/Execution-strategy?id=do-not-crawl-already-downloaded-works) in the "Crawl" tab. If a work has a download record, it can be skipped directly.
+- [Do not crawl already downloaded works](/en/Settings-Filter/Execution-strategy?id=do-not-crawl-already-downloaded-works) in the "Crawl" tab. If a work has a download record, it can be skipped directly.
 - [Don't download duplicate files](/en/Settings-Download/Download-records?id=don39t-download-duplicate-files) in the "More" tab. If a file has a download record, it will not be downloaded again.
 
 Usually these are enough. If you want to narrow the crawl range further, you can also use the methods below.
@@ -36,13 +36,13 @@ Usually these are enough. If you want to narrow the crawl range further, you can
 
 On some pages, works are sorted from newest to oldest, with recently posted works at the front and older ones at the back.
 
-Work IDs correlate with posting time: newer works have larger IDs. You can set the [ID range](/en/Settings-Crawl/Work-data?id=id-range) in the downloader's "Crawl" tab.
+Work IDs correlate with posting time: newer works have larger IDs. You can set the [ID range](/en/Settings-Filter/Work-data?id=id-range) in the downloader's "Crawl" tab.
 
 For example, if you previously downloaded works from a user's profile and the largest ID in the file names was 65000000, you can set the ID range to greater than 65000000 to crawl works posted afterward.
 
 ### Set Posting Time
 
-In addition to setting an ID range, you can set the [Posting time](/en/Settings-Crawl/Work-data?id=posting-time) to crawl newly posted works.
+In addition to setting an ID range, you can set the [Posting time](/en/Settings-Filter/Work-data?id=posting-time) to crawl newly posted works.
 
 Both settings work similarly but use different filtering criteria.
 
@@ -56,7 +56,7 @@ You can manually set the number of pages to crawl. For example:
 
 Flip through pages starting from page 1 to check which page you last downloaded. If you last downloaded up to page 5, the works from pages 1 to 5 are the newly bookmarked works.
 
-Return to page 1, set the [How many pages to crawl](/en/Settings-Crawl/Crawl-scope?id=how-many-pages-to-crawl) to 5, and start crawling. This downloads only the newly bookmarked works.
+Return to page 1, set the [How many pages to crawl](/en/Settings-Filter/Crawl-scope?id=how-many-pages-to-crawl) to 5, and start crawling. This downloads only the newly bookmarked works.
 
 ?> If you frequently need incremental updates on the bookmark page, consider adding the `{bmk_id}` tag at the start of file names to align the file order with the page's display order. This helps you see where you last downloaded. See detailed explanation: [Tags Reflecting Time Order](/en/Settings-Naming/Folder-and-file-names?id=tags-reflecting-time-order).
 
@@ -101,15 +101,15 @@ When you enter a search page, it defaults to page 1, and the address bar does no
 
 Click on any page number, such as page 2:
 
-![](images/20250907_194850.png)
+![](../template/publicImages/20250907_194850.png)
 
 After navigating to page 2, the `p=2` in the address bar indicates the page number:
 
-![](images/20250907_194909.png)
+![](../template/publicImages/20250907_194909.png)
 
 Change the `2` to the desired number, such as `101`, and press Enter:
 
-![](images/20250907_194922.png)
+![](../template/publicImages/20250907_194922.png)
 
 This will take you to page 101.
 
@@ -119,7 +119,7 @@ This will take you to page 101.
 If you need to batch bookmark multiple works, you can do the following:
 
 1. Enable the downloader's [Bookmark works after downloading](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) function.
-2. Optional: If you do not need to download the original images of these works, you can set the [Image size](/en/Settings-Download/Image-size?id=image-size) during download to `Small` to speed up the download process.
+2. Optional: If you do not need to download the original images of these works, you can set the [Image dimensions when downloading illustrations, manga, and Ugoira](/en/Settings-Download/Image-size?id=image-dimensions-when-downloading-illustrations-manga-and-ugoira) during download to `Small` to speed up the download process.
 3. Crawl and download these works. The downloader will bookmark them.
 
 On certain pages (e.g., the new works page of followed users), if you want to bookmark newly appeared works at regular intervals, you can use the [Timed crawl](/en/Buttons-Start-crawling/General?id=timed-crawl) function in combination with the method above.
@@ -128,7 +128,7 @@ On certain pages (e.g., the new works page of followed users), if you want to bo
 
 Your bookmarks may contain some works that have already expired, and you cannot view or download them. For example:
 
-![](images/20250909_235316.png)
+![](../template/en/images/20250909_235316.png)
 
 If you want to get their IDs, please refer to the description of this feature: [Find all deleted works](/en/Buttons-Extra-features/Bookmark-page?id=find-all-deleted-works).
 
@@ -171,7 +171,7 @@ Pixiv Premium members can view 5000 pages, so they are less likely to encounter 
 
 Search pages have two sorting options:
 
-![](images/20250910_013103.webp)
+![](../template/en/images/20250910_013103.webp)
 
 The default sorting is from newest to oldest. You can crawl and download 1000 or 5000 pages of works, then return to the first page, click "Sort by oldest," and view or download earlier works.
 
@@ -181,7 +181,7 @@ Using this method, you can download up to 2000 or 10000 pages of works. If this 
 
 On the search page, click "Search conditions" and set the "Posting period." For example, you can view works posted in a specific year:
 
-![](images/20250911_021855.png)
+![](../template/en/images/20250911_021855.png)
 
 Download the works from that year, then set the posting period to the previous year and download those works.
 
@@ -193,11 +193,11 @@ By repeating this process, you can theoretically crawl all works, but it is quit
 
 Set a random time range first, and the URL in the address bar will include the date:
 
-![](images/20250908_031731.png)
+![](../template/publicImages/20250908_031731.png)
 
 Modify the date to your desired time range, for example:
 
-![](images/20250908_031753.png)
+![](../template/publicImages/20250908_031753.png)
 
 Then press Enter. Pixiv will display the works from that year.
 

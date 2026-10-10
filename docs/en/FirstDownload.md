@@ -8,17 +8,17 @@ Open the test page below:
 
 Open the downloader panel and click the **Start Crawling** button:
 
-![](images/20260608_154012.png)
+![](../template/en/images/20260608_154012.png)
 
 The downloader will automatically start crawling works.
 
 Once crawling is complete, the downloader will automatically begin downloading files, and the progress will be shown in the Home page's "Download area":
 
-![](images/ui-en-1.png)
+![](../template/en/images/ui-en-1.png)
 
 PS: By default, the downloader automatically starts downloading. You can change this default behavior in the "Download" settings:
 
-![](images/20260608_154141.png)
+![](../template/en/images/20260608_154141.png)
 
 ?> If a file download fails, the downloader will automatically retry downloading it. For more details, you can refer to the explanation in [Will It Automatically Retry on Download Failure?](/en/FAQ?id=will-it-automatically-retry-on-download-failure).
 
@@ -36,7 +36,7 @@ When the downloader performs tasks, it displays logs at the top of the page, inc
 
 You can see a blue button at the top of the page, like this:
 
-![](images/20250909_000837.png)
+![](../template/en/images/20250909_000837.png)
 
 Click this button to show the logs. You can also use the shortcut key `L` to toggle the visibility of logs.
 
@@ -53,7 +53,7 @@ The downloader has four log levels, each with a different color. Examples:
 
 After crawling begins, the downloader adds symbols to the front of the page title to indicate its status. For example:
 
-![](images/20250901_005150.png)
+![](../template/publicImages/20250901_005150.png)
 
 The `[↓]` at the start indicates downloading is in progress; the number 36 that follows means 36 files remain to be downloaded.
 
@@ -75,7 +75,7 @@ There are also some less common statuses:
 
 Downloaded files are saved in the **browser's download directory**. The downloader will create subfolders to store files, for example:
 
-![](images/20250901_005628.png)
+![](../template/publicImages/20250901_005628.png)
 
 ?> The downloader cannot save files outside the browser's download directory due to browser restrictions. To save to a different location, change the browser's download directory.
 

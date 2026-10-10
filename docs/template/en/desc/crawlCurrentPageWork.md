@@ -1,0 +1,1 @@
+This crawl button is used on the [Regional Ranking](https://www.pixiv.net/ranking_area.php?type=detail&no=1) page. The regional ranking has only one page of 50 works; click this button to crawl all of them.

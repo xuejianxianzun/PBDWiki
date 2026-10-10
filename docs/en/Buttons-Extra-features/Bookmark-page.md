@@ -1,7 +1,6 @@
-## Add tag to uncategorized work
+## Add tag to uncategorized works
 
-<button id="addTagToUnmarkedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_给未分类作品添加添加tag">Add tag to uncategorized work</span><span class="ripple"></span></button>
-
+<button id="addTagToUnmarkedWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_给未分类作品添加tag">Add tag to uncategorized works</span><span class="ripple"></span></button>
 
 Click this button, and the downloader will crawl all uncategorized works in your bookmarks and add tags to them.
 
@@ -16,7 +15,7 @@ When using this feature, the button displays progress information, for example:
 - This feature crawls **all** uncategorized works; you cannot set a limit on the number to crawl.
 - The downloader adds **the work's own tags** to uncategorized works, i.e., the tags visible on their work page, for example:
 
-![](../images/20250909_234748.png)
+![](../../template/en/images/20250909_234748.png)
 
 **What are uncategorized works?**
 
@@ -28,7 +27,7 @@ When adding bookmarks, you can optionally add tags (custom or otherwise). Howeve
 
 **Trivia:** On your bookmark page, Pixiv displays a list of tags, such as:
 
-![](../images/20250909_234915.png)
+![](../../template/en/images/20250909_234915.png)
 
 These are the tags associated with bookmarked works, sorted by frequency.
 
@@ -72,11 +71,11 @@ This button functions similarly to the previous one, except that it will cancel 
 
 Your bookmarks may include works that are no longer available, which you cannot view or download. For example:
 
-![](../images/20250909_235316.png)
+![](../../template/en/images/20250909_235316.png)
 
 Click this button, and the downloader crawls your bookmark list (without fetching detailed data for each work, so it's relatively quick). It then identifies **all** deleted works and exports their ID list to the download directory, for example:
 
-![](../images/20251003_182304.png)
+![](../../template/publicImages/20251003_182304.png)
 
 This feature is useful for some users, as work IDs can help locate archived versions of these works on other illustration websites.
 
@@ -94,7 +93,6 @@ Find all deleted works and remove them from your bookmarks.
 
 <button id="exportBookmarkList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出收藏列表">Export bookmark list（JSON）</span><span class="ripple"></span></button>
 
-
 You can export your own or another user's bookmark list (depending on whose bookmark page you're on). The downloader generates a JSON file saved to the browser's download directory.
 
 You can export your bookmark list as a backup or export another user's list to add to your own bookmarks.
@@ -110,8 +108,6 @@ When using this feature, the downloader performs these steps:
 
 <button id="importBookmarkList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导入收藏列表">Import bookmark list (add bookmarks in batches)</span><span class="ripple"></span></button>
 
-
-
 Click this button to select a previously exported bookmark list (JSON file) and add its works to your bookmarks.
 
 **Tips:**
@@ -121,4 +117,3 @@ Click this button to select a previously exported bookmark list (JSON file) and 
 - If the imported list includes works you've already bookmarked, the final bookmark count may be lower than expected, which is normal. For example, if you import 48 works and 20 are already bookmarked, your bookmark count will increase by only 28.
 
 ?> When using this feature, the downloader displays progress information in the log at the top of the page, e.g., "Bookmarking works 5/48".
-

@@ -4,7 +4,7 @@
   <a href="/#/en/Settings-Download/Download-behavior?flag=52" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_抓取完成后自动开始下载">Start downloading <span class="key">automatically</span> after crawling is complete</span>
   </a>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_抓取完成后自动开始下载" data-msg="_自动开始下载的帮助内容" data-xztext="_帮助">Help</button>
+
   <div class="optionLine">
     <span class="mb4" data-xztext="_应用到">Apply to:</span>
     <input type="checkbox" name="autoStartDownload" id="autoStartDownload" class="need_beautify checkbox_common" checked="">
@@ -24,7 +24,7 @@ Please click the "Help" button in the downloader to view the detailed instructio
   <a href="/#/en/Settings-Download/Download-behavior?flag=51" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_同时下载多少个文件">Download <span class="key">how many</span> files at the same time</span>
   </a>
-  <input type="text" name="downloadThread" class="has_tip setinput_style blue" data-xztip="_下载线程的说明" value="3" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
+  <input type="text" name="downloadThread" class="has_tip setinput_style blue w40" data-xztip="_下载线程的说明" value="3" data-tip="You can type a number between 1-6 to set the number of concurrent downloads">
 </div>
 
 You can enter a number between 1 and 6 to set the concurrent download count. The default is 3.
@@ -48,12 +48,11 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-
 When enabled, the downloader will bookmark the work associated with each downloaded file.
 
 Bookmark progress is displayed in the download progress area, e.g., `Bookmarked 1/3`.
 
-![](../images/20250909_005501.png)
+![](../../template/en/images/20250909_005501.png)
 
 After downloading, if the bookmark progress shows matching numbers, e.g., `Bookmarked 3/3`, bookmarking is complete. If the numbers differ, wait for bookmarking to finish.
 
@@ -61,7 +60,7 @@ After downloading, if the bookmark progress shows matching numbers, e.g., `Bookm
 
 1. If a work is skipped due to the "Don't download duplicate files" setting, it is still considered successfully downloaded and will be bookmarked.
 2. A work may have multiple files but is bookmarked only once. If the bookmark count is less than the file count, this is normal, as the bookmark count reflects the number of works, not files.
-3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
+3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-Filter/Execution-strategy?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
 
 If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).
 
@@ -81,11 +80,11 @@ There are two main use cases:
 
 1. Clicking the bookmark button in the bottom-right corner of the work:
 
-![](../images/20250902_144603.png) ![](../images/20250902_145045.png)
+![](../../template/publicImages/20250902_144603.png) ![](../../template/publicImages/20250902_145045.png)
 
 2. Clicking the bookmark button inside the work page:
 
-![](../images/20250910_231820.png)
+![](../../template/en/images/20250910_231820.png)
 
 ?> Although the screenshots above are for illustrations, this feature also works for novels.
 
@@ -95,7 +94,7 @@ There are two main use cases:
 
 The downloader provides this feature by default:
 
-![](../images/20250902_145913.png)
+![](../../template/publicImages/20250902_145913.png)
 
 When you are on a page, hovering the mouse over an illustration thumbnail should show a button in the top-right corner.
 
@@ -115,30 +114,27 @@ When this feature is enabled, the downloader will automatically download the wor
 
 Like button:
 
-![](../images/20250910_231828.png)
+![](../../template/en/images/20250910_231828.png)
 
 ?> Although the screenshot above is for an illustration, this feature also works for novels.
 
 ## Download interval
 
 <div class="option settingsPanel_optionCard" data-no="56" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Download-behavior?flag=56" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载间隔的说明" data-tip="Start a download every certain interval of time.&lt;br&gt;
-If the interval time is set to 0, the downloader will not add delay time.&lt;br&gt;
-If set to 1 second (default value), then up to 3600 crawl results will be downloaded per hour (not counting attached download files, such as novel cover images and embedded images).&lt;br&gt;
-This is because when continuously downloading many files (especially novels), your Pixiv account may be warned or banned. Setting the interval time can alleviate this issue.&lt;br&gt;" data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=56" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_下载间隔">Download <span class="key">interval</span></span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="downloadIntervalSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <div class="subOptionWrap flexBasis100" data-show="downloadIntervalSwitch" style="display: inline-flex;">
+
+  <div class="subOptionWrap flexBasis100" data-show="downloadIntervalSwitch" style="display: none;">
     <div class="optionLine">
-      <span data-xztext="_当文件数量大于">Enable when the number of files exceeds the specified number: </span>
+      <span data-xztext="_当抓取结果数量大于">Enable when the number of crawl results exceeds a specified number: </span>
       <input type="text" name="downloadIntervalOnWorksNumber" class="setinput_style blue" value="150">
     </div>
     <div class="optionLine">
       <span data-xztext="_间隔时间">Interval time: </span>
-      <input type="text" name="downloadInterval" class="setinput_style blue" value="1">
+      <input type="text" name="downloadInterval" class="setinput_style blue w40" value="1">
       <span data-xztext="_秒">seconds</span>
     </div>
   </div>
@@ -294,7 +290,11 @@ When the downloader starts downloading a file, it can retrieve its size. If it d
   </a>
   <input type="checkbox" name="rememberTheLastSaveLocation" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_把文件保存到用户上次选择的位置" data-msg="_把文件保存到用户上次选择的位置的说明" data-xztext="_帮助">Help</button>
+  <div class="subOptionWrap flexBasis100" data-show="rememberTheLastSaveLocation" style="display: none;">
+    <div class="secondary_hint">
+      <span data-xztext="_提示如果你启用了这个设置下载器不会创建文件夹">If you enable this setting, the downloader will not create folders.</span>
+    </div>
+  </div>
 </div>
 
 This setting is designed for users who prefer to **save files manually** with the `Save As` dialog and want the downloader to remember the last location they chose.
@@ -335,9 +335,8 @@ a.click()
 ## Show notification after download is complete
 
 <div class="option settingsPanel_optionCard" data-no="61" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Download-behavior?flag=61" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载完成后显示通知的说明" data-tip="Show a system notification when all files have been downloaded. May require notification permission." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=61" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_下载完成后显示通知">Show <span class="key">notification</span> after download is complete</span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="showNotificationAfterDownloadComplete" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -345,4 +344,4 @@ a.click()
 
 If you enable this option, the downloader will display a system notification after all files have finished downloading. It may also request notification permission, and there may be a notification sound depending on your operating system settings.
 
-The style of the notification varies by operating system. 
+The style of the notification varies by operating system.

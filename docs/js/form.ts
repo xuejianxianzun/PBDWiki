@@ -21,6 +21,7 @@ class Form {
           this.addTipEl()
           this.bindTipEvents()
           this.bindClickOptionCardToToggleSwitch()
+          this.bindToggleAreaEvents()
         })
       },
     ])
@@ -207,6 +208,34 @@ class Form {
             span.click()
           }
         }
+      })
+    })
+  }
+
+  /** 点击 .toggleArea 按钮时，切换对应的提示区域的显示（移植自 PPD 的 FormHelpManager.toggleHelpArea） */
+  private bindToggleAreaEvents() {
+    const btns = document.querySelectorAll(
+      '.toggleArea'
+    ) as NodeListOf<HTMLButtonElement>
+    btns.forEach((btn) => {
+      if (btn.dataset.toggleAreaBound) {
+        return
+      }
+      btn.dataset.toggleAreaBound = 'true'
+
+      btn.addEventListener('click', () => {
+        const targetSelector = btn.dataset.toggleTarget
+        if (!targetSelector) {
+          return
+        }
+        const tipEl = document.querySelector(
+          targetSelector
+        ) as HTMLElement | null
+        if (!tipEl) {
+          return
+        }
+        // 与 PPD 的 Utils.toggleEl(el, 'block') 行为一致
+        tipEl.style.display = tipEl.style.display === 'block' ? 'none' : 'block'
       })
     })
   }

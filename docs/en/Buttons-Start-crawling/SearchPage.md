@@ -2,12 +2,11 @@
 
 <button id="crawlTagList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_抓取标签列表">Crawl tag list</span><span class="ripple"></span></button>
 
-
 Clicking this button displays an input area at the top of the page. You can enter multiple tags, and the downloader will crawl works for each tag sequentially and download them automatically.
 
 Example:
 
-![](../images/20250909_231123.png)
+![](../../template/en/images/20250909_231123.png)
 
 **Tips:**
 
@@ -33,23 +32,18 @@ If needed, modify crawl conditions (filters) and click this button to recheck cr
 
 <button id="clearMultiImageWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清除多图作品">Remove multi-image works</span><span class="ripple"></span></button>
 
-
 Removes all multi-image works from the crawl results.
 
 ## Remove ugoira works
 
 <button id="clearUgoiraWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清除动图作品">Remove ugoira works</span><span class="ripple"></span></button>
 
-
 Removes all Ugoira works from the crawl results.
 
-## Manually delete the work
+## Manually delete works
 
-<button id="manuallyDeleteWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger" data-xztitle="_手动删除作品Title" title="You can manually delete unwanted work before downloading"><span data-xztext="_手动删除作品">Manually delete the work</span><span class="ripple"></span></button>
-
-
+<button id="manuallyDeleteWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger" data-xztitle="_手动删除作品Title" title="You can manually delete unwanted work before downloading"><span data-xztext="_手动删除作品">Manually delete works</span><span class="ripple"></span></button>
 
 Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
 
-**Note:** This button must be used together with [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page). You can only manually delete works after the downloader displays the crawl results on the page.
-
+**Note:** This button must be used together with [Preview crawl results on search page](/en/Settings-Filter/Execution-strategy?id=preview-crawl-results-on-search-page). You can only manually delete works after the downloader displays the crawl results on the page.

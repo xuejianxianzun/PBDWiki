@@ -1,16 +1,18 @@
 ## Save the novel as
 
 <div class="option settingsPanel_optionCard" data-no="67" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Novels?flag=67" target="_blank" class="has_tip settingNameStyle" data-xztip="_小说保存格式的说明" data-tip="TXT is a plain text file. When you select TXT format, the pictures in the novel will be saved separately. &lt;br&gt;EPUB is an e-book format, and the pictures in the novel will be embedded in the EPUB file." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Novels?flag=67" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_小说保存格式">Save the <span class="key">novel</span> as</span>
-    <span class="gray"> ? </span>
   </a>
-  <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked="">
-  <span class="beautify_radio" tabindex="0"></span>
-  <label for="novelSaveAs2"> EPUB </label>
-  <input type="radio" name="novelSaveAs" id="novelSaveAs1" class="need_beautify radio" value="txt">
-  <span class="beautify_radio" tabindex="0"></span>
-  <label for="novelSaveAs1" class="active"> TXT </label>
+
+  <div class="optionLine">
+    <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked="">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelSaveAs2" class="active"> EPUB </label>
+    <input type="radio" name="novelSaveAs" id="novelSaveAs1" class="need_beautify radio" value="txt">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="novelSaveAs1"> TXT </label>
+  </div>
 </div>
 
 You can choose to save novels in TXT or EPUB format. The default format is EPUB.
@@ -28,28 +30,152 @@ PS: Compared with EPUB, TXT has some disadvantages:
 
 **Online Reading**: https://epub-reader.online/
 
-![](../images/20260405_000857.webp)
+![](../../template/en/images/20260405_000857.webp)
 
 **Windows**: Aquile Reader
 
-![](../images/20260405_001544.png)
+![](../../template/publicImages/20260405_001544.png)
 
 You can install it from the Microsoft Store.
 
-![](../images/20260405_000913.webp)
+![](../../template/en/images/20260405_000913.webp)
 
 **Android**: Moon+ Reader
 
-![](../images/20260405_001647.png)
+![](../../template/publicImages/20260405_001647.png)
 
-![](../images/20260405_001422.webp)
+![](../../template/en/images/20260405_001422.webp)
+
+## The language tag of the EPUB file
+
+<div class="option settingsPanel_optionCard new" data-no="109" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Novels?flag=109" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_EPUB文件的语言标签">The <span class="key">language</span> tag of the EPUB file</span>
+  </a>
+
+  <div class="optionLine">
+    <input type="radio" name="epubLangSource" id="epubLangSourceNovelLang" class="need_beautify radio" value="novelLang" checked="">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubLangSourceNovelLang" data-xztext="_使用小说的语言" class="active">Use the novel's language</label>
+    <input type="radio" name="epubLangSource" id="epubLangSourceDownloaderLang" class="need_beautify radio" value="downloaderLang">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubLangSourceDownloaderLang" data-xztext="_使用下载器的语言">Use the downloader's language</label>
+    <input type="radio" name="epubLangSource" id="epubLangSourceCustom" class="need_beautify radio" value="custom">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubLangSourceCustom" data-xztext="_自定义语言标签">Custom</label>
+    <input type="text" name="epubCustomLang" id="epubCustomLang" class="setinput_style blue w50" value="ja">
+  </div>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+This setting determines which language tag is used for the dc:language and xml:lang attributes of the EPUB file.
+
+Options:
+
+- Use the novel's language: use the language in the novel's JSON data (the language attribute).
+
+- Use the downloader's language: the downloader's interface supports multiple languages. If you select this option, the language tag of the EPUB file will use the downloader's interface language.
+
+- Custom: use the language code you set.
+
+Note:
+
+When you select "Use the novel's language", the final language of Simplified Chinese and Traditional Chinese novels is affected by the "Simplified-Traditional conversion" setting.
+
+For example, if a novel is originally in Simplified Chinese but you enable Simplified to Traditional, the language tag of the EPUB file will be zh-tw after conversion, and vice versa.
+
+## Text layout direction of the EPUB file
+
+<div class="option settingsPanel_optionCard new" data-no="108" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Novels?flag=108" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_EPUB文件的排版方向">Text <span class="key">layout</span> direction of the EPUB file</span>
+  </a>
+
+  <div class="optionLine">
+    <input type="radio" name="epubWritingMode" id="epubWritingModeHorizontal" class="need_beautify radio" value="horizontal" checked="">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubWritingModeHorizontal" data-xztext="_EPUB文字方向横排" class="active">Horizontal</label>
+    <input type="radio" name="epubWritingMode" id="epubWritingModeVertical" class="need_beautify radio" value="vertical">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubWritingModeVertical" data-xztext="_EPUB文字方向竖排">Vertical</label>
+    <input type="radio" name="epubWritingMode" id="epubWritingModeLangList" class="need_beautify radio" value="verticalForLangList">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="epubWritingModeLangList" data-xztext="_EPUB文字方向指定语言竖排">Use vertical for novels in these languages:</label>
+    <input type="text" name="epubVerticalLangList" id="epubVerticalLangList" class="setinput_style blue w200" placeholder="ja,zh-tw" value="ja,zh-tw">
+  </div>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+Set the text direction of the body text in EPUB novels.
+
+Options:
+
+- Horizontal: text is laid out from left to right.
+
+- Vertical: text is laid out from top to bottom, and pages progress from right to left.
+
+- Use vertical for novels in these languages: use vertical only for the languages you specify, and horizontal for other languages. You can enter one or more language codes, separated by an English comma ,, for example ja,zh-tw.
+
+Notes:
+
+- When using "Use vertical for novels in these languages", the direction is determined by the language tag actually used in the EPUB file, which is the value decided by the "language tag of the EPUB file" setting.
+
+- Not all novel readers support vertical text. Some readers ignore the vertical setting or display it incorrectly. For the latter, you can try setting the text direction of the reader to vertical.
+
+## Simplified-Traditional conversion
+
+<div class="option settingsPanel_optionCard new" data-no="110" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Novels?flag=110" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_简繁转换">Simplified-Traditional <span class="key">conversion</span></span>
+  </a>
+
+  <div class="optionLine">
+    <input type="radio" name="convertNovelText" id="convertNovelTextNone" class="need_beautify radio" value="none" checked="">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="convertNovelTextNone" data-xztext="_不转换" class="active">No conversion</label>
+    <input type="radio" name="convertNovelText" id="convertNovelTextCn2tw" class="need_beautify radio" value="cn2tw">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="convertNovelTextCn2tw" data-xztext="_简体转繁体">Simplified to Traditional</label>
+    <input type="radio" name="convertNovelText" id="convertNovelTextTw2cn" class="need_beautify radio" value="tw2cn">
+    <span class="beautify_radio" tabindex="0"></span>
+    <label for="convertNovelTextTw2cn" data-xztext="_繁体转简体">Traditional to Simplified</label>
+  </div>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+Explanation:
+
+- The conversion only takes effect when the original language of the novel is Chinese. Novels in other languages are not converted.
+
+- It takes effect for both the TXT and EPUB formats.
+
+- It takes effect for both single novels and series novels.
+
+- In the generated novel file, the downloader converts the title, description, glossary and body text.
+
+What is not converted:
+
+- The downloader does not convert the author name, the tag list, or the file name.
+
+- The downloader does not convert any file other than the novel file. So in the exported crawl results, in the novel metadata saved in a separate file, and in the description file, the original content is always kept.
 
 ## Save metadata in the novel
 
 <div class="option settingsPanel_optionCard" data-no="68" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Novels?flag=68" target="_blank" class="has_tip settingNameStyle" data-xztip="_在小说里保存元数据提示" data-tip="Save the novel's title, author, tags and other information to the beginning of the novel." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Novels?flag=68" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_在小说里保存元数据">Save <span class="key">metadata</span> in the novel</span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="saveNovelMeta" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -101,15 +227,15 @@ The downloader will save novel cover images separately, with filenames matching 
 
 Example:
 
-![](../images/20250902_201342.png)
+![](../../template/publicImages/20250902_201342.png)
 
-![](../images/20250902_201439.png)
+![](../../template/publicImages/20250902_201439.png)
 
 If you do not want to save cover images, you can disable this option.
 
 If you save the novel in EPUB format, the downloader will also add an embedded cover image, for example:
 
-![](../images/20250910_232344.webp)
+![](../../template/en/images/20250910_232344.webp)
 
 Currently, regardless of whether this option is enabled, the downloader always adds an embedded cover. In future versions, I plan to make the embedded cover follow this setting, meaning if you disable this option, the downloader will not add an embedded cover.
 
@@ -145,11 +271,11 @@ The downloader saves embedded images by default. There are differences depending
 
 When saving novels as TXT, images are saved separately with filenames matching the novel's. For example:
 
-![](../images/20250902_203236.png)
+![](../../template/publicImages/20250902_203236.png)
 
 When saving novels as EPUB, images are not saved separately but stored inside the EPUB. For example:
 
-![](../images/20250910_232703.webp)
+![](../../template/en/images/20250910_232703.webp)
 
 Note: For large PNG format embedded images, some novel readers may only display part of them. This is an issue with the reader, not the downloader.
 
@@ -171,15 +297,14 @@ Note: Even if you choose an image size smaller than 1200px, some images will sti
 ## Automatically merge novel series
 
 <div class="option settingsPanel_optionCard" data-no="71" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Novels?flag=71" target="_blank" class="has_tip settingNameStyle" data-xztip="_自动合并系列小说的说明" data-tip="When crawling works, if a novel belongs to a series, automatically crawl all novels in that series and merge them." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Novels?flag=71" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_自动合并系列小说">Automatically <span class="key">merge</span> novel series</span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="autoMergeNovel" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <div class="subOptionWrap" data-show="autoMergeNovel" style="display: none;">
-    <label for="skipNovelsInSeriesWhenAutoMerge" data-xztext="_不再单独下载系列里的小说" class="has_tip active" data-xztip="_不再单独下载系列里的小说的说明" data-tip="When you enable &quot;Automatically merge series novels&quot;, there is usually no need to download novels in the series individually, as they are already included in the merged novel file.&lt;br&gt;If you still want to download them, you can uncheck this sub-setting.">No longer download novels in the series individually</label>
-    <span class="gray"> ? &nbsp;</span>
+
+  <div class="subOptionWrap flexBasis100" data-show="autoMergeNovel" style="display: none;">
+    <label for="skipNovelsInSeriesWhenAutoMerge" data-xztext="_不再单独下载系列里的小说" class="active">No longer download novels in the series individually</label>
     <input type="checkbox" name="skipNovelsInSeriesWhenAutoMerge" id="skipNovelsInSeriesWhenAutoMerge" class="need_beautify checkbox_switch" checked="">
     <span class="beautify_switch" tabindex="0"></span>
   </div>
@@ -271,15 +396,19 @@ The above data volume is relatively small, just for reference, to have a rough i
 
 Due to too many requests, I was warned by Pixiv several times, and one account was even banned. So I gradually increased the interval time to reduce the possibility of being warned.
 
-## When merging a novel series, save all novels in the series if one matches the filter conditions
+## When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved
 
-<div class="option settingsPanel_optionCard" data-no="104" data-pin-bound="true" style="display: flex;">
-  <a href="https://xuejianxianzun.github.io/PBDWiki/#/en/Settings-Download/Novels?flag=104" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说">When merging series novels, as long as one novel meets the <span class="key">filtering criteria</span>, all novels in the series will be saved</span>
+<div class="option settingsPanel_optionCard new" data-no="104" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Novels?flag=104" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_在合并系列小说时只要有一篇小说符合筛选条件就保存该系列里的所有小说">When merging series novels, as long as one novel meets the <span class="key">filtering criteria</span>, all novels in the series will be saved</span>
   </a>
   <input type="checkbox" name="saveAllSeriesNovelsIfOneMatches" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="textButton gray showMsgBtn" data-title="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说" data-msg="_在合并系列小说时只要有一篇小说符合过滤条件就保存该系列里的所有小说的提示" data-xztext="_帮助">Help</button>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
 </div>
 
 Use this setting when you have configured filter conditions and want the downloader to merge all novels in a series as long as one novel meets those conditions.
@@ -292,19 +421,13 @@ By default (with this setting disabled), the downloader merges only that 1 novel
 
 ## Split threshold when merging series novels
 
-<div class="option settingsPanel_optionCard new" data-no="72" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="72" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Novels?flag=72" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_合并系列小说时的分割阈值">Split <span class="key">threshold</span> when merging series novels</span>
   </a>
   <input type="text" name="singleEPUBFileSizeLimit" class="setinput_style blue" value="200">
   <span>MiB</span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_合并系列小说时的分割阈值" data-msg="_合并系列小说时的分割阈值的帮助" data-xztext="_帮助">Help</button>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
-
+</div>
 
 Some novel series contain a very large number of illustrations and may even exceed 4 GB. If a single EPUB file is too large, it may fail to download, and some readers may not be able to open it. So when merging a novel series, the downloader uses this setting to split the file.
 

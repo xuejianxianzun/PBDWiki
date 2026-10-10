@@ -19,7 +19,13 @@
   },
   "scripts": {
     "less": "lessc docs/style/style.less docs/style/style.css",
-    "ts": "tsc docs/js/form.ts --outDir docs/js"
+    "ts": "tsc docs/js/form.ts --outDir docs/js",
+    "build": "node build/tasks/build.js",
+    "build:check": "node build/tasks/check-data.js",
+    "build:verify": "node build/tasks/verify.js",
+    "serve": "docsify serve docs"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
 }

@@ -6,7 +6,7 @@ The downloader includes several convenience features to improve operational effi
 
 On a work page, the downloader adds a quick download button on the right side of the page, as shown below:
 
-![](images/2021-11-07_192054.png)
+![](../template/publicImages/2021-11-07_192054.png)
 
 Click it to download the current work with one click (without opening the downloader's settings panel).
 
@@ -16,7 +16,7 @@ Its shortcut key is `Alt` + `Q`.
 
 The downloader adds a star-shaped bookmark button below the work:
 
-![](images/20250910_013424.png)
+![](../template/en/images/20250910_013424.png)
 
 ?>Its shortcut key is `Alt` + `B`.
 
@@ -26,13 +26,13 @@ It has some differences from Pixiv's heart-shaped bookmark button:
 
 Quick bookmark will automatically like this work.
 
-![](images/20250910_013429.png)
+![](../template/en/images/20250910_013429.png)
 
 **Default Add Tags:**
 
 Tags refer to these tags below the work:
 
-![](images/20250910_013536.png)
+![](../template/en/images/20250910_013536.png)
 
 When you use Pixiv's heart-shaped button to add a bookmark, it does not add the work's tags. However, the quick bookmark button adds all tags by default.
 
@@ -52,7 +52,7 @@ You can modify this button's behavior in the [Downloader's bookmark feature (✩
 
 When hovering over a work's thumbnail, the downloader displays a larger preview image, as shown below:
 
-![](images/20251025_020514.webp)
+![](../template/en/images/20251025_020514.webp)
 
 While previewing, press the `C` key to download the currently previewed image, or press `D` to download the entire work.
 
@@ -64,13 +64,13 @@ With this feature, you can view the original image of a work directly without vi
 
 If you want to quickly copy the original image of a work (without downloading), you can use this feature: after the original image is displayed, right-click the mouse and select "Copy Image".
 
-See detailed explanation: [Long press the right mouse button on the thumbnail to display the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-the-thumbnail-to-display-the-large-image)
+See detailed explanation: [Long press the right mouse button on a thumbnail to display the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-a-thumbnail-to-display-the-large-image)
 
 ## Show zoom button on thumbnail
 
 When the mouse hovers over a work thumbnail, the downloader displays a magnifier icon on the thumbnail, as shown below:
 
-![](images/20250910_235026.png)
+![](../template/publicImages/20250910_235026.png)
 
 Click the magnifier icon to open the image viewer and view every image in the work.
 
@@ -78,7 +78,7 @@ Click the magnifier icon to open the image viewer and view every image in the wo
 
 When the mouse hovers over the work thumbnail, the downloader will display a copy button on the thumbnail, as shown in the following image:
 
-![](images/20251025_021622.png)
+![](../template/publicImages/20251025_021622.png)
 
 Clicking the copy button allows you to copy both the images and text summary of the work at the same time, then paste them into other software to save, or share with others.
 
@@ -88,7 +88,7 @@ View detailed instructions: [Copy work info](/en/Settings-Enhance/Other?flag=89)
 
 When the mouse hovers over a work thumbnail, the downloader displays a download button on the thumbnail, as shown below:
 
-![](images/20250907_171359.webp)
+![](../template/publicImages/20250907_171359.webp)
 
 Click the download button to download the work.
 
@@ -98,7 +98,7 @@ See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhan
 
 The downloader includes a built-in image viewer, as shown below:
 
-![](images/20260830_174657.webp)
+![](../template/publicImages/20260830_174657.webp)
 
 ?> If the work contains multiple images, the downloader displays thumbnails of all images at the bottom. Click a thumbnail to view its full-size image.
 
@@ -144,7 +144,7 @@ In addition, there are some function buttons at the bottom of the image viewer, 
 
 When on a **multi-image work** page (e.g., [134821751](https://www.pixiv.net/artworks/134821751)), the downloader displays thumbnails for each image, as shown below:
 
-![](images/20260830_173821.png)
+![](../template/en/images/20260830_173821.png)
 
 You can preview or download each image.
 
@@ -154,7 +154,7 @@ See detailed explanation: [Show thumbnail list on multi-image work pages](/en/Se
 
 The downloader adds buttons for specific bookmark counts at the top of search pages, as shown below:
 
-![](images/20251025_040059.png)
+![](../template/en/images/20251025_040059.png)
 
 Clicking these buttons adds the bookmark count as a tag to the current search tag and performs the search.
 
@@ -164,7 +164,7 @@ See detailed explanation: [Add a quick search area on the search page](/en/Setti
 
 On search pages, Pixiv may display popular works, as shown below:
 
-![](images/20250910_005101.webp)
+![](../template/en/images/20250910_005101.webp)
 
 If you don't have a Pixiv premium membership, clicking a work redirects to the membership purchase page.
 

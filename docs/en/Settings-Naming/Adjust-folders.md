@@ -1,12 +1,12 @@
 ## Do not create folder
 
-<div class="option settingsPanel_optionCard new" data-no="40" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="40" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Adjust-folders?flag=40" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_不创建文件夹">Do <span class="key">not create</span> folder</span>
   </a>
   <input type="checkbox" name="noFolderSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_不创建文件夹" data-msg="_不创建文件夹的帮助内容" data-xztext="_帮助">Help</button>
+
   <div class="subOptionWrap noGrow flexBasis100" data-show="noFolderSwitch" style="display: none;">
     <div class="optionLine">
       <input type="checkbox" name="noFolderWhenDownload1Image" id="noFolderWhenDownload1Image" class="need_beautify checkbox_common" checked="">
@@ -29,11 +29,7 @@
       <label for="noFolderWhenNovel" data-xztext="_小说">Novels</label>
     </div>
   </div>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
+</div>
 
 If your naming rule creates folders, but you want some downloaded files to be saved directly in the download directory instead, you can enable this setting.
 
@@ -41,12 +37,11 @@ This setting has multiple sub-options. Whether folders are skipped can depend on
 
 ## Add a folder layer for multi-image works
 
-<div class="option settingsPanel_optionCard new" data-no="41" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="41" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Adjust-folders?flag=41" target="_blank" class="settingNameStyle" data-xztext="_为多图作品添加一层文件夹" data-bind-click="true">Add a folder layer for <span class="key">multi-image</span> works</a>
   <input type="checkbox" name="folderForMultiImageWorksSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_为多图作品添加一层文件夹" data-msg="_为多图作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
-  <div class="subOptionWrap flexBasis100" data-show="folderForMultiImageWorksSwitch" style="display: none;">
+  <div class="subOptionWrap flexBasis100 namingTipArea" data-show="folderForMultiImageWorksSwitch" style="display: none;">
     <div class="optionLine">
       <label for="folderForMultiImageWorksImageNumber" class="pr0" data-xztext="_当作品里的图片大于指定数量时启用">Enable when the number of images in the work exceeds the specified number: </label>
       <input class="setinput_style blue w50 noGrow" type="text" name="folderForMultiImageWorksImageNumber" id="folderForMultiImageWorksImageNumber" value="1">
@@ -55,8 +50,11 @@ This setting has multiple sub-options. Whether folders are skipped can depend on
       <label for="folderForMultiImageWorksRule" class="pr0" data-xztext="_要添加的这层文件夹的规则">Rule for the folder layer to add: </label>
       <input class="setinput_style blue w150 grow" type="text" name="folderForMultiImageWorksRule" id="folderForMultiImageWorksRule" value="{pid}" style="min-width: 100px">
     </div>
+    <div class="secondary_hint">
+      <span data-xztext="_提示还需要添加特定命名规则才能创建文件夹_multi_image_folder">You also need to add <span class="blue name">/{multi_image_folder}/</span> in "Folder and file names" - "Naming rules for image works" to achieve this effect. You can click the "Help" button to see detailed instructions.</span>
+    </div>
   </div>
-  </div>
+</div>
 
 The downloader can add a separate folder layer for multi-image works. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
 
@@ -90,13 +88,14 @@ You need to insert this tag manually so you can decide where this folder layer s
   <a href="/#/en/Settings-Naming/Adjust-folders?flag=42" target="_blank" class="settingNameStyle" data-xztext="_为r18作品添加一层文件夹" data-bind-click="true">Add a folder layer for <span class="key">R-18(G)</span> works</a>
   <input type="checkbox" name="r18Folder" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_为r18作品添加一层文件夹" data-msg="_为r18作品添加一层文件夹的帮助" data-xztext="_帮助">Help</button>
-  <div class="subOptionWrap flexBasis100" data-show="r18Folder" style="display: none;">
+  <div class="subOptionWrap flexBasis100 namingTipArea" data-show="r18Folder" style="display: none;">
     <label for="r18FolderName" class="pr0" data-xztext="_要添加的这层文件夹的规则">Rule for the folder layer to add: </label>
-    <input type="text" name="r18FolderName" id="r18FolderName" class="setinput_style blue grow" value="[R-18&amp;R-18G]" style="min-width: 100px">
+    <input type="text" name="r18FolderName" id="r18FolderName" class="setinput_style blue grow" value="[R-18&R-18G]" style="min-width: 100px">
+    <div class="secondary_hint">
+      <span data-xztext="_提示还需要添加特定命名规则才能创建文件夹_r18_g_folder">You also need to add <span class="blue name">/{r18_g_folder}/</span> in "Folder and file names" - "Naming rules" to achieve this effect. You can click the "Help" button to see detailed instructions.</span>
+    </div>
   </div>
 </div>
-
 
 If you want to put R-18(G) works into a separate folder layer, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
 
@@ -110,26 +109,26 @@ To make this setting take effect, you also need to modify the naming rule and us
   </a>
   <input type="checkbox" name="createFolderByTag" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_使用第一个匹配的标签建立文件夹" data-msg="_使用第一个匹配的标签建立文件夹的说明" data-xztext="_帮助">Help</button>
   <div class="subOptionWrap namingTipArea flexBasis100" data-show="createFolderByTag" style="display: none;">
-    <span class="name" data-bind-copy="true">{match_tag_folder1}</span>
+    <span class="name">{match_tag_folder1}</span>
     <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList" rows="1" placeholder="tag1,tag2,tag3"></textarea>
-    <span class="name" data-bind-copy="true">{match_tag_folder2}</span>
+    <span class="name">{match_tag_folder2}</span>
     <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderTagList2" rows="1" placeholder="tag1,tag2,tag3"></textarea>
+    <div class="secondary_hint">
+      <span data-xztext="_提示还需要添加特定命名规则才能创建文件夹_match_tag_folder">You also need to add <span class="blue name">/{match_tag_folder1}/</span> in "Folder and file names" - "Naming rules" to achieve this effect. You can click the "Help" button to see detailed instructions.</span>
+    </div>
   </div>
 </div>
-
-
 
 If you want to create a special folder layer when a work contains certain tags, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
 
 For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the `Original` tag:
 
-![](../images/20250910_224628.png)
+![](../../template/en/images/20250910_224628.png)
 
 If you include `Original` in this setting, the downloader will create an `Original` folder for this work:
 
-![](../images/20250910_224541.png)
+![](../../template/en/images/20250910_224541.png)
 
 ----------
 
@@ -138,5 +137,3 @@ After enabling this setting, you can configure two tag lists.
 When downloading each file, the downloader checks whether the work's tags contain **any** of the tags you configured here. Once it finds a matching tag, it uses that tag to create a folder.
 
 This setting lets you categorize files with specific tags separately.
-
-

@@ -6,7 +6,7 @@ The downloader includes several convenience features to improve operational effi
 
 On a work page, the downloader adds a quick download button on the right side of the page, as shown below:
 
-![](images/2021-11-07_192054.png)
+![](../publicImages/2021-11-07_192054.png)
 
 Click it to download the current work with one click (without opening the downloader's settings panel).
 
@@ -56,7 +56,7 @@ When hovering over a work's thumbnail, the downloader displays a larger preview 
 
 While previewing, press the `C` key to download the currently previewed image, or press `D` to download the entire work.
 
-See detailed explanation: [Preview works](/en/Settings-Enhance/Preview?id=preview-works)
+See detailed explanation: [setting:75]
 
 ## Long press the right mouse button on the thumbnail to display the large image
 
@@ -64,13 +64,13 @@ With this feature, you can view the original image of a work directly without vi
 
 If you want to quickly copy the original image of a work (without downloading), you can use this feature: after the original image is displayed, right-click the mouse and select "Copy Image".
 
-See detailed explanation: [Long press the right mouse button on the thumbnail to display the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-the-thumbnail-to-display-the-large-image)
+See detailed explanation: [setting:76]
 
 ## Show zoom button on thumbnail
 
 When the mouse hovers over a work thumbnail, the downloader displays a magnifier icon on the thumbnail, as shown below:
 
-![](images/20250910_235026.png)
+![](../publicImages/20250910_235026.png)
 
 Click the magnifier icon to open the image viewer and view every image in the work.
 
@@ -78,7 +78,7 @@ Click the magnifier icon to open the image viewer and view every image in the wo
 
 When the mouse hovers over the work thumbnail, the downloader will display a copy button on the thumbnail, as shown in the following image:
 
-![](images/20251025_021622.png)
+![](../publicImages/20251025_021622.png)
 
 Clicking the copy button allows you to copy both the images and text summary of the work at the same time, then paste them into other software to save, or share with others.
 
@@ -88,7 +88,7 @@ View detailed instructions: [Copy work info](/en/Settings-Enhance/Other?flag=89)
 
 When the mouse hovers over a work thumbnail, the downloader displays a download button on the thumbnail, as shown below:
 
-![](images/20250907_171359.webp)
+![](../publicImages/20250907_171359.webp)
 
 Click the download button to download the work.
 
@@ -98,7 +98,7 @@ See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhan
 
 The downloader includes a built-in image viewer, as shown below:
 
-![](images/20260830_174657.webp)
+![](../publicImages/20260830_174657.webp)
 
 ?> If the work contains multiple images, the downloader displays thumbnails of all images at the bottom. Click a thumbnail to view its full-size image.
 
@@ -148,7 +148,7 @@ When on a **multi-image work** page (e.g., [134821751](https://www.pixiv.net/art
 
 You can preview or download each image.
 
-See detailed explanation: [Show thumbnail list on multi-image work pages](/en/Settings-Enhance/Thumbnails?id=show-thumbnail-list-on-multi-image-work-pages)
+See detailed explanation: [setting:80]
 
 ## Add Quick Search Area on Search Pages
 
@@ -178,7 +178,7 @@ On user profile and search pages, the "More" tab includes a button:
 
 Click it to add all works on the current page to your bookmarks.
 
-See detailed explanation: [Bookmark all works on this page](/en/Buttons-Extra-features/User-page?id=bookmark-all-works-on-this-page)
+See detailed explanation: [button:bookmarkAllWorksOnPage]
 
 ## Manage Your Bookmarks
 

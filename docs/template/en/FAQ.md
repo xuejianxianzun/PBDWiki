@@ -49,7 +49,7 @@ If you do not want to change the browser's file save location, you can manually 
 
 Use a slash `/` in the naming rule, and the part before the slash will be used as the folder name.
 
-See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=Creating-Folders)
+See detailed instructions: [setting:32?id=Creating Folders]
 
 ## Why Wasn't a Folder Created?
 
@@ -60,7 +60,7 @@ The default naming rule, `pixiv/{user}-{user_id}/{id}-{title}`, creates folders;
 If no folders are created after downloading files (and the files are saved directly in the browser's download directory), check the following:
 - Did you change the naming rule and omit slashes `/` for creating folders? If so, add slashes `/` to create folders.
 - If the downloaded filenames are abnormal and the downloader displays a "Filename abnormal" notification, resolve the filename issue as instructed.
-- You may have enabled [Save file to the user's last selected location](/en/Settings-Download/Download-behavior?id=save-file-to-the-user39s-last-selected-location) in "Download behavior." If so, disable it.
+- You may have enabled [setting:60] in "Download behavior." If so, disable it.
 
 ## How to Save All Works of an Artist/User to the Same Folder
 
@@ -87,7 +87,7 @@ Downloads
 │          99276627_p1.png
 ```
 
-Please check this setting: [Add a folder layer for multi-image works](/en/Settings-Naming/Adjust-folders?id=add-a-folder-layer-for-multi-image-works).
+Please check this setting: [setting:41].
 
 ## Crawling Completed, but No Works Match the Filter Conditions
 
@@ -121,7 +121,7 @@ This is because some works may contain multiple images. In other words, one work
 
 If the downloaded file names are a string of incomprehensible characters, like this:
 
-![](images/20211112162142.jpg)
+![](../publicImages/20211112162142.jpg)
 
 Please check: [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
 
@@ -155,7 +155,7 @@ If the download is not complete, the downloader can use the saved data to resume
 
 *How to avoid downloading works that have already been downloaded?*
 
-You can enable the [Don't download duplicate files](/en/Settings-Download/Download-records?id=don39t-download-duplicate-files) feature.
+You can enable the [setting:63] feature.
 
 In some cases, you can also consider using incremental updates to only crawl recently posted works. See the [Incremental Updates](/en/Usage-Tips?id=incremental-updates) section on the "Tips" page.
 
@@ -324,7 +324,7 @@ If the naming rule does not include `{id}` or `{p}`, watch out for potential dup
 
 Most operating systems have a file name length limit of 255 characters. If the file name exceeds this limit, the browser may not save the file and will display a "Save As" dialog for user action.
 
-If you encounter this issue, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
+If you encounter this issue, enable the [setting:39] feature to set a file name length limit.
 
 **Reason 4**: The browser's download location may be invalid, preventing the browser from saving files and causing it to display a "Save As" dialog.
 
@@ -339,7 +339,7 @@ Here, "invalid" can refer to several situations, for example:
 
 *File name too long/File name exceeds limit*
 
-If you cannot save files due to overly long file names, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
+If you cannot save files due to overly long file names, enable the [setting:39] feature to set a file name length limit.
 
 ## Why Do Downloaded Images Open Automatically?
 
@@ -357,11 +357,11 @@ If there is a checkmark ✔ in front of it, this feature is enabled. Click it ag
 
 *Not automatically starting download*
 
-If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) feature.
+If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [setting:93] feature.
 
 ## Date Format Error!
 
-This occurs because the time format entered in the [Posting time](/en/Settings-Crawl/Work-data?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
+This occurs because the time format entered in the [setting:14] setting is incorrect, causing the downloader to display the error `Date format error!`.
 
 As shown below, the value on the left is incorrect because it does not include the time:
 
@@ -379,7 +379,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawling/HomePage?id=type-id-to-crawl) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [button:crawlById] feature or similar functions.
 
 ## Browser Freezes While Running
 
@@ -411,7 +411,7 @@ Set the "Time range" to "All time", select "Download history", and click "Delete
 
 If the browser's download history is too much, the browser may freeze (unresponsive) in the above two scenarios. You can close the browser (if the browser is unresponsive, you can force close it), then use Everything to search for files named history, and sort by file size. As shown in the figure:
 
-![](images/20251025_024359.png)
+![](../publicImages/20251025_024359.png)
 
 Find the history file that is relatively large in size, and the path contains the browser name (Chrome or Edge), located in the User Data directory, and delete it directly. This clears the browser's download history.
 
@@ -431,7 +431,7 @@ See: [Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-craw
 
 This issue typically occurs in the file manager on Android systems.
 
-You can enable the [Add 0 in front of the serial number](/en/Settings-Naming/Serial?id=add-0-in-front-of-the-serial-number) feature to resolve this issue.
+You can enable the [setting:48] feature to resolve this issue.
 
 ## How to Sort Downloaded Files in the Same Order as on the Webpage
 
@@ -439,7 +439,7 @@ You can enable the [Add 0 in front of the serial number](/en/Settings-Naming/Ser
 
 How to keep downloaded works in the same order as on the webpage?
 
-See: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+See: [setting:32?id=Sorting with Naming Tags].
 
 ## How to Sort Downloaded Bookmarked Works by Bookmark Order
 
@@ -447,7 +447,7 @@ When downloading bookmarked works, how to make the downloaded files match the bo
 
 This issue arises because the sorting of bookmarked works is not based on work IDs but on the time you bookmarked them. If the file name starts with the work ID, it will not match the bookmark order.
 
-You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [setting:32?id=Sorting with Naming Tags].
 
 ## Pixiv Returned Empty Data
 
@@ -477,7 +477,7 @@ This restriction lasts a few minutes. During this time, the downloader cannot cr
 
 When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
 
-Additionally, the downloader now enables the [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+Additionally, the downloader now enables the [setting:28] feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
 --------
 
@@ -501,4 +501,4 @@ See detailed instructions: [Risk of Account Ban](/en/Risk-of-Account-Ban).
 
 If you cannot open EPUB novels generated by the downloader, try using a different novel reader.
 
-You can check [Some Novel Readers](/en/Settings-Download/Novels?id=some-novel-readers).
+You can check [setting:67?id=Some Novel Readers].

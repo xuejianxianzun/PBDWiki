@@ -2,7 +2,6 @@
 
 <button id="importCrawlResults" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导入抓取结果">Import results</span><span class="ripple"></span></button>
 
-
 You can use this button to import crawl results, designed to work with the "Export results" button.
 
 If you import crawl results, the downloader skips the crawling phase and directly downloads the files within.
@@ -20,7 +19,6 @@ When importing crawl results, the downloader applies most filter conditions, rem
 
 <button id="exportCrawlResultsJSON" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出抓取结果">Export results</span><span class="ripple"></span></button>
 
-
 Clicking this button exports the current crawl results as a JSON file, saved to the browser's download directory.
 
 ?> The crawl results exported by this button can be imported using the "Import results" button to resume downloading. However, CSV files exported by the "Export CSV File" button cannot be used to resume downloading.
@@ -31,7 +29,7 @@ Clicking this button exports the current crawl results as a JSON file, saved to 
 - Data in crawl results is not updated. Some works may change after exporting (e.g., the author modifies content, tags, or bookmark counts increase). The downloader does not update this data.
 - Crawl results do not include data for these naming rules: `{page_title}`, `{page_tag}`, `{task_date}`. After importing, the downloader generates these tags based on the current page's information, which may differ from the content at the time of export. If you do not use these naming rules, this is not an issue. If you do, it's best to export and import crawl results on the same URL.
 - If there are many crawl results (e.g., hundreds of thousands), exporting may cause the page to lag temporarily, during which operations are unavailable.
-- To make the downloader automatically export crawl results after crawling, use the [Automatically Export results](/en/Settings-Crawl/Execution-strategy?id=automatically-export-crawl-results) function.
+- To make the downloader automatically export crawl results after crawling, use the [Automatically export crawl results](/en/Settings-Filter/Execution-strategy?id=automatically-export-crawl-results) function.
 
 **Possible Use Cases**:
 - If you have a large number of crawl results, export them as a backup. If an issue occurs during downloading and recovery is not possible, you can import the crawl results to restart downloading.
@@ -43,28 +41,26 @@ Clicking this button exports the current crawl results as a JSON file, saved to 
 
 <button id="exportCrawlResultsCSV" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导出csv">Export CSV file</span><span class="ripple"></span></button>
 
-
 Clicking this button exports the current crawl results as a CSV file, saved to the browser's download directory.
 
 The file content may look like this:
 
-![](../images/20250906_225125.png)
+![](../../template/publicImages/20250906_225125.png)
 
 **Tips**:
 - The purpose of exporting a CSV file is to allow users to view key data for each work and manipulate the data.
 - A multi-image work may generate multiple files during download but is represented by a single record in the CSV file (using the first image's data) to avoid redundant data.
 - The exported CSV file **cannot** be used to import crawl results. To import crawl results, use the JSON file exported by the "Export results" button.
-- If you only have a CSV file and want to download the works, copy the work IDs from the `id` column and use the [Type ID to crawl](/en/Buttons-Start-crawling/HomePage?id=type-id-to-crawl) function on the Pixiv homepage to re-crawl those works.
-- To make the downloader automatically export crawl results after crawling, use the [Automatically export crawl results](/en/Settings-Crawl/Execution-strategy?id=automatically-export-crawl-results) function.
+- If you only have a CSV file and want to download the works, copy the work IDs from the `id` column and use the [Enter ID to crawl](/en/Buttons-Start-crawling/HomePage?id=enter-id-to-crawl) function on the Pixiv homepage to re-crawl those works.
+- To make the downloader automatically export crawl results after crawling, use the [Automatically export crawl results](/en/Settings-Filter/Execution-strategy?id=automatically-export-crawl-results) function.
 
 ## Preview file name
 
 <button id="previewFileName" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_预览文件名">Preview file name</span><span class="ripple"></span></button>
 
-
 Previews the file names for each crawl result. It looks like this:
 
-![](../images/20250909_233700.png)
+![](../../template/en/images/20250909_233700.png)
 
 The downloader generates a line of text for each crawl result in the format: `Default file name: File name generated by naming rule`, for example:
 
@@ -98,11 +94,9 @@ Execute this command in the file's directory to rename the file.
 
 <button id="copyURLs" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_复制url">Copy URLs</span><span class="ripple"></span></button>
 
-
-
 Clicking this button outputs the URLs from the crawl results. It looks like this:
 
-![](../images/20250909_233605.png)
+![](../../template/en/images/20250909_233605.png)
 
 Click the "Copy" button to copy the content to the clipboard.
 
@@ -116,5 +110,3 @@ The downloader only outputs URLs for images in the crawl results. Other cases ar
 - Some files are not in the crawl results, so their URLs are not output. This includes two cases: 1. Some functions generate additional files, e.g., saving work descriptions or metadata, created dynamically during downloading. 2. Novel cover images or embedded images are not independent crawl results but auxiliary data for novels.
 
 ?> If there are too many crawl results, for performance reasons, the downloader saves the output to a TXT file in the browser's download directory.
-
-

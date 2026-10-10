@@ -30,7 +30,7 @@ Powerful Pixiv Downloader is a browser extension designed for batch downloading 
 
 ## Screenshots
 
-![PixivBatchDownloader screenshot](images/ui-en-1.png)
+![PixivBatchDownloader screenshot](../template/en/images/ui-en-1.png)
 
 ## Supported Pages
 

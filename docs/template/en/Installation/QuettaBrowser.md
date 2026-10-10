@@ -41,7 +41,7 @@ Now you can use the downloader. Most of its features are the same as on PC, and 
 - Since the browser does not create folders, only the last segment of the downloader's naming rules takes effect. For example, the default naming rule is `pixiv/{user}-{user_id}/{id}-{title}`, but in practice only `{id}-{title}` takes effect. If you modify the naming rules, you need to make sure the last segment contains `{id}`, which is the unique identifier of each file on pixiv and can avoid works with different IDs producing the same file name.
 - On PC, when the downloader saves the same file again, it overwrites the old file. However, mobile browsers save files with the same name and add a sequence number, for example:
 
-![](../images/20250827_232639.png)
+![](../../publicImages/20250827_232639.png)
 
 - On the mobile web page, some enhancement features of the downloader are unavailable or affected, such as previewing works.
 - If your device is in landscape orientation (e.g., a tablet), you can try enabling desktop mode in the browser's menu to improve the downloader experience. This is because the downloader interface has a lot of content, which is inefficient and not a good experience in portrait mode.
@@ -56,9 +56,9 @@ If you start crawling all works from the first page, there is no impact. But if 
 
 Here is an example. A user currently has 31,544 bookmarks, which is 658 pages on PC, but 1753 pages on mobile:
 
-![](../images/20250929_231049.webp)
+![](../../publicImages/20250929_231049.webp)
 
-![](../images/20250929_231038.webp)
+![](../../publicImages/20250929_231038.webp)
 
 **Possible impacts:**
 

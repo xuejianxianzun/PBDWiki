@@ -1,6 +1,6 @@
-## Crawl this ranking's works
+## Crawl works on this ranking
 
-<button id="crawlRankingWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_抓取本排行榜作品Title" title="Crawl all of the works in this list, including those that are not yet loaded."><span data-xztext="_抓取本排行榜作品">Crawl this ranking's works</span><span class="ripple"></span></button>
+<button id="crawlRankingWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_抓取本排行榜作品Title" title="Crawl all of the works in this ranking, including those that are not yet loaded."><span data-xztext="_抓取本排行榜作品">Crawl works on this ranking</span><span class="ripple"></span></button>
 
 Crawls works in this ranking.
 

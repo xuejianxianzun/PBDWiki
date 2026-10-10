@@ -2,7 +2,7 @@
 
 After installing this extension, open a Pixiv web page, and you will see a blue button on the right:
 
-![](images/2021-11-07_192344.png)
+![](../publicImages/2021-11-07_192344.png)
 
 Click this button to open the downloader's settings panel and start crawling and downloading.
 
@@ -79,13 +79,13 @@ There are multiple ways to open and close the settings panel.
 
 1. Click the button on the right side of the web page to open the settings panel:
 
-![](images/2021-11-07_192344.png)
+![](../publicImages/2021-11-07_192344.png)
 
 Click the close button in the top-right corner of the settings panel to close it.
 
 2. Click the extension's icon to toggle the settings panel's open/closed state:
 
-![](images/20250911_000723.png)
+![](../publicImages/20250911_000723.png)
 
 !> If the current tab is not a pixiv.net web page, clicking the extension icon has no effect, because this extension only works on pixiv.net.
 

@@ -1,6 +1,6 @@
-## Start crawl
+## Start crawling
 
-<button id="startCrawlingInFollowingPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_默认下载多页" title="Start crawl, if there are multiple pages, the default will be downloaded."><span data-xztext="_开始抓取">Start crawl</span><span class="ripple"></span></button>
+<button id="startCrawlingInFollowingPage" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand" data-xztitle="_默认下载多页" title="Start crawling. If there are multiple pages, all will be downloaded by default."><span data-xztext="_开始抓取">Start crawling</span><span class="ripple"></span></button>
 
 Clicking this button makes the downloader crawl all works of users in the current subpage (followed users, friends, or fans).
 

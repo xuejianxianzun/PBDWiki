@@ -1,17 +1,12 @@
 ## Remove Emoji from filename
 
-<div class="option settingsPanel_optionCard new" data-no="49" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="49" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Remove-special-characters?flag=49" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_移除文件名里的emoji">Remove <span class="key">Emoji</span> from filename</span>
   </a>
   <input type="checkbox" name="removeEmoji" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
-
+</div>
 
 Usernames and work titles often contain emoji. If you do not want emoji to appear in filenames, you can enable this setting.
 
@@ -26,8 +21,6 @@ Usernames and work titles often contain emoji. If you do not want emoji to appea
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-
-
 Some users add an @ suffix to their usernames, for example:
 
 - Anmi@画集発売中
@@ -41,4 +34,3 @@ If you want to remove the @ and subsequent text, enable this option. This will c
 - Anmi
 - 奥馬
 - TonyG
-

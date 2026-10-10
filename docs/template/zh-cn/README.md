@@ -1,6 +1,6 @@
 # Powerful Pixiv Downloader Wiki
 
-![image](./images/logo128.png)
+![image](../images/logo128.png)
 
 这是 [Powerful Pixiv Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader) 的 Wiki。
 

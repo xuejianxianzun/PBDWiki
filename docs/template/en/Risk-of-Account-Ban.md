@@ -41,8 +41,8 @@ When you need to crawl and download more than a few thousand works, there are so
 ### Slow Down
 
 The downloader has settings to reduce the likelihood of warnings:
-- By default, the downloader [slows down crawling](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawl). When crawling many works, it sends requests at intervals.
-- When downloading many files, you can set the [Download interval](/en/Settings-Download/Download-behavior?id=download-interval) to reduce download frequency.
+- By default, the downloader [setting:28]. When crawling many works, it sends requests at intervals.
+- When downloading many files, you can set the [setting:56] to reduce download frequency.
 
 The above two settings both allow you to customize the interval. If you only crawl and download a few hundred works per day, the default interval is usually safe.
 
@@ -105,13 +105,13 @@ If you already clicked the "Stop Download" button, click the "Export Crawl Resul
 
 After logging in to a new Pixiv account, you can import the crawl results to download these files again.
 
-See details: [Export results](/en/Buttons-Download-area/Crawl-results?id=export-results)
+See details: [button:exportCrawlResultsJSON]
 
 ## How to Export Your Following List After Your Account Is Banned
 
 When your account is working normally, you can export (back up) your following list as follows:
 
-Go to your following page, open the downloader panel, and click the [Export followed users list (JSON)](/en/Buttons-Extra-features/Following-page?id=export-followed-users-list-json) button in the "Extra features" area.
+Go to your following page, open the downloader panel, and click the [button:exportFollowingListJSON] button in the "Extra features" area.
 
 You can choose to export in CSV or JSON format, or export both. To restore your following list in the future, you need to use the JSON format.
 
@@ -131,13 +131,13 @@ Enter `12` in the input field at the bottom and click the Confirm button. The do
 
 Open this JSON file with a code editor. The `following` array contains your following list, as shown below:
 
-![Cached following list](images/20260913_005458.png)
+![Cached following list](../publicImages/20260913_005458.png)
 
 Note: If you have logged in to multiple Pixiv accounts in this browser, the downloader may have saved following lists for multiple accounts. You can distinguish them by `user` (your user ID) and `total` (the total number of followed users).
 
 Both the `followedUsersInfo` and `following` arrays can be used to restore your following list. You can choose either one. Using `following` as an example, select its contents (from `[` to `]`, excluding the final comma `,`):
 
-![Cached following list data](images/20260913_005955.png)
+![Cached following list data](../publicImages/20260913_005955.png)
 
 Then copy the selected content, create a new file, paste it, and save it as a file with the `.json` extension. You may choose any file name. This is your following list.
 
@@ -146,4 +146,4 @@ If you do not have a code editor, you can also try asking an AI to extract the d
 To restore the following list in a new account:
 - Log in to the new account.
 - Go to the following page.
-- Click the [Follow users in batches (JSON)](/en/Buttons-Extra-features/Following-page?id=follow-users-in-batches-json) button in "Extra features" and select the JSON file you just saved.
+- Click the [button:batchFollowUser] button in "Extra features" and select the JSON file you just saved.

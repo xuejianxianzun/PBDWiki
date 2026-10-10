@@ -2038,6 +2038,47 @@
 .centerWrap.xzBG .saveNamingRuleWrap .namingRuleList {
   text-shadow: none;
 }
+.secondary_hint {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+  max-width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 9px 12px;
+  border: 1px solid var(--settings-panel-tip-card-border);
+  border-radius: var(--settings-panel-control-radius);
+  background: var(--settings-panel-tip-card-bg);
+  color: var(--settings-panel-tip-card-text);
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.secondary_hint.is-hidden {
+  display: none;
+}
+.option .secondary_hint {
+  margin-top: 4px;
+}
+.longTextButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: var(--settings-panel-input-radius);
+}
+.longTextButton::before {
+  content: 'ⓘ';
+  color: var(--settings-panel-section-icon-color);
+}
+.longTextButton:hover,
+.longTextButton:focus-visible {
+  background: var(--settings-panel-section-icon-bg);
+}
+.longTextButton:focus-visible {
+  outline: 1px solid var(--settings-panel-section-icon-color);
+  outline-offset: 1px;
+}
 .option > a .key,
 .optionName .key {
   color: var(--beautify-blue);
@@ -2089,6 +2130,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+.tip.namingTipArea {
+  border: none !important;
+}
+.tip.namingTipArea::before {
+  content: none !important;
 }
 body {
   position: relative;

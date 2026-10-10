@@ -5,7 +5,7 @@
     <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=32" target="_blank" class="settingNameStyle optionName" data-xztext="_图像作品的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for image works</a>
     <span class="fileNameRuleBtnsArea">
       <slot data-name="saveNamingRuleForArtwork"><div class="saveNamingRuleWrap theme-white">
-    <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
+    <button class="has_tip nameSave textButton" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
     <button class="nameLoad textButton" type="button" data-xztext="_加载">Load</button>
   </div></slot>
       <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#fileNameTip" data-for-no="32" data-xztext="_提示">Tip</button>
@@ -19,6 +19,8 @@
 <option value="{user_id}">{user_id}</option>
 <option value="{title}">{title}</option>
 <option value="{page_title}">{page_title}</option>
+<option value="{page_type}">{page_type}</option>
+<option value="{page_id}">{page_id}</option>
 <option value="{tags}">{tags}</option>
 <option value="{tags_translate}">{tags_translate}</option>
 <option value="{tags_transl_only}">{tags_transl_only}</option>
@@ -29,6 +31,7 @@
 <option value="{type_ugoira}">{type_ugoira}</option>
 <option value="{type_novel}">{type_novel}</option>
 <option value="{AI}">{AI}</option>
+<option value="{human}">{human}</option>
 <option value="{age}">{age}</option>
 <option value="{age_r}">{age_r}</option>
 <option value="{like}">{like}</option>
@@ -53,14 +56,12 @@
       </select>
     </span>
   </span>
-  <ul class="namingRuleList artwork"><li>
-      <span class="rule">pixiv/{user}-{user_id}/{id}-{title}</span>
-      <button class="delete textButton" type="button" data-index="0">×</button>
-    </li><li>
-      <span class="rule">pixiv/书签-{task_date}/{bmk_id}-{id}-{title}</span>
-      <button class="delete textButton" type="button" data-index="1">×</button>
-    </li></ul>
+  <ul class="namingRuleList artwork"></ul>
   <textarea class="centerPanelTextArea beautify_scrollbar grow fileNameRule" name="userSetName" rows="1" placeholder="pixiv/{user}-{user_id}/{id}-{title}">pixiv/{user}-{user_id}/{id}-{title}</textarea>
+  <div class="secondary_hint is-hidden mb4" id="tipNameRuleMustHaveIndex">
+    <span data-xztext="_提示命名规则里必须有序号">To prevent duplicate file names, file names must contain a serial number. This means the naming rule must contain <span class="blue name">{id}</span>, or a combination of <span class="blue name">{pid}</span> and <span class="blue name">{p}</span>.<br>
+    Also, if you do not want single image works to have a serial number, you can select "Single image works" in the "Serial number" - "The first image without a serial number" setting below.</span>
+  </div>
   <p class="tip fileNameTip namingTipArea" id="fileNameTip">
     <span data-xztext="_命名标记的提示">The naming rule sets the names of folders and files. A naming rule can consist of 3 parts:<br>
 - Special tokens, such as <span class="blue name" data-bind-copy="true">{id}</span>, <span class="blue name" data-bind-copy="true">{user}</span>, <span class="blue name" data-bind-copy="true">{title}</span>, etc. Each token may output some characters. The meaning of each token is described below.<br>
@@ -70,12 +71,13 @@
 Notes on creating folders:<br>
 - If you want to create a folder for each work, add a folder level before the file name. Using the work ID <span class="blue name" data-bind-copy="true">{pid}</span> as the folder name is a common choice, for example: <span class="blue">pixiv/{user}/{pid}/{id}</span>. Of course, you can use other tokens based on your needs.<br>
 - If you want to put AI-generated works in a separate folder, use the <span class="blue name" data-bind-copy="true">{AI}</span> token, for example: <span class="blue">pixiv/{user}/{AI}/{id}</span><br>
+- Use <span class="blue">pixiv/{pid}/{p}</span> and select "Single image works" in the "Serial number" - "The first image without a serial number" setting below. This way, the file name of a single image work is <span class="blue">{pid}</span> (without a serial number), while multi-image works get a folder and their files are saved with serial numbers.<br>
 - If you want to create folders by work type, use the <span class="blue name" data-bind-copy="true">{type}</span> token, for example: <span class="blue">pixiv/{user}/{type}/{id}</span><br>
 <br>
 Tips:<br>
 - * Some tokens are not always available and may be empty strings — the downloader will ignore them.<br>
-- If you want to use the work's ID in a folder name, use <span class="blue name" data-bind-copy="true">{pid}</span> instead of <span class="blue name" data-bind-copy="true">{id}</span>. Since each image has a different ID, using <span class="blue name" data-bind-copy="true">{id}</span> would create a separate folder for each image.<br>
-- To prevent duplicate file names, the file name must contain <span class="blue name" data-bind-copy="true">{id}</span>. If you don't want to use <span class="blue name" data-bind-copy="true">{id}</span>, you must include both <span class="blue name" data-bind-copy="true">{pid}</span> and <span class="blue name" data-bind-copy="true">{p}</span>.<br>
+- To prevent duplicate file names, file names must contain a serial number. This means the naming rule must contain <span class="blue name" data-bind-copy="true">{id}</span>, or a combination of <span class="blue name" data-bind-copy="true">{pid}</span> and <span class="blue name" data-bind-copy="true">{p}</span>. Also, if you do not want single image works to have a serial number, you can select "Single image works" in the "Serial number" - "The first image without a serial number" setting below.<br>
+- If you want to use the work's ID in a folder name, use <span class="blue name" data-bind-copy="true">{pid}</span> instead of <span class="blue name" data-bind-copy="true">{id}</span>. Since the ID of each image is different (it contains a serial number), using <span class="blue name" data-bind-copy="true">{id}</span> would create a separate folder for each image.<br>
 <br>
 List of naming tokens:<br>
 Tip: Click a token name to copy it.<br></span>
@@ -86,7 +88,7 @@ Tip: Click a token name to copy it.<br></span>
       <span data-xztext="_命名标记pid">The numeric ID of the work, excluding the sequence number, for example <span class="blue">85633671</span>.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{p}</span>
-      <span data-xztext="_命名标记p">The sequence number of the image within the work, for example <span class="blue">0</span>, <span class="blue">1</span>, <span class="blue">2</span> ... Each work will recount. Novel works do not have this property, and the downloader will ignore it.</span>
+      <span data-xztext="_命名标记p">The sequence number of the image within the work, for example <span class="blue">0</span>, <span class="blue">1</span>, <span class="blue">2</span> ... Each work will recount. Novel works do not have this property, and the downloader will ignore it. In addition, if you have enabled "The first image without a serial number" in the "Serial" setting, then <span class="blue">{p}</span> will also be ignored when downloading works of the corresponding type.</span>
       <br>
 <span class="blue name" data-bind-copy="true">{user}</span>
       <span data-xztext="_命名标记user">User name</span>
@@ -95,16 +97,22 @@ Tip: Click a token name to copy it.<br></span>
       <span data-xztext="_用户id">User ID (Number)</span>
       <br>
 <span class="blue name" data-bind-copy="true">{title}</span>
-      <span data-xztext="_命名标记title">Works title</span>
+      <span data-xztext="_命名标记title">Work title</span>
       <br>
 <span class="blue name" data-bind-copy="true">{page_title}</span>
-      <span data-xztext="_命名标记page_title">Page title when starting the scrape</span>
+      <span data-xztext="_命名标记page_title">Page title when starting the crawl</span>
+      <br>
+<span class="blue name" data-bind-copy="true">{page_type}</span>
+      <span data-xztext="_命名标记page_type">Page type name when starting the crawl, such as <span class="blue">Artwork</span>, <span class="blue">UserHome</span>, and <span class="blue">Bookmark</span>. These are page types categorized internally by the downloader, and there are more than twenty of them. Sometimes the categories are broad; for example, the home page has subcategories such as illustrations, manga, and novels, but the type name for all of them is <span class="blue">Home</span>.</span>
+      <br>
+* <span class="blue name" data-bind-copy="true">{page_id}</span>
+      <span data-xztext="_命名标记page_id">Page ID when starting the crawl. It is designed to use the page ID to group multiple works on that page. For example, when crawling related works on a work page, this token outputs the work ID of that page (there is only one), rather than each work's own ID (there are multiple). It only has a value in the following cases: 1. On a work page, it outputs the work ID of that page. 2. On a user's page, bookmark page, or following page, it outputs the user ID of that page. 3. On a series page, it outputs the series ID.</span>
       <br>
 <span class="blue name" data-bind-copy="true">{tags}</span>
       <span data-xztext="_命名标记tags">The tags of the work</span>
       <br>
 <span class="blue name" data-bind-copy="true">{tags_translate}</span>
-      <span data-xztext="_命名标记tags_trans">The tag list of the work, without translated tags</span>
+      <span data-xztext="_命名标记tags_trans">The tag list of the work, with translated tags included</span>
       <br>
 <span class="blue name" data-bind-copy="true">{tags_transl_only}</span>
       <span data-xztext="_命名标记tags_transl_only">Translated tags</span>
@@ -129,6 +137,9 @@ Tip: Click a token name to copy it.<br></span>
       <br>
 * <span class="blue name" data-bind-copy="true">{AI}</span>
       <span data-xztext="_命名标记AI">If the work is AI-generated, output <span class="blue">AI</span>; otherwise, ignore it.</span>
+      <br>
+* <span class="blue name" data-bind-copy="true">{human}</span>
+      <span data-xztext="_命名标记human">If the work is not AI-generated, output <span class="blue">Human</span>; otherwise, ignore it.</span>
       <br>
 <span class="blue name" data-bind-copy="true">{age}</span>
       <span data-xztext="_命名标记age">The age restriction of the work is divided into: <span class="blue">All Ages</span>, <span class="blue">R-18</span>, <span class="blue">R-18G</span></span>
@@ -161,7 +172,7 @@ Tip: Click a token name to copy it.<br></span>
       <span data-xztext="_命名标记upload_date">The time when the content of the work was last modified. Such as <span class="blue">2019-08-30</span>.</span>
       <br>
 <span class="blue name" data-bind-copy="true">{task_date}</span>
-      <span data-xztext="_命名标记taskDate">The time when the task was crawl completed. For example: <span class="blue">2020-10-21</span></span>
+      <span data-xztext="_命名标记taskDate">The time when the task crawl was completed. For example: <span class="blue">2020-10-21</span></span>
       <br>
 * <span class="blue name" data-bind-copy="true">{px}</span>
       <span data-xztext="_命名标记px">The width and height of the original image. For example: <span class="blue">600x900</span>. Novel works do not have this property, and the downloader will ignore it.</span>
@@ -182,7 +193,7 @@ Tip: Click a token name to copy it.<br></span>
       <span data-xztext="_命名标记_sl">The sanity_level property of image works has a value of one of the following numbers: <span class="blue">0</span>, <span class="blue">2</span>, <span class="blue">4</span>, <span class="blue">6</span>. Novel works do not have this property and will ignore this marker.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{multi_image_folder}</span>
-      <span data-xztext="_命名标记_multi_image_folder">It represents the folder rule set in "Add a folder layer for multi-image works". If you have enabled this setting, the downloader will replace it with the folder rule you set when creating the filename for multi-image works. Non-multi-image works will ignore this marker.</span>
+      <span data-xztext="_命名标记_multi_image_folder">It represents the folder rule set in "Add a folder layer for multi-image works". If you have enabled this setting, the downloader will replace it with the folder rule you set when creating the file name for multi-image works. Works that are not multi-image works (single image works, Ugoira, novels) will ignore this marker.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{r18_g_folder}</span>
       <span data-xztext="_命名标记_r18_g_folder">It represents the folder rule set in "Add a folder layer for R-18(G) works". If you have enabled this setting, the downloader will replace it with the folder rule you set when generating the filename for R-18(G) works. Non R-18(G) works will ignore this marker.</span>
@@ -193,6 +204,30 @@ Tip: Click a token name to copy it.<br></span>
 * <span class="blue name" data-bind-copy="true">{match_tag_folder2}</span>
       <span data-xztext="_命名标记_match_tag_folder2">This is the match result of the second tag list in "Create folder using the first matching tag". If you have enabled this setting and a matching tag is found, it will output that tag; otherwise it will be ignored.</span>
       <br>
+  </p>
+  <p>
+    <button type="button" class="showFileNameTip textButton toggleArea longTextButton" data-toggle-target="#tipOptionalSegment" data-for-no="32" data-xztext="_小技巧_可选片段">Tip: Optional segments</button>
+  </p>
+  <p class="tip fileNameTip namingTipArea" id="tipOptionalSegment">
+    <span data-xztext="_可选片段的说明">Some naming tags may have no value in certain cases. For example, if a work is not part of a series, <span class="blue">{series_title}</span> outputs nothing.<br>
+  In this case, custom text or symbols placed next to the tag may remain even when the tag has no value. For example:<br>
+  - <span class="blue">Series: {series_title}</span> - If there is no series title, <span class="blue">Series:</span> remains<br>
+  - <span class="blue">{rank}-{id}</span> - If no ranking is available, an extra hyphen <span class="blue">-</span> may remain<br>
+  <br>
+  To omit unneeded characters, you can create an optional segment. Enclose a naming tag that may be empty, along with related characters, in <span class="blue">[]</span>. For example:<br>
+  - <span class="blue">[Series: {series_title}]</span><br>
+  - <span class="blue">[{rank}-]</span><br>
+  - <span class="blue">[-{p}]</span><br>
+  When a tag has a value, the downloader outputs the content in the segment, but not <span class="blue">[]</span>.<br>
+  When a tag has no value, the downloader ignores the entire segment, so no extra characters are left behind.<br>
+  <br>
+  Notes:<br>
+  - Use optional segments only for naming tags that may have no value. Some tags always have a value, such as <span class="blue">{id}</span> and <span class="blue">{user}</span>, and do not need optional segments.<br>
+  - Each <span class="blue">[]</span> should contain only 1 naming tag. Do not put multiple tags in one segment, as the downloader may still keep extra characters.<br>
+  - You can use multiple optional segments when needed. For example: <span class="blue">[SeriesID={series_id}][ {series_title}]</span>.<br>
+  - If <span class="blue">[]</span> contains no naming tag, it is treated as ordinary characters and output as is.<br>
+  - If <span class="blue">[]</span> contains a naming tag but you also want <span class="blue">[]</span> in the result, use two layers of <span
+  class="blue">[]</span>. For example, <span class="blue">[[{id}]] </span> produces <span class="blue">[143623396_p0]</span>. The inner <span class="blue">[]</span> is the optional segment, and the outer <span class="blue">[]</span> is kept as is.</span>
   </p>
 </div>
 
@@ -221,7 +256,7 @@ The default naming rule `pixiv/{user}-{user_id}/{id}-{title}` creates two levels
 
 Example effect:
 
-![](../images/20250910_200313.png)
+![](../../template/en/images/20250910_200313.png)
 
 ?> The `/` is not mandatory. If you don't want to create folders, you can omit the `/`. For example, setting the naming rule to `{id}` saves files directly to the browser's download directory without creating subfolders.
 
@@ -288,7 +323,7 @@ On most pages, works are sorted by work ID in descending order. Later-posted wor
 
 `{id}` (work ID) is incremental. Using `{id}` at the start of the filename and sorting files by ID in descending order aligns with the webpage's order. For example:
 
-![](../images/20250830_225311.png)
+![](../../template/publicImages/20250830_225311.png)
 
 `{date}` (posting time) has a similar effect.
 
@@ -298,11 +333,11 @@ On most pages, works are sorted by work ID in descending order. Later-posted wor
 
 For example, this is the webpage order:
 
-![](../images/20250907_175541.webp)
+![](../../template/publicImages/20250907_175541.webp)
 
 This is the effect of sorting with `{bmk_id}`:
 
-![](../images/20250907_175520.webp)
+![](../../template/publicImages/20250907_175520.webp)
 
 #### Tags Reflecting Quantity
 
@@ -310,20 +345,20 @@ Some tags are numeric, e.g., `{like}`, `{view}`, `{bmk}`, `{bmk_1000}`, `{rank}`
 
 Example: Sorting works by `{bmk}` (bookmark count) in descending order prioritizes high-quality works:
 
-![](../images/20250830_230834.png)
+![](../../template/publicImages/20250830_230834.png)
 
 Example: When downloading from a leaderboard page, sort by `{rank}`:
 
-![](../images/20250830_230636.png)
+![](../../template/publicImages/20250830_230636.png)
 
 ## Naming rule for novels
 
-<div class="option settingsPanel_optionCard new" data-no="33" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="33" data-pin-bound="true" style="display: flex;">
   <span class="fileNameRuleLine1">
     <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=33" target="_blank" class="settingNameStyle optionName" data-xztext="_小说的命名规则" data-bind-click="true"><span class="key">Naming</span> rule for novels</a>
     <span class="fileNameRuleBtnsArea">
       <slot data-name="saveNamingRuleForNovel"><div class="saveNamingRuleWrap theme-white">
-    <button class="nameSave textButton has_tip" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
+    <button class="has_tip nameSave textButton" type="button" data-xztip="_保存命名规则提示" data-xztext="_保存" data-tip="Save naming rule, up to 20">Save</button>
     <button class="nameLoad textButton" type="button" data-xztext="_加载">Load</button>
   </div></slot>
       <button type="button" class="showFileNameTip textButton toggleArea" data-toggle-target="#fileNameTipForNovel" data-for-no="33" data-xztext="_提示">Tip</button>
@@ -337,6 +372,8 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 <option value="{user_id}">{user_id}</option>
 <option value="{title}">{title}</option>
 <option value="{page_title}">{page_title}</option>
+<option value="{page_type}">{page_type}</option>
+<option value="{page_id}">{page_id}</option>
 <option value="{tags}">{tags}</option>
 <option value="{tags_translate}">{tags_translate}</option>
 <option value="{tags_transl_only}">{tags_transl_only}</option>
@@ -347,6 +384,7 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 <option value="{type_ugoira}">{type_ugoira}</option>
 <option value="{type_novel}">{type_novel}</option>
 <option value="{AI}">{AI}</option>
+<option value="{human}">{human}</option>
 <option value="{age}">{age}</option>
 <option value="{age_r}">{age_r}</option>
 <option value="{like}">{like}</option>
@@ -372,20 +410,13 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
       </select>
     </span>
   </span>
-  <ul class="namingRuleList novel"><li>
-      <span class="rule">{follow_artwork}</span>
-      <button class="delete textButton" type="button" data-index="0">×</button>
-    </li></ul>
+  <ul class="namingRuleList novel"></ul>
   <textarea class="centerPanelTextArea beautify_scrollbar grow fileNameRule" name="userSetNameForNovel" rows="1" placeholder="{follow_artwork}">{follow_artwork}</textarea>
   <p class="tip fileNameTip namingTipArea" id="fileNameTipForNovel">
     <span data-xztext="_小说的命名标记的提示">Novels can use the same naming tokens as image works, and there is one special token:<br>
 <span class="blue name" data-bind-copy="true">{follow_artwork}</span> follows the naming rule of image works. It is also the default value, meaning novels use the same naming rule as image works. If you want to set a separate naming rule for novels, remove this token and configure the rule as you like.</span>
   </p>
-<span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-    </span></div>
+</div>
 
 Novels can use the same naming tags as image works, and they also have one special tag:
 
@@ -399,7 +430,6 @@ PS: This setting affects only the filenames of individual novels. It does not af
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=34" target="_blank" class="settingNameStyle" data-xztext="_在不同的页面类型中使用不同的命名规则" data-bind-click="true">Use <span class="key">different</span> naming rules in different page types</a>
   <input type="checkbox" name="setNameRuleForEachPageType" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <button type="button" class="gray textButton showMsgBtn" data-title="_在不同的页面类型中使用不同的命名规则" data-msg="_在不同的页面类型中使用不同的命名规则的帮助" data-xztext="_帮助">Help</button>
 </div>
 
 The "Naming Rule" setting above applies to all pages, meaning the same naming rule is used for all page types.
@@ -420,7 +450,7 @@ For example, if downloading from a user's homepage, don't switch to a search pag
 
 ## Use a different naming rule for the work if it has certain tags
 
-<div class="option settingsPanel_optionCard" data-no="35" data-pin-bound="true">
+<div class="option settingsPanel_optionCard" data-no="35" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=35" target="_blank" class="settingNameStyle" data-xztext="_如果作品含有某些标签则对这个作品使用另一种命名规则" data-bind-click="true">Use a different naming rule for the work if it has certain <span class="key">tags</span></a>
   <input type="checkbox" name="UseDifferentNameRuleIfWorkHasTagSwitch" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -447,6 +477,7 @@ For example, if downloading from a user's homepage, don't switch to a search pag
               <use xlink:href="#yes_submit"></use>
             </svg>
           </button>
+          
           <button type="button" class="textButton cancel" data-xztitle="_取消" title="Cancel">
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#close_cancel"></use>
@@ -455,7 +486,8 @@ For example, if downloading from a user's homepage, don't switch to a search pag
         </div>
       </div>
     </div>
-    <div class="listWrap" style="display: flex;"></div>
+    <div class="listWrap">
+    </div>
   </div></slot>
   </div>
 </div>
@@ -464,7 +496,7 @@ This is a hidden setting.
 
 You can add custom rules, for example:
 
-![](../images/20250904_234610.png)
+![](../../template/publicImages/20250904_234610.png)
 
 If a work contains the specified tags, the downloader uses the folder part from the default naming rule combined with the filename part specified here to create a new naming rule.
 
@@ -514,8 +546,11 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
     * <span class="blue name" data-bind-copy="true">{AI}</span>
     <span data-xztext="_系列小说的命名标记_AI">If this series is AI-generated, output <span class="blue">AI</span>; otherwise, ignore this tag.</span>
     <br>
-    <span class="blue name" data-bind-copy="true">{lang}</span>
-    <span data-xztext="_系列小说的命名标记_lang">The language code of this series, for example <span class="blue">zh-cn</span>, <span class="blue">ja</span>, <span class="blue">en</span>, etc. Note: This is not always accurate, because some authors have not set the correct language.</span>
+    * <span class="blue name" data-bind-copy="true">{human}</span>
+    <span data-xztext="_系列小说的命名标记_human">If this series is not AI-generated, output <span class="blue">Human</span>; otherwise, ignore this tag.</span>
+    <br>
+    <span class="blue name" data-bind-copy="true">{bmk}</span>
+    <span data-xztext="_系列小说的命名标记_bmk">The total number of bookmarks for all novels in this series, it is a number.</span>
     <br>
     <span class="blue name" data-bind-copy="true">{total}</span>
     <span data-xztext="_系列小说的命名标记_total">How many novels this series contains in total, it is a number.</span>
@@ -531,6 +566,9 @@ To prevent duplicate filenames, it is recommended to always add {series_id}.</sp
     <br>
     <span class="blue name" data-bind-copy="true">{task_date}</span>
     <span data-xztext="_系列小说的命名标记_task_date">The time when the downloader starts merging this novel series, for example <span class="blue">2025-11-25</span>.</span>
+    <br>
+    <span class="blue name" data-bind-copy="true">{lang}</span>
+    <span data-xztext="_系列小说的命名标记_lang">The language code of this series, for example <span class="blue">zh-cn</span>, <span class="blue">ja</span>, <span class="blue">en</span>, etc. Note: This is not always accurate, because some authors have not set the correct language.</span>
     <br>
     <span class="blue name" data-bind-copy="true">{first_id}</span>
     <span data-xztext="_系列小说的命名标记_first_id">The ID of the first novel in this series, it is a number.</span>
@@ -566,10 +604,9 @@ For example, if the merged collection file is named `abcd.epub` and the cover im
   <input type="text" name="tagsSeparator" class="setinput_style blue" value=",">
   <button type="button" class="gray textButton toggleArea" data-toggle-target="#tagsSeparatorTip" data-for-no="37" data-xztext="_提示">Tip</button>
   <p class="tip" id="tagsSeparatorTip">
-    <span data-xztext="_标签分隔符号提示">Only affects results for these named tags: <span class="blue">{tags}</span>, <span class="blue">{tags_translate}</span>, <span class="blue">{ tags_transl_only}</span>. <br>Recommended symbols <span class="blue"> , # ^ &amp; _</span></span>
+    <span data-xztext="_标签分隔符号提示">Only affects results for these named tags: <span class="blue">{tags}</span>, <span class="blue">{tags_translate}</span>, <span class="blue">{tags_transl_only}</span>. <br>Recommended symbols <span class="blue"> , # ^ & _</span></span>
   </p>
 </div>
-
 
 This affects only the results of these naming tags: `{tags}`, `{tags_translate}`, `{tags_transl_only}`.
 
@@ -593,7 +630,7 @@ _
 
 <div class="option settingsPanel_optionCard" data-no="38" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=38" target="_blank" class="settingNameStyle" data-xztext="_日期格式" data-bind-click="true">Date and time <span class="key">format</span></a>
-  <input type="text" name="dateFormat" class="setinput_style blue" value="YYYY-MM-DD">
+  <input type="text" name="dateFormat" class="setinput_style blue w200" value="YYYY-MM-DD">
   <button type="button" class="gray textButton toggleArea" data-toggle-target="#dateFormatTip" data-for-no="38" data-xztext="_提示">Tip</button>
   <p class="tip" id="dateFormatTip">
     <span data-xztext="_日期格式提示">You can use the following notation to set the date and time format. This will affect <span class="blue">{date}</span> and <span class="blue">{upload_date}</span> and <span class="blue">{task_date}</span> in the naming rules. <br>For time such as 2021-04-30T06:40:08</span>
@@ -618,7 +655,6 @@ _
     <br>
   </p>
 </div>
-
 
 Some naming tags in the downloader generate date and time strings:
 - `{date}`
@@ -651,7 +687,6 @@ For a time such as `2021-04-30T06:40:08`, the available tags and their outputs a
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap" data-show="fullNameLengthLimitSwitch" style="display: inline-flex;">
     <input type="text" name="fullNameLengthLimit" class="setinput_style blue" value="210">
-    <button type="button" class="gray textButton showMsgBtn" data-title="_文件名长度限制" data-msg="_文件名长度限制的说明" data-xztext="_帮助">Help</button>
   </div>
 </div>
 
@@ -666,4 +701,3 @@ Some tags in the naming rule can output a large amount of text, which may cause 
 Two types of tags are particularly likely to cause this issue:
 - Titles, including `{title}` and `{page_title}`, because some novel titles are very long.
 - Tag lists, including `{tags}`, `{tags_translate}`, `{tags_transl_only}`, and `{page_tag}`, because some tags contain a large number of characters.
-

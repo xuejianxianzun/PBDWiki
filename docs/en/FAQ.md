@@ -49,7 +49,7 @@ If you do not want to change the browser's file save location, you can manually 
 
 Use a slash `/` in the naming rule, and the part before the slash will be used as the folder name.
 
-See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=Creating-Folders)
+See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=creating-folders)
 
 ## Why Wasn't a Folder Created?
 
@@ -121,7 +121,7 @@ This is because some works may contain multiple images. In other words, one work
 
 If the downloaded file names are a string of incomprehensible characters, like this:
 
-![](images/20211112162142.jpg)
+![](../template/publicImages/20211112162142.jpg)
 
 Please check: [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
 
@@ -135,7 +135,7 @@ This issue only occurs on Windows systems. Some versions of Windows set the exte
 
 If you want to solve this problem, press `Win` + `R` to open the Run window, enter `regedit` and press Enter to open the Registry Editor, navigate to `HKEY_CLASSES_ROOT\MIME\Database\Content Type\image/jpeg`, change the value of `Extension` on the right from `.jfif` to `.jpg`, then restart the browser.
 
-![](images/20260409_161332.png)
+![](../template/en/images/20260409_161332.png)
 
 ## Does It Support Resumable Downloads?
 
@@ -349,7 +349,7 @@ Downloaded files do not open automatically by default, but the browser provides 
 
 For Chrome, you can right-click any file in the download list in the top-right corner and check the "Always open files of this type" setting:
 
-![](images/20250910_012710.png)
+![](../template/en/images/20250910_012710.png)
 
 If there is a checkmark ✔ in front of it, this feature is enabled. Click it again to uncheck it.
 
@@ -357,15 +357,15 @@ If there is a checkmark ✔ in front of it, this feature is enabled. Click it ag
 
 *Not automatically starting download*
 
-If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) feature.
+If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview crawl results on search page](/en/Settings-Filter/Execution-strategy?id=preview-crawl-results-on-search-page) feature.
 
 ## Date Format Error!
 
-This occurs because the time format entered in the [Posting time](/en/Settings-Crawl/Work-data?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
+This occurs because the time format entered in the [Posting time](/en/Settings-Filter/Work-data?id=posting-time) setting is incorrect, causing the downloader to display the error `Date format error!`.
 
 As shown below, the value on the left is incorrect because it does not include the time:
 
-![](images/20250910_012836.png)
+![](../template/en/images/20250910_012836.png)
 
 This usually happens when you manually enter the date and time. Make sure to include the time.
 
@@ -379,7 +379,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawling/HomePage?id=type-id-to-crawl) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Enter ID to crawl](/en/Buttons-Start-crawling/HomePage?id=enter-id-to-crawl) feature or similar functions.
 
 ## Browser Freezes While Running
 
@@ -403,7 +403,7 @@ You can press `Ctrl` + `J` to open the browser's download history interface, the
 
 Enter the browser's settings page, and in the "Privacy and security" category, use the "Delete browsing data" function:
 
-![](images/20250910_012946.png)
+![](../template/en/images/20250910_012946.png)
 
 Set the "Time range" to "All time", select "Download history", and click "Delete data".
 
@@ -411,7 +411,7 @@ Set the "Time range" to "All time", select "Download history", and click "Delete
 
 If the browser's download history is too much, the browser may freeze (unresponsive) in the above two scenarios. You can close the browser (if the browser is unresponsive, you can force close it), then use Everything to search for files named history, and sort by file size. As shown in the figure:
 
-![](images/20251025_024359.png)
+![](../template/publicImages/20251025_024359.png)
 
 Find the history file that is relatively large in size, and the path contains the browser name (Chrome or Edge), located in the User Data directory, and delete it directly. This clears the browser's download history.
 
@@ -439,7 +439,7 @@ You can enable the [Add 0 in front of the serial number](/en/Settings-Naming/Ser
 
 How to keep downloaded works in the same order as on the webpage?
 
-See: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+See: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=sorting-with-naming-tags).
 
 ## How to Sort Downloaded Bookmarked Works by Bookmark Order
 
@@ -447,7 +447,7 @@ When downloading bookmarked works, how to make the downloaded files match the bo
 
 This issue arises because the sorting of bookmarked works is not based on work IDs but on the time you bookmarked them. If the file name starts with the work ID, it will not match the bookmark order.
 
-You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=sorting-with-naming-tags).
 
 ## Pixiv Returned Empty Data
 
@@ -477,7 +477,7 @@ This restriction lasts a few minutes. During this time, the downloader cannot cr
 
 When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
 
-Additionally, the downloader now enables the [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+Additionally, the downloader now enables the [Slow down crawl](/en/Settings-Filter/Execution-strategy?id=slow-down-crawl) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
 
 --------
 
