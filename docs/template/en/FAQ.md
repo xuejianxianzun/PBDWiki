@@ -1,0 +1,504 @@
+# FAQ
+
+?> You can use the browser's search function (shortcut key is `F3` or `Ctrl` + `F`) and enter keywords to search on this page, which may help you find the needed content more quickly.
+
+## Viewing Help Information
+
+- There is a "FAQ" button in the bottom left corner of the downloader panel, which provides some basic help information.
+- You can check the [After Installation](/en/AfterInstallation) page to investigate some reasons.
+- If you are unsure how to use a specific feature, please refer to the relevant content in this wiki.
+
+## Checking Common Issues
+
+- Check if there are error messages or related prompts displayed in the log at the top of the webpage.
+- If the browser freezes for a while (becomes unresponsive) when starting, this is likely due to too many browser download records. Clearing the browser's download history should resolve this issue.
+- If you are not using Chrome, Edge, or Firefox, please install this extension on one of these browsers to see if the issue persists. I do not provide support for other browsers.
+- If your browser is not the latest version, please update it.
+- Restart the browser and retry the previous operation to see if the issue is resolved.
+- If this extension is not the latest version, please update to the latest version. You can check the extension's version number in the browser's extension store. If the installed extension is not the latest, usually waiting for a while will allow the browser to update automatically. Alternatively, you can remove the extension and reinstall it (this will clear the downloader's settings, so you can export the settings first).
+- It could be a network connection issue; please check your network connection.
+- The system partition (usually the C drive) may have insufficient free space. If the available space is less than 4GB, you may not be able to download some larger files due to browser limitations. Try clearing space on the system partition and restarting the browser.
+
+?> If the issue persists, please refer to the information on the [Contact Me](/en/Contact-Me) page.
+
+## Where Are the Downloaded Files Saved?
+
+*File save location/Image save location/Save path*
+
+Downloaded files are saved in the browser's download directory.
+
+## Can Files Be Saved Outside the Browser's Download Directory?
+
+**No**, this is a browser limitation.
+
+When the downloader automatically saves files, it can only save them to the browser's download directory due to the browser's security policies.
+
+## How to Change the Download Location
+
+*Change download path/Download folder*
+
+If you do not want files to be saved in the browser's download directory, you can only change the download location in the browser's settings.
+
+Open the browser's settings page, find the "Downloads" section, and modify the default save location for files.
+
+If you do not want to change the browser's file save location, you can manually move the files to another location after downloading.
+
+## How to Create Folders
+
+*Create folder/Create directory*
+
+Use a slash `/` in the naming rule, and the part before the slash will be used as the folder name.
+
+See detailed instructions: [Creating Folders](/en/Settings-Naming/Folder-and-file-names?id=Creating-Folders)
+
+## Why Wasn't a Folder Created?
+
+*No folder created/No directory created*
+
+The default naming rule, `pixiv/{user}-{user_id}/{id}-{title}`, creates folders; each slash `/` marks where a folder is created.
+
+If no folders are created after downloading files (and the files are saved directly in the browser's download directory), check the following:
+- Did you change the naming rule and omit slashes `/` for creating folders? If so, add slashes `/` to create folders.
+- If the downloaded filenames are abnormal and the downloader displays a "Filename abnormal" notification, resolve the filename issue as instructed.
+- You may have enabled [Save file to the user's last selected location](/en/Settings-Download/Download-behavior?id=save-file-to-the-user39s-last-selected-location) in "Download behavior." If so, disable it.
+
+## How to Save All Works of an Artist/User to the Same Folder
+
+*How to group an artist's works together?*
+
+Use the username in the naming rule to create a folder. For example: `{user}/{id}`.
+
+## How to Save Multi-Image Works to Separate Folders
+
+If you want this effect:
+
+Single-image works are saved directly to the user's folder, while multi-image works are saved in an additional subfolder.
+
+For example:
+
+```
+Downloads
+│
+├─葛飾ぱち
+│  │  99097921.png
+│  │
+│  └─99276627
+│          99276627_p0.png
+│          99276627_p1.png
+```
+
+Please check this setting: [Add a folder layer for multi-image works](/en/Settings-Naming/Adjust-folders?id=add-a-folder-layer-for-multi-image-works).
+
+## Crawling Completed, but No Works Match the Filter Conditions
+
+*Crawling result is 0*
+
+Sometimes after crawling, you may see a prompt message:
+
+<span class="log" style="color: rgb(210, 126, 0);">Crawling completed, but no works matching the filter conditions were found.</span>
+
+This is because none of the crawled works meet the filter requirements.
+
+The settings you see in the "Crawl" tab are filters, such as work type, image count, bookmark count, posting date, tag requirements, etc.
+
+If you modify the filter conditions, it may result in a crawling result of 0, displaying the above prompt message.
+
+For example, if you deselect the "illustration" type and all the crawled works are illustrations, the crawling result will be 0.
+
+## Why Are There More Files Than Works Crawled?
+
+Sometimes after crawling, you may see logs like this:
+
+<span class="log">Crawled 10 works in total</span>
+
+<span class="log">Crawled 20 files in total</span>
+
+This is because some works may contain multiple images. In other words, one work may generate multiple files, which is normal.
+
+## File Names Are Garbled After Downloading
+
+*File name abnormal/File name garbled/UUID*
+
+If the downloaded file names are a string of incomprehensible characters, like this:
+
+![](images/20211112162142.jpg)
+
+Please check: [Issues with Abnormal File Names After Download](/en/AfterInstallation?id=issues-with-abnormal-file-names-after-download).
+
+## The file extension is .jfif
+
+*The file suffix is .jfif / The file format is .jfif*
+
+`.jfif` files are actually `.jpg` files.
+
+This issue only occurs on Windows systems. Some versions of Windows set the extension for jpeg files to `.jfif` in the registry, so when the browser saves `.jpg` files, it will also use `.jfif` as the extension.
+
+If you want to solve this problem, press `Win` + `R` to open the Run window, enter `regedit` and press Enter to open the Registry Editor, navigate to `HKEY_CLASSES_ROOT\MIME\Database\Content Type\image/jpeg`, change the value of `Extension` on the right from `.jfif` to `.jpg`, then restart the browser.
+
+![](images/20260409_161332.png)
+
+## Does It Support Resumable Downloads?
+
+Yes, the downloader supports resumable downloads.
+
+If the page crashes or you accidentally close it during downloading, you can reopen the page, and the downloader will resume the download progress, allowing you to continue downloading.
+
+**How it works:**
+
+After crawling is complete, the downloader saves the current download task data to IndexedDB. Once all files are downloaded, the downloader automatically clears the data for this task.
+
+If the download is not complete, the downloader can use the saved data to resume the download progress. However, some actions may clear this data, making it **impossible to resume the task** after the page is closed. These include:
+- Clicking the downloader's "Stop Download" button. This indicates you do not need to download the remaining files, so the downloader clears the task data.
+- When you delete browser data, if you delete the data saved for each website, the task data will be cleared. In Chrome, this is the "Cookies and other site data" option.
+
+## How to Avoid Downloading Duplicate Files
+
+*How to avoid downloading works that have already been downloaded?*
+
+You can enable the [Don't download duplicate files](/en/Settings-Download/Download-records?id=don39t-download-duplicate-files) feature.
+
+In some cases, you can also consider using incremental updates to only crawl recently posted works. See the [Incremental Updates](/en/Usage-Tips?id=incremental-updates) section on the "Tips" page.
+
+## Downloads Are Slow
+
+What to do if downloads are slow or have no speed?
+
+This is usually a network issue.
+
+You can also try another method: After crawling, use the "Copy URL" function to copy the image URLs and use other software like IDM to download these files. This may improve download speed, but these software cannot rename files.
+
+## Ugoira Downloads Are Slow
+
+Ugoira files are typically large, so downloading takes longer, which is normal.
+
+Additionally, since Pixiv's Ugoira source files are in zip format, converting them to other formats also takes some time.
+
+If you confirm that the download speed is very slow (e.g., only a few hundred KB per second), please check if there is an issue with your network connection.
+
+## Download Stuck, or File Saving Very Slow
+
+*Download progress is always 0*
+
+Some users may encounter the issue of download getting stuck: after the file's download progress bar reaches 100%, it may take a while to save to the hard drive, or it may never save. This issue may be related to the browser or the hard drive, and there are multiple reasons that can cause this problem.
+
+I haven't encountered this issue myself (in fact, most users probably won't encounter this issue frequently). If you encounter this problem, you can try the following operations, some of which have been verified to be effective.
+
+1. Refresh this webpage to let the downloader retry the download.
+2. Click the pause download button, then click the start download button.
+3. Open the browser's extension management page, click the refresh button for this extension to reload it, then refresh this webpage and retry the download.
+4. If the browser's download save location is a mechanical hard drive, you can try changing the download location to a solid-state drive (SSD). This is effective for some users.
+5. If you have many tabs open, you can close some tabs to reduce the browser's load. Some users experience download getting stuck when many tabs are open (after the file downloads, it takes 10 seconds to save), but no issue when fewer tabs are open.
+6. You can click the user avatar button in the browser menu bar to add a new user profile (i.e., create a new browser local user), then open the new user's browser window, and install and use this downloader in it.
+7. Uninstall this browser and reinstall it, or install a new browser.
+8. Clear the browser's download history, then restart the browser. This method may not work, but clearing unnecessary download history is beneficial. Tip: If the browser's download history is too much, it can cause the browser to freeze for a while when starting up or opening the download management page, and may lead to other potential issues. If you need help, you can check [How to Clear the Browser's Download History](/en/FAQ?id=how-to-clear-the-browser39s-download-history).
+
+If the problem still cannot be resolved, please check the [Contact Me](/en/Contact Me) page to report the issue to me.
+
+## What to Do If a Task Gets Stuck
+
+*Download stuck/Task stuck*
+
+This is generally a network issue; the worse the network condition, the more likely this problem occurs.
+
+If crawling gets stuck, try waiting for a while to see if it resumes. If not, refresh the page and recrawl.
+
+If downloading gets stuck, click the "Pause Task" button, then click the "Start Download" button to try resuming. You can also close the problematic page and reopen it to continue downloading.
+
+?> If your network connection is unstable or download speed is slow, reduce the number of simultaneous downloads to lower the chance of getting stuck.
+
+## Always Stuck, Unable to Download Any Images
+
+*Unable to download files*
+
+First, check for network issues. If the network is fine (you can access Pixiv normally and download speeds are decent), check the free space on the system drive (usually the C drive).
+
+If the system drive has low free space, Chrome may block XHR requests for downloading larger files, causing downloads to fail repeatedly. Clear some space and try downloading again. This issue was identified by Reinford.
+
+## Will It Automatically Retry on Download Failure?
+
+Yes.
+
+There are various reasons why a download might fail, such as:
+- Poor network conditions may interrupt the file download request.
+- File does not exist (`404`) or other abnormal status codes (`500`).
+- The request was interrupted before reaching the server (in such cases, the status code is often `0`).
+
+**Cases Where Retries Occur:**
+
+For files in the crawl results (i.e., files that appear in the download progress bar), the downloader will retry. Some files will retry up to 10 times, while others will retry indefinitely.
+
+The downloader's retry mechanism works as follows:
+
+1. Regardless of the reason for a file's download failure, the downloader will retry 10 times.
+2. If the file still cannot be downloaded successfully after 10 retries (status code is not `200`), the downloader will display an error message in the log and handle it differently based on the situation:
+    1. If the status code is `0`, the downloader will pause downloading all files and wait for user intervention.
+    2. If the status code is `404` or `500`, the downloader will not retry downloading the file.
+    3. For other cases (including files with a `429` error), the downloader will temporarily skip the file and retry it after downloading other files. Each retry round will attempt 10 times, with no limit on the number of retry rounds, so the downloader will keep retrying indefinitely until the file is downloaded successfully.
+
+**Cases Where Retries Do Not Occur:**
+
+Some files are not independent crawl results, so the downloader will not retry them.
+
+For example:
+- A novel crawl result may include one cover image and multiple embedded images (illustrations).
+- Saving a user's avatar or cover image.
+
+When downloading the above files, even if the download fails, the downloader will not retry.
+
+## Error During Download, Status Code 0
+
+Some users may encounter this error during downloading, with the downloader displaying `Error during download, status code 0` in the log.
+
+This is because the downloader's request failed. Check the help information displayed in the log.
+
+Possible reasons:
+- Insufficient free space on the **system drive**, not other drives. If the system drive has less than 4 GB of free space, clear some space, restart the browser, and retry downloading.
+- Network error. If you are using proxy software, try changing the route or proxy server.
+
+## Downloaded Images Are Corrupted
+
+Downloaded images only display partially, with the rest missing.
+
+This is due to a network issue during downloading, causing the file content to be corrupted. When viewing the image, only a portion may be decoded.
+
+Redownload the corrupted image/work. You can open the work's page using the work ID in the file name and redownload it.
+
+?> The URL for image works is fixed: Add the work ID after `https://www.pixiv.net/artworks/` and open it in the browser to access the work's page.
+
+If the redownloaded image is still corrupted, it may be cached. Clear the browser's cache, refresh the page, and redownload the work. Alternatively, click the downloader's "Copy URL" button and use other download software (e.g., IDM) to download the file.
+
+**Note:** This issue should not occur frequently. If it happens often, it indicates a network issue.
+
+## Why Does the Download Progress Bar Turn Red?
+
+This indicates an error occurred while downloading the file in that progress bar, likely due to network issues.
+
+The downloader will attempt to redownload it, so you do not need to take action.
+
+You can also check the log at the top of the webpage to see if help information is displayed and perform checks.
+
+## Download Failed: USER_CANCELED
+
+If you see this error message, possible reasons include:
+
+- A "Save As" dialog pops up during downloading.
+- The file name is too long.
+- The download is intercepted by other software. The downloader instructs the browser to save the file, but occasionally other download software (e.g., IDM) may take over the download, causing the browser to cancel it. If this happens, disable the interception of Pixiv files in the other download software's settings.
+- Affected by other extensions. You can try disabling the extension that causes this issue, or create a new local browser user to use the downloader. The latter method: Click the avatar icon in the upper right corner of the browser, then create a new profile or configuration (no need to log in to the browser vendor's account). Each browser user's configuration is independent; you can install only this extension in the new user's window. When you need to download Pixiv files, use this user to download, so it won't be affected by other extensions.
+
+Solutions for the first two cases are provided below.
+
+## "Save As" Dialog Pops Up During Downloading
+
+*Download triggers a "Save As" dialog/Save window*
+
+If the browser displays a "Save As" dialog during downloading, check the following possible reasons:
+
+**Reason 1**: Ensure that the "Ask where to save each file before downloading" setting is **disabled** in the browser settings.
+
+If this setting is enabled, every file will trigger a "Save As" dialog, so you should disable it.
+
+**Reason 2**: There may be duplicate file names. Check your naming rule.
+
+If your naming rule includes `{id}` or `{pid}` + `{p}`, there should be no duplicate file names; otherwise, duplicates may occur.
+
+For example, for work ID 78279423 with three images, `{id}` or `{p}` adds a sequence number to avoid duplicates:
+
+```
+78279423_p0.jpg
+78279423_p1.jpg
+78279423_p2.jpg
+```
+
+Without a sequence number, duplicates occur:
+
+```
+78279423.jpg
+78279423.jpg
+78279423.jpg
+```
+
+If the naming rule does not include `{id}` or `{p}`, watch out for potential duplicate file names.
+
+**Reason 3**: The file name may be too long.
+
+Most operating systems have a file name length limit of 255 characters. If the file name exceeds this limit, the browser may not save the file and will display a "Save As" dialog for user action.
+
+If you encounter this issue, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
+
+**Reason 4**: The browser's download location may be invalid, preventing the browser from saving files and causing it to display a "Save As" dialog.
+
+Here, "invalid" can refer to several situations, for example:
+
+- The download directory does not exist. It may not have been created yet, or it may have been moved or deleted.
+- If the download directory is on a local disk, check whether the disk is damaged or has another access issue.
+- If the download directory is a network location, it may currently be inaccessible.
+- A folder in the save path is a symbolic link. For example, the downloader creates a `pixiv` subfolder in the download directory by default. Some users actually store the `pixiv` folder elsewhere and create a symbolic link to it in the download directory. The browser may be unable to save files in a symbolic link or create subfolders within one, causing it to display a "Save As" dialog.
+
+## What to Do If File Names Are Too Long
+
+*File name too long/File name exceeds limit*
+
+If you cannot save files due to overly long file names, enable the [File name length limit](/en/Settings-Naming/Folder-and-file-names?id=file-name-length-limit) feature to set a file name length limit.
+
+## Why Do Downloaded Images Open Automatically?
+
+*Images open automatically after downloading/Files open automatically/txt files open automatically*
+
+Downloaded files do not open automatically by default, but the browser provides this feature.
+
+For Chrome, you can right-click any file in the download list in the top-right corner and check the "Always open files of this type" setting:
+
+![](images/20250910_012710.png)
+
+If there is a checkmark ✔ in front of it, this feature is enabled. Click it again to uncheck it.
+
+## Why Doesn't It Automatically Start Downloading on Search Pages?
+
+*Not automatically starting download*
+
+If you have enabled "Automatically start downloading" but the downloader does not start downloading on search pages, you can disable the [Preview filter results on search page](/en/Settings-Enhance/Search-page?id=preview-filter-results-on-search-page) feature.
+
+## Date Format Error!
+
+This occurs because the time format entered in the [Posting time](/en/Settings-Crawl/Work-data?id=Posting-Time) setting is incorrect, causing the downloader to display the error `Date format error!`.
+
+As shown below, the value on the left is incorrect because it does not include the time:
+
+![](images/20250910_012836.png)
+
+This usually happens when you manually enter the date and time. Make sure to include the time.
+
+## No Permission to Access a Work
+
+This is because an unhandled error occurred while accessing a work.
+
+It may be because the work is private or due to a network issue.
+
+You can open the work's page; if it opens normally, you can download it individually.
+
+## How to Download an ID List
+
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Type ID to crawl](/en/Buttons-Start-crawling/HomePage?id=type-id-to-crawl) feature or similar functions.
+
+## Browser Freezes While Running
+
+*Browser is very laggy/Browser unresponsive on startup/Browser Not Responding/Browser freezes/Browser crashes*
+
+This may be caused by too many download history entries in your browser. Too many download history entries can cause the browser to lag, especially when the browser just starts up and when opening the download history page.
+
+Clearing the browser's download history will solve this problem.
+
+## How to Clear the Browser's Download History
+
+*Clear download history/Clear download history*
+
+Taking the Chrome browser as an example:
+
+**Method 1:**
+
+You can press `Ctrl` + `J` to open the browser's download history interface, then find the "Clear all" or similar button and click it.
+
+**Method 2:**
+
+Enter the browser's settings page, and in the "Privacy and security" category, use the "Delete browsing data" function:
+
+![](images/20250910_012946.png)
+
+Set the "Time range" to "All time", select "Download history", and click "Delete data".
+
+**Method 3:**
+
+If the browser's download history is too much, the browser may freeze (unresponsive) in the above two scenarios. You can close the browser (if the browser is unresponsive, you can force close it), then use Everything to search for files named history, and sort by file size. As shown in the figure:
+
+![](images/20251025_024359.png)
+
+Find the history file that is relatively large in size, and the path contains the browser name (Chrome or Edge), located in the User Data directory, and delete it directly. This clears the browser's download history.
+
+?>If the resource manager prompts that the file is in use, you can use Task Manager to end the corresponding browser process, or restart the system and then delete.
+
+## How to Download in Batches
+
+*Batch crawling/Batch downloading/Download in multiple sessions*
+
+On pages with many results, if you expect a large number of crawling results, consider crawling and downloading in batches.
+
+See: [Batch crawling and downloading (Split tasks)](/en/Usage-Tips?id=batch-crawling-and-downloading-split-tasks).
+
+## File Name Sorting Is Messy on Android
+
+*Android file manager sorting error/Sorting messy/File name sorting error/File sorting messy*
+
+This issue typically occurs in the file manager on Android systems.
+
+You can enable the [Add 0 in front of the serial number](/en/Settings-Naming/Serial?id=add-0-in-front-of-the-serial-number) feature to resolve this issue.
+
+## How to Sort Downloaded Files in the Same Order as on the Webpage
+
+*Image order/File order*
+
+How to keep downloaded works in the same order as on the webpage?
+
+See: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+
+## How to Sort Downloaded Bookmarked Works by Bookmark Order
+
+When downloading bookmarked works, how to make the downloaded files match the bookmark order?
+
+This issue arises because the sorting of bookmarked works is not based on work IDs but on the time you bookmarked them. If the file name starts with the work ID, it will not match the bookmark order.
+
+You can use the `{bmk_id}` tag at the start of the file name. See detailed instructions here: [Sorting with Naming Tags](/en/Settings-Naming/Folder-and-file-names?id=Sorting-with-Naming-Tags).
+
+## Pixiv Returned Empty Data
+
+When crawling works, you may see this error message in the log:
+
+<span class="log" style="color: #f00;">Pixiv returned empty data. The downloader has paused crawling and will resume after a few minutes. (429)<br>This indicates that your account has been restricted by Pixiv. It will return to normal after a few minutes.</span>
+
+This is because too frequent requests triggered Pixiv's anti-crawling mechanism (429 error). The downloader will pause crawling and retry after a few minutes, so you do not need to take action.
+
+## Total Works is 0, Pixiv May Have Rejected This Crawl
+
+When crawling works on a search page, you may see this error message:
+
+<span class="log" style="color: #f00;">Total works is 0, Pixiv may have rejected this crawl. Please try again later.</span>
+
+The reason is the same as above.
+
+## What Is a 429 Error?
+
+*429 error/429 status code/429 restriction*
+
+Pixiv has an anti-crawling mechanism, likely using a token bucket algorithm.
+
+If the downloader sends too many crawling requests in a short period, exhausting all tokens, it triggers the anti-crawling mechanism, resulting in a 429 error.
+
+This restriction lasts a few minutes. During this time, the downloader cannot crawl, and you cannot browse or bookmark works normally.
+
+When the downloader encounters a 429 error, it pauses crawling and retries after a few minutes, so you do not need to take action.
+
+Additionally, the downloader now enables the [Slow down crawl](/en/Settings-Crawl/Execution-strategy?id=slow-down-crawling) feature by default, which reduces the likelihood of triggering a 429 error but increases crawling time.
+
+--------
+
+429 error usually only occurs during crawling, not during downloading.
+
+Frequently triggering 429 errors may lead to your account being warned by Pixiv. But this is not the only factor, as large downloads may also lead to you being warned.
+
+## Will Downloading Too Much Get My Account Banned?
+
+*Will I get banned for downloading too much?/Will my account be banned?*
+
+Yes.
+
+If you frequently crawl and download large amounts of files, Pixiv may issue a warning. A second warning may result in Pixiv deleting your account.
+
+See detailed instructions: [Risk of Account Ban](/en/Risk-of-Account-Ban).
+
+## Cannot Open EPUB Files
+
+*Cannot open EPUB novels/EPUB novel files are corrupted*
+
+If you cannot open EPUB novels generated by the downloader, try using a different novel reader.
+
+You can check [Some Novel Readers](/en/Settings-Download/Novels?id=some-novel-readers).
