@@ -234,6 +234,8 @@ The filename of the TXT description file may include two markers:
 
 ?> Some works do not have a description, in which case the downloader will not create a TXT description file for them.
 
+?> Work type: you can choose which types of works to save descriptions for. "Novel" is not selected by default, because the downloader saves the description at the beginning of a novel by default, so there is no need to save it again here.
+
 This setting has two sub-options, which can be enabled simultaneously:
 
 ### Save each work separately

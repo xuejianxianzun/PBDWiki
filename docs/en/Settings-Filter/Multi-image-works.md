@@ -13,7 +13,11 @@
   </div>
 </div>
 
-If a multi-image work contains more images than the number you set, the downloader will not crawl that work.
+*The description of this setting is exactly the same as the description in the downloader.*
+
+You can set a maximum number of images for multi-image works.
+
+When crawling a multi-image work, if its number of images exceeds the number you set, the downloader will not crawl it.
 
 ## Only crawl the first few images of multi-image works
 
@@ -28,7 +32,11 @@ If a multi-image work contains more images than the number you set, the download
   </div>
 </div>
 
-If you do not want to download too many images from a multi-image work, or if you think the first image is the most valuable one, you can enable this setting.
+*The description of this setting is exactly the same as the description in the downloader.*
+
+Common usage scenarios: If you don't want to download too many images from multi-image works, or if you think the first image is the most valuable, you can enable this setting.
+
+Tip: The two "Only crawl" conditions can be used simultaneously. In this case, an image will be kept as long as it meets either condition. This allows you to skip the middle images and only download the first and last images.
 
 ## Only crawl the last few images of multi-image works
 

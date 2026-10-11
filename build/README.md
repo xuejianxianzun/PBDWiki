@@ -2,6 +2,8 @@
 
 本站的设置与按钮内容由本目录下的构造系统生成：从本地 [Powerful Pixiv Downloader](https://github.com/xuejianxianzun/PixivBatchDownloader) 仓库读取设置/按钮数据，重建 `docs/zh-cn`、`docs/en` 下的设置与按钮内容（文件夹、页面、菜单、侧边栏），展开文档里的链接标记，并重写图片引用路径——一条 `npm run build` 完成。
 
+PS：我遇到的一个坑：我环境变量里的 Node 版本是 24.11.1 版本，无法执行 build 命令，会异常中断。但是用其他 Node 版本（较新或较旧一些的）进行测试，都可以正常执行，所以最大的可能是该版本的 Node 存在 bug。之后我升级了 Node，这个问题果然解决了。
+
 ## 快速开始
 
 常用命令：
@@ -313,3 +315,21 @@ node build/tasks/hash-docs.js build/.hash-B.json build/.hash-A.json   # 对比�
   - 不要把"记录状态 / 对比"的步骤与提权构建混在同一条命令里（预尝试可能把中间态记录进去，产生假差异）；
   - 构建后用 `npm run build:verify` 验证一次；若发现缺失，重跑一次构建即可恢复完整。
 - 用户自己的普通终端没有以上限制，直接 `npm run build` 即可。
+
+### 构建崩溃（exit code -1073740791 / 0xC0000409）的排查
+
+如果构建没有任何报错就中断（`node build/tasks/build.js` 或 `npm run build`，退出码 127 或 `-1073740791`）：
+
+- `-1073740791` = `0xC0000409`（STATUS_STACK_BUFFER_OVERRUN），是 **node 进程崩溃**，不是脚本报错——所以日志里看不到任何异常堆栈。
+- **定位结论（本机 2026-10-12）**：是 node **v24.11.1 这个版本的 bug**——它在**写文件阶段**崩溃；`--max-old-space-size=4096`、`--stack-size=8000` 都无效；`--dry-run`（不写盘）正常；换 node 22.22.2 正常；**升级到 v24.21.0 后恢复正常**。
+- 处理方式：**升级 node** 即可（推荐）。一时不便升级时，可临时换一个 node 版本构建，例如：
+
+  ```bash
+  "C:/Users/12477/.workbuddy/binaries/node/versions/22.22.2-6/node.exe" build/tasks/build.js
+  ```
+
+- 崩溃发生在删除旧文件夹之前，产物不会被破坏；换版本重跑一次即可恢复完整（构建是"先删后建"，产物可从 `docs/template/` 完全重建）。
+
+### 产物目录可以安全删除
+
+`docs/<lang>`（如 `docs/zh-cn`）整个删掉也没关系：构建会跳过删除步骤并重新生成全部产物（页面、菜单、侧边栏、其它页面）。已加固：产物目录不存在时不再报 `ENOENT`。

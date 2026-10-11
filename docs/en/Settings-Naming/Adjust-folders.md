@@ -31,9 +31,25 @@
   </div>
 </div>
 
-If your naming rule creates folders, but you want some downloaded files to be saved directly in the download directory instead, you can enable this setting.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-This setting has multiple sub-options. Whether folders are skipped can depend on the work type and on how many images are downloaded from the work. Click the `Help` button on the right side of this setting to view the detailed explanation.
+After enabling this setting, files that meet the conditions will not have a folder created for them, and will instead be saved directly to the browser's download directory.
+
+Sub-options:
+
+- When downloading 1 image from an illustration or manga: If you download only 1 image from this work, no folder will be created for that image. Each work is counted separately.
+
+- When downloading multiple images from an illustration or manga: If you download multiple images from this work, no folder will be created for those images. Each work is counted separately.
+
+- Ugoira: No folder will be created for Ugoira works.
+
+- Novel: No folder will be created for a single novel work.
+
+Tip:
+
+If you enable all sub-options, then no folders will be created for any works.
+
+This setting does not apply to collection files generated after merging a novel series. If you want collection files to be saved without creating folders, you can change the "Naming rule when merging a novel series" in "Naming / Folder and file names".
 
 ## Add a folder layer for multi-image works
 
@@ -97,9 +113,25 @@ You need to insert this tag manually so you can decide where this folder layer s
   </div>
 </div>
 
-If you want to put R-18(G) works into a separate folder layer, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-To make this setting take effect, you also need to modify the naming rule and use `{r18_g_folder}` to represent the folder rule configured here. When downloading an R-18(G) work, the downloader replaces `{r18_g_folder}` with the folder rule set here.
+If you want to add an extra folder layer for R-18(G) works, you can enable this setting.
+
+How to use:
+
+First, set the rule for this folder layer here. Note: In this setting, you only need to set the extra folder layer you want to add. Do not enter the full Naming rule here.
+
+When setting the folder rule, you can use markers from the Naming rule, or add your own custom characters.
+
+Then you need to edit the "Naming rule" setting in "Naming / Folder and file names", and insert `/{r18_g_folder}/` where you want to add this folder layer. It represents the folder rule you set here.
+
+Example of the modified Naming rule:
+
+Example: `pixiv/{user}-{user_id}/{r18_g_folder}/{id}-{title}`
+
+How it works: When the downloader generates file names for R-18(G) works, it will replace `{r18_g_folder}` with the folder rule you set here.
+
+Note: This setting will add the same folder name for both R-18 and R-18G works. If you want to store R-18 and R-18G works separately, you can turn off this setting and use `{age_r}/` in the Naming rule to create a folder layer. It can distinguish between R-18 and R-18G works.
 
 ## Create a folder with the first matched tag
 
@@ -120,20 +152,42 @@ To make this setting take effect, you also need to modify the naming rule and us
   </div>
 </div>
 
-If you want to create a special folder layer when a work contains certain tags, you can enable this setting. Click the `Help` button for this setting in the downloader panel to view the detailed explanation.
+If you want to create a special folder layer when a work contains specific tags, you can enable this setting.
 
-For example, work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the `Original` tag:
+For example, the work [94964157](https://www.pixiv.net/artworks/94964157 ':target=_blank') contains the tag "Original":
 
 ![](../../template/en/images/20250910_224628.png)
 
-If you include `Original` in this setting, the downloader will create an `Original` folder for this work:
+If you enter `Original` in this setting, the downloader creates an "Original" folder to store this work:
 
 ![](../../template/en/images/20250910_224541.png)
 
-----------
+**How to use:**
 
-After enabling this setting, you can configure two tag lists.
+First enter the target tags in this setting. If there are multiple tags, separate them with English commas `,`. Note: you only need to enter the target tags here, not the complete naming rule.
 
-When downloading each file, the downloader checks whether the work's tags contain **any** of the tags you configured here. Once it finds a matching tag, it uses that tag to create a folder.
+You can set 2 tag lists: `{match_tag_folder1}` and `{match_tag_folder2}`. This is to handle a common need: if a character belongs to a work, create two folder layers: the first layer is the work name, the second layer is the character name. For example, I set the work name `GenshinImpact` in `{match_tag_folder1}`, and set the character name `フリーナ` in `{match_tag_folder2}`. If a work contains both tags, the downloader can add two folder layers for this work: `GenshinImpact/フリーナ/`.
 
-This setting lets you categorize files with specific tags separately.
+Of course, if you do not need this, you can use only the first tag list.
+
+After you set the tag lists, you also need to modify the "Naming rule" setting in "Naming / Folder and file names", and insert the specific tags and slashes where needed to add a folder layer. `/{match_tag_folder1}/` represents the match result of the first tag list, and `/{match_tag_folder2}/` represents the match result of the second tag list.
+
+Example: `pixiv/{match_tag_folder1}/{match_tag_folder2}/{id}`
+
+**Matching method:**
+
+The downloader looks up the tags you set in the tag list of the work, and gives priority to tag aliases.
+
+The match mode is exact match, and it is not case-sensitive. If you set `A`, it can match `a` or `A`, but it will not match `abc`.
+
+For each tag list you set, the downloader searches in order: it first looks for the first tag you set; if it is not found, it looks for the second one, and so on. Once the first matching tag is found, it stops searching and uses it to replace the corresponding tag in the naming rule: `{match_tag_folder1}` or `{match_tag_folder2}`.
+
+If none of the tags you set match, the downloader ignores the corresponding tag.
+
+With this setting, you can classify the files that contain specific tags separately.
+
+**Using tag aliases to unify folder names:**
+
+Some tags have multiple variants. For example, `GenshinImpact` has these variants: `GenshinImpact,Genshin Impact,Genshin,原神,原神インパクト`. If you want to treat all these tags as `GenshinImpact`, and only create the `GenshinImpact` folder (instead of creating multiple different folders using the variants), you can use the "Tag alias" feature below this setting.
+
+Set the alias of these variants to `GenshinImpact`, then you only need to use `GenshinImpact` in this setting to match all the variants.

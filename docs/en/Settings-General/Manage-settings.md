@@ -21,23 +21,25 @@
   </span>
 </div>
 
-Users often have several Pixiv.net tabs open. This setting determines whether those tabs use the same settings or keep independent settings.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-**Sub-options:**
+Users often open multiple Pixiv.net tabs. This setting determines whether all tabs use the same settings or keep their own independent settings.
 
-- Synchronize changes (default): When you change settings in one tab, settings in the other tabs change accordingly. All tabs use the same settings.
-- Keep unchanged (legacy behavior): When you change settings in one tab, settings in the other tabs do not change. In other words, changes in any tab do not affect other tabs. Other tabs use the latest settings only after they are refreshed, or when a new tab is opened.
+Options:
 
-**About the legacy behavior:**
+- Sync changes (default): When you change settings in one tab, settings in other tabs change too. All tabs use the same settings.
 
-Its advantage is that when users crawl or download in several tabs at the same time, they can use different settings. For example, you can enable the "Bookmark count" condition in Tab A but leave it disabled in Tab B, then crawl in both tabs at the same time. This is a useful technique, but you do not need this behavior unless you are crawling simultaneously.
+- Keep unchanged (legacy behavior): When you change settings in one tab, settings in other tabs do not change. In other words, changes in any tab do not affect other tabs. Other tabs use the latest settings only after they are refreshed or a new tab is opened.
 
-The legacy behavior also has some disadvantages:
+The advantage of legacy behavior is that you can use different settings while crawling or downloading in multiple tabs at the same time. For example, you can enable the “Bookmark count” condition in tab A but not in tab B, then crawl in both tabs at the same time. This can be useful, but you do not need this feature unless you crawl in multiple tabs simultaneously.
 
-1. It is counterintuitive. New users usually expect settings to synchronize across tabs, but settings in other tabs do not actually change. This can lead to mistakes and wasted time. Even users who know this behavior often need to confirm whether a tab has the expected settings, which increases cognitive load.
-2. It can cause data added to some settings to be lost. For example, you add an excluded tag (`tag1`) in Tab A, and the downloader saves those settings. Tab B still uses the old settings without `tag1`. You then add another excluded tag (`tag2`) in Tab B. The downloader saves the settings again, but they contain only `tag2`, not `tag1`. Some changes made in Tab A have disappeared.
+However, legacy behavior also has some drawbacks:
 
-Because of these disadvantages, starting with version 19.3.0 (August 2026), the downloader synchronizes settings across tabs by default. You can change this setting if you truly need the legacy behavior.
+1. It is unintuitive. New users usually expect settings to synchronize across tabs, but settings in other tabs actually do not change. This can lead to mistakes and wasted time. Even users who know about this behavior often need to check whether a tab's settings are as expected, which increases mental overhead.
+
+2. Data added to some settings may be lost. For example, you add an excluded tag (tag1) in tab A, and the downloader saves these settings. Tab B still uses its old settings without tag1. If you then add another excluded tag (tag2) in tab B, the downloader saves the settings again, but they contain only tag2, not tag1. Some changes you made in tab A are therefore lost.
+
+Because of the drawbacks of legacy behavior, starting with version 19.3.0 (August 2026), the downloader synchronizes settings across tabs by default. If you really need legacy behavior, you can change this setting.
 
 ## Automatically export settings
 
@@ -70,12 +72,15 @@ Because of these disadvantages, starting with version 19.3.0 (August 2026), the 
   </span>
 </div>
 
-Enable this feature to automatically export (back up) your settings. Exported settings are saved in the `PPD Settings` folder within the browser's download directory.
+*The description of this setting is exactly the same as the description in the downloader.*
+
+Enable this feature to automatically export (back up) your settings. Exported settings are saved to the `PPD Settings` folder in your browser's download directory.
 
 You can choose between two export strategies:
 
-1. Export at a specified hourly interval. The default is 24 hours.
-2. Export immediately whenever settings change. Note: if you change settings frequently, the downloader may export settings frequently.
+1. Export at a fixed hourly interval. The default interval is 24 hours.
+
+2. Export immediately whenever settings change. If you change settings frequently, the downloader may export settings frequently.
 
 ## Manage settings
 

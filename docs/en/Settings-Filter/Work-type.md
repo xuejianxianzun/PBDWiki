@@ -190,14 +190,37 @@ Single-image works have only one image; multi-image works contain multiple image
   <span>%</span>
 </div>
 
-You can filter works based on the color of the images.
+You can filter works by the color of the images. A common use case is excluding black-and-white manga images.
 
-If you set filters for color or black-and-white images, the downloader checks the average color of the image to determine if it is color or black-and-white. A common use case is to exclude black-and-white manga images.
+If you set it to filter color or black-and-white images, the filter checks the colors of the image to determine whether the image is in color or black-and-white. The downloader checks this setting both when crawling and when downloading.
 
-The downloader checks this setting during both crawling and downloading.
+**How it works:**
 
-?> Some images may appear mostly black-and-white but contain some color. These are considered color images, not black-and-white.
+When checking the colors of an image, the downloader ignores white and transparent pixels, and only counts color, gray and black pixels. This is because when the human eye judges whether an image is in color, it usually does not care about the white areas; the focus is on whether the other content is in color. After removing the white areas, the accuracy is higher.
 
-When downloading, if a file is excluded due to its color, a corresponding message will appear in the log. For example:
+Then the downloader calculates the ratio of color pixels and compares it with the "Color Ratio Threshold": if the ratio of color pixels in an image is greater than the threshold, the image is treated as a color image; otherwise it is treated as a black-and-white image.
+
+**Color ratio threshold:**
+
+In some images, color, gray and black may each occupy a certain proportion.
+
+- If you **increase** the color ratio threshold, images are more likely to be treated as black-and-white images.
+- If you **decrease** the color ratio threshold, images are more likely to be treated as color images.
+
+Rough reference data when the threshold is 25%:
+
+- When crawling illustrations and Ugoira, about 10% - 20% of images are treated as black-and-white images.
+- When crawling manga, about 50% of images are treated as black-and-white images.
+
+?> Some images are mostly black-and-white but still have some color (the color area can sometimes even reach 30%). Such images are color images, not black-and-white images. Also, if the lines of a black-and-white image are colored, or it uses a lighter background color, it may also be treated as a color image.
+
+?> By comparison, the downloader rarely misjudges a color image as a black-and-white image, unless the proportion of gray and black is indeed very high.
+
+**When it is checked:**
+
+- If you have not excluded images of a certain color, the downloader will not check the image colors.
+- If you have excluded images of a certain color, the downloader checks them both when crawling and when downloading. During the crawling stage, the downloader loads the thumbnails of the images to check them; if an image does not meet the requirements, it will not be saved. During the downloading stage, the downloader checks the color of the image again after downloading it; if it does not meet the requirements, it will not be saved to the disk.
+
+When downloading, if a file is excluded because of its color, a message will be shown in the log. For example:
 
 <span class="log" style="color: rgb(210, 126, 0);"><a href="https://www.pixiv.net/i/134469561#1" target="_blank">134469561_p0</a> was not saved because its color does not meet the settings.<br></span>

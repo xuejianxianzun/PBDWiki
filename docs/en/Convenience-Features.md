@@ -92,7 +92,7 @@ When the mouse hovers over a work thumbnail, the downloader displays a download 
 
 Click the download button to download the work.
 
-See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhance/Thumbnail buttons?id=show-download-button-on-thumbnail)
+See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhance/Thumbnail-buttons?id=show-download-button-on-thumbnail)
 
 ## Image Viewer
 
@@ -158,7 +158,7 @@ The downloader adds buttons for specific bookmark counts at the top of search pa
 
 Clicking these buttons adds the bookmark count as a tag to the current search tag and performs the search.
 
-See detailed explanation: [Add a quick search area on the search page](/en/Settings-Enhance/Search page?id=add-a-quick-search-area-on-the-search-page)
+See detailed explanation: [Add a quick search area on the search page](/en/Settings-Enhance/Search-page?id=add-a-quick-search-area-on-the-search-page)
 
 ## Click Popular Works
 

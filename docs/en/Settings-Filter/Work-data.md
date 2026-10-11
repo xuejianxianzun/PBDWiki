@@ -32,14 +32,36 @@
   </div>
 </div>
 
-Bookmark count is the number of people who bookmarked this work. A higher bookmark count usually means the work is more valuable.
+The bookmark count refers to how many users have bookmarked the work. The higher the bookmark count, the higher the value of the work.
 
 This setting has two filtering methods:
 
-1. Bookmark count (total)
+1. Bookmark count (the total number)
 2. Average daily bookmark count
 
-As long as a work meets either of these options, it will be downloaded.
+**Minimum / Maximum:**
+
+It is used to check the total bookmark count of a work. You can set a bookmark count range to exclude works you do not need.
+
+**Average daily bookmark count:**
+
+This is a supplementary setting, intended to filter **recently posted** high-quality works. You can enable it as needed.
+
+The average daily bookmark count is the average obtained by dividing the bookmark count of a work by the number of days since it was posted. If a work was posted 3 days ago and has 600 bookmarks, then its average daily bookmark count is 200.
+
+Example use case:
+
+You want to crawl high-quality works, so you set the minimum bookmark count to 3000. But for newly posted works, even if the quality is high, they may not reach 3000 bookmarks within a day or two.
+
+In this case, you can enable "Average daily bookmark count" as a supplement. The default value of this setting is 600, which means that for a work posted 3 days ago, as long as its bookmark count is greater than 1800, the downloader will crawl it.
+
+?> The bookmark count of a work often grows fastest right after it is posted, then gradually slows down. Therefore, if a work has been posted for less than a day, the downloader will discount its bookmark count based on how long it has been posted (the shorter the posting time, the larger the discount), to estimate its average daily bookmark count when it has been posted for a full day. For example: if a work was posted 2 hours ago and has 200 bookmarks, the downloader will estimate its average daily bookmark count as 800; if it has been posted for a day or longer, the downloader will normally calculate the average daily bookmark count as the bookmark count divided by the number of days since posting.
+
+**Tips:**
+
+The bookmark count range and the average daily bookmark count are two independent and complementary filter conditions. As long as a work meets either of these two conditions, it will be crawled.
+
+The average daily bookmark count is suitable as a supplementary method for filtering recently posted works. It is not suitable for filtering works posted a long time ago, because the longer a work has been posted, the lower its average daily bookmark count.
 
 ## Width and height
 
@@ -102,15 +124,21 @@ As long as a work meets either of these options, it will be downloaded.
   </div>
 </div>
 
-You can set the width and height conditions for the images you want to download. The downloader will not download images that do not meet these conditions.
+You can set the width and height conditions of the images you want to download, and the downloader will not download images that do not meet these conditions.
 
-You can separately set the width and height values and comparison methods.
+You can set the value and the comparison method for width and height separately.
 
 **Tips:**
 
-- The default values for width and height are 0, meaning no restrictions.
-- Selecting `And` means the image's width and height must both meet the set width and height conditions.
-- Selecting `Or` means the image's width and height only need one to meet the requirements, and the image will be kept.
+- The default value of both width and height is 0, which means no limit.
+- Selecting `and` means both the width and the height of the image must meet the width and height conditions you set.
+- Selecting `or` means the image will be kept as long as either its width or its height meets the requirement.
+
+**Working details:**
+
+For single-image works (works with only one image), the downloader checks the width and height when crawling.
+
+For multi-image works, the downloader does not check when crawling, but waits until before downloading each image to check. This is because the width and height of each image in a multi-image work may differ, but when crawling only the width and height data of the first image is available, so it cannot be checked during crawling.
 
 ## Aspect ratio
 
@@ -162,15 +190,25 @@ You can separately set the width and height values and comparison methods.
   </div>
 </div>
 
-You can download only images of specific shapes:
+*The description of this setting is exactly the same as the description in the downloader.*
 
-Horizontal, Vertical, or Square.
+You can set it to download only images with a specified shape:
 
-?> Horizontal images have a width greater than their height; vertical images have a width less than their height.
+Horizontal, vertical, and square.
 
-You can also manually set the range of the image aspect ratio.
+If you need more precise conditions, you can also set the aspect ratio manually.
 
-?> The aspect ratio is the width divided by the height. An aspect ratio less than 1 indicates a vertical image. An aspect ratio greater than 1 indicates a horizontal image. The larger the aspect ratio, the flatter and longer the image appears.
+Aspect ratio:
+
+The aspect ratio is the number you get by dividing the width by the height. When the aspect ratio is less than 1, the image is vertical. When the aspect ratio is greater than 1, the image is horizontal. The larger the aspect ratio, the more elongated the image.
+
+Example: if you want to download images with an aspect ratio of 16:9 or wider, set the aspect ratio to >= 1.78.
+
+How it works:
+
+For single image works (works that contain only one image), the downloader checks the shape of the image while crawling;
+
+For multi-image works, the downloader does not check while crawling. Instead, it checks just before downloading each image. This is because the width and height of each image in a multi-image work may differ, but while crawling only the width and height of the first image are available, so it cannot check at that time.
 
 ## ID range
 
@@ -270,14 +308,41 @@ You can also manually set the range of the image aspect ratio.
   </div>
 </div>
 
-You can enter a work ID and crawl works with IDs greater than it (newer works) or less than it (older works).
+*The description of this setting is exactly the same as the description in the downloader.*
 
-It is divided into 3 work types:
-- `Image works`: including illustration, manga, and Ugoira
-- `Novel`
-- `Novel series`
+You can enter an ID to crawl works with IDs larger than it (new works) or smaller than it (old works).
 
-You can set the ID for each type according to your needs.
+You can set the ID range separately for different work types:
+
+- Image works: including illustrations, manga and Ugoira
+
+- Novels
+
+- Novel series
+
+- Bookmark ID (image works)
+
+- Bookmark ID (novels)
+
+About "Bookmark ID":
+
+This is designed for filtering newly added bookmarks on your bookmarks page.
+
+On the bookmarks page, works are not ordered by work ID but by the time you added them to your bookmarks; the most recently bookmarked works are shown first.
+
+Each of your bookmarks has a Bookmark ID, which identifies its position on the bookmarks page. So if you want to download "the bookmarks added after this one", you need to filter by Bookmark ID.
+
+How do you get the Bookmark ID of a specific work? One way is:
+
+- Hover over this work and click the download button to download it on its own
+
+- Click the "Export results" button in the download area
+
+- Open the exported JSON file with a text editor; the number after "bmkId" is its Bookmark ID.
+
+Note:
+
+A bookmark ID only exists for works you have already bookmarked, so the downloader does not check the bookmark ID setting for works you have not bookmarked.
 
 ## Posting time
 
@@ -304,15 +369,23 @@ You can set the ID for each type according to your needs.
   </div>
 </div>
 
-You can download only works published within a specific time range.
+You can download only the works that were posted within a certain time range.
 
-You can click the icon to the right of the input field to use the browser's time and date picker, or you can enter the value manually.
+**Usage examples:**
 
-**Note:** When entering the value manually, you must include the full time and date. As shown in the image below, the value on the left is incorrect because it doesn't include the time:
+- If you want to download works posted after a certain time, set "Start time" to that time, and set "End time" to a time in the future.
+- If you want to download works posted before a certain time, set "Start time" to a time in the past, and set "End time" to that time.
+- If you want to download works posted within a specific period (such as one year or one month), set both the start time and the end time.
+
+**How to enter the time:**
+
+You can click the icon on the right side of the input box to use the time and date picker provided by the browser, or click the input box and enter the numbers manually, or use the "Past", "Now" and "Future" buttons to set the time quickly.
+
+**Note:** When you enter it manually, the complete time and date must be included. As shown in the image below, the value on the left is wrong because it does not include the time:
 
 ![](../../template/en/images/20250910_012836.png)
 
-?> The first illustration on Pixiv is https://www.pixiv.net/artworks/20, published at `2007-09-09T13:14:07+00:00`.
+?> The first illustration on pixiv is https://www.pixiv.net/artworks/20 , and its posting time is `2007-09-09T13:14:07+00:00`
 
 ## Only download novels in these languages
 

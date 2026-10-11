@@ -19,20 +19,21 @@
   </div>
 </div>
 
-You can require works to contain certain tags. Works without these tags will not be crawled.
+You can require that works must contain certain tags. Works without these tags will not be crawled.
 
-?> Tags refer to the tag list below the work's description, for example:
+?> Tags refer to the tag list below the description of a work, for example:
 
 ![](../../template/en/images/20250909_001538.png)
 
-**Tip:**
+**Tips:**
+
 - You can add multiple tags, separated by **English commas** `,`.
-- Case insensitive.
-- Whole word matching. If you set `ab`, it will only match `ab`, not `abc`. And vice versa.
-- Matching mode: `All` means the work must contain all the tags you set; `Any` means the work only needs to contain any one of the tags you set.
-- The downloader checks both the original tags and the translated tags together. If the original tags do not contain the tag you set, but the translated tags do, the downloader will consider that the work contains this tag.
-- Depending on the language you use on Pixiv, Pixiv will return different translated tags. For example, the English translation of `巨乳` is `large breasts`, and the Korean translation is `거유`. Therefore, when the downloader checks translated tags, it will only check the translated tags in the current language.
-- It is recommended to use original tags.
+- It is not case-sensitive. The downloader compares the tags you set with the tags of the work one by one.
+- It is a full match. If you set `ab`, it will only match `ab`, and will not match `abc`, and vice versa.
+- Match mode: `all` means the work must contain all the tags you set; `any` means the work only needs to contain any one of the tags you set.
+- The downloader checks both the original tags and the translated tags. If the original tags do not contain the tag you set, but the translated tags do, then the downloader considers that the work contains this tag.
+- Depending on the language you use on Pixiv, Pixiv returns different translated tags. For example, the English translation of `巨乳` is `large breasts`, and the Korean translation is `거유`. So when the downloader checks translated tags, it only checks the translated tags in the current language.
+- It is recommended to use original tags first, so that the check can be performed earlier in some scenarios.
 
 ## Tags must not contain
 
@@ -67,12 +68,18 @@ You can require works to contain certain tags. Works without these tags will not
   </div>
 </div>
 
-You can require works to not contain certain tags. If a work has **any one** of the tags set here, the downloader will not crawl it.
+You can require that works must not contain certain tags. If a work has **any** tag that matches the tags set here, the downloader will not crawl it.
 
-This setting works similarly to `Include tag`, with the differences:
-- Match mode is always `One`: if you set multiple tags, a work containing **any one** of them will be excluded (not downloaded).
-- Optional `Perfect match` or `Partial match`: the default `Perfect match` is whole-word matching. `Partial match` allows substring matching — in `Partial match` your `ab` can match a work tag `abc`, but your `abc` will not match a work tag `ab` (i.e., the tag you set cannot be longer than the target tag).
-- Higher priority: `Exclude tag` has higher priority than `Include tag`. If a work matches both settings, the downloader will exclude it (i.e., it will not be crawled or downloaded).
+This setting is used in a similar way to "Must contain tags". The differences are:
+
+- The match mode is always `any`: if you set multiple tags, then the work will not be downloaded as long as it contains **any one of them**.
+- You can choose full match or partial match: full match and partial match each have their own input box and switch, and they can be set and toggled separately. The default `exact match` is a full match: the `ab` you set will only match the `ab` tag. `partial match` allows partial matching: the `ab` you set can match the `abc` tag of a work, but the `abc` you set will not match the `ab` of a work, that is, the tag you set cannot be longer than the target tag.
+- Higher priority: the priority of "Must not contain tags" is **higher than** "Must contain tags". If a work meets both settings at the same time, the downloader will exclude it (that is, it will not be crawled or downloaded).
+
+**How it works:**
+
+- Some tags may be displayed as translated tags, for example `绝区零`-`Zenless Zone Zero`, `プリキュア`-`Pretty Cure`. The downloader checks both the original tags and the translated tags of a work.
+- It is recommended to use original tags first, so that the check can be performed earlier in some scenarios.
 
 ## Block tags for specific users
 
@@ -121,11 +128,17 @@ This setting works similarly to `Include tag`, with the differences:
   </div>
 </div>
 
-If you don't like certain works from a specific user and don't want the downloader to crawl or download them, you can enable this setting.
+If you do not like some works of a user and do not want the downloader to crawl and download them, you can enable this setting.
 
-You can enter a user ID and specific tags from their works. When the downloader crawls works from this user, it will skip works containing these tags.
+You can enter the user ID and some tags of this user's works. When the downloader crawls the works of this user, it will not crawl the works that contain these tags.
 
-For example, you can set to exclude `tag1,tag2,tag3` from user ID `123456`.
+For example, you can set it to exclude `tag1,tag2,tag3` of the user ID `123456`.
+
+**Matching method:**
+
+- It is not case-sensitive.
+- Partial match: the `ab` you set can match the `abc` tag of a work.
+- Any: as long as the tags of a work contain any one of the tags you set, the work will be excluded.
 
 ## Title must contain
 
@@ -141,11 +154,19 @@ For example, you can set to exclude `tag1,tag2,tag3` from user ID `123456`.
   </div>
 </div>
 
-You can require that the work's title must contain specific characters. After enabling this setting, if the work's title does not contain the required characters, the downloader will not crawl it.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-- Case insensitive.
-- You can set multiple character strings, separated by commas (,).
-- The matching mode is "Any", meaning as long as the title contains any one of the specified character strings, the downloader will crawl it.
+You can require the title of a work to contain specific characters; only then will the downloader crawl it.
+
+If the title does not contain the characters you set, the downloader will not crawl it.
+
+You can set multiple entries, separated by a comma `,`.
+
+Matching rules:
+
+- Case-insensitive.
+
+- One: as long as the title contains any one of the entries you set, the downloader will crawl it.
 
 ## Title must not contain
 
@@ -164,12 +185,24 @@ You can require that the work's title must contain specific characters. After en
   </div>
 </div>
 
-You can require that the work's title must not contain specific characters. After enabling this setting, if the work's title contains any of the characters specified here, the downloader will not crawl it.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-- Case insensitive.
-- You can set multiple character strings, separated by commas (,).
-- The matching mode is "Any", meaning as long as the title contains any one of the specified character strings, the downloader will not crawl it.
-- Exclusion has higher priority than inclusion. Once a work is excluded by this filter, the downloader will not crawl it, even if it meets other conditions.
+You can require the title of a work not to contain specific characters.
 
-**Sub-option:**
-- `Also check series title`: When enabled, the downloader will also check the series title. If a work belongs to a series (for example, a manga series or a novel series) and the series title contains any excluded strings, the downloader will exclude that work and will not download the series.
+If the title contains the characters you set, the downloader will not crawl it.
+
+You can set multiple entries, separated by a comma `,`.
+
+Matching rules:
+
+- Case-insensitive.
+
+- One: as long as the title contains any one of the entries you set, the downloader will not crawl it.
+
+Also check series title:
+
+If you enable "Also check series title", then when a work belongs to a series, the downloader will also check whether the series title contains the characters to be excluded. If it does, the downloader will not crawl this series.
+
+Priority:
+
+Exclusion takes priority over inclusion. If a work's title satisfies both "Title must contain" and "Title must not contain", the downloader will not crawl it.

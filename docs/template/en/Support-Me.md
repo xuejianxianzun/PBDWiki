@@ -6,6 +6,8 @@ If you find the downloader helpful, I'd greatly appreciate your support and dona
 
 [https://www.patreon.com/xuejianxianzun](https://www.patreon.com/c/xuejianxianzun)
 
+It requires bypassing the Great Firewall, and it does not support WeChat Pay or Alipay, so it is suitable for users outside China. Of course, if you can pay through Patreon, that's totally fine too ~
+
 ### Leave a Positive Review
 
 If you like this downloader, you can rate and review it on the installation pages:

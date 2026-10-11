@@ -27,9 +27,13 @@
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-If a settings card contains a toggle switch (like this card), clicking the blank area of the card will toggle that switch.
+*The description of this setting is exactly the same as the description in the downloader.*
 
-If you’re worried about accidental clicks, you can disable this setting.
+If you enable this feature, when you click on any setting card, if the click position is a blank area (not an internal element) and the setting has a switch button, the downloader will automatically toggle the switch to enable/disable the setting. 
+
+This way, when you want to enable/disable a setting, you don't need to click the switch button accurately, just click the blank area on the card, which is very convenient. 
+
+If you're worried about misoperation, you can turn off this feature.
 
 ## Open Wiki link when clicking setting name
 
@@ -59,14 +63,24 @@ If you’re worried about accidental clicks, you can disable this setting.
   </span>
 </div>
 
-You can use these keys as hotkeys:<br>
-- Numbers <span class="blue">0</span> - <span class="blue">9</span><br>
-- Letters <span class="blue">A</span> - <span class="blue">Z</span><br>
-- Modifier keys: <span class="blue">Ctrl</span>, <span class="blue">Alt</span>, <span class="blue">Shift</span>, <span class="blue">Meta</span><br>
-<br>
-Details:<br>
-- Numbers and letters can be used on their own, so you can set a single-key hotkey. For example the hotkey <span class="blue">L</span>.<br>
-- You can combine any number of modifier keys, but you cannot use modifier keys alone. A modifier key must be used together with a number or letter. For example <span class="blue">Alt</span> + <span class="blue">X</span>.<br>
-- Many <span class="blue">Ctrl</span> combinations are browser-reserved function keys, so they cannot be set as in-page hotkeys. These combinations are: <span class="blue">Ctrl</span> + <span class="blue">T</span> / <span class="blue">W</span> / <span class="blue">N</span> / <span class="blue">R</span> / <span class="blue">Q</span> / <span class="blue">P</span> / <span class="blue">L</span> / <span class="blue">K</span>, and <span class="blue">Ctrl</span> + any number (<span class="blue">0</span> - <span class="blue">9</span>).<br>
-- Changes to hotkeys take effect immediately, no page refresh needed.<br>
+*The description of this setting is exactly the same as the description in the downloader.*
+
+You can use these keys as hotkeys:
+
+- Numbers `0` - `9`
+
+- Letters `A` - `Z`
+
+- Modifier keys: `Ctrl`, `Alt`, `Shift`, `Meta`
+
+Details:
+
+- Numbers and letters can be used on their own, so you can set a single-key hotkey. For example the hotkey `L`.
+
+- You can combine any number of modifier keys, but you cannot use modifier keys alone. A modifier key must be used together with a number or letter. For example `Alt` + `X`.
+
+- Many `Ctrl` combinations are browser-reserved function keys, so they cannot be set as in-page hotkeys. These combinations are: `Ctrl` + `T` / `W` / `N` / `R` / `Q` / `P` / `L` / `K`, and `Ctrl` + any number (`0` - `9`).
+
+- Changes to hotkeys take effect immediately, no page refresh needed.
+
 - You can modify the downloader's first-level hotkeys; second-level hotkeys (for example, those that only work when "previewing a work") are not supported.

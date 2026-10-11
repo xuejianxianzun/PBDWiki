@@ -16,7 +16,35 @@
   </div>
 </div>
 
-Please click the "Help" button in the downloader to view the detailed instructions.
+*The description of this setting is exactly the same as the description in the downloader.*
+
+You can set whether to start downloading automatically.
+
+There are two types of download tasks:
+
+- Normal download task: there are multiple crawl buttons in the "Start crawling" area of the downloader. Clicking the crawl buttons in the first row usually creates a normal download task, with only two exceptions: "Timed crawl" and "Crawl tag list".
+
+- Quick download task: directly clicking the download button, or crawling manually selected works. These actions have a stronger need for "download immediately" or "auto-download", so the downloader always used to download them automatically. Now you can also set them not to start downloading automatically.
+
+Quick download tasks are triggered by these actions:
+
+- Clicking the download button on a work thumbnail
+
+- Clicking the download button or using a hotkey to create a download task while previewing a work, using the image viewer, or viewing the original image
+
+- Crawling manually selected works or images
+
+- Clicking the quick download button on the right side of a work page
+
+- Crawling the recommended works on a work page
+
+- Download tasks created by clicking the bookmark button or the like button
+
+- Timed crawl
+
+- Crawl tag list
+
+- Entering an ID to crawl or crawling an ID range on the HomePage
 
 ## Download how many files at the same time
 
@@ -297,18 +325,23 @@ When the downloader starts downloading a file, it can retrieve its size. If it d
   </div>
 </div>
 
-This setting is designed for users who prefer to **save files manually** with the `Save As` dialog and want the downloader to remember the last location they chose.
+?> I do not recommend enabling this setting unless you have read the description below.
 
-If you want to use this feature, note the following:
+This setting is designed for users who like to **save files manually**. They like to use the "Save As" dialog to save files, and want the downloader to remember the location they selected last time.
 
-- To make this setting work correctly, you must enable `Ask where to save each file before downloading` in the browser's download settings. Otherwise, the browser will not show the Save As dialog, and files will be saved to the browser's configured download location instead of the last location you chose.
-- If you disable `Ask where to save each file before downloading` in the browser's download settings, you should also disable this setting.
-- If you enable this setting, the downloader will not create folders; it will only set the filename. That is because remembering the last save location requires downloading via the `download` attribute of an `a` tag, and folders cannot be created in that case.
-- If you enable this setting, the downloader always assumes the file was downloaded successfully, even if you cancel saving it. This is to simplify processing.
+If you want to use this feature, you need to note:
+
+- For this setting to work correctly, you must enable "Ask where to save each file" in the download settings of the browser. Otherwise the browser will not show the Save As dialog, and the file will be saved to the location set in the browser settings (instead of the location you selected last time).
+
+- If you turn off the "Ask where to save each file" setting of the browser, you should also turn off this setting.
+
+- If you enable this setting, the downloader will not create folders, it will only set the file name. This is because implementing the "remember the last save location" effect requires using the download attribute of the a tag to download the file, and folders cannot be created in this case.
+
+- If you enable this setting, the downloader always assumes that the file was downloaded successfully (even if you cancel saving the file). This is to simplify the processing.
 
 **Technical details:**
 
-When this setting is disabled (the default), the downloader uses the browser API to download files, for example:
+When this setting is disabled (default), the downloader uses the browser API to download files, for example:
 
 ```js
 browser.downloads.download({
@@ -321,9 +354,9 @@ browser.downloads.download({
 
 The downloader sets `saveAs: false` to try to save the file directly.
 
-If you enable `Ask where to save each file before downloading` in the browser's download settings, the browser will still show the Save As dialog. However, the dialog will always open in the default download folder, not the folder you used last time.
+If you enable "Ask where to save each file" in the download settings of the browser, the browser still shows the Save As dialog. But in this case, the folder opened by the dialog is always the default download location, not the location you selected manually last time.
 
-If you enable this setting, the downloader uses the `download` attribute of an `a` tag to download the file. In that case, the Save As dialog opens in the location you saved to last time. The code looks like this:
+If you enable this setting, the downloader uses the download attribute of the a tag to download the file. In this case, the Save As dialog opens at the location you saved to manually last time. The code is shown below:
 
 ```js
 const a = document.createElement('a')
@@ -342,6 +375,10 @@ a.click()
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-If you enable this option, the downloader will display a system notification after all files have finished downloading. It may also request notification permission, and there may be a notification sound depending on your operating system settings.
+If you enable this option, the downloader shows a system notification after all files have been downloaded (it may request notification permission), and there may also be a notification sound (depending on the operating system settings).
 
-The style of the notification varies by operating system.
+The style of the notification differs depending on the operating system. On Windows 10, a notification is displayed in the lower right corner of the screen.
+
+If you have enabled Do Not Disturb mode, the notification is collected into the notification center and is not displayed in the lower right corner (but there may still be a notification sound).
+
+?> Sometimes the operating system hides notifications by default, so you cannot see them. If you need to, you can check the notification settings in the system settings; you may be able to adjust the priority of this browser so that its notifications are always shown.

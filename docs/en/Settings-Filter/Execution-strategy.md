@@ -9,14 +9,14 @@
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-If you enable this feature, the downloader will check whether each work has a download record before crawling it. If it does, the downloader will skip it. This reduces unnecessary crawling and saves time. This feature is also useful for incremental updates, because you can crawl only works that have not been downloaded.
+If you enable this feature, the downloader checks whether a work has a download record before crawling it. If it does, the downloader will not crawl it. This reduces unnecessary crawling and saves time. This feature also helps with incremental updates, because you can crawl only the works that have not been downloaded yet.
 
-In addition, when merging a novel series, enabling this setting can skip novels that already have download records and merge only newly added novels in the series.
+In addition, when merging novel series, enabling this setting can skip the novels that have a download record, and only merge the newly added novels in the series.
 
-**Notes:**
-- This feature depends on the download records saved by the downloader, so it is not completely accurate. If you clear the downloader's download records, it will forget which files it has downloaded. If you want to learn more about the downloader's download records, see [Manage download records](/en/Settings-Download/Download-records?id=manage-download-records).
-- This feature does not work for novel series, because the downloader does not save download records for novel series.
-- For multi-image works, the downloader checks only whether the first image has a download record. So as long as you downloaded the first image, the downloader can show a border for that work. But if you did not download the first image and downloaded only later images, the downloader will not show a border for it.
+**Note:**
+- This feature relies on the download records saved by the downloader, so it is not completely accurate. If you clear the download records of the downloader, it will forget which files it has downloaded. If you want to learn more about the download records of the downloader, see the description in [Manage download records](/en/Settings-Download/Download-records?id=manage-download-records).
+- Previously, the downloader did not save a download record for each novel when merging novel series, so they may still be downloaded once. After that, they will not be downloaded again.
+- For multi-image works, as long as you have downloaded one of its images, the work is treated as downloaded, and it will be skipped in later crawls.
 
 ## User block list
 
@@ -43,27 +43,27 @@ In addition, when merging a novel series, enabling this setting can skip novels 
   </div>
 </div>
 
-You can enter the IDs of users you want to block, and the downloader will not download works from these users.
+You can enter the IDs of the users you want to block, so that the downloader will not download the works of these users.
 
-?> Note: You need to enter **user IDs** (numbers), not usernames, as usernames are not unique.
+?> Note: you need to enter the **user ID** (a number), not the user name, because user names are not unique and may change.
 
-?> To block multiple users, enter multiple user IDs separated by commas `,`.
+?> If you want to block multiple users, you can enter multiple user IDs, separated by English commas `,`.
 
 **Sub-options:**
 
 ### Quickly block users
 
-When you hover over any user's name, the downloader displays a block button. Click it to block that user.
+When you hover the mouse pointer over the name of any user, the downloader shows a block button. Click the button to block this user.
 
 ### Remove their works from the page
 
-When enabled, the downloader will search for works from blocked users on various pages and remove them, so you won't see works from users you don't like.
+After enabling it, the downloader looks for the works of blocked users on various pages, and removes them if found, so that you will not see the works of users you do not like.
 
-When the downloader removes works from certain users, it will display details in the log at the top, for example:
+When the downloader removes the works of some users, it shows the details in the log at the top, for example:
 
-<span style="color: rgb(210, 126, 0);" class="log">Removed works from user <a href="https://www.pixiv.net/users/6756759" target="blank">村上水軍</a><br></span>
+<span style="color: rgb(210, 126, 0);" class="log">Removed the works of the user <a href="https://www.pixiv.net/users/6756759" target="blank">村上水軍</a><br></span>
 
-?> Works from blocked users will not be removed from their own profile pages, allowing you to view their profiles normally.
+?> The works of blocked users are not removed on their own user pages, so that you can still view their pages normally.
 
 ## Slow down crawl
 
@@ -150,25 +150,32 @@ The default value is 30 minutes.
   </div>
 </div>
 
-When crawling on search pages for illustrations, manga, or Ugoira, the downloader displays crawled works on the current page, sorted by bookmark count from high to low.
+When you crawl illustrations and manga on search pages (/tags and /search), the downloader can display the crawled works on the page, sorted by bookmark count from high to low.
 
 Example:
 
 ![](../../template/en/images/20250909_220752.webp)
 
-This feature provides a what-you-see-is-what-you-get experience. You can preview crawl results, filter them, and then download.
+This feature provides a WYSIWYG experience. You can preview the crawl results, filter them, and then download them.
 
-?> After crawling, you can use buttons in the downloader's "Crawl" tab to filter results.
+**Adjusting the crawl results:**
 
-**Note:** When this feature is enabled, the "Automatically start downloading" setting is disabled. This allows users to filter results before downloading. To start downloading automatically after crawling, disable this feature.
+On these pages, after crawling is completed, you can use these buttons in the settings panel to adjust the crawl results:
 
-?> This feature does not work on novel search pages.
+- After changing the filter conditions, click "Filter in results"
+- Clear multi-image works, clear Ugoira works, manually delete works, manually exclude works
 
-### Upper Limit
+**Number of works displayed per page**:
 
-When the downloader crawls many works (e.g., thousands), displaying them all on the page increases memory usage. In extreme cases, this may cause the page to crash.
+When there are many crawl results, the downloader displays them in pages to reduce performance pressure.
 
-You can set a "Limit" to control the maximum number of displayed works. The default is `3000`.
+You can set the number of works displayed per page. The default is 100. Changes take effect immediately.
+
+---
+
+**Note:** When this feature is enabled, the "Automatically start downloading" setting does not take effect. This is to give you a chance to filter the results before downloading, and then download them. If you want to automatically start downloading after crawling, you can disable this feature.
+
+?> This feature does not take effect on novel search pages.
 
 ## Automatically export crawl results
 
@@ -196,12 +203,13 @@ You can set a "Limit" to control the maximum number of displayed works. The defa
   </div>
 </div>
 
-When this setting is enabled, the downloader will automatically export crawling results **after crawling is complete**.
+After enabling this setting, the downloader automatically exports the crawl results when **crawling is completed**.
 
 **Sub-options:**
 
-- Enable when the crawl results exceed the specified number: Results will only be exported if the number of crawling results exceeds the specified value.
-- File format: You can choose to export as a CSV file, a JSON file, or both. CSV format is easy to read, while JSON format can be used to import crawling results. The content in the two formats differs: JSON contains complete data, while CSV is generated based on JSON and includes only partial data, excluding some less commonly used information.
+- **Enable when the number of crawl results is greater than the specified number**: if you only want to export when there are many crawl results, you can use this setting. The crawl results are exported only when the number of crawl results is greater than the specified value. Note: if it is set to 0, the results will be exported as long as there is one crawl result.
+
+- **File format**: you can choose to export as a CSV file and/or a JSON file. CSV is plain text table data, which can be opened with spreadsheet software such as Excel, and is easy to read. JSON is suitable for analysis with code, and can also be used to import crawl results into the downloader. The contents of the two formats are also different: the content in JSON is complete, while the content in CSV is generated from JSON and only contains partial data, without saving some rarely used data.
 
 ## After obtaining the work ID list, export the ID list and stop the task
 
@@ -213,20 +221,30 @@ When this setting is enabled, the downloader will automatically export crawling 
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-If you want to obtain the list of work IDs crawled by the downloader without downloading files, you can enable this option.
+If you want to get the work ID list crawled by the downloader, and do not need to download the files, you can enable this option.
 
 **Export timing:**
 
-- The export occurs after the downloader has obtained the list of all work IDs to be crawled. Note that this is not "after crawling is complete" but earlier.
+- The export happens after the downloader has obtained the IDs of all the works to be crawled. Note that this is not "after crawling is completed", but earlier.
 
-The crawling phase of the downloader consists of two steps:
-1. Obtain the list of all work IDs.
-2. Retrieve detailed data for each work, check filtering conditions, and save data for works that meet the conditions.
+The crawling stage of the downloader is divided into 2 steps:
+1. Get the ID list of all works.
+2. Get the detailed data of each work one by one, check the filter conditions, and save the data of the works that meet the conditions.
 
-The export occurs after step 1 and stops the task, meaning step 2 is not executed.
+The export happens after step 1, and the task is stopped, that is, step 2 will not be executed.
 
-!> Since the export happens early, filters are not applied at this stage, so the exported work ID list may include works that do not meet the filtering conditions.
+!> Because the export happens relatively early, the filters have not been applied at that time, so the exported work IDs may contain works that do not meet the filter conditions.
 
 **Exported content:**
 
-The exported work ID list is saved to a JSON file. You can process this file as needed, but its design purpose is to work with another feature: the [Import ID list](/en/Buttons-Start-crawling/HomePage?id=import-id-list) button on the homepage.
+The exported work ID list is saved to a JSON file. You can process the file yourself, but by design it is intended to be used with another feature: the [Import ID list](/en/Buttons-Start-crawling/HomePage?id=import-id-list) button on the home page.
+
+**Usage example:**
+
+When the works you need to crawl come from multiple different pages, and you want to combine them into one crawl task, you can do this:
+
+- Enable this setting;
+- Get the work ID list on each page;
+- Combine them together (put all the work IDs into the same JSON file);
+- Disable this setting;
+- Use the "Import ID list" feature on the home page to start crawling.

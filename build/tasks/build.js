@@ -219,11 +219,13 @@ for (const lang of langs) {
   collect(data.optionsData, 'option')
   collect(data.buttonsData, 'button')
 
-  // 3) 删除旧的设置/按钮文件夹
+  // 3) 删除旧的设置/按钮文件夹（产物目录可能还不存在，例如用户删掉了 docs/<lang>，此时跳过；后面写入时会自动创建）
   const removed = []
-  for (const d of fs.readdirSync(outDir, { withFileTypes: true })) {
-    if (!d.isDirectory()) continue
-    if (d.name.startsWith(prefixes.option) || d.name.startsWith(prefixes.button)) removed.push(d.name)
+  if (fs.existsSync(outDir)) {
+    for (const d of fs.readdirSync(outDir, { withFileTypes: true })) {
+      if (!d.isDirectory()) continue
+      if (d.name.startsWith(prefixes.option) || d.name.startsWith(prefixes.button)) removed.push(d.name)
+    }
   }
   for (const name of removed) {
     secRemoved.line(`- ${lang}/${name}`)

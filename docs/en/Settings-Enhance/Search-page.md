@@ -36,17 +36,17 @@ The bookmark count buttons added by the downloader are:
   <span class="beautify_switch" tabindex="0"></span>
 </div>
 
-This feature is enabled by default. When the mouse cursor hovers over a work thumbnail, the downloader displays a larger preview image, as shown below:
+*The description of this setting is exactly the same as the description in the downloader.*
 
-![](../../template/publicImages/20251025_015955.webp)
-<!-- https://www.pixiv.net/artworks/134677173 -->
+After you enable this feature, the downloader will intercept Pixiv's requests on the search page and apply the filter conditions before the works are displayed, removing works that do not meet the conditions. This way, only works that meet the conditions will be displayed.
 
-?> The preview image adapts to the available area and won't exceed the screen.
+**Notes:**
 
-To **close the preview image**, use one of these methods:
-- Move the mouse cursor outside the thumbnail area
-- Click the preview image
-- Press the `Esc` key
+- After you enable this feature or modify the filter conditions, the works displayed on the page will not change; this is normal because they have already been displayed. This feature is implemented by intercepting requests, so subsequent requests will apply your changes. Therefore, you can see the effect of the changes when you turn the page or refresh.
+
+- Since the work list data does not include the bookmark count, the downloader cannot use the bookmark count to filter works. The bookmark count condition will be ignored.
+
+- When enabling this feature, please use the "Image Color" filter with caution. If only one color is selected (which means judging the color of the image), the downloader needs to load thumbnails of all works to determine the color, which will generate a large number of requests and also take more time.
 
 ## Remove the works of followed users from the search page
 

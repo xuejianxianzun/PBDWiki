@@ -10,7 +10,7 @@ If you installed the extension offline, it will not update automatically.
 
 You can check for new versions on the [releases page](https://github.com/xuejianxianzun/PixivBatchDownloader/releases ':target=_blank'). If a new version is available, you can update manually.
 
-The steps for manual updating are mostly the same as those for [Offline Installation](/en/OfflineInstallation.md), with one difference: since you've already installed the extension, you need to overwrite the old version's files.
+The steps for manual updating are mostly the same as those for [Offline Installation](/en/Installation/OfflineInstallation), with one difference: since you have already installed the extension, you need to overwrite the old version's files.
 
 Here are the general steps:
 
