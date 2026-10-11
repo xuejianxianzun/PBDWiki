@@ -21,9 +21,26 @@
         repo: '',
         loadSidebar: true,
         subMaxLevel: 3,
+        // 搜索插件（docs/js/search.min.js）：索引侧边栏里的所有页面
+        search: {
+          paths: 'auto',
+          depth: 2,
+          placeholder: {
+            '/en/': 'Search',
+            '/': '搜索',
+          },
+          noData: {
+            '/en/': 'No results',
+            '/': '找不到结果',
+          },
+          hideOtherSidebarContent: true,
+          namespace: 'PBDWiki',
+        },
       }
     </script>
     <script src="js/docsify.min.js"></script>
+    <script src="js/search.min.js"></script>
+    <script src="js/search-status.js"></script>
     <!-- 不要为这些 script 标签添加 async、defer 属性，因为如果执行时机太晚的话，
      偶尔会错过钩子执行的时机，导致绑定在钩子上的代码未执行。 -->
     <script src="js/sidebar-collapse.js"></script>

@@ -2456,6 +2456,7 @@ li > ul.app-sub-sidebar > li::before {
 }
 :root {
   --theme-blue: #199df5;
+  --theme-color: var(--theme-blue);
   --blue-buttons-bg: #0ea8ef;
   --beautify-blue: #1dacf5;
   --bg-checkbox-blue: #1fb2fd;
@@ -2909,4 +2910,24 @@ html[data-xzpagetheme='dark'] body .pbdHighlightFollowing * {
     transform: scale(4);
     opacity: 0;
   }
+}
+.search .search-keyword {
+  color: var(--theme-blue);
+  font-style: normal;
+  font-weight: 600;
+}
+.search .matching-post:hover h2,
+.search .matching-post:hover p {
+  color: var(--theme-blue);
+}
+.search .search-status {
+  display: none;
+  margin-top: 6px;
+  padding: 0 7px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--theme-blue);
+}
+.search .search-status.show {
+  display: block;
 }

@@ -6,6 +6,9 @@
 :root {
   // 主题色，主要用于标题栏、导航栏、按钮的高亮颜色。它不会在内容区域里大量使用，以免造成视觉疲劳。
   --theme-blue: #199df5;
+  // docsify 的默认主题色（绿色 #42b983）。docsify 的 vue.css 与搜索插件里大量使用
+  // var(--theme-color, #42b983)，这里把它覆盖成 wiki 的主题蓝，以统一配色。
+  --theme-color: var(--theme-blue);
   // 蓝色按钮的背景颜色
   --blue-buttons-bg: #0ea8ef;
   // 比主题色浅一些的蓝色，主要用于蓝色文字
@@ -581,5 +584,39 @@ html[data-xzpagetheme='dark'] body .pbdHighlightFollowing * {
   100% {
     transform: scale(4);
     opacity: 0;
+  }
+}
+
+// docsify 搜索插件（docs/js/search.min.js）
+// 插件本身没有给匹配文字设置颜色，这里统一使用 wiki 的主题蓝。
+.search {
+  // 搜索结果里匹配到的文字（<em class="search-keyword">）
+  .search-keyword {
+    color: var(--theme-blue);
+    // em 默认是斜体，中文显示为斜体不好看
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  // 鼠标经过搜索结果时，标题和摘要也使用主题蓝
+  .matching-post:hover {
+    h2,
+    p {
+      color: var(--theme-blue);
+    }
+  }
+
+  // 索引状态提示（由 docs/js/search-status.js 插入到搜索框下方）
+  .search-status {
+    display: none;
+    margin-top: 6px;
+    padding: 0 7px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--theme-blue);
+  }
+
+  .search-status.show {
+    display: block;
   }
 }
