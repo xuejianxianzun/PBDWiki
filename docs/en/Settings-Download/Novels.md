@@ -72,6 +72,8 @@ You can install it from the Microsoft Store.
   </span>
 </div>
 
+*The description of this setting is exactly the same as the description in the downloader.*
+
 This setting determines which language tag is used for the dc:language and xml:lang attributes of the EPUB file.
 
 Options:
@@ -114,6 +116,8 @@ For example, if a novel is originally in Simplified Chinese but you enable Simpl
   </span>
 </div>
 
+*The description of this setting is exactly the same as the description in the downloader.*
+
 Set the text direction of the body text in EPUB novels.
 
 Options:
@@ -122,7 +126,7 @@ Options:
 
 - Vertical: text is laid out from top to bottom, and pages progress from right to left.
 
-- Use vertical for novels in these languages: use vertical only for the languages you specify, and horizontal for other languages. You can enter one or more language codes, separated by an English comma ,, for example ja,zh-tw.
+- Use vertical for novels in these languages: use vertical only for the languages you specify, and horizontal for other languages. You can enter one or more language codes, separated by an English comma `,`, for example `ja,zh-tw`.
 
 Notes:
 
@@ -154,6 +158,8 @@ Notes:
     </svg>
   </span>
 </div>
+
+*The description of this setting is exactly the same as the description in the downloader.*
 
 Explanation:
 

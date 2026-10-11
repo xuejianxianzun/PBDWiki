@@ -46,7 +46,7 @@ In other words, this button has both add bookmark and unbookmark functions, swit
 
 ------------
 
-You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-Enhance/Other?flag=88) settings: whether to add tags and whether the bookmark is public.
+You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-Enhance/Other?id=downloader39s-bookmark-feature-✩) settings: whether to add tags and whether the bookmark is public.
 
 ## Preview Works
 
@@ -82,7 +82,7 @@ When the mouse hovers over the work thumbnail, the downloader will display a cop
 
 Clicking the copy button allows you to copy both the images and text summary of the work at the same time, then paste them into other software to save, or share with others.
 
-View detailed instructions: [Copy work info](/en/Settings-Enhance/Other?flag=89)
+View detailed instructions: [Copy work info](/en/Settings-Enhance/Other?id=copy-work-info)
 
 ## Show download button on thumbnail
 

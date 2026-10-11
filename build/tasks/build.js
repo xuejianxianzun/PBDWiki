@@ -97,6 +97,13 @@ for (const lang of langs) {
   const descDir = path.join(templateDir, 'desc')
   fs.mkdirSync(descDir, { recursive: true })
   const descOf = new Map()
+  // 说明文件里的 [fetch] 标记会在产物里转换为一条提示，提示文字按语言配置在 config.json 的 fetchTip
+  const fetchTip = (config.fetchTip || {})[lang] || ''
+  const withFetchTip = (text) => {
+    const body = String(text || '').replace(/^\s*\n/, '')
+    if (!fetchTip) return body
+    return `*${fetchTip}*\n` + (body ? '\n' + body : '')
+  }
   const allItems = []
   for (const entry of data.optionsData)
     for (const item of entry.names)
@@ -123,8 +130,10 @@ for (const lang of langs) {
     const created = raw === null
     if (raw === null) raw = ''
     let use = ''
+    let hasFetch = false
     const canFetch = it.kind === 'setting' && it.msgKey
     if (/^\s*\[fetch\]/.test(raw)) {
+      hasFetch = true
       if (canFetch) {
         const { md, leftover } = htmlToMarkdown(data.langText[it.msgKey][langIndex])
         use = md
@@ -139,6 +148,7 @@ for (const lang of langs) {
       if (canFetch) {
         const { md, leftover } = htmlToMarkdown(data.langText[it.msgKey][langIndex])
         use = md
+        if (md) hasFetch = true
         writeDesc(file, md ? '[fetch]\n' + md : '')
         secNew.line(`- ${lang}/${it.id}（已从下载器获取）`)
         if (leftover.length) secWarn.line(`- ${lang}/${it.id}：[fetch] 文本里有未处理的标签：${leftover.join(' ')}`)
@@ -150,7 +160,7 @@ for (const lang of langs) {
       use = raw.trim()
     }
     if (!use) secEmpty.line(`- ${lang}/${it.id}`)
-    descOf.set(it.id, use)
+    descOf.set(it.id, hasFetch ? withFetchTip(use) : use)
   }
 
   // 1.5) 收集每个页面上所有标题的 slug（设置名 + 说明文字里的标题），用于校验 ?id= 锚点
@@ -309,25 +319,54 @@ for (const lang of langs) {
   log('生成其它页面：', otherCount)
 
   // 6) 侧边栏
+  // 底稿里用 [settingsMenu] / [buttonsMenu] 标记占位，构建时替换为设置/按钮的链接列表
   const sidebarSrc = readText(path.join(templateDir, '_sidebar.md'))
   const sidebarLines = sidebarSrc.split('\n')
-  const blocks = findSidebarBlocks(sidebarLines, lang, prefixes)
-  const genLines = []
-  for (const g of folders) {
-    const menuName = (config.menuFileNameOverrides[g.folder] || `${g.folder}-menu.md`).replace(/\.md$/, '')
-    const displayName = config.folderDisplayNames[g.folder] || g.folder
-    genLines.push(`* [${displayName}](${lang}/${g.folder}/${menuName})`)
-    for (const p of g.pages) {
-      genLines.push(`  * [${pageDisplayName(p.file, lang)}](${lang}/${g.folder}/${p.file})`)
+  const genMenu = (kind, indent) => {
+    const lines = []
+    for (const g of folders) {
+      if (g.kind !== kind) continue
+      const menuName = (config.menuFileNameOverrides[g.folder] || `${g.folder}-menu.md`).replace(/\.md$/, '')
+      const displayName = config.folderDisplayNames[g.folder] || g.folder
+      lines.push(`${indent}* [${displayName}](${lang}/${g.folder}/${menuName})`)
+      for (const p of g.pages) {
+        lines.push(`${indent}  * [${pageDisplayName(p.file, lang)}](${lang}/${g.folder}/${p.file})`)
+      }
     }
+    return lines
   }
-  if (blocks.length) {
-    const [start, end] = blocks[0]
-    const newLines = [...sidebarLines.slice(0, start), ...genLines, ...sidebarLines.slice(end + 1)]
-    write(G('_sidebar.md'), newLines.join('\n'))
-    if (blocks.length > 1) secWarn.line(`- ${lang}：侧边栏里有 ${blocks.length} 个设置/按钮块，只替换了第一个`)
+  const MARK_RE = /^(\s*)\[(settingsMenu|buttonsMenu)\]\s*$/
+  const outLines = []
+  const foundMark = { settingsMenu: false, buttonsMenu: false }
+  for (const line of sidebarLines) {
+    const m = MARK_RE.exec(line)
+    if (!m) {
+      outLines.push(line)
+      continue
+    }
+    const indent = m[1]
+    const name = m[2]
+    foundMark[name] = true
+    outLines.push(...genMenu(name === 'settingsMenu' ? 'option' : 'button', indent))
+  }
+  if (foundMark.settingsMenu || foundMark.buttonsMenu) {
+    write(G('_sidebar.md'), outLines.join('\n'))
+    for (const name of ['settingsMenu', 'buttonsMenu']) {
+      if (!foundMark[name]) secWarn.line(`- ${lang}：侧边栏底稿里缺少 [${name}] 标记`)
+    }
   } else {
-    secWarn.line(`- ${lang}：侧边栏未找到设置/按钮块，未更新`)
+    // 兼容旧写法：底稿里直接写着设置/按钮的链接块
+    const blocks = findSidebarBlocks(sidebarLines, lang, prefixes)
+    if (blocks.length) {
+      const [start, end] = blocks[0]
+      const genLines = [...genMenu('option', ''), ...genMenu('button', '')]
+      const newLines = [...sidebarLines.slice(0, start), ...genLines, ...sidebarLines.slice(end + 1)]
+      write(G('_sidebar.md'), newLines.join('\n'))
+      secWarn.line(`- ${lang}：侧边栏底稿里没有 [settingsMenu]/[buttonsMenu] 标记，已按旧方式替换设置/按钮链接块（建议改为标记）`)
+      if (blocks.length > 1) secWarn.line(`- ${lang}：侧边栏里有 ${blocks.length} 个设置/按钮块，只替换了第一个`)
+    } else {
+      secWarn.line(`- ${lang}：侧边栏底稿里没有 [settingsMenu]/[buttonsMenu] 标记，也未找到设置/按钮链接块，未更新`)
+    }
   }
 
   // 7) 记录本语言的文件夹名（覆盖表检查在全部语言处理后统一进行）

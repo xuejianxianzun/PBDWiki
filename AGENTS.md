@@ -28,7 +28,7 @@ docs/
 ├── template/                      # 手工内容的源（构建的输入，重要！）
 │   ├── zh-cn/desc/<no|id>.md      # 每个设置项/按钮的说明文字
 │   ├── en/desc/<no|id>.md         # 同上（英语版）
-│   ├── <lang>/_sidebar.md         # 总目录底稿
+│   ├── <lang>/_sidebar.md         # 总目录底稿（设置/按钮部分用 [settingsMenu] / [buttonsMenu] 标记占位）
 │   └── <lang>/...                 # 其它页面（含 [setting:N] 等链接标记）
 ├── data/                          # 设置项与按钮的元数据（由构建生成）
 │   ├── options_data.json          # 所有设置项的分类、路径、多语言名字
@@ -61,7 +61,7 @@ npm run ts
 
 - 运行 `npm run build` 时，从本地下载器仓库（路径在 `build/config.json` 的 `pbdRepo`）读取数据，重建 `docs/<lang>/` 下的设置/按钮文件夹、页面、菜单、侧边栏，并展开链接标记、写回两个数据源 JSON。如果该路径不存在，可以尝试从 Powerful Pixiv Downloader 的 Github 仓库里读取相关文件。
 - **源与产物**：手工内容都放在 `docs/template/` 下（说明文字、其它页面、侧边栏底稿等）；`docs/<lang>/` 下与设置/按钮相关的内容是构建产物，**不要直接编辑**（会被覆盖）。
-- **说明文字**：在 `docs/template/<lang>/desc/<no|id>.md` 里维护；文件第一行为 `[fetch]` 时会从下载器获取帮助文字（HTML 转 Markdown）。构建报告里会列出说明为空的条目。
+- **说明文字**：在 `docs/template/<lang>/desc/<no|id>.md` 里维护；文件第一行为 `[fetch]` 时会从下载器获取帮助文字（HTML 转 Markdown）。产物页面里 `[fetch]` 会显示为一行斜体提示（文字按语言配置在 `build/config.json` 的 `fetchTip`）。构建报告里会列出说明为空的条目。
 - **链接标记**：文档里引用设置/按钮时使用 `[setting:数字编号]` 或 `[button:按钮id]`；要链接到页面内的某个标题（如说明文字里的 `###` 小标题）时，用 `[setting:32?id=标题原文]` 形式（`?id=` 的值会按 docsify 规则 slugify 后作为锚点）。构建时自动展开为最新名称和路径的链接，不要在设置/按钮之间写死完整链接。
 - **本机运行构建的注意事项**（沙箱删除限制、提权与"预尝试"行为）见 `build/README.md` 文末「本机环境注意事项」。
 - 详细说明与命令参数见 `build/README.md`；每次运行的报告在 `build/reports/` 下。
@@ -94,7 +94,7 @@ npm run ts
 
 ### 其他
 
-- `docs/template/<lang>/_sidebar.md` 里的设置/按钮链接会由构建更新，其它链接（安装、使用技巧等）保持原样；新增其它页面后要更新对应语言的底稿。
+- `docs/template/<lang>/_sidebar.md` 是总目录的底稿：设置部分写 `[settingsMenu]`、按钮部分写 `[buttonsMenu]`（各占一行），构建时替换为最新链接列表；**不要**在里面手写设置/按钮的链接。其它链接（安装、使用技巧等）由你维护、构建原样保留；新增其它页面后要更新对应语言的底稿。
 - 图片只在 `docs/template/` 下维护：`docs/template/<lang>/images/`（语言特有）、`docs/template/publicImages/`（两语言共享）；`docs/images/` 是站点级图片（logo/favicon），不属于构建范围。构建**不复制图片**，而是把产物 md 里的图片引用自动改写为指向 `template/`（产物里没有 `<lang>/images`、`publicImages` 目录）；模板里按"页面位置"写相对路径即可（设置/按钮页面 `../images/`、`../../publicImages/`，顶层页面 `images/`、`../publicImages/`）。清理未使用的图片用 `docs/clear_unused_images.py`（在 docs 下运行 `python clear_unused_images.py`）：语言图按同语言的 md 检查、公共图按全部语言的 md 检查，列出后确认删除。
 - `docs/js/form.ts` 是浏览器端增强脚本（美化表单控件、tooltip、`.toggleArea` 提示区域展开等），修改后要运行 `npm run ts` 编译为 `form.js`（**不要直接编辑 form.js**）；`footer.js`、`sidebar-collapse.js` 是直接维护的脚本。
 - 提交信息习惯：版本更新类使用"更新到 X.Y.Z 版本"，阶段性提交使用"暂存"。

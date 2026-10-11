@@ -26,6 +26,10 @@
     "Buttons-Start-crawling": "Buttons-Start crawl"
   },
   "menuFileNameOverrides": {},
+  "fetchTip": {
+    "zh-cn": "该设置的说明与下载器里的说明完全一致。",
+    "en": "The description of this setting is exactly the same as the description in the downloader."
+  },
   "menuIntroOverrides": {
     "zh-cn": {
       "按钮-下载区域": "下载器首页的“下载区域”里有一些按钮，主要分为两类。有些按钮一开始不会显示，只在有抓取结果之后才会显示。",

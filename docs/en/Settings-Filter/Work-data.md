@@ -333,11 +333,13 @@ You can click the icon to the right of the input field to use the browser's time
   </span>
 </div>
 
+*The description of this setting is exactly the same as the description in the downloader.*
+
 You can require the language of a novel to be one of the specific languages; only then will the downloader crawl it.
 
 The downloader checks the language of every novel, including the novels in a series.
 
-You can set one or more language codes. Separate multiple language codes with a comma ,. For example: zh-cn,ja,en
+You can set one or more language codes. Separate multiple language codes with a comma `,`. For example: `zh-cn,ja,en`
 
 Matching rules:
 

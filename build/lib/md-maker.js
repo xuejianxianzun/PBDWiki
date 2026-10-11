@@ -113,7 +113,7 @@ export function makeMarkerResolver({ optionsData, buttonsData, lang }) {
 
 /**
  * 把 langText 里的 HTML 说明文字转成 Markdown
- * 规则：<br> → 两个换行；<strong> → **；<a> → md 链接；span 等去标签
+ * 规则：<br> → 两个换行；<strong> → **；<a> → md 链接；<span class="blue">（蓝色高亮）→ 行内代码；span 等去标签
  * @returns {{ md: string, leftover: string[] }}
  */
 export function htmlToMarkdown(text) {
@@ -126,6 +126,8 @@ export function htmlToMarkdown(text) {
   s = s.replace(/<(strong|b)>([\s\S]*?)<\/\1>/gi, '**$2**')
   // 链接
   s = s.replace(/<a[^>]*?href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, '[$2]($1)')
+  // 蓝色高亮的片段 → 行内代码（下载器用 <span class="blue"> 高亮代码、标记、选项值等，如 <span class="blue">ja,zh-tw</span>）
+  s = s.replace(/<span[^>]*\bblue\b[^>]*>([\s\S]*?)<\/span>/gi, '`$1`')
   // 其它常见行内标签直接去标签
   s = s.replace(/<\/?(?:span|em|i|u|code|small|p|div)[^>]*>/gi, '')
   // 记录未处理的标签

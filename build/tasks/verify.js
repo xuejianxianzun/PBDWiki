@@ -95,6 +95,18 @@ for (const lang of config.languages) {
   }
   if (missing.length) issue(`侧边栏缺少条目：${missing.slice(0, 5).join(', ')}${missing.length > 5 ? ' …' : ''}`)
   else log(`侧边栏：全部 ${allPages.length} 个页面 + ${folders.length} 个菜单均在`)
+  // 侧边栏底稿应使用标记占位；产物里不应残留标记
+  const leftoverMenuMark = sidebar.match(/\[(settingsMenu|buttonsMenu)\]/g)
+  if (leftoverMenuMark) issue(`侧边栏里有未替换的标记：${[...new Set(leftoverMenuMark)].join(' ')}`)
+  const templateSidebar = path.join(DOCS, 'template', lang, '_sidebar.md')
+  if (fs.existsSync(templateSidebar)) {
+    const t = readText(templateSidebar)
+    for (const name of ['settingsMenu', 'buttonsMenu']) {
+      if (!new RegExp(`^\\s*\\[${name}\\]\\s*$`, 'm').test(t)) issue(`侧边栏底稿缺少 [${name}] 标记（docs/template/${lang}/_sidebar.md）`)
+    }
+  } else {
+    issue(`缺少侧边栏底稿：docs/template/${lang}/_sidebar.md`)
+  }
 
   // 4) 其它页面存在性
   const templateDir = path.join(DOCS, 'template', lang)
@@ -127,8 +139,10 @@ for (const lang of config.languages) {
     return acc
   }
   for (const f of walkAll(outDir)) {
-    const leftover = stripFences(readText(f)).match(/\[(setting|button):[^\]]+\]/g)
+    const text = stripFences(readText(f))
+    const leftover = text.match(/\[(setting|button):[^\]]+\]/g)
     if (leftover) issue(`${path.relative(outDir, f)} 里有未展开的标记：${[...new Set(leftover)].join(' ')}`)
+    if (/\[fetch\]/.test(text)) issue(`${path.relative(outDir, f)} 里残留 [fetch] 标记（构建时应已转换为提示文字）`)
   }
   log('标记展开（全量）：已检查')
 
