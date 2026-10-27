@@ -18,7 +18,7 @@ build/                             # 构造系统（从下载器读取数据、�
 docs/
 ├── _sidebar.md                    # 根侧边栏（语言切换入口）
 ├── index.html                     # docsify 入口页面
-├── README.md                      # 站点首页（不参与翻译）
+├── README.md                      # 站点首页（构建产物，源为 template/README.md）
 ├── zh-cn/                         # 简体中文文档（源语言）
 │   ├── _sidebar.md                # 中文导航目录（由构建更新设置/按钮部分）
 │   └── ...                        # 各页面 markdown
@@ -26,6 +26,7 @@ docs/
 │   ├── _sidebar.md                # 英语导航目录（由构建更新设置/按钮部分）
 │   └── ...                        # 各页面 markdown（与 zh-cn 一一对应）
 ├── template/                      # 手工内容的源（构建的输入，重要！）
+│   ├── README.md                  # 站点首页底稿（含 [PBDVersion] / [Date] 占位符）
 │   ├── zh-cn/desc/<no|id>.md      # 每个设置项/按钮的说明文字
 │   ├── en/desc/<no|id>.md         # 同上（英语版）
 │   ├── <lang>/_sidebar.md         # 总目录底稿（设置/按钮部分用 [settingsMenu] / [buttonsMenu] 标记占位）
@@ -61,6 +62,7 @@ npm run ts
 
 - 运行 `npm run build` 时，从本地下载器仓库（路径在 `build/config.json` 的 `pbdRepo`）读取数据，重建 `docs/<lang>/` 下的设置/按钮文件夹、页面、菜单、侧边栏，并展开链接标记、写回两个数据源 JSON。如果该路径不存在，可以尝试从 Powerful Pixiv Downloader 的 Github 仓库里读取相关文件。
 - **源与产物**：手工内容都放在 `docs/template/` 下（说明文字、其它页面、侧边栏底稿等）；`docs/<lang>/` 下与设置/按钮相关的内容是构建产物，**不要直接编辑**（会被覆盖）。
+- **站点首页**：`docs/README.md` 也是产物，源文件是 `docs/template/README.md`；构建时把其中的 `[PBDVersion]` 填充为下载器 `src/manifest.json` 的 `version`、`[Date]` 填充为构建当天日期（`YYYY-MM-DD`）。要改首页内容请改模板。
 - **说明文字**：在 `docs/template/<lang>/desc/<no|id>.md` 里维护；文件第一行为 `[fetch]` 时会从下载器获取帮助文字（HTML 转 Markdown）。产物页面里 `[fetch]` 会显示为一行斜体提示（文字按语言配置在 `build/config.json` 的 `fetchTip`）。构建报告里会列出说明为空的条目。
 - **链接标记**：文档里引用设置/按钮时使用 `[setting:数字编号]` 或 `[button:按钮id]`；要链接到页面内的某个标题（如说明文字里的 `###` 小标题）时，用 `[setting:32?id=标题原文]` 形式（`?id=` 的值会按 docsify 规则 slugify 后作为锚点）。构建时自动展开为最新名称和路径的链接，不要在设置/按钮之间写死完整链接。
 - **本机运行构建的注意事项**（沙箱删除限制、提权与"预尝试"行为）见 `build/README.md` 文末「本机环境注意事项」。

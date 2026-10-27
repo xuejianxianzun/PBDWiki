@@ -1,9 +1,8 @@
 ## Button position on thumbnails
 
 <div class="option settingsPanel_optionCard" data-no="82" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="has_tip settingNameStyle" data-xztip="_缩略图上按钮的位置的说明" data-tip="The downloader will display some buttons on the work thumbnails. You can set whether they appear on the left or right side of the thumbnail." data-bind-click="true">
-    <span data-xztext="_缩略图上按钮的位置">Button <span class="key">position</span> on thumbnails</span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=82" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_按钮在缩略图上的位置">Button <span class="key">position</span> on thumbnails</span>
   </a>
   <input type="radio" name="magnifierPosition" id="magnifierPosition1" class="need_beautify radio" value="left">
   <span class="beautify_radio" tabindex="0"></span>
@@ -19,10 +18,10 @@ When you hover over a thumbnail, the downloader displays some buttons on it, as 
 
 By default they are shown on the right side, but you can switch them to the left side if you want.
 
-## Show Image viewer button on thumbnail
+## Show image viewer button
 
 <div class="option settingsPanel_optionCard" data-no="83" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示图片查看器按钮" data-bind-click="true">Show <span class="key">Image viewer</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=83" target="_blank" class="settingNameStyle" data-xztext="_显示图片查看器按钮" data-bind-click="true">Show <span class="key">image viewer</span> button</a>
   <input type="checkbox" name="magnifier" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
   <div class="subOptionWrap flexBasis100" data-show="magnifier" style="display: inline-flex;">
@@ -68,10 +67,10 @@ Clicking the magnifier icon opens the image viewer to view each image in the wor
 
 You can find detailed information about the image viewer here: [Image Viewer](/en/Convenience-Features?id=image-viewer).
 
-## Display copy button on thumbnail
+## Display copy button
 
 <div class="option settingsPanel_optionCard" data-no="84" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=84" target="_blank" class="settingNameStyle" data-xztext="_在缩略图上显示复制按钮" data-bind-click="true">Display <span class="key">copy</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=84" target="_blank" class="settingNameStyle" data-xztext="_显示复制按钮" data-bind-click="true">Display <span class="key">copy</span> button</a>
   <input type="checkbox" name="showCopyBtnOnThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>
@@ -82,10 +81,66 @@ When you hover the mouse over a work's thumbnail, the downloader will show a Cop
 
 Clicking it copies the original image and some information about the work. You can adjust what gets copied in the [Copy work info](/en/Settings-Enhance/Other?flag=89) settings.
 
-## Show download button on thumbnail
+## Display like button
+
+<div class="option settingsPanel_optionCard new" data-no="113" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=113" target="_blank" class="settingNameStyle" data-xztext="_显示点赞按钮" data-bind-click="true">Display <span class="key">like</span> button</a>
+  <input type="checkbox" name="showLikeBtnOnThumb" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+*The description of this setting is exactly the same as the description in the downloader.*
+
+Clicking the like button gives this work a like.
+
+Also, if you have enabled the "Download a work when you click the like button" feature in "Download" - "Download behavior", the downloader will also download the work at the same time.
+
+In this case, you can use the like button on the thumbnail instead of the download button, which means you can turn off "Show download button" so that unnecessary buttons are not displayed.
+
+However, this tip only works in PC browsers; in mobile browsers, the downloader does not show the like button, so it cannot replace the download button.
+
+Note:
+
+This button is not shown on the thumbnails of novel series (it is shown on the thumbnails of individual novels).
+
+## Display bookmark button
+
+<div class="option settingsPanel_optionCard new" data-no="116" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=116" target="_blank" class="settingNameStyle" data-xztext="_显示收藏按钮" data-bind-click="true">Display <span class="key">bookmark</span> button</a>
+  <input type="checkbox" name="showBookmarkBtnOnThumb" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+*The description of this setting is exactly the same as the description in the downloader.*
+
+Clicking the bookmark button adds this work to your Pixiv bookmarks.
+
+To configure what happens when you click this button, see the "Default behavior when the downloader bookmarks a work (✩)" setting in "Enhance" - "Bookmark".
+
+Also, if you have enabled the "Download a work when you click the bookmark button" feature in "Download" - "Download behavior", the downloader will also download the work at the same time.
+
+In this case, you can use the bookmark button on the thumbnail instead of the download button, which means you can turn off "Show download button" so that unnecessary buttons are not displayed.
+
+However, this tip only works in PC browsers; in mobile browsers, the downloader does not show the bookmark button, so it cannot replace the download button.
+
+Note:
+
+This button is not shown on the thumbnails of novel series (it is shown on the thumbnails of individual novels).
+
+## Show download button
 
 <div class="option settingsPanel_optionCard" data-no="85" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=85" target="_blank" class="settingNameStyle" data-xztext="_在作品缩略图上显示下载按钮" data-bind-click="true">Show <span class="key">download</span> button on thumbnail</a>
+  <a href="/#/en/Settings-Enhance/Thumbnail-buttons?flag=85" target="_blank" class="settingNameStyle" data-xztext="_显示下载按钮" data-bind-click="true">Show <span class="key">download</span> button</a>
   <input type="checkbox" name="showDownloadBtnOnThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
 </div>

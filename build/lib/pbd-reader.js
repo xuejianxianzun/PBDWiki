@@ -134,6 +134,23 @@ function findTemplateLiteralProperty(sf, marker) {
 
 // ---------------- 各数据的读取 ----------------
 
+/** 读取下载器的版本号（manifest.json） */
+export function readPbdVersion(pbd) {
+  // 源码里的 src/manifest.json 是版本号的真实来源；其余位置作为回退
+  const candidates = ['src/manifest.json', 'manifest.json', 'dist/manifest.json']
+  for (const rel of candidates) {
+    const file = path.join(pbd, rel)
+    if (!fs.existsSync(file)) continue
+    try {
+      const version = JSON.parse(readText(file)).version
+      if (version) return String(version)
+    } catch {
+      // 解析失败时继续尝试下一个候选文件
+    }
+  }
+  return null
+}
+
 /** 读取 langText.ts → { key: [6 种语言的文本] } */
 export function readLangText(pbd) {
   const file = path.join(pbd, 'src/ts/langText.ts')

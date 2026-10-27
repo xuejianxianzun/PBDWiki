@@ -32,7 +32,7 @@ In this way you can see them more clearly, and your eyes will be more relaxed an
 
 <div class="option settingsPanel_optionCard" data-no="79" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnails?flag=79" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_替换方形缩略图以显示图片比例">Replace square <span class="key">thumbnails</span> to show image ratio</span>
+    <span data-xztext="_替换方形缩略图以显示图片比例">Replace square thumbnails to show image <span class="key">ratio</span></span>
   </a>
   <input type="checkbox" name="replaceSquareThumb" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>
@@ -50,7 +50,7 @@ Enabling this feature replaces square thumbnails with 540 px thumbnails, showing
 
 <div class="option settingsPanel_optionCard" data-no="80" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Enhance/Thumbnails?flag=80" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_在多图作品页面里显示缩略图列表">Show <span class="key">thumbnail</span> list on multi-image work pages</span>
+    <span data-xztext="_在多图作品页面里显示缩略图列表">Show thumbnail <span class="key">list</span> on multi-image work pages</span>
   </a>
   <input type="checkbox" name="displayThumbnailListOnMultiImageWorkPage" class="need_beautify checkbox_switch" checked="">
   <span class="beautify_switch" tabindex="0"></span>

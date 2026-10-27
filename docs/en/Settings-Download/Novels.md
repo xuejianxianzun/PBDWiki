@@ -6,12 +6,12 @@
   </a>
 
   <div class="optionLine">
-    <input type="radio" name="novelSaveAs" id="novelSaveAs2" class="need_beautify radio" value="epub" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="novelSaveAs2" class="active"> EPUB </label>
-    <input type="radio" name="novelSaveAs" id="novelSaveAs1" class="need_beautify radio" value="txt">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="novelSaveAs1"> TXT </label>
+    <input type="checkbox" name="novelSaveAsEPUB" id="novelSaveAsEPUB" class="need_beautify checkbox_common" checked="">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="novelSaveAsEPUB" class="active"> EPUB </label>
+    <input type="checkbox" name="novelSaveAsTXT" id="novelSaveAsTXT" class="need_beautify checkbox_common">
+    <span class="beautify_checkbox" tabindex="0"></span>
+    <label for="novelSaveAsTXT"> TXT </label>
   </div>
 </div>
 
@@ -395,17 +395,12 @@ Due to too many requests, I was warned by Pixiv several times, and one account w
 
 ## When merging series novels, as long as one novel meets the filtering criteria, all novels in the series will be saved
 
-<div class="option settingsPanel_optionCard new" data-no="104" data-pin-bound="true" style="display: flex;">
+<div class="option settingsPanel_optionCard" data-no="104" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Download/Novels?flag=104" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_在合并系列小说时只要有一篇小说符合筛选条件就保存该系列里的所有小说">When merging series novels, as long as one novel meets the <span class="key">filtering criteria</span>, all novels in the series will be saved</span>
   </a>
   <input type="checkbox" name="saveAllSeriesNovelsIfOneMatches" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
-  <span class="settingsPanel_newBadge" aria-hidden="true">
-    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
-      <use xlink:href="#new"></use>
-    </svg>
-  </span>
 </div>
 
 Use this setting when you have configured filter conditions and want the downloader to merge all novels in a series as long as one novel meets those conditions.

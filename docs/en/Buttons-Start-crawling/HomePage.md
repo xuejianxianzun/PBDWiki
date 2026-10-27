@@ -1,6 +1,40 @@
-## Enter ID to crawl
+## Crawl user list
 
-<button id="crawlById" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand"><span data-xztext="_输入id进行抓取">Enter ID to crawl</span><span class="ripple"></span></button>
+<button id="crawlUserList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="primary" data-btn-intent="brand"><span data-xztext="_抓取用户列表">Crawl user list</span><span class="ripple"></span></button>
+
+If you want to crawl works from multiple users in batches, you can use this feature.
+
+After you click this button, the downloader shows two input fields, where you can enter a list of user IDs and how many works to crawl from each user. The downloader then crawls and downloads the users you entered, one by one.
+
+**Tips:**
+- This feature is designed for crawling multiple users at once. If you only need to download one user's works, you can open that user's profile page and start crawling there.
+- If you need to set filter conditions (such as work type, bookmark count, time range, and tags), please set them first, and then start crawling.
+- Make sure "Quick download task" is checked in [Start downloading automatically after crawling is complete](/en/Settings-Download/Download-behavior?id=start-downloading-automatically-after-crawling-is-complete), otherwise the downloader will not start downloading automatically.
+- While the task is running, do not run other crawl tasks in this tab. If necessary, you can open a new Pixiv tab to browse and download.
+- While the task is running, if you accidentally close this webpage, you can open that page again and click the "Crawl user list" button to resume the progress.
+- While the task is running, if you want to give up (terminate) the task, you can click the "Stop crawling" button. The task stops immediately and cannot be resumed from where it was interrupted.
+
+**A known issue:**
+
+After the page is refreshed, the restored download task is not recognized.
+
+The cause of this issue is:
+- After the page is refreshed, the downloader automatically restores unfinished download tasks;
+- But it does not automatically restore the "Crawl user list" task.
+
+The reproduction steps are as follows:
+- The user runs a "Crawl user list" task.
+- After finishing crawling one user, the downloader starts downloading that user's works.
+- The webpage is refreshed while downloading.
+- After the webpage is refreshed, the downloader automatically restores the unfinished download task. This is where the problem occurs: at this point the downloader has not restored the state of "Crawl user list", so this download is not associated with "Crawl user list". Therefore, when this download is finished, the progress of "Crawl user list" does not increase.
+- If the user later restores the unfinished "Crawl user list" task, the downloader starts from the user that was not fully processed before, that is, the user corresponding to the "unfinished download task" mentioned above. The downloader crawls and downloads that user once again.
+
+This is a known issue caused by the design of the feature, not a bug:
+An unfinished "Crawl user list" task can only be restored by manually clicking the "Crawl user list" button. This is by design, because automatically restoring it when the homepage is opened might interfere with the user's operations. Also, the user may no longer need to restore the previously unfinished "Crawl user list" task, so not restoring it automatically is safer.
+
+## Crawl work list
+
+<button id="crawlById" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_抓取作品列表">Crawl work list</span><span class="ripple"></span></button>
 
 Clicking this button displays an input box where you can enter or paste a list of work IDs:
 
@@ -21,9 +55,9 @@ Click the "Submit" button, and the downloader will crawl these works.
 
 ?> You cannot specify the work type; the downloader determines it based on the current page. On the novel homepage [https://www.pixiv.net/novel/](https://www.pixiv.net/novel), entered IDs are treated as novel work IDs. On other homepages, they are treated as image work IDs.
 
-## Crawl ID range
+## Crawl work ID range
 
-<button id="crawlIdRange" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_抓取id区间">Crawl ID range</span><span class="ripple"></span></button>
+<button id="crawlIdRange" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_抓取作品id区间">Crawl work ID range</span><span class="ripple"></span></button>
 
 Clicking this button displays two input boxes sequentially. You can set an ID range for the downloader to crawl, e.g., `10000` to `20000`.
 
@@ -57,9 +91,9 @@ As the number of crawled works increases, memory usage grows, and browser networ
 
 If you need to crawl many works, split them into multiple tasks and crawl sequentially.
 
-## Import ID list
+## Import work ID list
 
-<button id="importIDList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导入ID列表">Import ID list</span><span class="ripple"></span></button>
+<button id="importIDList" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="brand"><span data-xztext="_导入作品ID列表">Import work ID list</span><span class="ripple"></span></button>
 
 Clicking this button allows you to select a JSON file containing a list of work IDs for the downloader to crawl.
 

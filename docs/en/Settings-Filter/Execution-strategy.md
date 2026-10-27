@@ -1,9 +1,8 @@
 ## Do not crawl already downloaded works
 
 <div class="option settingsPanel_optionCard" data-no="26" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Filter/Execution-strategy?flag=26" target="_blank" class="has_tip settingNameStyle" data-xztip="_不抓取下载过的作品的说明" data-tip="If the downloader has a download record for this work, it will not be crawled." data-bind-click="true">
+  <a href="/#/en/Settings-Filter/Execution-strategy?flag=26" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_不抓取下载过的作品">Do not crawl <span class="key">already downloaded</span> works</span>
-    <span class="gray"> ? </span>
   </a>
   <input type="checkbox" name="DonotCrawlAlreadyDownloadedWorks" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -163,7 +162,7 @@ This feature provides a WYSIWYG experience. You can preview the crawl results, f
 On these pages, after crawling is completed, you can use these buttons in the settings panel to adjust the crawl results:
 
 - After changing the filter conditions, click "Filter in results"
-- Clear multi-image works, clear Ugoira works, manually delete works, manually exclude works
+- Clear multi-image works, clear Ugoira works, manually exclude works
 
 **Number of works displayed per page**:
 
@@ -237,7 +236,7 @@ The export happens after step 1, and the task is stopped, that is, step 2 will n
 
 **Exported content:**
 
-The exported work ID list is saved to a JSON file. You can process the file yourself, but by design it is intended to be used with another feature: the [Import ID list](/en/Buttons-Start-crawling/HomePage?id=import-id-list) button on the home page.
+The exported work ID list is saved to a JSON file. You can process the file yourself, but by design it is intended to be used with another feature: the [Import work ID list](/en/Buttons-Start-crawling/HomePage?id=import-work-id-list) button on the home page.
 
 **Usage example:**
 

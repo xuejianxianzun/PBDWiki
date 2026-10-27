@@ -186,13 +186,14 @@ I haven't encountered this issue myself (in fact, most users probably won't enco
 1. Refresh this webpage to let the downloader retry the download.
 2. Click the pause download button, then click the start download button.
 3. Open the browser's extension management page, click the refresh button for this extension to reload it, then refresh this webpage and retry the download.
-4. If the browser's download save location is a mechanical hard drive, you can try changing the download location to a solid-state drive (SSD). This is effective for some users.
-5. If you have many tabs open, you can close some tabs to reduce the browser's load. Some users experience download getting stuck when many tabs are open (after the file downloads, it takes 10 seconds to save), but no issue when fewer tabs are open.
-6. You can click the user avatar button in the browser menu bar to add a new user profile (i.e., create a new browser local user), then open the new user's browser window, and install and use this downloader in it.
-7. Uninstall this browser and reinstall it, or install a new browser.
-8. Clear the browser's download history, then restart the browser. This method may not work, but clearing unnecessary download history is beneficial. Tip: If the browser's download history is too much, it can cause the browser to freeze for a while when starting up or opening the download management page, and may lead to other potential issues. If you need help, you can check [How to Clear the Browser's Download History](/en/FAQ?id=how-to-clear-the-browser39s-download-history).
+4. You can try uninstalling this extension and then reinstalling it.
+5. If the browser's download save location is a mechanical hard drive, you can try changing the download location to a solid-state drive (SSD). This is effective for some users.
+6. If you have many tabs open, you can close some tabs to reduce the browser's load. Some users experience download getting stuck when many tabs are open (after the file downloads, it takes 10 seconds to save), but no issue when fewer tabs are open.
+7. You can click the user avatar button in the browser menu bar to add a new user profile (i.e., create a new browser local user), then open the new user's browser window, and install and use this downloader in it.
+8. Uninstall this browser and reinstall it, or install a new browser.
+9. Clear the browser's download history, then restart the browser. This method may not work, but clearing unnecessary download history is beneficial. Tip: If the browser's download history is too much, it can cause the browser to freeze for a while when starting up or opening the download management page, and may lead to other potential issues. If you need help, you can check [How to Clear the Browser's Download History](/en/FAQ?id=how-to-clear-the-browser39s-download-history).
 
-If the problem still cannot be resolved, please check the [Contact Me](/en/Contact Me) page to report the issue to me.
+If the problem still cannot be resolved, please check the [Contact Me](/en/Contact-Me) page to report the issue to me.
 
 ## What to Do If a Task Gets Stuck
 
@@ -379,7 +380,7 @@ You can open the work's page; if it opens normally, you can download it individu
 
 ## How to Download an ID List
 
-If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Enter ID to crawl](/en/Buttons-Start-crawling/HomePage?id=enter-id-to-crawl) feature or similar functions.
+If you have a list of work IDs and want the downloader to download these works, open the Pixiv homepage and use the [Crawl work list](/en/Buttons-Start-crawling/HomePage?id=crawl-work-list) feature or similar functions.
 
 ## Browser Freezes While Running
 

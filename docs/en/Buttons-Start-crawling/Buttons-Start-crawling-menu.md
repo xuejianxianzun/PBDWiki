@@ -16,3 +16,4 @@ In the downloader's home page, the "Start crawl" area displays several buttons. 
 * [pixivision](en/Buttons-Start-crawling/pixivision)
 * [User's request page](en/Buttons-Start-crawling/User's-request-page)
 * [Novel markers Page](en/Buttons-Start-crawling/Novel-markers-Page)
+* [Watch list page](en/Buttons-Start-crawling/Watch-list-page)

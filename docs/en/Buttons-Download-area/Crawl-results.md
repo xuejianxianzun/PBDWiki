@@ -51,7 +51,7 @@ The file content may look like this:
 - The purpose of exporting a CSV file is to allow users to view key data for each work and manipulate the data.
 - A multi-image work may generate multiple files during download but is represented by a single record in the CSV file (using the first image's data) to avoid redundant data.
 - The exported CSV file **cannot** be used to import crawl results. To import crawl results, use the JSON file exported by the "Export results" button.
-- If you only have a CSV file and want to download the works, copy the work IDs from the `id` column and use the [Enter ID to crawl](/en/Buttons-Start-crawling/HomePage?id=enter-id-to-crawl) function on the Pixiv homepage to re-crawl those works.
+- If you only have a CSV file and want to download the works, copy the work IDs from the `id` column and use the [Crawl work list](/en/Buttons-Start-crawling/HomePage?id=crawl-work-list) function on the Pixiv homepage to re-crawl those works.
 - To make the downloader automatically export crawl results after crawling, use the [Automatically export crawl results](/en/Settings-Filter/Execution-strategy?id=automatically-export-crawl-results) function.
 
 ## Preview file name

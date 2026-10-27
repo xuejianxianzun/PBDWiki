@@ -1,9 +1,8 @@
-## How to switch tabs
+## How to switch Downloader tabs
 
 <div class="option settingsPanel_optionCard" data-no="95" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-General/Operation-method?flag=95" target="_blank" class="has_tip settingNameStyle" data-xztip="_选项卡切换方式的说明" data-tip="Sets how to switch the primary category navigation of the Downloader." data-bind-click="true">
-    <span data-xztext="_选项卡切换方式">How to switch <span class="key">tabs</span></span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-General/Operation-method?flag=95" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_如何切换下载器的标签页">How to <span class="key">switch</span> Downloader tabs</span>
   </a>
   <input type="radio" name="switchTabBar" id="switchTabBar1" class="need_beautify radio" value="over" checked="">
   <span class="beautify_radio" tabindex="0"></span>

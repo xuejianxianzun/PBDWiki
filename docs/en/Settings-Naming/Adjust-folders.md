@@ -191,3 +191,49 @@ With this setting, you can classify the files that contain specific tags separat
 Some tags have multiple variants. For example, `GenshinImpact` has these variants: `GenshinImpact,Genshin Impact,Genshin,原神,原神インパクト`. If you want to treat all these tags as `GenshinImpact`, and only create the `GenshinImpact` folder (instead of creating multiple different folders using the variants), you can use the "Tag alias" feature below this setting.
 
 Set the alias of these variants to `GenshinImpact`, then you only need to use `GenshinImpact` in this setting to match all the variants.
+
+## Create a folder with the first matched bookmark tag
+
+<div class="option settingsPanel_optionCard new" data-no="115" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Naming/Adjust-folders?flag=115" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_使用第一个匹配的收藏标签建立文件夹带高亮">Create a folder with the first matched <span class="key">bookmark</span> tag</span>
+  </a>
+  <input type="checkbox" name="createFolderByBookmarkTag" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+  <div class="subOptionWrap namingTipArea flexBasis100" data-show="createFolderByBookmarkTag" style="display: none;">
+    <span class="name">{match_bookmark_tag_folder1}</span>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderBookmarkTagList" rows="1" placeholder="tag1,tag2,tag3"></textarea>
+    <span class="name">{match_bookmark_tag_folder2}</span>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="createFolderBookmarkTagList2" rows="1" placeholder="tag1,tag2,tag3"></textarea>
+    <div class="secondary_hint">
+      <span data-xztext="_提示还需要添加特定命名规则才能创建文件夹_match_bookmark_tag_folder">You also need to add <span class="blue name">/{match_bookmark_tag_folder1}/</span> in "Folder and file names" - "Naming rules" to achieve this effect. You can click the "Help" button to see detailed instructions.</span>
+    </div>
+  </div>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+*The description of this setting is exactly the same as the description in the downloader.*
+
+When you crawl works on your bookmarks page, you can use this setting if you want to create folders by certain bookmark tags (instead of the tags of the works themselves).
+
+First, enter the tags you want to use as folder names, then modify your naming rule to add special tokens that create the folders. For example:
+
+`pixiv/{match_bookmark_tag_folder1}/{match_bookmark_tag_folder2}/{id}`
+
+How it works:
+
+This setting checks the tags you added to your bookmarked works (which may be custom tags you set). If a work's bookmark tags contain one of the tags you set here, the downloader can output that tag and use it in folder or file names.
+
+How to use:
+
+You can refer to the help content of the "Create a folder with the first matched tag" setting; the usage is very similar. The differences are:
+
+- This setting outputs the match result with the `{match_bookmark_tag_folder1}` and `{match_bookmark_tag_folder2}` tokens.
+
+- When matching tags, this setting uses the custom tags you added to your bookmarked works (`{bookmark_tags}`) instead of the work's own tags (`{tags_translate}`).
+
+- This setting only works when you crawl on your own bookmarks page. This is because the downloader can get the bookmark tags you added to works on the bookmarks page, but cannot get them on other pages, so the setting has no effect there (no folders will be created).

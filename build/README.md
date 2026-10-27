@@ -48,17 +48,21 @@ npm run build:verify                    # 产物校验：页面/菜单/侧边栏
                              └──────────────────────────────────┘
 ```
 
+除了上面这些内容数据，构建还会读取下载器 `src/manifest.json` 里的版本号（`version`），用于填充站点首页（`docs/template/README.md` → `docs/README.md`）。
+
 **手工内容的源**（`docs/template/`）：
 
 - `<lang>/desc/<no|id>.md`：每个设置项/按钮的说明文字（可直接编辑，见下文「说明文字与 [fetch]」）
 - `<lang>/...` 的其它页面（`常见问题.md`、`简介.md`、`安装/` 等）：作为原文提供，构建时展开链接标记后输出
 - `<lang>/images/`、`publicImages/`：图片（见下文「图片处理」）
 - `<lang>/_sidebar.md`：总目录的底稿；设置与按钮的部分用 `[settingsMenu]` / `[buttonsMenu]` 两个标记占位，构建时替换成链接列表（不要把设置/按钮的链接写死在底稿里，见下文「页面 / 菜单 / 侧边栏格式」）
+- `README.md`：站点首页（根 `docs/README.md`）的底稿，其中的 `[PBDVersion]` / `[Date]` 会在构建时填充（见下文「站点首页」）
 
 **构建产物**：
 
 - `docs/<lang>/` 下的设置/按钮文件夹、菜单、侧边栏、其它页面
 - `docs/data/options_data.json`、`buttons_data.json`（设置项与按钮的元数据）
+- `docs/README.md`（站点首页，由 `docs/template/README.md` 生成）
 
 ## build/ 目录
 
@@ -94,6 +98,7 @@ build/
 | 占位符替换用的值 | `src/ts/Config.ts`、`src/ts/setting/NamingRuleConfig.ts` |
 | 按钮的 emphasis / intent / title / 文本 | 各模块的按钮创建调用点（`Tools.addBtn`、`addInitPageBtn` 等） |
 | 个别运行时默认值 | `src/ts/setting/Settings.ts` 等 |
+| 下载器版本号（填充站点首页） | `src/manifest.json` 的 `version`（缺失时回退到根目录 `manifest.json`、`dist/manifest.json`） |
 | new 徽章规则 | `OptionMeta.addedAt` + 90 天（天数在 config.json 的 `newBadgeDays`） |
 
 复刻的几条关键规则（与下载器保持一致）：
@@ -115,8 +120,9 @@ build/
 6. **生成其它页面**：从 template 复制 + 展开链接标记 + 重写图片引用路径。
 7. **更新侧边栏**：把底稿里的 `[settingsMenu]` / `[buttonsMenu]` 标记替换为按数据源生成的链接列表，其它行保持原样。
 8. **检查覆盖表、清理产物里遗留的图片目录**（图片只在 template 下维护）。
-9. **写回 `docs/data/*.json`**（与现有文件对比，差异记入报告）。
-10. **输出报告**：`build/reports/build-report.md`（含统计、各类警告清单）。
+9. **生成站点首页**：把 `template/README.md` 复制为 `docs/README.md`，填充版本号与构建日期（见下文「站点首页」）。
+10. **写回 `docs/data/*.json`**（与现有文件对比，差异记入报告）。
+11. **输出报告**：`build/reports/build-report.md`（含统计、各类警告清单）。
 
 ## 说明文字与 [fetch]
 
@@ -241,6 +247,22 @@ HTML → Markdown 的转换规则（`[fetch]` 使用）：`<br>` → 两个换�
   底稿里**不要**手写设置/按钮的链接（文件夹改名、页面增减后会过期）。兼容：如果底稿里找不到这两个标记，构建会退回到旧行为——识别并替换连续的设置/按钮链接块，同时在报告的「警告」里提示改用标记。
 - 显示名规则：页面名 = 文件名（en 把 `-` 换成空格）；文件夹名 = 覆盖表优先，缺省用文件夹名本身。
 
+## 站点首页（docs/README.md）
+
+站点首页也是构建产物，源文件是 `docs/template/README.md`，每次构建都会覆盖生成 `docs/README.md`。里面有两个占位符，构建时自动填充：
+
+| 占位符 | 填充为 | 来源 |
+| --- | --- | --- |
+| `[PBDVersion]` | 下载器版本号，如 `19.6.0` | 下载器仓库的 `src/manifest.json` 的 `version` |
+| `[Date]` | 执行构建当天的日期，如 `2026-10-11` | 构建时的系统时间（本地时区，`YYYY-MM-DD`） |
+
+说明：
+
+- 占位符用 `replaceAll` 替换，写几次都行；改文案请改 `docs/template/README.md`，**不要**直接改 `docs/README.md`。
+- 与语言无关：不随 `--lang=` 变化，`--dry-run` 时同样只出报告不写盘。
+- 图片引用按原样输出（模板里写的 `./images/logo128.png` 就是站点级图片 `docs/images/`，不经过指向 `template/` 的路径改写）。
+- 读不到版本号时保留 `[PBDVersion]` 原样，并在报告「警告」里提示；`npm run build:verify` 会检查产物里没有残留的占位符、且版本号与 manifest 一致。
+
 ## 图片处理
 
 图片**只在 `docs/template/` 下维护**（唯一来源），构建产物里**没有**图片目录：
@@ -273,7 +295,8 @@ HTML → Markdown 的转换规则（`[fetch]` 使用）：`<br>` → 两个换�
 - 页面文件齐全、条目数与数据源一致、每个条目都存在；
 - 菜单、侧边栏、其它页面齐全；侧边栏底稿含有 `[settingsMenu]` / `[buttonsMenu]` 标记、产物里没有残留的标记；
 - 全量产物里没有未展开的标记、没有残留的 `[fetch]` 标记（跳过代码块）、没有旧的（已改名）文件夹路径；
-- 图片引用全部存在、产物里没有图片目录。
+- 图片引用全部存在、产物里没有图片目录；
+- 站点首页 `docs/README.md` 存在、没有残留的 `[PBDVersion]` / `[Date]` 占位符，版本号与下载器 manifest 一致、日期是 `YYYY-MM-DD`。
 
 **幂等测试**（改了构建逻辑后建议跑一次）：
 

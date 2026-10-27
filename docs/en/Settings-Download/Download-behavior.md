@@ -22,7 +22,7 @@ You can set whether to start downloading automatically.
 
 There are two types of download tasks:
 
-- Normal download task: there are multiple crawl buttons in the "Start crawling" area of the downloader. Clicking the crawl buttons in the first row usually creates a normal download task, with only two exceptions: "Timed crawl" and "Crawl tag list".
+- Normal download task: there are multiple crawl buttons in the "Start crawling" area of the downloader. Clicking the crawl buttons in the first row usually creates a normal download task, with only three exceptions: "Timed crawl", "Crawl tag list" and "Crawl user list".
 
 - Quick download task: directly clicking the download button, or crawling manually selected works. These actions have a stronger need for "download immediately" or "auto-download", so the downloader always used to download them automatically. Now you can also set them not to start downloading automatically.
 
@@ -44,7 +44,9 @@ Quick download tasks are triggered by these actions:
 
 - Crawl tag list
 
-- Entering an ID to crawl or crawling an ID range on the HomePage
+- Crawling a work list or a work ID range on the HomePage
+
+- Crawl user list
 
 ## Download how many files at the same time
 
@@ -65,12 +67,11 @@ You can enter a number between 1 and 6 to set the concurrent download count. The
 
 !> When downloading a large number of files, if the download speed is very fast (e.g., 5 files per second), it's recommended to set a lower concurrent download count, such as 1. Excessive downloading frequency may increase the risk of your account being banned.
 
-## Bookmark works after downloading
+## Automatically bookmark works after downloading
 
 <div class="option settingsPanel_optionCard" data-no="53" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Download-behavior?flag=53" target="_blank" class="has_tip settingNameStyle" data-xztip="_下载之后收藏作品的提示" data-tip="After you download a file, the downloader will automatically bookmark the work." data-bind-click="true">
-    <span data-xztext="_下载之后收藏作品"><span class="key">Bookmark</span> works after downloading</span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-Download/Download-behavior?flag=53" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_下载之后自动收藏作品">Automatically <span class="key">bookmark</span> works after downloading</span>
   </a>
   <input type="checkbox" name="bmkAfterDL" class="need_beautify checkbox_switch">
   <span class="beautify_switch" tabindex="0"></span>
@@ -91,6 +92,24 @@ After downloading, if the bookmark progress shows matching numbers, e.g., `Bookm
 3. When downloading large amounts of files, the bookmark progress may increase relatively slowly. This is because the downloader will bookmark one work every few seconds (using the interval time in [Slow down crawl](/en/Settings-Filter/Execution-strategy?id=slow-down-crawl)), rather than quickly and continuously bookmarking works. This is to reduce the possibility of triggering the 429 restriction.
 
 If you want to set the public status when bookmarking a work, as well as whether to add tags, please check this setting: [Downloader's bookmark feature (✩)](/en/Settings-More-Enhance?flag=34).
+
+## Download a work when you click the like button
+
+<div class="option settingsPanel_optionCard" data-no="55" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Download/Download-behavior?flag=55" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_点击点赞按钮时下载作品">Download a work when you click the <span class="key">like</span> button</span>
+  </a>
+  <input type="checkbox" name="downloadOnClickLike" class="need_beautify checkbox_switch">
+  <span class="beautify_switch" tabindex="0"></span>
+</div>
+
+When this feature is enabled, the downloader will automatically download the work when you like it on the work page.
+
+Like button:
+
+![](../../template/en/images/20250910_231828.png)
+
+?> Although the screenshot above is for an illustration, this feature also works for novels.
 
 ## Download a work when you click the bookmark button
 
@@ -127,24 +146,6 @@ The downloader provides this feature by default:
 When you are on a page, hovering the mouse over an illustration thumbnail should show a button in the top-right corner.
 
 This indicates that the downloader supports the page and can use the "Download Work When Clicking the Bookmark Button" feature. However, if the downloader does not display the top-right button, the page is not supported, and the "Download Work When Clicking the Bookmark Button" feature cannot be used.
-
-## Download a work when you click the like button
-
-<div class="option settingsPanel_optionCard" data-no="55" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Download-behavior?flag=55" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_点击点赞按钮时下载作品">Download a work when you click the <span class="key">like</span> button</span>
-  </a>
-  <input type="checkbox" name="downloadOnClickLike" class="need_beautify checkbox_switch">
-  <span class="beautify_switch" tabindex="0"></span>
-</div>
-
-When this feature is enabled, the downloader will automatically download the work when you like it on the work page.
-
-Like button:
-
-![](../../template/en/images/20250910_231828.png)
-
-?> Although the screenshot above is for an illustration, this feature also works for novels.
 
 ## Download interval
 

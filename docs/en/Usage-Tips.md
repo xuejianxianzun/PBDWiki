@@ -118,7 +118,7 @@ This will take you to page 101.
 
 If you need to batch bookmark multiple works, you can do the following:
 
-1. Enable the downloader's [Bookmark works after downloading](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) function.
+1. Enable the downloader's [Automatically bookmark works after downloading](/en/Settings-Download/Download-behavior?id=automatically-bookmark-works-after-downloading) function.
 2. Optional: If you do not need to download the original images of these works, you can set the [Image dimensions when downloading illustrations, manga, and Ugoira](/en/Settings-Download/Image-size?id=image-dimensions-when-downloading-illustrations-manga-and-ugoira) during download to `Small` to speed up the download process.
 3. Crawl and download these works. The downloader will bookmark them.
 

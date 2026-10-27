@@ -46,7 +46,7 @@ In other words, this button has both add bookmark and unbookmark functions, swit
 
 ------------
 
-You can modify this button's behavior in the [Downloader's bookmark feature (✩)](/en/Settings-Enhance/Other?id=downloader39s-bookmark-feature-✩) settings: whether to add tags and whether the bookmark is public.
+You can modify this button's behavior in the [Default behavior when the downloader bookmarks a work (✩)](/en/Settings-Enhance/Bookmark?id=default-behavior-when-the-downloader-bookmarks-a-work-✩) settings: whether to add tags and whether the bookmark is public.
 
 ## Preview Works
 
@@ -56,7 +56,7 @@ When hovering over a work's thumbnail, the downloader displays a larger preview 
 
 While previewing, press the `C` key to download the currently previewed image, or press `D` to download the entire work.
 
-See detailed explanation: [Preview works](/en/Settings-Enhance/Preview?id=preview-works)
+See detailed explanation: [Preview works when hovering over work thumbnails](/en/Settings-Enhance/Preview?id=preview-works-when-hovering-over-work-thumbnails)
 
 ## Long press the right mouse button on the thumbnail to display the large image
 
@@ -64,7 +64,7 @@ With this feature, you can view the original image of a work directly without vi
 
 If you want to quickly copy the original image of a work (without downloading), you can use this feature: after the original image is displayed, right-click the mouse and select "Copy Image".
 
-See detailed explanation: [Long press the right mouse button on a thumbnail to display the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-a-thumbnail-to-display-the-large-image)
+See detailed explanation: [Long press the right mouse button on a thumbnail to view the large image](/en/Settings-Enhance/Preview?id=long-press-the-right-mouse-button-on-a-thumbnail-to-view-the-large-image)
 
 ## Show zoom button on thumbnail
 
@@ -92,7 +92,7 @@ When the mouse hovers over a work thumbnail, the downloader displays a download 
 
 Click the download button to download the work.
 
-See detailed explanation: [Show download button on thumbnail](/en/Settings-Enhance/Thumbnail-buttons?id=show-download-button-on-thumbnail)
+See detailed explanation: [Show download button](/en/Settings-Enhance/Thumbnail-buttons?id=show-download-button)
 
 ## Image Viewer
 

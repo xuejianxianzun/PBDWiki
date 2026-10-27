@@ -16,7 +16,7 @@ import {
   slugify,
   htmlToText,
 } from '../lib/util.js'
-import { readAll } from '../lib/pbd-reader.js'
+import { readAll, readPbdVersion } from '../lib/pbd-reader.js'
 import { makeOptionHtml, makeButtonHtml } from '../lib/html-maker.js'
 import { renderPage, renderMenu, expandMarkers, makeMarkerResolver, htmlToMarkdown } from '../lib/md-maker.js'
 import { findSidebarBlocks } from '../lib/state-parser.js'
@@ -80,6 +80,12 @@ function writeDesc(file, content) {
 
 function pageDisplayName(file, lang) {
   return lang === 'en' ? file.replace(/-/g, ' ') : file
+}
+
+/** 构建当天的日期，格式 YYYY-MM-DD（本地时区） */
+function buildDate(d = new Date()) {
+  const pad = (n) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
 }
 
 const langs = onlyLang ? [onlyLang] : config.languages
@@ -409,11 +415,34 @@ for (const l of config.languages) {
   if (removedNames.length) secStat.line(`- 清理产物图片目录：${removedNames.join('、')}`)
 }
 
-// 8) 数据源 JSON
+// 8) 站点首页 docs/README.md：由 template/README.md 生成，填充下载器的版本号与构建日期
+//    与语言无关（不随 --lang 变化），图片引用保持原样（指向站点级 docs/images）
+{
+  const srcFile = path.join(TEMPLATE, 'README.md')
+  if (fs.existsSync(srcFile)) {
+    const version = readPbdVersion(config.pbdRepo)
+    const date = buildDate()
+    if (!version) {
+      secWarn.line('- template/README.md 需要填充版本号，但未能从下载器的 manifest.json 读出版本号（[PBDVersion] 保持原样）')
+    }
+    write(
+      path.join(DOCS, 'README.md'),
+      readText(srcFile)
+        .replaceAll('[PBDVersion]', version || '[PBDVersion]')
+        .replaceAll('[Date]', date)
+    )
+    secStat.line(`- 站点首页：Wiki version = ${version || '（未读取到）'}，Last updated = ${date}`)
+    log(`\n生成站点首页：README.md（Wiki version: ${version || '?'}，Last updated: ${date}）`)
+  } else {
+    secWarn.line('- 缺少 docs/template/README.md，未生成站点首页 docs/README.md')
+  }
+}
+
+// 9) 数据源 JSON
 write(path.join(DOCS, 'data', 'options_data.json'), JSON.stringify(data.optionsData, null, 2) + '\n')
 write(path.join(DOCS, 'data', 'buttons_data.json'), JSON.stringify(data.buttonsData, null, 2) + '\n')
 
-// 9) 报告
+// 10) 报告
 const elapsed = ((Date.now() - buildStart) / 1000).toFixed(1)
 secStat.line(`- ${dryRun ? '（dry-run，未写盘）' : ''}写入文件：${dryRun ? 0 : written}`)
 secStat.line(`- 图片路径重写：${imgRewrite.lang + imgRewrite.public} 处（语言图 ${imgRewrite.lang}、公共图 ${imgRewrite.public}）`)

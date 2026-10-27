@@ -39,11 +39,3 @@ Removes all multi-image works from the crawl results.
 <button id="clearUgoiraWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger"><span data-xztext="_清除动图作品">Remove ugoira works</span><span class="ripple"></span></button>
 
 Removes all Ugoira works from the crawl results.
-
-## Manually delete works
-
-<button id="manuallyDeleteWork" type="button" class="hasRippleAnimation settingsPanelActionBtn" data-btn-emphasis="secondary" data-btn-intent="danger" data-xztitle="_手动删除作品Title" title="You can manually delete unwanted work before downloading"><span data-xztext="_手动删除作品">Manually delete works</span><span class="ripple"></span></button>
-
-Manually remove unwanted works. Clicking this button enters manual deletion mode, showing a red circle under the mouse cursor. Click works to remove them from the crawl results. Click the button again to exit this mode.
-
-**Note:** This button must be used together with [Preview crawl results on search page](/en/Settings-Filter/Execution-strategy?id=preview-crawl-results-on-search-page). You can only manually delete works after the downloader displays the crawl results on the page.

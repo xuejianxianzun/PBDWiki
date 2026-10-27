@@ -59,66 +59,6 @@ To prevent the border from being covered or clipped by other elements, the downl
 
 ![](../../template/publicImages/20260426_232332.png)
 
-## Downloader's bookmark feature (✩)
-
-<div class="option settingsPanel_optionCard" data-no="88" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Enhance/Other?flag=88" target="_blank" class="settingNameStyle" data-bind-click="true">
-    <span data-xztext="_下载器的收藏功能">Downloader's <span class="key">bookmark</span> feature (✩)</span>
-  </a>
-
-  <div class="optionLine">
-    <span data-xztext="_是否添加标签" class="mr4">Whether to add tags</span>
-    <input type="radio" name="widthTag" id="widthTag1" class="need_beautify radio" value="yes" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="widthTag1" data-xztext="_添加" class="active">Add</label>
-    <input type="radio" name="widthTag" id="widthTag2" class="need_beautify radio" value="no">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="widthTag2" data-xztext="_不添加">Do not add</label>
-  </div>
-  <div class="optionLine">
-    <span data-xztext="_是否公开" class="mr4">Public</span>
-    <input type="radio" name="restrict" id="restrict1" class="need_beautify radio" value="no" checked="">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="restrict1" data-xztext="_公开" class="active">Public</label>
-    <input type="radio" name="restrict" id="restrict2" class="need_beautify radio" value="yes">
-    <span class="beautify_radio" tabindex="0"></span>
-    <label for="restrict2" data-xztext="_不公开">Private</label>
-  </div>
-</div>
-
-You can use this setting to control the downloader's behavior when bookmarking works.
-
-?> Pixiv's original bookmark button (heart-shaped) is not affected by this setting.
-
-**Features affected by this setting:**
-
-1. Quick bookmark button (☆) on work pages:
-
-![](../../template/en/images/20250910_235924.png)
-
-2. Quick bookmark button (☆) when previewing search results on search pages:
-
-![](../../template/publicImages/20250903_234654.png)
-
-3. Bookmarking a work with the `B` shortcut while previewing.
-4. Bookmarking a work by clicking the (☆) button in the image viewer.
-5. [Bookmark works after downloading](/en/Settings-Download/Download-behavior?id=bookmark-works-after-downloading) feature.
-6. "Bookmark all works on this page" feature in the downloader's "More" tab on user homepages and search pages.
-
-**Features not affected by this setting:**
-
-The "Add tags to uncategorized works" button on the bookmark page is unaffected. This feature always includes tags and automatically sets public or private status based on the work's prior bookmark status.
-
-**Sub-options:**
-
-When using features affected by this setting, you can configure:
-- Whether to include the work's tags
-- Whether to bookmark as public or private
-
-The default is to add tags and bookmark publicly.
-
-?> If a work has already been bookmarked, you can still bookmark it again. This will not change its bookmark time (and thus will not affect its order on the bookmark page), but it can update its public status and tag list. For example: if a work was previously set to public and had tags added, you can, if needed, change the settings to private with no tags and have the downloader bookmark it again.
-
 ## Copy work info
 
 <div class="option settingsPanel_optionCard" data-no="89" data-pin-bound="true" style="display: flex;">
@@ -150,20 +90,17 @@ The default is to add tags and bookmark publicly.
   <div class="optionLine nowrap">
     <span data-xztext="_文本格式" class="mr4">Text format</span>
     <button type="button" class="gray textButton toggleArea" data-toggle-target="#copyWorkInfoFormatTip" data-for-no="89" data-xztext="_提示">Tip</button>
-    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="1" placeholder="id: {id}{n}title: {title}{n}tags: {tags}{n}url: {url}{n}user: {user}"></textarea>
+    <textarea class="centerPanelTextArea beautify_scrollbar" name="copyWorkInfoFormat" rows="5" placeholder="id: {id} title: {title} tags: {tags} user: {user} url: {url}"></textarea>
   </div>
   <p class="tip namingTipArea" id="copyWorkInfoFormatTip">
     <span data-xztext="_复制内容的格式的提示">You can set the format of the text content, which will affect the content copied in <span class="blue">text/plain</span> and <span class="blue">text/html</span> formats.
 <br>
-You can use all tags from the naming rule, or input custom characters, such as spaces, underscores, the name of each tag.
-<br>
+You can use all tags from the naming rule, or input custom characters, such as spaces, underscores, or descriptive text.<br>
+You can press Enter to insert line breaks, and the downloader will keep the line breaks as you set them.<br>
 Additionally, you can use these tags:</span>
     <br>
     <span class="blue name" data-bind-copy="true">{url}</span>
     <span data-xztext="_url标记的说明">This work's URL</span>
-    <br>
-    <span class="blue name" data-bind-copy="true">{n}</span>
-    <span data-xztext="_换行标记的说明">Line break</span>
     <br>
   </p>
 </div>

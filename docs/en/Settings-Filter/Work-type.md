@@ -150,6 +150,27 @@ Additionally, the downloader enables the `Loose matching` rule by default: for n
 
 PS: If you disable the `Loose matching` rule, the downloader will not check the tag list, so non-original works will never be treated as original works.
 
+## From users
+
+<div class="option settingsPanel_optionCard new" data-no="114" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Filter/Work-type?flag=114" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_来自用户带高亮">From <span class="key">users</span></span>
+  </a>
+  <input type="checkbox" name="crawlFollowedUsers" id="setCrawlFollowedUsers" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setCrawlFollowedUsers" data-xztext="_已关注的用户" class="active">Followed users</label>
+  <input type="checkbox" name="crawlNonFollowedUsers" id="setCrawlNonFollowedUsers" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="setCrawlNonFollowedUsers" data-xztext="_未关注的用户" class="active">Users you don't follow</label>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+With this setting, you can download only works from users you follow, or only works from users you don't follow.
+
 ## Number of images
 
 <div class="option settingsPanel_optionCard" data-no="8" data-pin-bound="true" style="display: flex;">
@@ -224,3 +245,30 @@ Rough reference data when the threshold is 25%:
 When downloading, if a file is excluded because of its color, a message will be shown in the log. For example:
 
 <span class="log" style="color: rgb(210, 126, 0);"><a href="https://www.pixiv.net/i/134469561#1" target="_blank">134469561_p0</a> was not saved because its color does not meet the settings.<br></span>
+
+## Image format
+
+<div class="option settingsPanel_optionCard new" data-no="112" data-pin-bound="true" style="display: flex;">
+  <a href="/#/en/Settings-Filter/Work-type?flag=112" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_图片格式">Image <span class="key">format</span></span>
+  </a>
+  <input type="checkbox" name="downJPGImg" id="downJPGImg" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="downJPGImg" class="active"> .jpg </label>
+  <input type="checkbox" name="downPNGImg" id="downPNGImg" class="need_beautify checkbox_common" checked="">
+  <span class="beautify_checkbox" tabindex="0"></span>
+  <label for="downPNGImg" class="active"> .png </label>
+  <span class="settingsPanel_newBadge" aria-hidden="true">
+    <svg class="icon settingsPanel_newBadgeIcon" aria-hidden="true">
+      <use xlink:href="#new"></use>
+    </svg>
+  </span>
+</div>
+
+*The description of this setting is exactly the same as the description in the downloader.*
+
+You can decide whether to download images in `.jpg` and `.png` format as needed.
+
+Note:
+
+This setting only checks the images in illustrations and manga. It does not check the images in ugoira or novels.

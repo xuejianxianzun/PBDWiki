@@ -2,7 +2,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { readJson, readText, BUILD_DIR, DOCS, log } from '../lib/util.js'
-import { readAll } from '../lib/pbd-reader.js'
+import { readAll, readPbdVersion } from '../lib/pbd-reader.js'
 
 const config = readJson(path.join(BUILD_DIR, 'config.json'))
 const data = readAll(config.pbdRepo)
@@ -193,6 +193,33 @@ for (const lang of config.languages) {
   walk2(outDir)
   if (badFiles.length) log(`  注意：以下文件仍包含旧文件夹名「${oldFolder}」：${badFiles.slice(0, 8).join(', ')}${badFiles.length > 8 ? ` 等 ${badFiles.length} 个` : ''}`)
   else log(`旧文件夹名清理：未发现残留`)
+}
+
+// 6) 站点首页：由 template/README.md 生成，占位符应已填充
+log('\n===== 验证站点首页 =====')
+{
+  const outFile = path.join(DOCS, 'README.md')
+  const tplFile = path.join(DOCS, 'template', 'README.md')
+  if (!fs.existsSync(tplFile)) {
+    log('  注意：没有 docs/template/README.md，跳过站点首页检查')
+  } else if (!fs.existsSync(outFile)) {
+    issue('缺少站点首页：README.md（应由 docs/template/README.md 生成）')
+  } else {
+    const c = readText(outFile)
+    for (const token of ['[PBDVersion]', '[Date]']) {
+      if (c.includes(token)) issue(`README.md 里残留占位符：${token}`)
+    }
+    const version = readPbdVersion(config.pbdRepo)
+    const m = /^Wiki version: (.+)$/m.exec(c)
+    if (!m) issue('README.md 里找不到「Wiki version:」字段')
+    else if (version && m[1].trim() !== version) {
+      issue(`README.md 的版本号 ${m[1].trim()} ≠ 下载器 manifest.json 的 ${version}`)
+    }
+    const d = /^Last updated: (.+)$/m.exec(c)
+    if (!d) issue('README.md 里找不到「Last updated:」字段')
+    else if (!/^\d{4}-\d{2}-\d{2}$/.test(d[1].trim())) issue(`README.md 的 Last updated 不是 YYYY-MM-DD 格式：${d[1].trim()}`)
+    if (m && d) log(`站点首页：Wiki version ${m[1].trim()}，Last updated ${d[1].trim()}`)
+  }
 }
 
 log('\n========== 验证结束 ==========')

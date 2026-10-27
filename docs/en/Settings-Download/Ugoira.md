@@ -114,12 +114,10 @@ This part only applies to Windows. With some settings, you can view thumbnails o
 ## How many animations are converted at the same time
 
 <div class="option settingsPanel_optionCard" data-no="66" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-Download/Ugoira?flag=66" target="_blank" class="has_tip settingNameStyle" data-xztip="_同时转换多少个动图的说明" data-tip="Converting multiple animations at the same time will increase resource consumption.&lt;br&gt;
-It is recommended not to exceed 3." data-bind-click="true">
+  <a href="/#/en/Settings-Download/Ugoira?flag=66" target="_blank" class="settingNameStyle" data-bind-click="true">
     <span data-xztext="_同时转换多少个动图">How many animations are <span class="key">converted</span> at the same time</span>
-    <span class="gray"> ? </span>
   </a>
-  <input type="text" name="convertUgoiraThread" class="setinput_style blue" value="1">
+  <input type="text" name="convertUgoiraThread" class="setinput_style blue w40" value="1">
 </div>
 
 The default value is `1`.

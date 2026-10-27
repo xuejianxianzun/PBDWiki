@@ -24,6 +24,7 @@
 <option value="{tags}">{tags}</option>
 <option value="{tags_translate}">{tags_translate}</option>
 <option value="{tags_transl_only}">{tags_transl_only}</option>
+<option value="{bookmark_tags}">{bookmark_tags}</option>
 <option value="{page_tag}">{page_tag}</option>
 <option value="{type}">{type}</option>
 <option value="{type_illust}">{type_illust}</option>
@@ -53,6 +54,8 @@
 <option value="{r18_g_folder}">{r18_g_folder}</option>
 <option value="{match_tag_folder1}">{match_tag_folder1}</option>
 <option value="{match_tag_folder2}">{match_tag_folder2}</option>
+<option value="{match_bookmark_tag_folder1}">{match_bookmark_tag_folder1}</option>
+<option value="{match_bookmark_tag_folder2}">{match_bookmark_tag_folder2}</option>
       </select>
     </span>
   </span>
@@ -116,6 +119,9 @@ Tip: Click a token name to copy it.<br></span>
       <br>
 <span class="blue name" data-bind-copy="true">{tags_transl_only}</span>
       <span data-xztext="_命名标记tags_transl_only">Translated tags</span>
+      <br>
+* <span class="blue name" data-bind-copy="true">{bookmark_tags}</span>
+      <span data-xztext="_命名标记bookmark_tags">The list of bookmark tags of the work. After you bookmark a work, you can add custom bookmark tags to it; this token outputs the work's bookmark tags. Note: 1. This token is only valid when you crawl works on the bookmarks page; it is invalid when crawling on other pages (usually outputs nothing). 2. If you haven't added any bookmark tags to the work, this token will also output nothing.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{page_tag}</span>
       <span data-xztext="_文件夹标记page_tag">If the works on the page belong to the same tag, the downloader will output this tag; otherwise, ignore it. It usually has a value when you are on these pages: searching for a certain tag, viewing works under a certain tag category on the user page, viewing works under a certain tag category in your own bookmarks.</span>
@@ -199,10 +205,16 @@ Tip: Click a token name to copy it.<br></span>
       <span data-xztext="_命名标记_r18_g_folder">It represents the folder rule set in "Add a folder layer for R-18(G) works". If you have enabled this setting, the downloader will replace it with the folder rule you set when generating the filename for R-18(G) works. Non R-18(G) works will ignore this marker.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{match_tag_folder1}</span>
-      <span data-xztext="_命名标记_match_tag_folder1">This is the match result of the first tag list in "Create folder using the first matching tag". If you have enabled this setting and a matching tag is found, it will output that tag; otherwise it will be ignored.</span>
+      <span data-xztext="_命名标记_match_tag_folder1">This is the match result of the first tag list in "Create a folder with the first matched tag". If you have enabled this setting and a matching tag is found, it will output that tag; otherwise it will be ignored.</span>
       <br>
 * <span class="blue name" data-bind-copy="true">{match_tag_folder2}</span>
-      <span data-xztext="_命名标记_match_tag_folder2">This is the match result of the second tag list in "Create folder using the first matching tag". If you have enabled this setting and a matching tag is found, it will output that tag; otherwise it will be ignored.</span>
+      <span data-xztext="_命名标记_match_tag_folder2">This is the match result of the second tag list in "Create a folder with the first matched tag". If you have enabled this setting and a matching tag is found, it will output that tag; otherwise it will be ignored.</span>
+      <br>
+* <span class="blue name" data-bind-copy="true">{match_bookmark_tag_folder1}</span>
+      <span data-xztext="_命名标记_match_bookmark_tag_folder1">This is the match result of the first tag list in "Create a folder with the first matched bookmark tag". If you have enabled this setting and the work's bookmark tags contain a tag you set, it will output that tag; otherwise it will be ignored.</span>
+      <br>
+* <span class="blue name" data-bind-copy="true">{match_bookmark_tag_folder2}</span>
+      <span data-xztext="_命名标记_match_bookmark_tag_folder2">This is the match result of the second tag list in "Create a folder with the first matched bookmark tag". If you have enabled this setting and the work's bookmark tags contain a tag you set, it will output that tag; otherwise it will be ignored.</span>
       <br>
   </p>
   <p>
@@ -377,6 +389,7 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 <option value="{tags}">{tags}</option>
 <option value="{tags_translate}">{tags_translate}</option>
 <option value="{tags_transl_only}">{tags_transl_only}</option>
+<option value="{bookmark_tags}">{bookmark_tags}</option>
 <option value="{page_tag}">{page_tag}</option>
 <option value="{type}">{type}</option>
 <option value="{type_illust}">{type_illust}</option>
@@ -406,6 +419,8 @@ Example: When downloading from a leaderboard page, sort by `{rank}`:
 <option value="{r18_g_folder}">{r18_g_folder}</option>
 <option value="{match_tag_folder1}">{match_tag_folder1}</option>
 <option value="{match_tag_folder2}">{match_tag_folder2}</option>
+<option value="{match_bookmark_tag_folder1}">{match_bookmark_tag_folder1}</option>
+<option value="{match_bookmark_tag_folder2}">{match_bookmark_tag_folder2}</option>
         <option value="{follow_artwork}">{follow_artwork}</option>
       </select>
     </span>
@@ -601,10 +616,10 @@ For example, if the merged collection file is named `abcd.epub` and the cover im
 
 <div class="option settingsPanel_optionCard" data-no="37" data-pin-bound="true" style="display: flex;">
   <a href="/#/en/Settings-Naming/Folder-and-file-names?flag=37" target="_blank" class="settingNameStyle" data-xztext="_标签分隔符号" data-bind-click="true">Tag <span class="key">separation</span> symbol</a>
-  <input type="text" name="tagsSeparator" class="setinput_style blue" value=",">
+  <input type="text" name="tagsSeparator" class="setinput_style blue w40" value=",">
   <button type="button" class="gray textButton toggleArea" data-toggle-target="#tagsSeparatorTip" data-for-no="37" data-xztext="_提示">Tip</button>
   <p class="tip" id="tagsSeparatorTip">
-    <span data-xztext="_标签分隔符号提示">Only affects results for these named tags: <span class="blue">{tags}</span>, <span class="blue">{tags_translate}</span>, <span class="blue">{tags_transl_only}</span>. <br>Recommended symbols <span class="blue"> , # ^ & _</span></span>
+    <span data-xztext="_标签分隔符号提示">Only affects results for these named tags: <span class="blue">{tags}</span>, <span class="blue">{tags_translate}</span>, <span class="blue">{tags_transl_only}</span>, <span class="blue">{bookmark_tags}</span>. <br>Recommended symbols <span class="blue"> , # ^ & _</span></span>
   </p>
 </div>
 

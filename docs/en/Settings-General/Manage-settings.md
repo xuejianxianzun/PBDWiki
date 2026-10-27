@@ -82,12 +82,11 @@ You can choose between two export strategies:
 
 2. Export immediately whenever settings change. If you change settings frequently, the downloader may export settings frequently.
 
-## Manage settings
+## Manage Downloader settings
 
 <div class="option settingsPanel_optionCard" data-no="103" data-pin-bound="true" style="display: flex;">
-  <a href="/#/en/Settings-General/Manage-settings?flag=103" target="_blank" class="has_tip settingNameStyle" data-xztip="_管理设置的说明" data-tip="You can manage the Downloader settings, such as exporting to back up your settings, sharing with others, and resetting your settings." data-bind-click="true">
-    <span data-xztext="_管理设置">Manage <span class="key">settings</span></span>
-    <span class="gray"> ? </span>
+  <a href="/#/en/Settings-General/Manage-settings?flag=103" target="_blank" class="settingNameStyle" data-bind-click="true">
+    <span data-xztext="_管理下载器的设置"><span class="key">Manage</span> Downloader settings</span>
   </a>
   <div class="optionLine">
     <button type="button" class="textButton fireEvent borderButton" data-event="exportSettings" id="exportSettings" data-xztext="_导出设置">Export settings</button>

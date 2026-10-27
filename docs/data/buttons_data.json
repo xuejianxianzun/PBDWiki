@@ -153,45 +153,58 @@
       "ru": "Кнопки-Начать-сканирование/Главная"
     },
     "ids": [
+      "crawlUserList",
       "crawlById",
       "crawlIdRange",
       "importIDList"
     ],
     "names": [
       {
-        "id": "crawlById",
-        "nameKey": "_输入id进行抓取",
+        "id": "crawlUserList",
+        "nameKey": "_抓取用户列表",
         "name": {
-          "zh-cn": "输入 ID 进行抓取",
-          "zh-tw": "輸入 ID 進行擷取",
-          "en": "Enter ID to crawl",
-          "ja": "IDを入力してクロールする",
-          "ko": "ID를 입력하여 긁어오기",
-          "ru": "Введите ID для сканирования"
+          "zh-cn": "抓取用户列表",
+          "zh-tw": "擷取用戶列表",
+          "en": "Crawl user list",
+          "ja": "ユーザーリストをクロール",
+          "ko": "사용자 목록 긁어오기",
+          "ru": "Сканировать список пользователей"
+        }
+      },
+      {
+        "id": "crawlById",
+        "nameKey": "_抓取作品列表",
+        "name": {
+          "zh-cn": "抓取作品列表",
+          "zh-tw": "擷取作品列表",
+          "en": "Crawl work list",
+          "ja": "作品リストをクロール",
+          "ko": "작품 목록 긁어오기",
+          "ru": "Сканировать список работ"
         }
       },
       {
         "id": "crawlIdRange",
-        "nameKey": "_抓取id区间",
+        "nameKey": "_抓取作品id区间",
         "name": {
-          "zh-cn": "抓取 ID 区间",
-          "zh-tw": "擷取 ID 區間",
-          "en": "Crawl ID range",
-          "ja": "ID 範囲をクロール",
-          "ko": "ID 범위 긁어오기",
-          "ru": "Сканировать диапазон идентификаторов"
+          "zh-cn": "抓取作品 ID 区间",
+          "zh-tw": "擷取作品 ID 區間",
+          "en": "Crawl work ID range",
+          "ja": "作品 ID 範囲をクロール",
+          "ko": "작품 ID 범위 긁어오기",
+          "ru": "Сканировать диапазон идентификаторов работ"
         }
       },
       {
         "id": "importIDList",
-        "nameKey": "_导入ID列表",
+        "nameKey": "_导入作品ID列表",
         "name": {
-          "zh-cn": "导入 ID 列表",
-          "zh-tw": "匯入 ID 列表",
-          "en": "Import ID list",
-          "ja": "インポートIDリスト",
-          "ko": "ID 목록 가져오기",
-          "ru": "Список идентификаторов импорта"
+          "zh-cn": "导入作品 ID 列表",
+          "zh-tw": "匯入作品 ID 列表",
+          "en": "Import work ID list",
+          "ja": "作品 ID リストをインポート",
+          "ko": "작품 ID 목록 가져오기",
+          "ru": "Импорт списка идентификаторов работ"
         }
       }
     ]
@@ -315,8 +328,7 @@
       "crawlTagList",
       "filterResults",
       "clearMultiImageWork",
-      "clearUgoiraWork",
-      "manuallyDeleteWork"
+      "clearUgoiraWork"
     ],
     "names": [
       {
@@ -365,18 +377,6 @@
           "ja": "うごイラ作品を削除する",
           "ko": "움직이는 일러스트 작품 지우기",
           "ru": "Убрать Ugoira(gif) работы"
-        }
-      },
-      {
-        "id": "manuallyDeleteWork",
-        "nameKey": "_手动删除作品",
-        "name": {
-          "zh-cn": "手动删除作品",
-          "zh-tw": "手動刪除作品",
-          "en": "Manually delete works",
-          "ja": "作品を手動で削除する",
-          "ko": "수동 지우기",
-          "ru": "Ручное удаление"
         }
       }
     ]
@@ -659,6 +659,33 @@
           "ja": "クロールを開始する",
           "ko": "긁어오기 시작",
           "ru": "Начать сканирование"
+        }
+      }
+    ]
+  },
+  {
+    "page": {
+      "zh-cn": "按钮-开始抓取/追更列表页面",
+      "zh-tw": "按鈕-開始擷取/追更列表頁面",
+      "en": "Buttons-Start-crawling/Watch-list-page",
+      "ja": "ボタン-クロールを開始する/ウォッチリストページ",
+      "ko": "버튼-긁어오기-시작/구독-목록-페이지",
+      "ru": "Кнопки-Начать-сканирование/Страница-списка-отслеживаемых"
+    },
+    "ids": [
+      "crawlWatchList"
+    ],
+    "names": [
+      {
+        "id": "crawlWatchList",
+        "nameKey": "_抓取追更列表",
+        "name": {
+          "zh-cn": "抓取追更列表",
+          "zh-tw": "擷取追更列表",
+          "en": "Crawl watch list",
+          "ja": "ウォッチリストをクロール",
+          "ko": "구독 목록 긁어오기",
+          "ru": "Просканировать список отслеживаемых"
         }
       }
     ]
@@ -1072,6 +1099,8 @@
       "exportFollowingListCSV",
       "exportFollowingListJSON",
       "batchFollowUser",
+      "batchSaveUserAvatar",
+      "batchSaveUserAvatarIcon",
       "findDeactivatedUsers"
     ],
     "names": [
@@ -1109,6 +1138,30 @@
           "ja": "ユーザーをバッチでフォローする（JSON）",
           "ko": "일괄적으로 사용자 팔로우 (JSON)",
           "ru": "Подписывайтесь на пользователей пакетами (JSON)"
+        }
+      },
+      {
+        "id": "batchSaveUserAvatar",
+        "nameKey": "_批量保存用户头像",
+        "name": {
+          "zh-cn": "批量保存用户头像",
+          "zh-tw": "批次儲存使用者頭貼",
+          "en": "Save user avatars in batches",
+          "ja": "ユーザーのプロフィール画像を一括保存",
+          "ko": "유저 프로필 이미지 일괄 저장",
+          "ru": "Пакетное сохранение аватаров пользователей"
+        }
+      },
+      {
+        "id": "batchSaveUserAvatarIcon",
+        "nameKey": "_批量保存用户头像为图标",
+        "name": {
+          "zh-cn": "批量保存用户头像为图标",
+          "zh-tw": "批次將使用者頭貼另存為圖示",
+          "en": "Save user avatars as icons in batches",
+          "ja": "ユーザーのプロフィール画像をアイコンとして一括保存",
+          "ko": "유저 프로필 이미지를 아이콘으로 일괄 저장",
+          "ru": "Пакетное сохранение аватаров пользователей как иконки"
         }
       },
       {
