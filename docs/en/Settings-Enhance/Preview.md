@@ -48,8 +48,8 @@
       <span class="beautify_switch" tabindex="0"></span>
     </div>
     <div class="optionLine">
-      <label for="swicthImageByKeyboard" data-xztext="_使用方向键和空格键切换图片" class="has_tip active" data-xztip="_使用方向键和空格键切换图片的提示" data-tip="← ↑ Previous image&lt;br&gt;→ ↓ Next image&lt;br&gt;Spacebar Next image">Use the arrow keys and space bar to switch images</label>
-      <input type="checkbox" name="swicthImageByKeyboard" id="swicthImageByKeyboard" class="need_beautify checkbox_switch" checked="">
+      <label for="switchImageByKeyboard" data-xztext="_使用方向键和空格键切换图片" class="has_tip active" data-xztip="_使用方向键和空格键切换图片的提示" data-tip="← ↑ Previous image&lt;br&gt;→ ↓ Next image&lt;br&gt;Spacebar Next image">Use the arrow keys and space bar to switch images</label>
+      <input type="checkbox" name="switchImageByKeyboard" id="switchImageByKeyboard" class="need_beautify checkbox_switch" checked="">
       <span class="beautify_switch" tabindex="0"></span>
     </div>
     <div class="optionLine">

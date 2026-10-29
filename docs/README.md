@@ -6,9 +6,9 @@ This is the Wiki for [Powerful Pixiv Downloader](https://github.com/xuejianxianz
 
 GitHub：[PBDWiki](https://github.com/xuejianxianzun/PBDWiki)
 
-Wiki version: 19.6.0
+Wiki version: 19.6.1
 
-Last updated: 2026-10-27
+Last updated: 2026-10-29
 
 ----------
 

@@ -9,9 +9,11 @@ When using this feature, the button displays progress information, for example:
 **Additional Notes:**
 
 - This feature crawls **all** uncategorized works; you cannot set a limit on the number to crawl.
-- The downloader adds **the work's own tags** to uncategorized works, i.e., the tags visible on their work page, for example:
+- This feature always adds tags to uncategorized works. In [setting:88] you can choose whether to use the work's original tags or the translated tags. These tags are the ones you see on their work pages, for example:
 
 ![](../images/20250909_234748.png)
+
+- This feature does not change the public status of works. A work that was bookmarked publicly will still be a public bookmark; a work that was bookmarked privately will still be a private bookmark.
 
 **What are uncategorized works?**
 

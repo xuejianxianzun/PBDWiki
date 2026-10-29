@@ -16,21 +16,30 @@
   </div>
   <div class="optionLine">
     <span data-xztext="_是否添加标签" class="mr4">Whether to add tags</span>
-    <input type="radio" name="widthTag" id="widthTag1" class="need_beautify radio" value="origin" checked="">
+    <input type="radio" name="withTag" id="withTag1" class="need_beautify radio" value="origin" checked="">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="widthTag1" data-xztext="_添加作品的原始标签" class="active">Add the work's original tags</label>
-    <input type="radio" name="widthTag" id="widthTag2" class="need_beautify radio" value="transl">
+    <label for="withTag1" data-xztext="_添加作品的原始标签" class="active">Add the work's original tags</label>
+    <input type="radio" name="withTag" id="withTag2" class="need_beautify radio" value="transl">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="widthTag2" data-xztext="_添加翻译后的标签">Add the translated tags</label>
-    <input type="radio" name="widthTag" id="widthTag3" class="need_beautify radio" value="none">
+    <label for="withTag2" data-xztext="_添加翻译后的标签">Add the translated tags</label>
+    <input type="radio" name="withTag" id="withTag3" class="need_beautify radio" value="none">
     <span class="beautify_radio" tabindex="0"></span>
-    <label for="widthTag3" data-xztext="_不添加">Do not add</label>
+    <label for="withTag3" data-xztext="_不添加">Do not add</label>
   </div>
 </div>
 
 You can use this setting to control the downloader's behavior when bookmarking works.
 
-?> Pixiv's original bookmark button (heart-shaped) is not affected by this setting.
+**Sub-options:**
+
+When using features affected by this setting, you can configure:
+
+- Whether to bookmark publicly: add it as a public or private bookmark
+- Whether to add tags
+
+The default is a public bookmark with the work's original tags.
+
+?> If a work has already been bookmarked, you can still bookmark it again. This will not change its bookmark time (and thus will not affect its order on the bookmark page), but it can update its public status and tag list. For example: if a work was previously set to public and had tags added, you can, if needed, change the settings to private with no tags and have the downloader bookmark it again.
 
 **Features affected by this setting:**
 
@@ -49,17 +58,9 @@ You can use this setting to control the downloader's behavior when bookmarking w
 
 **Features not affected by this setting:**
 
-The "Add tags to uncategorized works" button on the bookmark page is unaffected. This feature always includes tags and automatically sets public or private status based on the work's prior bookmark status.
+1. Pixiv's original bookmark button (heart-shaped) is not affected by this setting.
 
-**Sub-options:**
-
-When using features affected by this setting, you can configure:
-- Whether to include the work's tags
-- Whether to bookmark as public or private
-
-The default is to add tags and bookmark publicly.
-
-?> If a work has already been bookmarked, you can still bookmark it again. This will not change its bookmark time (and thus will not affect its order on the bookmark page), but it can update its public status and tag list. For example: if a work was previously set to public and had tags added, you can, if needed, change the settings to private with no tags and have the downloader bookmark it again.
+2. The "Add tags to uncategorized works" button on the bookmark page is not affected by some of these settings. This feature always adds tags (but per this setting, it uses the work's original tags or the translated tags); the public status follows the work's prior bookmark status, i.e., it does not change the public status.
 
 ## Bookmark panel
 
